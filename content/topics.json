@@ -1,0 +1,68 @@
+[
+  {
+    "id": "regulatory",
+    "name_amharic": "አስገዳጅ ምልክቶች",
+    "name_hebrew": "תמרורי חובה",
+    "icon": "🔴",
+    "color": "#C62828",
+    "description_amharic": "እነዚህ ምልክቶች ህጋዊ ግዴታ ናቸው። መጣስ ቅጣት ያስከትላል።",
+    "audio_intro": "topic_regulatory_intro.mp3",
+    "sign_count": 15,
+    "display_order": 1
+  },
+  {
+    "id": "warning",
+    "name_amharic": "የማስጠንቀቂያ ምልክቶች",
+    "name_hebrew": "תמרורי אזהרה",
+    "icon": "⚠️",
+    "color": "#F57F17",
+    "description_amharic": "እነዚህ ምልክቶች አደጋ ሊኖር እንደሚችል ያስጠነቅቃሉ። ጥንቃቄ ያስፈልጋል።",
+    "audio_intro": "topic_warning_intro.mp3",
+    "sign_count": 12,
+    "display_order": 2
+  },
+  {
+    "id": "information",
+    "name_amharic": "የመረጃ ምልክቶች",
+    "name_hebrew": "תמרורי מידע",
+    "icon": "🔵",
+    "color": "#1565C0",
+    "description_amharic": "እነዚህ ምልክቶች አስፈላጊ መረጃ ይሰጣሉ። አቅጣጫና አገልግሎቶችን ያሳያሉ።",
+    "audio_intro": "topic_information_intro.mp3",
+    "sign_count": 10,
+    "display_order": 3
+  },
+  {
+    "id": "road_markings",
+    "name_amharic": "የመንገድ ምልክቶች",
+    "name_hebrew": "סימוני כביש",
+    "icon": "🟡",
+    "color": "#F9A825",
+    "description_amharic": "እነዚህ ምልክቶች መንገድ ላይ ይሳሉ። መስመሮችና ቀስቶችን ያካትታሉ።",
+    "audio_intro": "topic_road_markings_intro.mp3",
+    "sign_count": 8,
+    "display_order": 4
+  },
+  {
+    "id": "right_of_way",
+    "name_amharic": "የቅድሚያ መብት",
+    "name_hebrew": "זכות קדימה",
+    "icon": "🟢",
+    "color": "#2E7D32",
+    "description_amharic": "እነዚህ ደንቦች ማን አስቀድሞ ማለፍ እንዳለበት ያሳያሉ። ጥቃቄ ያስፈልጋል።",
+    "audio_intro": "topic_right_of_way_intro.mp3",
+    "sign_count": 8,
+    "display_order": 5
+  },
+  {
+    "id": "safety",
+    "name_amharic": "የደህንነት ደንቦች",
+    "name_hebrew": "בטיחות",
+    "icon": "🛡️",
+    "color": "#4A148C",
+    "description_amharic": "ደህንነትን ለማረጋገጥ አስፈላጊ ደንቦች። ሁሉም ሹፌሮች ማወቅ አለባቸው።",
+    "audio_intro": "topic_safety_intro.mp3",
+    "sign_count": 7,
+    "display_order": 6
+  }
+]

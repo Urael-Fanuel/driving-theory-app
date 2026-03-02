@@ -1,0 +1,57 @@
+{
+  "expo": {
+    "name": "ሹፌርነት ትምህርት",
+    "slug": "driving-theory-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icons/app_icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/icons/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1a1a2e"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icons/adaptive-icon.png",
+        "backgroundColor": "#1a1a2e"
+      },
+      "minSdkVersion": 26,
+      "package": "com.drivingtheory.ethiopian",
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.INTERNET",
+        "android.permission.ACCESS_NETWORK_STATE"
+      ]
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.drivingtheory.ethiopian",
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "ለድምጽ መልስ ማይክሮፎን ያስፈልጋል"
+      }
+    },
+    "web": {
+      "favicon": "./assets/icons/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-av",
+        {
+          "microphonePermission": "ለድምጽ መልስ ማይክሮፎን ያስፈልጋል"
+        }
+      ]
+    ],
+    "scheme": "drivingtheory",
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      }
+    }
+  }
+}

@@ -1,0 +1,229 @@
+/**
+ * AGENT 3 — contexts/EngineContext.tsx
+ * Global state: engine type (A|B), user identity, and session data.
+ *
+ * Engine A = Non-reader (video + voice input)
+ * Engine B = Amharic reader (text + tap input)
+ *
+ * Persists to expo-file-system (works without AsyncStorage dependency).
+ * Uses Supabase anonymous auth for userId (proper UUID for DB foreign keys).
+ * Falls back to locally-generated UUID if Supabase is unavailable.
+ */
+
+import React, {
+  createContext,
+  useContext,
+  useState,
+  useCallback,
+  useEffect,
+  ReactNode,
+} from 'react';
+import * as FileSystem from 'expo-file-system/legacy';
+import { supabase } from '../backend/supabaseClient';
+import * as api from '../backend/api';
+
+// ─── Types ────────────────────────────────────────────────────────────────────
+
+export type EngineType = 'A' | 'B';
+
+export interface EngineContextValue {
+  /** Which engine the user is using: A (non-reader) or B (reader) */
+  engineType: EngineType | null;
+  /** Set the engine type and persist it */
+  setEngineType: (engine: EngineType) => void;
+  /** Supabase anonymous user ID (UUID, persisted across sessions) */
+  userId: string | null;
+  /** True once the engine has been selected (past onboarding) */
+  hasSelectedEngine: boolean;
+  /** Reset engine selection (for "change mode" feature) */
+  reset: () => void;
+  /** Whether loading from storage is still in progress */
+  isLoading: boolean;
+}
+
+// ─── Storage helpers ──────────────────────────────────────────────────────────
+
+const PREFS_PATH = (FileSystem.documentDirectory ?? '') + 'app_prefs.json';
+
+interface StoredPrefs {
+  engineType?: EngineType;
+  userId?: string;
+}
+
+async function readPrefs(): Promise<StoredPrefs> {
+  try {
+    const info = await FileSystem.getInfoAsync(PREFS_PATH);
+    if (!info.exists) return {};
+    const content = await FileSystem.readAsStringAsync(PREFS_PATH);
+    return JSON.parse(content) as StoredPrefs;
+  } catch {
+    return {};
+  }
+}
+
+async function writePrefs(prefs: StoredPrefs): Promise<void> {
+  try {
+    await FileSystem.writeAsStringAsync(PREFS_PATH, JSON.stringify(prefs));
+  } catch (err) {
+    console.warn('[EngineContext] Failed to write prefs:', err);
+  }
+}
+
+/** RFC 4122 v4 UUID — used as fallback when Supabase is not available */
+function generateUUID(): string {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
+    const r = Math.random() * 16 | 0;
+    const v = c === 'x' ? r : (r & 0x3 | 0x8);
+    return v.toString(16);
+  });
+}
+
+/** Returns true if s looks like a valid UUID */
+function isUUID(s: string): boolean {
+  return /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(s);
+}
+
+/**
+ * Resolve user ID via Supabase anonymous auth (preferred) or local UUID fallback.
+ * Anonymous auth gives a real auth.uid() that satisfies RLS policies.
+ */
+async function resolveUserId(storedId?: string): Promise<string> {
+  if (supabase && process.env.EXPO_PUBLIC_SUPABASE_URL) {
+    try {
+      // Re-use existing session if available (persists across restarts)
+      const { data: { session } } = await supabase.auth.getSession();
+      if (session?.user?.id) {
+        console.log('[EngineContext] Reusing Supabase anonymous session');
+        return session.user.id;
+      }
+
+      // Sign in anonymously — creates a new session stored by Supabase
+      const { data, error } = await supabase.auth.signInAnonymously();
+      if (!error && data?.user?.id) {
+        console.log('[EngineContext] Signed in anonymously:', data.user.id);
+        return data.user.id;
+      }
+      console.warn('[EngineContext] Anonymous sign-in failed:', error?.message);
+    } catch (err) {
+      console.warn('[EngineContext] Supabase auth error:', err);
+    }
+  }
+
+  // Fallback: use stored ID if it's a valid UUID, otherwise generate one
+  if (storedId && isUUID(storedId)) return storedId;
+  const newId = generateUUID();
+  console.log('[EngineContext] Using local UUID fallback:', newId);
+  return newId;
+}
+
+// ─── Context ──────────────────────────────────────────────────────────────────
+
+const EngineContext = createContext<EngineContextValue | null>(null);
+
+// ─── Provider ─────────────────────────────────────────────────────────────────
+
+export function EngineProvider({ children }: { children: ReactNode }) {
+  const [engineType, setEngineTypeState] = useState<EngineType | null>(null);
+  const [userId,     setUserId]          = useState<string | null>(null);
+  const [isLoading,  setIsLoading]       = useState(true);
+
+  // ── Load persisted prefs + resolve userId on mount ──────────────────────────
+  useEffect(() => {
+    (async () => {
+      try {
+        const prefs = await readPrefs();
+
+        if (prefs.engineType) setEngineTypeState(prefs.engineType);
+
+        // Resolve userId via anonymous auth (or fallback UUID)
+        const resolvedId = await resolveUserId(prefs.userId);
+        setUserId(resolvedId);
+
+        // Persist resolved userId (may differ from stored if session resumed)
+        if (resolvedId !== prefs.userId) {
+          await writePrefs({ ...prefs, userId: resolvedId });
+        }
+
+        // Ensure user row exists in DB for returning users
+        if (prefs.engineType) {
+          api.upsertUser(resolvedId, prefs.engineType).catch(() => {});
+        }
+      } catch (err) {
+        console.warn('[EngineContext] Failed to load prefs:', err);
+        setUserId(generateUUID());
+      } finally {
+        setIsLoading(false);
+      }
+    })();
+  }, []);
+
+  // ── Set engine + persist + register user in DB ───────────────────────────────
+  const setEngineType = useCallback(async (engine: EngineType) => {
+    setEngineTypeState(engine);
+
+    // Get current userId from state (captured in closure)
+    setUserId(currentId => {
+      if (currentId) {
+        // Create/update user row in DB so foreign keys resolve
+        api.upsertUser(currentId, engine).catch(() => {});
+      }
+      return currentId;
+    });
+
+    try {
+      const prefs = await readPrefs();
+      await writePrefs({ ...prefs, engineType: engine });
+    } catch {
+      // Non-critical — engine type still set in memory
+    }
+  }, []) as (engine: EngineType) => void;
+
+  // ── Reset ────────────────────────────────────────────────────────────────────
+  const reset = useCallback(async () => {
+    setEngineTypeState(null);
+    // On reset, sign out and sign in again to get a fresh anonymous session
+    if (supabase && process.env.EXPO_PUBLIC_SUPABASE_URL) {
+      try {
+        await supabase.auth.signOut();
+        const { data } = await supabase.auth.signInAnonymously();
+        if (data?.user?.id) {
+          setUserId(data.user.id);
+          await writePrefs({ userId: data.user.id });
+          return;
+        }
+      } catch {
+        // Fall through
+      }
+    }
+    const newId = generateUUID();
+    setUserId(newId);
+    try {
+      await writePrefs({ userId: newId });
+    } catch {
+      // Non-critical
+    }
+  }, []) as () => void;
+
+  const value: EngineContextValue = {
+    engineType,
+    setEngineType,
+    userId,
+    hasSelectedEngine: engineType !== null,
+    reset,
+    isLoading,
+  };
+
+  return (
+    <EngineContext.Provider value={value}>
+      {children}
+    </EngineContext.Provider>
+  );
+}
+
+// ─── Hook ─────────────────────────────────────────────────────────────────────
+
+export function useEngine(): EngineContextValue {
+  const ctx = useContext(EngineContext);
+  if (!ctx) throw new Error('useEngine must be used inside <EngineProvider>');
+  return ctx;
+}
