@@ -60,13 +60,14 @@ const NUMBER_URLS = [
 export default function EngineAQuestionScreen() {
   const { id }     = useLocalSearchParams<{ id: string }>();
   const router     = useRouter();
-  const { playAudio, stopAudio } = useAudio();
+  const { playAudio, stopAudio, pauseAudio, resumeAudio, audioState } = useAudio();
   const { recordAnswer } = useProgress();
 
   const [signId, questionIndex] = parseQuestionId(id);
 
   const [sign,          setSign]          = useState<DBSign | null>(null);
   const [questions,     setQuestions]     = useState<DBQuestion[]>([]);
+  const [topicSigns,    setTopicSigns]    = useState<DBSign[]>([]);
   const [loading,       setLoading]       = useState(true);
   const [answeredIndex,     setAnsweredIndex]     = useState<number | null>(null);
   const [showFeedback,      setShowFeedback]      = useState(false);
@@ -111,6 +112,12 @@ export default function EngineAQuestionScreen() {
         const found = allSigns.find(s => s.id === signId) ?? null;
         setSign(found);
         setQuestions(qs);
+        if (found) {
+          const sorted = allSigns
+            .filter(s => s.topic_id === found.topic_id)
+            .sort((a, b) => a.display_order - b.display_order);
+          setTopicSigns(sorted);
+        }
       } catch (err) {
         console.error('[EngineA/question] Failed to load:', err);
       } finally {
@@ -229,6 +236,39 @@ export default function EngineAQuestionScreen() {
     // 'processing' and 'done' states: button is disabled, no-op
   }, [voiceState, startListening, stopListening]);
 
+  // ── Prev / Next sign navigation ─────────────────────────────────────────────
+  const currentSignIndex = topicSigns.findIndex(s => s.id === signId);
+  const prevSign = currentSignIndex > 0 ? topicSigns[currentSignIndex - 1] : null;
+  const nextSign = currentSignIndex < topicSigns.length - 1 ? topicSigns[currentSignIndex + 1] : null;
+
+  const handlePrevSign = async () => {
+    if (!prevSign) return;
+    Haptics.selectionAsync();
+    await stopAudio();
+    cancelListening();
+    router.replace(`/(engineA)/question/${prevSign.id}` as any);
+  };
+
+  const handleNextSign = async () => {
+    if (!nextSign) return;
+    Haptics.selectionAsync();
+    await stopAudio();
+    cancelListening();
+    router.replace(`/(engineA)/question/${nextSign.id}` as any);
+  };
+
+  // ── Audio Pause/Resume button ────────────────────────────────────────────────
+  const handleAudioButton = async () => {
+    await Haptics.selectionAsync();
+    if (audioState === 'playing') {
+      await pauseAudio();
+    } else if (audioState === 'paused') {
+      await resumeAudio();
+    }
+  };
+
+  const audioButtonIcon = audioState === 'playing' ? '⏸' : '▶️';
+
   // ── Navigate to next question ───────────────────────────────────────────────
   const handleNext = useCallback(() => {
     setShowFeedback(false);
@@ -299,18 +339,34 @@ export default function EngineAQuestionScreen() {
           ))}
         </View>
 
-        {/* Question audio replay button */}
-        <TouchableOpacity
-          style={styles.questionAudioBtn}
-          onPress={() => {
-            if (currentQuestion.question_audio_url) {
-              playAudio(currentQuestion.question_audio_url).catch(() => {});
-            }
-          }}
-          accessibilityLabel="ጥያቄ ዳግም አዳምጥ"
-        >
-          <Text style={styles.questionAudioIcon}>🔊</Text>
-        </TouchableOpacity>
+        {/* Control row: Prev sign | Pause/Resume | Next sign */}
+        <View style={styles.controlRow}>
+          <TouchableOpacity
+            style={[styles.navBtn, !prevSign && styles.navBtnDisabled]}
+            onPress={handlePrevSign}
+            disabled={!prevSign}
+            accessibilityLabel="ወደ ቀዳሚ ምልክት"
+          >
+            <Text style={[styles.navBtnIcon, !prevSign && styles.navBtnIconDisabled]}>⬅️</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={styles.audioBtn}
+            onPress={handleAudioButton}
+            accessibilityLabel="ድምጽ አቁም / ቀጥል"
+          >
+            <Text style={styles.audioBtnIcon}>{audioButtonIcon}</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={[styles.navBtn, !nextSign && styles.navBtnDisabled]}
+            onPress={handleNextSign}
+            disabled={!nextSign}
+            accessibilityLabel="ወደ ቀጣይ ምልክት"
+          >
+            <Text style={[styles.navBtnIcon, !nextSign && styles.navBtnIconDisabled]}>➡️</Text>
+          </TouchableOpacity>
+        </View>
 
         {/* Answer images grid (3 choices) */}
         <View style={styles.answersRow}>
@@ -409,16 +465,44 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.secondary,
     width:           20,
   },
-  questionAudioBtn: {
+  controlRow: {
+    flexDirection:  'row',
+    alignItems:     'center',
+    justifyContent: 'center',
+    gap:            20,
+  },
+  navBtn: {
     width:           72,
     height:          72,
     borderRadius:    36,
-    backgroundColor: Colors.secondary,
+    backgroundColor: Colors.card,
     justifyContent:  'center',
     alignItems:      'center',
   },
-  questionAudioIcon: {
-    fontSize: 32,
+  navBtnDisabled: {
+    opacity: 0.3,
+  },
+  navBtnIcon: {
+    fontSize: 28,
+  },
+  navBtnIconDisabled: {
+    opacity: 0.4,
+  },
+  audioBtn: {
+    width:           88,
+    height:          88,
+    borderRadius:    44,
+    backgroundColor: Colors.secondary,
+    justifyContent:  'center',
+    alignItems:      'center',
+    shadowColor:     Colors.secondary,
+    shadowOffset:    { width: 0, height: 4 },
+    shadowOpacity:   0.4,
+    shadowRadius:    10,
+    elevation:       6,
+  },
+  audioBtnIcon: {
+    fontSize: 36,
   },
   answersRow: {
     flexDirection:  'row',
