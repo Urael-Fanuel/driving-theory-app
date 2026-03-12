@@ -1,5 +1,4 @@
 /**
- * AGENT 3 — app/(engineA)/sign/[id].tsx
  * Engine A Sign Screen — Large static sign image + audio narration + Start Quiz.
  *
  * Layout:
@@ -12,18 +11,15 @@
  * │  │               │  │
  * │  └───────────────┘  │
  * │                     │
- * │  [🔊 Play Again]   │  ← Audio replay button
+ * │  [⬅️]  [⏸/▶️]  [➡️] │  ← Prev / Pause-Resume / Next
  * │                     │
- * │  [✅ Start Quiz]    │  ← Pulses after audio ends
+ * │  [📝 Start Quiz]    │  ← Pulses after audio ends
  * └─────────────────────┘
  *
  * Zero text shown to Engine A users.
  */
 
 import React, { useEffect, useState, useRef } from 'react';
-
-// ─── Audio base URL (Supabase Storage) ────────────────────────────────────────
-const _AUDIO_BASE = (process.env.EXPO_PUBLIC_SUPABASE_URL ?? '') + '/storage/v1/object/public/audio';
 
 import {
   View,
@@ -41,24 +37,28 @@ import { Colors } from '../../../constants/colors';
 import { LoadingScreen } from '../../../components/shared/LoadingScreen';
 import { DBSign } from '../../../backend/supabaseClient';
 import * as api from '../../../backend/api';
-import { useAudio, waitForAudioEnd } from '../../../hooks/useAudio';
+import { useAudio, playAndAwaitAudio } from '../../../hooks/useAudio';
 import { useProgress } from '../../../hooks/useProgress';
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
 export default function EngineASignScreen() {
-  const { id }         = useLocalSearchParams<{ id: string }>();
-  const router         = useRouter();
-  const { playAudio }  = useAudio();
+  const { id } = useLocalSearchParams<{ id: string }>();
+
+  const router = useRouter();
+  const { stopAudio, pauseAudio, resumeAudio, audioState } = useAudio();
   const { markSignViewed } = useProgress();
 
   const [sign,        setSign]        = useState<DBSign | null>(null);
   const [loading,     setLoading]     = useState(true);
   const [audioEnded,  setAudioEnded]  = useState(false);
-  const [replayCount, setReplayCount] = useState(0); // Triggers audio re-play on replay
+  const [replayCount, setReplayCount] = useState(0);
+  const [topicSigns,  setTopicSigns]  = useState<DBSign[]>([]);
 
   const quizButtonAnim = useRef(new Animated.Value(0)).current;
   const pulseAnim      = useRef(new Animated.Value(1)).current;
+
+  // ── Load sign + all signs in same topic (for prev/next navigation) ───────────
 
   useEffect(() => {
     async function load() {
@@ -66,6 +66,12 @@ export default function EngineASignScreen() {
         const signs = await api.getAllSigns();
         const found = signs.find(s => s.id === id) ?? null;
         setSign(found);
+        if (found) {
+          const sorted = signs
+            .filter(s => s.topic_id === found.topic_id)
+            .sort((a, b) => a.display_order - b.display_order);
+          setTopicSigns(sorted);
+        }
       } catch (err) {
         console.error('[EngineA/sign] Failed to load sign:', err);
       } finally {
@@ -75,18 +81,30 @@ export default function EngineASignScreen() {
     load();
   }, [id]);
 
-  // Auto-play audio explanation; show quiz button when audio ends
+  // ── Reset all state when navigating to a different sign ──────────────────────
+
+  useEffect(() => {
+    setAudioEnded(false);
+    setReplayCount(0);
+    quizButtonAnim.setValue(0);
+    pulseAnim.stopAnimation();
+    pulseAnim.setValue(1);
+  }, [id]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // ── Auto-play audio; re-runs on replayCount to support replay ────────────────
+
   useEffect(() => {
     if (!sign?.audio_explanation_url) {
-      // No audio — show quiz button immediately
       setAudioEnded(true);
       return;
     }
+
     let cancelled = false;
 
     async function playAndWait() {
-      playAudio(sign!.audio_explanation_url!).catch(() => {});
-      await waitForAudioEnd();
+      // ✅ Correct pattern — Promise is tied to THIS specific sound via _soundId.
+      // Cannot be resolved prematurely by another audio completing or erroring.
+      await playAndAwaitAudio(sign!.audio_explanation_url!, () => cancelled);
       if (cancelled) return;
       setAudioEnded(true);
     }
@@ -95,7 +113,8 @@ export default function EngineASignScreen() {
     return () => { cancelled = true; };
   }, [sign?.id, replayCount]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // Animate quiz button in when audio ends
+  // ── Animate quiz button in when audio ends ───────────────────────────────────
+
   useEffect(() => {
     if (audioEnded) {
       Animated.parallel([
@@ -112,17 +131,57 @@ export default function EngineASignScreen() {
     }
   }, [audioEnded]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const handleAudioReplay = () => {
-    setAudioEnded(false);
-    pulseAnim.stopAnimation();
-    quizButtonAnim.setValue(0);
-    setReplayCount(c => c + 1);
+  // ── Prev / Next navigation ───────────────────────────────────────────────────
+
+  const currentIndex = topicSigns.findIndex(s => s.id === id);
+  const prevSign     = currentIndex > 0 ? topicSigns[currentIndex - 1] : null;
+  const nextSign     = currentIndex < topicSigns.length - 1 ? topicSigns[currentIndex + 1] : null;
+
+  const handlePrev = async () => {
+    if (!prevSign) return;
+    Haptics.selectionAsync();
+    await stopAudio();
+    router.replace({
+      pathname: '/(engineA)/sign/[id]',
+      params: { id: prevSign.id },
+    } as any);
   };
+
+  const handleNext = async () => {
+    if (!nextSign) return;
+    Haptics.selectionAsync();
+    await stopAudio();
+    router.replace({
+      pathname: '/(engineA)/sign/[id]',
+      params: { id: nextSign.id },
+    } as any);
+  };
+
+  // ── Audio button: play / pause / resume ──────────────────────────────────────
+
+  const handleAudioButton = async () => {
+    await Haptics.selectionAsync();
+    if (audioState === 'playing') {
+      await pauseAudio();
+    } else if (audioState === 'paused') {
+      await resumeAudio();
+    } else {
+      // idle / finished / error → restart from beginning
+      setAudioEnded(false);
+      pulseAnim.stopAnimation();
+      pulseAnim.setValue(1);
+      quizButtonAnim.setValue(0);
+      setReplayCount(c => c + 1);
+    }
+  };
+
+  const audioButtonIcon = audioState === 'playing' ? '⏸' : '▶️';
+
+  // ── Other handlers ───────────────────────────────────────────────────────────
 
   const handleStartQuiz = () => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
     router.push(`/(engineA)/question/${id}_q0`);
-    playAudio(`${_AUDIO_BASE}/starting_quiz.mp3`).catch(() => {});
   };
 
   const handleBack = () => {
@@ -159,14 +218,39 @@ export default function EngineASignScreen() {
           )}
         </View>
 
-        {/* Audio replay button */}
-        <TouchableOpacity
-          style={styles.audioReplayBtn}
-          onPress={handleAudioReplay}
-          accessibilityLabel="ድምጽ ዳግም አዳምጥ"
-        >
-          <Text style={styles.audioReplayIcon}>🔊</Text>
-        </TouchableOpacity>
+        {/* Control row: Prev | Play/Pause | Next */}
+        <View style={styles.controlRow}>
+
+          {/* ⬅️ Previous sign */}
+          <TouchableOpacity
+            style={[styles.navBtn, !prevSign && styles.navBtnDisabled]}
+            onPress={handlePrev}
+            disabled={!prevSign}
+            accessibilityLabel="ወደ ቀዳሚ ምልክት"
+          >
+            <Text style={[styles.navBtnIcon, !prevSign && styles.navBtnIconDisabled]}>⬅️</Text>
+          </TouchableOpacity>
+
+          {/* ⏸/▶️ Play / Pause / Resume */}
+          <TouchableOpacity
+            style={styles.audioBtn}
+            onPress={handleAudioButton}
+            accessibilityLabel="ድምጽ አጫውት / አቁም"
+          >
+            <Text style={styles.audioBtnIcon}>{audioButtonIcon}</Text>
+          </TouchableOpacity>
+
+          {/* ➡️ Next sign */}
+          <TouchableOpacity
+            style={[styles.navBtn, !nextSign && styles.navBtnDisabled]}
+            onPress={handleNext}
+            disabled={!nextSign}
+            accessibilityLabel="ወደ ቀጣይ ምልክት"
+          >
+            <Text style={[styles.navBtnIcon, !nextSign && styles.navBtnIconDisabled]}>➡️</Text>
+          </TouchableOpacity>
+
+        </View>
 
         {/* Start Quiz button — appears (pulsing) after audio ends */}
         <Animated.View
@@ -185,7 +269,7 @@ export default function EngineASignScreen() {
             accessibilityLabel="ጥያቄ ጀምር"
             accessibilityRole="button"
           >
-            <Text style={styles.startQuizIcon}>✅</Text>
+            <Text style={styles.startQuizIcon}>📝</Text>
           </TouchableOpacity>
         </Animated.View>
 
@@ -239,15 +323,43 @@ const styles = StyleSheet.create({
   placeholderIcon: {
     fontSize: 64,
   },
-  audioReplayBtn: {
-    width:           80,
-    height:          80,
-    borderRadius:    40,
-    backgroundColor: Colors.secondary,
+  controlRow: {
+    flexDirection:  'row',
+    alignItems:     'center',
+    justifyContent: 'center',
+    gap:            20,
+  },
+  navBtn: {
+    width:           72,
+    height:          72,
+    borderRadius:    36,
+    backgroundColor: Colors.card,
     justifyContent:  'center',
     alignItems:      'center',
   },
-  audioReplayIcon: {
+  navBtnDisabled: {
+    opacity: 0.3,
+  },
+  navBtnIcon: {
+    fontSize: 28,
+  },
+  navBtnIconDisabled: {
+    opacity: 0.4,
+  },
+  audioBtn: {
+    width:           88,
+    height:          88,
+    borderRadius:    44,
+    backgroundColor: Colors.secondary,
+    justifyContent:  'center',
+    alignItems:      'center',
+    shadowColor:     Colors.secondary,
+    shadowOffset:    { width: 0, height: 4 },
+    shadowOpacity:   0.4,
+    shadowRadius:    10,
+    elevation:       6,
+  },
+  audioBtnIcon: {
     fontSize: 36,
   },
   quizButtonContainer: {
