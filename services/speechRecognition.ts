@@ -12,7 +12,8 @@
  *   }
  */
 
-import * as FileSystem from 'expo-file-system';
+// expo-file-system v17+ deprecated the top-level API; use /legacy for readAsStringAsync
+import * as FileSystem from 'expo-file-system/legacy';
 
 // ─── Config ───────────────────────────────────────────────────────────────────
 
@@ -53,8 +54,10 @@ function mapSpeechToAnswer(transcript: string): number | null {
   if (t.includes('አንድ') || t === 'ሀ' || t === '1' || t === 'one') return 0;
   if (t.includes('ሁለት') || t === 'ለ' || t === '2' || t === 'two') return 1;
   if (t.includes('ሶስት') || t === 'ሐ' || t === '3' || t === 'three') return 2;
+  if (t.includes('አራት') || t === 'መ' || t === '4' || t === 'four') return 3;
 
   // Handle variations
+  if (t.startsWith('አር') || t.includes('አራ')) return 3;
   if (t.startsWith('አ') || t.includes('አን')) return 0;
   if (t.startsWith('ሁ') || t.includes('ሁለ')) return 1;
   if (t.startsWith('ሶ') || t.includes('ሶስ')) return 2;
@@ -66,19 +69,29 @@ function mapSpeechToAnswer(transcript: string): number | null {
 
 /**
  * Send audio to Google Cloud STT and get answer index.
- * @param audioUri - Local URI of the recorded audio file
+ * @param audioUri        - Local URI of the recorded audio file
+ * @param encoding        - Audio encoding that matches the recording format:
+ *                          'LINEAR16' for iOS .wav, 'AMR_WB' for Android .amr
+ * @param sampleRateHertz - Sample rate of the recording (default 16000)
  */
-export async function recognizeAmharicAnswer(audioUri: string): Promise<STTResult> {
+export async function recognizeAmharicAnswer(
+  audioUri: string,
+  encoding: 'LINEAR16' | 'AMR_WB' = 'LINEAR16',
+  sampleRateHertz: number = 16000,
+): Promise<STTResult> {
   if (!API_KEY) {
     console.warn('[STT] No API key configured — STT disabled');
     return { answer: null, confidence: 0, transcript: '', isRecognized: false };
   }
 
   try {
+    console.log('[STT] audioUri:', audioUri, '| encoding:', encoding, '| rate:', sampleRateHertz);
+
     // Read audio file as base64
     const base64Audio = await FileSystem.readAsStringAsync(audioUri, {
-      encoding: FileSystem.EncodingType.Base64,
+      encoding: 'base64',  // EncodingType.Base64 = 'base64' — use literal to avoid runtime undefined
     });
+    console.log('[STT] base64Audio length:', base64Audio?.length ?? 'null');
 
     // Call Google STT API
     const response = await fetch(`${GOOGLE_STT_URL}?key=${API_KEY}`, {
@@ -86,8 +99,8 @@ export async function recognizeAmharicAnswer(audioUri: string): Promise<STTResul
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         config: {
-          encoding:           'LINEAR16',   // expo-av default recording format
-          sampleRateHertz:    44100,        // expo-av HIGH_QUALITY default
+          encoding,           // matches recording format: LINEAR16 (iOS) or AMR_WB (Android)
+          sampleRateHertz,    // 16000 Hz — optimal for speech recognition
           languageCode:       'am-ET',      // Amharic (Ethiopia)
           speechContexts: [{
             phrases: PHRASE_HINTS,
@@ -141,8 +154,12 @@ export async function recognizeAmharicAnswer(audioUri: string): Promise<STTResul
       isRecognized: answer !== null,
     };
 
-  } catch (error) {
+  } catch (error: any) {
+    // Log full details so we can diagnose the exact failure
     console.error('[STT] Network/parse error:', error);
+    console.error('[STT] error.name:', error?.name);
+    console.error('[STT] error.message:', error?.message);
+    console.error('[STT] error.stack:', error?.stack);
     return { answer: null, confidence: 0, transcript: '', isRecognized: false };
   }
 }

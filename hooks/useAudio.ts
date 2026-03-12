@@ -63,7 +63,8 @@ export const getGlobalAudioState = (): AudioState => _currentState;
 
 /**
  * Returns a Promise that resolves when the current audio finishes (or errors/stops).
- * Use this to await the end of an audio clip before starting the next one.
+ * Use this ONLY to wait for audio that was started externally (e.g. starting_quiz.mp3
+ * fired from another screen). For audio you start yourself, use playAndAwaitAudio().
  */
 export function waitForAudioEnd(): Promise<void> {
   // Already idle / finished / error — resolve immediately
@@ -86,6 +87,126 @@ export function waitForAudioEnd(): Promise<void> {
       }
     };
     _listeners.add(listener);
+  });
+}
+
+/**
+ * Plays audio and returns a Promise that resolves ONLY when THIS specific
+ * audio finishes, errors, or is cancelled/replaced.
+ *
+ * This is the correct way to sequence audio:
+ *   await playAndAwaitAudio(url, () => cancelled);
+ *
+ * Unlike playAudio() + waitForAudioEnd(), this Promise is tied to a single
+ * sound instance via _soundId — it cannot be resolved prematurely by another
+ * audio completing or by global _currentState changes.
+ */
+export async function playAndAwaitAudio(
+  rawUri: string,
+  isCancelled: () => boolean,
+): Promise<void> {
+  if (!rawUri || isCancelled()) return;
+
+  // Convert local asset paths to Supabase CDN URLs (mirrors playAudio hook)
+  let uri = rawUri;
+  if (rawUri.startsWith('assets/audio/')) {
+    const filename = rawUri.slice('assets/audio/'.length);
+    const cdnUrl = getStorageUrl(BUCKETS.AUDIO, filename);
+    if (cdnUrl) uri = cdnUrl;
+  }
+
+  _emit('loading');
+  await _stop();
+  if (isCancelled()) return;
+
+  const thisSoundId = _soundId; // Captured after _stop() — uniquely identifies THIS sound
+
+  return new Promise<void>((resolve) => {
+    Audio.Sound.createAsync(
+      { uri },
+      { shouldPlay: true, progressUpdateIntervalMillis: 200 },
+      (status: AVPlaybackStatus) => {
+        // Guard: another audio started or sequence was cancelled
+        if (thisSoundId !== _soundId || isCancelled()) {
+          resolve();
+          return;
+        }
+        if (!status.isLoaded) {
+          if (status.error) { _emit('error'); resolve(); }
+          return;
+        }
+        if (status.isPlaying)     _emit('playing');
+        if (status.didJustFinish) { _emit('finished'); resolve(); }
+      }
+    )
+    .then(({ sound }) => {
+      if (thisSoundId !== _soundId || isCancelled()) {
+        sound.unloadAsync().catch(() => {});
+        resolve();
+        return;
+      }
+      _sound = sound;
+      if (_currentState === 'loading') _emit('playing');
+    })
+    .catch((error) => {
+      console.warn('[useAudio] playAndAwaitAudio failed:', uri, error);
+      _emit('error');
+      resolve(); // Resolve on error — never hang the sequence
+    });
+  });
+}
+
+/**
+ * Preloads an audio file into memory without playing it.
+ * Call this while another audio is playing so the next one is ready instantly.
+ */
+export async function preloadAudio(uri: string): Promise<Audio.Sound | null> {
+  if (!uri) return null;
+  try {
+    let resolvedUri = uri;
+    if (uri.startsWith('assets/audio/')) {
+      const filename = uri.slice('assets/audio/'.length);
+      const cdnUrl = getStorageUrl(BUCKETS.AUDIO, filename);
+      if (cdnUrl) resolvedUri = cdnUrl;
+    }
+    const { sound } = await Audio.Sound.createAsync(
+      { uri: resolvedUri },
+      { shouldPlay: false },
+    );
+    return sound;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Plays a pre-loaded Audio.Sound and waits for it to finish.
+ * Integrates with the global singleton so stopAudio() still works.
+ */
+export async function playPreloadedAudio(
+  sound: Audio.Sound | null,
+  isCancelled: () => boolean,
+): Promise<void> {
+  if (!sound || isCancelled()) return;
+
+  await _stop();
+  if (isCancelled()) { sound.unloadAsync().catch(() => {}); return; }
+
+  const thisSoundId = _soundId;
+  _sound = sound;
+  _emit('playing');
+
+  return new Promise<void>((resolve) => {
+    sound.setOnPlaybackStatusUpdate((status: AVPlaybackStatus) => {
+      if (thisSoundId !== _soundId || isCancelled()) { resolve(); return; }
+      if (!status.isLoaded) {
+        if (status.error) { _emit('error'); resolve(); }
+        return;
+      }
+      if (status.isPlaying)     _emit('playing');
+      if (status.didJustFinish) { _emit('finished'); resolve(); }
+    });
+    sound.playAsync().catch(() => { _emit('error'); resolve(); });
   });
 }
 

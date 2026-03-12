@@ -17,6 +17,9 @@
  */
 
 import React, { useEffect, useState } from 'react';
+
+// ─── Audio base URL (Supabase Storage) ────────────────────────────────────────
+const _AUDIO_BASE = (process.env.EXPO_PUBLIC_SUPABASE_URL ?? '') + '/storage/v1/object/public/audio';
 import {
   View,
   Text,
@@ -64,7 +67,7 @@ export default function EngineAHomeScreen() {
     load();
 
     // Play welcome audio for Engine A
-    playAudio('assets/audio/home_welcome_a.mp3').catch(() => {});
+    playAudio(`${_AUDIO_BASE}/home_welcome_a.mp3`).catch(() => {});
   }, []);
 
   const handleTopicPress = (topic: DBTopic) => {
@@ -104,7 +107,7 @@ export default function EngineAHomeScreen() {
         {/* Header with replay button */}
         <View style={styles.header}>
           <TouchableOpacity
-            onPress={() => playAudio('assets/audio/home_welcome_a.mp3').catch(() => {})}
+            onPress={() => playAudio(`${_AUDIO_BASE}/home_welcome_a.mp3`).catch(() => {})}
             style={styles.replayButton}
             accessibilityLabel="ድምጽ ዳግም አዳምጥ"
           >

@@ -26,7 +26,7 @@ import { VoiceAnswerButton } from '../../../components/engineA/VoiceAnswerButton
 import { AudioFeedback } from '../../../components/engineA/AudioFeedback';
 import { ProgressBar } from '../../../components/shared/ProgressBar';
 import { useExam } from '../../../hooks/useExam';
-import { useAudio, waitForAudioEnd } from '../../../hooks/useAudio';
+import { useAudio, playAndAwaitAudio } from '../../../hooks/useAudio';
 import { useVoiceRecognition } from '../../../hooks/useVoiceRecognition';
 import * as api from '../../../backend/api';
 import { DBSign } from '../../../backend/supabaseClient';
@@ -70,6 +70,10 @@ export default function EngineAExamScreen() {
   // Ref so async runSequence can check phase without stale closure
   const phaseRef = useRef(phase);
   phaseRef.current = phase;
+
+  // When voice recognition fails, this ref signals the audio sequence to stop
+  // so the failure audio can play cleanly without being interrupted.
+  const voiceFailedRef = useRef(false);
 
   // Stable callback ref so useVoiceRecognition doesn't re-init on re-renders
   const answerCallbackRef = useRef<(idx: number) => void>(() => {});
@@ -125,39 +129,40 @@ export default function EngineAExamScreen() {
   }, [voiceState, startListening, stopListening]);
 
   // ── Audio sequence: question → 1s pause → number+answer for each card ───────
-  // Same pattern as question/[id].tsx — fully sequential, no race conditions.
+  // voiceFailedRef stops the sequence so voice-failure audio can play cleanly.
   useEffect(() => {
     if (phase !== 'question' || !currentQuestion || !isTabFocused) return;
+    voiceFailedRef.current = false; // Reset for new question
     cancelListening();
     setShowFeedback(false);
     let cancelled = false;
+    const isCancelled = () => cancelled || voiceFailedRef.current;
 
     async function runSequence() {
-      // 1. Play question audio
-      if (currentQuestion!.question_audio_url) {
-        playAudio(currentQuestion!.question_audio_url).catch(() => {});
-        await waitForAudioEnd();
-      }
+      await stopAudio();
+      if (isCancelled()) return;
 
-      // 1-second pause before answers
+      const qId = currentQuestion!.id;
+      const qAudioUrl = currentQuestion!.question_audio_url
+        || `${_AUDIO_BASE}/${qId.toLowerCase()}.mp3`;
+      await playAndAwaitAudio(qAudioUrl, isCancelled);
+      if (isCancelled()) return;
+
       await new Promise(res => setTimeout(res, 1000));
-      if (cancelled || phaseRef.current !== 'question') return;
+      if (isCancelled() || phaseRef.current !== 'question') return;
 
-      // 2. Play each answer prefixed by its number, with yellow highlight
       for (let i = 0; i < currentQuestion!.answers.length && i < 3; i++) {
-        if (cancelled || phaseRef.current !== 'question') return;
+        if (isCancelled() || phaseRef.current !== 'question') return;
 
         setPlayingAnswerIndex(i);
 
-        playAudio(NUMBER_URLS[i]).catch(() => {});
-        await waitForAudioEnd();
-        if (cancelled || phaseRef.current !== 'question') return;
+        await playAndAwaitAudio(NUMBER_URLS[i], isCancelled);
+        if (isCancelled() || phaseRef.current !== 'question') return;
 
-        const answerUrl = currentQuestion!.answers[i]?.audio_url;
-        if (answerUrl) {
-          playAudio(answerUrl).catch(() => {});
-          await waitForAudioEnd();
-        }
+        const answer = currentQuestion!.answers[i];
+        const answerUrl = answer?.audio_url
+          || `${_AUDIO_BASE}/answer_${qId}_${answer?.id}.mp3`;
+        await playAndAwaitAudio(answerUrl, isCancelled);
       }
       setPlayingAnswerIndex(null);
     }
@@ -168,6 +173,19 @@ export default function EngineAExamScreen() {
       setPlayingAnswerIndex(null);
     };
   }, [currentQuestion?.id, isTabFocused]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // ── Voice failure → stop sequence, play audio instead of showing text ────────
+  useEffect(() => {
+    if (voiceState === 'failed') {
+      voiceFailedRef.current = true;
+      stopAudio();
+      // Play Amharic "try again, say the number" message
+      // File: try_again.mp3 = "ዳግም ሞክር། ቁጥሩን ይናገሩ። አንድ፣ ሁለት፣ ወይም ሶስት།"
+      playAudio(`${_AUDIO_BASE}/try_again.mp3`).catch(() => {});
+    } else {
+      voiceFailedRef.current = false;
+    }
+  }, [voiceState]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Show feedback overlay when answer submitted
   useEffect(() => {
@@ -272,13 +290,14 @@ export default function EngineAExamScreen() {
           ))}
         </View>
 
-        {/* Voice button — shown only during active question */}
+        {/* Voice button — shown only during active question.
+            showFailedText={false}: Engine A users cannot read — audio plays instead. */}
         {phase === 'question' && (
           <VoiceAnswerButton
             state={voiceState}
             onPress={handleVoicePress}
             size={100}
-            showFailedText
+            showFailedText={false}
           />
         )}
       </ScrollView>

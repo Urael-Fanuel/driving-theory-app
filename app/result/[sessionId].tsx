@@ -9,6 +9,9 @@
  */
 
 import React, { useEffect, useRef } from 'react';
+
+// ─── Audio base URL (Supabase Storage) ────────────────────────────────────────
+const _AUDIO_BASE = (process.env.EXPO_PUBLIC_SUPABASE_URL ?? '') + '/storage/v1/object/public/audio';
 import {
   View,
   Text,
@@ -76,9 +79,9 @@ export default function ResultScreen() {
 
     // Play result audio
     if (passed) {
-      playAudio('assets/audio/exam_passed.mp3').catch(() => {});
+      playAudio(`${_AUDIO_BASE}/exam_passed.mp3`).catch(() => {});
     } else {
-      playAudio('assets/audio/exam_failed.mp3').catch(() => {});
+      playAudio(`${_AUDIO_BASE}/exam_failed.mp3`).catch(() => {});
     }
 
     // Staggered entrance animations
