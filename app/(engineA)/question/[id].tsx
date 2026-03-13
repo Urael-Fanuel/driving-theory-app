@@ -63,7 +63,7 @@ export default function EngineAQuestionScreen() {
   const { playAudio, stopAudio, pauseAudio, resumeAudio, audioState } = useAudio();
   const { recordAnswer } = useProgress();
 
-  const [signId, questionIndex] = parseQuestionId(id);
+  const [signId, initialIndex] = parseQuestionId(id);
 
   const [sign,          setSign]          = useState<DBSign | null>(null);
   const [questions,     setQuestions]     = useState<DBQuestion[]>([]);
@@ -72,8 +72,12 @@ export default function EngineAQuestionScreen() {
   const [answeredIndex,     setAnsweredIndex]     = useState<number | null>(null);
   const [showFeedback,      setShowFeedback]      = useState(false);
   const [playingAnswerIndex, setPlayingAnswerIndex] = useState<number | null>(null);
+  const [qIndex,        setQIndex]        = useState(initialIndex);
 
-  const currentQuestion = questions[questionIndex] ?? null;
+  const currentQuestion = questions[qIndex] ?? null;
+
+  // When navigating questions manually, skip the transitional audio wait
+  const skipInitialWaitRef = useRef(false);
 
   // Ref so the async audio chain can check — without needing it in dep arrays.
   const answeredIndexRef  = useRef<number | null>(null);
@@ -139,8 +143,11 @@ export default function EngineAQuestionScreen() {
     const isCancelled = () => cancelled || voiceFailedRef.current;
 
     async function runSequence() {
-      // Wait for any transitional audio already playing (e.g. starting_quiz.mp3).
-      await waitForAudioEnd();
+      // Wait for transitional audio only on first load (not when navigating questions).
+      if (!skipInitialWaitRef.current) {
+        await waitForAudioEnd();
+      }
+      skipInitialWaitRef.current = false;
       if (isCancelled()) return;
 
       const qId = currentQuestion!.id;
@@ -269,20 +276,28 @@ export default function EngineAQuestionScreen() {
 
   const audioButtonIcon = audioState === 'playing' ? '⏸' : '▶️';
 
-  // ── Navigate to next question ───────────────────────────────────────────────
-  const handleNext = useCallback(() => {
-    setShowFeedback(false);
+  // ── Navigate between questions within the same sign ────────────────────────
+  const navigateToQuestion = useCallback((newIndex: number) => {
+    if (newIndex < 0 || newIndex >= questions.length) return;
+    stopAudio();
+    cancelListening();
     setAnsweredIndex(null);
-    stopAudio();       // Stop any playing audio before loading next question
-    cancelListening(); // Reset voice state to 'idle' for next question
+    setShowFeedback(false);
+    setPlayingAnswerIndex(null);
+    voiceFailedRef.current = false;
+    skipInitialWaitRef.current = true; // Skip transitional audio wait
+    setQIndex(newIndex);
+  }, [questions.length, stopAudio, cancelListening]);
 
-    const nextIndex = questionIndex + 1;
+  // ── Navigate to next question (after feedback) ──────────────────────────────
+  const handleNext = useCallback(() => {
+    const nextIndex = qIndex + 1;
     if (nextIndex < questions.length) {
-      router.replace(`/(engineA)/question/${signId}_q${nextIndex}`);
+      navigateToQuestion(nextIndex);
     } else {
       router.back();
     }
-  }, [questionIndex, questions.length, signId, router, stopAudio, cancelListening]);
+  }, [qIndex, questions.length, router, navigateToQuestion]);
 
   // ── Render ─────────────────────────────────────────────────────────────────
   if (loading) return <LoadingScreen />;
@@ -325,18 +340,38 @@ export default function EngineAQuestionScreen() {
           </View>
         )}
 
-        {/* Question progress dots (1/3, 2/3, 3/3) */}
-        <View style={styles.progressRow}>
-          {questions.map((_, i) => (
-            <View
-              key={i}
-              style={[
-                styles.progressDot,
-                i < questionIndex  && styles.progressDotDone,
-                i === questionIndex && styles.progressDotActive,
-              ]}
-            />
-          ))}
+        {/* Question progress dots with prev/next question navigation */}
+        <View style={styles.progressRowWithNav}>
+          <TouchableOpacity
+            style={[styles.qNavBtn, qIndex === 0 && styles.navBtnDisabled]}
+            onPress={() => navigateToQuestion(qIndex - 1)}
+            disabled={qIndex === 0}
+            accessibilityLabel="ወደ ቀዳሚ ጥያቄ"
+          >
+            <Text style={[styles.navBtnIcon, qIndex === 0 && styles.navBtnIconDisabled]}>⬅️</Text>
+          </TouchableOpacity>
+
+          <View style={styles.progressRow}>
+            {questions.map((_, i) => (
+              <View
+                key={i}
+                style={[
+                  styles.progressDot,
+                  i < qIndex  && styles.progressDotDone,
+                  i === qIndex && styles.progressDotActive,
+                ]}
+              />
+            ))}
+          </View>
+
+          <TouchableOpacity
+            style={[styles.qNavBtn, qIndex === questions.length - 1 && styles.navBtnDisabled]}
+            onPress={() => navigateToQuestion(qIndex + 1)}
+            disabled={qIndex === questions.length - 1}
+            accessibilityLabel="ወደ ቀጣይ ጥያቄ"
+          >
+            <Text style={[styles.navBtnIcon, qIndex === questions.length - 1 && styles.navBtnIconDisabled]}>➡️</Text>
+          </TouchableOpacity>
         </View>
 
         {/* Control row: Prev sign | Pause/Resume | Next sign */}
@@ -448,9 +483,24 @@ const styles = StyleSheet.create({
     height:          '100%',
     backgroundColor: '#FFFFFF',
   },
+  progressRowWithNav: {
+    flexDirection:  'row',
+    alignItems:     'center',
+    justifyContent: 'center',
+    gap:            16,
+  },
   progressRow: {
     flexDirection: 'row',
     gap:           12,
+    alignItems:    'center',
+  },
+  qNavBtn: {
+    width:           48,
+    height:          48,
+    borderRadius:    24,
+    backgroundColor: Colors.card,
+    justifyContent:  'center',
+    alignItems:      'center',
   },
   progressDot: {
     width:           12,
