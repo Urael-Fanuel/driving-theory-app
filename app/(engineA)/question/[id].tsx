@@ -143,10 +143,8 @@ export default function EngineAQuestionScreen() {
     const isCancelled = () => cancelled || voiceFailedRef.current;
 
     async function runSequence() {
-      // Wait for transitional audio only on first load (not when navigating questions).
-      if (!skipInitialWaitRef.current) {
-        await waitForAudioEnd();
-      }
+      // Always wait exactly 1 second before starting (consistent delay for all cases).
+      await new Promise(res => setTimeout(res, 1000));
       skipInitialWaitRef.current = false;
       if (isCancelled()) return;
 
@@ -156,7 +154,7 @@ export default function EngineAQuestionScreen() {
       await playAndAwaitAudio(qAudioUrl, isCancelled);
       if (isCancelled()) return;
 
-      await new Promise(res => setTimeout(res, 1000));
+      await new Promise(res => setTimeout(res, 300));
       if (isCancelled() || answeredIndexRef.current !== null) return;
 
       for (let i = 0; i < currentQuestion!.answers.length && i < 4; i++) {
