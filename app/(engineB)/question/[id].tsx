@@ -253,33 +253,28 @@ export default function EngineBQuestionScreen() {
       {/* ── Bottom navigation ── */}
       <View style={styles.bottomNav}>
 
-        {/* Row 1 — Question navigation */}
+        {/* Row 1 — Question navigation (two wide buttons) */}
         <View style={styles.questionNavRow}>
           <TouchableOpacity
-            style={[styles.qNavBtn, !canGoPrevQ && styles.navBtnDisabled]}
+            style={[styles.qWideBtn, !canGoPrevQ && styles.qWideBtnDisabled]}
             onPress={handlePrevQuestion}
             disabled={!canGoPrevQ}
             accessibilityLabel="ወደ ቀዳሚ ጥያቄ"
+            activeOpacity={0.75}
           >
-            <Text style={[styles.qNavArrow, !canGoPrevQ && styles.navArrowDisabled]}>‹</Text>
+            <Text style={styles.qWideBtnArrow}>‹</Text>
+            <Text style={styles.qWideBtnLabel}>ቀዳሚ{'\n'}ጥያቄ</Text>
           </TouchableOpacity>
 
-          <View style={styles.qNavLabels}>
-            <Text style={[styles.qNavLabel, !canGoPrevQ && styles.qNavLabelDisabled]}>
-              ቀዳሚ ጥያቄ
-            </Text>
-            <Text style={[styles.qNavLabel, !canGoNextQ && styles.qNavLabelDisabled, styles.qNavLabelRight]}>
-              ቀጣይ ጥያቄ
-            </Text>
-          </View>
-
           <TouchableOpacity
-            style={[styles.qNavBtn, !canGoNextQ && styles.navBtnDisabled]}
+            style={[styles.qWideBtn, styles.qWideBtnRight, !canGoNextQ && styles.qWideBtnDisabled]}
             onPress={handleNextQuestion}
             disabled={!canGoNextQ}
             accessibilityLabel="ወደ ቀጣይ ጥያቄ"
+            activeOpacity={0.75}
           >
-            <Text style={[styles.qNavArrow, !canGoNextQ && styles.navArrowDisabled]}>›</Text>
+            <Text style={styles.qWideBtnLabel}>ቀጣይ{'\n'}ጥያቄ</Text>
+            <Text style={styles.qWideBtnArrow}>›</Text>
           </TouchableOpacity>
         </View>
 
@@ -432,60 +427,60 @@ const styles = StyleSheet.create({
   bottomNav: {
     borderTopWidth:    1,
     borderTopColor:    Colors.border,
-    backgroundColor:   Colors.background,
-    // Extra bottom padding to clear Android system nav bar
+    backgroundColor:   Colors.surface,   // slightly lighter than background — clear visual separation
     paddingBottom:     Platform.OS === 'android' ? 16 : 8,
   },
 
   navDivider: {
-    height:          1,
-    backgroundColor: Colors.border,
-    marginHorizontal: 20,
+    height:           1,
+    backgroundColor:  Colors.border,
+    marginHorizontal: 16,
   },
 
-  // ── Row 1: Question navigation ───────────────────────────────────────────────
+  // ── Row 1: Question navigation — two wide pill buttons ────────────────────────
   questionNavRow: {
     flexDirection:     'row',
-    alignItems:        'center',
     paddingHorizontal: 12,
     paddingVertical:   10,
-    gap:               8,
+    gap:               10,
   },
-  qNavBtn: {
-    width:           52,
-    height:          52,
-    borderRadius:    26,
-    backgroundColor: Colors.primary,   // green — stands out from dark bg
-    justifyContent:  'center',
+  qWideBtn: {
+    flex:            1,
+    flexDirection:   'row',
     alignItems:      'center',
+    justifyContent:  'center',
+    paddingVertical: 14,
+    paddingHorizontal: 12,
+    gap:             10,
+    backgroundColor: Colors.primary,
+    borderRadius:    16,
     shadowColor:     '#000',
-    shadowOffset:    { width: 0, height: 2 },
-    shadowOpacity:   0.4,
-    shadowRadius:    4,
-    elevation:       4,
+    shadowOffset:    { width: 0, height: 3 },
+    shadowOpacity:   0.35,
+    shadowRadius:    6,
+    elevation:       5,
   },
-  qNavArrow: {
-    fontSize:   28,
+  qWideBtnRight: {
+    // same style — used for RTL-style label+arrow order
+  },
+  qWideBtnDisabled: {
+    backgroundColor: Colors.card,
+    opacity:         0.4,
+    elevation:       0,
+    shadowOpacity:   0,
+  },
+  qWideBtnArrow: {
+    fontSize:   30,
     color:      Colors.textPrimary,
-    fontWeight: '700',                 // bold — clearly visible
-    lineHeight: 34,
-  },
-  qNavLabels: {
-    flex:              1,
-    flexDirection:     'row',
-    justifyContent:    'space-between',
-    paddingHorizontal: 4,
-  },
-  qNavLabel: {
-    ...Typography.bodySmall,
-    color:      Colors.textPrimary,    // white — full contrast
     fontWeight: '700',
+    lineHeight: 36,
   },
-  qNavLabelRight: {
-    textAlign: 'right',
-  },
-  qNavLabelDisabled: {
-    opacity: 0.3,
+  qWideBtnLabel: {
+    fontSize:   15,
+    color:      Colors.textPrimary,
+    fontWeight: '700',
+    lineHeight: 20,
+    textAlign:  'center',
   },
 
   // ── Row 2: Sign navigation ───────────────────────────────────────────────────
@@ -509,7 +504,7 @@ const styles = StyleSheet.create({
   signNavArrow: {
     fontSize:   30,
     color:      Colors.textPrimary,
-    fontWeight: '300',
+    fontWeight: '700',
     lineHeight: 36,
   },
   signThumbBtn: {
@@ -518,8 +513,8 @@ const styles = StyleSheet.create({
     gap:         4,
   },
   signThumb: {
-    width:           52,
-    height:          52,
+    width:           56,
+    height:          56,
     borderRadius:    12,
     backgroundColor: '#FFFFFF',
   },
