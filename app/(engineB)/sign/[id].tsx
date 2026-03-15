@@ -135,7 +135,7 @@ export default function EngineBSignScreen() {
             disabled={!prevSign}
             accessibilityLabel="ወደ ቀዳሚ ምልክት"
           >
-            <Text style={styles.navBtnIcon}>⬅️</Text>
+            <Text style={[styles.navBtnIcon, !prevSign && styles.navBtnIconDisabled]}>‹</Text>
           </TouchableOpacity>
 
           <View style={styles.navSpacer} />
@@ -146,7 +146,7 @@ export default function EngineBSignScreen() {
             disabled={!nextSign}
             accessibilityLabel="ወደ ቀጣይ ምልክት"
           >
-            <Text style={styles.navBtnIcon}>➡️</Text>
+            <Text style={[styles.navBtnIcon, !nextSign && styles.navBtnIconDisabled]}>›</Text>
           </TouchableOpacity>
         </View>
 
@@ -222,18 +222,26 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   navBtn: {
-    width:           56,
-    height:          56,
-    borderRadius:    28,
-    backgroundColor: Colors.card,
+    width:           64,
+    height:          64,
+    borderRadius:    32,
+    backgroundColor: Colors.cardActive,
     justifyContent:  'center',
     alignItems:      'center',
+    borderWidth:     1,
+    borderColor:     Colors.border,
   },
   navBtnDisabled: {
-    opacity: 0.3,
+    opacity: 0.25,
   },
   navBtnIcon: {
-    fontSize: 24,
+    fontSize:   34,
+    color:      Colors.textPrimary,
+    fontWeight: '300',
+    lineHeight: 40,
+  },
+  navBtnIconDisabled: {
+    color: Colors.textSecondary,
   },
   navSpacer: {
     flex: 1,

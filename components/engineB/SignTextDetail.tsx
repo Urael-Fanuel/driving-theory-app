@@ -1,18 +1,19 @@
 /**
- * AGENT 3 — components/engineB/SignTextDetail.tsx
- * Sign detail view for Engine B — shows image + full Amharic text explanation.
+ * components/engineB/SignTextDetail.tsx
+ * Sign detail view for Engine B — text-first for readers.
  *
  * Layout:
  * ┌─────────────────────┐
- * │  [Sign Image]       │  ← 200px square, centered
+ * │     [Sign Image]    │  ← 180px, centered
  * │                     │
- * │  ████ ████ ██       │  ← Amharic name (large)
+ * │   ████ ████ ██      │  ← Sign name (20pt, max 2 lines)
+ * │               [▶️]  │  ← Audio button right-aligned below name
  * │                     │
- * │  ████ ██ █████      │  ← Full explanation text
- * │  ████ ███ ██ ████   │  ← (readable, 18pt min)
- * │  ████ ████          │
- * │                     │
- * │  [🔊 Listen]        │  ← Optional audio button
+ * │ ┌─────────────────┐ │
+ * │ │ ████ ██ █████   │ │  ← Explanation text (18pt)
+ * │ │ ████ ███ ████   │ │
+ * │ │           [▶️]  │ │  ← Audio button right-aligned
+ * │ └─────────────────┘ │
  * └─────────────────────┘
  */
 
@@ -26,7 +27,6 @@ import {
   ViewStyle,
 } from 'react-native';
 import { Colors } from '../../constants/colors';
-import { Typography } from '../../constants/typography';
 import { AudioButton } from '../shared/AudioButton';
 import { DBSign } from '../../backend/supabaseClient';
 
@@ -61,28 +61,26 @@ export function SignTextDetail({ sign, style }: SignTextDetailProps) {
         )}
       </View>
 
-      {/* Sign name */}
-      <View style={styles.nameRow}>
+      {/* Sign name block */}
+      <View style={styles.nameBlock}>
         <Text style={styles.signName}>{sign.name_amharic}</Text>
         {sign.audio_name_url && (
           <AudioButton
             audioUri={sign.audio_name_url}
-            size={48}
+            size={40}
             label={`${sign.name_amharic} ድምጽ`}
             style={styles.nameAudioBtn}
           />
         )}
       </View>
 
-      {/* Explanation text */}
+      {/* Explanation card */}
       <View style={styles.explanationContainer}>
         <Text style={styles.explanationText}>{sign.explanation_amharic}</Text>
-
-        {/* Audio for full explanation */}
         {sign.audio_explanation_url && (
           <AudioButton
             audioUri={sign.audio_explanation_url}
-            size={52}
+            size={40}
             label="ማብራሪያ ድምጽ"
             style={styles.explanationAudioBtn}
           />
@@ -101,14 +99,16 @@ const styles = StyleSheet.create({
   content: {
     padding:    20,
     alignItems: 'center',
+    gap:        16,
   },
+
+  // ── Image ────────────────────────────────────────────────────────────────────
   imageContainer: {
-    width:           200,
-    height:          200,
+    width:           180,
+    height:          180,
     borderRadius:    20,
     overflow:        'hidden',
     backgroundColor: '#FFFFFF',
-    marginBottom:    24,
     shadowColor:     '#000',
     shadowOffset:    { width: 0, height: 6 },
     shadowOpacity:   0.3,
@@ -129,38 +129,41 @@ const styles = StyleSheet.create({
   placeholderIcon: {
     fontSize: 80,
   },
-  nameRow: {
-    flexDirection:  'row',
-    alignItems:     'center',
-    gap:            12,
-    marginBottom:   20,
-    alignSelf:      'stretch',
-    justifyContent: 'center',
+
+  // ── Name block ───────────────────────────────────────────────────────────────
+  nameBlock: {
+    alignSelf: 'stretch',
+    gap:       8,
   },
   signName: {
-    ...Typography.signName,
-    color:     Colors.textPrimary,
-    textAlign: 'center',
-    flex:      1,
+    fontSize:   20,
+    fontWeight: '700',
+    lineHeight: 32,
+    color:      Colors.textPrimary,
+    textAlign:  'center',
   },
   nameAudioBtn: {
-    flexShrink: 0,
+    alignSelf: 'flex-end',
   },
+
+  // ── Explanation card ─────────────────────────────────────────────────────────
   explanationContainer: {
     alignSelf:       'stretch',
-    backgroundColor: Colors.card,
+    backgroundColor: Colors.cardActive,       // slightly lighter than card
     borderRadius:    16,
-    padding:         20,
-    gap:             16,
+    borderWidth:     1,
+    borderColor:     Colors.border,
+    padding:         18,
+    gap:             14,
   },
   explanationText: {
-    ...Typography.body,
+    fontSize:   18,
+    fontWeight: '400',
+    lineHeight: 32,
     color:      Colors.textPrimary,
     textAlign:  'left',
-    lineHeight: 32, // Extra line height for Ethiopic script readability
   },
   explanationAudioBtn: {
     alignSelf: 'flex-end',
-    marginTop: 4,
   },
 });
