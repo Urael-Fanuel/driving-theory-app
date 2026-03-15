@@ -455,28 +455,31 @@ const styles = StyleSheet.create({
     width:           52,
     height:          52,
     borderRadius:    26,
-    backgroundColor: Colors.card,
-    borderWidth:     1,
-    borderColor:     Colors.border,
+    backgroundColor: Colors.primary,   // green — stands out from dark bg
     justifyContent:  'center',
     alignItems:      'center',
+    shadowColor:     '#000',
+    shadowOffset:    { width: 0, height: 2 },
+    shadowOpacity:   0.4,
+    shadowRadius:    4,
+    elevation:       4,
   },
   qNavArrow: {
-    fontSize:   30,
+    fontSize:   28,
     color:      Colors.textPrimary,
-    fontWeight: '300',
-    lineHeight: 36,
+    fontWeight: '700',                 // bold — clearly visible
+    lineHeight: 34,
   },
   qNavLabels: {
-    flex:           1,
-    flexDirection:  'row',
-    justifyContent: 'space-between',
+    flex:              1,
+    flexDirection:     'row',
+    justifyContent:    'space-between',
     paddingHorizontal: 4,
   },
   qNavLabel: {
     ...Typography.bodySmall,
-    color:      Colors.textSecondary,
-    fontWeight: '500',
+    color:      Colors.textPrimary,    // white — full contrast
+    fontWeight: '700',
   },
   qNavLabelRight: {
     textAlign: 'right',
