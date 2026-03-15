@@ -154,14 +154,24 @@ console.log('🖼️   Uploading sign images to images/v4/...');
 let imagesUploaded = 0, imagesFailed = 0;
 const IMAGES_DIR = join(ROOT, 'assets', 'images');
 
+// Search for image in flat dir first, then in named subdirectories
+function findImagePath(filename) {
+  const candidates = [
+    join(IMAGES_DIR, filename),
+    join(IMAGES_DIR, 'תמרורי אזהרה', filename),
+    join(IMAGES_DIR, 'תמרורי הוריה', filename),
+  ];
+  return candidates.find(p => existsSync(p)) ?? null;
+}
+
 for (const sign of numberedSigns) {
   const imgFilename = sign.image_filename; // e.g. "201.png"
-  const localImg = join(IMAGES_DIR, imgFilename);
-  if (!existsSync(localImg)) {
+  const localImg = findImagePath(imgFilename);
+  if (!localImg) {
     console.log(`  ⚠️  Image missing locally: ${imgFilename}`);
     continue;
   }
-  const imgData = readFileSync(localImg);
+  const imgData = readFileSync(localImg);  // localImg is the resolved full path
   const { error } = await supabase.storage
     .from('images')
     .upload(`v4/${imgFilename}`, imgData, {

@@ -26,6 +26,16 @@ const SIGNS_PATH  = join(ROOT, 'content', 'signs.json');
 const BACKUP_PATH = join(ROOT, 'content', 'signs.json.backup');
 const IMAGES_DIR  = join(ROOT, 'assets', 'images');
 
+// Search for image in flat dir first, then in named subdirectories
+function findImagePath(filename) {
+  const candidates = [
+    join(IMAGES_DIR, filename),
+    join(IMAGES_DIR, 'תמרורי אזהרה', filename),
+    join(IMAGES_DIR, 'תמרורי הוריה', filename),
+  ];
+  return candidates.find(p => existsSync(p)) ?? null;
+}
+
 // ─── Google Apps Script URL (saves to Google Docs) ────────────────────────────
 const GOOGLE_DOCS_URL = 'https://script.google.com/macros/s/AKfycbxf82JhSe_amhei9x-feBRQTD5uHtq_Z8KgZ4S6uANAwXLMDTZOd_G-_328JMxDFumr/exec';
 
@@ -213,16 +223,16 @@ async function callGemini(sign, previousResult = null, previousSign = null) {
 
   // If previous sign exists, send its image FIRST so Gemini can compare both
   if (previousSign?.image_filename) {
-    const prevImagePath = join(IMAGES_DIR, previousSign.image_filename);
-    if (existsSync(prevImagePath)) {
+    const prevImagePath = findImagePath(previousSign.image_filename);
+    if (prevImagePath) {
       const prevBase64 = readFileSync(prevImagePath).toString('base64');
       userParts.push({ inline_data: { mime_type: 'image/png', data: prevBase64 } });
     }
   }
 
   // Attach current sign image
-  const imagePath = join(IMAGES_DIR, sign.image_filename ?? '');
-  if (sign.image_filename && existsSync(imagePath)) {
+  const imagePath = sign.image_filename ? findImagePath(sign.image_filename) : null;
+  if (imagePath) {
     const imageBase64 = readFileSync(imagePath).toString('base64');
     userParts.push({ inline_data: { mime_type: 'image/png', data: imageBase64 } });
   }
