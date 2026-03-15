@@ -19,6 +19,7 @@ import {
   Image,
 } from 'react-native';
 import { useRouter, useFocusEffect } from 'expo-router';
+import { storeExamResult } from '../../../utils/examResult';
 import { Colors } from '../../../constants/colors';
 import { LoadingScreen } from '../../../components/shared/LoadingScreen';
 import { ImageAnswerCard } from '../../../components/engineA/ImageAnswerCard';
@@ -199,9 +200,16 @@ export default function EngineAExamScreen() {
     }
   }, [phase]);
 
-  // Navigate to results when done
+  // Navigate to results when done — store result data first so result screen can read it
   useEffect(() => {
     if (phase === 'result' && result) {
+      storeExamResult(result.sessionId, {
+        score:           result.score,
+        total:           result.total,
+        passed:          result.passed,
+        durationSeconds: result.durationSeconds,
+        topicBreakdown:  result.topicBreakdown,
+      });
       router.replace(`/result/${result.sessionId}`);
     }
   }, [phase, result]);
@@ -390,7 +398,7 @@ const styles = StyleSheet.create({
     flexDirection:     'row',
     alignItems:        'center',
     paddingHorizontal: 12,
-    paddingTop:        8,
+    paddingTop:        16,   // extra space so ✕ isn't at the very edge
     paddingBottom:     8,
     gap:               10,
   },

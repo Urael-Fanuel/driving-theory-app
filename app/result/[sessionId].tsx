@@ -29,21 +29,9 @@ import { useEngine } from '../../contexts/EngineContext';
 import { useAudio } from '../../hooks/useAudio';
 
 // ─── Global result storage (passed from useExam) ──────────────────────────────
-// In production, pass via expo-router params or AsyncStorage
-export interface ResultData {
-  score: number;
-  total: number;
-  passed: boolean;
-  durationSeconds: number;
-  topicBreakdown?: Record<string, { correct: number; total: number }>;
-}
-
-// Simple global store for exam result (avoids URL param length limits)
-const resultStore = new Map<string, ResultData>();
-
-export function storeExamResult(sessionId: string, data: ResultData) {
-  resultStore.set(sessionId, data);
-}
+import { ResultData, getExamResult } from '../../utils/examResult';
+export type { ResultData };
+export { storeExamResult } from '../../utils/examResult';
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
@@ -53,7 +41,7 @@ export default function ResultScreen() {
   const { engineType } = useEngine();
   const { playAudio }  = useAudio();
 
-  const result = resultStore.get(sessionId);
+  const result = getExamResult(sessionId);
 
   // Fallback sample data if result not found (e.g. after hot reload)
   const score    = result?.score   ?? 0;
