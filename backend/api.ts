@@ -265,6 +265,28 @@ export async function getQuestionsBySign(signId: string): Promise<DBQuestion[]> 
   }
 }
 
+/**
+ * Fetch specific questions by their IDs.
+ * Used for weak-area practice after an exam.
+ */
+export async function getQuestionsByIds(ids: string[]): Promise<DBQuestion[]> {
+  if (!ids.length) return [];
+  if (USE_MOCK) return mockData.questions.filter(q => ids.includes(q.id));
+
+  try {
+    const { data, error } = await supabase
+      .from('questions')
+      .select('*')
+      .in('id', ids);
+
+    if (error) throw error;
+    return (data ?? []).map(normalizeQuestion);
+  } catch (err) {
+    console.error('[api] getQuestionsByIds:', err);
+    return mockData.questions.filter(q => ids.includes(q.id));
+  }
+}
+
 // ─── USERS ────────────────────────────────────────────────────────────────────
 
 /**

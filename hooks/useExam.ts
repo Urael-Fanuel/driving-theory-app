@@ -42,6 +42,14 @@ export interface ExamResult {
   durationSeconds: number;
   topicBreakdown: Record<string, { correct: number; total: number }>;
   answers: ExamAnswer[];
+  /** Questions the user got wrong — used for weak-area practice */
+  wrongQuestions: WrongQuestion[];
+}
+
+export interface WrongQuestion {
+  questionId: string;
+  signId:     string;
+  topicId:    string;
 }
 
 export interface UseExamReturn {
@@ -193,6 +201,14 @@ export function useExam(): UseExamReturn {
       if (answer.isCorrect) breakdown[answer.topicId].correct++;
     }
 
+    // Build list of wrong questions for weak-area practice
+    const wrongQuestions: WrongQuestion[] = finalAnswers
+      .filter(a => !a.isCorrect)
+      .map(a => {
+        const q = questions.find(q => q.id === a.questionId);
+        return { questionId: a.questionId, signId: q?.sign_id ?? '', topicId: a.topicId };
+      });
+
     // Save to Supabase
     let sessionId = 'local-' + Date.now();
     try {
@@ -219,6 +235,7 @@ export function useExam(): UseExamReturn {
       durationSeconds: duration,
       topicBreakdown:  breakdown,
       answers:         finalAnswers,
+      wrongQuestions,
     };
 
     setResult(examResult);

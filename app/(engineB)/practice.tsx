@@ -1,44 +1,52 @@
 /**
- * AGENT 3 — app/(engineB)/(tabs)/exam.tsx
- * Engine B Exam Screen — 30 questions, text answers, time tracking.
+ * app/(engineB)/practice.tsx
+ * Engine B — Weak-Area Practice Screen.
+ *
+ * Shows only the questions the user got wrong in the last exam.
+ * Same UX as exam.tsx (text answers, Amharic text, audio optional).
+ * Answered correctly → removed from pool.
+ * Answered wrong     → pushed to end of queue.
+ * Session ends when all questions answered correctly at least once.
  */
 
 import React, { useEffect, useCallback } from 'react';
 import {
   View,
   Text,
-  Image,
   StyleSheet,
   SafeAreaView,
   ScrollView,
   TouchableOpacity,
 } from 'react-native';
-import { useRouter } from 'expo-router';
-import { storeExamResult } from '../../../utils/examResult';
-import { Colors } from '../../../constants/colors';
-import { Typography } from '../../../constants/typography';
-import { LoadingScreen } from '../../../components/shared/LoadingScreen';
-import { TextAnswerCard } from '../../../components/engineB/TextAnswerCard';
-import { TextFeedback } from '../../../components/engineB/TextFeedback';
-import { AudioButton } from '../../../components/shared/AudioButton';
-import { ProgressBar } from '../../../components/shared/ProgressBar';
-import { useExam } from '../../../hooks/useExam';
+import { useRouter, useLocalSearchParams } from 'expo-router';
+import { Colors } from '../../constants/colors';
+import { Typography } from '../../constants/typography';
+import { LoadingScreen } from '../../components/shared/LoadingScreen';
+import { TextAnswerCard } from '../../components/engineB/TextAnswerCard';
+import { TextFeedback } from '../../components/engineB/TextFeedback';
+import { AudioButton } from '../../components/shared/AudioButton';
+import { ProgressBar } from '../../components/shared/ProgressBar';
+import { usePracticeWeak } from '../../hooks/usePracticeWeak';
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
-export default function EngineBExamScreen() {
+export default function EngineBPracticeScreen() {
   const router = useRouter();
+  const { ids: idsParam } = useLocalSearchParams<{ ids: string }>();
+
+  // Parse comma-separated question IDs from URL
+  const questionIds = idsParam ? idsParam.split(',').filter(Boolean) : [];
+
   const {
     phase,
     currentQuestion,
-    progress,
+    remaining,
+    total,
     submitAnswer,
     nextQuestion,
-    result,
     lastAnswerCorrect,
     selectedAnswerId,
-    elapsedSeconds,
-  } = useExam();
+  } = usePracticeWeak(questionIds);
 
   const [showFeedback, setShowFeedback] = React.useState(false);
 
@@ -48,22 +56,6 @@ export default function EngineBExamScreen() {
       setTimeout(() => setShowFeedback(true), 200);
     }
   }, [phase]);
-
-  // Navigate to results
-  useEffect(() => {
-    if (phase === 'result' && result) {
-      storeExamResult(result.sessionId, {
-        score:           result.score,
-        total:           result.total,
-        passed:          result.passed,
-        durationSeconds: result.durationSeconds,
-        topicBreakdown:  result.topicBreakdown,
-        wrongQuestions:  result.wrongQuestions,
-      });
-      const params = `score=${result.score}&total=${result.total}&passed=${result.passed ? '1' : '0'}&duration=${result.durationSeconds}`;
-      router.replace(`/result/${result.sessionId}?${params}` as any);
-    }
-  }, [phase, result]);
 
   const handleAnswerSelect = useCallback((answerId: string) => {
     if (phase !== 'question') return;
@@ -75,8 +67,29 @@ export default function EngineBExamScreen() {
     nextQuestion();
   };
 
+  const handleBack = () => {
+    router.back();
+  };
+
+  // ── Done screen ─────────────────────────────────────────────────────────────
+  if (phase === 'done') {
+    return (
+      <SafeAreaView style={[styles.safeArea, styles.doneScreen]}>
+        <Text style={styles.doneEmoji}>🎉</Text>
+        <Text style={styles.doneTitle}>ሁሉንም ስህተቶች አስተካከልክ!</Text>
+        <Text style={styles.doneScore}>{total}/{total}</Text>
+        <TouchableOpacity style={styles.doneBtn} onPress={handleBack}>
+          <Text style={styles.doneBtnText}>ወደ ቤት ተመለስ 🏠</Text>
+        </TouchableOpacity>
+      </SafeAreaView>
+    );
+  }
+
+  // ── Loading ─────────────────────────────────────────────────────────────────
   if (phase === 'loading') return <LoadingScreen message="ጥያቄዎችን እየጫነ..." />;
-  if (!currentQuestion)    return <LoadingScreen />;
+  if (!currentQuestion)   return <LoadingScreen />;
+
+  const answered = total - remaining;
 
   const getCardState = (answerId: string) => {
     if (phase === 'question') return 'default' as const;
@@ -93,27 +106,26 @@ export default function EngineBExamScreen() {
     ? currentQuestion.explanation_correct_audio_url
     : currentQuestion.explanation_wrong_audio_url;
 
-  const minutes = Math.floor(elapsedSeconds / 60);
-  const seconds = elapsedSeconds % 60;
-  const timerText = `${minutes}:${seconds.toString().padStart(2, '0')}`;
-
   return (
     <SafeAreaView style={styles.safeArea}>
-      {/* Header with timer */}
+
+      {/* Header */}
       <View style={styles.header}>
-        <TouchableOpacity style={styles.exitButton} onPress={() => router.navigate('/(engineB)/home')}>
+        <TouchableOpacity style={styles.exitButton} onPress={handleBack}>
           <Text style={styles.exitIcon}>✕</Text>
         </TouchableOpacity>
         <View style={styles.headerCenter}>
           <ProgressBar
-            current={progress.current}
-            total={progress.total}
+            current={answered}
+            total={total}
             height={6}
+            fillColor={Colors.secondary}
             style={styles.progressBar}
           />
-          <Text style={styles.progressText}>{progress.current} / {progress.total}</Text>
+          <Text style={styles.progressText}>{answered} / {total}</Text>
         </View>
-        <Text style={styles.timer}>{timerText}</Text>
+        {/* Remaining count in red — shows how many are still wrong */}
+        <Text style={styles.remainingText}>{remaining} 🔁</Text>
       </View>
 
       <ScrollView
@@ -173,6 +185,41 @@ const styles = StyleSheet.create({
     flex:            1,
     backgroundColor: Colors.background,
   },
+
+  // Done screen
+  doneScreen: {
+    justifyContent: 'center',
+    alignItems:     'center',
+    gap:            20,
+    padding:        32,
+  },
+  doneEmoji: {
+    fontSize: 80,
+  },
+  doneTitle: {
+    ...Typography.h2,
+    color:     Colors.textPrimary,
+    textAlign: 'center',
+  },
+  doneScore: {
+    fontSize:   40,
+    fontWeight: '900',
+    color:      Colors.correct,
+  },
+  doneBtn: {
+    backgroundColor: Colors.primary,
+    borderRadius:    16,
+    paddingVertical: 16,
+    paddingHorizontal: 32,
+    marginTop:       8,
+  },
+  doneBtnText: {
+    ...Typography.body,
+    color:      Colors.textPrimary,
+    fontWeight: '700',
+  },
+
+  // Header
   header: {
     flexDirection:     'row',
     alignItems:        'center',
@@ -205,12 +252,14 @@ const styles = StyleSheet.create({
     color:     Colors.textSecondary,
     textAlign: 'center',
   },
-  timer: {
+  remainingText: {
     ...Typography.body,
-    color:      Colors.secondary,
+    color:      Colors.wrong,
     fontWeight: '700',
     flexShrink: 0,
   },
+
+  // Content
   content: {
     padding: 16,
     gap:     16,

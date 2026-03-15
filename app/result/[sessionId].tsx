@@ -1,5 +1,5 @@
 /**
- * AGENT 3 — app/result/[sessionId].tsx
+ * app/result/[sessionId].tsx
  * Shared Exam Result Screen — used by both Engine A and Engine B.
  *
  * Engine A: Shows large icons + numbers only (no text labels)
@@ -8,7 +8,7 @@
  * Params are passed via router params (stored in global ref).
  */
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 // ─── Audio base URL (Supabase Storage) ────────────────────────────────────────
 const _AUDIO_BASE = (process.env.EXPO_PUBLIC_SUPABASE_URL ?? '') + '/storage/v1/object/public/audio';
@@ -20,6 +20,7 @@ import {
   SafeAreaView,
   ScrollView,
   Animated,
+  Image,
 } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import * as Haptics from 'expo-haptics';
@@ -27,9 +28,11 @@ import { Colors } from '../../constants/colors';
 import { Typography } from '../../constants/typography';
 import { useEngine } from '../../contexts/EngineContext';
 import { useAudio } from '../../hooks/useAudio';
+import * as api from '../../backend/api';
+import { DBSign } from '../../backend/supabaseClient';
 
 // ─── Global result storage (passed from useExam) ──────────────────────────────
-import { ResultData, getExamResult } from '../../utils/examResult';
+import { ResultData, WrongQuestion, getExamResult } from '../../utils/examResult';
 export type { ResultData };
 export { storeExamResult } from '../../utils/examResult';
 
@@ -53,10 +56,29 @@ export default function ResultScreen() {
   const passed   = result?.passed           ?? (pParam === '1');
   const duration = result?.durationSeconds  ?? (dParam ? parseInt(dParam, 10) : 0);
 
-  const percent     = total > 0 ? Math.round((score / total) * 100) : 0;
-  const isEngineA   = engineType === 'A';
+  const wrongQuestions: WrongQuestion[] = result?.wrongQuestions ?? [];
 
-  // Animations
+  const percent   = total > 0 ? Math.round((score / total) * 100) : 0;
+  const isEngineA = engineType === 'A';
+
+  // ── Load sign images for wrong questions ───────────────────────────────────
+  const [weakSigns, setWeakSigns] = useState<DBSign[]>([]);
+
+  useEffect(() => {
+    if (!wrongQuestions.length) return;
+    api.getAllSigns()
+      .then(allSigns => {
+        // Get unique signs that appear in wrong questions, preserve order
+        const signIds = [...new Set(wrongQuestions.map(q => q.signId))];
+        const found   = signIds
+          .map(id => allSigns.find(s => s.id === id))
+          .filter(Boolean) as DBSign[];
+        setWeakSigns(found);
+      })
+      .catch(() => {});
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // ── Animations ─────────────────────────────────────────────────────────────
   const scaleAnim  = useRef(new Animated.Value(0)).current;
   const fadeAnim   = useRef(new Animated.Value(0)).current;
   const slideAnim  = useRef(new Animated.Value(40)).current;
@@ -102,15 +124,27 @@ export default function ResultScreen() {
     }
   };
 
+  const handlePracticeWeak = async () => {
+    await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+    // Pass wrong question IDs as a comma-separated URL param
+    const ids = wrongQuestions.map(q => q.questionId).join(',');
+    if (isEngineA) {
+      router.push(`/(engineA)/practice?ids=${ids}` as any);
+    } else {
+      router.push(`/(engineB)/practice?ids=${ids}` as any);
+    }
+  };
+
   const minutes = Math.floor(duration / 60);
   const seconds = duration % 60;
 
-  const bgColor = passed ? Colors.correctDark : Colors.wrongDark;
+  const bgColor    = passed ? Colors.correctDark : Colors.wrongDark;
   const accentColor = passed ? Colors.correct : Colors.wrong;
 
   return (
     <SafeAreaView style={[styles.safeArea, { backgroundColor: Colors.background }]}>
       <ScrollView contentContainerStyle={styles.content}>
+
         {/* Result icon + score */}
         <Animated.View
           style={[styles.heroContainer, { transform: [{ scale: scaleAnim }] }]}
@@ -192,6 +226,55 @@ export default function ResultScreen() {
           </Animated.View>
         )}
 
+        {/* ── Weak signs section — shown when user got questions wrong ── */}
+        {weakSigns.length > 0 && (
+          <Animated.View style={[styles.weakContainer, { opacity: fadeAnim }]}>
+            {/* Header */}
+            <View style={styles.weakHeader}>
+              <Text style={styles.weakIcon}>⚠️</Text>
+              {!isEngineA && (
+                <Text style={styles.weakTitle}>የተሳሳቱ ምልክቶች</Text>
+              )}
+            </View>
+
+            {/* Sign thumbnails grid */}
+            <View style={styles.weakGrid}>
+              {weakSigns.map(sign => (
+                <View key={sign.id} style={styles.weakSignCard}>
+                  {sign.image_url ? (
+                    <Image
+                      source={{ uri: sign.image_url }}
+                      style={styles.weakSignImage}
+                      resizeMode="contain"
+                    />
+                  ) : (
+                    <View style={[styles.weakSignImage, styles.weakSignPlaceholder]}>
+                      <Text style={styles.weakSignPlaceholderText}>🚦</Text>
+                    </View>
+                  )}
+                  {!isEngineA && (
+                    <Text style={styles.weakSignName} numberOfLines={2}>
+                      {sign.name_amharic}
+                    </Text>
+                  )}
+                </View>
+              ))}
+            </View>
+
+            {/* Practice weak button */}
+            <TouchableOpacity
+              style={styles.practiceBtn}
+              onPress={handlePracticeWeak}
+              activeOpacity={0.85}
+            >
+              <Text style={styles.practiceIcon}>🔁</Text>
+              {!isEngineA && (
+                <Text style={styles.practiceText}>የተሳሳቱትን ለማሻሻል ይለማመዱ</Text>
+              )}
+            </TouchableOpacity>
+          </Animated.View>
+        )}
+
         {/* Action buttons */}
         <Animated.View style={[styles.actions, { opacity: fadeAnim }]}>
           <TouchableOpacity
@@ -216,6 +299,7 @@ export default function ResultScreen() {
             )}
           </TouchableOpacity>
         </Animated.View>
+
       </ScrollView>
     </SafeAreaView>
   );
@@ -260,9 +344,9 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   statsContainer: {
-    flexDirection: 'row',
-    gap:           12,
-    alignSelf:     'stretch',
+    flexDirection:  'row',
+    gap:            12,
+    alignSelf:      'stretch',
     justifyContent: 'center',
   },
   statCard: {
@@ -294,8 +378,8 @@ const styles = StyleSheet.create({
   },
   breakdownTitle: {
     ...Typography.body,
-    color:      Colors.textPrimary,
-    fontWeight: '700',
+    color:        Colors.textPrimary,
+    fontWeight:   '700',
     marginBottom: 4,
   },
   breakdownRow: {
@@ -312,11 +396,83 @@ const styles = StyleSheet.create({
     ...Typography.body,
     fontWeight: '700',
   },
-  actions: {
+
+  // ── Weak signs section ─────────────────────────────────────────────────────
+  weakContainer: {
+    alignSelf:       'stretch',
+    backgroundColor: Colors.card,
+    borderRadius:    20,
+    padding:         16,
+    gap:             14,
+    borderWidth:     1,
+    borderColor:     Colors.wrong + '55',
+  },
+  weakHeader: {
+    flexDirection: 'row',
+    alignItems:    'center',
+    gap:           8,
+  },
+  weakIcon: {
+    fontSize: 22,
+  },
+  weakTitle: {
+    ...Typography.body,
+    color:      Colors.textPrimary,
+    fontWeight: '700',
+  },
+  weakGrid: {
     flexDirection:  'row',
-    gap:            12,
-    alignSelf:      'stretch',
-    marginTop:      8,
+    flexWrap:       'wrap',
+    gap:            10,
+    justifyContent: 'flex-start',
+  },
+  weakSignCard: {
+    alignItems: 'center',
+    gap:        6,
+    width:      72,
+  },
+  weakSignImage: {
+    width:           72,
+    height:          72,
+    borderRadius:    12,
+    backgroundColor: '#FFFFFF',
+  },
+  weakSignPlaceholder: {
+    justifyContent: 'center',
+    alignItems:     'center',
+  },
+  weakSignPlaceholderText: {
+    fontSize: 32,
+  },
+  weakSignName: {
+    ...Typography.caption,
+    color:     Colors.textSecondary,
+    textAlign: 'center',
+  },
+  practiceBtn: {
+    flexDirection:   'row',
+    alignItems:      'center',
+    justifyContent:  'center',
+    backgroundColor: Colors.wrong,
+    borderRadius:    14,
+    paddingVertical: 14,
+    gap:             10,
+  },
+  practiceIcon: {
+    fontSize: 22,
+  },
+  practiceText: {
+    ...Typography.body,
+    color:      '#FFFFFF',
+    fontWeight: '700',
+  },
+
+  // ── Action buttons ─────────────────────────────────────────────────────────
+  actions: {
+    flexDirection: 'row',
+    gap:           12,
+    alignSelf:     'stretch',
+    marginTop:     8,
   },
   actionBtn: {
     flex:            1,
