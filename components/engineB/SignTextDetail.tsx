@@ -80,13 +80,12 @@ export function SignTextDetail({ sign, style }: SignTextDetailProps) {
 
         {/* Audio for full explanation */}
         {sign.audio_explanation_url && (
-          <View style={styles.explanationAudioRow}>
-            <AudioButton
-              audioUri={sign.audio_explanation_url}
-              size={52}
-              label="ማብራሪያ ድምጽ"
-            />
-          </View>
+          <AudioButton
+            audioUri={sign.audio_explanation_url}
+            size={52}
+            label="ማብራሪያ ድምጽ"
+            style={styles.explanationAudioBtn}
+          />
         )}
       </View>
     </ScrollView>
@@ -160,8 +159,8 @@ const styles = StyleSheet.create({
     textAlign:  'left',
     lineHeight: 32, // Extra line height for Ethiopic script readability
   },
-  explanationAudioRow: {
-    alignItems: 'center',
-    paddingTop: 8,
+  explanationAudioBtn: {
+    alignSelf: 'flex-end',
+    marginTop: 4,
   },
 });
