@@ -3,20 +3,19 @@
  * Engine B Question Screen — Text-first for readers.
  *
  * Layout:
- * ┌─────────────────────┐
- * │ [←]  ‹ ● ● ● ›  1/3│  ← Back | prev/next question dots | counter
- * ├─────────────────────┤
- * │ [Sign image small]  │
- * │                     │
- * │ ████ ██ ████ ███    │  ← Question text
- * │ [🔊] optional       │
- * │                     │
- * │ [A] ████ ██ ████    │  ← Answer A
- * │ [B] ████ █ ███ ██   │  ← Answer B
- * │ [C] ██ █████ ████   │  ← Answer C
- * ├─────────────────────┤
- * │  [⬅️]  [🖼 tmlkot] [➡️]│  ← Prev sign | current sign thumb | Next sign
- * └─────────────────────┘
+ * ┌─────────────────────────┐
+ * │ [←]      ● ● ●    1/3  │  ← Header: back + dots + counter
+ * ├─────────────────────────┤
+ * │  [Sign image]           │
+ * │  ████ ██ ████ ███       │  ← Question text  [▶️]
+ * │  [A] ████ ██ ████       │
+ * │  [B] ████ █ ███ ██      │
+ * │  [C] ██ █████ ████      │
+ * ├─────────────────────────┤
+ * │  [‹]  שאלה קודמת  שאלה הבאה  [›]  │  ← Question nav row
+ * ├─────────────────────────┤
+ * │  [‹]    🖼  ምልክቱ    [›]  │  ← Sign nav row
+ * └─────────────────────────┘
  */
 
 import React, { useEffect, useState, useCallback } from 'react';
@@ -28,6 +27,7 @@ import {
   SafeAreaView,
   ScrollView,
   TouchableOpacity,
+  Platform,
 } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import * as Haptics from 'expo-haptics';
@@ -105,24 +105,24 @@ export default function EngineBQuestionScreen() {
 
   // ── Question navigation ──────────────────────────────────────────────────────
 
-  const handleNextQuestion = useCallback(() => {
-    setShowFeedback(false);
-    setSelectedId(null);
-    const nextIndex = questionIndex + 1;
-    if (nextIndex < questions.length) {
-      router.replace(`/(engineB)/question/${signId}_q${nextIndex}`);
-    } else {
-      router.back();
-    }
-  }, [questionIndex, questions.length, signId, router]);
+  const canGoPrevQ = questionIndex > 0;
+  const canGoNextQ = selectedId !== null && questionIndex < questions.length - 1;
 
   const handlePrevQuestion = useCallback(() => {
-    if (questionIndex <= 0) return;
+    if (!canGoPrevQ) return;
     Haptics.selectionAsync();
     setShowFeedback(false);
     setSelectedId(null);
     router.replace(`/(engineB)/question/${signId}_q${questionIndex - 1}`);
-  }, [questionIndex, signId, router]);
+  }, [canGoPrevQ, questionIndex, signId, router]);
+
+  const handleNextQuestion = useCallback(() => {
+    if (!canGoNextQ) return;
+    Haptics.selectionAsync();
+    setShowFeedback(false);
+    setSelectedId(null);
+    router.replace(`/(engineB)/question/${signId}_q${questionIndex + 1}`);
+  }, [canGoNextQ, questionIndex, questions.length, signId, router]);
 
   // ── Sign navigation ──────────────────────────────────────────────────────────
 
@@ -164,12 +164,10 @@ export default function EngineBQuestionScreen() {
     ? currentQuestion.explanation_correct_audio_url
     : currentQuestion.explanation_wrong_audio_url;
 
-  const canGoNext = selectedId !== null && questionIndex < questions.length - 1;
-
   return (
     <SafeAreaView style={styles.safeArea}>
 
-      {/* Header: ← | ‹ ● ● ● › | 1/3 */}
+      {/* ── Header: ← | ● ● ● | 1/3 ── */}
       <View style={styles.header}>
 
         <TouchableOpacity
@@ -180,41 +178,23 @@ export default function EngineBQuestionScreen() {
           <Text style={styles.backIcon}>←</Text>
         </TouchableOpacity>
 
-        {/* Question prev/next + dots */}
-        <View style={styles.dotsContainer}>
-          <TouchableOpacity
-            style={[styles.qNavBtn, questionIndex <= 0 && styles.qNavBtnDisabled]}
-            onPress={handlePrevQuestion}
-            disabled={questionIndex <= 0}
-          >
-            <Text style={[styles.qNavIcon, questionIndex <= 0 && styles.qNavIconDisabled]}>‹</Text>
-          </TouchableOpacity>
-
-          <View style={styles.dotsRow}>
-            {questions.map((_, i) => (
-              <View
-                key={i}
-                style={[styles.dot, i === questionIndex && styles.dotActive]}
-              />
-            ))}
-          </View>
-
-          <TouchableOpacity
-            style={[styles.qNavBtn, !canGoNext && styles.qNavBtnDisabled]}
-            onPress={handleNextQuestion}
-            disabled={!canGoNext}
-          >
-            <Text style={[styles.qNavIcon, !canGoNext && styles.qNavIconDisabled]}>›</Text>
-          </TouchableOpacity>
+        {/* Dots only — no nav arrows in header */}
+        <View style={styles.dotsRow}>
+          {questions.map((_, i) => (
+            <View
+              key={i}
+              style={[styles.dot, i === questionIndex && styles.dotActive]}
+            />
+          ))}
         </View>
 
-        {/* Counter */}
         <Text style={styles.counter}>
           {questionIndex + 1}/{questions.length}
         </Text>
 
       </View>
 
+      {/* ── Scrollable content ── */}
       <ScrollView
         contentContainerStyle={styles.content}
         showsVerticalScrollIndicator={false}
@@ -260,7 +240,7 @@ export default function EngineBQuestionScreen() {
         </View>
       </ScrollView>
 
-      {/* Feedback overlay */}
+      {/* ── Feedback overlay ── */}
       {showFeedback && (
         <TextFeedback
           isCorrect={!!isCorrect}
@@ -270,42 +250,78 @@ export default function EngineBQuestionScreen() {
         />
       )}
 
-      {/* Sign navigation bar */}
-      <View style={styles.signNavBar}>
+      {/* ── Bottom navigation ── */}
+      <View style={styles.bottomNav}>
 
-        <TouchableOpacity
-          style={[styles.signNavBtn, !prevSign && styles.signNavBtnDisabled]}
-          onPress={handlePrevSign}
-          disabled={!prevSign}
-          accessibilityLabel="ወደ ቀዳሚ ምልክት"
-        >
-          <Text style={[styles.signNavIcon, !prevSign && styles.signNavIconDisabled]}>⬅️</Text>
-        </TouchableOpacity>
+        {/* Row 1 — Question navigation */}
+        <View style={styles.questionNavRow}>
+          <TouchableOpacity
+            style={[styles.qNavBtn, !canGoPrevQ && styles.navBtnDisabled]}
+            onPress={handlePrevQuestion}
+            disabled={!canGoPrevQ}
+            accessibilityLabel="ወደ ቀዳሚ ጥያቄ"
+          >
+            <Text style={[styles.qNavArrow, !canGoPrevQ && styles.navArrowDisabled]}>‹</Text>
+          </TouchableOpacity>
 
-        {/* Current sign thumbnail — tap to go back to sign screen */}
-        <TouchableOpacity
-          style={styles.signThumbBtn}
-          onPress={() => router.back()}
-          accessibilityLabel="ወደ ምልክቱ ተመለስ"
-        >
-          {sign?.image_url && (
-            <Image
-              source={{ uri: sign.image_url }}
-              style={styles.signThumb}
-              resizeMode="contain"
-            />
-          )}
-          <Text style={styles.signThumbLabel}>ምልክቱ</Text>
-        </TouchableOpacity>
+          <View style={styles.qNavLabels}>
+            <Text style={[styles.qNavLabel, !canGoPrevQ && styles.qNavLabelDisabled]}>
+              ቀዳሚ ጥያቄ
+            </Text>
+            <Text style={[styles.qNavLabel, !canGoNextQ && styles.qNavLabelDisabled, styles.qNavLabelRight]}>
+              ቀጣይ ጥያቄ
+            </Text>
+          </View>
 
-        <TouchableOpacity
-          style={[styles.signNavBtn, !nextSign && styles.signNavBtnDisabled]}
-          onPress={handleNextSign}
-          disabled={!nextSign}
-          accessibilityLabel="ወደ ቀጣይ ምልክት"
-        >
-          <Text style={[styles.signNavIcon, !nextSign && styles.signNavIconDisabled]}>➡️</Text>
-        </TouchableOpacity>
+          <TouchableOpacity
+            style={[styles.qNavBtn, !canGoNextQ && styles.navBtnDisabled]}
+            onPress={handleNextQuestion}
+            disabled={!canGoNextQ}
+            accessibilityLabel="ወደ ቀጣይ ጥያቄ"
+          >
+            <Text style={[styles.qNavArrow, !canGoNextQ && styles.navArrowDisabled]}>›</Text>
+          </TouchableOpacity>
+        </View>
+
+        {/* Divider */}
+        <View style={styles.navDivider} />
+
+        {/* Row 2 — Sign navigation */}
+        <View style={styles.signNavRow}>
+          <TouchableOpacity
+            style={[styles.signNavBtn, !prevSign && styles.navBtnDisabled]}
+            onPress={handlePrevSign}
+            disabled={!prevSign}
+            accessibilityLabel="ወደ ቀዳሚ ምልክት"
+          >
+            <Text style={[styles.signNavArrow, !prevSign && styles.navArrowDisabled]}>‹</Text>
+          </TouchableOpacity>
+
+          {/* Current sign thumbnail */}
+          <TouchableOpacity
+            style={styles.signThumbBtn}
+            onPress={() => router.back()}
+            accessibilityLabel="ወደ ምልክቱ ተመለስ"
+          >
+            {sign?.image_url && (
+              <Image
+                source={{ uri: sign.image_url }}
+                style={styles.signThumb}
+                resizeMode="contain"
+              />
+            )}
+            <Text style={styles.signThumbLabel}>ምልክቱ</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={[styles.signNavBtn, !nextSign && styles.navBtnDisabled]}
+            onPress={handleNextSign}
+            disabled={!nextSign}
+            accessibilityLabel="ወደ ቀጣይ ምልክት"
+          >
+            <Text style={[styles.signNavArrow, !nextSign && styles.navArrowDisabled]}>›</Text>
+          </TouchableOpacity>
+        </View>
 
       </View>
 
@@ -333,86 +349,62 @@ const styles = StyleSheet.create({
   header: {
     flexDirection:     'row',
     alignItems:        'center',
-    paddingHorizontal: 12,
-    paddingVertical:   10,
+    paddingHorizontal: 16,
+    paddingVertical:   12,
     borderBottomWidth: 1,
     borderBottomColor: Colors.border,
     gap:               8,
   },
   backButton: {
-    width:           40,
-    height:          40,
-    borderRadius:    20,
+    width:           44,
+    height:          44,
+    borderRadius:    22,
     backgroundColor: Colors.card,
     justifyContent:  'center',
     alignItems:      'center',
   },
   backIcon: {
-    fontSize: 20,
+    fontSize: 22,
     color:    Colors.textPrimary,
   },
-  dotsContainer: {
+  dotsRow: {
     flex:           1,
     flexDirection:  'row',
     alignItems:     'center',
     justifyContent: 'center',
-    gap:            6,
-  },
-  qNavBtn: {
-    width:           32,
-    height:          32,
-    borderRadius:    16,
-    justifyContent:  'center',
-    alignItems:      'center',
-    backgroundColor: Colors.card,
-  },
-  qNavBtnDisabled: {
-    opacity: 0.3,
-  },
-  qNavIcon: {
-    fontSize:   22,
-    color:      Colors.textPrimary,
-    fontWeight: '700',
-    lineHeight: 26,
-  },
-  qNavIconDisabled: {
-    color: Colors.textSecondary,
-  },
-  dotsRow: {
-    flexDirection:  'row',
-    alignItems:     'center',
-    justifyContent: 'center',
-    gap:            8,
+    gap:            10,
   },
   dot: {
-    width:           9,
-    height:          9,
+    width:           10,
+    height:          10,
     borderRadius:    5,
     backgroundColor: Colors.border,
   },
   dotActive: {
     backgroundColor: Colors.primary,
-    width:           13,
-    height:          13,
+    width:           14,
+    height:          14,
     borderRadius:    7,
   },
   counter: {
-    ...Typography.caption,
+    ...Typography.body,
     color:      Colors.textSecondary,
     fontWeight: '600',
-    minWidth:   32,
+    minWidth:   36,
     textAlign:  'right',
   },
 
   // ── Content ──────────────────────────────────────────────────────────────────
   content: {
     padding:    16,
-    gap:        20,
+    gap:        16,
     alignItems: 'center',
+    // Extra bottom padding so last answer isn't hidden behind nav
+    paddingBottom: 24,
   },
   signImage: {
-    width:           120,
-    height:          120,
+    width:           110,
+    height:          110,
     borderRadius:    16,
     backgroundColor: '#FFFFFF',
   },
@@ -436,47 +428,109 @@ const styles = StyleSheet.create({
     gap:       10,
   },
 
-  // ── Sign navigation bar ────────────────────────────────────────────────────
-  signNavBar: {
-    flexDirection:     'row',
-    alignItems:        'center',
-    justifyContent:    'space-between',
-    paddingHorizontal: 20,
-    paddingVertical:   10,
+  // ── Bottom navigation container ──────────────────────────────────────────────
+  bottomNav: {
     borderTopWidth:    1,
     borderTopColor:    Colors.border,
     backgroundColor:   Colors.background,
+    // Extra bottom padding to clear Android system nav bar
+    paddingBottom:     Platform.OS === 'android' ? 16 : 8,
+  },
+
+  navDivider: {
+    height:          1,
+    backgroundColor: Colors.border,
+    marginHorizontal: 20,
+  },
+
+  // ── Row 1: Question navigation ───────────────────────────────────────────────
+  questionNavRow: {
+    flexDirection:     'row',
+    alignItems:        'center',
+    paddingHorizontal: 12,
+    paddingVertical:   10,
+    gap:               8,
+  },
+  qNavBtn: {
+    width:           52,
+    height:          52,
+    borderRadius:    26,
+    backgroundColor: Colors.card,
+    borderWidth:     1,
+    borderColor:     Colors.border,
+    justifyContent:  'center',
+    alignItems:      'center',
+  },
+  qNavArrow: {
+    fontSize:   30,
+    color:      Colors.textPrimary,
+    fontWeight: '300',
+    lineHeight: 36,
+  },
+  qNavLabels: {
+    flex:           1,
+    flexDirection:  'row',
+    justifyContent: 'space-between',
+    paddingHorizontal: 4,
+  },
+  qNavLabel: {
+    ...Typography.bodySmall,
+    color:      Colors.textSecondary,
+    fontWeight: '500',
+  },
+  qNavLabelRight: {
+    textAlign: 'right',
+  },
+  qNavLabelDisabled: {
+    opacity: 0.3,
+  },
+
+  // ── Row 2: Sign navigation ───────────────────────────────────────────────────
+  signNavRow: {
+    flexDirection:     'row',
+    alignItems:        'center',
+    paddingHorizontal: 12,
+    paddingVertical:   8,
+    gap:               8,
   },
   signNavBtn: {
     width:           52,
     height:          52,
     borderRadius:    26,
-    backgroundColor: Colors.card,
+    backgroundColor: Colors.cardActive,
+    borderWidth:     1,
+    borderColor:     Colors.border,
     justifyContent:  'center',
     alignItems:      'center',
   },
-  signNavBtnDisabled: {
-    opacity: 0.3,
-  },
-  signNavIcon: {
-    fontSize: 22,
-  },
-  signNavIconDisabled: {
-    opacity: 0.4,
+  signNavArrow: {
+    fontSize:   30,
+    color:      Colors.textPrimary,
+    fontWeight: '300',
+    lineHeight: 36,
   },
   signThumbBtn: {
+    flex:        1,
     alignItems:  'center',
     gap:         4,
   },
   signThumb: {
-    width:           48,
-    height:          48,
-    borderRadius:    10,
+    width:           52,
+    height:          52,
+    borderRadius:    12,
     backgroundColor: '#FFFFFF',
   },
   signThumbLabel: {
     ...Typography.caption,
     color:    Colors.textSecondary,
     fontSize: 11,
+  },
+
+  // ── Shared disabled styles ───────────────────────────────────────────────────
+  navBtnDisabled: {
+    opacity: 0.25,
+  },
+  navArrowDisabled: {
+    color: Colors.textSecondary,
   },
 });
