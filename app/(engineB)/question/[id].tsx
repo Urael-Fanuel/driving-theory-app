@@ -1,19 +1,21 @@
 /**
- * AGENT 3 — app/(engineB)/question/[id].tsx
- * Engine B Question Screen — Text answer choices, tap to select.
+ * app/(engineB)/question/[id].tsx
+ * Engine B Question Screen — Text-first for readers.
  *
  * Layout:
  * ┌─────────────────────┐
- * │ [← Back]  Q 1/3    │
- * │                     │
+ * │ [←]  ‹ ● ● ● ›  1/3│  ← Back | prev/next question dots | counter
+ * ├─────────────────────┤
  * │ [Sign image small]  │
  * │                     │
- * │ ████ ██ ████ ███    │  ← Question text (Amharic)
- * │ [🔊 Listen]         │
+ * │ ████ ██ ████ ███    │  ← Question text
+ * │ [🔊] optional       │
  * │                     │
  * │ [A] ████ ██ ████    │  ← Answer A
  * │ [B] ████ █ ███ ██   │  ← Answer B
  * │ [C] ██ █████ ████   │  ← Answer C
+ * ├─────────────────────┤
+ * │  [⬅️]  [🖼 tmlkot] [➡️]│  ← Prev sign | current sign thumb | Next sign
  * └─────────────────────┘
  */
 
@@ -35,7 +37,6 @@ import { LoadingScreen } from '../../../components/shared/LoadingScreen';
 import { TextAnswerCard } from '../../../components/engineB/TextAnswerCard';
 import { TextFeedback } from '../../../components/engineB/TextFeedback';
 import { AudioButton } from '../../../components/shared/AudioButton';
-import { ProgressBar } from '../../../components/shared/ProgressBar';
 import { DBSign, DBQuestion } from '../../../backend/supabaseClient';
 import * as api from '../../../backend/api';
 import { useProgress } from '../../../hooks/useProgress';
@@ -49,10 +50,11 @@ export default function EngineBQuestionScreen() {
 
   const [signId, questionIndex] = parseQuestionId(id);
 
-  const [sign,        setSign]        = useState<DBSign | null>(null);
-  const [questions,   setQuestions]   = useState<DBQuestion[]>([]);
-  const [loading,     setLoading]     = useState(true);
-  const [selectedId,  setSelectedId]  = useState<string | null>(null);
+  const [sign,         setSign]         = useState<DBSign | null>(null);
+  const [questions,    setQuestions]    = useState<DBQuestion[]>([]);
+  const [topicSigns,   setTopicSigns]   = useState<DBSign[]>([]);
+  const [loading,      setLoading]      = useState(true);
+  const [selectedId,   setSelectedId]   = useState<string | null>(null);
   const [showFeedback, setShowFeedback] = useState(false);
 
   const currentQuestion = questions[questionIndex] ?? null;
@@ -64,8 +66,15 @@ export default function EngineBQuestionScreen() {
           api.getAllSigns(),
           api.getQuestionsBySign(signId),
         ]);
-        setSign(allSigns.find(s => s.id === signId) ?? null);
+        const found = allSigns.find(s => s.id === signId) ?? null;
+        setSign(found);
         setQuestions(qs);
+        if (found) {
+          const sorted = allSigns
+            .filter(s => s.topic_id === found.topic_id)
+            .sort((a, b) => a.display_order - b.display_order);
+          setTopicSigns(sorted);
+        }
       } catch (err) {
         console.error('[EngineB/question] Failed to load:', err);
       } finally {
@@ -75,30 +84,30 @@ export default function EngineBQuestionScreen() {
     load();
   }, [signId]);
 
-  // Reset state when question changes
+  // Reset state when question index changes
   useEffect(() => {
     setSelectedId(null);
     setShowFeedback(false);
   }, [questionIndex]);
+
+  // ── Answer selection ─────────────────────────────────────────────────────────
 
   const handleAnswerSelect = useCallback((answerId: string) => {
     if (selectedId !== null) return;
     if (!currentQuestion) return;
 
     setSelectedId(answerId);
-
-    const answer = currentQuestion.answers.find(a => a.id === answerId);
+    const answer    = currentQuestion.answers.find(a => a.id === answerId);
     const isCorrect = answer?.is_correct ?? false;
-
     recordAnswer(currentQuestion.id, signId, sign?.topic_id ?? '', isCorrect);
-
     setTimeout(() => setShowFeedback(true), 200);
   }, [selectedId, currentQuestion, signId, sign?.topic_id, recordAnswer]);
 
-  const handleNext = useCallback(() => {
+  // ── Question navigation ──────────────────────────────────────────────────────
+
+  const handleNextQuestion = useCallback(() => {
     setShowFeedback(false);
     setSelectedId(null);
-
     const nextIndex = questionIndex + 1;
     if (nextIndex < questions.length) {
       router.replace(`/(engineB)/question/${signId}_q${nextIndex}`);
@@ -107,8 +116,36 @@ export default function EngineBQuestionScreen() {
     }
   }, [questionIndex, questions.length, signId, router]);
 
-  if (loading)           return <LoadingScreen message="ጥያቄዎችን እየጫነ..." />;
-  if (!currentQuestion)  return <LoadingScreen message="ጥያቄው አልተገኘም" />;
+  const handlePrevQuestion = useCallback(() => {
+    if (questionIndex <= 0) return;
+    Haptics.selectionAsync();
+    setShowFeedback(false);
+    setSelectedId(null);
+    router.replace(`/(engineB)/question/${signId}_q${questionIndex - 1}`);
+  }, [questionIndex, signId, router]);
+
+  // ── Sign navigation ──────────────────────────────────────────────────────────
+
+  const currentSignIndex = topicSigns.findIndex(s => s.id === signId);
+  const prevSign = currentSignIndex > 0 ? topicSigns[currentSignIndex - 1] : null;
+  const nextSign = currentSignIndex < topicSigns.length - 1 ? topicSigns[currentSignIndex + 1] : null;
+
+  const handlePrevSign = async () => {
+    if (!prevSign) return;
+    await Haptics.selectionAsync();
+    router.replace(`/(engineB)/question/${prevSign.id}_q0`);
+  };
+
+  const handleNextSign = async () => {
+    if (!nextSign) return;
+    await Haptics.selectionAsync();
+    router.replace(`/(engineB)/question/${nextSign.id}_q0`);
+  };
+
+  // ─────────────────────────────────────────────────────────────────────────────
+
+  if (loading)          return <LoadingScreen message="ጥያቄዎችን እየጫነ..." />;
+  if (!currentQuestion) return <LoadingScreen message="ጥያቄው አልተገኘም" />;
 
   const isCorrect = selectedId !== null
     && currentQuestion.answers.find(a => a.id === selectedId)?.is_correct;
@@ -120,37 +157,63 @@ export default function EngineBQuestionScreen() {
     return 'default' as const;
   };
 
-  const feedbackText = isCorrect
+  const feedbackText  = isCorrect
     ? currentQuestion.explanation_correct_amharic
     : currentQuestion.explanation_wrong_amharic;
-
   const feedbackAudio = isCorrect
     ? currentQuestion.explanation_correct_audio_url
     : currentQuestion.explanation_wrong_audio_url;
 
+  const canGoNext = selectedId !== null && questionIndex < questions.length - 1;
+
   return (
     <SafeAreaView style={styles.safeArea}>
-      {/* Header */}
+
+      {/* Header: ← | ‹ ● ● ● › | 1/3 */}
       <View style={styles.header}>
+
         <TouchableOpacity
           style={styles.backButton}
           onPress={() => router.back()}
+          accessibilityLabel="ወደ ምልክቱ ተመለስ"
         >
           <Text style={styles.backIcon}>←</Text>
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>
-          {questionIndex + 1} / {questions.length}
-        </Text>
-        <View style={{ width: 44 }} />
-      </View>
 
-      {/* Progress bar */}
-      <ProgressBar
-        current={questionIndex + 1}
-        total={questions.length}
-        height={4}
-        style={styles.progressBar}
-      />
+        {/* Question prev/next + dots */}
+        <View style={styles.dotsContainer}>
+          <TouchableOpacity
+            style={[styles.qNavBtn, questionIndex <= 0 && styles.qNavBtnDisabled]}
+            onPress={handlePrevQuestion}
+            disabled={questionIndex <= 0}
+          >
+            <Text style={[styles.qNavIcon, questionIndex <= 0 && styles.qNavIconDisabled]}>‹</Text>
+          </TouchableOpacity>
+
+          <View style={styles.dotsRow}>
+            {questions.map((_, i) => (
+              <View
+                key={i}
+                style={[styles.dot, i === questionIndex && styles.dotActive]}
+              />
+            ))}
+          </View>
+
+          <TouchableOpacity
+            style={[styles.qNavBtn, !canGoNext && styles.qNavBtnDisabled]}
+            onPress={handleNextQuestion}
+            disabled={!canGoNext}
+          >
+            <Text style={[styles.qNavIcon, !canGoNext && styles.qNavIconDisabled]}>›</Text>
+          </TouchableOpacity>
+        </View>
+
+        {/* Counter */}
+        <Text style={styles.counter}>
+          {questionIndex + 1}/{questions.length}
+        </Text>
+
+      </View>
 
       <ScrollView
         contentContainerStyle={styles.content}
@@ -166,16 +229,15 @@ export default function EngineBQuestionScreen() {
           />
         )}
 
-        {/* Question text */}
+        {/* Question text + optional audio */}
         <View style={styles.questionContainer}>
           <Text style={styles.questionText}>
             {currentQuestion.question_amharic}
           </Text>
-
           {currentQuestion.question_audio_url && (
             <AudioButton
               audioUri={currentQuestion.question_audio_url}
-              size={48}
+              size={44}
               label="ጥያቄ ድምጽ"
               style={styles.questionAudio}
             />
@@ -198,15 +260,55 @@ export default function EngineBQuestionScreen() {
         </View>
       </ScrollView>
 
-      {/* Feedback bottom sheet */}
+      {/* Feedback overlay */}
       {showFeedback && (
         <TextFeedback
           isCorrect={!!isCorrect}
           explanationText={feedbackText}
           explanationAudioUri={feedbackAudio}
-          onNext={handleNext}
+          onNext={handleNextQuestion}
         />
       )}
+
+      {/* Sign navigation bar */}
+      <View style={styles.signNavBar}>
+
+        <TouchableOpacity
+          style={[styles.signNavBtn, !prevSign && styles.signNavBtnDisabled]}
+          onPress={handlePrevSign}
+          disabled={!prevSign}
+          accessibilityLabel="ወደ ቀዳሚ ምልክት"
+        >
+          <Text style={[styles.signNavIcon, !prevSign && styles.signNavIconDisabled]}>⬅️</Text>
+        </TouchableOpacity>
+
+        {/* Current sign thumbnail — tap to go back to sign screen */}
+        <TouchableOpacity
+          style={styles.signThumbBtn}
+          onPress={() => router.back()}
+          accessibilityLabel="ወደ ምልክቱ ተመለስ"
+        >
+          {sign?.image_url && (
+            <Image
+              source={{ uri: sign.image_url }}
+              style={styles.signThumb}
+              resizeMode="contain"
+            />
+          )}
+          <Text style={styles.signThumbLabel}>ምልክቱ</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={[styles.signNavBtn, !nextSign && styles.signNavBtnDisabled]}
+          onPress={handleNextSign}
+          disabled={!nextSign}
+          accessibilityLabel="ወደ ቀጣይ ምልክት"
+        >
+          <Text style={[styles.signNavIcon, !nextSign && styles.signNavIconDisabled]}>➡️</Text>
+        </TouchableOpacity>
+
+      </View>
+
     </SafeAreaView>
   );
 }
@@ -226,35 +328,83 @@ const styles = StyleSheet.create({
     flex:            1,
     backgroundColor: Colors.background,
   },
+
+  // ── Header ──────────────────────────────────────────────────────────────────
   header: {
     flexDirection:     'row',
     alignItems:        'center',
-    paddingHorizontal: 16,
-    paddingVertical:   12,
+    paddingHorizontal: 12,
+    paddingVertical:   10,
+    borderBottomWidth: 1,
+    borderBottomColor: Colors.border,
+    gap:               8,
   },
   backButton: {
-    width:           44,
-    height:          44,
-    borderRadius:    22,
+    width:           40,
+    height:          40,
+    borderRadius:    20,
     backgroundColor: Colors.card,
     justifyContent:  'center',
     alignItems:      'center',
   },
   backIcon: {
-    fontSize: 22,
+    fontSize: 20,
     color:    Colors.textPrimary,
   },
-  headerTitle: {
-    ...Typography.body,
-    color:     Colors.textSecondary,
-    flex:      1,
-    textAlign: 'center',
+  dotsContainer: {
+    flex:           1,
+    flexDirection:  'row',
+    alignItems:     'center',
+    justifyContent: 'center',
+    gap:            6,
+  },
+  qNavBtn: {
+    width:           32,
+    height:          32,
+    borderRadius:    16,
+    justifyContent:  'center',
+    alignItems:      'center',
+    backgroundColor: Colors.card,
+  },
+  qNavBtnDisabled: {
+    opacity: 0.3,
+  },
+  qNavIcon: {
+    fontSize:   22,
+    color:      Colors.textPrimary,
+    fontWeight: '700',
+    lineHeight: 26,
+  },
+  qNavIconDisabled: {
+    color: Colors.textSecondary,
+  },
+  dotsRow: {
+    flexDirection:  'row',
+    alignItems:     'center',
+    justifyContent: 'center',
+    gap:            8,
+  },
+  dot: {
+    width:           9,
+    height:          9,
+    borderRadius:    5,
+    backgroundColor: Colors.border,
+  },
+  dotActive: {
+    backgroundColor: Colors.primary,
+    width:           13,
+    height:          13,
+    borderRadius:    7,
+  },
+  counter: {
+    ...Typography.caption,
+    color:      Colors.textSecondary,
     fontWeight: '600',
+    minWidth:   32,
+    textAlign:  'right',
   },
-  progressBar: {
-    marginHorizontal: 16,
-    marginBottom:     8,
-  },
+
+  // ── Content ──────────────────────────────────────────────────────────────────
   content: {
     padding:    16,
     gap:        20,
@@ -271,7 +421,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.card,
     borderRadius:    16,
     padding:         16,
-    gap:             12,
+    gap:             10,
   },
   questionText: {
     ...Typography.question,
@@ -284,5 +434,49 @@ const styles = StyleSheet.create({
   answersContainer: {
     alignSelf: 'stretch',
     gap:       10,
+  },
+
+  // ── Sign navigation bar ────────────────────────────────────────────────────
+  signNavBar: {
+    flexDirection:     'row',
+    alignItems:        'center',
+    justifyContent:    'space-between',
+    paddingHorizontal: 20,
+    paddingVertical:   10,
+    borderTopWidth:    1,
+    borderTopColor:    Colors.border,
+    backgroundColor:   Colors.background,
+  },
+  signNavBtn: {
+    width:           52,
+    height:          52,
+    borderRadius:    26,
+    backgroundColor: Colors.card,
+    justifyContent:  'center',
+    alignItems:      'center',
+  },
+  signNavBtnDisabled: {
+    opacity: 0.3,
+  },
+  signNavIcon: {
+    fontSize: 22,
+  },
+  signNavIconDisabled: {
+    opacity: 0.4,
+  },
+  signThumbBtn: {
+    alignItems:  'center',
+    gap:         4,
+  },
+  signThumb: {
+    width:           48,
+    height:          48,
+    borderRadius:    10,
+    backgroundColor: '#FFFFFF',
+  },
+  signThumbLabel: {
+    ...Typography.caption,
+    color:    Colors.textSecondary,
+    fontSize: 11,
   },
 });

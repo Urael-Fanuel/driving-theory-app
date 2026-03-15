@@ -1,19 +1,18 @@
 /**
- * AGENT 3 — app/(engineB)/sign/[id].tsx
- * Engine B Sign Detail Screen — Image + full Amharic text explanation.
+ * app/(engineB)/sign/[id].tsx
+ * Engine B Sign Detail Screen — Text-first for readers.
  *
  * Layout:
  * ┌─────────────────────┐
  * │ [← Back]            │
- * │ [Sign Image 200px]  │
- * │ ████ ███ (name)     │
- * │ [🔊]               │
  * │                     │
- * │ ████ ██ █████       │  ← Full explanation text
- * │ [🔊 Listen]         │
+ * │  Image + Name       │  ← SignTextDetail (scrollable)
+ * │  Explanation text   │
+ * │  [🔊] optional      │
  * │                     │
- * │ [▶ Practice Quiz]   │
- * │ [▶ Watch Video]     │
+ * ├─────────────────────┤
+ * │    [⬅️]      [➡️]   │  ← Prev / Next sign
+ * │  [📝 Practice Quiz] │
  * └─────────────────────┘
  */
 
@@ -24,7 +23,6 @@ import {
   TouchableOpacity,
   StyleSheet,
   SafeAreaView,
-  ScrollView,
 } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import * as Haptics from 'expo-haptics';
@@ -43,8 +41,9 @@ export default function EngineBSignScreen() {
   const router  = useRouter();
   const { markSignViewed } = useProgress();
 
-  const [sign,    setSign]    = useState<DBSign | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [sign,       setSign]       = useState<DBSign | null>(null);
+  const [topicSigns, setTopicSigns] = useState<DBSign[]>([]);
+  const [loading,    setLoading]    = useState(true);
 
   useEffect(() => {
     async function load() {
@@ -52,7 +51,13 @@ export default function EngineBSignScreen() {
         const allSigns = await api.getAllSigns();
         const found    = allSigns.find(s => s.id === id) ?? null;
         setSign(found);
-        if (found) markSignViewed(found.id);
+        if (found) {
+          markSignViewed(found.id);
+          const sorted = allSigns
+            .filter(s => s.topic_id === found.topic_id)
+            .sort((a, b) => a.display_order - b.display_order);
+          setTopicSigns(sorted);
+        }
       } catch (err) {
         console.error('[EngineB/sign] Failed to load:', err);
       } finally {
@@ -61,6 +66,30 @@ export default function EngineBSignScreen() {
     }
     load();
   }, [id]);
+
+  // ── Prev / Next sign navigation ──────────────────────────────────────────────
+
+  const currentIndex = topicSigns.findIndex(s => s.id === id);
+  const prevSign     = currentIndex > 0 ? topicSigns[currentIndex - 1] : null;
+  const nextSign     = currentIndex < topicSigns.length - 1 ? topicSigns[currentIndex + 1] : null;
+
+  const handlePrev = async () => {
+    if (!prevSign) return;
+    await Haptics.selectionAsync();
+    router.replace({
+      pathname: '/(engineB)/sign/[id]',
+      params: { id: prevSign.id },
+    } as any);
+  };
+
+  const handleNext = async () => {
+    if (!nextSign) return;
+    await Haptics.selectionAsync();
+    router.replace({
+      pathname: '/(engineB)/sign/[id]',
+      params: { id: nextSign.id },
+    } as any);
+  };
 
   const handlePractice = async () => {
     await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
@@ -75,34 +104,63 @@ export default function EngineBSignScreen() {
   if (loading) return <LoadingScreen message="ምልክቱን እየጫነ..." />;
   if (!sign)   return <LoadingScreen message="ምልክቱ አልተገኘም" />;
 
+  // Position indicator: e.g. "3 / 12"
+  const positionLabel = currentIndex >= 0
+    ? `${currentIndex + 1} / ${topicSigns.length}`
+    : '';
+
   return (
     <SafeAreaView style={styles.safeArea}>
-      {/* Header with back button */}
+
+      {/* Header — back button + position */}
       <View style={styles.header}>
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Text style={styles.backIcon}>←</Text>
         </TouchableOpacity>
-        <Text style={styles.headerTitle} numberOfLines={1}>
-          {sign.name_amharic}
-        </Text>
+        <Text style={styles.positionLabel}>{positionLabel}</Text>
         <View style={{ width: 44 }} />
       </View>
 
-      {/* Sign detail (image + text + audio) */}
+      {/* Sign detail — image + name + explanation + optional 🔊 */}
       <SignTextDetail sign={sign} style={styles.detail} />
 
-      {/* Bottom action buttons */}
-      <View style={styles.actionContainer}>
-        {/* Practice Quiz */}
+      {/* Bottom controls */}
+      <View style={styles.bottomContainer}>
+
+        {/* Prev / Next sign navigation */}
+        <View style={styles.navRow}>
+          <TouchableOpacity
+            style={[styles.navBtn, !prevSign && styles.navBtnDisabled]}
+            onPress={handlePrev}
+            disabled={!prevSign}
+            accessibilityLabel="ወደ ቀዳሚ ምልክት"
+          >
+            <Text style={styles.navBtnIcon}>⬅️</Text>
+          </TouchableOpacity>
+
+          <View style={styles.navSpacer} />
+
+          <TouchableOpacity
+            style={[styles.navBtn, !nextSign && styles.navBtnDisabled]}
+            onPress={handleNext}
+            disabled={!nextSign}
+            accessibilityLabel="ወደ ቀጣይ ምልክት"
+          >
+            <Text style={styles.navBtnIcon}>➡️</Text>
+          </TouchableOpacity>
+        </View>
+
+        {/* Practice button */}
         <TouchableOpacity
-          style={[styles.actionButton, styles.practiceButton]}
+          style={styles.practiceButton}
           onPress={handlePractice}
           activeOpacity={0.85}
           accessibilityLabel="ልምምድ ጀምር"
         >
-          <Text style={styles.actionIcon}>📝</Text>
-          <Text style={styles.actionText}>ልምምድ</Text>
+          <Text style={styles.practiceIcon}>📝</Text>
+          <Text style={styles.practiceText}>ልምምድ</Text>
         </TouchableOpacity>
+
       </View>
     </SafeAreaView>
   );
@@ -115,11 +173,13 @@ const styles = StyleSheet.create({
     flex:            1,
     backgroundColor: Colors.background,
   },
+
+  // ── Header ──────────────────────────────────────────────────────────────────
   header: {
     flexDirection:     'row',
     alignItems:        'center',
     paddingHorizontal: 16,
-    paddingVertical:   14,
+    paddingVertical:   12,
     borderBottomWidth: 1,
     borderBottomColor: Colors.border,
   },
@@ -135,36 +195,62 @@ const styles = StyleSheet.create({
     fontSize: 22,
     color:    Colors.textPrimary,
   },
-  headerTitle: {
-    ...Typography.h3,
-    color:     Colors.textPrimary,
-    flex:      1,
-    textAlign: 'center',
+  positionLabel: {
+    ...Typography.body,
+    color:      Colors.textSecondary,
+    flex:       1,
+    textAlign:  'center',
+    fontWeight: '600',
   },
+
+  // ── Content ─────────────────────────────────────────────────────────────────
   detail: {
     flex: 1,
   },
-  actionContainer: {
+
+  // ── Bottom ──────────────────────────────────────────────────────────────────
+  bottomContainer: {
     paddingHorizontal: 20,
-    paddingVertical:   16,
+    paddingVertical:   14,
     borderTopWidth:    1,
     borderTopColor:    Colors.border,
+    gap:               12,
   },
-  actionButton: {
+  navRow: {
+    flexDirection:  'row',
+    alignItems:     'center',
+    justifyContent: 'space-between',
+  },
+  navBtn: {
+    width:           56,
+    height:          56,
+    borderRadius:    28,
+    backgroundColor: Colors.card,
+    justifyContent:  'center',
+    alignItems:      'center',
+  },
+  navBtnDisabled: {
+    opacity: 0.3,
+  },
+  navBtnIcon: {
+    fontSize: 24,
+  },
+  navSpacer: {
+    flex: 1,
+  },
+  practiceButton: {
     flexDirection:   'row',
     alignItems:      'center',
     justifyContent:  'center',
     borderRadius:    16,
     paddingVertical: 16,
+    backgroundColor: Colors.primary,
     gap:             12,
   },
-  practiceButton: {
-    backgroundColor: Colors.primary,
-  },
-  actionIcon: {
+  practiceIcon: {
     fontSize: 26,
   },
-  actionText: {
+  practiceText: {
     ...Typography.answer,
     color:      Colors.textPrimary,
     fontWeight: '700',
