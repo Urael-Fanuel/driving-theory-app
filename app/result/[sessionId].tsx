@@ -41,13 +41,17 @@ export default function ResultScreen() {
   const { engineType } = useEngine();
   const { playAudio }  = useAudio();
 
+  const { score: sParam, total: tParam, passed: pParam, duration: dParam } =
+    useLocalSearchParams<{ sessionId: string; score: string; total: string; passed: string; duration: string }>();
+
   const result = getExamResult(sessionId);
 
-  // Fallback sample data if result not found (e.g. after hot reload)
-  const score    = result?.score   ?? 0;
-  const total    = result?.total   ?? 30;
-  const passed   = result?.passed  ?? false;
-  const duration = result?.durationSeconds ?? 0;
+  // URL params are the primary source (reliable across navigation).
+  // Map store is a fallback (may be empty after hot-reload).
+  const score    = result?.score            ?? (sParam ? parseInt(sParam, 10) : 0);
+  const total    = result?.total            ?? (tParam ? parseInt(tParam, 10) : 30);
+  const passed   = result?.passed           ?? (pParam === '1');
+  const duration = result?.durationSeconds  ?? (dParam ? parseInt(dParam, 10) : 0);
 
   const percent     = total > 0 ? Math.round((score / total) * 100) : 0;
   const isEngineA   = engineType === 'A';

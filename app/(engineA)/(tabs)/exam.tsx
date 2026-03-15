@@ -200,7 +200,9 @@ export default function EngineAExamScreen() {
     }
   }, [phase]);
 
-  // Navigate to results when done — store result data first so result screen can read it
+  // Navigate to results when done
+  // Score/total/passed/duration are passed as URL params (reliable across navigation)
+  // The Map store is kept as a backup for topicBreakdown
   useEffect(() => {
     if (phase === 'result' && result) {
       storeExamResult(result.sessionId, {
@@ -210,7 +212,8 @@ export default function EngineAExamScreen() {
         durationSeconds: result.durationSeconds,
         topicBreakdown:  result.topicBreakdown,
       });
-      router.replace(`/result/${result.sessionId}`);
+      const params = `score=${result.score}&total=${result.total}&passed=${result.passed ? '1' : '0'}&duration=${result.durationSeconds}`;
+      router.replace(`/result/${result.sessionId}?${params}` as any);
     }
   }, [phase, result]);
 
