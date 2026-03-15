@@ -64,7 +64,21 @@ const allSigns = JSON.parse(stripped);
 const signsArr = Array.isArray(allSigns) ? allSigns : allSigns.signs ?? Object.values(allSigns);
 
 // Filter: numbered signs whose image_filename is "NNN.png" (e.g. "104.png")
-const numberedSigns = signsArr.filter(s => s.image_filename && /^\d+\.png$/.test(s.image_filename));
+// Optional range filter: --from=201 --to=231
+const fromArg = process.argv.find(a => a.startsWith('--from='));
+const toArg   = process.argv.find(a => a.startsWith('--to='));
+const fromNum = fromArg ? parseInt(fromArg.split('=')[1]) : null;
+const toNum   = toArg   ? parseInt(toArg.split('=')[1])   : null;
+
+const numberedSigns = signsArr.filter(s => {
+  if (!s.image_filename || !/^\d+\.png$/.test(s.image_filename)) return false;
+  if (fromNum !== null || toNum !== null) {
+    const n = parseInt(s.image_filename);
+    if (fromNum !== null && n < fromNum) return false;
+    if (toNum   !== null && n > toNum)   return false;
+  }
+  return true;
+});
 
 console.log(`\n🎵  uploadNewAudio.mjs`);
 console.log(`${'═'.repeat(55)}`);
@@ -135,6 +149,35 @@ for (let i = 0; i < uniqueFiles.length; i++) {
 
 console.log(`\n✅  Upload complete: ${uploaded} uploaded, ${skippedMissing} missing locally, ${uploadFailed} failed\n`);
 
+// ─── Upload images to Supabase Storage (images/v4/) ──────────────────────────
+console.log('🖼️   Uploading sign images to images/v4/...');
+let imagesUploaded = 0, imagesFailed = 0;
+const IMAGES_DIR = join(ROOT, 'assets', 'images');
+
+for (const sign of numberedSigns) {
+  const imgFilename = sign.image_filename; // e.g. "201.png"
+  const localImg = join(IMAGES_DIR, imgFilename);
+  if (!existsSync(localImg)) {
+    console.log(`  ⚠️  Image missing locally: ${imgFilename}`);
+    continue;
+  }
+  const imgData = readFileSync(localImg);
+  const { error } = await supabase.storage
+    .from('images')
+    .upload(`v4/${imgFilename}`, imgData, {
+      contentType:  'image/png',
+      cacheControl: '31536000',
+      upsert:       true,
+    });
+  if (error) {
+    console.log(`  ❌  Image upload failed: ${imgFilename} — ${error.message}`);
+    imagesFailed++;
+  } else {
+    imagesUploaded++;
+  }
+}
+console.log(`  ✅  Images uploaded: ${imagesUploaded}  |  ❌  Failed: ${imagesFailed}\n`);
+
 // ─── DB update: signs table ───────────────────────────────────────────────────
 console.log('📝  Updating signs table (audio URLs + Amharic text)...');
 let signsOk = 0, signsFailed = 0;
@@ -143,18 +186,23 @@ const BATCH = 20;
 for (let i = 0; i < numberedSigns.length; i += BATCH) {
   const batch = numberedSigns.slice(i, i + BATCH);
   for (const sign of batch) {
+    const signNum = parseInt(sign.image_filename);
     const { error } = await supabase
       .from('signs')
-      .update({
-        audio_name_url:        audioUrl(sign.audio_name_filename),
-        audio_explanation_url: audioUrl(sign.audio_explanation_filename),
+      .upsert({
+        id:                    sign.id,
+        topic_id:              sign.topic_id,
+        name_hebrew:           sign.name_hebrew,
         name_amharic:          sign.name_amharic,
         explanation_amharic:   sign.explanation_amharic,
-      })
-      .eq('id', sign.id);
+        audio_name_url:        audioUrl(sign.audio_name_filename),
+        audio_explanation_url: audioUrl(sign.audio_explanation_filename),
+        image_url:             `${process.env.EXPO_PUBLIC_SUPABASE_URL}/storage/v1/object/public/images/v4/${signNum}.png`,
+        display_order:         signNum,
+      }, { onConflict: 'id' });
 
     if (error) {
-      console.log(`  ❌  signs DB update failed for ${sign.id}: ${error.message}`);
+      console.log(`  ❌  signs DB upsert failed for ${sign.id}: ${error.message}`);
       signsFailed++;
     } else {
       signsOk++;

@@ -1,1520 +1,5 @@
 [
   {
-    "id": "SIGN_STOP",
-    "topic_id": "regulatory",
-    "order": 1,
-    "image_filename": "sign_stop.png",
-    "video_filename": "sign_stop_amharic.mp4",
-    "name_hebrew": "עצור",
-    "name_amharic": "ቁም",
-    "explanation_amharic": "ሙሉ በሙሉ መቆም አለብዎት። ለሌሎች ተሽከርካሪዎች ቅድሚያ ይስጡ።",
-    "audio_name_filename": "sign_stop_name.mp3",
-    "audio_explanation_filename": "sign_stop_explanation.mp3",
-    "questions": [
-      {
-        "id": "Q_STOP_001",
-        "question_amharic": "ቁም ምልክት ሲያዩ ምን ማድረግ አለብዎ?",
-        "question_audio": "q_stop_001.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "ሙሉ ለሙሉ ማቆም",
-            "image": "answer_full_stop.png",
-            "is_correct": true
-          },
-          {
-            "id": "B",
-            "text_amharic": "ፍጥነት ቀነስ",
-            "image": "answer_slow_down.png",
-            "is_correct": false
-          },
-          {
-            "id": "C",
-            "text_amharic": "ቀጥ ሂድ",
-            "image": "answer_continue.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! ቁም ምልክት ሙሉ ለሙሉ ማቆምን ያዝዛል።",
-        "explanation_wrong_amharic": "ስህተት። ቁም ምልክት ሲያዩ ሙሉ ለሙሉ ማቆም አለብዎ።",
-        "explanation_correct_audio": "q_stop_001_correct.mp3",
-        "explanation_wrong_audio": "q_stop_001_wrong.mp3"
-      },
-      {
-        "id": "Q_STOP_002",
-        "question_amharic": "ቁም ምልክት ቀይ ስምንት ጎን ቅርጽ አለው። ይህ ቅርጽ ምን ትርጉም አለው?",
-        "question_audio": "q_stop_002.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "ፍጥነት ቀነስ",
-            "image": "answer_slow_down.png",
-            "is_correct": false
-          },
-          {
-            "id": "B",
-            "text_amharic": "ሙሉ ለሙሉ ቁም",
-            "image": "answer_full_stop.png",
-            "is_correct": true
-          },
-          {
-            "id": "C",
-            "text_amharic": "ቀኝ ዞር",
-            "image": "answer_turn_right.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! የስምንት ጎን ቅርጽ ሁልጊዜ ሙሉ ለሙሉ ማቆምን ያሳያል።",
-        "explanation_wrong_amharic": "ስህተት። ስምንት ጎን ቅርጽ ሙሉ ለሙሉ ማቆምን ያሳያል።",
-        "explanation_correct_audio": "q_stop_002_correct.mp3",
-        "explanation_wrong_audio": "q_stop_002_wrong.mp3"
-      },
-      {
-        "id": "Q_STOP_003",
-        "question_amharic": "ቁም ምልክት ካለ በኋላ ምን ሰዓት ለመቀጠል ይፈቀዳል?",
-        "question_audio": "q_stop_003.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "ወዲያውኑ",
-            "image": "answer_immediately.png",
-            "is_correct": false
-          },
-          {
-            "id": "B",
-            "text_amharic": "3 ሴኮንድ ቆይቶ",
-            "image": "answer_wait3sec.png",
-            "is_correct": false
-          },
-          {
-            "id": "C",
-            "text_amharic": "መንገዱ ሲጸዳ",
-            "image": "answer_road_clear.png",
-            "is_correct": true
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! ከቁም ምልክት በኋላ መንገዱ ሲጸዳ ብቻ መቀጠል ይቻላል።",
-        "explanation_wrong_amharic": "ስህተት። ቁም ካልን በኋላ መንገዱ ሲጸዳ ብቻ መቀጠል ይፈቀዳል።",
-        "explanation_correct_audio": "q_stop_003_correct.mp3",
-        "explanation_wrong_audio": "q_stop_003_wrong.mp3"
-      }
-    ]
-  },
-  {
-    "id": "SIGN_YIELD",
-    "topic_id": "regulatory",
-    "order": 2,
-    "image_filename": "sign_yield.png",
-    "video_filename": "sign_yield_amharic.mp4",
-    "name_hebrew": "תן זכות קדימה",
-    "name_amharic": "ቅድሚያ ስጥ",
-    "explanation_amharic": "ሌሎች ተሽከርካሪዎች ወይም እግረኞች እንዲያልፉ ቅድሚያ መስጠት አለብዎት። አስፈላጊ ከሆነም ፍጥነትዎን ቀንስው ወይም ይቁሙ።",
-    "audio_name_filename": "sign_yield_name.mp3",
-    "audio_explanation_filename": "sign_yield_explanation.mp3",
-    "questions": [
-      {
-        "id": "Q_YIELD_001",
-        "question_amharic": "ቅድሚያ ስጥ ምልክት ሲያዩ ምን ያደርጋሉ?",
-        "question_audio": "q_yield_001.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "ፍጥነት ቀነስና ቅድሚያ ስጥ",
-            "image": "answer_slow_yield.png",
-            "is_correct": true
-          },
-          {
-            "id": "B",
-            "text_amharic": "ቀጥ ሂድ",
-            "image": "answer_continue.png",
-            "is_correct": false
-          },
-          {
-            "id": "C",
-            "text_amharic": "ፈጥነህ ለፍ",
-            "image": "answer_speed_up.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! ቅድሚያ ስጥ ማለት ሌሎችን ማስቀደም ማለት ነው።",
-        "explanation_wrong_amharic": "ስህተት። ቅድሚያ ስጥ ምልክት ሲያዩ ፍጥነት ቀንሶ ሌሎችን ማስቀደም አለብዎ።",
-        "explanation_correct_audio": "q_yield_001_correct.mp3",
-        "explanation_wrong_audio": "q_yield_001_wrong.mp3"
-      },
-      {
-        "id": "Q_YIELD_002",
-        "question_amharic": "ቅድሚያ ስጥ ምልክት ምን ቀለም አለው?",
-        "question_audio": "q_yield_002.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "ቀይ ድንበር ያለው ነጭ ሶስት ጎን",
-            "image": "answer_yield_shape.png",
-            "is_correct": true
-          },
-          {
-            "id": "B",
-            "text_amharic": "ቀይ ስምንት ጎን",
-            "image": "answer_stop_shape.png",
-            "is_correct": false
-          },
-          {
-            "id": "C",
-            "text_amharic": "ቢጫ ክብ",
-            "image": "answer_yellow_circle.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! ቅድሚያ ስጥ ምልክት ቀይ ድንበር ያለው ነጭ ሶስት ጎን ቅርጽ አለው።",
-        "explanation_wrong_amharic": "ስህተት። ቅድሚያ ስጥ ምልክት ቀይ ድንበር ያለው ነጭ ሶስት ጎን ቅርጽ ነው።",
-        "explanation_correct_audio": "q_yield_002_correct.mp3",
-        "explanation_wrong_audio": "q_yield_002_wrong.mp3"
-      },
-      {
-        "id": "Q_YIELD_003",
-        "question_amharic": "ቅድሚያ ስጥ ምልክት ካለ ቆም ማለት ያስፈልጋል?",
-        "question_audio": "q_yield_003.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "አዎ፣ ሁልጊዜ ቆሙ",
-            "image": "answer_always_stop.png",
-            "is_correct": false
-          },
-          {
-            "id": "B",
-            "text_amharic": "አይፈልግም፣ ፍጥነት ቀነስ ብቻ",
-            "image": "answer_just_slow.png",
-            "is_correct": true
-          },
-          {
-            "id": "C",
-            "text_amharic": "ፍጥነት ጨምር",
-            "image": "answer_speed_up.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! ቅድሚያ ስጥ ምልክት ካለ ቆም ማለት አያስፈልግም፣ ፍጥነት ቀነስና ሌሎችን አስቀድም።",
-        "explanation_wrong_amharic": "ስህተት። ቅድሚያ ስጥ ካለ ሁልጊዜ ቆም አይፈልግም፤ ፍጥነት ቀንሶ ሌሎችን ማስቀደም ብቻ ያስፈልጋል።",
-        "explanation_correct_audio": "q_yield_003_correct.mp3",
-        "explanation_wrong_audio": "q_yield_003_wrong.mp3"
-      }
-    ]
-  },
-  {
-    "id": "SIGN_NO_ENTRY",
-    "topic_id": "regulatory",
-    "order": 3,
-    "image_filename": "sign_no_entry.png",
-    "video_filename": "sign_no_entry_amharic.mp4",
-    "name_hebrew": "אסור כניסה",
-    "name_amharic": "መግባት ክልክል ነው",
-    "explanation_amharic": "ይህን ምልክት ሲያዩ ወደዚህ መንገድ መግባት ክልክል ነው።",
-    "audio_name_filename": "sign_no_entry_name.mp3",
-    "audio_explanation_filename": "sign_no_entry_explanation.mp3",
-    "questions": [
-      {
-        "id": "Q_NO_ENTRY_001",
-        "question_amharic": "መግቢያ የለም ምልክት ሲያዩ ምን ያደርጋሉ?",
-        "question_audio": "q_no_entry_001.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "ፍጥነት ቀነስና ግቡ",
-            "image": "answer_slow_enter.png",
-            "is_correct": false
-          },
-          {
-            "id": "B",
-            "text_amharic": "አትግቡ፣ ሌላ መንገድ ፈልጉ",
-            "image": "answer_find_other_way.png",
-            "is_correct": true
-          },
-          {
-            "id": "C",
-            "text_amharic": "ቀጥ ሂዱ",
-            "image": "answer_continue.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! መግቢያ የለም ምልክት ሲያዩ ሌላ መንገድ መፈለግ አለብዎ።",
-        "explanation_wrong_amharic": "ስህተት። መግቢያ የለም ምልክት ሲያዩ ወደዚያ አቅጣጫ መግባት አይፈቀድም።",
-        "explanation_correct_audio": "q_no_entry_001_correct.mp3",
-        "explanation_wrong_audio": "q_no_entry_001_wrong.mp3"
-      },
-      {
-        "id": "Q_NO_ENTRY_002",
-        "question_amharic": "መግቢያ የለም ምልክት ምን ቀለም አለው?",
-        "question_audio": "q_no_entry_002.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "ቢጫ ክብ",
-            "image": "answer_yellow_circle.png",
-            "is_correct": false
-          },
-          {
-            "id": "B",
-            "text_amharic": "ነጭ ሶስት ጎን",
-            "image": "answer_white_triangle.png",
-            "is_correct": false
-          },
-          {
-            "id": "C",
-            "text_amharic": "ቀይ ክብ ነጭ አግድም መስመር",
-            "image": "answer_no_entry_shape.png",
-            "is_correct": true
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! መግቢያ የለም ምልክት ቀይ ክብ ውስጥ ነጭ አግድም መስመር አለው።",
-        "explanation_wrong_amharic": "ስህተት። መግቢያ የለም ምልክት ቀይ ክብ ውስጥ ነጭ አግድም መስመር ያለው ምልክት ነው።",
-        "explanation_correct_audio": "q_no_entry_002_correct.mp3",
-        "explanation_wrong_audio": "q_no_entry_002_wrong.mp3"
-      },
-      {
-        "id": "Q_NO_ENTRY_003",
-        "question_amharic": "መግቢያ የለም ምልክት ጠዋት ብቻ ይሠራል?",
-        "question_audio": "q_no_entry_003.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "አዎ፣ ጠዋት ብቻ",
-            "image": "answer_morning_only.png",
-            "is_correct": false
-          },
-          {
-            "id": "B",
-            "text_amharic": "አይደለም፣ ሁልጊዜ ይሠራል",
-            "image": "answer_always.png",
-            "is_correct": true
-          },
-          {
-            "id": "C",
-            "text_amharic": "ምሽት ብቻ",
-            "image": "answer_night_only.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! መግቢያ የለም ምልክት ሁልጊዜ ይሠራል፤ ሌላ ጊዜ ካልተጠቀሰ።",
-        "explanation_wrong_amharic": "ስህተት። መግቢያ የለም ምልክት ሁልጊዜ ይሠራል።",
-        "explanation_correct_audio": "q_no_entry_003_correct.mp3",
-        "explanation_wrong_audio": "q_no_entry_003_wrong.mp3"
-      }
-    ]
-  },
-  {
-    "id": "SIGN_SPEED_50",
-    "topic_id": "regulatory",
-    "order": 4,
-    "image_filename": "sign_speed_50.png",
-    "video_filename": "sign_speed_50_amharic.mp4",
-    "name_hebrew": "מהירות מרבית 50",
-    "name_amharic": "የፍጥነት ገደብ 50",
-    "explanation_amharic": "እዚህ መንገድ ላይ መንዳት የሚችሉት ከፍተኛው ፍጥነት በሰዓት 50 ኪሎ ሜትር ነው። ከዚህ በላይ ማሽከርከር አይፈቀድም።",
-    "audio_name_filename": "sign_speed_50_name.mp3",
-    "audio_explanation_filename": "sign_speed_50_explanation.mp3",
-    "questions": [
-      {
-        "id": "Q_SPEED50_001",
-        "question_amharic": "50 የሚለው ምልክት ምን ማለት ነው?",
-        "question_audio": "q_speed50_001.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "ዝቅተኛ ፍጥነት 50 ኪሜ",
-            "image": "answer_min_speed.png",
-            "is_correct": false
-          },
-          {
-            "id": "B",
-            "text_amharic": "ከፍተኛ ፍጥነት 50 ኪሜ",
-            "image": "answer_max_speed_50.png",
-            "is_correct": true
-          },
-          {
-            "id": "C",
-            "text_amharic": "ርቀት 50 ሜትር",
-            "image": "answer_distance_50.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! 50 ምልክት ማለት ከፍተኛ ፍጥነት 50 ኪሎሜትር በሰዓት ማለት ነው።",
-        "explanation_wrong_amharic": "ስህተት። 50 ምልክት ከፍተኛ ፍጥነት 50 ኪሎሜትር በሰዓት ማለት ነው።",
-        "explanation_correct_audio": "q_speed50_001_correct.mp3",
-        "explanation_wrong_audio": "q_speed50_001_wrong.mp3"
-      },
-      {
-        "id": "Q_SPEED50_002",
-        "question_amharic": "50 ምልክት ካለ 60 ኪሜ መሄድ ይፈቀዳል?",
-        "question_audio": "q_speed50_002.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "አዎ፣ ይፈቀዳል",
-            "image": "answer_yes.png",
-            "is_correct": false
-          },
-          {
-            "id": "B",
-            "text_amharic": "አይፈቀድም",
-            "image": "answer_no.png",
-            "is_correct": true
-          },
-          {
-            "id": "C",
-            "text_amharic": "ሌሊት ብቻ ይፈቀዳል",
-            "image": "answer_night_allowed.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! 50 ምልክት ካለ ከ50 ኪሜ በላይ መሄድ አይፈቀድም።",
-        "explanation_wrong_amharic": "ስህተት። 50 ምልክት ካለ 60 ኪሜ መሄድ አይፈቀድም።",
-        "explanation_correct_audio": "q_speed50_002_correct.mp3",
-        "explanation_wrong_audio": "q_speed50_002_wrong.mp3"
-      },
-      {
-        "id": "Q_SPEED50_003",
-        "question_amharic": "ከፍተኛ ፍጥነት ምልክት ምን ቅርጽ አለው?",
-        "question_audio": "q_speed50_003.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "ቀይ ድንበር ያለው ነጭ ክብ",
-            "image": "answer_speed_sign_shape.png",
-            "is_correct": true
-          },
-          {
-            "id": "B",
-            "text_amharic": "ቀይ ሶስት ጎን",
-            "image": "answer_red_triangle.png",
-            "is_correct": false
-          },
-          {
-            "id": "C",
-            "text_amharic": "ሰማያዊ ክብ",
-            "image": "answer_blue_circle.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! የፍጥነት ገደብ ምልክቶች ቀይ ድንበር ያለው ነጭ ክብ ቅርጽ አላቸው።",
-        "explanation_wrong_amharic": "ስህተት። ከፍተኛ ፍጥነት ምልክት ቀይ ድንበር ያለው ነጭ ክብ ቅርጽ ነው።",
-        "explanation_correct_audio": "q_speed50_003_correct.mp3",
-        "explanation_wrong_audio": "q_speed50_003_wrong.mp3"
-      }
-    ]
-  },
-  {
-    "id": "SIGN_SPEED_30",
-    "topic_id": "regulatory",
-    "order": 5,
-    "image_filename": "sign_speed_30.png",
-    "video_filename": "sign_speed_30_amharic.mp4",
-    "name_hebrew": "מהירות מרבית 30",
-    "name_amharic": "የፍጥነት ገደብ ሠላሳ",
-    "explanation_amharic": "ከሠላሳ ኪሎ ሜትር በላይ መንዳት የለብዎትም።",
-    "audio_name_filename": "sign_speed_30_name.mp3",
-    "audio_explanation_filename": "sign_speed_30_explanation.mp3",
-    "questions": [
-      {
-        "id": "Q_SPEED30_001",
-        "question_amharic": "30 ምልክት የት አካባቢ ብዙ ጊዜ ይታያል?",
-        "question_audio": "q_speed30_001.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "ሀይዌይ ላይ",
-            "image": "answer_highway.png",
-            "is_correct": false
-          },
-          {
-            "id": "B",
-            "text_amharic": "ት/ቤት አካባቢ",
-            "image": "answer_school_zone.png",
-            "is_correct": true
-          },
-          {
-            "id": "C",
-            "text_amharic": "በረሃ ውስጥ",
-            "image": "answer_desert.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! 30 ፍጥነት ምልክት ብዙ ጊዜ ት/ቤት ወይም ልጆች አካባቢ ይሆናል።",
-        "explanation_wrong_amharic": "ስህተት። 30 ምልክት ብዙ ጊዜ ት/ቤት ወይም ሰዎች ብዙ ባሉበት አካባቢ ይሆናል።",
-        "explanation_correct_audio": "q_speed30_001_correct.mp3",
-        "explanation_wrong_audio": "q_speed30_001_wrong.mp3"
-      },
-      {
-        "id": "Q_SPEED30_002",
-        "question_amharic": "30 ምልክት ካለ 35 ኪሜ ሄዶ ተያዘ። ምን ይሆናል?",
-        "question_audio": "q_speed30_002.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "ምንም አይሆንም",
-            "image": "answer_nothing.png",
-            "is_correct": false
-          },
-          {
-            "id": "B",
-            "text_amharic": "ቅጣት ይከፍላሉ",
-            "image": "answer_fine.png",
-            "is_correct": true
-          },
-          {
-            "id": "C",
-            "text_amharic": "ጥሩ ስራ ነው",
-            "image": "answer_good_job.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! የፍጥነት ገደብ ካለፉ ቅጣት ይከፈላል።",
-        "explanation_wrong_amharic": "ስህተት። የፍጥነት ገደብ ካለፉ ቅጣት ይከፈላል።",
-        "explanation_correct_audio": "q_speed30_002_correct.mp3",
-        "explanation_wrong_audio": "q_speed30_002_wrong.mp3"
-      },
-      {
-        "id": "Q_SPEED30_003",
-        "question_amharic": "30 ምልክት ካለ 25 ኪሜ ፍጥነት ሄዶ ይፈቀዳል?",
-        "question_audio": "q_speed30_003.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "አይፈቀድም",
-            "image": "answer_no.png",
-            "is_correct": false
-          },
-          {
-            "id": "B",
-            "text_amharic": "አዎ ይፈቀዳል",
-            "image": "answer_yes.png",
-            "is_correct": true
-          },
-          {
-            "id": "C",
-            "text_amharic": "ፍቃድ ያስፈልጋል",
-            "image": "answer_need_permit.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! ከፍተኛ ፍጥነት 30 ካለ ከ30 በታች ሄዶ ይፈቀዳል።",
-        "explanation_wrong_amharic": "ስህተት። ከፍተኛ ፍጥነት 30 ካለ ከ30 ኪሜ በታች ሄዶ ይፈቀዳል።",
-        "explanation_correct_audio": "q_speed30_003_correct.mp3",
-        "explanation_wrong_audio": "q_speed30_003_wrong.mp3"
-      }
-    ]
-  },
-  {
-    "id": "SIGN_SPEED_90",
-    "topic_id": "regulatory",
-    "order": 6,
-    "image_filename": "sign_speed_90.png",
-    "video_filename": "sign_speed_90_amharic.mp4",
-    "name_hebrew": "מהירות מרבית 90",
-    "name_amharic": "ከፍተኛ የፍጥነት ገደብ 90",
-    "explanation_amharic": "ከዚህ ምልክት በኋላ ከ90 ኪሎ ሜትር በላይ ማሽከርከር አይፈቀድም።",
-    "audio_name_filename": "sign_speed_90_name.mp3",
-    "audio_explanation_filename": "sign_speed_90_explanation.mp3",
-    "questions": [
-      {
-        "id": "Q_SPEED90_001",
-        "question_amharic": "90 ምልክት የት ብዙ ጊዜ ይሆናል?",
-        "question_audio": "q_speed90_001.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "ከተማ ውስጥ",
-            "image": "answer_in_city.png",
-            "is_correct": false
-          },
-          {
-            "id": "B",
-            "text_amharic": "ት/ቤት አካባቢ",
-            "image": "answer_school_zone.png",
-            "is_correct": false
-          },
-          {
-            "id": "C",
-            "text_amharic": "ከተማ ውጭ",
-            "image": "answer_outside_city.png",
-            "is_correct": true
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! 90 ምልክት ብዙ ጊዜ ከተማ ውጭ ክፍት መንገድ ላይ ይሆናል።",
-        "explanation_wrong_amharic": "ስህተት። 90 ምልክት ብዙ ጊዜ ከተማ ውጭ ይሆናል።",
-        "explanation_correct_audio": "q_speed90_001_correct.mp3",
-        "explanation_wrong_audio": "q_speed90_001_wrong.mp3"
-      },
-      {
-        "id": "Q_SPEED90_002",
-        "question_amharic": "90 ምልክት ካለ 100 ኪሜ ሄዶ ይፈቀዳል?",
-        "question_audio": "q_speed90_002.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "አዎ ይፈቀዳል",
-            "image": "answer_yes.png",
-            "is_correct": false
-          },
-          {
-            "id": "B",
-            "text_amharic": "አይፈቀድም",
-            "image": "answer_no.png",
-            "is_correct": true
-          },
-          {
-            "id": "C",
-            "text_amharic": "ሌሊት ብቻ ይፈቀዳል",
-            "image": "answer_night_allowed.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! 90 ምልክት ካለ ከ90 ኪሜ በላይ አይፈቀድም።",
-        "explanation_wrong_amharic": "ስህተት። 90 ምልክት ካለ 100 ኪሜ አይፈቀድም።",
-        "explanation_correct_audio": "q_speed90_002_correct.mp3",
-        "explanation_wrong_audio": "q_speed90_002_wrong.mp3"
-      },
-      {
-        "id": "Q_SPEED90_003",
-        "question_amharic": "ሦስቱ የፍጥነት ምልክቶች ውስጥ ለከተማ ውስጥ የሚሆነው ምንድን ነው?",
-        "question_audio": "q_speed90_003.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "90 ኪሜ",
-            "image": "answer_90.png",
-            "is_correct": false
-          },
-          {
-            "id": "B",
-            "text_amharic": "50 ኪሜ",
-            "image": "answer_50.png",
-            "is_correct": true
-          },
-          {
-            "id": "C",
-            "text_amharic": "30 ኪሜ",
-            "image": "answer_30.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! ከተማ ውስጥ ዋናው ፍጥነት ገደብ 50 ኪሜ ነው።",
-        "explanation_wrong_amharic": "ስህተት። ከተማ ውስጥ ዋናው ፍጥነት ገደብ 50 ኪሜ ነው።",
-        "explanation_correct_audio": "q_speed90_003_correct.mp3",
-        "explanation_wrong_audio": "q_speed90_003_wrong.mp3"
-      }
-    ]
-  },
-  {
-    "id": "SIGN_NO_OVERTAKING",
-    "topic_id": "regulatory",
-    "order": 7,
-    "image_filename": "sign_no_overtaking.png",
-    "video_filename": "sign_no_overtaking_amharic.mp4",
-    "name_hebrew": "אסור לעקוף",
-    "name_amharic": "ማለፍ የተከለከለ",
-    "explanation_amharic": "ሌላ ተሽከርካሪ ማለፍ የተከለከለ ነው። ይህን ምልክት ሲያዩ ሌላ ተሽከርካሪ ማለፍ የለብዎትም።",
-    "audio_name_filename": "sign_no_overtaking_name.mp3",
-    "audio_explanation_filename": "sign_no_overtaking_explanation.mp3",
-    "questions": [
-      {
-        "id": "Q_NO_OVT_001",
-        "question_amharic": "ማለፍ የለም ምልክት ሲያዩ ምን ያደርጋሉ?",
-        "question_audio": "q_no_ovt_001.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "ፈጥነው ያልፋሉ",
-            "image": "answer_overtake.png",
-            "is_correct": false
-          },
-          {
-            "id": "B",
-            "text_amharic": "ከኋላ ሆነው ይከተላሉ",
-            "image": "answer_follow_behind.png",
-            "is_correct": true
-          },
-          {
-            "id": "C",
-            "text_amharic": "ቆሙ",
-            "image": "answer_stop.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! ማለፍ የለም ምልክት ሲያዩ ከኋላ ሆነው ይከተላሉ።",
-        "explanation_wrong_amharic": "ስህተት። ማለፍ የለም ምልክት ሲያዩ ሌሎቹን ማለፍ አይፈቀድም።",
-        "explanation_correct_audio": "q_no_ovt_001_correct.mp3",
-        "explanation_wrong_audio": "q_no_ovt_001_wrong.mp3"
-      },
-      {
-        "id": "Q_NO_OVT_002",
-        "question_amharic": "ማለፍ የለም ምልክት ምን ቀለም ምልክቶች አሉት?",
-        "question_audio": "q_no_ovt_002.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "ቀይ ድንበር ያለው ክብ ሁለት መኪናዎች",
-            "image": "answer_no_ovt_shape.png",
-            "is_correct": true
-          },
-          {
-            "id": "B",
-            "text_amharic": "ቢጫ ሶስት ጎን",
-            "image": "answer_yellow_triangle.png",
-            "is_correct": false
-          },
-          {
-            "id": "C",
-            "text_amharic": "ሰማያዊ ሶስት ጎን",
-            "image": "answer_blue_triangle.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! ማለፍ የለም ምልክት ቀይ ድንበር ያለው ክብ ውስጥ ሁለት መኪናዎች አሉበት።",
-        "explanation_wrong_amharic": "ስህተት። ማለፍ የለም ምልክት ቀይ ድንበር ያለው ክብ ነው።",
-        "explanation_correct_audio": "q_no_ovt_002_correct.mp3",
-        "explanation_wrong_audio": "q_no_ovt_002_wrong.mp3"
-      },
-      {
-        "id": "Q_NO_OVT_003",
-        "question_amharic": "ማለፍ የለም ምልክት ሲያልቅ ምን ምልክት ይሆናል?",
-        "question_audio": "q_no_ovt_003.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "ቁም ምልክት",
-            "image": "answer_stop_sign.png",
-            "is_correct": false
-          },
-          {
-            "id": "B",
-            "text_amharic": "ማለፍ ተፈቀደ ምልክት",
-            "image": "answer_overtaking_allowed.png",
-            "is_correct": true
-          },
-          {
-            "id": "C",
-            "text_amharic": "ፍጥነት ቀነስ ምልክት",
-            "image": "answer_slow_down.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! ማለፍ የለም ምልክት ሲያልቅ ማለፍ ተፈቀደ ምልክት ሊሆን ይችላል።",
-        "explanation_wrong_amharic": "ስህተት። ማለፍ የለም ምልክት ሲያልቅ ማለፍ ተፈቀደ ምልክት ሊሆን ይችላል።",
-        "explanation_correct_audio": "q_no_ovt_003_correct.mp3",
-        "explanation_wrong_audio": "q_no_ovt_003_wrong.mp3"
-      }
-    ]
-  },
-  {
-    "id": "SIGN_NO_PARKING",
-    "topic_id": "regulatory",
-    "order": 8,
-    "image_filename": "sign_no_parking.png",
-    "video_filename": "sign_no_parking_amharic.mp4",
-    "name_hebrew": "אסור לחנות",
-    "name_amharic": "ማቆም ክልክል ነው",
-    "explanation_amharic": "እዚህ ቦታ ማቆም የለብዎትም።",
-    "audio_name_filename": "sign_no_parking_name.mp3",
-    "audio_explanation_filename": "sign_no_parking_explanation.mp3",
-    "questions": [
-      {
-        "id": "Q_NO_PARK_001",
-        "question_amharic": "ማቆሚያ የለም ምልክት ሲያዩ ምን ያደርጋሉ?",
-        "question_audio": "q_no_park_001.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "ቶሎ ቆሙና ሂዱ",
-            "image": "answer_quick_stop.png",
-            "is_correct": false
-          },
-          {
-            "id": "B",
-            "text_amharic": "አቆሙ፣ ሌላ ቦታ ፈልጉ",
-            "image": "answer_find_other_parking.png",
-            "is_correct": true
-          },
-          {
-            "id": "C",
-            "text_amharic": "ለ5 ደቂቃ ቆሙ",
-            "image": "answer_5min_stop.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! ማቆሚያ የለም ምልክት ሲያዩ ሌላ ቦታ መፈለግ አለብዎ።",
-        "explanation_wrong_amharic": "ስህተት። ማቆሚያ የለም ምልክት ሲያዩ ተሽከርካሪ ማቆም አይፈቀድም።",
-        "explanation_correct_audio": "q_no_park_001_correct.mp3",
-        "explanation_wrong_audio": "q_no_park_001_wrong.mp3"
-      },
-      {
-        "id": "Q_NO_PARK_002",
-        "question_amharic": "ማቆሚያ የለም ቦታ ቆሞ ተያዘ። ምን ይሆናል?",
-        "question_audio": "q_no_park_002.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "ምንም አይሆንም",
-            "image": "answer_nothing.png",
-            "is_correct": false
-          },
-          {
-            "id": "B",
-            "text_amharic": "ቅጣት ወይም ክሬን",
-            "image": "answer_fine_or_tow.png",
-            "is_correct": true
-          },
-          {
-            "id": "C",
-            "text_amharic": "ማስጠንቀቂያ ብቻ",
-            "image": "answer_warning_only.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! ማቆሚያ የለም ቦታ ቆሙ ቅጣት ወይም ክሬን ሊያጋጥምዎ ይችላል።",
-        "explanation_wrong_amharic": "ስህተት። ማቆሚያ የለም ቦታ ቆሙ ቅጣት ሊያጋጥምዎ ይችላል።",
-        "explanation_correct_audio": "q_no_park_002_correct.mp3",
-        "explanation_wrong_audio": "q_no_park_002_wrong.mp3"
-      },
-      {
-        "id": "Q_NO_PARK_003",
-        "question_amharic": "ማቆሚያ የለም ምልክት ምን ቅርጽ አለው?",
-        "question_audio": "q_no_park_003.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "ሰማያዊ ክብ ቀይ X",
-            "image": "answer_blue_red_x.png",
-            "is_correct": false
-          },
-          {
-            "id": "B",
-            "text_amharic": "ቀይ ድንበር ያለው ክብ ሰማያዊ P ላይ",
-            "image": "answer_no_parking_shape.png",
-            "is_correct": true
-          },
-          {
-            "id": "C",
-            "text_amharic": "ቢጫ ሶስት ጎን",
-            "image": "answer_yellow_triangle.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! ማቆሚያ የለም ምልክት ቀይ ድንበር ያለው ክብ ውስጥ ሰማያዊ P ፊደል ያለው ነው።",
-        "explanation_wrong_amharic": "ስህተት። ማቆሚያ የለም ምልክት ቀይ ድንበር ያለው ክብ ውስጥ P ፊደል ያለው ምልክት ነው።",
-        "explanation_correct_audio": "q_no_park_003_correct.mp3",
-        "explanation_wrong_audio": "q_no_park_003_wrong.mp3"
-      }
-    ]
-  },
-  {
-    "id": "SIGN_NO_UTURN",
-    "topic_id": "regulatory",
-    "order": 9,
-    "image_filename": "sign_no_uturn.png",
-    "video_filename": "sign_no_uturn_amharic.mp4",
-    "name_hebrew": "אסור לפנות פניית פרסה",
-    "name_amharic": "የፈረስ ዞሮሽ ክልክል",
-    "explanation_amharic": "ይህን ምልክት ሲያዩ፣ መኪናዎን ወደ ተቃራኒ አቅጣጫ ማዞር አይፈቀድም።",
-    "audio_name_filename": "sign_no_uturn_name.mp3",
-    "audio_explanation_filename": "sign_no_uturn_explanation.mp3",
-    "questions": [
-      {
-        "id": "Q_NO_UTURN_001",
-        "question_amharic": "ዩ-ተርን የለም ምልክት ምን ማለት ነው?",
-        "question_audio": "q_no_uturn_001.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "ወደ ግራ አዙሩ",
-            "image": "answer_turn_left.png",
-            "is_correct": false
-          },
-          {
-            "id": "B",
-            "text_amharic": "ሙሉ ዙሪያ መዞር አይፈቀድም",
-            "image": "answer_no_uturn_action.png",
-            "is_correct": true
-          },
-          {
-            "id": "C",
-            "text_amharic": "ወደ ቀኝ አዙሩ",
-            "image": "answer_turn_right.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! ዩ-ተርን የለም ምልክት ሙሉ ዙሪያ መዞር አይፈቀድም ማለት ነው።",
-        "explanation_wrong_amharic": "ስህተት። ዩ-ተርን የለም ምልክት ሙሉ ዙሪያ ዞሮ ወደ ተቃራኒ አቅጣጫ መሄድ አይፈቀድም ማለት ነው።",
-        "explanation_correct_audio": "q_no_uturn_001_correct.mp3",
-        "explanation_wrong_audio": "q_no_uturn_001_wrong.mp3"
-      },
-      {
-        "id": "Q_NO_UTURN_002",
-        "question_amharic": "ዩ-ተርን ምልክት ካለ ወደ ቀኝ ዞሮ ሂዶ ይፈቀዳል?",
-        "question_audio": "q_no_uturn_002.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "አይፈቀድም",
-            "image": "answer_no.png",
-            "is_correct": false
-          },
-          {
-            "id": "B",
-            "text_amharic": "አዎ ይፈቀዳል",
-            "image": "answer_yes.png",
-            "is_correct": true
-          },
-          {
-            "id": "C",
-            "text_amharic": "ፈቃድ ያስፈልጋል",
-            "image": "answer_need_permit.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! ዩ-ተርን ምልክት ወደ ቀኝ ዞሮ ሄዶ ብቻ ይከለክላል።",
-        "explanation_wrong_amharic": "ስህተት። ዩ-ተርን ምልክት ሙሉ ዙሪያ መዞርን ብቻ ይከለክላል፤ ወደ ቀኝ ዞሮ ሄዶ ይፈቀዳል።",
-        "explanation_correct_audio": "q_no_uturn_002_correct.mp3",
-        "explanation_wrong_audio": "q_no_uturn_002_wrong.mp3"
-      },
-      {
-        "id": "Q_NO_UTURN_003",
-        "question_amharic": "ዩ-ተርን የት ብዙ ጊዜ ይከለከላል?",
-        "question_audio": "q_no_uturn_003.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "መኪና ማቆሚያ ውስጥ",
-            "image": "answer_parking_lot.png",
-            "is_correct": false
-          },
-          {
-            "id": "B",
-            "text_amharic": "ዋና መንገድ ላይ",
-            "image": "answer_main_road.png",
-            "is_correct": true
-          },
-          {
-            "id": "C",
-            "text_amharic": "ሜዳ ላይ",
-            "image": "answer_field.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! ዩ-ተርን ዋና መንገድ ላይ ብዙ ጊዜ ይከለከላል።",
-        "explanation_wrong_amharic": "ስህተት። ዩ-ተርን ዋና መንገድ ላይ ብዙ ጊዜ ይከለከላል።",
-        "explanation_correct_audio": "q_no_uturn_003_correct.mp3",
-        "explanation_wrong_audio": "q_no_uturn_003_wrong.mp3"
-      }
-    ]
-  },
-  {
-    "id": "SIGN_ONE_WAY",
-    "topic_id": "regulatory",
-    "order": 10,
-    "image_filename": "sign_one_way.png",
-    "video_filename": "sign_one_way_amharic.mp4",
-    "name_hebrew": "כביש חד-סטרי",
-    "name_amharic": "አንድ አቅጣጫ መንገድ",
-    "explanation_amharic": "በዚህ መንገድ ላይ ተሽከርካሪዎች በአንድ አቅጣጫ ብቻ እንዲነዱ ተፈቅዷል። በተቃራኒ አቅጣጫ መንዳት የተከለከለ ነው።",
-    "audio_name_filename": "sign_one_way_name.mp3",
-    "audio_explanation_filename": "sign_one_way_explanation.mp3",
-    "questions": [
-      {
-        "id": "Q_ONE_WAY_001",
-        "question_amharic": "አንድ አቅጣጫ ምልክት ሲያዩ ወደ ተቃራኒ ሄዱ። ምን ያጋጥምዎታል?",
-        "question_audio": "q_one_way_001.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "ምንም አያጋጥምዎም",
-            "image": "answer_nothing.png",
-            "is_correct": false
-          },
-          {
-            "id": "B",
-            "text_amharic": "አደጋ ወይም ቅጣት",
-            "image": "answer_danger_fine.png",
-            "is_correct": true
-          },
-          {
-            "id": "C",
-            "text_amharic": "ሌሎች ይደሰታሉ",
-            "image": "answer_others_happy.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! አንድ አቅጣጫ ጠቅሶ ወደ ተቃራኒ ቢሄዱ አደጋ ወይም ቅጣት ያጋጥምዎታል።",
-        "explanation_wrong_amharic": "ስህተት። አንድ አቅጣጫ ጠቅሶ ወደ ተቃራኒ ቢሄዱ ከፍተኛ አደጋ አለ።",
-        "explanation_correct_audio": "q_one_way_001_correct.mp3",
-        "explanation_wrong_audio": "q_one_way_001_wrong.mp3"
-      },
-      {
-        "id": "Q_ONE_WAY_002",
-        "question_amharic": "አንድ አቅጣጫ ምልክት ምን ቅርጽ አለው?",
-        "question_audio": "q_one_way_002.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "ቀይ ክብ",
-            "image": "answer_red_circle.png",
-            "is_correct": false
-          },
-          {
-            "id": "B",
-            "text_amharic": "ሰማያዊ ሳጥን ነጭ ቀስት",
-            "image": "answer_one_way_shape.png",
-            "is_correct": true
-          },
-          {
-            "id": "C",
-            "text_amharic": "ቢጫ ሶስት ጎን",
-            "image": "answer_yellow_triangle.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! አንድ አቅጣጫ ምልክት ሰማያዊ ሳጥን ውስጥ ነጭ ቀስት ያለው ነው።",
-        "explanation_wrong_amharic": "ስህተት። አንድ አቅጣጫ ምልክት ሰማያዊ ሳጥን ውስጥ ነጭ ቀስት ያለው ምልክት ነው።",
-        "explanation_correct_audio": "q_one_way_002_correct.mp3",
-        "explanation_wrong_audio": "q_one_way_002_wrong.mp3"
-      },
-      {
-        "id": "Q_ONE_WAY_003",
-        "question_amharic": "አንድ አቅጣጫ መንገድ ላይ ማቆሚያ የት ፈልጋሉ?",
-        "question_audio": "q_one_way_003.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "ሁለቱም ጎን",
-            "image": "answer_both_sides.png",
-            "is_correct": false
-          },
-          {
-            "id": "B",
-            "text_amharic": "ቀኝ ጎን ብቻ",
-            "image": "answer_right_side.png",
-            "is_correct": false
-          },
-          {
-            "id": "C",
-            "text_amharic": "ማቆሚያ ምልክት ባለበት ቦታ",
-            "image": "answer_where_sign_allows.png",
-            "is_correct": true
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! ማቆሚያ ምልክት ባለበት ቦታ ብቻ ቆሙ።",
-        "explanation_wrong_amharic": "ስህተት። ማቆሚያ ምልክት ባለበት ቦታ ብቻ ቆሙ።",
-        "explanation_correct_audio": "q_one_way_003_correct.mp3",
-        "explanation_wrong_audio": "q_one_way_003_wrong.mp3"
-      }
-    ]
-  },
-  {
-    "id": "SIGN_ROAD_CLOSED",
-    "topic_id": "regulatory",
-    "order": 11,
-    "image_filename": "sign_road_closed.png",
-    "video_filename": "sign_road_closed_amharic.mp4",
-    "name_hebrew": "כביש סגור",
-    "name_amharic": "መንገድ ተዘግቷል",
-    "explanation_amharic": "ይህ ምልክት ሲያዩ ይህ መንገድ ሙሉ ለሙሉ ተዘግቷል ማለት ነው። ሌላ አቅጣጫ ፈልጉ።",
-    "audio_name_filename": "sign_road_closed_name.mp3",
-    "audio_explanation_filename": "sign_road_closed_explanation.mp3",
-    "questions": [
-      {
-        "id": "Q_ROAD_CLOSED_001",
-        "question_amharic": "መንገድ ተዘግቷል ምልክት ሲያዩ ምን ያደርጋሉ?",
-        "question_audio": "q_road_closed_001.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "ዘዴ ፈልገው ይቀጥሉ",
-            "image": "answer_find_way.png",
-            "is_correct": false
-          },
-          {
-            "id": "B",
-            "text_amharic": "ሌላ አቅጣጫ ፈልጉ",
-            "image": "answer_find_other_route.png",
-            "is_correct": true
-          },
-          {
-            "id": "C",
-            "text_amharic": "ፍጥነት ጨምሩ",
-            "image": "answer_speed_up.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! መንገድ ሲዘጋ ሌላ አቅጣጫ ፈልጉ።",
-        "explanation_wrong_amharic": "ስህተት። መንገድ ተዘጋ ማለት ሙሉ ለሙሉ ሊያልፉ አይችሉም፤ ሌላ አቅጣጫ ፈልጉ።",
-        "explanation_correct_audio": "q_road_closed_001_correct.mp3",
-        "explanation_wrong_audio": "q_road_closed_001_wrong.mp3"
-      },
-      {
-        "id": "Q_ROAD_CLOSED_002",
-        "question_amharic": "ለምን መንገድ ሊዘጋ ይችላል?",
-        "question_audio": "q_road_closed_002.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "ወቅቱ ምሽት ነው",
-            "image": "answer_night.png",
-            "is_correct": false
-          },
-          {
-            "id": "B",
-            "text_amharic": "ጥገና ወይም አደጋ",
-            "image": "answer_repair_accident.png",
-            "is_correct": true
-          },
-          {
-            "id": "C",
-            "text_amharic": "ዝናብ ነው",
-            "image": "answer_rain.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! ጥገና ወይም አደጋ ሲኖር መንገድ ሊዘጋ ይችላል።",
-        "explanation_wrong_amharic": "ስህተት። ጥገና ወይም አደጋ ሲኖር መንገድ ሊዘጋ ይችላል።",
-        "explanation_correct_audio": "q_road_closed_002_correct.mp3",
-        "explanation_wrong_audio": "q_road_closed_002_wrong.mp3"
-      },
-      {
-        "id": "Q_ROAD_CLOSED_003",
-        "question_amharic": "መንገድ ዘጋ ምልክት ካለ ፖሊሱ ቢፈቅድ ሊያልፍ ይቻላል?",
-        "question_audio": "q_road_closed_003.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "አይቻልም ፈጽሞ",
-            "image": "answer_never.png",
-            "is_correct": false
-          },
-          {
-            "id": "B",
-            "text_amharic": "ፖሊሱ ቢፈቅድ ይቻላል",
-            "image": "answer_police_allow.png",
-            "is_correct": true
-          },
-          {
-            "id": "C",
-            "text_amharic": "ቀን ብቻ ይቻላል",
-            "image": "answer_day_only.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! ፖሊሱ ቢፈቅድ ብቻ ሊያልፉ ይቻላሉ።",
-        "explanation_wrong_amharic": "ስህተት። ፖሊሱ ቢፈቅድ ብቻ ሊያልፉ ይቻላሉ።",
-        "explanation_correct_audio": "q_road_closed_003_correct.mp3",
-        "explanation_wrong_audio": "q_road_closed_003_wrong.mp3"
-      }
-    ]
-  },
-  {
-    "id": "SIGN_NO_TRUCKS",
-    "topic_id": "regulatory",
-    "order": 12,
-    "image_filename": "sign_no_trucks.png",
-    "video_filename": "sign_no_trucks_amharic.mp4",
-    "name_hebrew": "אסור לרכב כבד",
-    "name_amharic": "ከባድ መኪና የለም",
-    "explanation_amharic": "ይህ ምልክት ሲያዩ ከባድ ጭነት ተሽከርካሪዎች ወደዚህ መንገድ ሊገቡ አይፈቀዳቸውም።",
-    "audio_name_filename": "sign_no_trucks_name.mp3",
-    "audio_explanation_filename": "sign_no_trucks_explanation.mp3",
-    "questions": [
-      {
-        "id": "Q_NO_TRUCKS_001",
-        "question_amharic": "ከባድ መኪና የለም ምልክት ለምን ይሆናል?",
-        "question_audio": "q_no_trucks_001.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "መንገዱ ጠባብ ወይም ሊሰበር ይችላል",
-            "image": "answer_narrow_weak.png",
-            "is_correct": true
-          },
-          {
-            "id": "B",
-            "text_amharic": "ከባድ መኪና ፈጣን ነው",
-            "image": "answer_truck_fast.png",
-            "is_correct": false
-          },
-          {
-            "id": "C",
-            "text_amharic": "ነዳጅ ቆጣቢ ስለሆነ",
-            "image": "answer_fuel_save.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! መንገዱ ጠባብ ወይም ሊሰበር ስለሚችል ከባድ መኪና ይከለከላል።",
-        "explanation_wrong_amharic": "ስህተት። መንገዱ ጠባብ ወይም ሊሰበር ስለሚችል ከባድ መኪና ይከለከላል።",
-        "explanation_correct_audio": "q_no_trucks_001_correct.mp3",
-        "explanation_wrong_audio": "q_no_trucks_001_wrong.mp3"
-      },
-      {
-        "id": "Q_NO_TRUCKS_002",
-        "question_amharic": "ከባድ መኪና የለም ምልክት ትንሽ መኪናን ይከለክላል?",
-        "question_audio": "q_no_trucks_002.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "አዎ ይከለክላል",
-            "image": "answer_yes.png",
-            "is_correct": false
-          },
-          {
-            "id": "B",
-            "text_amharic": "አይደለም፣ ትንሽ መኪና ይፈቀዳል",
-            "image": "answer_small_cars_ok.png",
-            "is_correct": true
-          },
-          {
-            "id": "C",
-            "text_amharic": "ሁሉም ይከለከላሉ",
-            "image": "answer_all_banned.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! ከባድ መኪና የለም ምልክት ትንሽ ተሽከርካሪዎችን አይከለክልም።",
-        "explanation_wrong_amharic": "ስህተት። ከባድ መኪና የለም ምልክት ትንሽ ተሽከርካሪዎችን አይከለክልም።",
-        "explanation_correct_audio": "q_no_trucks_002_correct.mp3",
-        "explanation_wrong_audio": "q_no_trucks_002_wrong.mp3"
-      },
-      {
-        "id": "Q_NO_TRUCKS_003",
-        "question_amharic": "ከባድ መኪና የለም ምልክት ምን ቅርጽ አለው?",
-        "question_audio": "q_no_trucks_003.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "ቀይ ድንበር ያለው ክብ ከባድ መኪና ምስል",
-            "image": "answer_no_trucks_shape.png",
-            "is_correct": true
-          },
-          {
-            "id": "B",
-            "text_amharic": "ቢጫ ሶስት ጎን",
-            "image": "answer_yellow_triangle.png",
-            "is_correct": false
-          },
-          {
-            "id": "C",
-            "text_amharic": "ሰማያዊ ክብ",
-            "image": "answer_blue_circle.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! ከባድ መኪና የለም ምልክት ቀይ ድንበር ያለው ክብ ውስጥ ከባድ መኪና ምስል አለበት።",
-        "explanation_wrong_amharic": "ስህተት። ከባድ መኪና የለም ምልክት ቀይ ድንበር ያለው ክብ ምልክት ነው።",
-        "explanation_correct_audio": "q_no_trucks_003_correct.mp3",
-        "explanation_wrong_audio": "q_no_trucks_003_wrong.mp3"
-      }
-    ]
-  },
-  {
-    "id": "SIGN_NO_BICYCLES",
-    "topic_id": "regulatory",
-    "order": 13,
-    "image_filename": "sign_no_bicycles.png",
-    "video_filename": "sign_no_bicycles_amharic.mp4",
-    "name_hebrew": "אסור לאופניים",
-    "name_amharic": "ብስክሌት የለም",
-    "explanation_amharic": "ይህ ምልክት ሲያዩ ብስክሌቶች ወደዚህ መንገድ ሊገቡ አይፈቀዳቸውም።",
-    "audio_name_filename": "sign_no_bicycles_name.mp3",
-    "audio_explanation_filename": "sign_no_bicycles_explanation.mp3",
-    "questions": [
-      {
-        "id": "Q_NO_BIKE_001",
-        "question_amharic": "ብስክሌት የለም ምልክት ሲያዩ ምን ያደርጋሉ?",
-        "question_audio": "q_no_bike_001.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "ፍጥነት ቀንሶ ይቀጥሉ",
-            "image": "answer_slow_continue.png",
-            "is_correct": false
-          },
-          {
-            "id": "B",
-            "text_amharic": "ሌላ መንገድ ፈልጉ",
-            "image": "answer_find_other_way.png",
-            "is_correct": true
-          },
-          {
-            "id": "C",
-            "text_amharic": "ብስክሌቱን ይዘው ሄዱ",
-            "image": "answer_carry_bike.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! ብስክሌት የለም ምልክት ሲያዩ ሌላ መንገድ ፈልጉ።",
-        "explanation_wrong_amharic": "ስህተት። ብስክሌት የለም ምልክት ሲያዩ ሌላ መንገድ ፈልጉ።",
-        "explanation_correct_audio": "q_no_bike_001_correct.mp3",
-        "explanation_wrong_audio": "q_no_bike_001_wrong.mp3"
-      },
-      {
-        "id": "Q_NO_BIKE_002",
-        "question_amharic": "ለምን ብስክሌት ሊከለከል ይችላል?",
-        "question_audio": "q_no_bike_002.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "ፈጣን ስለሆነ",
-            "image": "answer_too_fast.png",
-            "is_correct": false
-          },
-          {
-            "id": "B",
-            "text_amharic": "ሀይዌይ ወይም አደገኛ መንገድ ስለሆነ",
-            "image": "answer_dangerous_road.png",
-            "is_correct": true
-          },
-          {
-            "id": "C",
-            "text_amharic": "ቀለም ስለሌለው",
-            "image": "answer_no_color.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! ሀይዌይ ወይም አደገኛ መንገድ ስለሆነ ብስክሌት ሊከለከል ይችላል።",
-        "explanation_wrong_amharic": "ስህተት። ሀይዌይ ወይም አደገኛ መንገድ ስለሆነ ብስክሌት ሊከለከል ይችላል።",
-        "explanation_correct_audio": "q_no_bike_002_correct.mp3",
-        "explanation_wrong_audio": "q_no_bike_002_wrong.mp3"
-      },
-      {
-        "id": "Q_NO_BIKE_003",
-        "question_amharic": "ብስክሌት የለም ምልክት ሞተር ብስክሌቶችን ይከለክላል?",
-        "question_audio": "q_no_bike_003.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "አይደለም",
-            "image": "answer_no.png",
-            "is_correct": false
-          },
-          {
-            "id": "B",
-            "text_amharic": "ምልክቱ ላይ የተጻፈውን ያያሉ",
-            "image": "answer_check_sign.png",
-            "is_correct": true
-          },
-          {
-            "id": "C",
-            "text_amharic": "አዎ ሁሉም ተከልክለዋል",
-            "image": "answer_yes.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! ምልክቱ ምን አይነት ተሽከርካሪ ይከለክላል የሚለውን ለማወቅ ምልክቱን ያዩ።",
-        "explanation_wrong_amharic": "ስህተት። ምልክቱ ላይ ምን እንደተጻፈ ያዩ።",
-        "explanation_correct_audio": "q_no_bike_003_correct.mp3",
-        "explanation_wrong_audio": "q_no_bike_003_wrong.mp3"
-      }
-    ]
-  },
-  {
-    "id": "SIGN_COMPULSORY_STOP",
-    "topic_id": "regulatory",
-    "order": 14,
-    "image_filename": "sign_compulsory_stop.png",
-    "video_filename": "sign_compulsory_stop_amharic.mp4",
-    "name_hebrew": "קו עצירה חובה",
-    "name_amharic": "አስገዳጅ ቆምያ መስመር",
-    "explanation_amharic": "ይህ ምልክት ወይም ነጭ መስመር ሲያዩ ሙሉ ለሙሉ ቆሙ። ቁም ምልክት ሳይኖር ቢሆን እንኳ ይህ መስመር ቆምን ያስገድዳል።",
-    "audio_name_filename": "sign_compulsory_stop_name.mp3",
-    "audio_explanation_filename": "sign_compulsory_stop_explanation.mp3",
-    "questions": [
-      {
-        "id": "Q_COMP_STOP_001",
-        "question_amharic": "ሀይዌይ ላይ ነጭ ስፋት ያለው አግድም መስመር ምን ማለት ነው?",
-        "question_audio": "q_comp_stop_001.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "ፍጥነት ቀነስ",
-            "image": "answer_slow_down.png",
-            "is_correct": false
-          },
-          {
-            "id": "B",
-            "text_amharic": "ቆም ምልክት",
-            "image": "answer_stop_line.png",
-            "is_correct": true
-          },
-          {
-            "id": "C",
-            "text_amharic": "ሄድ",
-            "image": "answer_go.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! ስፋት ያለው ነጭ አግድም መስመር ቆምን ያሳያል።",
-        "explanation_wrong_amharic": "ስህተት። ስፋት ያለው ነጭ አግድም መስመር ቆምን ያሳያል።",
-        "explanation_correct_audio": "q_comp_stop_001_correct.mp3",
-        "explanation_wrong_audio": "q_comp_stop_001_wrong.mp3"
-      },
-      {
-        "id": "Q_COMP_STOP_002",
-        "question_amharic": "ቁም ምልክት ሳይኖር ቆም መስመር ብቻ ካለ ምን ያደርጋሉ?",
-        "question_audio": "q_comp_stop_002.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "ምንም አያደርጉም",
-            "image": "answer_nothing.png",
-            "is_correct": false
-          },
-          {
-            "id": "B",
-            "text_amharic": "ሙሉ ለሙሉ ቆሙ",
-            "image": "answer_full_stop.png",
-            "is_correct": true
-          },
-          {
-            "id": "C",
-            "text_amharic": "ፍጥነት ቀነሱ ብቻ",
-            "image": "answer_just_slow.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! ቁም መስመር ብቻ ቢሆን ሙሉ ለሙሉ ቆሙ።",
-        "explanation_wrong_amharic": "ስህተት። ቁም መስመር ካለ ምልክት ሳይኖር ሙሉ ለሙሉ ቆሙ።",
-        "explanation_correct_audio": "q_comp_stop_002_correct.mp3",
-        "explanation_wrong_audio": "q_comp_stop_002_wrong.mp3"
-      },
-      {
-        "id": "Q_COMP_STOP_003",
-        "question_amharic": "ቁም ምልክት ሲኖር ከቁም መስመር ባሻገር ቆሙ። ትክክል ነው?",
-        "question_audio": "q_comp_stop_003.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "አዎ ትክክል ነው",
-            "image": "answer_yes.png",
-            "is_correct": false
-          },
-          {
-            "id": "B",
-            "text_amharic": "አይደለም፣ ከቁም መስመር በፊት ቆሙ",
-            "image": "answer_stop_before_line.png",
-            "is_correct": true
-          },
-          {
-            "id": "C",
-            "text_amharic": "ምንም ቦታ ቆሙ",
-            "image": "answer_anywhere.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! ሁልጊዜ ከቁም መስመር በፊት ቆሙ።",
-        "explanation_wrong_amharic": "ስህተት። ቁም መስመር ካለ ሁልጊዜ ከቁም መስመር በፊት ቆሙ።",
-        "explanation_correct_audio": "q_comp_stop_003_correct.mp3",
-        "explanation_wrong_audio": "q_comp_stop_003_wrong.mp3"
-      }
-    ]
-  },
-  {
-    "id": "SIGN_WEIGHT_LIMIT",
-    "topic_id": "regulatory",
-    "order": 15,
-    "image_filename": "sign_weight_limit.png",
-    "video_filename": "sign_weight_limit_amharic.mp4",
-    "name_hebrew": "הגבלת משקל",
-    "name_amharic": "ከፍተኛ ክብደት ገደብ",
-    "explanation_amharic": "ይህ ምልክት ሲያዩ ከዚህ ቁጥር (ቶን) በላይ ክብደት ያለው ተሽከርካሪ ወደዚህ መንገድ ሊገባ አይፈቀድም።",
-    "audio_name_filename": "sign_weight_limit_name.mp3",
-    "audio_explanation_filename": "sign_weight_limit_explanation.mp3",
-    "questions": [
-      {
-        "id": "Q_WEIGHT_001",
-        "question_amharic": "3.5 ቶን ምልክት ካለ 4 ቶን ተሽከርካሪ ሊያልፍ ይችላል?",
-        "question_audio": "q_weight_001.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "አዎ ይችላል",
-            "image": "answer_yes.png",
-            "is_correct": false
-          },
-          {
-            "id": "B",
-            "text_amharic": "አይችልም",
-            "image": "answer_no.png",
-            "is_correct": true
-          },
-          {
-            "id": "C",
-            "text_amharic": "ፍቃድ ቢኖር ይችላል",
-            "image": "answer_with_permit.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! ከፍተኛ ክብደት ገደቡን ያለፈ ተሽከርካሪ ሊያልፍ አይችልም።",
-        "explanation_wrong_amharic": "ስህተት። 3.5 ቶን ምልክት ካለ ከ3.5 ቶን በላይ ክብደት ያለው ተሽከርካሪ ሊያልፍ አይችልም።",
-        "explanation_correct_audio": "q_weight_001_correct.mp3",
-        "explanation_wrong_audio": "q_weight_001_wrong.mp3"
-      },
-      {
-        "id": "Q_WEIGHT_002",
-        "question_amharic": "ለምን የክብደት ገደብ ምልክት ይሆናል?",
-        "question_audio": "q_weight_002.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "ነዳጅ ለማቆጠብ",
-            "image": "answer_save_fuel.png",
-            "is_correct": false
-          },
-          {
-            "id": "B",
-            "text_amharic": "ድልድይ ወይም መንገድ ሊሰበር ስለሚችል",
-            "image": "answer_bridge_weak.png",
-            "is_correct": true
-          },
-          {
-            "id": "C",
-            "text_amharic": "ትራፊክ ለመቆጣጠር",
-            "image": "answer_traffic_control.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! ድልድይ ወይም መንገድ ሊሰበር ስለሚችል ክብደት ይገደባል።",
-        "explanation_wrong_amharic": "ስህተት። ድልድይ ወይም መንገድ ሊሰበር ስለሚችል ክብደት ይገደባል።",
-        "explanation_correct_audio": "q_weight_002_correct.mp3",
-        "explanation_wrong_audio": "q_weight_002_wrong.mp3"
-      },
-      {
-        "id": "Q_WEIGHT_003",
-        "question_amharic": "ክብደት ገደብ ምልክት ምን ቅርጽ አለው?",
-        "question_audio": "q_weight_003.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "ቀይ ድንበር ያለው ክብ ቁጥር ጋር",
-            "image": "answer_weight_shape.png",
-            "is_correct": true
-          },
-          {
-            "id": "B",
-            "text_amharic": "ሰማያዊ ሶስት ጎን",
-            "image": "answer_blue_triangle.png",
-            "is_correct": false
-          },
-          {
-            "id": "C",
-            "text_amharic": "ቢጫ ክብ",
-            "image": "answer_yellow_circle.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! ክብደት ገደብ ምልክት ቀይ ድንበር ያለው ክብ ውስጥ ቁጥር ያለው ነው።",
-        "explanation_wrong_amharic": "ስህተት። ክብደት ገደብ ምልክት ቀይ ድንበር ያለው ክብ ምልክት ነው።",
-        "explanation_correct_audio": "q_weight_003_correct.mp3",
-        "explanation_wrong_audio": "q_weight_003_wrong.mp3"
-      }
-    ]
-  },
-  {
     "id": "SIGN_PARKING",
     "topic_id": "information",
     "order": 1,
@@ -10911,6 +9396,3323 @@
         "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ከፊትህ ባለው መንገድ ላይ ጥልቅ ውሃ ወይም የጎርፍ መጥለቅለቅ ሊኖር እንደሚችል ያስጠነቅቃል። ይህ ምልክት በተለይ ስለ ጥልቅ ውሃ አደጋ ያስጠነቅቃል።",
         "explanation_correct_audio": "q_153_003_correct.mp3",
         "explanation_wrong_audio": "q_153_003_wrong.mp3"
+      }
+    ]
+  },
+  {
+    "id": "SIGN_201",
+    "topic_id": "regulatory",
+    "order": 1,
+    "image_filename": "201.png",
+    "video_filename": "sign_201_amharic.mp4",
+    "name_hebrew": "חובה ישר או ימינה",
+    "name_amharic": "በዚህ መስመር ላይ ቀጥታ ወደፊት ወይም ወደ ቀኝ ብቻ መሄድ እንደሚቻል ያመለክታል።",
+    "explanation_amharic": "ይህ ምልክት አሽከርካሪዎች በዚህ መስመር ላይ ቀጥታ ወደፊት ወይም ወደ ቀኝ ብቻ መሄድ እንዳለባቸው ያሳያል። አሽከርካሪው ይህንን ምልክት ሲያይ ወደ ግራ መታጠፍ ወይም ወደ ኋላ መመለስ እንደማይችል ተረድቶ ከተፈቀዱት አቅጣጫዎች አንዱን መምረጥ አለበት።",
+    "audio_name_filename": "sign_201_name.mp3",
+    "audio_explanation_filename": "sign_201_explanation.mp3",
+    "questions": [
+      {
+        "id": "Q_SIGN_201_001",
+        "question_amharic": "ይህን የትራፊክ ምልክት ስታይ ምን ማድረግ ይገባል?",
+        "question_audio": "q_201_001.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "በዚህ መስመር ላይ ቀጥታ ወደፊት መሄድ ወይም ወደ ቀኝ መታጠፍ።",
+            "is_correct": true
+          },
+          {
+            "id": "B",
+            "text_amharic": "ወደ ግራ መታጠፍ ወይም ወደ ኋላ መመለስ።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "መኪናውን አቁሞ ሌላ መንገድ መፈለግ።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "ፍጥነትን ጨምሮ በፍጥነት ማለፍ።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት አሽከርካሪው ቀጥታ ወይም ወደ ቀኝ ብቻ መሄድ እንዳለበት የሚገልጽ ትእዛዝ ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በዚህ መስመር ላይ ቀጥታ ወደፊት መሄድ ወይም ወደ ቀኝ መታጠፍ። ወደ ግራ መታጠፍ ወይም ወደ ኋላ መመለስ በዚህ ምልክት የተከለከለ ነው።",
+        "explanation_correct_audio": "q_201_001_correct.mp3",
+        "explanation_wrong_audio": "q_201_001_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_201_002",
+        "question_amharic": "ይህ ምልክት በየትኛው የምልክት ምድብ ውስጥ ይመደባል?",
+        "question_audio": "q_201_002.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "የማስጠንቀቂያ ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "የትእዛዝ ምልክቶች።",
+            "is_correct": true
+          },
+          {
+            "id": "C",
+            "text_amharic": "የቅድሚያ መብት ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "የመረጃ ምልክቶች።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት አሽከርካሪዎች የተወሰነ እርምጃ እንዲወስዱ ወይም የተወሰነ አቅጣጫ እንዲከተሉ የሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የትእዛዝ ምልክቶች። ይህ ምልክት አሽከርካሪዎች የተወሰነ እርምጃ እንዲወስዱ ወይም የተወሰነ አቅጣጫ እንዲከተሉ የሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_correct_audio": "q_201_002_correct.mp3",
+        "explanation_wrong_audio": "q_201_002_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_201_003",
+        "question_amharic": "ይህ የትራፊክ ምልክት አሽከርካሪው ምን እንዲያደርግ ያዛል?",
+        "question_audio": "q_201_003.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ወደ ግራ ብቻ እንዲታጠፍ።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "በማንኛውም አቅጣጫ እንዲሄድ።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "ቀጥታ ወደፊት እንዲሄድ ወይም ወደ ቀኝ እንዲታጠፍ።",
+            "is_correct": true
+          },
+          {
+            "id": "D",
+            "text_amharic": "መኪናውን እንዲያቆም እና እንዲጠብቅ።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ምልክቱ ቀጥታ እና ወደ ቀኝ የሚያመለክቱ ቀስቶችን ያሳያል፣ ይህም እነዚህ ብቻ የተፈቀዱ አቅጣጫዎች መሆናቸውን ያመለክታል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ቀጥታ ወደፊት እንዲሄድ ወይም ወደ ቀኝ እንዲታጠፍ። ምልክቱ የሚፈቅደው እነዚህን ሁለት አቅጣጫዎች ብቻ ነው።",
+        "explanation_correct_audio": "q_201_003_correct.mp3",
+        "explanation_wrong_audio": "q_201_003_wrong.mp3"
+      }
+    ]
+  },
+  {
+    "id": "SIGN_202",
+    "topic_id": "regulatory",
+    "order": 2,
+    "image_filename": "202.png",
+    "video_filename": "sign_202_amharic.mp4",
+    "name_hebrew": "חובה ישר או שמאלה",
+    "name_amharic": "በዚህ መስመር ላይ ቀጥታ ወደፊት ወይም ወደ ግራ ብቻ መሄድ እንደሚቻል ያመለክታል።",
+    "explanation_amharic": "ይህ ምልክት አሽከርካሪዎች በዚህ መስመር ላይ ቀጥታ ወደፊት ወይም ወደ ግራ ብቻ መሄድ እንዳለባቸው ያሳያል። አሽከርካሪው ይህንን ምልክት ሲያይ ወደ ቀኝ መታጠፍ ወይም ወደ ኋላ መመለስ እንደማይችል ተረድቶ ከተፈቀዱት አቅጣጫዎች አንዱን መምረጥ አለበት።",
+    "audio_name_filename": "sign_202_name.mp3",
+    "audio_explanation_filename": "sign_202_explanation.mp3",
+    "questions": [
+      {
+        "id": "Q_SIGN_202_001",
+        "question_amharic": "ይህን የትራፊክ ምልክት ስታይ ምን ማድረግ ይገባል?",
+        "question_audio": "q_202_001.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ወደ ቀኝ መታጠፍ ወይም ወደ ኋላ መመለስ።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "በዚህ መስመር ላይ ቀጥታ ወደፊት መሄድ ወይም ወደ ግራ መታጠፍ።",
+            "is_correct": true
+          },
+          {
+            "id": "C",
+            "text_amharic": "መኪናውን አቁሞ ሌላ መንገድ መፈለግ።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "ፍጥነትን ጨምሮ በፍጥነት ማለፍ።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት አሽከርካሪው ቀጥታ ወይም ወደ ግራ ብቻ መሄድ እንዳለበት የሚገልጽ ትእዛዝ ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በዚህ መስመር ላይ ቀጥታ ወደፊት መሄድ ወይም ወደ ግራ መታጠፍ። ወደ ቀኝ መታጠፍ ወይም ወደ ኋላ መመለስ በዚህ ምልክት የተከለከለ ነው።",
+        "explanation_correct_audio": "q_202_001_correct.mp3",
+        "explanation_wrong_audio": "q_202_001_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_202_002",
+        "question_amharic": "ይህ ምልክት በየትኛው የምልክት ምድብ ውስጥ ይመደባል?",
+        "question_audio": "q_202_002.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "የማስጠንቀቂያ ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "የቅድሚያ መብት ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "የትእዛዝ ምልክቶች።",
+            "is_correct": true
+          },
+          {
+            "id": "D",
+            "text_amharic": "የመረጃ ምልክቶች።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት አሽከርካሪዎች የተወሰነ እርምጃ እንዲወስዱ ወይም የተወሰነ አቅጣጫ እንዲከተሉ የሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የትእዛዝ ምልክቶች። ይህ ምልክት አሽከርካሪዎች የተወሰነ እርምጃ እንዲወስዱ ወይም የተወሰነ አቅጣጫ እንዲከተሉ የሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_correct_audio": "q_202_002_correct.mp3",
+        "explanation_wrong_audio": "q_202_002_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_202_003",
+        "question_amharic": "ይህ የትራፊክ ምልክት አሽከርካሪው ምን እንዲያደርግ ያዛል?",
+        "question_audio": "q_202_003.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ወደ ቀኝ ብቻ እንዲታጠፍ።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "በማንኛውም አቅጣጫ እንዲሄድ።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "መኪናውን እንዲያቆም እና እንዲጠብቅ።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "ቀጥታ ወደፊት እንዲሄድ ወይም ወደ ግራ እንዲታጠፍ።",
+            "is_correct": true
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ምልክቱ ቀጥታ እና ወደ ግራ የሚያመለክቱ ቀስቶችን ያሳያል፣ ይህም እነዚህ ብቻ የተፈቀዱ አቅጣጫዎች መሆናቸውን ያመለክታል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ቀጥታ ወደፊት እንዲሄድ ወይም ወደ ግራ እንዲታጠፍ። ምልክቱ የሚፈቅደው እነዚህን ሁለት አቅጣጫዎች ብቻ ነው።",
+        "explanation_correct_audio": "q_202_003_correct.mp3",
+        "explanation_wrong_audio": "q_202_003_wrong.mp3"
+      }
+    ]
+  },
+  {
+    "id": "SIGN_203",
+    "topic_id": "regulatory",
+    "order": 3,
+    "image_filename": "203.png",
+    "video_filename": "sign_203_amharic.mp4",
+    "name_hebrew": "חובה ישר",
+    "name_amharic": "በዚህ መስመር ላይ ቀጥታ ወደፊት ብቻ መሄድ እንደሚቻል ያመለክታል።",
+    "explanation_amharic": "ይህ ምልክት አሽከርካሪዎች በዚህ መስመር ላይ ቀጥታ ወደፊት ብቻ መሄድ እንዳለባቸው ያሳያል። አሽከርካሪው ይህንን ምልክት ሲያይ ወደ ሌላ አቅጣጫ መታጠፍ እንደማይችል ተረድቶ ቀጥታ ወደፊት መጓዝ አለበት።",
+    "audio_name_filename": "sign_203_name.mp3",
+    "audio_explanation_filename": "sign_203_explanation.mp3",
+    "questions": [
+      {
+        "id": "Q_SIGN_203_001",
+        "question_amharic": "ይህን የትራፊክ ምልክት ስታይ ምን ማድረግ ይገባል?",
+        "question_audio": "q_203_001.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ወደ ቀኝ ወይም ወደ ግራ መታጠፍ።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "መኪናውን አቁሞ ሌላ መንገድ መፈለግ።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "በዚህ መስመር ላይ ቀጥታ ወደፊት ብቻ መሄድ።",
+            "is_correct": true
+          },
+          {
+            "id": "D",
+            "text_amharic": "ፍጥነትን ጨምሮ በፍጥነት ማለፍ።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት አሽከርካሪው ቀጥታ ወደፊት ብቻ መሄድ እንዳለበት የሚገልጽ ትእዛዝ ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በዚህ መስመር ላይ ቀጥታ ወደፊት ብቻ መሄድ። ወደ ሌላ አቅጣጫ መታጠፍ በዚህ ምልክት የተከለከለ ነው።",
+        "explanation_correct_audio": "q_203_001_correct.mp3",
+        "explanation_wrong_audio": "q_203_001_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_203_002",
+        "question_amharic": "ይህ ምልክት በየትኛው የምልክት ምድብ ውስጥ ይመደባል?",
+        "question_audio": "q_203_002.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "የማስጠንቀቂያ ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "የቅድሚያ መብት ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "የመረጃ ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "የትእዛዝ ምልክቶች።",
+            "is_correct": true
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት አሽከርካሪዎች የተወሰነ እርምጃ እንዲወስዱ ወይም የተወሰነ አቅጣጫ እንዲከተሉ የሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የትእዛዝ ምልክቶች። ይህ ምልክት አሽከርካሪዎች የተወሰነ እርምጃ እንዲወስዱ ወይም የተወሰነ አቅጣጫ እንዲከተሉ የሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_correct_audio": "q_203_002_correct.mp3",
+        "explanation_wrong_audio": "q_203_002_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_203_003",
+        "question_amharic": "ይህ የትራፊክ ምልክት አሽከርካሪው ምን እንዲያደርግ ያዛል?",
+        "question_audio": "q_203_003.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ቀጥታ ወደፊት ብቻ እንዲሄድ።",
+            "is_correct": true
+          },
+          {
+            "id": "B",
+            "text_amharic": "ወደ ቀኝ ወይም ወደ ግራ እንዲታጠፍ።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "በማንኛውም አቅጣጫ እንዲሄድ።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "መኪናውን እንዲያቆም እና እንዲጠብቅ።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ምልክቱ ቀጥታ ወደፊት የሚያመለክት ቀስት ብቻ ያሳያል፣ ይህም ይህ ብቻ የተፈቀደ አቅጣጫ መሆኑን ያመለክታል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ቀጥታ ወደፊት ብቻ እንዲሄድ። ምልክቱ የሚፈቅደው ቀጥታ ወደፊት መሄድን ብቻ ነው።",
+        "explanation_correct_audio": "q_203_003_correct.mp3",
+        "explanation_wrong_audio": "q_203_003_wrong.mp3"
+      }
+    ]
+  },
+  {
+    "id": "SIGN_204",
+    "topic_id": "regulatory",
+    "order": 4,
+    "image_filename": "204.png",
+    "video_filename": "sign_204_amharic.mp4",
+    "name_hebrew": "חובה ימינה",
+    "name_amharic": "በዚህ መስመር ላይ ወደ ቀኝ መታጠፍ ግዴታ መሆኑን ያመለክታል።",
+    "explanation_amharic": "ይህ ምልክት አሽከርካሪዎች በዚህ መስመር ላይ ወደ ቀኝ ብቻ መታጠፍ እንዳለባቸው ያሳያል። አሽከርካሪው ይህንን ምልክት ሲያይ ወደ ቀኝ መታጠፍ እንዳለበት ተረድቶ ሌላ አቅጣጫ መሄድ እንደማይችል ማወቅ አለበት።",
+    "audio_name_filename": "sign_204_name.mp3",
+    "audio_explanation_filename": "sign_204_explanation.mp3",
+    "questions": [
+      {
+        "id": "Q_SIGN_204_001",
+        "question_amharic": "ይህን የትራፊክ ምልክት ስታይ ምን ማድረግ ይገባል?",
+        "question_audio": "q_204_001.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ቀጥታ ወደፊት መሄድ ወይም ወደ ግራ መታጠፍ።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "መኪናውን አቁሞ ሌላ መንገድ መፈለግ።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "ፍጥነትን ጨምሮ በፍጥነት ማለፍ።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "በዚህ መስመር ላይ ወደ ቀኝ መታጠፍ።",
+            "is_correct": true
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት ወደ ቀኝ መታጠፍ ግዴታ መሆኑን ያመለክታል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በዚህ መስመር ላይ ወደ ቀኝ መታጠፍ። ይህ ምልክት ወደ ቀኝ መታጠፍ ግዴታ መሆኑን ያሳያል።",
+        "explanation_correct_audio": "q_204_001_correct.mp3",
+        "explanation_wrong_audio": "q_204_001_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_204_002",
+        "question_amharic": "ይህ ምልክት በየትኛው የምልክት ምድብ ውስጥ ይመደባል?",
+        "question_audio": "q_204_002.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "የትእዛዝ ምልክቶች።",
+            "is_correct": true
+          },
+          {
+            "id": "B",
+            "text_amharic": "የማስጠንቀቂያ ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "የቅድሚያ መብት ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "የመረጃ ምልክቶች።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት አሽከርካሪዎች የተወሰነ እርምጃ እንዲወስዱ ወይም የተወሰነ አቅጣጫ እንዲከተሉ የሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የትእዛዝ ምልክቶች። ይህ ምልክት አሽከርካሪዎች የተወሰነ እርምጃ እንዲወስዱ ወይም የተወሰነ አቅጣጫ እንዲከተሉ የሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_correct_audio": "q_204_002_correct.mp3",
+        "explanation_wrong_audio": "q_204_002_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_204_003",
+        "question_amharic": "ይህ የትራፊክ ምልክት አሽከርካሪው ምን እንዲያደርግ ያዛል?",
+        "question_audio": "q_204_003.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "በማንኛውም አቅጣጫ እንዲሄድ።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "ወደ ቀኝ ብቻ እንዲታጠፍ።",
+            "is_correct": true
+          },
+          {
+            "id": "C",
+            "text_amharic": "ቀጥታ ወደፊት ብቻ እንዲሄድ።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "መኪናውን እንዲያቆም እና እንዲጠብቅ።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ምልክቱ ወደ ቀኝ የሚያመለክት ቀስት ብቻ ያሳያል፣ ይህም ይህ ብቻ የተፈቀደ አቅጣጫ መሆኑን ያመለክታል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ወደ ቀኝ ብቻ እንዲታጠፍ። ምልክቱ የሚፈቅደው ወደ ቀኝ መታጠፍን ብቻ ነው።",
+        "explanation_correct_audio": "q_204_003_correct.mp3",
+        "explanation_wrong_audio": "q_204_003_wrong.mp3"
+      }
+    ]
+  },
+  {
+    "id": "SIGN_205",
+    "topic_id": "regulatory",
+    "order": 5,
+    "image_filename": "205.png",
+    "video_filename": "sign_205_amharic.mp4",
+    "name_hebrew": "חובה שמאלה",
+    "name_amharic": "በዚህ መስመር ላይ ወደ ግራ መታጠፍ ግዴታ መሆኑን ያመለክታል።",
+    "explanation_amharic": "ይህ ምልክት አሽከርካሪዎች በዚህ መስመር ላይ ወደ ግራ ብቻ መታጠፍ እንዳለባቸው ያሳያል። አሽከርካሪው ይህንን ምልክት ሲያይ ወደ ግራ መታጠፍ እንዳለበት ተረድቶ ሌላ አቅጣጫ መሄድ እንደማይችል ማወቅ አለበት።",
+    "audio_name_filename": "sign_205_name.mp3",
+    "audio_explanation_filename": "sign_205_explanation.mp3",
+    "questions": [
+      {
+        "id": "Q_SIGN_205_001",
+        "question_amharic": "ይህን የትራፊክ ምልክት ስታይ ምን ማድረግ ይገባል?",
+        "question_audio": "q_205_001.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "በዚህ መስመር ላይ ወደ ግራ መታጠፍ።",
+            "is_correct": true
+          },
+          {
+            "id": "B",
+            "text_amharic": "ቀጥታ ወደፊት መሄድ ወይም ወደ ቀኝ መታጠፍ።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "መኪናውን አቁሞ ሌላ መንገድ መፈለግ።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "ፍጥነትን ጨምሮ በፍጥነት ማለፍ።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት ወደ ግራ መታጠፍ ግዴታ መሆኑን ያመለክታል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በዚህ መስመር ላይ ወደ ግራ መታጠፍ። ይህ ምልክት ወደ ግራ መታጠፍ ግዴታ መሆኑን ያሳያል።",
+        "explanation_correct_audio": "q_205_001_correct.mp3",
+        "explanation_wrong_audio": "q_205_001_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_205_002",
+        "question_amharic": "ይህ ምልክት በየትኛው የምልክት ምድብ ውስጥ ይመደባል?",
+        "question_audio": "q_205_002.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "የማስጠንቀቂያ ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "የትእዛዝ ምልክቶች።",
+            "is_correct": true
+          },
+          {
+            "id": "C",
+            "text_amharic": "የቅድሚያ መብት ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "የመረጃ ምልክቶች።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት አሽከርካሪዎች የተወሰነ እርምጃ እንዲወስዱ ወይም የተወሰነ አቅጣጫ እንዲከተሉ የሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የትእዛዝ ምልክቶች። ይህ ምልክት አሽከርካሪዎች የተወሰነ እርምጃ እንዲወስዱ ወይም የተወሰነ አቅጣጫ እንዲከተሉ የሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_correct_audio": "q_205_002_correct.mp3",
+        "explanation_wrong_audio": "q_205_002_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_205_003",
+        "question_amharic": "ይህ የትራፊክ ምልክት አሽከርካሪው ምን እንዲያደርግ ያዛል?",
+        "question_audio": "q_205_003.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "በማንኛውም አቅጣጫ እንዲሄድ።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "ቀጥታ ወደፊት ብቻ እንዲሄድ።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "ወደ ግራ ብቻ እንዲታጠፍ።",
+            "is_correct": true
+          },
+          {
+            "id": "D",
+            "text_amharic": "መኪናውን እንዲያቆም እና እንዲጠብቅ።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ምልክቱ ወደ ግራ የሚያመለክት ቀስት ብቻ ያሳያል፣ ይህም ይህ ብቻ የተፈቀደ አቅጣጫ መሆኑን ያመለክታል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ወደ ግራ ብቻ እንዲታጠፍ። ምልክቱ የሚፈቅደው ወደ ግራ መታጠፍን ብቻ ነው።",
+        "explanation_correct_audio": "q_205_003_correct.mp3",
+        "explanation_wrong_audio": "q_205_003_wrong.mp3"
+      }
+    ]
+  },
+  {
+    "id": "SIGN_206",
+    "topic_id": "regulatory",
+    "order": 6,
+    "image_filename": "206.png",
+    "video_filename": "sign_206_amharic.mp4",
+    "name_hebrew": "חובה לפנות ימינה",
+    "name_amharic": "በዚህ መስመር ላይ ወደ ቀኝ መታጠፍ ግዴታ መሆኑን ያመለክታል።",
+    "explanation_amharic": "ይህ ምልክት አሽከርካሪዎች በዚህ መስመር ላይ ወደ ቀኝ ብቻ መታጠፍ እንዳለባቸው ያሳያል። አሽከርካሪው ይህንን ምልክት ሲያይ ወደ ቀኝ መታጠፍ እንዳለበት ተረድቶ ሌላ አቅጣጫ መሄድ እንደማይችል ማወቅ አለበት።",
+    "audio_name_filename": "sign_206_name.mp3",
+    "audio_explanation_filename": "sign_206_explanation.mp3",
+    "questions": [
+      {
+        "id": "Q_SIGN_206_001",
+        "question_amharic": "ይህን የትራፊክ ምልክት ስታይ ምን ማድረግ ይገባል?",
+        "question_audio": "q_206_001.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ቀጥታ ወደፊት መሄድ ወይም ወደ ግራ መታጠፍ።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "በዚህ መስመር ላይ ወደ ቀኝ መታጠፍ።",
+            "is_correct": true
+          },
+          {
+            "id": "C",
+            "text_amharic": "መኪናውን አቁሞ ሌላ መንገድ መፈለግ።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "ፍጥነትን ጨምሮ በፍጥነት ማለፍ።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት ወደ ቀኝ መታጠፍ ግዴታ መሆኑን ያመለክታል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በዚህ መስመር ላይ ወደ ቀኝ መታጠፍ። ይህ ምልክት ወደ ቀኝ መታጠፍ ግዴታ መሆኑን ያሳያል።",
+        "explanation_correct_audio": "q_206_001_correct.mp3",
+        "explanation_wrong_audio": "q_206_001_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_206_002",
+        "question_amharic": "ይህ ምልክት በየትኛው የምልክት ምድብ ውስጥ ይመደባል?",
+        "question_audio": "q_206_002.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "የማስጠንቀቂያ ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "የቅድሚያ መብት ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "የትእዛዝ ምልክቶች።",
+            "is_correct": true
+          },
+          {
+            "id": "D",
+            "text_amharic": "የመረጃ ምልክቶች።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት አሽከርካሪዎች የተወሰነ እርምጃ እንዲወስዱ ወይም የተወሰነ አቅጣጫ እንዲከተሉ የሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የትእዛዝ ምልክቶች። ይህ ምልክት አሽከርካሪዎች የተወሰነ እርምጃ እንዲወስዱ ወይም የተወሰነ አቅጣጫ እንዲከተሉ የሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_correct_audio": "q_206_002_correct.mp3",
+        "explanation_wrong_audio": "q_206_002_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_206_003",
+        "question_amharic": "ይህ የትራፊክ ምልክት አሽከርካሪው ምን እንዲያደርግ ያዛል?",
+        "question_audio": "q_206_003.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "በማንኛውም አቅጣጫ እንዲሄድ።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "ቀጥታ ወደፊት ብቻ እንዲሄድ።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "መኪናውን እንዲያቆም እና እንዲጠብቅ።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "ወደ ቀኝ ብቻ እንዲታጠፍ።",
+            "is_correct": true
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ምልክቱ ወደ ቀኝ የሚያመለክት ቀስት ብቻ ያሳያል፣ ይህም ይህ ብቻ የተፈቀደ አቅጣጫ መሆኑን ያመለክታል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ወደ ቀኝ ብቻ እንዲታጠፍ። ምልክቱ የሚፈቅደው ወደ ቀኝ መታጠፍን ብቻ ነው።",
+        "explanation_correct_audio": "q_206_003_correct.mp3",
+        "explanation_wrong_audio": "q_206_003_wrong.mp3"
+      }
+    ]
+  },
+  {
+    "id": "SIGN_207",
+    "topic_id": "regulatory",
+    "order": 7,
+    "image_filename": "207.png",
+    "video_filename": "sign_207_amharic.mp4",
+    "name_hebrew": "חובה לפנות שמאלה",
+    "name_amharic": "በዚህ መስመር ላይ ወደ ግራ መታጠፍ ግዴታ መሆኑን ያመለክታል።",
+    "explanation_amharic": "ይህ ምልክት አሽከርካሪዎች በዚህ መስመር ላይ ወደ ግራ ብቻ መታጠፍ እንዳለባቸው ያሳያል። አሽከርካሪው ይህንን ምልክት ሲያይ ወደ ግራ መታጠፍ እንዳለበት ተረድቶ ሌላ አቅጣጫ መሄድ እንደማይችል ማወቅ አለበት።",
+    "audio_name_filename": "sign_207_name.mp3",
+    "audio_explanation_filename": "sign_207_explanation.mp3",
+    "questions": [
+      {
+        "id": "Q_SIGN_207_001",
+        "question_amharic": "ይህን የትራፊክ ምልክት ስታይ ምን ማድረግ ይገባል?",
+        "question_audio": "q_207_001.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ቀጥታ ወደፊት መሄድ ወይም ወደ ቀኝ መታጠፍ።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "መኪናውን አቁሞ ሌላ መንገድ መፈለግ።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "በዚህ መስመር ላይ ወደ ግራ መታጠፍ።",
+            "is_correct": true
+          },
+          {
+            "id": "D",
+            "text_amharic": "ፍጥነትን ጨምሮ በፍጥነት ማለፍ።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት ወደ ግራ መታጠፍ ግዴታ መሆኑን ያመለክታል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በዚህ መስመር ላይ ወደ ግራ መታጠፍ። ይህ ምልክት ወደ ግራ መታጠፍ ግዴታ መሆኑን ያሳያል።",
+        "explanation_correct_audio": "q_207_001_correct.mp3",
+        "explanation_wrong_audio": "q_207_001_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_207_002",
+        "question_amharic": "ይህ ምልክት በየትኛው የምልክት ምድብ ውስጥ ይመደባል?",
+        "question_audio": "q_207_002.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "የማስጠንቀቂያ ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "የቅድሚያ መብት ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "የመረጃ ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "የትእዛዝ ምልክቶች።",
+            "is_correct": true
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት አሽከርካሪዎች የተወሰነ እርምጃ እንዲወስዱ ወይም የተወሰነ አቅጣጫ እንዲከተሉ የሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የትእዛዝ ምልክቶች። ይህ ምልክት አሽከርካሪዎች የተወሰነ እርምጃ እንዲወስዱ ወይም የተወሰነ አቅጣጫ እንዲከተሉ የሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_correct_audio": "q_207_002_correct.mp3",
+        "explanation_wrong_audio": "q_207_002_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_207_003",
+        "question_amharic": "ይህ የትራፊክ ምልክት አሽከርካሪው ምን እንዲያደርግ ያዛል?",
+        "question_audio": "q_207_003.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ወደ ግራ ብቻ እንዲታጠፍ።",
+            "is_correct": true
+          },
+          {
+            "id": "B",
+            "text_amharic": "በማንኛውም አቅጣጫ እንዲሄድ።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "ቀጥታ ወደፊት ብቻ እንዲሄድ።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "መኪናውን እንዲያቆም እና እንዲጠብቅ።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ምልክቱ ወደ ግራ የሚያመለክት ቀስት ብቻ ያሳያል፣ ይህም ይህ ብቻ የተፈቀደ አቅጣጫ መሆኑን ያመለክታል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ወደ ግራ ብቻ እንዲታጠፍ። ምልክቱ የሚፈቅደው ወደ ግራ መታጠፍን ብቻ ነው።",
+        "explanation_correct_audio": "q_207_003_correct.mp3",
+        "explanation_wrong_audio": "q_207_003_wrong.mp3"
+      }
+    ]
+  },
+  {
+    "id": "SIGN_208",
+    "topic_id": "regulatory",
+    "order": 8,
+    "image_filename": "208.png",
+    "video_filename": "sign_208_amharic.mp4",
+    "name_hebrew": "חובה ימינה ושמאלה",
+    "name_amharic": "በዚህ መስቀለኛ መንገድ ላይ ወደ ቀኝ ወይም ወደ ግራ መታጠፍ ግዴታ መሆኑን ያመለክታል።",
+    "explanation_amharic": "ይህ ምልክት አሽከርካሪዎች ቀጥታ ወደፊት መሄድ እንደማይችሉ እና ወደ ቀኝ ወይም ወደ ግራ መታጠፍ እንዳለባቸው ያሳያል። አሽከርካሪው ይህንን ምልክት ሲያይ የተፈቀደለት አቅጣጫ ወደ ቀኝ ወይም ወደ ግራ ብቻ መሆኑን ተረድቶ መንዳት አለበት።",
+    "audio_name_filename": "sign_208_name.mp3",
+    "audio_explanation_filename": "sign_208_explanation.mp3",
+    "questions": [
+      {
+        "id": "Q_SIGN_208_001",
+        "question_amharic": "ይህን የትራፊክ ምልክት ስታይ ምን ማድረግ ይገባል?",
+        "question_audio": "q_208_001.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ቀጥታ ወደፊት መሄድ።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "መኪናውን አቁሞ ሌላ መንገድ መፈለግ።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "ፍጥነትን ጨምሮ በፍጥነት ማለፍ።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "ቀጥታ ወደፊት ከመሄድ ይልቅ ወደ ቀኝ ወይም ወደ ግራ መታጠፍ።",
+            "is_correct": true
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት አሽከርካሪዎች ወደ ቀኝ ወይም ወደ ግራ እንዲታጠፉ ያዛል፣ ቀጥታ መሄድ አይፈቀድም።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ቀጥታ ወደፊት ከመሄድ ይልቅ ወደ ቀኝ ወይም ወደ ግራ መታጠፍ። ይህ ምልክት ቀጥታ መሄድ እንደማይቻል እና ወደ ቀኝ ወይም ወደ ግራ መታጠፍ ግዴታ መሆኑን ያመለክታል።",
+        "explanation_correct_audio": "q_208_001_correct.mp3",
+        "explanation_wrong_audio": "q_208_001_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_208_002",
+        "question_amharic": "ይህ ምልክት በየትኛው የምልክት ምድብ ውስጥ ይመደባል?",
+        "question_audio": "q_208_002.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "የትእዛዝ ምልክቶች።",
+            "is_correct": true
+          },
+          {
+            "id": "B",
+            "text_amharic": "የማስጠንቀቂያ ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "የቅድሚያ መብት ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "የመረጃ ምልክቶች።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት አሽከርካሪዎች የተወሰነ እርምጃ እንዲወስዱ ወይም የተወሰነ አቅጣጫ እንዲከተሉ የሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የትእዛዝ ምልክቶች። ይህ ምልክት አሽከርካሪዎች የተወሰነ እርምጃ እንዲወስዱ ወይም የተወሰነ አቅጣጫ እንዲከተሉ የሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_correct_audio": "q_208_002_correct.mp3",
+        "explanation_wrong_audio": "q_208_002_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_208_003",
+        "question_amharic": "ይህ የትራፊክ ምልክት አሽከርካሪው ምን እንዲያደርግ ያዛል?",
+        "question_audio": "q_208_003.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ቀጥታ ወደፊት ብቻ እንዲሄድ።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "ወደ ቀኝ ወይም ወደ ግራ ብቻ እንዲታጠፍ።",
+            "is_correct": true
+          },
+          {
+            "id": "C",
+            "text_amharic": "በማንኛውም አቅጣጫ እንዲሄድ።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "መኪናውን እንዲያቆም እና እንዲጠብቅ።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ምልክቱ ወደ ቀኝ እና ወደ ግራ የሚያመለክቱ ቀስቶችን ያሳያል፣ ይህም እነዚህ ብቻ የተፈቀዱ አቅጣጫዎች መሆናቸውን ያመለክታል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ወደ ቀኝ ወይም ወደ ግራ ብቻ እንዲታጠፍ። ምልክቱ የሚፈቅደው ወደ ቀኝ ወይም ወደ ግራ መታጠፍን ብቻ ነው።",
+        "explanation_correct_audio": "q_208_003_correct.mp3",
+        "explanation_wrong_audio": "q_208_003_wrong.mp3"
+      }
+    ]
+  },
+  {
+    "id": "SIGN_209",
+    "topic_id": "regulatory",
+    "order": 9,
+    "image_filename": "209.png",
+    "video_filename": "sign_209_amharic.mp4",
+    "name_hebrew": "חובה ישר או פניית פרסה ימינה",
+    "name_amharic": "በዚህ መስቀለኛ መንገድ ላይ ቀጥታ ወደፊት መሄድ ወይም ወደ ቀኝ የዩ-ተርን መታጠፍ ግዴታ መሆኑን ያመለክታል።",
+    "explanation_amharic": "ይህ ምልክት አሽከርካሪዎች ቀጥታ ወደፊት እንዲሄዱ ወይም ወደ ቀኝ የዩ-ተርን እንዲታጠፉ ብቻ እንደተፈቀደላቸው ያሳያል። አሽከርካሪው ይህንን ምልክት ሲያይ ከሁለቱ አቅጣጫዎች አንዱን መምረጥ እንዳለበት ተረድቶ መንዳት አለበት።",
+    "audio_name_filename": "sign_209_name.mp3",
+    "audio_explanation_filename": "sign_209_explanation.mp3",
+    "questions": [
+      {
+        "id": "Q_SIGN_209_001",
+        "question_amharic": "ይህን የትራፊክ ምልክት ስታይ ምን ማድረግ ይገባል?",
+        "question_audio": "q_209_001.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ቀጥታ ወደፊት መሄድ ወይም ወደ ቀኝ የዩ-ተርን መታጠፍ።",
+            "is_correct": true
+          },
+          {
+            "id": "B",
+            "text_amharic": "ወደ ግራ መታጠፍ።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "መኪናውን አቁሞ ሌላ መንገድ መፈለግ።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "በማንኛውም አቅጣጫ መሄድ።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት ቀጥታ ወደፊት መሄድ ወይም ወደ ቀኝ የዩ-ተርን መታጠፍ ብቻ እንደተፈቀደ ያመለክታል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ቀጥታ ወደፊት መሄድ ወይም ወደ ቀኝ የዩ-ተርን መታጠፍ። ይህ ምልክት የሚፈቅደው እነዚህን ሁለት አቅጣጫዎች ብቻ ነው።",
+        "explanation_correct_audio": "q_209_001_correct.mp3",
+        "explanation_wrong_audio": "q_209_001_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_209_002",
+        "question_amharic": "ይህ ምልክት በየትኛው የምልክት ምድብ ውስጥ ይመደባል?",
+        "question_audio": "q_209_002.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "የማስጠንቀቂያ ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "የትእዛዝ ምልክቶች።",
+            "is_correct": true
+          },
+          {
+            "id": "C",
+            "text_amharic": "የቅድሚያ መብት ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "የመረጃ ምልክቶች።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት አሽከርካሪዎች የተወሰነ እርምጃ እንዲወስዱ ወይም የተወሰነ አቅጣጫ እንዲከተሉ የሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የትእዛዝ ምልክቶች። ይህ ምልክት አሽከርካሪዎች የተወሰነ እርምጃ እንዲወስዱ ወይም የተወሰነ አቅጣጫ እንዲከተሉ የሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_correct_audio": "q_209_002_correct.mp3",
+        "explanation_wrong_audio": "q_209_002_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_209_003",
+        "question_amharic": "ይህ የትራፊክ ምልክት አሽከርካሪው ምን እንዲያደርግ ያዛል?",
+        "question_audio": "q_209_003.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ወደ ግራ የዩ-ተርን እንዲታጠፍ።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "በማንኛውም አቅጣጫ እንዲሄድ።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "ቀጥታ ወደፊት እንዲሄድ ወይም ወደ ቀኝ የዩ-ተርን እንዲታጠፍ።",
+            "is_correct": true
+          },
+          {
+            "id": "D",
+            "text_amharic": "መኪናውን እንዲያቆም እና እንዲጠብቅ።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ምልክቱ ቀጥታ ወደፊት እና ወደ ቀኝ የዩ-ተርን የሚያመለክቱ ቀስቶችን ያሳያል፣ ይህም እነዚህ ብቻ የተፈቀዱ አቅጣጫዎች መሆናቸውን ያመለክታል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ቀጥታ ወደፊት እንዲሄድ ወይም ወደ ቀኝ የዩ-ተርን እንዲታጠፍ። ምልክቱ የሚፈቅደው ቀጥታ ወደፊት መሄድን ወይም ወደ ቀኝ የዩ-ተርን መታጠፍን ብቻ ነው።",
+        "explanation_correct_audio": "q_209_003_correct.mp3",
+        "explanation_wrong_audio": "q_209_003_wrong.mp3"
+      }
+    ]
+  },
+  {
+    "id": "SIGN_210",
+    "topic_id": "regulatory",
+    "order": 10,
+    "image_filename": "210.png",
+    "video_filename": "sign_210_amharic.mp4",
+    "name_hebrew": "חובה ישר או פניית פרסה שמאלה",
+    "name_amharic": "በዚህ መስቀለኛ መንገድ ላይ ቀጥታ ወደፊት መሄድ ወይም ወደ ግራ የዩ-ተርን መታጠፍ ግዴታ መሆኑን ያመለክታል።",
+    "explanation_amharic": "ይህ ምልክት አሽከርካሪዎች ቀጥታ ወደፊት እንዲሄዱ ወይም ወደ ግራ የዩ-ተርን እንዲታጠፉ ብቻ እንደተፈቀደላቸው ያሳያል። አሽከርካሪው ይህንን ምልክት ሲያይ ከሁለቱ አቅጣጫዎች አንዱን መምረጥ እንዳለበት ተረድቶ መንዳት አለበት።",
+    "audio_name_filename": "sign_210_name.mp3",
+    "audio_explanation_filename": "sign_210_explanation.mp3",
+    "questions": [
+      {
+        "id": "Q_SIGN_210_001",
+        "question_amharic": "ይህን የትራፊክ ምልክት ስታይ ምን ማድረግ ይገባል?",
+        "question_audio": "q_210_001.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ወደ ቀኝ መታጠፍ።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "ቀጥታ ወደፊት መሄድ ወይም ወደ ግራ የዩ-ተርን መታጠፍ።",
+            "is_correct": true
+          },
+          {
+            "id": "C",
+            "text_amharic": "መኪናውን አቁሞ ሌላ መንገድ መፈለግ።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "በማንኛውም አቅጣጫ መሄድ።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት ቀጥታ ወደፊት መሄድ ወይም ወደ ግራ የዩ-ተርን መታጠፍ ብቻ እንደተፈቀደ ያመለክታል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ቀጥታ ወደፊት መሄድ ወይም ወደ ግራ የዩ-ተርን መታጠፍ። ይህ ምልክት የሚፈቅደው እነዚህን ሁለት አቅጣጫዎች ብቻ ነው።",
+        "explanation_correct_audio": "q_210_001_correct.mp3",
+        "explanation_wrong_audio": "q_210_001_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_210_002",
+        "question_amharic": "ይህ ምልክት በየትኛው የምልክት ምድብ ውስጥ ይመደባል?",
+        "question_audio": "q_210_002.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "የማስጠንቀቂያ ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "የቅድሚያ መብት ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "የትእዛዝ ምልክቶች።",
+            "is_correct": true
+          },
+          {
+            "id": "D",
+            "text_amharic": "የመረጃ ምልክቶች።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት አሽከርካሪዎች የተወሰነ እርምጃ እንዲወስዱ ወይም የተወሰነ አቅጣጫ እንዲከተሉ የሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የትእዛዝ ምልክቶች። ይህ ምልክት አሽከርካሪዎች የተወሰነ እርምጃ እንዲወስዱ ወይም የተወሰነ አቅጣጫ እንዲከተሉ የሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_correct_audio": "q_210_002_correct.mp3",
+        "explanation_wrong_audio": "q_210_002_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_210_003",
+        "question_amharic": "ይህ የትራፊክ ምልክት አሽከርካሪው ምን እንዲያደርግ ያዛል?",
+        "question_audio": "q_210_003.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ወደ ቀኝ የዩ-ተርን እንዲታጠፍ።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "በማንኛውም አቅጣጫ እንዲሄድ።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "መኪናውን እንዲያቆም እና እንዲጠብቅ።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "ቀጥታ ወደፊት እንዲሄድ ወይም ወደ ግራ የዩ-ተርን እንዲታጠፍ።",
+            "is_correct": true
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ምልክቱ ቀጥታ ወደፊት እና ወደ ግራ የዩ-ተርን የሚያመለክቱ ቀስቶችን ያሳያል፣ ይህም እነዚህ ብቻ የተፈቀዱ አቅጣጫዎች መሆናቸውን ያመለክታል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ቀጥታ ወደፊት እንዲሄድ ወይም ወደ ግራ የዩ-ተርን እንዲታጠፍ። ምልክቱ የሚፈቅደው ቀጥታ ወደፊት መሄድን ወይም ወደ ግራ የዩ-ተርን መታጠፍን ብቻ ነው።",
+        "explanation_correct_audio": "q_210_003_correct.mp3",
+        "explanation_wrong_audio": "q_210_003_wrong.mp3"
+      }
+    ]
+  },
+  {
+    "id": "SIGN_211",
+    "topic_id": "regulatory",
+    "order": 11,
+    "image_filename": "211.png",
+    "video_filename": "sign_211_amharic.mp4",
+    "name_hebrew": "חובה פניית פרסה ימינה",
+    "name_amharic": "በዚህ መስቀለኛ መንገድ ላይ ወደ ቀኝ የዩ-ተርን መታጠፍ ግዴታ መሆኑን ያመለክታል።",
+    "explanation_amharic": "ይህ ምልክት አሽከርካሪዎች ወደ ቀኝ የዩ-ተርን እንዲታጠፉ ብቻ እንደተፈቀደላቸው ያሳያል። አሽከርካሪው ይህንን ምልክት ሲያይ ወደ ቀኝ የዩ-ተርን መታጠፍ እንዳለበት ተረድቶ መንዳት አለበት።",
+    "audio_name_filename": "sign_211_name.mp3",
+    "audio_explanation_filename": "sign_211_explanation.mp3",
+    "questions": [
+      {
+        "id": "Q_SIGN_211_001",
+        "question_amharic": "ይህን የትራፊክ ምልክት ስታይ ምን ማድረግ ይገባል?",
+        "question_audio": "q_211_001.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ቀጥታ ወደፊት መሄድ።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "ወደ ግራ መታጠፍ።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "ወደ ቀኝ የዩ-ተርን መታጠፍ።",
+            "is_correct": true
+          },
+          {
+            "id": "D",
+            "text_amharic": "መኪናውን አቁሞ ሌላ መንገድ መፈለግ።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት ወደ ቀኝ የዩ-ተርን መታጠፍ ግዴታ መሆኑን ያመለክታል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ወደ ቀኝ የዩ-ተርን መታጠፍ። ይህ ምልክት የሚፈቅደው ወደ ቀኝ የዩ-ተርን መታጠፍን ብቻ ነው።",
+        "explanation_correct_audio": "q_211_001_correct.mp3",
+        "explanation_wrong_audio": "q_211_001_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_211_002",
+        "question_amharic": "ይህ ምልክት በየትኛው የምልክት ምድብ ውስጥ ይመደባል?",
+        "question_audio": "q_211_002.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "የማስጠንቀቂያ ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "የቅድሚያ መብት ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "የመረጃ ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "የትእዛዝ ምልክቶች።",
+            "is_correct": true
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት አሽከርካሪዎች የተወሰነ እርምጃ እንዲወስዱ ወይም የተወሰነ አቅጣጫ እንዲከተሉ የሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የትእዛዝ ምልክቶች። ይህ ምልክት አሽከርካሪዎች የተወሰነ እርምጃ እንዲወስዱ ወይም የተወሰነ አቅጣጫ እንዲከተሉ የሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_correct_audio": "q_211_002_correct.mp3",
+        "explanation_wrong_audio": "q_211_002_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_211_003",
+        "question_amharic": "ይህ የትራፊክ ምልክት አሽከርካሪው ምን እንዲያደርግ ያዛል?",
+        "question_audio": "q_211_003.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ወደ ቀኝ የዩ-ተርን እንዲታጠፍ።",
+            "is_correct": true
+          },
+          {
+            "id": "B",
+            "text_amharic": "ቀጥታ ወደፊት እንዲሄድ።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "ወደ ግራ እንዲታጠፍ።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "በማንኛውም አቅጣጫ እንዲሄድ።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ምልክቱ ወደ ቀኝ የዩ-ተርን የሚያመለክት ቀስት ያሳያል፣ ይህም ይህ ብቻ የተፈቀደው አቅጣጫ መሆኑን ያመለክታል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ወደ ቀኝ የዩ-ተርን እንዲታጠፍ። ምልክቱ የሚፈቅደው ወደ ቀኝ የዩ-ተርን መታጠፍን ብቻ ነው።",
+        "explanation_correct_audio": "q_211_003_correct.mp3",
+        "explanation_wrong_audio": "q_211_003_wrong.mp3"
+      }
+    ]
+  },
+  {
+    "id": "SIGN_212",
+    "topic_id": "regulatory",
+    "order": 12,
+    "image_filename": "212.png",
+    "video_filename": "sign_212_amharic.mp4",
+    "name_hebrew": "חובה פניית פרסה שמאלה",
+    "name_amharic": "በዚህ መስቀለኛ መንገድ ላይ ወደ ግራ የዩ-ተርን መታጠፍ ግዴታ መሆኑን ያመለክታል።",
+    "explanation_amharic": "ይህ ምልክት አሽከርካሪዎች ወደ ግራ የዩ-ተርን እንዲታጠፉ ብቻ እንደተፈቀደላቸው ያሳያል። አሽከርካሪው ይህንን ምልክት ሲያይ ወደ ግራ የዩ-ተርን መታጠፍ እንዳለበት ተረድቶ መንዳት አለበት።",
+    "audio_name_filename": "sign_212_name.mp3",
+    "audio_explanation_filename": "sign_212_explanation.mp3",
+    "questions": [
+      {
+        "id": "Q_SIGN_212_001",
+        "question_amharic": "ይህን የትራፊክ ምልክት ስታይ ምን ማድረግ ይገባል?",
+        "question_audio": "q_212_001.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ቀጥታ ወደፊት መሄድ።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "ወደ ቀኝ መታጠፍ።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "መኪናውን አቁሞ ሌላ መንገድ መፈለግ።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "ወደ ግራ የዩ-ተርን መታጠፍ።",
+            "is_correct": true
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት ወደ ግራ የዩ-ተርን መታጠፍ ግዴታ መሆኑን ያመለክታል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ወደ ግራ የዩ-ተርን መታጠፍ። ይህ ምልክት የሚፈቅደው ወደ ግራ የዩ-ተርን መታጠፍን ብቻ ነው።",
+        "explanation_correct_audio": "q_212_001_correct.mp3",
+        "explanation_wrong_audio": "q_212_001_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_212_002",
+        "question_amharic": "ይህ ምልክት በየትኛው የምልክት ምድብ ውስጥ ይመደባል?",
+        "question_audio": "q_212_002.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "የትእዛዝ ምልክቶች።",
+            "is_correct": true
+          },
+          {
+            "id": "B",
+            "text_amharic": "የማስጠንቀቂያ ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "የቅድሚያ መብት ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "የመረጃ ምልክቶች።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት አሽከርካሪዎች የተወሰነ እርምጃ እንዲወስዱ ወይም የተወሰነ አቅጣጫ እንዲከተሉ የሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የትእዛዝ ምልክቶች። ይህ ምልክት አሽከርካሪዎች የተወሰነ እርምጃ እንዲወስዱ ወይም የተወሰነ አቅጣጫ እንዲከተሉ የሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_correct_audio": "q_212_002_correct.mp3",
+        "explanation_wrong_audio": "q_212_002_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_212_003",
+        "question_amharic": "ይህ የትራፊክ ምልክት አሽከርካሪው ምን እንዲያደርግ ያዛል?",
+        "question_audio": "q_212_003.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ቀጥታ ወደፊት እንዲሄድ።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "ወደ ግራ የዩ-ተርን እንዲታጠፍ።",
+            "is_correct": true
+          },
+          {
+            "id": "C",
+            "text_amharic": "ወደ ቀኝ እንዲታጠፍ።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "በማንኛውም አቅጣጫ እንዲሄድ።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ምልክቱ ወደ ግራ የዩ-ተርን የሚያመለክት ቀስት ያሳያል፣ ይህም ይህ ብቻ የተፈቀደው አቅጣጫ መሆኑን ያመለክታል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ወደ ግራ የዩ-ተርን እንዲታጠፍ። ምልክቱ የሚፈቅደው ወደ ግራ የዩ-ተርን መታጠፍን ብቻ ነው።",
+        "explanation_correct_audio": "q_212_003_correct.mp3",
+        "explanation_wrong_audio": "q_212_003_wrong.mp3"
+      }
+    ]
+  },
+  {
+    "id": "SIGN_213",
+    "topic_id": "regulatory",
+    "order": 13,
+    "image_filename": "213.png",
+    "video_filename": "sign_213_amharic.mp4",
+    "name_hebrew": "עבור מימין ומשמאל",
+    "name_amharic": "ከፊትህ ያለውን መሰናክል ከቀኝ ወይም ከግራ በኩል ማለፍ እንደሚቻል ያመለክታል።",
+    "explanation_amharic": "ይህ ምልክት በመንገድ ላይ ያለውን እንቅፋት (ለምሳሌ የትራፊክ ደሴት ወይም ሌላ መሰናክል) ከሁለቱም አቅጣጫዎች ማለትም ከቀኝም ሆነ ከግራ ማለፍ እንደሚቻል ያሳያል። አሽከርካሪው ይህንን ምልክት ሲያይ በመንገዱ ላይ ያለውን መሰናክል በደህና ለማለፍ የትኛውንም አቅጣጫ መምረጥ ይችላል።",
+    "audio_name_filename": "sign_213_name.mp3",
+    "audio_explanation_filename": "sign_213_explanation.mp3",
+    "questions": [
+      {
+        "id": "Q_SIGN_213_001",
+        "question_amharic": "ይህን የትራፊክ ምልክት ስታይ ምን ማድረግ ይገባል?",
+        "question_audio": "q_213_001.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ከፊት ያለውን መሰናክል ከቀኝ ወይም ከግራ በኩል ማለፍ።",
+            "is_correct": true
+          },
+          {
+            "id": "B",
+            "text_amharic": "በመንገዱ ላይ ማቆም እና እርዳታ መጠበቅ።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "ወደ ቀኝ ብቻ መታጠፍ።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "ወደ ግራ ብቻ መታጠፍ።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት ከፊትህ ያለውን መሰናክል ከቀኝም ሆነ ከግራ በኩል ማለፍ እንደምትችል ያሳያል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ከፊት ያለውን መሰናክል ከቀኝ ወይም ከግራ በኩል ማለፍ። ይህ ምልክት አሽከርካሪዎች መሰናክልን ከሁለቱም አቅጣጫ እንዲያልፉ ይፈቅዳል።",
+        "explanation_correct_audio": "q_213_001_correct.mp3",
+        "explanation_wrong_audio": "q_213_001_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_213_002",
+        "question_amharic": "ይህ ምልክት በየትኛው የምልክት ምድብ ውስጥ ይመደባል?",
+        "question_audio": "q_213_002.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "የማስጠንቀቂያ ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "የትእዛዝ ምልክቶች።",
+            "is_correct": true
+          },
+          {
+            "id": "C",
+            "text_amharic": "የቅድሚያ መብት ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "የመረጃ ምልክቶች።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት አሽከርካሪዎች የተወሰነ እርምጃ እንዲወስዱ ወይም የተወሰነ አቅጣጫ እንዲከተሉ የሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የትእዛዝ ምልክቶች። ይህ ምልክት አሽከርካሪዎች የተወሰነ እርምጃ እንዲወስዱ ወይም የተወሰነ አቅጣጫ እንዲከተሉ የሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_correct_audio": "q_213_002_correct.mp3",
+        "explanation_wrong_audio": "q_213_002_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_213_003",
+        "question_amharic": "ይህ የትራፊክ ምልክት አሽከርካሪው ስለ ምን ያሳውቃል?",
+        "question_audio": "q_213_003.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "መንገዱ ዝግ መሆኑን።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "ወደፊት አደገኛ መታጠፊያ መኖሩን።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "በመንገድ ላይ ያለውን መሰናክል ከሁለቱም አቅጣጫዎች ማለፍ እንደሚቻል ያሳውቃል።",
+            "is_correct": true
+          },
+          {
+            "id": "D",
+            "text_amharic": "በዚህ ቦታ ማቆም የተከለከለ መሆኑን።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ምልክቱ ሁለት ቀስቶች ወደ ታች እና ወደ ውጭ የሚያመለክቱ ሲሆን፣ ይህም መሰናክልን ከሁለቱም ጎን ማለፍ እንደሚቻል ያሳያል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በመንገድ ላይ ያለውን መሰናክል ከሁለቱም አቅጣጫዎች ማለፍ እንደሚቻል ያሳውቃል። ምልክቱ የሚያሳየው መሰናክልን ከሁለቱም ጎን ማለፍ እንደሚቻል ነው።",
+        "explanation_correct_audio": "q_213_003_correct.mp3",
+        "explanation_wrong_audio": "q_213_003_wrong.mp3"
+      }
+    ]
+  },
+  {
+    "id": "SIGN_214",
+    "topic_id": "regulatory",
+    "order": 14,
+    "image_filename": "214.png",
+    "video_filename": "sign_214_amharic.mp4",
+    "name_hebrew": "עבור מימין",
+    "name_amharic": "ከፊትህ ያለውን መሰናክል ከቀኝ በኩል ማለፍ እንዳለብህ ያመለክታል።",
+    "explanation_amharic": "ይህ ምልክት በመንገድ ላይ ያለውን እንቅፋት (ለምሳሌ የትራፊክ ደሴት ወይም ሌላ መሰናክል) ከቀኝ በኩል ብቻ ማለፍ እንደሚገባ ያሳያል። አሽከርካሪው ይህንን ምልክት ሲያይ በመንገዱ ላይ ያለውን መሰናክል ከቀኝ በኩል ብቻ በማለፍ መጓዝ አለበት።",
+    "audio_name_filename": "sign_214_name.mp3",
+    "audio_explanation_filename": "sign_214_explanation.mp3",
+    "questions": [
+      {
+        "id": "Q_SIGN_214_001",
+        "question_amharic": "ይህን የትራፊክ ምልክት ስታይ ምን ማድረግ ይገባል?",
+        "question_audio": "q_214_001.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ከፊትህ ያለውን መሰናክል ከግራ በኩል ማለፍ።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "ከፊትህ ያለውን መሰናክል ከቀኝ በኩል ማለፍ።",
+            "is_correct": true
+          },
+          {
+            "id": "C",
+            "text_amharic": "በመንገዱ ላይ ማቆም እና እርዳታ መጠበቅ።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "ወደ ግራ መታጠፍ።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት ከፊትህ ያለውን መሰናክል ከቀኝ በኩል ብቻ ማለፍ እንዳለብህ ያሳያል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ከፊትህ ያለውን መሰናክል ከቀኝ በኩል ማለፍ። ይህ ምልክት መሰናክልን ከቀኝ በኩል ብቻ እንድታልፍ ያዝዛል።",
+        "explanation_correct_audio": "q_214_001_correct.mp3",
+        "explanation_wrong_audio": "q_214_001_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_214_002",
+        "question_amharic": "ይህ ምልክት በየትኛው የምልክት ምድብ ውስጥ ይመደባል?",
+        "question_audio": "q_214_002.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "የማስጠንቀቂያ ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "የቅድሚያ መብት ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "የትእዛዝ ምልክቶች።",
+            "is_correct": true
+          },
+          {
+            "id": "D",
+            "text_amharic": "የመረጃ ምልክቶች።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት አሽከርካሪዎች የተወሰነ እርምጃ እንዲወስዱ ወይም የተወሰነ አቅጣጫ እንዲከተሉ የሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የትእዛዝ ምልክቶች። ይህ ምልክት አሽከርካሪዎች የተወሰነ እርምጃ እንዲወስዱ ወይም የተወሰነ አቅጣጫ እንዲከተሉ የሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_correct_audio": "q_214_002_correct.mp3",
+        "explanation_wrong_audio": "q_214_002_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_214_003",
+        "question_amharic": "ይህ የትራፊክ ምልክት አሽከርካሪው ስለ ምን ያሳውቃል?",
+        "question_audio": "q_214_003.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ወደፊት አደገኛ መታጠፊያ መኖሩን።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "በዚህ ቦታ ማቆም የተከለከለ መሆኑን።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "ወደ ግራ መታጠፍ ግዴታ መሆኑን።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "በመንገድ ላይ ያለውን መሰናክል ከቀኝ በኩል ብቻ ማለፍ እንደሚገባ ያሳውቃል።",
+            "is_correct": true
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ምልክቱ አንድ ቀስት ወደ ታች እና ወደ ቀኝ የሚያመለክት ሲሆን፣ ይህም መሰናክልን ከቀኝ በኩል ብቻ ማለፍ እንደሚገባ ያሳያል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በመንገድ ላይ ያለውን መሰናክል ከቀኝ በኩል ብቻ ማለፍ እንደሚገባ ያሳውቃል። ምልክቱ የሚያሳየው መሰናክልን ከቀኝ በኩል ብቻ ማለፍ እንደሚገባ ነው።",
+        "explanation_correct_audio": "q_214_003_correct.mp3",
+        "explanation_wrong_audio": "q_214_003_wrong.mp3"
+      }
+    ]
+  },
+  {
+    "id": "SIGN_215",
+    "topic_id": "regulatory",
+    "order": 15,
+    "image_filename": "215.png",
+    "video_filename": "sign_215_amharic.mp4",
+    "name_hebrew": "עבור משמאל",
+    "name_amharic": "ከፊትህ ያለውን መሰናክል ከግራ በኩል ማለፍ እንዳለብህ ያመለክታል።",
+    "explanation_amharic": "ይህ ምልክት በመንገድ ላይ ያለውን እንቅፋት (ለምሳሌ የትራፊክ ደሴት ወይም ሌላ መሰናክል) ከግራ በኩል ብቻ ማለፍ እንደሚገባ ያሳያል። አሽከርካሪው ይህንን ምልክት ሲያይ በመንገዱ ላይ ያለውን መሰናክል ከግራ በኩል ብቻ በማለፍ መጓዝ አለበት።",
+    "audio_name_filename": "sign_215_name.mp3",
+    "audio_explanation_filename": "sign_215_explanation.mp3",
+    "questions": [
+      {
+        "id": "Q_SIGN_215_001",
+        "question_amharic": "ይህን የትራፊክ ምልክት ስታይ ምን ማድረግ ይገባል?",
+        "question_audio": "q_215_001.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ከፊትህ ያለውን መሰናክል ከቀኝ በኩል ማለፍ።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "በመንገዱ ላይ ማቆም እና እርዳታ መጠበቅ።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "ከፊትህ ያለውን መሰናክል ከግራ በኩል ማለፍ።",
+            "is_correct": true
+          },
+          {
+            "id": "D",
+            "text_amharic": "ወደ ቀኝ መታጠፍ።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት ከፊትህ ያለውን መሰናክል ከግራ በኩል ብቻ ማለፍ እንዳለብህ ያሳያል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ከፊትህ ያለውን መሰናክል ከግራ በኩል ማለፍ። ይህ ምልክት መሰናክልን ከግራ በኩል ብቻ እንድታልፍ ያዝዛል።",
+        "explanation_correct_audio": "q_215_001_correct.mp3",
+        "explanation_wrong_audio": "q_215_001_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_215_002",
+        "question_amharic": "ይህ ምልክት በየትኛው የምልክት ምድብ ውስጥ ይመደባል?",
+        "question_audio": "q_215_002.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "የማስጠንቀቂያ ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "የቅድሚያ መብት ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "የመረጃ ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "የትእዛዝ ምልክቶች።",
+            "is_correct": true
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት አሽከርካሪዎች የተወሰነ እርምጃ እንዲወስዱ ወይም የተወሰነ አቅጣጫ እንዲከተሉ የሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የትእዛዝ ምልክቶች። ይህ ምልክት አሽከርካሪዎች የተወሰነ እርምጃ እንዲወስዱ ወይም የተወሰነ አቅጣጫ እንዲከተሉ የሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_correct_audio": "q_215_002_correct.mp3",
+        "explanation_wrong_audio": "q_215_002_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_215_003",
+        "question_amharic": "ይህ የትራፊክ ምልክት አሽከርካሪው ስለ ምን ያሳውቃል?",
+        "question_audio": "q_215_003.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "በመንገድ ላይ ያለውን መሰናክል ከግራ በኩል ብቻ ማለፍ እንደሚገባ ያሳውቃል።",
+            "is_correct": true
+          },
+          {
+            "id": "B",
+            "text_amharic": "ወደፊት አደገኛ መታጠፊያ መኖሩን።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "በዚህ ቦታ ማቆም የተከለከለ መሆኑን።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "ወደ ቀኝ መታጠፍ ግዴታ መሆኑን።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ምልክቱ አንድ ቀስት ወደ ታች እና ወደ ግራ የሚያመለክት ሲሆን፣ ይህም መሰናክልን ከግራ በኩል ብቻ ማለፍ እንደሚገባ ያሳያል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በመንገድ ላይ ያለውን መሰናክል ከግራ በኩል ብቻ ማለፍ እንደሚገባ ያሳውቃል። ምልክቱ የሚያሳየው መሰናክልን ከግራ በኩል ብቻ ማለፍ እንደሚገባ ነው።",
+        "explanation_correct_audio": "q_215_003_correct.mp3",
+        "explanation_wrong_audio": "q_215_003_wrong.mp3"
+      }
+    ]
+  },
+  {
+    "id": "SIGN_216",
+    "topic_id": "regulatory",
+    "order": 16,
+    "image_filename": "216.png",
+    "video_filename": "sign_216_amharic.mp4",
+    "name_hebrew": "כניסה לכביש מהיר",
+    "name_amharic": "ወደ አውራ ጎዳና (ፍሪዌይ) መግቢያ መሆኑን ያመለክታል።",
+    "explanation_amharic": "ይህ ምልክት አሽከርካሪው ወደ አውራ ጎዳና (ፍሪዌይ) ወይም የፍጥነት መንገድ እየገባ መሆኑን ያሳያል። አሽከርካሪው ይህንን ምልክት ሲያይ በአውራ ጎዳና ላይ የሚተገበሩትን የትራፊክ ህጎች እና ደንቦች ማክበር አለበት።",
+    "audio_name_filename": "sign_216_name.mp3",
+    "audio_explanation_filename": "sign_216_explanation.mp3",
+    "questions": [
+      {
+        "id": "Q_SIGN_216_001",
+        "question_amharic": "ይህን የትራፊክ ምልክት ስታይ ምን ማድረግ ይገባል?",
+        "question_audio": "q_216_001.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ፍጥነትህን መቀነስ እና ለሌሎች ተሽከርካሪዎች መንገድ መስጠት።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "ወደ ቀኝ ታጥፈህ ወደ ሌላ መንገድ መግባት።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "በመንገዱ ዳር ማቆም እና እረፍት መውሰድ።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "ወደ አውራ ጎዳና እየገባህ ስለሆነ የፍጥነት መንገድ ህጎችን ማክበር።",
+            "is_correct": true
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት ወደ አውራ ጎዳና መግቢያ መሆኑን ያሳያል። ስለዚህ የፍጥነት መንገድ ህጎችን ማክበር አለብህ።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ወደ አውራ ጎዳና እየገባህ ስለሆነ የፍጥነት መንገድ ህጎችን ማክበር። ፍጥነት መቀነስ ወይም ማቆም በአውራ ጎዳና መግቢያ ላይ አደገኛ ነው።",
+        "explanation_correct_audio": "q_216_001_correct.mp3",
+        "explanation_wrong_audio": "q_216_001_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_216_002",
+        "question_amharic": "ይህ ምልክት በየትኛው የምልክት ምድብ ውስጥ ይመደባል?",
+        "question_audio": "q_216_002.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "የትእዛዝ ምልክቶች።",
+            "is_correct": true
+          },
+          {
+            "id": "B",
+            "text_amharic": "የማስጠንቀቂያ ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "የቅድሚያ መብት ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "የመረጃ ምልክቶች።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት አሽከርካሪዎች ወደ አውራ ጎዳና እንዲገቡ የሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የትእዛዝ ምልክቶች። ይህ ምልክት አሽከርካሪዎች የተወሰነ እርምጃ እንዲወስዱ ወይም የተወሰነ አቅጣጫ እንዲከተሉ የሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_correct_audio": "q_216_002_correct.mp3",
+        "explanation_wrong_audio": "q_216_002_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_216_003",
+        "question_amharic": "ይህ የትራፊክ ምልክት አሽከርካሪው ስለ ምን ያሳውቃል?",
+        "question_audio": "q_216_003.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ከዚህ በኋላ የፍጥነት ገደብ እንደሌለ ያሳያል።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "ወደ አውራ ጎዳና (ፍሪዌይ) መግቢያ መሆኑን ያመለክታል።",
+            "is_correct": true
+          },
+          {
+            "id": "C",
+            "text_amharic": "የመኪና ማቆሚያ ቦታ መኖሩን ያሳያል።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "በዚህ መንገድ ላይ ብስክሌቶች ብቻ እንዲያልፉ ይፈቅዳል።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት አሽከርካሪው ወደ አውራ ጎዳና ወይም የፍጥነት መንገድ እየገባ መሆኑን በግልጽ ያሳያል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ወደ አውራ ጎዳና (ፍሪዌይ) መግቢያ መሆኑን ያመለክታል። ምልክቱ የአውራ ጎዳና መግቢያን ያመለክታል እንጂ የፍጥነት ገደብ አለመኖሩን አይደለም።",
+        "explanation_correct_audio": "q_216_003_correct.mp3",
+        "explanation_wrong_audio": "q_216_003_wrong.mp3"
+      }
+    ]
+  },
+  {
+    "id": "SIGN_217",
+    "topic_id": "regulatory",
+    "order": 17,
+    "image_filename": "217.png",
+    "video_filename": "sign_217_amharic.mp4",
+    "name_hebrew": "סיום כביש מהיר",
+    "name_amharic": "የአውራ ጎዳና (ፍሪዌይ) መጨረሻ መሆኑን ያመለክታል።",
+    "explanation_amharic": "ይህ ምልክት አሽከርካሪው ከአውራ ጎዳና (ፍሪዌይ) እየወጣ መሆኑን ወይም የአውራ ጎዳና ህጎች ከዚህ በኋላ እንደማይተገበሩ ያሳያል። አሽከርካሪው ይህንን ምልክት ሲያይ የፍጥነት ገደቦችን እና ሌሎች የመንገድ ህጎችን ለአጠቃላይ መንገዶች ማክበር አለበት።",
+    "audio_name_filename": "sign_217_name.mp3",
+    "audio_explanation_filename": "sign_217_explanation.mp3",
+    "questions": [
+      {
+        "id": "Q_SIGN_217_001",
+        "question_amharic": "ይህን የትራፊክ ምልክት ስታይ ምን ማድረግ ይገባል?",
+        "question_audio": "q_217_001.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "የአውራ ጎዳና ህጎች እንደማይተገበሩ በመረዳት ፍጥነትን ማስተካከል እና ለአጠቃላይ የመንገድ ህጎች መዘጋጀት።",
+            "is_correct": true
+          },
+          {
+            "id": "B",
+            "text_amharic": "ፍጥነትን መጨመር እና በፍጥነት መንዳት መቀጠል።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "ወደ ቀኝ ታጥፎ ወደ ሌላ መንገድ መግባት።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "በመንገዱ ዳር ማቆም እና እረፍት መውሰድ።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት የአውራ ጎዳና መጨረሻ መሆኑን ያሳያል። ስለዚህ ለአጠቃላይ የመንገድ ህጎች እና የፍጥነት ገደቦች መዘጋጀት አለብህ።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የአውራ ጎዳና ህጎች እንደማይተገበሩ በመረዳት ፍጥነትን ማስተካከል እና ለአጠቃላይ የመንገድ ህጎች መዘጋጀት። ፍጥነት መጨመር ወይም ማቆም አደገኛ ሊሆን ይችላል።",
+        "explanation_correct_audio": "q_217_001_correct.mp3",
+        "explanation_wrong_audio": "q_217_001_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_217_002",
+        "question_amharic": "ይህ ምልክት በየትኛው የምልክት ምድብ ውስጥ ይመደባል?",
+        "question_audio": "q_217_002.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "የማስጠንቀቂያ ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "የትእዛዝ ምልክቶች።",
+            "is_correct": true
+          },
+          {
+            "id": "C",
+            "text_amharic": "የቅድሚያ መብት ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "የመረጃ ምልክቶች።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት የአውራ ጎዳና ህጎች መጨረሻ መሆኑን የሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የትእዛዝ ምልክቶች። ይህ ምልክት የተወሰኑ ህጎች መጨረሻ መሆናቸውን የሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_correct_audio": "q_217_002_correct.mp3",
+        "explanation_wrong_audio": "q_217_002_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_217_003",
+        "question_amharic": "ይህ የትራፊክ ምልክት አሽከርካሪው ስለ ምን ያሳውቃል?",
+        "question_audio": "q_217_003.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ወደ አውራ ጎዳና (ፍሪዌይ) መግቢያ መሆኑን ያመለክታል።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "በዚህ መንገድ ላይ የፍጥነት ገደብ እንደሌለ ያሳያል።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "ከዚህ ቦታ በኋላ የአውራ ጎዳና (ፍሪዌይ) ህጎች እንደማይተገበሩ ያሳውቃል።",
+            "is_correct": true
+          },
+          {
+            "id": "D",
+            "text_amharic": "የመኪና ማቆሚያ ቦታ መኖሩን ያሳያል።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት የአውራ ጎዳናው መጨረሻ ላይ እንደደረስክ እና የአውራ ጎዳና ህጎች ከዚህ በኋላ እንደማይተገበሩ በግልጽ ያሳያል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ከዚህ ቦታ በኋላ የአውራ ጎዳና (ፍሪዌይ) ህጎች እንደማይተገበሩ ያሳውቃል። ምልክቱ የአውራ ጎዳና መጨረሻን ያመለክታል እንጂ መግቢያውን አይደለም።",
+        "explanation_correct_audio": "q_217_003_correct.mp3",
+        "explanation_wrong_audio": "q_217_003_wrong.mp3"
+      }
+    ]
+  },
+  {
+    "id": "SIGN_218",
+    "topic_id": "regulatory",
+    "order": 18,
+    "image_filename": "218.png",
+    "video_filename": "sign_218_amharic.mp4",
+    "name_hebrew": "מהירות מינימלית",
+    "name_amharic": "በዚህ መንገድ ላይ ዝቅተኛው የመንዳት ፍጥነት በሰዓት 55 ኪሎ ሜትር መሆን እንዳለበት ያመለክታል።",
+    "explanation_amharic": "ይህ ምልክት አሽከርካሪዎች በዚህ መንገድ ላይ ከ55 ኪሎ ሜትር በሰዓት ባነሰ ፍጥነት መንዳት እንደሌለባቸው ያሳውቃል። አሽከርካሪው የትራፊክ ፍሰትን ሳያስተጓጉል እና አደጋ ሳያስከትል ከ55 ኪሎ ሜትር በሰዓት በላይ በሆነ ፍጥነት መንዳት አለበት።",
+    "audio_name_filename": "sign_218_name.mp3",
+    "audio_explanation_filename": "sign_218_explanation.mp3",
+    "questions": [
+      {
+        "id": "Q_SIGN_218_001",
+        "question_amharic": "ይህን የትራፊክ ምልክት ስታይ ምን ማድረግ ይገባል?",
+        "question_audio": "q_218_001.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "በሰዓት ከ55 ኪሎ ሜትር በላይ በሆነ ፍጥነት በፍጥነት መንዳት።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "በሰዓት ከ55 ኪሎ ሜትር ባነሰ ፍጥነት አለመንዳት እና የትራፊክ ፍሰትን አለማስተጓጎል።",
+            "is_correct": true
+          },
+          {
+            "id": "C",
+            "text_amharic": "በሰዓት 55 ኪሎ ሜትር ፍጥነትን ጠብቆ መንዳት።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "ፍጥነትን መቀነስ እና በጥንቃቄ መንዳት።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት ዝቅተኛውን ፍጥነት ስለሚያሳይ፣ ከ55 ኪሎ ሜትር በሰዓት በታች መንዳት የለብህም።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በሰዓት ከ55 ኪሎ ሜትር ባነሰ ፍጥነት አለመንዳት እና የትራፊክ ፍሰትን አለማስተጓጎል። ፍጥነት መቀነስ ወይም ከ55 በታች መንዳት የትራፊክ ፍሰትን ሊያስተጓጉል ይችላል።",
+        "explanation_correct_audio": "q_218_001_correct.mp3",
+        "explanation_wrong_audio": "q_218_001_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_218_002",
+        "question_amharic": "ይህ ምልክት በየትኛው የምልክት ምድብ ውስጥ ይመደባል?",
+        "question_audio": "q_218_002.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "የማስጠንቀቂያ ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "የቅድሚያ መብት ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "የትእዛዝ ምልክቶች።",
+            "is_correct": true
+          },
+          {
+            "id": "D",
+            "text_amharic": "የመረጃ ምልክቶች።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት አሽከርካሪው የተወሰነ ዝቅተኛ ፍጥነት እንዲያከብር የሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የትእዛዝ ምልክቶች። ይህ ምልክት የተወሰነ ዝቅተኛ ፍጥነትን እንድታከብር የሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_correct_audio": "q_218_002_correct.mp3",
+        "explanation_wrong_audio": "q_218_002_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_218_003",
+        "question_amharic": "ይህ የትራፊክ ምልክት አሽከርካሪው ስለ ምን ያሳውቃል?",
+        "question_audio": "q_218_003.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "በዚህ መንገድ ላይ ከፍተኛው የመንዳት ፍጥነት በሰዓት 55 ኪሎ ሜትር መሆኑን ያሳውቃል።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "በሰዓት 55 ኪሎ ሜትር ፍጥነትን ጠብቆ መንዳት ግዴታ መሆኑን ያሳውቃል።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "በዚህ መንገድ ላይ በሰዓት 55 ኪሎ ሜትር ፍጥነትን ማለፍ እንደሌለበት ያሳውቃል።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "በዚህ መንገድ ላይ መንዳት ያለበት ዝቅተኛው ፍጥነት በሰዓት 55 ኪሎ ሜትር መሆኑን ያሳውቃል።",
+            "is_correct": true
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ምልክቱ በሰዓት 55 ኪሎ ሜትር ዝቅተኛ ፍጥነትን ያመለክታል፣ ይህም ማለት ከዚህ ፍጥነት በታች መንዳት አይፈቀድም።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በዚህ መንገድ ላይ መንዳት ያለበት ዝቅተኛው ፍጥነት በሰዓት 55 ኪሎ ሜትር መሆኑን ያሳውቃል። ምልክቱ ከፍተኛውን ሳይሆን ዝቅተኛውን ፍጥነት ያመለክታል።",
+        "explanation_correct_audio": "q_218_003_correct.mp3",
+        "explanation_wrong_audio": "q_218_003_wrong.mp3"
+      }
+    ]
+  },
+  {
+    "id": "SIGN_219",
+    "topic_id": "regulatory",
+    "order": 19,
+    "image_filename": "219.png",
+    "video_filename": "sign_219_amharic.mp4",
+    "name_hebrew": "כביש לרכב מנועי בלבד",
+    "name_amharic": "ይህ መንገድ ለሞተር ተሽከርካሪዎች ብቻ መሆኑን ያመለክታል።",
+    "explanation_amharic": "ይህ ምልክት ይህ መንገድ ለሞተር ተሽከርካሪዎች ብቻ የተዘጋጀ መሆኑን ያሳውቃል። አሽከርካሪው በዚህ መንገድ ላይ በሞተር የሚንቀሳቀሱ ተሽከርካሪዎችን ብቻ መንዳት አለበት።",
+    "audio_name_filename": "sign_219_name.mp3",
+    "audio_explanation_filename": "sign_219_explanation.mp3",
+    "questions": [
+      {
+        "id": "Q_SIGN_219_001",
+        "question_amharic": "ይህን የትራፊክ ምልክት ስታይ ምን ማድረግ ይገባል?",
+        "question_audio": "q_219_001.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "በእግር መሄድ ወይም ብስክሌት መንዳት።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "የህዝብ ማመላለሻ ተሽከርካሪዎችን ብቻ መጠቀም።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "በዚህ መንገድ ላይ በሞተር የሚንቀሳቀሱ ተሽከርካሪዎችን ብቻ መንዳት።",
+            "is_correct": true
+          },
+          {
+            "id": "D",
+            "text_amharic": "የትኛውም አይነት ተሽከርካሪ በዚህ መንገድ ላይ እንዲነዳ መፍቀድ።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት መንገዱ ለሞተር ተሽከርካሪዎች ብቻ መሆኑን ያመለክታል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በዚህ መንገድ ላይ በሞተር የሚንቀሳቀሱ ተሽከርካሪዎችን ብቻ መንዳት። ሌሎች ተሽከርካሪዎች ወይም እግረኞች በዚህ መንገድ ላይ መግባት የለባቸውም።",
+        "explanation_correct_audio": "q_219_001_correct.mp3",
+        "explanation_wrong_audio": "q_219_001_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_219_002",
+        "question_amharic": "ይህ ምልክት በየትኛው የምልክት ምድብ ውስጥ ይመደባል?",
+        "question_audio": "q_219_002.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "የማስጠንቀቂያ ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "የቅድሚያ መብት ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "የመረጃ ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "የትእዛዝ ምልክቶች።",
+            "is_correct": true
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት አሽከርካሪው የተወሰነ ህግ እንዲያከብር የሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የትእዛዝ ምልክቶች። ይህ ምልክት የተወሰነ ህግ እንድታከብር የሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_correct_audio": "q_219_002_correct.mp3",
+        "explanation_wrong_audio": "q_219_002_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_219_003",
+        "question_amharic": "ይህ የትራፊክ ምልክት ምን ዓይነት ተሽከርካሪዎች በዚህ መንገድ እንዲነዱ ይፈቅዳል?",
+        "question_audio": "q_219_003.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "በሞተር የሚንቀሳቀሱ ተሽከርካሪዎች ብቻ።",
+            "is_correct": true
+          },
+          {
+            "id": "B",
+            "text_amharic": "ብስክሌቶች እና በእግር የሚሄዱ ሰዎች ብቻ።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "ሁሉም አይነት ተሽከርካሪዎች፣ ብስክሌቶችን ጨምሮ።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "የእርሻ ተሽከርካሪዎች ብቻ።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት መንገዱ ለሞተር ተሽከርካሪዎች ብቻ የተፈቀደ መሆኑን በግልጽ ያሳያል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በሞተር የሚንቀሳቀሱ ተሽከርካሪዎች ብቻ። ይህ መንገድ ለሞተር ተሽከርካሪዎች ብቻ የተዘጋጀ ነው።",
+        "explanation_correct_audio": "q_219_003_correct.mp3",
+        "explanation_wrong_audio": "q_219_003_wrong.mp3"
+      }
+    ]
+  },
+  {
+    "id": "SIGN_220",
+    "topic_id": "regulatory",
+    "order": 20,
+    "image_filename": "220.png",
+    "video_filename": "sign_220_amharic.mp4",
+    "name_hebrew": "רחוב מגורים",
+    "name_amharic": "ይህ ምልክት ወደ የመኖሪያ አካባቢ እየገባህ መሆኑን ያመለክታል።",
+    "explanation_amharic": "ይህ ምልክት እግረኞች፣ በተለይም ልጆች፣ በመንገድ ላይ ሊሆኑ ስለሚችሉ ከፍተኛ ጥንቃቄ እንድታደርግ ያስጠነቅቀናል። አሽከርካሪው በዚህ አካባቢ ፍጥነቱን በእጅጉ መቀነስ፣ ለህፃናትና ለእግረኞች ቅድሚያ መስጠት እና በጥንቃቄ መንዳት አለበት።",
+    "audio_name_filename": "sign_220_name.mp3",
+    "audio_explanation_filename": "sign_220_explanation.mp3",
+    "questions": [
+      {
+        "id": "Q_SIGN_220_001",
+        "question_amharic": "ይህን የትራፊክ ምልክት ስታይ ምን ማድረግ ይገባል?",
+        "question_audio": "q_220_001.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ፍጥነት መጨመር እና በፍጥነት ማለፍ።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "በመንገዱ ዳር ማቆም እና እግረኞችን መጠበቅ።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "ምንም አይነት ለውጥ ሳታደርግ መንዳት መቀጠል።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "ፍጥነትን በእጅጉ መቀነስ፣ ለህፃናትና ለእግረኞች ቅድሚያ መስጠት እና በጥንቃቄ መንዳት።",
+            "is_correct": true
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! የመኖሪያ አካባቢ ምልክት ሲያዩ ፍጥነትዎን መቀነስ እና ለህፃናትና ለእግረኞች ቅድሚያ መስጠት አለብዎት።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ፍጥነትን በእጅጉ መቀነስ፣ ለህፃናትና ለእግረኞች ቅድሚያ መስጠት እና በጥንቃቄ መንዳት። በዚህ አካባቢ ፍጥነት መጨመር አደገኛ ነው።",
+        "explanation_correct_audio": "q_220_001_correct.mp3",
+        "explanation_wrong_audio": "q_220_001_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_220_002",
+        "question_amharic": "ይህ ምልክት በየትኛው የምልክት ምድብ ውስጥ ይመደባል?",
+        "question_audio": "q_220_002.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "የትእዛዝ ምልክቶች።",
+            "is_correct": true
+          },
+          {
+            "id": "B",
+            "text_amharic": "የማስጠንቀቂያ ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "የቅድሚያ መብት ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "የመረጃ ምልክቶች።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት አሽከርካሪው የተወሰኑ ህጎችን እንዲያከብር የሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የትእዛዝ ምልክቶች። ይህ ምልክት የተወሰነ ህግ እንድታከብር የሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_correct_audio": "q_220_002_correct.mp3",
+        "explanation_wrong_audio": "q_220_002_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_220_003",
+        "question_amharic": "ይህ ምልክት በመኖሪያ አካባቢ ውስጥ ስለሚጠበቀው የመንገድ ሁኔታ ምን ያመለክታል?",
+        "question_audio": "q_220_003.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ተሽከርካሪዎች በፍጥነት እንዲነዱ እና እግረኞችን ችላ እንዲሉ ያበረታታል።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "እግረኞች እና ልጆች በመንገድ ላይ ሊሆኑ ስለሚችሉ ከፍተኛ ጥንቃቄ ማድረግ እንደሚያስፈልግ ያመለክታል።",
+            "is_correct": true
+          },
+          {
+            "id": "C",
+            "text_amharic": "መንገዱ ለከባድ ተሽከርካሪዎች ብቻ የተፈቀደ መሆኑን ያመለክታል።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "በዚህ አካባቢ የመኪና ማቆሚያ የተከለከለ መሆኑን ያሳያል።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! የመኖሪያ አካባቢዎች ልጆች የሚጫወቱባቸው እና እግረኞች በብዛት የሚገኙባቸው በመሆናቸው ከፍተኛ ጥንቃቄ ያስፈልጋል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: እግረኞች እና ልጆች በመንገድ ላይ ሊሆኑ ስለሚችሉ ከፍተኛ ጥንቃቄ ማድረግ እንደሚያስፈልግ ያመለክታል። ይህ ምልክት የአሽከርካሪዎችን ጥንቃቄ ለመጨመር ነው።",
+        "explanation_correct_audio": "q_220_003_correct.mp3",
+        "explanation_wrong_audio": "q_220_003_wrong.mp3"
+      }
+    ]
+  },
+  {
+    "id": "SIGN_221",
+    "topic_id": "regulatory",
+    "order": 21,
+    "image_filename": "221.png",
+    "video_filename": "sign_221_amharic.mp4",
+    "name_hebrew": "סיום רחוב מגורים",
+    "name_amharic": "ይህ ምልክት የመኖሪያ አካባቢው ህጎች እና ገደቦች ማብቃታቸውን ያመለክታል።",
+    "explanation_amharic": "ይህ ምልክት የመኖሪያ አካባቢው ልዩ ህጎች፣ ለምሳሌ ዝቅተኛ ፍጥነት እና ለእግረኞች ቅድሚያ መስጠት፣ ከዚህ ነጥብ በኋላ እንደማይቀጥሉ ያመለክታል። አሽከርካሪው ከዚህ ምልክት በኋላ የመንገዱን አጠቃላይ ህጎች መከተል እና እንደየመንገዱ ሁኔታ ፍጥነቱን ማስተካከል አለበት።",
+    "audio_name_filename": "sign_221_name.mp3",
+    "audio_explanation_filename": "sign_221_explanation.mp3",
+    "questions": [
+      {
+        "id": "Q_SIGN_221_001",
+        "question_amharic": "ይህን የትራፊክ ምልክት ስታይ ምን ማድረግ ይገባል?",
+        "question_audio": "q_221_001.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "የመኖሪያ አካባቢው ህጎች ማብቃታቸውን ተረድቶ አጠቃላይ የመንገድ ህጎችን መከተል መጀመር።",
+            "is_correct": true
+          },
+          {
+            "id": "B",
+            "text_amharic": "ፍጥነትን በእጅጉ መቀነስ እና ለህፃናት ቅድሚያ መስጠት መቀጠል።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "በፍጥነት መንዳት መጀመር እና ሁሉንም እግረኞች ችላ ማለት።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "መኪናውን አቁሞ የመንገድ ካርታ መፈተሽ።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት የመኖሪያ አካባቢው ልዩ ህጎች እንደማይቀጥሉ ያሳያል። ስለዚህ አጠቃላይ የመንገድ ህጎችን መከተል አለብህ።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የመኖሪያ አካባቢው ህጎች ማብቃታቸውን ተረድቶ አጠቃላይ የመንገድ ህጎችን መከተል መጀመር። የመኖሪያ አካባቢው ህጎች አብቅተዋል ማለት የፈለከውን ያህል መንዳት ትችላለህ ማለት አይደለም።",
+        "explanation_correct_audio": "q_221_001_correct.mp3",
+        "explanation_wrong_audio": "q_221_001_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_221_002",
+        "question_amharic": "ይህ ምልክት በየትኛው የምልክት ምድብ ውስጥ ይመደባል?",
+        "question_audio": "q_221_002.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "የማስጠንቀቂያ ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "የትእዛዝ ምልክቶች።",
+            "is_correct": true
+          },
+          {
+            "id": "C",
+            "text_amharic": "የቅድሚያ መብት ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "የመረጃ ምልክቶች።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት የተወሰኑ ህጎች ማብቃታቸውን የሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የትእዛዝ ምልክቶች። ይህ ምልክት የተወሰነ ህግ እንድታከብር ወይም እንድታቆም የሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_correct_audio": "q_221_002_correct.mp3",
+        "explanation_wrong_audio": "q_221_002_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_221_003",
+        "question_amharic": "ይህ ምልክት የመኖሪያ አካባቢው ህጎች ማብቃታቸውን ሲያመለክት፣ ምን ማለት ነው?",
+        "question_audio": "q_221_003.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "በዚህ አካባቢ መኪና ማቆም የተከለከለ መሆኑን ያመለክታል።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "ወደ ሌላ የመኖሪያ አካባቢ እየገባህ መሆኑን ያሳያል።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "በዚህ አካባቢ የነበሩት ልዩ የፍጥነት ገደቦች እና የእግረኞች ቅድሚያ መስጠት ህጎች እንደማይቀጥሉ ያመለክታል።",
+            "is_correct": true
+          },
+          {
+            "id": "D",
+            "text_amharic": "ልጆች በመንገድ ላይ መጫወት እንደማይችሉ ያመለክታል።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! የመኖሪያ አካባቢው ሲያልቅ፣ በእሱ ውስጥ የነበሩት ልዩ ህጎችም ያበቃሉ። አሽከርካሪው ወደ መደበኛ የመንገድ ህጎች ይመለሳል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በዚህ አካባቢ የነበሩት ልዩ የፍጥነት ገደቦች እና የእግረኞች ቅድሚያ መስጠት ህጎች እንደማይቀጥሉ ያመለክታል። ይህ ምልክት የመኖሪያ አካባቢው ህጎች ማብቃታቸውን የሚያሳይ እንጂ ሌላ ትርጉም የለውም።",
+        "explanation_correct_audio": "q_221_003_correct.mp3",
+        "explanation_wrong_audio": "q_221_003_wrong.mp3"
+      }
+    ]
+  },
+  {
+    "id": "SIGN_222",
+    "topic_id": "regulatory",
+    "order": 22,
+    "image_filename": "222.png",
+    "video_filename": "sign_222_amharic.mp4",
+    "name_hebrew": "אזור מהירות מרבית 30",
+    "name_amharic": "ይህ ምልክት በዚህ አካባቢ መንዳት የሚፈቀደው ከፍተኛው ፍጥነት በሰዓት 30 ኪሎ ሜትር መሆኑን ያመለክታል።",
+    "explanation_amharic": "ይህ ምልክት አሽከርካሪዎች በዚህ አካባቢ ከ30 ኪሎ ሜትር በሰዓት በላይ ማሽከርከር እንደሌለባቸው ያሳውቃል። አሽከርካሪው የራሱንና የሌሎችን ደህንነት ለመጠበቅ ፍጥነቱን ከ30 ኪሎ ሜትር በሰዓት በታች ማድረግ አለበት።",
+    "audio_name_filename": "sign_222_name.mp3",
+    "audio_explanation_filename": "sign_222_explanation.mp3",
+    "questions": [
+      {
+        "id": "Q_SIGN_222_001",
+        "question_amharic": "ይህን የትራፊክ ምልክት ስታይ ምን ማድረግ ይገባል?",
+        "question_audio": "q_222_001.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ፍጥነቱን መጨመር እና በፍጥነት መንዳት።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "ፍጥነቱን በሰዓት ከ30 ኪሎ ሜትር በታች ማድረግ።",
+            "is_correct": true
+          },
+          {
+            "id": "C",
+            "text_amharic": "መኪናውን አቁሞ እረፍት ማድረግ።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "ከፊት ለፊት ያለውን መንገድ በጥንቃቄ መመልከት ብቻ።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት ከፍተኛውን የፍጥነት ገደብ ስለሚያሳይ፣ ከ30 ኪሎ ሜትር በሰዓት በላይ ማሽከርከር የለብህም።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ፍጥነቱን በሰዓት ከ30 ኪሎ ሜትር በታች ማድረግ። ከፍጥነት ገደቡ በላይ ማሽከርከር አደገኛ እና ህገወጥ ነው።",
+        "explanation_correct_audio": "q_222_001_correct.mp3",
+        "explanation_wrong_audio": "q_222_001_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_222_002",
+        "question_amharic": "ይህ ምልክት በየትኛው የምልክት ምድብ ውስጥ ይመደባል?",
+        "question_audio": "q_222_002.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "የማስጠንቀቂያ ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "የቅድሚያ መብት ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "የትእዛዝ ምልክቶች።",
+            "is_correct": true
+          },
+          {
+            "id": "D",
+            "text_amharic": "የመረጃ ምልክቶች።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት አሽከርካሪዎች የተወሰነ ህግ እንዲያከብሩ ስለሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የትእዛዝ ምልክቶች። ይህ ምልክት የተወሰነ ህግ እንድታከብር የሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_correct_audio": "q_222_002_correct.mp3",
+        "explanation_wrong_audio": "q_222_002_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_222_003",
+        "question_amharic": "በዚህ ምልክት ላይ ያለው '30' ቁጥር ምን ያመለክታል?",
+        "question_audio": "q_222_003.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "በዚህ አካባቢ መኪና ማቆም የተከለከለ መሆኑን።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "ከዚህ ምልክት በኋላ ያለው መንገድ 30 ኪሎ ሜትር ርዝመት እንዳለው።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "የትራፊክ ቅጣት 30 ሼቅል መሆኑን።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "በዚህ አካባቢ መንዳት የሚፈቀደው ከፍተኛው ፍጥነት በሰዓት 30 ኪሎ ሜትር መሆኑን።",
+            "is_correct": true
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! በክብ ምልክት ውስጥ ያለ ቁጥር ሁልጊዜም ከፍተኛውን የፍጥነት ገደብ ያመለክታል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በዚህ አካባቢ መንዳት የሚፈቀደው ከፍተኛው ፍጥነት በሰዓት 30 ኪሎ ሜትር መሆኑን። ቁጥሩ የፍጥነት ገደብን እንጂ ርቀትን ወይም ቅጣትን አያመለክትም።",
+        "explanation_correct_audio": "q_222_003_correct.mp3",
+        "explanation_wrong_audio": "q_222_003_wrong.mp3"
+      }
+    ]
+  },
+  {
+    "id": "SIGN_223",
+    "topic_id": "regulatory",
+    "order": 23,
+    "image_filename": "223.png",
+    "video_filename": "sign_223_amharic.mp4",
+    "name_hebrew": "סיום אזור מהירות מרבית 30",
+    "name_amharic": "ይህ ምልክት በሰዓት 30 ኪሎ ሜትር የነበረው የፍጥነት ገደብ ማብቃቱን ያመለክታል።",
+    "explanation_amharic": "ይህ ምልክት ከዚህ ነጥብ ጀምሮ በሰዓት 30 ኪሎ ሜትር የነበረው የፍጥነት ገደብ እንደማይሰራ ያሳውቃል። አሽከርካሪው ከዚህ ምልክት በኋላ ባለው መንገድ ላይ ባለው አጠቃላይ የፍጥነት ገደብ መሰረት ማሽከርከር ይችላል።",
+    "audio_name_filename": "sign_223_name.mp3",
+    "audio_explanation_filename": "sign_223_explanation.mp3",
+    "questions": [
+      {
+        "id": "Q_SIGN_223_001",
+        "question_amharic": "ይህን የትራፊክ ምልክት ስታይ ምን ማድረግ ይገባል?",
+        "question_audio": "q_223_001.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ፍጥነቱን በሰዓት 30 ኪሎ ሜትር ላይ ማቆየት።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "ፍጥነቱን በከፍተኛ ሁኔታ መጨመር።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "በመንገዱ ላይ ባለው አጠቃላይ የፍጥነት ገደብ መሰረት ማሽከርከር።",
+            "is_correct": true
+          },
+          {
+            "id": "D",
+            "text_amharic": "መኪናውን አቁሞ እረፍት ማድረግ።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት የፍጥነት ገደቡ ማብቃቱን ስለሚያሳይ፣ አሁን ባለው የመንገድ አይነት አጠቃላይ የፍጥነት ገደብ መሰረት ማሽከርከር ትችላለህ።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በመንገዱ ላይ ባለው አጠቃላይ የፍጥነት ገደብ መሰረት ማሽከርከር። የፍጥነት ገደቡ ስላበቃ፣ እንደ መንገዱ አይነት በሌላ ፍጥነት ማሽከርከር ይቻላል።",
+        "explanation_correct_audio": "q_223_001_correct.mp3",
+        "explanation_wrong_audio": "q_223_001_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_223_002",
+        "question_amharic": "ይህ ምልክት በየትኛው የምልክት ምድብ ውስጥ ይመደባል?",
+        "question_audio": "q_223_002.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "የማስጠንቀቂያ ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "የቅድሚያ መብት ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "የመረጃ ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "የትእዛዝ ምልክቶች።",
+            "is_correct": true
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት የተወሰነ የፍጥነት ገደብ ማብቃቱን ስለሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የትእዛዝ ምልክቶች። ይህ ምልክት የተወሰነ ህግ እንድታከብር የሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_correct_audio": "q_223_002_correct.mp3",
+        "explanation_wrong_audio": "q_223_002_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_223_003",
+        "question_amharic": "በዚህ ምልክት ላይ ያለው ሰያፍ መስመር እና '30' ቁጥር ምን ያመለክታል?",
+        "question_audio": "q_223_003.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "በሰዓት 30 ኪሎ ሜትር የነበረው የፍጥነት ገደብ ማብቃቱን።",
+            "is_correct": true
+          },
+          {
+            "id": "B",
+            "text_amharic": "ከፊት ለፊት 30 ኪሎ ሜትር ርዝመት ያለው አደገኛ መንገድ መኖሩን።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "በሰዓት 30 ኪሎ ሜትር ፍጥነት ማሽከርከር ግዴታ መሆኑን።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "ከዚህ በኋላ በሰዓት 30 ኪሎ ሜትር ፍጥነት መንዳት የተከለከለ መሆኑን።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ሰያፍ መስመር ያለው የፍጥነት ገደብ ምልክት የዚያ ገደብ ማብቃቱን ያመለክታል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በሰዓት 30 ኪሎ ሜትር የነበረው የፍጥነት ገደብ ማብቃቱን። ሰያፍ መስመሩ የማብቂያ ምልክት ነው።",
+        "explanation_correct_audio": "q_223_003_correct.mp3",
+        "explanation_wrong_audio": "q_223_003_wrong.mp3"
+      }
+    ]
+  },
+  {
+    "id": "SIGN_224",
+    "topic_id": "regulatory",
+    "order": 24,
+    "image_filename": "224.png",
+    "video_filename": "sign_224_amharic.mp4",
+    "name_hebrew": "נתיב לאופניים",
+    "name_amharic": "ይህ ምልክት ለብስክሌቶች ብቻ የተዘጋጀ የመንገድ መስመር መኖሩን ያመለክታል።",
+    "explanation_amharic": "ይህ ምልክት በመንገድ ላይ ለብስክሌቶች ብቻ የተከለለ መስመር መኖሩን ያሳያል። አሽከርካሪው ይህንን መስመር በሞተር ተሽከርካሪዎች መጠቀም እንደሌለበት ማወቅ እና ለብስክሌት ነጂዎች ጥንቃቄ ማድረግ አለበት።",
+    "audio_name_filename": "sign_224_name.mp3",
+    "audio_explanation_filename": "sign_224_explanation.mp3",
+    "questions": [
+      {
+        "id": "Q_SIGN_224_001",
+        "question_amharic": "ይህን የትራፊክ ምልክት ስታይ ምን ማድረግ ይገባል?",
+        "question_audio": "q_224_001.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "በዚህ መስመር ውስጥ በከፍተኛ ፍጥነት ማሽከርከር።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "መኪናውን አቁሞ ብስክሌት ነጂዎችን መጠበቅ።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "ይህ መስመር ለሁሉም ተሽከርካሪዎች ክፍት እንደሆነ አድርጎ መንዳት።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "ለብስክሌቶች የተዘጋጀውን መስመር በሞተር ተሽከርካሪዎች አለመጠቀም እና ለብስክሌት ነጂዎች ጥንቃቄ ማድረግ።",
+            "is_correct": true
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት ለብስክሌቶች የተዘጋጀ መስመር መሆኑን ያሳያል። ስለዚህ በሞተር ተሽከርካሪዎች መጠቀም የለብህም።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ለብስክሌቶች የተዘጋጀውን መስመር በሞተር ተሽከርካሪዎች አለመጠቀም እና ለብስክሌት ነጂዎች ጥንቃቄ ማድረግ። ይህ መስመር ለብስክሌቶች ብቻ የተከለለ ነው።",
+        "explanation_correct_audio": "q_224_001_correct.mp3",
+        "explanation_wrong_audio": "q_224_001_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_224_002",
+        "question_amharic": "ይህ ምልክት በየትኛው የምልክት ምድብ ውስጥ ይመደባል?",
+        "question_audio": "q_224_002.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "የትእዛዝ ምልክቶች።",
+            "is_correct": true
+          },
+          {
+            "id": "B",
+            "text_amharic": "የማስጠንቀቂያ ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "የቅድሚያ መብት ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "የመረጃ ምልክቶች።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት የተወሰነ የመንገድ ክፍል እንዴት ጥቅም ላይ መዋል እንዳለበት ስለሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የትእዛዝ ምልክቶች። ይህ ምልክት የተወሰነ ህግ እንድታከብር የሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_correct_audio": "q_224_002_correct.mp3",
+        "explanation_wrong_audio": "q_224_002_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_224_003",
+        "question_amharic": "ይህ ምልክት በመንገድ ላይ ምን ዓይነት መስመር መኖሩን ያመለክታል?",
+        "question_audio": "q_224_003.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ለእግረኞች ብቻ የተዘጋጀ የእግረኛ መንገድ።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "ለብስክሌቶች ብቻ የተከለለ የመንገድ መስመር።",
+            "is_correct": true
+          },
+          {
+            "id": "C",
+            "text_amharic": "ለአውቶቡሶች ብቻ የተዘጋጀ ልዩ መስመር።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "ለሞተር ሳይክሎች ብቻ የተፈቀደ የመንገድ ክፍል።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! በምልክቱ ላይ ያለው የብስክሌት ምስል ይህ መስመር ለብስክሌት ነጂዎች ብቻ መሆኑን በግልጽ ያሳያል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ለብስክሌቶች ብቻ የተከለለ የመንገድ መስመር። ምልክቱ የብስክሌት ምስል ስላለው ለብስክሌቶች የተዘጋጀ መስመር ነው።",
+        "explanation_correct_audio": "q_224_003_correct.mp3",
+        "explanation_wrong_audio": "q_224_003_wrong.mp3"
+      }
+    ]
+  },
+  {
+    "id": "SIGN_225",
+    "topic_id": "regulatory",
+    "order": 25,
+    "image_filename": "225.png",
+    "video_filename": "sign_225_amharic.mp4",
+    "name_hebrew": "סיום נתיב לאופניים",
+    "name_amharic": "ይህ ምልክት ለብስክሌቶች ብቻ የተዘጋጀው የመንገድ መስመር ማብቃቱን ያመለክታል።",
+    "explanation_amharic": "ይህ ምልክት ለብስክሌቶች የተከለለው መስመር ማብቃቱን እና ብስክሌት ነጂዎች ወደ ተራው የመንገድ ክፍል ሊቀላቀሉ እንደሚችሉ ያሳያል። አሽከርካሪው ብስክሌት ነጂዎች ወደ አጠቃላይ የመንገድ ትራፊክ ሲቀላቀሉ ጥንቃቄ ማድረግ እና ተገቢውን ርቀት መጠበቅ አለበት።",
+    "audio_name_filename": "sign_225_name.mp3",
+    "audio_explanation_filename": "sign_225_explanation.mp3",
+    "questions": [
+      {
+        "id": "Q_SIGN_225_001",
+        "question_amharic": "ይህን የትራፊክ ምልክት ስታይ ምን ማድረግ ይገባል?",
+        "question_audio": "q_225_001.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ለብስክሌት ነጂዎች ትኩረት መስጠት እና ወደ አጠቃላይ የመንገድ ትራፊክ ሲቀላቀሉ ጥንቃቄ ማድረግ።",
+            "is_correct": true
+          },
+          {
+            "id": "B",
+            "text_amharic": "ፍጥነትን መጨመር እና ብስክሌት ነጂዎችን በፍጥነት ማለፍ።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "መኪናውን አቁሞ ብስክሌት ነጂዎች እስኪያልፉ መጠበቅ።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "ይህ ምልክት ምንም አይነት ለውጥ እንደሌለ ያሳያል ብሎ ማሰብ።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! የብስክሌት መስመሩ ሲያልቅ ብስክሌት ነጂዎች ወደ ተራው መንገድ ስለሚገቡ ጥንቃቄ ማድረግ እና ትኩረት መስጠት ያስፈልጋል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ለብስክሌት ነጂዎች ትኩረት መስጠት እና ወደ አጠቃላይ የመንገድ ትራፊክ ሲቀላቀሉ ጥንቃቄ ማድረግ። የብስክሌት መስመሩ ማብቃቱ ብስክሌት ነጂዎች ወደ አጠቃላይ የመንገድ ትራፊክ እንዲቀላቀሉ ስለሚያደርግ ጥንቃቄ ያስፈልጋል።",
+        "explanation_correct_audio": "q_225_001_correct.mp3",
+        "explanation_wrong_audio": "q_225_001_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_225_002",
+        "question_amharic": "ይህ ምልክት በየትኛው የምልክት ምድብ ውስጥ ይመደባል?",
+        "question_audio": "q_225_002.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "የማስጠንቀቂያ ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "የትእዛዝ ምልክቶች።",
+            "is_correct": true
+          },
+          {
+            "id": "C",
+            "text_amharic": "የቅድሚያ መብት ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "የመረጃ ምልክቶች።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት የተወሰነ ህግ ወይም ሁኔታ ማብቃቱን ስለሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የትእዛዝ ምልክቶች። ይህ ምልክት የተወሰነ ህግ ወይም ሁኔታ ማብቃቱን ስለሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_correct_audio": "q_225_002_correct.mp3",
+        "explanation_wrong_audio": "q_225_002_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_225_003",
+        "question_amharic": "በዚህ ምልክት ላይ ያለው ሰያፍ መስመር ምንን ያመለክታል?",
+        "question_audio": "q_225_003.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "በመንገዱ ላይ አዲስ አደጋ መኖሩን።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "የመንገዱን አቅጣጫ መቀየር እንዳለብህ።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "የተወሰነ ህግ ወይም የተከለለ ቦታ ማብቃቱን።",
+            "is_correct": true
+          },
+          {
+            "id": "D",
+            "text_amharic": "ብስክሌት ነጂዎች ወደ ሌላ መንገድ እንዲሄዱ።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! በትራፊክ ምልክቶች ላይ ያለ ሰያፍ መስመር ብዙውን ጊዜ የተወሰነ ህግ ወይም የተከለለ ቦታ ማብቃቱን ያመለክታል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተወሰነ ህግ ወይም የተከለለ ቦታ ማብቃቱን። ሰያፍ መስመር የብስክሌት መስመሩ ማብቃቱን ያሳያል።",
+        "explanation_correct_audio": "q_225_003_correct.mp3",
+        "explanation_wrong_audio": "q_225_003_wrong.mp3"
+      }
+    ]
+  },
+  {
+    "id": "SIGN_226",
+    "topic_id": "regulatory",
+    "order": 26,
+    "image_filename": "226.png",
+    "video_filename": "sign_226_amharic.mp4",
+    "name_hebrew": "שביל להולכי רגל",
+    "name_amharic": "ይህ ምልክት ለእግረኞች ብቻ የተዘጋጀ መንገድ መሆኑን ያመለክታል።",
+    "explanation_amharic": "ይህ ምልክት ይህ መንገድ ለእግረኞች ብቻ የተከለለ መሆኑን እና ተሽከርካሪዎች በዚህ መንገድ መግባት እንደሌለባቸው ያሳያል። አሽከርካሪው ይህንን ምልክት ሲያይ ወደዚህ መንገድ መግባት እንደሌለበት ማወቅ እና ለእግረኞች ቅድሚያ መስጠት አለበት።",
+    "audio_name_filename": "sign_226_name.mp3",
+    "audio_explanation_filename": "sign_226_explanation.mp3",
+    "questions": [
+      {
+        "id": "Q_SIGN_226_001",
+        "question_amharic": "ይህን የትራፊክ ምልክት ስታይ ምን ማድረግ ይገባል?",
+        "question_audio": "q_226_001.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ፍጥነትህን ጨምረህ በፍጥነት ማለፍ።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "ወደዚህ መንገድ መግባት የለብህም ምክንያቱም ለእግረኞች ብቻ የተከለለ ነው።",
+            "is_correct": true
+          },
+          {
+            "id": "C",
+            "text_amharic": "መኪናህን አቁመህ እግረኞች እስኪያልፉ መጠበቅ።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "በዚህ መንገድ ላይ መኪናህን ማቆም ትችላለህ።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት ለእግረኞች ብቻ የተከለለ መንገድ ስለሆነ ተሽከርካሪዎች መግባት የለባቸውም።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ወደዚህ መንገድ መግባት የለብህም ምክንያቱም ለእግረኞች ብቻ የተከለለ ነው። ይህ መንገድ ለእግረኞች ደህንነት የተጠበቀ ነው።",
+        "explanation_correct_audio": "q_226_001_correct.mp3",
+        "explanation_wrong_audio": "q_226_001_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_226_002",
+        "question_amharic": "ይህ ምልክት በየትኛው የምልክት ምድብ ውስጥ ይመደባል?",
+        "question_audio": "q_226_002.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "የማስጠንቀቂያ ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "የቅድሚያ መብት ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "የትእዛዝ ምልክቶች።",
+            "is_correct": true
+          },
+          {
+            "id": "D",
+            "text_amharic": "የመረጃ ምልክቶች።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት የተወሰነ ህግ ወይም የተፈቀደ ተግባር ስለሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የትእዛዝ ምልክቶች። ይህ ምልክት የተወሰነ ህግ ወይም የተፈቀደ ተግባር ስለሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_correct_audio": "q_226_002_correct.mp3",
+        "explanation_wrong_audio": "q_226_002_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_226_003",
+        "question_amharic": "ይህ የትራፊክ ምልክት ምንን ያመለክታል?",
+        "question_audio": "q_226_003.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "በዚህ መንገድ ላይ ብስክሌት መንዳት የተፈቀደ መሆኑን።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "በዚህ መንገድ ላይ ተሽከርካሪዎች በፍጥነት እንዲነዱ።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "እዚህ አካባቢ የህዝብ ማመላለሻ መቆሚያ መኖሩን።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "ይህ መንገድ ለእግረኞች ብቻ የተከለለ መሆኑን።",
+            "is_correct": true
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ምልክቱ ላይ የሚታዩት ሰዎች ይህ መንገድ ለእግረኞች ብቻ የተዘጋጀ መሆኑን ያሳያሉ።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህ መንገድ ለእግረኞች ብቻ የተከለለ መሆኑን። ይህ ምልክት የእግረኛ መንገድ መሆኑን በግልፅ ያሳያል።",
+        "explanation_correct_audio": "q_226_003_correct.mp3",
+        "explanation_wrong_audio": "q_226_003_wrong.mp3"
+      }
+    ]
+  },
+  {
+    "id": "SIGN_227",
+    "topic_id": "regulatory",
+    "order": 27,
+    "image_filename": "227.png",
+    "video_filename": "sign_227_amharic.mp4",
+    "name_hebrew": "שביל לאופניים",
+    "name_amharic": "ይህ ምልክት ለብስክሌት ነጂዎች ብቻ የተዘጋጀ መንገድ መሆኑን ያመለክታል።",
+    "explanation_amharic": "ይህ ምልክት ይህ መንገድ ለብስክሌት ነጂዎች ብቻ የተከለለ መሆኑን እና ሌሎች ተሽከርካሪዎች በዚህ መንገድ መግባት እንደሌለባቸው ያሳያል። አሽከርካሪው ይህንን ምልክት ሲያይ ወደዚህ መንገድ መግባት እንደሌለበት ማወቅ እና ለብስክሌት ነጂዎች ቅድሚያ መስጠት አለበት።",
+    "audio_name_filename": "sign_227_name.mp3",
+    "audio_explanation_filename": "sign_227_explanation.mp3",
+    "questions": [
+      {
+        "id": "Q_SIGN_227_001",
+        "question_amharic": "ይህን የትራፊክ ምልክት ስታይ ምን ማድረግ ይገባል?",
+        "question_audio": "q_227_001.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ፍጥነትህን ጨምረህ በፍጥነት ማለፍ።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "መኪናህን አቁመህ ብስክሌት ነጂዎች እስኪያልፉ መጠበቅ።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "ወደዚህ መንገድ መግባት የለብህም ምክንያቱም ለብስክሌት ነጂዎች ብቻ የተከለለ ነው።",
+            "is_correct": true
+          },
+          {
+            "id": "D",
+            "text_amharic": "በዚህ መንገድ ላይ መኪናህን ማቆም ትችላለህ።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት ለብስክሌት ነጂዎች ብቻ የተከለለ መንገድ ስለሆነ ተሽከርካሪዎች መግባት የለባቸውም።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ወደዚህ መንገድ መግባት የለብህም ምክንያቱም ለብስክሌት ነጂዎች ብቻ የተከለለ ነው። ይህ መንገድ ለብስክሌት ነጂዎች ደህንነት የተጠበቀ ነው።",
+        "explanation_correct_audio": "q_227_001_correct.mp3",
+        "explanation_wrong_audio": "q_227_001_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_227_002",
+        "question_amharic": "ይህ ምልክት በየትኛው የምልክት ምድብ ውስጥ ይመደባል?",
+        "question_audio": "q_227_002.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "የማስጠንቀቂያ ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "የቅድሚያ መብት ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "የመረጃ ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "የትእዛዝ ምልክቶች።",
+            "is_correct": true
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት የተወሰነ ህግ ወይም የተፈቀደ ተግባር ስለሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የትእዛዝ ምልክቶች። ይህ ምልክት የተወሰነ ህግ ወይም የተፈቀደ ተግባር ስለሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_correct_audio": "q_227_002_correct.mp3",
+        "explanation_wrong_audio": "q_227_002_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_227_003",
+        "question_amharic": "ይህ የትራፊክ ምልክት ምንን ያመለክታል?",
+        "question_audio": "q_227_003.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ይህ መንገድ ለብስክሌት ነጂዎች ብቻ የተከለለ መሆኑን።",
+            "is_correct": true
+          },
+          {
+            "id": "B",
+            "text_amharic": "በዚህ መንገድ ላይ እግረኞች ብቻ እንዲሄዱ።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "በዚህ መንገድ ላይ ተሽከርካሪዎች በፍጥነት እንዲነዱ።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "እዚህ አካባቢ የመኪና ማቆሚያ መኖሩን።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ምልክቱ ላይ የሚታየው ብስክሌት ይህ መንገድ ለብስክሌት ነጂዎች ብቻ የተዘጋጀ መሆኑን ያሳያል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህ መንገድ ለብስክሌት ነጂዎች ብቻ የተከለለ መሆኑን። ይህ ምልክት የብስክሌት መንገድ መሆኑን በግልፅ ያሳያል።",
+        "explanation_correct_audio": "q_227_003_correct.mp3",
+        "explanation_wrong_audio": "q_227_003_wrong.mp3"
+      }
+    ]
+  },
+  {
+    "id": "SIGN_228",
+    "topic_id": "regulatory",
+    "order": 28,
+    "image_filename": "228.png",
+    "video_filename": "sign_228_amharic.mp4",
+    "name_hebrew": "שביל משותף להולכי רגל ואופניים",
+    "name_amharic": "ይህ ምልክት ለእግረኞች እና ለብስክሌት ነጂዎች የጋራ መንገድ መሆኑን ያመለክታል።",
+    "explanation_amharic": "ይህ ምልክት እግረኞች እና ብስክሌት ነጂዎች በአንድ መንገድ ላይ በጋራ እንዲጠቀሙ የተፈቀደ መሆኑን ያሳያል። አሽከርካሪው ይህንን ምልክት ሲያይ በመንገዱ ላይ እግረኞች እና ብስክሌት ነጂዎች ሊኖሩ እንደሚችሉ ማወቅ እና ጥንቃቄ ማድረግ አለበት።",
+    "audio_name_filename": "sign_228_name.mp3",
+    "audio_explanation_filename": "sign_228_explanation.mp3",
+    "questions": [
+      {
+        "id": "Q_SIGN_228_001",
+        "question_amharic": "ይህን የትራፊክ ምልክት ስታይ ምን ማድረግ ይገባል?",
+        "question_audio": "q_228_001.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ፍጥነትን ጨምረህ በፍጥነት ማለፍ።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "በመንገዱ ላይ መኪናህን ማቆም እና እግረኞች እስኪያልፉ መጠበቅ።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "ይህ መንገድ ለመኪናዎች ብቻ የተከለለ ነው ብሎ ማሰብ።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "በመንገዱ ላይ እግረኞች እና ብስክሌት ነጂዎች ሊኖሩ ስለሚችሉ በጥንቃቄ መንዳት እና ፍጥነትን መቀነስ።",
+            "is_correct": true
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት የጋራ መንገድ ስለሆነ ሁለቱንም ተጠቃሚዎች መጠበቅ አስፈላጊ ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በመንገዱ ላይ እግረኞች እና ብስክሌት ነጂዎች ሊኖሩ ስለሚችሉ በጥንቃቄ መንዳት እና ፍጥነትን መቀነስ። ፍጥነት መጨመር ወይም አለማሰብ አደጋ ሊያስከትል ይችላል።",
+        "explanation_correct_audio": "q_228_001_correct.mp3",
+        "explanation_wrong_audio": "q_228_001_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_228_002",
+        "question_amharic": "ይህ ምልክት በየትኛው የምልክት ምድብ ውስጥ ይመደባል?",
+        "question_audio": "q_228_002.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "የትእዛዝ ምልክቶች።",
+            "is_correct": true
+          },
+          {
+            "id": "B",
+            "text_amharic": "የማስጠንቀቂያ ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "የቅድሚያ መብት ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "የመረጃ ምልክቶች።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት የተወሰነ ህግ ወይም የተፈቀደ ተግባር ስለሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የትእዛዝ ምልክቶች። ይህ ምልክት የተወሰነ ህግ ወይም የተፈቀደ ተግባር ስለሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_correct_audio": "q_228_002_correct.mp3",
+        "explanation_wrong_audio": "q_228_002_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_228_003",
+        "question_amharic": "ይህ የትራፊክ ምልክት ምንን ያመለክታል?",
+        "question_audio": "q_228_003.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ይህ መንገድ ለመኪናዎች ብቻ የተከለለ መሆኑን።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "ይህ መንገድ ለእግረኞች እና ለብስክሌት ነጂዎች በጋራ እንዲጠቀሙበት የተፈቀደ መሆኑን።",
+            "is_correct": true
+          },
+          {
+            "id": "C",
+            "text_amharic": "በዚህ መንገድ ላይ ብስክሌት መንዳት የተከለከለ መሆኑን።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "እዚህ አካባቢ የእግረኛ መሻገሪያ መኖሩን።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ምልክቱ ላይ የሚታየው ሰው እና ብስክሌት ይህ መንገድ ለሁለቱም የጋራ መሆኑን ያሳያል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህ መንገድ ለእግረኞች እና ለብስክሌት ነጂዎች በጋራ እንዲጠቀሙበት የተፈቀደ መሆኑን። ምልክቱ የጋራ መንገድን ያመለክታል።",
+        "explanation_correct_audio": "q_228_003_correct.mp3",
+        "explanation_wrong_audio": "q_228_003_wrong.mp3"
+      }
+    ]
+  },
+  {
+    "id": "SIGN_229",
+    "topic_id": "regulatory",
+    "order": 29,
+    "image_filename": "229.png",
+    "video_filename": "sign_229_amharic.mp4",
+    "name_hebrew": "שביל נפרד להולכי רגל ואופניים",
+    "name_amharic": "ይህ ምልክት ለእግረኞች እና ለብስክሌት ነጂዎች የተለየ መንገድ መኖሩን ያመለክታል።",
+    "explanation_amharic": "ይህ ምልክት እግረኞች እና ብስክሌት ነጂዎች በተለየ መንገድ ላይ እንዲጠቀሙ የተፈቀደ መሆኑን ያሳያል። አሽከርካሪው ይህንን ምልክት ሲያይ በመንገዱ አጠገብ ለእግረኞች እና ለብስክሌት ነጂዎች የተለየ መንገድ መኖሩን ማወቅ እና ጥንቃቄ ማድረግ አለበት።",
+    "audio_name_filename": "sign_229_name.mp3",
+    "audio_explanation_filename": "sign_229_explanation.mp3",
+    "questions": [
+      {
+        "id": "Q_SIGN_229_001",
+        "question_amharic": "ይህን የትራፊክ ምልክት ስታይ ምን ማድረግ ይገባል?",
+        "question_audio": "q_229_001.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "በመንገዱ አጠገብ ለእግረኞች እና ለብስክሌት ነጂዎች የተለየ መንገድ መኖሩን ማወቅ እና በጥንቃቄ መንዳት።",
+            "is_correct": true
+          },
+          {
+            "id": "B",
+            "text_amharic": "በዋናው መንገድ ላይ እግረኞች ወይም ብስክሌት ነጂዎች ስለሌሉ ፍጥነትን መጨመር።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "መኪናህን አቁመህ እግረኞች እና ብስክሌት ነጂዎች እስኪያልፉ መጠበቅ።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "ይህ መንገድ ለመኪናዎችም ጭምር ነው ብሎ ማሰብ።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት ለእግረኞች እና ለብስክሌት ነጂዎች የተለየ መንገድ መኖሩን ያሳያል። ስለዚህ ጥንቃቄ ማድረግ እና መንገዳቸውን ማክበር አስፈላጊ ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በመንገዱ አጠገብ ለእግረኞች እና ለብስክሌት ነጂዎች የተለየ መንገድ መኖሩን ማወቅ እና በጥንቃቄ መንዳት። ፍጥነት መጨመር ወይም መንገዳቸውን አለማክበር አደጋ ሊያስከትል ይችላል።",
+        "explanation_correct_audio": "q_229_001_correct.mp3",
+        "explanation_wrong_audio": "q_229_001_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_229_002",
+        "question_amharic": "ይህ ምልክት በየትኛው የምልክት ምድብ ውስጥ ይመደባል?",
+        "question_audio": "q_229_002.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "የማስጠንቀቂያ ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "የትእዛዝ ምልክቶች።",
+            "is_correct": true
+          },
+          {
+            "id": "C",
+            "text_amharic": "የቅድሚያ መብት ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "የመረጃ ምልክቶች።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት የተወሰነ ህግ ወይም የተፈቀደ ተግባር ስለሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የትእዛዝ ምልክቶች። ይህ ምልክት የተወሰነ ህግ ወይም የተፈቀደ ተግባር ስለሚያዝ የትእዛዝ ምልክት ነው።",
+        "explanation_correct_audio": "q_229_002_correct.mp3",
+        "explanation_wrong_audio": "q_229_002_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_229_003",
+        "question_amharic": "ይህ የትራፊክ ምልክት ምንን ያመለክታል?",
+        "question_audio": "q_229_003.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ይህ መንገድ ለእግረኞች እና ለብስክሌት ነጂዎች የጋራ መንገድ መሆኑን።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "በዚህ አካባቢ ብስክሌት መንዳት የተከለከለ መሆኑን።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "ይህ መንገድ ለእግረኞች እና ለብስክሌት ነጂዎች የተለየ መንገድ መሆኑን።",
+            "is_correct": true
+          },
+          {
+            "id": "D",
+            "text_amharic": "እግረኞች በዚህ መንገድ ላይ እንዲሄዱ አይፈቀድም።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ምልክቱ ላይ የሚታየው የተከፋፈለ መስመር እግረኞች እና ብስክሌት ነጂዎች የየራሳቸው መንገድ እንዳላቸው ያሳያል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህ መንገድ ለእግረኞች እና ለብስክሌት ነጂዎች የተለየ መንገድ መሆኑን። ምልክቱ የተለየ መንገድን ያመለክታል።",
+        "explanation_correct_audio": "q_229_003_correct.mp3",
+        "explanation_wrong_audio": "q_229_003_wrong.mp3"
+      }
+    ]
+  },
+  {
+    "id": "SIGN_230",
+    "topic_id": "regulatory",
+    "order": 30,
+    "image_filename": "230.png",
+    "video_filename": "sign_230_amharic.mp4",
+    "name_hebrew": "כביש אגרה לתחבורה ציבורית",
+    "name_amharic": "ይህ ምልክት ለሕዝብ ማመላለሻ እና ለአራት ወይም ከዚያ በላይ ተሳፋሪዎች ላሏቸው ተሽከርካሪዎች የሚከፈልበት መንገድ መሆኑን ያመለክታል።",
+    "explanation_amharic": "ይህ ምልክት ይህ መንገድ ለሕዝብ ማመላለሻ (አውቶቡሶች) እና ለአራት ወይም ከዚያ በላይ ተሳፋሪዎች ላሏቸው መኪናዎች ብቻ የተፈቀደ የክፍያ መንገድ መሆኑን ያሳያል። አሽከርካሪው በዚህ መንገድ ላይ ለመንዳት ከላይ የተጠቀሱትን መስፈርቶች ማሟላት እና የክፍያውን ህግ ማክበር አለበት።",
+    "audio_name_filename": "sign_230_name.mp3",
+    "audio_explanation_filename": "sign_230_explanation.mp3",
+    "questions": [
+      {
+        "id": "Q_SIGN_230_001",
+        "question_amharic": "ይህን የትራፊክ ምልክት ስታይ ምን ማድረግ ይገባል?",
+        "question_audio": "q_230_001.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ይህ መንገድ ለሁሉም ተሽከርካሪዎች ክፍት ነው ብሎ ማሰብ እና ያለ ክፍያ መንዳት።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "መስፈርቶቹን ካሟሉ (ለምሳሌ የሕዝብ ማመላለሻ ወይም 4+ ተሳፋሪዎች) እና ክፍያ ለመፈጸም ከተዘጋጁ ብቻ በዚህ መንገድ ላይ መንዳት።",
+            "is_correct": true
+          },
+          {
+            "id": "C",
+            "text_amharic": "በዚህ መንገድ ላይ በፍጥነት መንዳት ምክንያቱም ትራፊክ የለውም።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "በዚህ መንገድ ላይ መንዳት የተከለከለ ነው ብሎ ማሰብ።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት የተወሰኑ ተሽከርካሪዎች ብቻ ክፍያ ከፍለው እንዲጠቀሙበት የተፈቀደ መንገድ መሆኑን ያሳያል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: መስፈርቶቹን ካሟሉ (ለምሳሌ የሕዝብ ማመላለሻ ወይም 4+ ተሳፋሪዎች) እና ክፍያ ለመፈጸም ከተዘጋጁ ብቻ በዚህ መንገድ ላይ መንዳት። ይህ መንገድ ለሁሉም ተሽከርካሪዎች ክፍት አይደለም እና ክፍያ ይጠይቃል።",
+        "explanation_correct_audio": "q_230_001_correct.mp3",
+        "explanation_wrong_audio": "q_230_001_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_230_002",
+        "question_amharic": "ይህ ምልክት በየትኛው የምልክት ምድብ ውስጥ ይመደባል?",
+        "question_audio": "q_230_002.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "የማስጠንቀቂያ ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "የቅድሚያ መብት ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "የትእዛዝ ምልክቶች።",
+            "is_correct": true
+          },
+          {
+            "id": "D",
+            "text_amharic": "የመረጃ ምልክቶች።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት የተወሰኑ ህጎችን እና ገደቦችን ስለሚያስቀምጥ የትእዛዝ ምልክት ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የትእዛዝ ምልክቶች። ይህ ምልክት የተወሰኑ ህጎችን እና ገደቦችን ስለሚያስቀምጥ የትእዛዝ ምልክት ነው።",
+        "explanation_correct_audio": "q_230_002_correct.mp3",
+        "explanation_wrong_audio": "q_230_002_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_230_003",
+        "question_amharic": "ይህ የትራፊክ ምልክት ምንን ያመለክታል?",
+        "question_audio": "q_230_003.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ይህ መንገድ ለግል መኪናዎች ብቻ ክፍት ነው።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "በዚህ መንገድ ላይ ማቆም የተከለከለ ነው።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "ይህ መንገድ ለብስክሌት ነጂዎች ብቻ የተዘጋጀ ነው።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "ይህ መንገድ ለሕዝብ ማመላለሻ እና ለአራት ወይም ከዚያ በላይ ተሳፋሪዎች ላሏቸው መኪናዎች የሚከፈልበት መንገድ መሆኑን።",
+            "is_correct": true
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ምልክቱ የክፍያ ምልክት (₪)፣ አውቶቡስ እና '4+' ተሳፋሪዎች ያሳያል፣ ይህም ለተወሰኑ ተሽከርካሪዎች የሚከፈልበት መንገድ መሆኑን ያመለክታል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህ መንገድ ለሕዝብ ማመላለሻ እና ለአራት ወይም ከዚያ በላይ ተሳፋሪዎች ላሏቸው መኪናዎች የሚከፈልበት መንገድ መሆኑን። ምልክቱ የክፍያ ምልክት እና የተፈቀዱ ተሽከርካሪዎችን ያሳያል።",
+        "explanation_correct_audio": "q_230_003_correct.mp3",
+        "explanation_wrong_audio": "q_230_003_wrong.mp3"
+      }
+    ]
+  },
+  {
+    "id": "SIGN_231",
+    "topic_id": "regulatory",
+    "order": 31,
+    "image_filename": "231.png",
+    "video_filename": "sign_231_amharic.mp4",
+    "name_hebrew": "סיום כביש אגרה לתחבורה ציבורית",
+    "name_amharic": "ይህ ምልክት ለሕዝብ ማመላለሻ እና ለአራት ወይም ከዚያ በላይ ተሳፋሪዎች ላሏቸው ተሽከርካሪዎች የሚከፈልበት መንገድ ማብቃቱን ያመለክታል።",
+    "explanation_amharic": "ይህ ምልክት ለሕዝብ ማመላለሻ (አውቶቡሶች) እና ለአራት ወይም ከዚያ በላይ ተሳፋሪዎች ላሏቸው መኪናዎች ብቻ የተፈቀደው የክፍያ መንገድ ማብቃቱን ያሳያል። አሽከርካሪው ይህንን ምልክት ካየ በኋላ በመንገዱ ላይ ለሚደረጉ ለውጦች ትኩረት መስጠት እና እንደአስፈላጊነቱ ማሽከርከር አለበት።",
+    "audio_name_filename": "sign_231_name.mp3",
+    "audio_explanation_filename": "sign_231_explanation.mp3",
+    "questions": [
+      {
+        "id": "Q_SIGN_231_001",
+        "question_amharic": "ይህን የትራፊክ ምልክት ስታይ ምን ማድረግ ይገባል?",
+        "question_audio": "q_231_001.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "አሁንም በክፍያ መንገድ ላይ እንዳለ በማሰብ ክፍያ መፈጸም መቀጠል።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "ፍጥነትን መጨመር እና ሌሎች የመንገድ ህጎችን ችላ ማለት።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "ለሕዝብ ማመላለሻ እና ለአራት ወይም ከዚያ በላይ ተሳፋሪዎች የተፈቀደው የክፍያ መንገድ ማብቃቱን ተረድቶ እንደአስፈላጊነቱ ማሽከርከር።",
+            "is_correct": true
+          },
+          {
+            "id": "D",
+            "text_amharic": "ወዲያውኑ ወደ ሌላ መንገድ መቀየር።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት የተወሰነው የክፍያ መንገድ ማብቃቱን ያሳያል፣ ስለዚህ አሽከርካሪው የመንገዱን ሁኔታ ተረድቶ ማሽከርከር አለበት።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ለሕዝብ ማመላለሻ እና ለአራት ወይም ከዚያ በላይ ተሳፋሪዎች የተፈቀደው የክፍያ መንገድ ማብቃቱን ተረድቶ እንደአስፈላጊነቱ ማሽከርከር። ምልክቱ የክፍያ መንገዱ ማብቃቱን ስለሚያሳይ ክፍያ መፈጸም መቀጠል አያስፈልግም።",
+        "explanation_correct_audio": "q_231_001_correct.mp3",
+        "explanation_wrong_audio": "q_231_001_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_231_002",
+        "question_amharic": "ይህ ምልክት በየትኛው የምልክት ምድብ ውስጥ ይመደባል?",
+        "question_audio": "q_231_002.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "የማስጠንቀቂያ ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "B",
+            "text_amharic": "የቅድሚያ መብት ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "የመረጃ ምልክቶች።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "የትእዛዝ ምልክቶች።",
+            "is_correct": true
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት የተወሰነ የመንገድ ህግ ወይም ገደብ ማብቃቱን ስለሚያመለክት የትእዛዝ ምልክት ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የትእዛዝ ምልክቶች። ይህ ምልክት የተወሰነ የመንገድ ህግ ወይም ገደብ ማብቃቱን ስለሚያመለክት የትእዛዝ ምልክት ነው።",
+        "explanation_correct_audio": "q_231_002_correct.mp3",
+        "explanation_wrong_audio": "q_231_002_wrong.mp3"
+      },
+      {
+        "id": "Q_SIGN_231_003",
+        "question_amharic": "ይህ የትራፊክ ምልክት ምንን ያመለክታል?",
+        "question_audio": "q_231_003.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ለሕዝብ ማመላለሻ እና ለአራት ወይም ከዚያ በላይ ተሳፋሪዎች የተፈቀደው የክፍያ መንገድ ማብቃቱን።",
+            "is_correct": true
+          },
+          {
+            "id": "B",
+            "text_amharic": "የአውቶቡስ መስመር መጀመሩን።",
+            "is_correct": false
+          },
+          {
+            "id": "C",
+            "text_amharic": "በዚህ መንገድ ላይ መኪና ማቆም የተከለከለ መሆኑን።",
+            "is_correct": false
+          },
+          {
+            "id": "D",
+            "text_amharic": "አዲስ የክፍያ መንገድ መጀመሩን።",
+            "is_correct": false
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! በምልክቱ ላይ ያለው ሰያፍ መስመር የክፍያ መንገዱ ማብቃቱን ያመለክታል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ለሕዝብ ማመላለሻ እና ለአራት ወይም ከዚያ በላይ ተሳፋሪዎች የተፈቀደው የክፍያ መንገድ ማብቃቱን። ሰያፍ መስመሩ የማብቂያ ምልክት ነው።",
+        "explanation_correct_audio": "q_231_003_correct.mp3",
+        "explanation_wrong_audio": "q_231_003_wrong.mp3"
       }
     ]
   }
