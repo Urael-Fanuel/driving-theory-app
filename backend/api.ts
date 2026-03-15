@@ -202,11 +202,16 @@ function normalizeQuestion(q: DBQuestion): DBQuestion {
  * Uses the get_random_questions stored procedure.
  */
 export async function getRandomExamQuestions(count: number = 30): Promise<DBQuestion[]> {
+  // Only return questions with exactly 4 answers (3-answer questions are outdated)
+  const onlyNew = (qs: DBQuestion[]) => qs.filter(q => q.answers.length >= 4);
+
   if (USE_MOCK) {
     // Shuffle all mock questions and take `count`
-    return [...mockData.questions]
-      .sort(() => Math.random() - 0.5)
-      .slice(0, count);
+    return onlyNew(
+      [...mockData.questions]
+        .map(normalizeQuestion)
+        .sort(() => Math.random() - 0.5)
+    ).slice(0, count);
   }
 
   // Try the stored procedure first (fastest, balanced distribution)
@@ -216,7 +221,9 @@ export async function getRandomExamQuestions(count: number = 30): Promise<DBQues
     });
 
     if (error) throw error;
-    return ((data as DBQuestion[]) ?? []).map(normalizeQuestion);
+    const all = onlyNew(((data as DBQuestion[]) ?? []).map(normalizeQuestion));
+    // RPC may return fewer than `count` after filtering — shuffle and top up if needed
+    return all.sort(() => Math.random() - 0.5).slice(0, count);
   } catch (err) {
     console.warn('[api] getRandomExamQuestions RPC failed, trying direct query:', err);
   }
@@ -225,13 +232,16 @@ export async function getRandomExamQuestions(count: number = 30): Promise<DBQues
   try {
     const { data, error } = await supabase.from('questions').select('*');
     if (error) throw error;
-    return ((data as DBQuestion[]) ?? [])
-      .map(normalizeQuestion)
+    return onlyNew(
+      ((data as DBQuestion[]) ?? []).map(normalizeQuestion)
+    )
       .sort(() => Math.random() - 0.5)
       .slice(0, count);
   } catch (err) {
     console.error('[api] getRandomExamQuestions direct query also failed:', err);
-    return [...mockData.questions].sort(() => Math.random() - 0.5).slice(0, count);
+    return onlyNew(
+      [...mockData.questions].map(normalizeQuestion)
+    ).sort(() => Math.random() - 0.5).slice(0, count);
   }
 }
 

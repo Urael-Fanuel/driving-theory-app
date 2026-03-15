@@ -37,6 +37,7 @@ const NUMBER_URLS = [
   `${_AUDIO_BASE}/number_1.mp3`,
   `${_AUDIO_BASE}/number_2.mp3`,
   `${_AUDIO_BASE}/number_3.mp3`,
+  `${_AUDIO_BASE}/number_4.mp3`,
 ];
 
 // ─── Component ────────────────────────────────────────────────────────────────
@@ -46,15 +47,19 @@ export default function EngineAExamScreen() {
   const {
     phase,
     currentQuestion,
+    questions,
+    currentIndex,
     progress,
     submitAnswer,
     nextQuestion,
     result,
     lastAnswerCorrect,
     selectedAnswerId,
+    answers,
+    goToQuestion,
   } = useExam();
 
-  const { playAudio, stopAudio } = useAudio();
+  const { playAudio, stopAudio, pauseAudio, resumeAudio, audioState } = useAudio();
   const [showFeedback,       setShowFeedback]       = useState(false);
   const [playingAnswerIndex, setPlayingAnswerIndex] = useState<number | null>(null);
   const [signs,              setSigns]              = useState<DBSign[]>([]);
@@ -151,7 +156,7 @@ export default function EngineAExamScreen() {
       await new Promise(res => setTimeout(res, 1000));
       if (isCancelled() || phaseRef.current !== 'question') return;
 
-      for (let i = 0; i < currentQuestion!.answers.length && i < 3; i++) {
+      for (let i = 0; i < currentQuestion!.answers.length && i < 4; i++) {
         if (isCancelled() || phaseRef.current !== 'question') return;
 
         setPlayingAnswerIndex(i);
@@ -212,6 +217,37 @@ export default function EngineAExamScreen() {
     router.navigate('/(engineA)/home');
   };
 
+  // ── Question navigation (prev / next) ───────────────────────────────────────
+  const canGoPrev = currentIndex > 0;
+  const canGoNext = currentIndex < (questions.length || 30) - 1;
+
+  const handleNavPrev = () => {
+    if (!canGoPrev) return;
+    stopAudio();
+    cancelListening();
+    setShowFeedback(false);
+    goToQuestion(currentIndex - 1);
+  };
+
+  const handleNavNext = () => {
+    if (!canGoNext) return;
+    stopAudio();
+    cancelListening();
+    setShowFeedback(false);
+    goToQuestion(currentIndex + 1);
+  };
+
+  // ── Pause / Resume audio ────────────────────────────────────────────────────
+  const handleAudioButton = async () => {
+    if (audioState === 'playing') {
+      await pauseAudio();
+    } else if (audioState === 'paused') {
+      await resumeAudio();
+    }
+  };
+
+  const audioButtonIcon = audioState === 'playing' ? '⏸' : '▶️';
+
   // ── States ─────────────────────────────────────────────────────────────────
   if (phase === 'loading') return <LoadingScreen />;
   if (!currentQuestion)    return <LoadingScreen />;
@@ -235,15 +271,19 @@ export default function EngineAExamScreen() {
 
   return (
     <SafeAreaView style={styles.safeArea}>
-      {/* Exam progress bar */}
-      <View style={styles.progressContainer}>
+
+      {/* ── Fixed top bar: [✕ exit] [progress bar] [⏱ timer] ── */}
+      {/* Fixed outside ScrollView so it never disappears on scroll  */}
+      <View style={styles.topBar}>
+        <TouchableOpacity style={styles.backButton} onPress={handleBack}>
+          <Text style={styles.backIcon}>✕</Text>
+        </TouchableOpacity>
         <ProgressBar
           current={progress.current}
           total={progress.total}
           fillColor={Colors.secondary}
           height={6}
         />
-        {/* Timer — icon only for Engine A */}
         <Text style={styles.timerIcon}>⏱</Text>
       </View>
 
@@ -252,12 +292,7 @@ export default function EngineAExamScreen() {
         showsVerticalScrollIndicator={false}
         scrollEnabled={!showFeedback}
       >
-        {/* Back/exit button */}
-        <TouchableOpacity style={styles.backButton} onPress={handleBack}>
-          <Text style={styles.backIcon}>✕</Text>
-        </TouchableOpacity>
-
-        {/* Traffic sign image — identifies which sign is being tested */}
+        {/* Traffic sign image */}
         {currentSign?.image_url && (
           <View style={styles.signImageContainer}>
             <Image
@@ -268,15 +303,41 @@ export default function EngineAExamScreen() {
           </View>
         )}
 
-        {/* Question audio button */}
-        <TouchableOpacity
-          style={styles.questionAudioBtn}
-          onPress={() => currentQuestion.question_audio_url && playAudio(currentQuestion.question_audio_url).catch(() => {})}
-        >
-          <Text style={styles.questionAudioIcon}>🔊</Text>
-        </TouchableOpacity>
+        {/* Combined row: ⬅️ | ⏸/▶️ | 1/21 | ➡️
+            All in one row — saves vertical space + matches learning screen layout */}
+        <View style={styles.navControlRow}>
+          <TouchableOpacity
+            style={[styles.qNavBtn, !canGoPrev && styles.qNavBtnDisabled]}
+            onPress={handleNavPrev}
+            disabled={!canGoPrev}
+            accessibilityLabel="ወደ ቀዳሚ ጥያቄ"
+          >
+            <Text style={styles.navBtnIcon}>⬅️</Text>
+          </TouchableOpacity>
 
-        {/* Answer images */}
+          <TouchableOpacity
+            style={styles.audioBtn}
+            onPress={handleAudioButton}
+            accessibilityLabel="ድምጽ አቁም / ቀጥል"
+          >
+            <Text style={styles.audioBtnIcon}>{audioButtonIcon}</Text>
+          </TouchableOpacity>
+
+          <Text style={styles.questionCounter}>
+            {currentIndex + 1} / {questions.length || 30}
+          </Text>
+
+          <TouchableOpacity
+            style={[styles.qNavBtn, !canGoNext && styles.qNavBtnDisabled]}
+            onPress={handleNavNext}
+            disabled={!canGoNext}
+            accessibilityLabel="ወደ ቀጣይ ጥያቄ"
+          >
+            <Text style={styles.navBtnIcon}>➡️</Text>
+          </TouchableOpacity>
+        </View>
+
+        {/* Answer images — 2×2 grid */}
         <View style={styles.answersRow}>
           {currentQuestion.answers.map((answer, index) => (
             <ImageAnswerCard
@@ -285,18 +346,20 @@ export default function EngineAExamScreen() {
               imageUri={answer.image_url}
               cardState={answerCardState(index)}
               onPress={() => handleAnswerSelect(index)}
+              onAudioPress={answer.audio_url
+                ? () => playAudio(answer.audio_url!).catch(() => {})
+                : undefined}
               disabled={phase !== 'question'}
             />
           ))}
         </View>
 
-        {/* Voice button — shown only during active question.
-            showFailedText={false}: Engine A users cannot read — audio plays instead. */}
+        {/* Voice button — shown only during active question */}
         {phase === 'question' && (
           <VoiceAnswerButton
             state={voiceState}
             onPress={handleVoicePress}
-            size={100}
+            size={88}
             showFailedText={false}
           />
         )}
@@ -321,54 +384,47 @@ const styles = StyleSheet.create({
     flex:            1,
     backgroundColor: Colors.background,
   },
-  progressContainer: {
+
+  // Fixed top bar — always visible, never scrolls away
+  topBar: {
     flexDirection:     'row',
     alignItems:        'center',
-    paddingHorizontal: 16,
-    paddingTop:        12,
-    gap:               12,
+    paddingHorizontal: 12,
+    paddingTop:        8,
+    paddingBottom:     8,
+    gap:               10,
+  },
+  backButton: {
+    width:           40,
+    height:          40,
+    borderRadius:    20,
+    backgroundColor: Colors.card,
+    justifyContent:  'center',
+    alignItems:      'center',
+    flexShrink:      0,
+  },
+  backIcon: {
+    fontSize: 18,
+    color:    Colors.textSecondary,
   },
   timerIcon: {
     fontSize:   20,
     flexShrink: 0,
   },
+
+  // Scrollable content — compact gaps so everything fits without scrolling
   content: {
-    padding:    16,
-    alignItems: 'center',
-    gap:        28,
+    paddingHorizontal: 16,
+    paddingTop:        12,
+    paddingBottom:     16,
+    alignItems:        'center',
+    gap:               14,
   },
-  backButton: {
-    width:           44,
-    height:          44,
-    borderRadius:    22,
-    backgroundColor: Colors.card,
-    justifyContent:  'center',
-    alignItems:      'center',
-    alignSelf:       'flex-start',
-  },
-  backIcon: {
-    fontSize: 20,
-    color:    Colors.textSecondary,
-  },
-  questionAudioBtn: {
-    width:           80,
-    height:          80,
-    borderRadius:    40,
-    backgroundColor: Colors.secondary,
-    justifyContent:  'center',
-    alignItems:      'center',
-  },
-  questionAudioIcon: {
-    fontSize: 36,
-  },
-  answersRow: {
-    flexDirection:  'row',
-    gap:            20,
-    justifyContent: 'center',
-  },
+
+  // Sign image — slightly smaller than learning screen to save space
   signImageContainer: {
-    width:           180,
-    height:          180,
+    width:           160,
+    height:          160,
     borderRadius:    20,
     overflow:        'hidden',
     backgroundColor: '#FFFFFF',
@@ -376,5 +432,54 @@ const styles = StyleSheet.create({
   signImage: {
     width:  '100%',
     height: '100%',
+  },
+
+  // Combined navigation + audio control row: ⬅️ | ⏸/▶️ | 1/21 | ➡️
+  navControlRow: {
+    flexDirection:  'row',
+    alignItems:     'center',
+    justifyContent: 'center',
+    gap:            12,
+  },
+  qNavBtn: {
+    width:           48,
+    height:          48,
+    borderRadius:    24,
+    backgroundColor: Colors.card,
+    justifyContent:  'center',
+    alignItems:      'center',
+  },
+  qNavBtnDisabled: {
+    opacity: 0.35,
+  },
+  navBtnIcon: {
+    fontSize: 22,
+  },
+  audioBtn: {
+    width:           56,
+    height:          56,
+    borderRadius:    28,
+    backgroundColor: Colors.secondary,
+    justifyContent:  'center',
+    alignItems:      'center',
+  },
+  audioBtnIcon: {
+    fontSize: 26,
+  },
+  questionCounter: {
+    fontSize:   17,
+    fontWeight: '700',
+    color:      Colors.textPrimary,
+    minWidth:   52,
+    textAlign:  'center',
+  },
+
+  // Answer cards — 2×2 grid
+  answersRow: {
+    flexDirection:     'row',
+    flexWrap:          'wrap',
+    gap:               14,
+    justifyContent:    'center',
+    paddingHorizontal: 8,
   },
 });

@@ -121,10 +121,12 @@ export const signs: DBSign[] = rawSigns.map(s => ({
 
 /**
  * Questions: flattened from all signs → DBQuestion shape
- * Total: 180 questions (60 signs × 3 questions each)
+ * Only 4-answer questions are included (3-answer questions are old/outdated data).
  */
 export const questions: DBQuestion[] = rawSigns.flatMap(sign =>
-  sign.questions.map(q => ({
+  sign.questions
+    .filter(q => q.answers.length >= 4)
+    .map(q => ({
     id:                             q.id,
     sign_id:                        sign.id,
     topic_id:                       sign.topic_id,

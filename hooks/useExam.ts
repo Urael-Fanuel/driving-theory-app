@@ -69,6 +69,10 @@ export interface UseExamReturn {
   restart: () => void;
   /** Elapsed time in seconds */
   elapsedSeconds: number;
+  /** All submitted answers so far */
+  answers: ExamAnswer[];
+  /** Jump to any question by index (restores answered state if already answered) */
+  goToQuestion: (index: number) => void;
 }
 
 // ─── Constants ────────────────────────────────────────────────────────────────
@@ -222,6 +226,25 @@ export function useExam(): UseExamReturn {
     setPhase('result');
   }
 
+  // ── Navigate to any question (view answered, or advance to unanswered) ────────
+  const goToQuestion = useCallback((index: number) => {
+    if (index < 0 || index >= questions.length) return;
+    const question = questions[index];
+    const existingAnswer = answers.find(a => a.questionId === question.id);
+    if (existingAnswer) {
+      // Show previously answered question in its result state
+      setSelectedAnswerId(existingAnswer.selectedAnswerId);
+      setLastAnswerCorrect(existingAnswer.isCorrect);
+      setPhase(existingAnswer.isCorrect ? 'feedback_correct' : 'feedback_wrong');
+    } else {
+      // Unanswered question — show normally
+      setSelectedAnswerId(null);
+      setLastAnswerCorrect(null);
+      setPhase('question');
+    }
+    setCurrentIndex(index);
+  }, [questions, answers]);
+
   // ── Restart ───────────────────────────────────────────────────────────────────
   const restart = useCallback(() => {
     loadQuestions();
@@ -247,5 +270,7 @@ export function useExam(): UseExamReturn {
     selectedAnswerId,
     restart,
     elapsedSeconds,
+    answers,
+    goToQuestion,
   };
 }
