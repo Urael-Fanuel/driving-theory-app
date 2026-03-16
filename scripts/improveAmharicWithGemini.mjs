@@ -14,7 +14,7 @@
  */
 
 import { readFileSync, writeFileSync, copyFileSync, unlinkSync, existsSync } from 'fs';
-import { join, dirname } from 'path';
+import { join, dirname, extname } from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -50,41 +50,108 @@ const MAX_RETRIES    = 3;
 // ─── Gemini prompt ────────────────────────────────────────────────────────────
 
 const SYSTEM_INSTRUCTION = `\
-You are an expert Amharic translator specializing in Israeli traffic signs and road markings. \
-Your audience is Ethiopian immigrants in Israel who are learning to drive.
+You are an expert driving instructor and Amharic content writer specializing in Israeli traffic signs. \
+Your audience is Ethiopian immigrants in Israel who are learning to drive — many have limited reading ability.
 
-Translate directly from Hebrew to Amharic — do NOT rely on or copy any previous Amharic text. \
-Create a completely fresh, accurate translation from scratch.
+Your goal is EDUCATION — write content that truly teaches. \
+Model your output on this high-quality example for a warning sign:
+  name_amharic: "ከፊትህ ባለው መንገድ ላይ የጎደጎደ ወይም የተበላሸ መንገድ መኖሩን ያመለክታል።"
+  explanation_amharic: "ይህ ምልክት በመንገዱ ላይ ጉድጓዶች፣ እብጠቶች ወይም መጥፎ ጥርጊያ መኖሩን ያስጠነቅቀናል። አሽከርካሪው ይህንን ምልክት ሲያይ ፍጥነቱን መቀነስ እና ጥንቃቄ ማድረግ አለበት።"
 
 Strict rules — follow all without exception:
-1. Translate the TRUE MEANING of the Hebrew sign name — not a word-for-word literal translation.
-2. Write in clear, simple Amharic that any ordinary adult can understand — no jargon.
-3. Keep it SHORT: name = at most 4 Amharic words; explanation = at most 2 short sentences.
+
+1. name_amharic: A full descriptive sentence (up to 15 words) explaining what the sign indicates.
+   Do NOT write just 2–3 words. Describe what the sign means on the road.
+
+2. explanation_amharic: 2–3 sentences covering ALL of:
+   a. What this sign means and its purpose
+   b. Exactly what the driver MUST DO — specific actions
+   c. Consequence of ignoring it (danger, fine, accident)
+
+3. Write in clear, simple Amharic that any ordinary adult can understand — no jargon.
 4. Use a respectful, moderately formal tone — NOT street slang, NOT bureaucratic language.
-5. Be 100% accurate — never add meaning, never omit meaning.
-6. Explanation must start with what the driver must DO or KNOW when they see this sign.
-7. Use correct Amharic spelling and diacritics (fidel) — this is critical.
-8. Return valid JSON only — no markdown, no extra text, no code fences.`;
+5. Be 100% accurate to the Israeli Highway Code — never add or omit meaning.
+6. Use correct Amharic spelling and diacritics (fidel) — this is critical.
+7. Return valid JSON only — no markdown, no extra text, no code fences.`;
 
 function buildPrompt(sign) {
-  return `Translate this Israeli traffic sign from Hebrew to Amharic from scratch.
+  const signNum = sign.image_filename?.replace(/\.(png|jpg)$/i, '');
+  const isNumeric = signNum && /^\d+$/.test(signNum);
+
+  if (isNumeric) {
+    // For numbered signs: send the image + number.
+    // Gemini sees the actual sign image AND knows the official Israeli number.
+    return `This is Israeli traffic sign number ${signNum} (from the Israeli Highway Code).
+
+Look at the image of this sign and use your knowledge of Israeli traffic laws (תקנות התעבורה) to write educational Amharic content for Ethiopian immigrants learning to drive in Israel.
+
+Teach the learner:
+1. What this sign means (its purpose on the road)
+2. Exactly what the driver MUST DO when they see it
+3. Why it matters / consequence of ignoring it
+
+Return JSON:
+{
+  "name_amharic": "...",
+  "explanation_amharic": "..."
+}`;
+  }
+
+  // Fallback for non-numeric signs (semantic IDs)
+  return `Write educational Amharic content for this Israeli traffic sign.
 
 Hebrew sign name: ${sign.name_hebrew}
 Sign category: ${sign.topic_id || 'traffic sign'}
 
-Create a fresh Amharic translation. Return JSON:
+Teach the learner: what this sign means, what the driver must do, and why it matters.
+Return JSON:
 {
   "name_amharic": "...",
   "explanation_amharic": "..."
 }`;
 }
 
+// ─── Image loader ─────────────────────────────────────────────────────────────
+
+// Folders where downloaded sign images live, searched in order
+const IMAGE_FOLDERS = [
+  join(ROOT, 'assets', 'images', 'תמרורי זכות קדימה'),
+  join(ROOT, 'assets', 'images', 'תמרורי הוריה'),
+  join(ROOT, 'assets', 'images', 'תמרורי אזהרה'),
+  join(ROOT, 'assets', 'images', 'תמרורי איסורים והגבלות'),
+  join(ROOT, 'assets', 'images', 'תמרורי מודיעין והדרכה'),
+  join(ROOT, 'assets', 'images', 'תמרורי תחבורה ציבורית'),
+];
+
+function loadSignImage(sign) {
+  const base = sign.image_filename?.replace(/\.(png|jpg|jpeg)$/i, '');
+  if (!base) return null;
+  const exts = ['.png', '.jpg', '.jpeg'];
+  for (const folder of IMAGE_FOLDERS) {
+    for (const ext of exts) {
+      const p = join(folder, base + ext);
+      if (existsSync(p)) {
+        const data = readFileSync(p);
+        const mime = ext === '.jpg' || ext === '.jpeg' ? 'image/jpeg' : 'image/png';
+        return { base64: data.toString('base64'), mime };
+      }
+    }
+  }
+  return null;
+}
+
 // ─── Gemini API call ──────────────────────────────────────────────────────────
 
 async function callGemini(sign, attempt = 1) {
+  const img = loadSignImage(sign);
+  const textPart = { text: buildPrompt(sign) };
+  const userParts = img
+    ? [{ inline_data: { mime_type: img.mime, data: img.base64 } }, textPart]
+    : [textPart];
+
   const body = {
     system_instruction: { parts: [{ text: SYSTEM_INSTRUCTION }] },
-    contents: [{ role: 'user', parts: [{ text: buildPrompt(sign) }] }],
+    contents: [{ role: 'user', parts: userParts }],
     generationConfig: { responseMimeType: 'application/json', temperature: 0.3 },
   };
 
@@ -150,7 +217,7 @@ async function main() {
 
   // Load signs
   const signsData = JSON.parse(readFileSync(SIGNS_PATH, 'utf-8'));
-  const signs     = Array.isArray(signsData) ? signsData : signsData.signs;
+  const signs     = Array.isArray(signsData) ? signsData : signsData.signs ?? Object.values(signsData);
 
   // Resolve start index — either from --sign-number or --offset
   let startIndex = OFFSET;

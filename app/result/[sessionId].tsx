@@ -9,9 +9,6 @@
  */
 
 import React, { useEffect, useRef, useState } from 'react';
-
-// ─── Audio base URL (Supabase Storage) ────────────────────────────────────────
-const _AUDIO_BASE = (process.env.EXPO_PUBLIC_SUPABASE_URL ?? '') + '/storage/v1/object/public/audio';
 import {
   View,
   Text,
@@ -33,6 +30,9 @@ import { DBSign } from '../../backend/supabaseClient';
 
 // ─── Global result storage (passed from useExam) ──────────────────────────────
 import { ResultData, WrongQuestion, getExamResult } from '../../utils/examResult';
+
+// ─── Audio base URL (Supabase Storage) ────────────────────────────────────────
+const _AUDIO_BASE = (process.env.EXPO_PUBLIC_SUPABASE_URL ?? '') + '/storage/v1/object/public/audio';
 export type { ResultData };
 export { storeExamResult } from '../../utils/examResult';
 

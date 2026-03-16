@@ -160,6 +160,7 @@ function findImagePath(filename) {
     join(IMAGES_DIR, filename),
     join(IMAGES_DIR, 'תמרורי אזהרה', filename),
     join(IMAGES_DIR, 'תמרורי הוריה', filename),
+    join(IMAGES_DIR, 'תמרורי זכות קדימה', filename),
   ];
   return candidates.find(p => existsSync(p)) ?? null;
 }

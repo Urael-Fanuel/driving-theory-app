@@ -1818,204 +1818,258 @@
     ]
   },
   {
-    "id": "ROW_JUNCTION_YIELD",
+    "id": "ROW_FOUR_WAY_STOP",
     "topic_id": "right_of_way",
-    "order": 1,
-    "image_filename": "row_junction_yield.png",
-    "video_filename": "row_junction_yield_amharic.mp4",
-    "name_hebrew": "תן זכות קדימה בצומת",
-    "name_amharic": "መጋጠሚያ ቅድሚያ ስጥ",
-    "explanation_amharic": "ይህ ምልክት ሲያዩ ዋናውን መንገድ ለሚሄደው ቅድሚያ ስጡ። ፍጥነት ቀነሱ ጠብቁ።",
-    "audio_name_filename": "row_junction_yield_name.mp3",
-    "audio_explanation_filename": "row_junction_yield_explanation.mp3",
+    "order": 5,
+    "image_filename": "301.png",
+    "video_filename": "row_four_way_stop_amharic.mp4",
+    "name_hebrew": "עצור 4 כיוונים",
+    "name_amharic": "ይህ ምልክት ወደፊት በሚመጣው መስቀለኛ መንገድ ላይ ለሌሎች ተሽከርካሪዎች ቅድሚያ መስጠት እንዳለብህ ያሳያል።",
+    "explanation_amharic": "ይህ ምልክት ወደምትገባበት መንገድ ላይ ለሚገኙ ተሽከርካሪዎችና እግረኞች ቅድሚያ መስጠት እንዳለብህ ያስገነዝባል። ይህንን ምልክት ስታይ ፍጥነትህን መቀነስ፣ መንገዱን በደንብ መመልከት እና አስፈላጊ ከሆነ ሙሉ በሙሉ ማቆም አለብህ። ሌሎች ተሽከርካሪዎች ወይም እግረኞች እስኪያልፉ ድረስ መጠበቅ እና መንገዱ ባዶ ሲሆን ብቻ በደህና መሄድ ይፈቀድልሃል። ይህንን ምልክት ችላ ማለት አደጋ ሊያስከትልብህ፣ ቅጣት ሊያስጥልህ ወይም የመንጃ ፍቃድህን ሊያስቀንስብህ ይችላል።",
+    "audio_name_filename": "301_name.mp3",
+    "audio_explanation_filename": "301_explanation.mp3",
     "questions": [
       {
-        "id": "Q_JUN_YLD_001",
-        "question_amharic": "ዋናውን መንገድ ሲቀላቀሉ ቅድሚያ ለማን ነው?",
-        "question_audio": "q_jun_yld_001.mp3",
+        "id": "Q_4WAY_001",
+        "question_amharic": "አራት አቅጣጫ ቁም ሲኖር ቀድሞ የቆመ ምን ያደርጋል?",
+        "question_audio": "301_q1_question.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "ለሚቀላቀሉ",
-            "image": "answer_joining.png",
-            "is_correct": false
+            "text_amharic": "ጠብቃል",
+            "image": "answer_waits.png",
+            "is_correct": false,
+            "audio_filename": "301_q1_aA.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "ዋናውን መንገድ ለሚሄዱ",
-            "image": "answer_main_road.png",
-            "is_correct": true
+            "text_amharic": "ቀድሞ ያልፋል",
+            "image": "answer_goes_first.png",
+            "is_correct": true,
+            "audio_filename": "301_q1_aB.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "ለፈጣን ተሽከርካሪ",
-            "image": "answer_fastest.png",
-            "is_correct": false
+            "text_amharic": "ኋላ ያልፋል",
+            "image": "answer_goes_last.png",
+            "is_correct": false,
+            "audio_filename": "301_q1_aC.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ፈጣን ብቻ ቀድሞ ያልፋል",
+            "is_correct": false,
+            "audio_filename": "301_q1_aD.mp3"
           }
         ],
-        "explanation_correct_amharic": "ትክክል! ዋናውን መንገድ ሲቀላቀሉ ዋናውን ለሚሄዱ ቅድሚያ ስጡ።",
-        "explanation_wrong_amharic": "ስህተት። ዋናውን መንገድ ሲቀላቀሉ ዋናውን ለሚሄዱ ቅድሚያ ስጡ።",
-        "explanation_correct_audio": "q_jun_yld_001_correct.mp3",
-        "explanation_wrong_audio": "q_jun_yld_001_wrong.mp3"
+        "explanation_correct_amharic": "ትክክል! አራት አቅጣጫ ቁም ቀደም ብሎ የቆመ ቀደም ብሎ ያልፋል።",
+        "explanation_wrong_amharic": "ስህተት። አራት አቅጣጫ ቁም ቀደም ብሎ የቆመ ቀደም ብሎ ያልፋል።",
+        "explanation_correct_audio": "301_q1_correct.mp3",
+        "explanation_wrong_audio": "301_q1_wrong.mp3"
       },
       {
-        "id": "Q_JUN_YLD_002",
-        "question_amharic": "ቅድሚያ ምልክት ሲያዩ ምን ያደርጋሉ?",
-        "question_audio": "q_jun_yld_002.mp3",
+        "id": "Q_4WAY_002",
+        "question_amharic": "አራት አቅጣጫ ቁም ሁለቱ አብሮ ቆሙ። ቅድሚያ ለማን?",
+        "question_audio": "301_q2_question.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "ፈጠን ሂዱ",
-            "image": "answer_rush.png",
-            "is_correct": false
+            "text_amharic": "ለሁለቱም እኩል",
+            "image": "answer_equal.png",
+            "is_correct": false,
+            "audio_filename": "301_q2_aA.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "ፍጥነት ቀነሱ ሌሎቹን ያስቀድሙ",
-            "image": "answer_slow_yield.png",
-            "is_correct": true
-          },
-          {
-            "id": "C",
-            "text_amharic": "ቆሙ",
-            "image": "answer_stop.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! ቅድሚያ ምልክት ሲያዩ ፍጥነት ቀነሱ ሌሎቹን ያስቀድሙ።",
-        "explanation_wrong_amharic": "ስህተት። ቅድሚያ ምልክት ሲያዩ ፍጥነት ቀነሱ ሌሎቹን ያስቀድሙ።",
-        "explanation_correct_audio": "q_jun_yld_002_correct.mp3",
-        "explanation_wrong_audio": "q_jun_yld_002_wrong.mp3"
-      },
-      {
-        "id": "Q_JUN_YLD_003",
-        "question_amharic": "ቅድሚያ ምልክት ካለ ቁም ምልክት ይፈልጋሉ?",
-        "question_audio": "q_jun_yld_003.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "አዎ ሁልጊዜ ቁሙ",
-            "image": "answer_always_stop.png",
-            "is_correct": false
-          },
-          {
-            "id": "B",
-            "text_amharic": "አይደለም ፍጥነት ቀነሱ ብቻ",
-            "image": "answer_just_slow.png",
-            "is_correct": true
-          },
-          {
-            "id": "C",
-            "text_amharic": "ሁሉም ቁሙ",
-            "image": "answer_all_stop.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! ቅድሚያ ምልክት ቁም ያስፈልግ አይደለም፤ ፍጥነት ቀንሶ ሌሎቹን ማስቀደም ብቻ።",
-        "explanation_wrong_amharic": "ስህተት። ቅድሚያ ምልክት ቁም አያስፈልግ፤ ፍጥነት ቀንሶ ሌሎቹን ማስቀደም ብቻ።",
-        "explanation_correct_audio": "q_jun_yld_003_correct.mp3",
-        "explanation_wrong_audio": "q_jun_yld_003_wrong.mp3"
-      }
-    ]
-  },
-  {
-    "id": "ROW_ROUNDABOUT",
-    "topic_id": "right_of_way",
-    "order": 2,
-    "image_filename": "row_roundabout.png",
-    "video_filename": "row_roundabout_amharic.mp4",
-    "name_hebrew": "כיכר - זכות קדימה",
-    "name_amharic": "ክብ መንገድ ቅድሚያ",
-    "explanation_amharic": "ክብ መንገድ ሲቀላቀሉ ክብ ዉስጥ ላሉ ቅድሚያ ስጡ። ጠብቁ ቦታ ሲፈጠር ግቡ።",
-    "audio_name_filename": "row_roundabout_name.mp3",
-    "audio_explanation_filename": "row_roundabout_explanation.mp3",
-    "questions": [
-      {
-        "id": "Q_ROW_ROUND_001",
-        "question_amharic": "ክብ መንገድ ሲገቡ ቅድሚያ ለማን ነው?",
-        "question_audio": "q_row_round_001.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "ለሚገቡ",
-            "image": "answer_entering.png",
-            "is_correct": false
-          },
-          {
-            "id": "B",
-            "text_amharic": "ለክብ ዉስጥ ላሉ",
-            "image": "answer_inside.png",
-            "is_correct": true
+            "text_amharic": "ከቀኝ ለሚጎዳ",
+            "image": "answer_right_side.png",
+            "is_correct": true,
+            "audio_filename": "301_q2_aB.mp3"
           },
           {
             "id": "C",
             "text_amharic": "ፈጣን ለሆነ",
             "image": "answer_fastest.png",
-            "is_correct": false
+            "is_correct": false,
+            "audio_filename": "301_q2_aC.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ዘወር ምልክት ላበራ ቅድሚያ",
+            "is_correct": false,
+            "audio_filename": "301_q2_aD.mp3"
           }
         ],
-        "explanation_correct_amharic": "ትክክል! ክብ መንገድ ሲገቡ ክብ ዉስጥ ለሚሄዱ ቅድሚያ ስጡ።",
-        "explanation_wrong_amharic": "ስህተት። ክብ ሲገቡ ክብ ዉስጥ ላሉ ቅድሚያ ስጡ።",
-        "explanation_correct_audio": "q_row_round_001_correct.mp3",
-        "explanation_wrong_audio": "q_row_round_001_wrong.mp3"
+        "explanation_correct_amharic": "ትክክል! አብሮ ቆሙ ከቀኝ ያለ ቅድሚያ ይኖሮታል።",
+        "explanation_wrong_amharic": "ስህተት። አብሮ ቆሙ ከቀኝ ያለ ቅድሚያ ይኖሮታል።",
+        "explanation_correct_audio": "301_q2_correct.mp3",
+        "explanation_wrong_audio": "301_q2_wrong.mp3"
       },
       {
-        "id": "Q_ROW_ROUND_002",
-        "question_amharic": "ክብ ዉስጥ ሲሆኑ ቅድሚያ ይኖሮታል?",
-        "question_audio": "q_row_round_002.mp3",
+        "id": "Q_4WAY_003",
+        "question_amharic": "አራት አቅጣጫ ቁም ሁሉም ቆሙ ምን ያደርጋሉ?",
+        "question_audio": "301_q3_question.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "አይኖሮታሁም",
-            "image": "answer_no.png",
-            "is_correct": false
+            "text_amharic": "ሁሉም አብሮ ያልፋሉ",
+            "image": "answer_all_go.png",
+            "is_correct": false,
+            "audio_filename": "301_q3_aA.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "አዎ ቅድሚያ ይኖሮታሉ",
-            "image": "answer_yes.png",
-            "is_correct": true
+            "text_amharic": "አንዳንዱ ቅድሚያ ስርዓት ይጠቀሙ",
+            "image": "answer_take_turns.png",
+            "is_correct": true,
+            "audio_filename": "301_q3_aB.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "ሁሉም እኩል",
-            "image": "answer_equal.png",
-            "is_correct": false
+            "text_amharic": "ሁሉም ቁሙ ፖሊስ ይጠብቁ",
+            "image": "answer_wait_police.png",
+            "is_correct": false,
+            "audio_filename": "301_q3_aC.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ፖሊስ ይምጣ",
+            "is_correct": false,
+            "audio_filename": "301_q3_aD.mp3"
           }
         ],
-        "explanation_correct_amharic": "ትክክል! ክብ ዉስጥ ሲሆኑ ቅድሚያ ይኖሮታሉ ሚቀላቀሉ ጠብቁ።",
-        "explanation_wrong_amharic": "ስህተት። ክብ ዉስጥ ሲሆኑ ቅድሚያ ይኖሮታሉ።",
-        "explanation_correct_audio": "q_row_round_002_correct.mp3",
-        "explanation_wrong_audio": "q_row_round_002_wrong.mp3"
-      },
+        "explanation_correct_amharic": "ትክክል! አራት አቅጣጫ ቁም ቅድሚያ ስርዓት ዙሪያ ይጠቀሙ።",
+        "explanation_wrong_amharic": "ስህተት። አራት አቅጣጫ ቁም ቅድሚያ ስርዓት ዙሪያ ይጠቀሙ።",
+        "explanation_correct_audio": "301_q3_correct.mp3",
+        "explanation_wrong_audio": "301_q3_wrong.mp3"
+      }
+    ]
+  },
+  {
+    "id": "ROW_JUNCTION_YIELD",
+    "topic_id": "right_of_way",
+    "order": 1,
+    "image_filename": "302.png",
+    "video_filename": "row_junction_yield_amharic.mp4",
+    "name_hebrew": "תן זכות קדימה בצומת",
+    "name_amharic": "ይህ ምልክት ወደፊት በሚያገኙት መስቀለኛ መንገድ ላይ ሙሉ በሙሉ እንዲቆሙ ያዝዛል።",
+    "explanation_amharic": "ይህ ምልክት አሽከርካሪዎች ከመስቀለኛ መንገድ ወይም ከማቋረጫ መስመር በፊት ሙሉ በሙሉ እንዲቆሙ የሚያዝ ትዕዛዝ ነው። ምልክቱን ሲያዩ ተሽከርካሪዎን ሙሉ በሙሉ ማቆም፣ መንገዱን በሁለቱም አቅጣጫ በጥንቃቄ መመልከት እና የመንገድ ቅድሚያ ለሌሎች ተሽከርካሪዎች መስጠት አለብዎት። ይህን ምልክት ችላ ማለት ከባድ የትራፊክ አደጋ ሊያስከትል ወይም ከፍተኛ የገንዘብ ቅጣት እና የፍቃድ ነጥቦች ሊያስከትል ይችላል።",
+    "audio_name_filename": "302_name.mp3",
+    "audio_explanation_filename": "302_explanation.mp3",
+    "questions": [
       {
-        "id": "Q_ROW_ROUND_003",
-        "question_amharic": "ክብ ዉስጥ ፍጥነት ምን ያህል ይሆናል?",
-        "question_audio": "q_row_round_003.mp3",
+        "id": "Q_JUN_YLD_001",
+        "question_amharic": "ዋናውን መንገድ ሲቀላቀሉ ቅድሚያ ለማን ነው?",
+        "question_audio": "302_q1_question.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "90 ኪሜ",
-            "image": "answer_90.png",
-            "is_correct": false
+            "text_amharic": "ለሚቀላቀሉ",
+            "image": "answer_joining.png",
+            "is_correct": false,
+            "audio_filename": "302_q1_aA.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "ዝቅተኛ ፍጥነት",
-            "image": "answer_low_speed.png",
-            "is_correct": true
+            "text_amharic": "ዋናውን መንገድ ለሚሄዱ",
+            "image": "answer_main_road.png",
+            "is_correct": true,
+            "audio_filename": "302_q1_aB.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "ምንም ፍጥነት ኖር ቢለው ይፈቀዳል",
-            "image": "answer_any_speed.png",
-            "is_correct": false
+            "text_amharic": "ለፈጣን ተሽከርካሪ",
+            "image": "answer_fastest.png",
+            "is_correct": false,
+            "audio_filename": "302_q1_aC.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ለእግረኛ ብቻ",
+            "is_correct": false,
+            "audio_filename": "302_q1_aD.mp3"
           }
         ],
-        "explanation_correct_amharic": "ትክክል! ክብ ዉስጥ ዝቅተኛ ፍጥነት ይሂዱ።",
-        "explanation_wrong_amharic": "ስህተት። ክብ ዉስጥ ዝቅተኛ ፍጥነት ሂዱ።",
-        "explanation_correct_audio": "q_row_round_003_correct.mp3",
-        "explanation_wrong_audio": "q_row_round_003_wrong.mp3"
+        "explanation_correct_amharic": "ትክክል! ዋናውን መንገድ ሲቀላቀሉ ዋናውን ለሚሄዱ ቅድሚያ ስጡ።",
+        "explanation_wrong_amharic": "ስህተት። ዋናውን መንገድ ሲቀላቀሉ ዋናውን ለሚሄዱ ቅድሚያ ስጡ።",
+        "explanation_correct_audio": "302_q1_correct.mp3",
+        "explanation_wrong_audio": "302_q1_wrong.mp3"
+      },
+      {
+        "id": "Q_JUN_YLD_002",
+        "question_amharic": "ቅድሚያ ምልክት ሲያዩ ምን ያደርጋሉ?",
+        "question_audio": "302_q2_question.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ፈጠን ሂዱ",
+            "image": "answer_rush.png",
+            "is_correct": false,
+            "audio_filename": "302_q2_aA.mp3"
+          },
+          {
+            "id": "B",
+            "text_amharic": "ፍጥነት ቀነሱ ሌሎቹን ያስቀድሙ",
+            "image": "answer_slow_yield.png",
+            "is_correct": true,
+            "audio_filename": "302_q2_aB.mp3"
+          },
+          {
+            "id": "C",
+            "text_amharic": "ቆሙ",
+            "image": "answer_stop.png",
+            "is_correct": false,
+            "audio_filename": "302_q2_aC.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ምልክቱን ችላ ይበሉ",
+            "is_correct": false,
+            "audio_filename": "302_q2_aD.mp3"
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ቅድሚያ ምልክት ሲያዩ ፍጥነት ቀነሱ ሌሎቹን ያስቀድሙ።",
+        "explanation_wrong_amharic": "ስህተት። ቅድሚያ ምልክት ሲያዩ ፍጥነት ቀነሱ ሌሎቹን ያስቀድሙ።",
+        "explanation_correct_audio": "302_q2_correct.mp3",
+        "explanation_wrong_audio": "302_q2_wrong.mp3"
+      },
+      {
+        "id": "Q_JUN_YLD_003",
+        "question_amharic": "ቅድሚያ ምልክት ካለ ቁም ምልክት ይፈልጋሉ?",
+        "question_audio": "302_q3_question.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "አዎ ሁልጊዜ ቁሙ",
+            "image": "answer_always_stop.png",
+            "is_correct": false,
+            "audio_filename": "302_q3_aA.mp3"
+          },
+          {
+            "id": "B",
+            "text_amharic": "አይደለም ፍጥነት ቀነሱ ብቻ",
+            "image": "answer_just_slow.png",
+            "is_correct": true,
+            "audio_filename": "302_q3_aB.mp3"
+          },
+          {
+            "id": "C",
+            "text_amharic": "ሁሉም ቁሙ",
+            "image": "answer_all_stop.png",
+            "is_correct": false,
+            "audio_filename": "302_q3_aC.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ፍጥነት ጨምሩ ቀጥሉ",
+            "is_correct": false,
+            "audio_filename": "302_q3_aD.mp3"
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ቅድሚያ ምልክት ቁም ያስፈልግ አይደለም፤ ፍጥነት ቀንሶ ሌሎቹን ማስቀደም ብቻ።",
+        "explanation_wrong_amharic": "ስህተት። ቅድሚያ ምልክት ቁም አያስፈልግ፤ ፍጥነት ቀንሶ ሌሎቹን ማስቀደም ብቻ።",
+        "explanation_correct_audio": "302_q3_correct.mp3",
+        "explanation_wrong_audio": "302_q3_wrong.mp3"
       }
     ]
   },
@@ -2023,403 +2077,246 @@
     "id": "ROW_MAIN_ROAD",
     "topic_id": "right_of_way",
     "order": 3,
-    "image_filename": "row_main_road.png",
+    "image_filename": "303.png",
     "video_filename": "row_main_road_amharic.mp4",
     "name_hebrew": "כביש ראשי",
-    "name_amharic": "ዋና መንገድ",
-    "explanation_amharic": "ይህ ምልክት ዋና መንገድ ላይ ነዎ ማለት ነው። ዋና መንገድ ቅድሚያ ሰጥቶ ይሄዳሉ።",
-    "audio_name_filename": "row_main_road_name.mp3",
-    "audio_explanation_filename": "row_main_road_explanation.mp3",
+    "name_amharic": "ይህ ምልክት ወደ ክብ ቅርጽ ያለው መገናኛ (ሮንዳቦት) እየቀረቡ መሆኑን ያሳያል።",
+    "explanation_amharic": "ይህ ምልክት ወደ ክብ ቅርጽ ያለው መገናኛ (ሮንዳቦት) እየደረሱ መሆኑን ያመለክታል። ዓላማውም አሽከርካሪዎች በሰዓት አቅጣጫ እንዲዞሩ እና ትራፊክን በሰላም እንዲያስተዳድሩ መርዳት ነው። ይህንን ምልክት ሲያዩ ፍጥነትዎን መቀነስ፣ ወደ ሮንዳቦቱ ከመግባትዎ በፊት ለግራ በኩል ለሚመጡ ተሽከርካሪዎች ቅድሚያ መስጠት እና መውጫዎ ላይ ምልክት መስጠት አለብዎት። እነዚህን ህጎች አለማክበር አደጋ ሊያስከትል ወይም የትራፊክ ቅጣት ሊያስወጣ ይችላል።",
+    "audio_name_filename": "303_name.mp3",
+    "audio_explanation_filename": "303_explanation.mp3",
     "questions": [
       {
         "id": "Q_MAIN_RD_001",
         "question_amharic": "ዋና መንገድ ምልክት ሲያዩ ቅድሚያ ይኖሮታሉ?",
-        "question_audio": "q_main_rd_001.mp3",
+        "question_audio": "303_q1_question.mp3",
         "answers": [
           {
             "id": "A",
             "text_amharic": "አይኖሮታሁም",
             "image": "answer_no.png",
-            "is_correct": false
+            "is_correct": false,
+            "audio_filename": "303_q1_aA.mp3"
           },
           {
             "id": "B",
             "text_amharic": "አዎ ቅድሚያ ይኖሮታሉ",
             "image": "answer_yes.png",
-            "is_correct": true
+            "is_correct": true,
+            "audio_filename": "303_q1_aB.mp3"
           },
           {
             "id": "C",
             "text_amharic": "ፍጥነት ይቀንሳሉ",
             "image": "answer_slow.png",
-            "is_correct": false
+            "is_correct": false,
+            "audio_filename": "303_q1_aC.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ምልክቱን ካለፉ ቅድሚያ ያጣሉ",
+            "is_correct": false,
+            "audio_filename": "303_q1_aD.mp3"
           }
         ],
         "explanation_correct_amharic": "ትክክል! ዋና መንገድ ምልክት ሲያዩ ቅድሚያ ይኖሮታሉ።",
         "explanation_wrong_amharic": "ስህተት። ዋና መንገድ ምልክት ሲያዩ ቅድሚያ ይኖሮታሉ።",
-        "explanation_correct_audio": "q_main_rd_001_correct.mp3",
-        "explanation_wrong_audio": "q_main_rd_001_wrong.mp3"
+        "explanation_correct_audio": "303_q1_correct.mp3",
+        "explanation_wrong_audio": "303_q1_wrong.mp3"
       },
       {
         "id": "Q_MAIN_RD_002",
         "question_amharic": "ዋና መንገድ ምልክት ምን ቅርጽ አለው?",
-        "question_audio": "q_main_rd_002.mp3",
+        "question_audio": "303_q2_question.mp3",
         "answers": [
           {
             "id": "A",
             "text_amharic": "ሰማያዊ ክብ",
             "image": "answer_blue_circle.png",
-            "is_correct": false
+            "is_correct": false,
+            "audio_filename": "303_q2_aA.mp3"
           },
           {
             "id": "B",
             "text_amharic": "ቢጫ ካሬ ዲያሞንድ",
             "image": "answer_yellow_diamond.png",
-            "is_correct": true
+            "is_correct": true,
+            "audio_filename": "303_q2_aB.mp3"
           },
           {
             "id": "C",
             "text_amharic": "ቀይ ሶስት ጎን",
             "image": "answer_red_triangle.png",
-            "is_correct": false
+            "is_correct": false,
+            "audio_filename": "303_q2_aC.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ሰማያዊ ሶስት ጎን",
+            "is_correct": false,
+            "audio_filename": "303_q2_aD.mp3"
           }
         ],
         "explanation_correct_amharic": "ትክክል! ዋና መንገድ ምልክት ቢጫ ዲያሞንድ (ካሬ ዙሪያ) ቅርጽ አለው።",
         "explanation_wrong_amharic": "ስህተት። ዋና መንገድ ምልክት ቢጫ ዲያሞንድ ቅርጽ አለው።",
-        "explanation_correct_audio": "q_main_rd_002_correct.mp3",
-        "explanation_wrong_audio": "q_main_rd_002_wrong.mp3"
+        "explanation_correct_audio": "303_q2_correct.mp3",
+        "explanation_wrong_audio": "303_q2_wrong.mp3"
       },
       {
         "id": "Q_MAIN_RD_003",
         "question_amharic": "ዋና መንገድ ሲያልቅ ምን ምልክት ሊሆን ይችላል?",
-        "question_audio": "q_main_rd_003.mp3",
+        "question_audio": "303_q3_question.mp3",
         "answers": [
           {
             "id": "A",
             "text_amharic": "ፍጥነት ጨምሩ",
             "image": "answer_speed_up.png",
-            "is_correct": false
+            "is_correct": false,
+            "audio_filename": "303_q3_aA.mp3"
           },
           {
             "id": "B",
             "text_amharic": "ዋና መንገድ ተጠናቋል ምልክት",
             "image": "answer_end_main_road.png",
-            "is_correct": true
+            "is_correct": true,
+            "audio_filename": "303_q3_aB.mp3"
           },
           {
             "id": "C",
             "text_amharic": "ቁም ምልክት",
             "image": "answer_stop.png",
-            "is_correct": false
+            "is_correct": false,
+            "audio_filename": "303_q3_aC.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ፍጥነት ጨምሩ",
+            "is_correct": false,
+            "audio_filename": "303_q3_aD.mp3"
           }
         ],
         "explanation_correct_amharic": "ትክክል! ዋና መንገድ ሲያልቅ ዋና መንገድ ተጠናቋል ምልክት ሊሆን ይችላል።",
         "explanation_wrong_amharic": "ስህተት። ዋና መንገድ ሲያልቅ ዋና መንገድ ተጠናቋል ምልክት ሊሆን ይችላል።",
-        "explanation_correct_audio": "q_main_rd_003_correct.mp3",
-        "explanation_wrong_audio": "q_main_rd_003_wrong.mp3"
+        "explanation_correct_audio": "303_q3_correct.mp3",
+        "explanation_wrong_audio": "303_q3_wrong.mp3"
       }
     ]
   },
   {
-    "id": "ROW_YIELD_ONCOMING",
+    "id": "SIGN_304",
     "topic_id": "right_of_way",
-    "order": 4,
-    "image_filename": "row_yield_oncoming.png",
-    "video_filename": "row_yield_oncoming_amharic.mp4",
-    "name_hebrew": "תן זכות קדימה לתנועה הנגדית",
-    "name_amharic": "ለተቃራኒ ቅድሚያ ስጥ",
-    "explanation_amharic": "ይህ ምልክት ሲያዩ ወደ ፊቱ ለሚመጣ ቅድሚያ ስጡ። ጠብቁ ቦታ ሲፈጠር ቀጥሉ።",
-    "audio_name_filename": "row_yield_oncoming_name.mp3",
-    "audio_explanation_filename": "row_yield_oncoming_explanation.mp3",
+    "order": 9,
+    "image_filename": "304.png",
+    "video_filename": "sign_304_amharic.mp4",
+    "name_hebrew": "סיום כביש ראשי",
+    "name_amharic": "ይህ ምልክት ወደፊት ባለው መንገድ ላይ ለሁሉም ተሽከርካሪዎች መግባት ክልክል መሆኑን ያሳያል።",
+    "explanation_amharic": "ይህ ምልክት ወደፊት ባለው መንገድ ወይም አካባቢ መግባት በፍጹም የተከለከለ መሆኑን ያመለክታል። አሽከርካሪው ይህንን ምልክት ሲያይ ወደዚያ መንገድ በፍጹም መግባት የለበትም፤ ወዲያውኑ ማቆም እና ሌላ አማራጭ መንገድ መፈለግ አለበት። ይህን ምልክት ችላ ማለት ከባድ የትራፊክ አደጋ፣ ቅጣት ወይም አደገኛ ሁኔታዎችን ሊያስከትል ይችላል።",
+    "audio_name_filename": "304_name.mp3",
+    "audio_explanation_filename": "304_explanation.mp3",
     "questions": [
       {
-        "id": "Q_YLD_ONC_001",
-        "question_amharic": "ለተቃራኒ ቅድሚያ ምልክት ሲያዩ ምን ያደርጋሉ?",
-        "question_audio": "q_yld_onc_001.mp3",
+        "id": "Q_304_001",
+        "question_amharic": "ዋና መንገድ አለቀ ምልክት ሲያዩ ምን ያደርጋሉ?",
+        "question_audio": "304_q1_question.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "ፈጠን ቀጥሉ",
-            "image": "answer_rush.png",
-            "is_correct": false
+            "text_amharic": "ቅድሚያ አሁንም አለ ቀጥሉ",
+            "is_correct": false,
+            "audio_filename": "304_q1_aA.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "ቆሙ ተቃራኒ ያስቀድሙ",
-            "image": "answer_stop_oncoming.png",
-            "is_correct": true
+            "text_amharic": "ቅድሚያ ምልክቶችን ፈልጉ",
+            "is_correct": true,
+            "audio_filename": "304_q1_aB.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "ምንም አያደርጉም",
-            "image": "answer_nothing.png",
-            "is_correct": false
+            "text_amharic": "ወዲያውኑ ቁሙ",
+            "is_correct": false,
+            "audio_filename": "304_q1_aC.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ፍጥነት ጨምሩ",
+            "is_correct": false,
+            "audio_filename": "304_q1_aD.mp3"
           }
         ],
-        "explanation_correct_amharic": "ትክክል! ለተቃራኒ ምልክት ሲያዩ ቆሙ ተቃራኒ ያስቀድሙ።",
-        "explanation_wrong_amharic": "ስህተት። ለተቃራኒ ምልክት ሲያዩ ቆሙ ተቃራኒ ያስቀድሙ።",
-        "explanation_correct_audio": "q_yld_onc_001_correct.mp3",
-        "explanation_wrong_audio": "q_yld_onc_001_wrong.mp3"
+        "explanation_correct_amharic": "ትክክል! ዋና መንገድ ሲጠናቀቅ ቅድሚያ ምልክቶችን ፈልጉ።",
+        "explanation_wrong_amharic": "ስህተት። ዋና መንገድ ሲጠናቀቅ ቅድሚያ ምልክቶችን ፈልጉ።",
+        "explanation_correct_audio": "304_q1_correct.mp3",
+        "explanation_wrong_audio": "304_q1_wrong.mp3"
       },
       {
-        "id": "Q_YLD_ONC_002",
-        "question_amharic": "ተቃራኒ ምልክት ምን ቅርጽ አለው?",
-        "question_audio": "q_yld_onc_002.mp3",
+        "id": "Q_304_002",
+        "question_amharic": "ዋና መንገድ አለቀ ምልክት ምን ቅርጽ አለው?",
+        "question_audio": "304_q2_question.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "ቀይ ሶስት ጎን ቅድሚያ ምልክት",
-            "image": "answer_yield_shape.png",
-            "is_correct": false
+            "text_amharic": "ቀይ ሶስት ጎን",
+            "is_correct": false,
+            "audio_filename": "304_q2_aA.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "ሁለት ቀስቶች ምልክት",
-            "image": "answer_two_arrows.png",
-            "is_correct": true
+            "text_amharic": "ነጭ ዲያሞንድ ጥቁር መስመር ጋር",
+            "is_correct": true,
+            "audio_filename": "304_q2_aB.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "ሰማያዊ ካሬ",
-            "image": "answer_blue_square.png",
-            "is_correct": false
+            "text_amharic": "ሰማያዊ ክብ",
+            "is_correct": false,
+            "audio_filename": "304_q2_aC.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ቢጫ ካሬ",
+            "is_correct": false,
+            "audio_filename": "304_q2_aD.mp3"
           }
         ],
-        "explanation_correct_amharic": "ትክክል! ለተቃራኒ ቅድሚያ ምልክት ሁለት ቀስቶች ያለው ምልክት ነው።",
-        "explanation_wrong_amharic": "ስህተት። ለተቃራኒ ቅድሚያ ምልክት ሁለት ቀስቶች ምልክት ነው።",
-        "explanation_correct_audio": "q_yld_onc_002_correct.mp3",
-        "explanation_wrong_audio": "q_yld_onc_002_wrong.mp3"
+        "explanation_correct_amharic": "ትክክል! ዋና መንገድ አለቀ ምልክት ነጭ ዲያሞንድ ላይ ጥቁር መስመር ያለው ነው።",
+        "explanation_wrong_amharic": "ስህተት። ዋና መንገድ አለቀ ምልክት ነጭ ዲያሞንድ ላይ ጥቁር መስመር ያለው ነው።",
+        "explanation_correct_audio": "304_q2_correct.mp3",
+        "explanation_wrong_audio": "304_q2_wrong.mp3"
       },
       {
-        "id": "Q_YLD_ONC_003",
-        "question_amharic": "ተቃራኒ ቅድሚያ ምልክት ጠባብ ቦታ ይሆናል?",
-        "question_audio": "q_yld_onc_003.mp3",
+        "id": "Q_304_003",
+        "question_amharic": "ዋና መንገድ ከጠናቀቀ በኋላ ቅድሚያ አለ?",
+        "question_audio": "304_q3_question.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "አይደለም ሰፊ ቦታ ብቻ",
-            "image": "answer_no.png",
-            "is_correct": false
+            "text_amharic": "አዎ አሁንም አለ",
+            "is_correct": false,
+            "audio_filename": "304_q3_aA.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "አዎ ጠባብ ቦታ ብዙ ጊዜ ይሆናል",
-            "image": "answer_yes_narrow.png",
-            "is_correct": true
+            "text_amharic": "አይደለም ቅድሚያ ተጠናቋል",
+            "is_correct": true,
+            "audio_filename": "304_q3_aB.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "ሀይዌይ ብቻ",
-            "image": "answer_highway_only.png",
-            "is_correct": false
+            "text_amharic": "ፍጥነት ካቀነሱ አለ",
+            "is_correct": false,
+            "audio_filename": "304_q3_aC.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ሌሊት ብቻ አለ",
+            "is_correct": false,
+            "audio_filename": "304_q3_aD.mp3"
           }
         ],
-        "explanation_correct_amharic": "ትክክል! ተቃራኒ ቅድሚያ ምልክት ጠባብ ቦታ ብዙ ጊዜ ይሆናል።",
-        "explanation_wrong_amharic": "ስህተት። ተቃራኒ ቅድሚያ ምልክት ጠባብ ቦታ ብዙ ጊዜ ይሆናል።",
-        "explanation_correct_audio": "q_yld_onc_003_correct.mp3",
-        "explanation_wrong_audio": "q_yld_onc_003_wrong.mp3"
-      }
-    ]
-  },
-  {
-    "id": "ROW_FOUR_WAY_STOP",
-    "topic_id": "right_of_way",
-    "order": 5,
-    "image_filename": "row_four_way_stop.png",
-    "video_filename": "row_four_way_stop_amharic.mp4",
-    "name_hebrew": "עצור 4 כיוונים",
-    "name_amharic": "አራት አቅጣጫ ቁም",
-    "explanation_amharic": "አራት አቅጣጫ ቁም ሲኖር ሁሉም ቆሙ። ቀደም ብሎ የቆመ ቀደም ብሎ ያልፋል።",
-    "audio_name_filename": "row_four_way_stop_name.mp3",
-    "audio_explanation_filename": "row_four_way_stop_explanation.mp3",
-    "questions": [
-      {
-        "id": "Q_4WAY_001",
-        "question_amharic": "አራት አቅጣጫ ቁም ሲኖር ቀድሞ የቆመ ምን ያደርጋል?",
-        "question_audio": "q_4way_001.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "ጠብቃል",
-            "image": "answer_waits.png",
-            "is_correct": false
-          },
-          {
-            "id": "B",
-            "text_amharic": "ቀድሞ ያልፋል",
-            "image": "answer_goes_first.png",
-            "is_correct": true
-          },
-          {
-            "id": "C",
-            "text_amharic": "ኋላ ያልፋል",
-            "image": "answer_goes_last.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! አራት አቅጣጫ ቁም ቀደም ብሎ የቆመ ቀደም ብሎ ያልፋል።",
-        "explanation_wrong_amharic": "ስህተት። አራት አቅጣጫ ቁም ቀደም ብሎ የቆመ ቀደም ብሎ ያልፋል።",
-        "explanation_correct_audio": "q_4way_001_correct.mp3",
-        "explanation_wrong_audio": "q_4way_001_wrong.mp3"
-      },
-      {
-        "id": "Q_4WAY_002",
-        "question_amharic": "አራት አቅጣጫ ቁም ሁለቱ አብሮ ቆሙ። ቅድሚያ ለማን?",
-        "question_audio": "q_4way_002.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "ለሁለቱም እኩል",
-            "image": "answer_equal.png",
-            "is_correct": false
-          },
-          {
-            "id": "B",
-            "text_amharic": "ከቀኝ ለሚጎዳ",
-            "image": "answer_right_side.png",
-            "is_correct": true
-          },
-          {
-            "id": "C",
-            "text_amharic": "ፈጣን ለሆነ",
-            "image": "answer_fastest.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! አብሮ ቆሙ ከቀኝ ያለ ቅድሚያ ይኖሮታል።",
-        "explanation_wrong_amharic": "ስህተት። አብሮ ቆሙ ከቀኝ ያለ ቅድሚያ ይኖሮታል።",
-        "explanation_correct_audio": "q_4way_002_correct.mp3",
-        "explanation_wrong_audio": "q_4way_002_wrong.mp3"
-      },
-      {
-        "id": "Q_4WAY_003",
-        "question_amharic": "አራት አቅጣጫ ቁም ሁሉም ቆሙ ምን ያደርጋሉ?",
-        "question_audio": "q_4way_003.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "ሁሉም አብሮ ያልፋሉ",
-            "image": "answer_all_go.png",
-            "is_correct": false
-          },
-          {
-            "id": "B",
-            "text_amharic": "አንዳንዱ ቅድሚያ ስርዓት ይጠቀሙ",
-            "image": "answer_take_turns.png",
-            "is_correct": true
-          },
-          {
-            "id": "C",
-            "text_amharic": "ሁሉም ቁሙ ፖሊስ ይጠብቁ",
-            "image": "answer_wait_police.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! አራት አቅጣጫ ቁም ቅድሚያ ስርዓት ዙሪያ ይጠቀሙ።",
-        "explanation_wrong_amharic": "ስህተት። አራት አቅጣጫ ቁም ቅድሚያ ስርዓት ዙሪያ ይጠቀሙ።",
-        "explanation_correct_audio": "q_4way_003_correct.mp3",
-        "explanation_wrong_audio": "q_4way_003_wrong.mp3"
-      }
-    ]
-  },
-  {
-    "id": "ROW_MERGE",
-    "topic_id": "right_of_way",
-    "order": 6,
-    "image_filename": "row_merge.png",
-    "video_filename": "row_merge_amharic.mp4",
-    "name_hebrew": "מיזוג נתיבים",
-    "name_amharic": "ዝርጋ መቀላቀያ",
-    "explanation_amharic": "ይህ ምልክት ሲያዩ ሁለት ዝርጋዎች አንድ ይሆናሉ ማለት ነው። ዝርጋ ሲቀላቀሉ ጥንቃቄ ያድርጉ።",
-    "audio_name_filename": "row_merge_name.mp3",
-    "audio_explanation_filename": "row_merge_explanation.mp3",
-    "questions": [
-      {
-        "id": "Q_MERGE_001",
-        "question_amharic": "ዝርጋ ሲቀላቀሉ ቅድሚያ ለማን ነው?",
-        "question_audio": "q_merge_001.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "ለሚቀላቀሉ",
-            "image": "answer_merging.png",
-            "is_correct": false
-          },
-          {
-            "id": "B",
-            "text_amharic": "ዋናውን ዝርጋ ለሚሄዱ",
-            "image": "answer_main_lane.png",
-            "is_correct": true
-          },
-          {
-            "id": "C",
-            "text_amharic": "ፈጣን ለሆነ",
-            "image": "answer_fastest.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! ዝርጋ ሲቀላቀሉ ዋናውን ዝርጋ ለሚሄዱ ቅድሚያ ስጡ።",
-        "explanation_wrong_amharic": "ስህተት። ዝርጋ ሲቀላቀሉ ዋናውን ዝርጋ ለሚሄዱ ቅድሚያ ስጡ።",
-        "explanation_correct_audio": "q_merge_001_correct.mp3",
-        "explanation_wrong_audio": "q_merge_001_wrong.mp3"
-      },
-      {
-        "id": "Q_MERGE_002",
-        "question_amharic": "ዝርጋ ሲቀላቀሉ ምን ምልክት ያብሩ?",
-        "question_audio": "q_merge_002.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "ምንም አያብሩ",
-            "image": "answer_nothing.png",
-            "is_correct": false
-          },
-          {
-            "id": "B",
-            "text_amharic": "ዘወር ምልክት ያብሩ",
-            "image": "answer_turn_signal.png",
-            "is_correct": true
-          },
-          {
-            "id": "C",
-            "text_amharic": "ሽቅብ ቁ",
-            "image": "answer_honk.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! ዝርጋ ሲቀያይሩ ዘወር ምልክት ያብሩ።",
-        "explanation_wrong_amharic": "ስህተት። ዝርጋ ሲቀያይሩ ዘወር ምልክት ያብሩ።",
-        "explanation_correct_audio": "q_merge_002_correct.mp3",
-        "explanation_wrong_audio": "q_merge_002_wrong.mp3"
-      },
-      {
-        "id": "Q_MERGE_003",
-        "question_amharic": "ዝርጋ ሲቀያይሩ ፍጥነት ምን ያደርጋሉ?",
-        "question_audio": "q_merge_003.mp3",
-        "answers": [
-          {
-            "id": "A",
-            "text_amharic": "ፈጠን ቀያይሩ",
-            "image": "answer_rush.png",
-            "is_correct": false
-          },
-          {
-            "id": "B",
-            "text_amharic": "ፍጥነት ቀነሱ ጠብቁ",
-            "image": "answer_slow_wait.png",
-            "is_correct": true
-          },
-          {
-            "id": "C",
-            "text_amharic": "ምንም አያደርጉም",
-            "image": "answer_nothing.png",
-            "is_correct": false
-          }
-        ],
-        "explanation_correct_amharic": "ትክክል! ዝርጋ ሲቀያይሩ ፍጥነት ቀነሱ ጠብቁ።",
-        "explanation_wrong_amharic": "ስህተት። ዝርጋ ሲቀያይሩ ፍጥነት ቀነሱ ጠብቁ።",
-        "explanation_correct_audio": "q_merge_003_correct.mp3",
-        "explanation_wrong_audio": "q_merge_003_wrong.mp3"
+        "explanation_correct_amharic": "ትክክል! ዋና መንገድ ሲጠናቀቅ ቅድሚያ የለም።",
+        "explanation_wrong_amharic": "ስህተት። ዋና መንገድ ሲጠናቀቅ ቅድሚያ የለም።",
+        "explanation_correct_audio": "304_q3_correct.mp3",
+        "explanation_wrong_audio": "304_q3_wrong.mp3"
       }
     ]
   },
@@ -2427,100 +2324,127 @@
     "id": "ROW_PRIORITY_ROAD",
     "topic_id": "right_of_way",
     "order": 7,
-    "image_filename": "row_priority_road.png",
+    "image_filename": "305.png",
     "video_filename": "row_priority_road_amharic.mp4",
     "name_hebrew": "כביש עיקרי",
-    "name_amharic": "ቅድሚያ መንገድ",
-    "explanation_amharic": "ይህ ምልክት ሲያዩ ይህ ቅድሚያ ያለው መንገድ ነው ማለት ነው። ሌሎቹ ቅድሚያ ይሰጥዎታሉ።",
-    "audio_name_filename": "row_priority_road_name.mp3",
-    "audio_explanation_filename": "row_priority_road_explanation.mp3",
+    "name_amharic": "ይህ ምልክት በመንገዱ ላይ ወደፊት መሄድ እንደሚፈቀድ ያመለክታል።",
+    "explanation_amharic": "ይህ ምልክት አሽከርካሪዎች በመንገዱ ላይ ያለ ምንም እገዳ ወደፊት እንዲቀጥሉ ወይም እንዲሄዱ የሚፈቅድ ምልክት ነው። አሽከርካሪው ይህንን ምልክት ሲያይ፣ ሌሎች የትራፊክ ህጎችን እና የደህንነት ሁኔታዎችን በማክበር በደህና ወደፊት መሄድ ይችላል። ይህን ምልክት ችላ ማለት የትራፊክ ፍሰትን ሊያስተጓጉል ወይም አላስፈላጊ መዘግየትን ሊያስከትል ይችላል።",
+    "audio_name_filename": "305_name.mp3",
+    "audio_explanation_filename": "305_explanation.mp3",
     "questions": [
       {
         "id": "Q_PRIO_RD_001",
         "question_amharic": "ቅድሚያ መንገድ ሲሆኑ ቅድሚያ ይኖሮታሉ?",
-        "question_audio": "q_prio_rd_001.mp3",
+        "question_audio": "305_q1_question.mp3",
         "answers": [
           {
             "id": "A",
             "text_amharic": "አዎ ቅድሚያ ይኖሮታሉ",
             "image": "answer_yes.png",
-            "is_correct": true
+            "is_correct": true,
+            "audio_filename": "305_q1_aA.mp3"
           },
           {
             "id": "B",
             "text_amharic": "አይኖሮታሁም",
             "image": "answer_no.png",
-            "is_correct": false
+            "is_correct": false,
+            "audio_filename": "305_q1_aB.mp3"
           },
           {
             "id": "C",
             "text_amharic": "ሁሉም እኩል",
             "image": "answer_equal.png",
-            "is_correct": false
+            "is_correct": false,
+            "audio_filename": "305_q1_aC.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ዘወር ቢያሳዩ ቅድሚያ",
+            "is_correct": false,
+            "audio_filename": "305_q1_aD.mp3"
           }
         ],
         "explanation_correct_amharic": "ትክክል! ቅድሚያ መንገድ ቅድሚያ ይኖሮታሉ።",
         "explanation_wrong_amharic": "ስህተት። ቅድሚያ መንገድ ቅድሚያ ይኖሮታሉ።",
-        "explanation_correct_audio": "q_prio_rd_001_correct.mp3",
-        "explanation_wrong_audio": "q_prio_rd_001_wrong.mp3"
+        "explanation_correct_audio": "305_q1_correct.mp3",
+        "explanation_wrong_audio": "305_q1_wrong.mp3"
       },
       {
         "id": "Q_PRIO_RD_002",
         "question_amharic": "ቅድሚያ ምልክት ምን ቅርጽ አለው?",
-        "question_audio": "q_prio_rd_002.mp3",
+        "question_audio": "305_q2_question.mp3",
         "answers": [
           {
             "id": "A",
             "text_amharic": "ቀይ ክብ",
             "image": "answer_red_circle.png",
-            "is_correct": false
+            "is_correct": false,
+            "audio_filename": "305_q2_aA.mp3"
           },
           {
             "id": "B",
             "text_amharic": "ቢጫ ዲያሞንድ",
             "image": "answer_yellow_diamond.png",
-            "is_correct": true
+            "is_correct": true,
+            "audio_filename": "305_q2_aB.mp3"
           },
           {
             "id": "C",
             "text_amharic": "ሰማያዊ ካሬ",
             "image": "answer_blue_square.png",
-            "is_correct": false
+            "is_correct": false,
+            "audio_filename": "305_q2_aC.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ቢጫ ሶስት ጎን",
+            "is_correct": false,
+            "audio_filename": "305_q2_aD.mp3"
           }
         ],
         "explanation_correct_amharic": "ትክክል! ቅድሚያ ምልክት ቢጫ ዲያሞንድ ቅርጽ አለው።",
         "explanation_wrong_amharic": "ስህተት። ቅድሚያ ምልክት ቢጫ ዲያሞንድ ቅርጽ አለው።",
-        "explanation_correct_audio": "q_prio_rd_002_correct.mp3",
-        "explanation_wrong_audio": "q_prio_rd_002_wrong.mp3"
+        "explanation_correct_audio": "305_q2_correct.mp3",
+        "explanation_wrong_audio": "305_q2_wrong.mp3"
       },
       {
         "id": "Q_PRIO_RD_003",
         "question_amharic": "ቅድሚያ ምልክት ሲያዩ ፍጥነት ቀነሱ?",
-        "question_audio": "q_prio_rd_003.mp3",
+        "question_audio": "305_q3_question.mp3",
         "answers": [
           {
             "id": "A",
             "text_amharic": "አዎ ፍጥነት ቀነሱ",
             "image": "answer_slow_yes.png",
-            "is_correct": false
+            "is_correct": false,
+            "audio_filename": "305_q3_aA.mp3"
           },
           {
             "id": "B",
             "text_amharic": "አያስፈልግ ቅድሚያ ይኖሮታሉ",
             "image": "answer_have_priority.png",
-            "is_correct": true
+            "is_correct": true,
+            "audio_filename": "305_q3_aB.mp3"
           },
           {
             "id": "C",
             "text_amharic": "ቁሙ",
             "image": "answer_stop.png",
-            "is_correct": false
+            "is_correct": false,
+            "audio_filename": "305_q3_aC.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ወዲያውኑ ቁሙ",
+            "is_correct": false,
+            "audio_filename": "305_q3_aD.mp3"
           }
         ],
         "explanation_correct_amharic": "ትክክል! ቅድሚያ ምልክት ሲያዩ ቅድሚያ ይኖሮታሉ ፍጥነት ቀነሱ አያስፈልግ።",
         "explanation_wrong_amharic": "ስህተት። ቅድሚያ ምልክት ቅድሚያ ይሰጥዎታል።",
-        "explanation_correct_audio": "q_prio_rd_003_correct.mp3",
-        "explanation_wrong_audio": "q_prio_rd_003_wrong.mp3"
+        "explanation_correct_audio": "305_q3_correct.mp3",
+        "explanation_wrong_audio": "305_q3_wrong.mp3"
       }
     ]
   },
@@ -2528,100 +2452,630 @@
     "id": "ROW_END_PRIORITY",
     "topic_id": "right_of_way",
     "order": 8,
-    "image_filename": "row_end_priority.png",
+    "image_filename": "306.png",
     "video_filename": "row_end_priority_amharic.mp4",
     "name_hebrew": "סיום כביש עיקרי",
-    "name_amharic": "ቅድሚያ ተጠናቋል",
-    "explanation_amharic": "ይህ ምልክት ሲያዩ ቅድሚያ ያለው ቦታ ተጠናቋል ማለት ነው። ወደ ቅድሚያ የሌለው ሁኔታ ተመለሱ።",
-    "audio_name_filename": "row_end_priority_name.mp3",
-    "audio_explanation_filename": "row_end_priority_explanation.mp3",
+    "name_amharic": "ይህ ምልክት እግረኞች መንገዱን የሚያቋርጡበት የተለየ ቦታ መኖሩን ያሳያል።",
+    "explanation_amharic": "ይህ ምልክት እግረኞች መንገዱን በደህና የሚያቋርጡበትን ቦታ ያመለክታል። አሽከርካሪዎች ይህንን ምልክት ሲያዩ ፍጥነታቸውን መቀነስ፣ ለእግረኞች ቅድሚያ መስጠት እና አስፈላጊ ከሆነም ሙሉ በሙሉ ማቆም አለባቸው። ይህን ህግ አለማክበር ለእግረኞች አደጋ ሊያስከትል፣ ከባድ ቅጣት ሊያስወጣ ወይም የመንጃ ፍቃድ ሊያስነጥቅ ይችላል።",
+    "audio_name_filename": "306_name.mp3",
+    "audio_explanation_filename": "306_explanation.mp3",
     "questions": [
       {
         "id": "Q_END_PRIO_001",
         "question_amharic": "ቅድሚያ ተጠናቋል ምልክት ሲያዩ ምን ያደርጋሉ?",
-        "question_audio": "q_end_prio_001.mp3",
+        "question_audio": "306_q1_question.mp3",
         "answers": [
           {
             "id": "A",
             "text_amharic": "ቅድሚያ ሊኖሮታሉ ይቀጥሉ",
             "image": "answer_continue_priority.png",
-            "is_correct": false
+            "is_correct": false,
+            "audio_filename": "306_q1_aA.mp3"
           },
           {
             "id": "B",
             "text_amharic": "ቅድሚያ ቁምን ምልክቶችን ፈልጉ",
             "image": "answer_find_signs.png",
-            "is_correct": true
+            "is_correct": true,
+            "audio_filename": "306_q1_aB.mp3"
           },
           {
             "id": "C",
             "text_amharic": "ፍጥነት ጨምሩ",
             "image": "answer_speed_up.png",
-            "is_correct": false
+            "is_correct": false,
+            "audio_filename": "306_q1_aC.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ወዲያውኑ ቁሙ",
+            "is_correct": false,
+            "audio_filename": "306_q1_aD.mp3"
           }
         ],
         "explanation_correct_amharic": "ትክክል! ቅድሚያ ተጠናቋል ሲያዩ አሁን ቅድሚያ ምልክቶችን ፈልጉ።",
         "explanation_wrong_amharic": "ስህተት። ቅድሚያ ተጠናቋል ሲያዩ አሁን ቅድሚያ ምልክቶችን ፈልጉ።",
-        "explanation_correct_audio": "q_end_prio_001_correct.mp3",
-        "explanation_wrong_audio": "q_end_prio_001_wrong.mp3"
+        "explanation_correct_audio": "306_q1_correct.mp3",
+        "explanation_wrong_audio": "306_q1_wrong.mp3"
       },
       {
         "id": "Q_END_PRIO_002",
         "question_amharic": "ቅድሚያ ምልክት ካለቀ ዋናውን ቅድሚያ አሁንም ይኖሮታሉ?",
-        "question_audio": "q_end_prio_002.mp3",
+        "question_audio": "306_q2_question.mp3",
         "answers": [
           {
             "id": "A",
             "text_amharic": "አዎ አሁንም",
             "image": "answer_yes.png",
-            "is_correct": false
+            "is_correct": false,
+            "audio_filename": "306_q2_aA.mp3"
           },
           {
             "id": "B",
             "text_amharic": "አይደለም ቅድሚያ ተጠናቋል",
             "image": "answer_no_priority.png",
-            "is_correct": true
+            "is_correct": true,
+            "audio_filename": "306_q2_aB.mp3"
           },
           {
             "id": "C",
             "text_amharic": "ፍጥነት ካቀነሱ ይኖሮታሉ",
             "image": "answer_if_slow.png",
-            "is_correct": false
+            "is_correct": false,
+            "audio_filename": "306_q2_aC.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "አንዳንድ ጊዜ ቅድሚያ አለ",
+            "is_correct": false,
+            "audio_filename": "306_q2_aD.mp3"
           }
         ],
         "explanation_correct_amharic": "ትክክል! ቅድሚያ ምልክት ካለቀ ቅድሚያ ተጠናቋል።",
         "explanation_wrong_amharic": "ስህተት። ቅድሚያ ምልክት ካለቀ ቅድሚያ ተጠናቋል።",
-        "explanation_correct_audio": "q_end_prio_002_correct.mp3",
-        "explanation_wrong_audio": "q_end_prio_002_wrong.mp3"
+        "explanation_correct_audio": "306_q2_correct.mp3",
+        "explanation_wrong_audio": "306_q2_wrong.mp3"
       },
       {
         "id": "Q_END_PRIO_003",
         "question_amharic": "ቅድሚያ ተጠናቋል ምልክት ምን ቅርጽ አለው?",
-        "question_audio": "q_end_prio_003.mp3",
+        "question_audio": "306_q3_question.mp3",
         "answers": [
           {
             "id": "A",
             "text_amharic": "ቢጫ ዲያሞንድ ቀይ X ጋር",
             "image": "answer_end_priority_shape.png",
-            "is_correct": true
+            "is_correct": true,
+            "audio_filename": "306_q3_aA.mp3"
           },
           {
             "id": "B",
             "text_amharic": "ቀይ ሶስት ጎን",
             "image": "answer_red_triangle.png",
-            "is_correct": false
+            "is_correct": false,
+            "audio_filename": "306_q3_aB.mp3"
           },
           {
             "id": "C",
             "text_amharic": "ሰማያዊ ክብ",
             "image": "answer_blue_circle.png",
-            "is_correct": false
+            "is_correct": false,
+            "audio_filename": "306_q3_aC.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ሁለት ቢጫ ክበቦች",
+            "is_correct": false,
+            "audio_filename": "306_q3_aD.mp3"
           }
         ],
         "explanation_correct_amharic": "ትክክል! ቅድሚያ ተጠናቋል ምልክት ቢጫ ዲያሞንድ ላይ ቀይ X ያለው ነው።",
         "explanation_wrong_amharic": "ስህተት። ቅድሚያ ተጠናቋል ምልክት ቢጫ ዲያሞንድ ላይ ቀይ X ያለው ምልክት ነው።",
-        "explanation_correct_audio": "q_end_prio_003_correct.mp3",
-        "explanation_wrong_audio": "q_end_prio_003_wrong.mp3"
+        "explanation_correct_audio": "306_q3_correct.mp3",
+        "explanation_wrong_audio": "306_q3_wrong.mp3"
+      }
+    ]
+  },
+  {
+    "id": "ROW_MERGE",
+    "topic_id": "right_of_way",
+    "order": 6,
+    "image_filename": "307.png",
+    "video_filename": "row_merge_amharic.mp4",
+    "name_hebrew": "מיזוג נתיבים",
+    "name_amharic": "ይህ ምልክት ከፊት ለፊት ለሚመጣ ተሽከርካሪ ቅድሚያ መስጠት እንዳለብዎት ያሳያል።",
+    "explanation_amharic": "ይህ ምልክት መንገዱ ጠባብ በመሆኑ በአንድ ጊዜ አንድ ተሽከርካሪ ብቻ ማለፍ እንደሚችል ያሳያል። ቀይ ቀስቱ ቅድሚያ ያላቸውን ተሽከርካሪዎች አቅጣጫ ሲያመለክት፣ ጥቁር ቀስቱ ደግሞ የእርስዎን አቅጣጫ ያሳያል፤ ስለዚህ ከፊት ለፊት ለሚመጡ ተሽከርካሪዎች ቅድሚያ መስጠት አለብዎት። አስፈላጊ ከሆነ ማቆም ወይም ፍጥነትዎን መቀነስ እና እነሱ እስኪያልፉ መጠበቅ አለብዎት። ይህንን ህግ ችላ ማለት የትራፊክ መጨናነቅን ወይም አደገኛ አደጋን ሊያስከትል ይችላል።",
+    "audio_name_filename": "307_name.mp3",
+    "audio_explanation_filename": "307_explanation.mp3",
+    "questions": [
+      {
+        "id": "Q_MERGE_001",
+        "question_amharic": "ዝርጋ ሲቀላቀሉ ቅድሚያ ለማን ነው?",
+        "question_audio": "307_q1_question.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ለሚቀላቀሉ",
+            "image": "answer_merging.png",
+            "is_correct": false,
+            "audio_filename": "307_q1_aA.mp3"
+          },
+          {
+            "id": "B",
+            "text_amharic": "ዋናውን ዝርጋ ለሚሄዱ",
+            "image": "answer_main_lane.png",
+            "is_correct": true,
+            "audio_filename": "307_q1_aB.mp3"
+          },
+          {
+            "id": "C",
+            "text_amharic": "ፈጣን ለሆነ",
+            "image": "answer_fastest.png",
+            "is_correct": false,
+            "audio_filename": "307_q1_aC.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ፈጣን ተሽከርካሪ ብቻ",
+            "is_correct": false,
+            "audio_filename": "307_q1_aD.mp3"
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ዝርጋ ሲቀላቀሉ ዋናውን ዝርጋ ለሚሄዱ ቅድሚያ ስጡ።",
+        "explanation_wrong_amharic": "ስህተት። ዝርጋ ሲቀላቀሉ ዋናውን ዝርጋ ለሚሄዱ ቅድሚያ ስጡ።",
+        "explanation_correct_audio": "307_q1_correct.mp3",
+        "explanation_wrong_audio": "307_q1_wrong.mp3"
+      },
+      {
+        "id": "Q_MERGE_002",
+        "question_amharic": "ዝርጋ ሲቀላቀሉ ምን ምልክት ያብሩ?",
+        "question_audio": "307_q2_question.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ምንም አያብሩ",
+            "image": "answer_nothing.png",
+            "is_correct": false,
+            "audio_filename": "307_q2_aA.mp3"
+          },
+          {
+            "id": "B",
+            "text_amharic": "ዘወር ምልክት ያብሩ",
+            "image": "answer_turn_signal.png",
+            "is_correct": true,
+            "audio_filename": "307_q2_aB.mp3"
+          },
+          {
+            "id": "C",
+            "text_amharic": "ሽቅብ ቁ",
+            "image": "answer_honk.png",
+            "is_correct": false,
+            "audio_filename": "307_q2_aC.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ሽቅብ ምልክት ያብሩ",
+            "is_correct": false,
+            "audio_filename": "307_q2_aD.mp3"
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ዝርጋ ሲቀያይሩ ዘወር ምልክት ያብሩ።",
+        "explanation_wrong_amharic": "ስህተት። ዝርጋ ሲቀያይሩ ዘወር ምልክት ያብሩ።",
+        "explanation_correct_audio": "307_q2_correct.mp3",
+        "explanation_wrong_audio": "307_q2_wrong.mp3"
+      },
+      {
+        "id": "Q_MERGE_003",
+        "question_amharic": "ዝርጋ ሲቀያይሩ ፍጥነት ምን ያደርጋሉ?",
+        "question_audio": "307_q3_question.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ፈጠን ቀያይሩ",
+            "image": "answer_rush.png",
+            "is_correct": false,
+            "audio_filename": "307_q3_aA.mp3"
+          },
+          {
+            "id": "B",
+            "text_amharic": "ፍጥነት ቀነሱ ጠብቁ",
+            "image": "answer_slow_wait.png",
+            "is_correct": true,
+            "audio_filename": "307_q3_aB.mp3"
+          },
+          {
+            "id": "C",
+            "text_amharic": "ምንም አያደርጉም",
+            "image": "answer_nothing.png",
+            "is_correct": false,
+            "audio_filename": "307_q3_aC.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ወዲያውኑ ቁሙ",
+            "is_correct": false,
+            "audio_filename": "307_q3_aD.mp3"
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ዝርጋ ሲቀያይሩ ፍጥነት ቀነሱ ጠብቁ።",
+        "explanation_wrong_amharic": "ስህተት። ዝርጋ ሲቀያይሩ ፍጥነት ቀነሱ ጠብቁ።",
+        "explanation_correct_audio": "307_q3_correct.mp3",
+        "explanation_wrong_audio": "307_q3_wrong.mp3"
+      }
+    ]
+  },
+  {
+    "id": "ROW_YIELD_ONCOMING",
+    "topic_id": "right_of_way",
+    "order": 4,
+    "image_filename": "308.png",
+    "video_filename": "row_yield_oncoming_amharic.mp4",
+    "name_hebrew": "תן זכות קדימה לתנועה הנגדית",
+    "name_amharic": "ይህ ምልክት ከፊት ለፊትህ ለሚመጣ ተሽከርካሪ ቅድሚያ መስጠት እንዳለብህ ያመለክታል።",
+    "explanation_amharic": "ይህ ምልክት መንገዱ ጠባብ በሆነበት ቦታ ላይ ከፊት ለፊትህ ለሚመጡ ተሽከርካሪዎች ቅድሚያ እንድትሰጥ ያዝዛል። ይህንን ምልክት ስታይ፣ ከፊትህ የሚመጣ ተሽከርካሪ ካለ እስኪያልፍ ድረስ መጠበቅ አለብህ። ይህንን ህግ አለማክበር አደጋ ሊያስከትል ወይም የትራፊክ ቅጣት ሊያስወርድብህ ይችላል።",
+    "audio_name_filename": "308_name.mp3",
+    "audio_explanation_filename": "308_explanation.mp3",
+    "questions": [
+      {
+        "id": "Q_YLD_ONC_001",
+        "question_amharic": "ለተቃራኒ ቅድሚያ ምልክት ሲያዩ ምን ያደርጋሉ?",
+        "question_audio": "308_q1_question.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ፈጠን ቀጥሉ",
+            "image": "answer_rush.png",
+            "is_correct": false,
+            "audio_filename": "308_q1_aA.mp3"
+          },
+          {
+            "id": "B",
+            "text_amharic": "ቆሙ ተቃራኒ ያስቀድሙ",
+            "image": "answer_stop_oncoming.png",
+            "is_correct": true,
+            "audio_filename": "308_q1_aB.mp3"
+          },
+          {
+            "id": "C",
+            "text_amharic": "ምንም አያደርጉም",
+            "image": "answer_nothing.png",
+            "is_correct": false,
+            "audio_filename": "308_q1_aC.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ሁሉም አብሮ ይሄዱ",
+            "is_correct": false,
+            "audio_filename": "308_q1_aD.mp3"
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ለተቃራኒ ምልክት ሲያዩ ቆሙ ተቃራኒ ያስቀድሙ።",
+        "explanation_wrong_amharic": "ስህተት። ለተቃራኒ ምልክት ሲያዩ ቆሙ ተቃራኒ ያስቀድሙ።",
+        "explanation_correct_audio": "308_q1_correct.mp3",
+        "explanation_wrong_audio": "308_q1_wrong.mp3"
+      },
+      {
+        "id": "Q_YLD_ONC_002",
+        "question_amharic": "ተቃራኒ ምልክት ምን ቅርጽ አለው?",
+        "question_audio": "308_q2_question.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ቀይ ሶስት ጎን ቅድሚያ ምልክት",
+            "image": "answer_yield_shape.png",
+            "is_correct": false,
+            "audio_filename": "308_q2_aA.mp3"
+          },
+          {
+            "id": "B",
+            "text_amharic": "ሁለት ቀስቶች ምልክት",
+            "image": "answer_two_arrows.png",
+            "is_correct": true,
+            "audio_filename": "308_q2_aB.mp3"
+          },
+          {
+            "id": "C",
+            "text_amharic": "ሰማያዊ ካሬ",
+            "image": "answer_blue_square.png",
+            "is_correct": false,
+            "audio_filename": "308_q2_aC.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ቀይ ሸካራ ክብ",
+            "is_correct": false,
+            "audio_filename": "308_q2_aD.mp3"
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ለተቃራኒ ቅድሚያ ምልክት ሁለት ቀስቶች ያለው ምልክት ነው።",
+        "explanation_wrong_amharic": "ስህተት። ለተቃራኒ ቅድሚያ ምልክት ሁለት ቀስቶች ምልክት ነው።",
+        "explanation_correct_audio": "308_q2_correct.mp3",
+        "explanation_wrong_audio": "308_q2_wrong.mp3"
+      },
+      {
+        "id": "Q_YLD_ONC_003",
+        "question_amharic": "ተቃራኒ ቅድሚያ ምልክት ጠባብ ቦታ ይሆናል?",
+        "question_audio": "308_q3_question.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "አይደለም ሰፊ ቦታ ብቻ",
+            "image": "answer_no.png",
+            "is_correct": false,
+            "audio_filename": "308_q3_aA.mp3"
+          },
+          {
+            "id": "B",
+            "text_amharic": "አዎ ጠባብ ቦታ ብዙ ጊዜ ይሆናል",
+            "image": "answer_yes_narrow.png",
+            "is_correct": true,
+            "audio_filename": "308_q3_aB.mp3"
+          },
+          {
+            "id": "C",
+            "text_amharic": "ሀይዌይ ብቻ",
+            "image": "answer_highway_only.png",
+            "is_correct": false,
+            "audio_filename": "308_q3_aC.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ሀይዌይ ላይ ብቻ",
+            "is_correct": false,
+            "audio_filename": "308_q3_aD.mp3"
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ተቃራኒ ቅድሚያ ምልክት ጠባብ ቦታ ብዙ ጊዜ ይሆናል።",
+        "explanation_wrong_amharic": "ስህተት። ተቃራኒ ቅድሚያ ምልክት ጠባብ ቦታ ብዙ ጊዜ ይሆናል።",
+        "explanation_correct_audio": "308_q3_correct.mp3",
+        "explanation_wrong_audio": "308_q3_wrong.mp3"
+      }
+    ]
+  },
+  {
+    "id": "SIGN_309",
+    "topic_id": "right_of_way",
+    "order": 10,
+    "image_filename": "309.png",
+    "video_filename": "sign_309_amharic.mp4",
+    "name_hebrew": "קדימה על פני התנועה הנגדית",
+    "name_amharic": "ይህ ምልክት እርስዎ የሚነዱበት መንገድ ዋና መንገድ እንደሆነ እና የትራፊክ ቅድሚያ እንዳለው ያሳያል።",
+    "explanation_amharic": "ይህ ምልክት እርስዎ በሚነዱበት መንገድ ላይ የትራፊክ ቅድሚያ እንዳለዎት ያሳውቃል። ሌሎች ከመንገድዎ ጋር የሚገናኙ መንገዶች ላይ ያሉ አሽከርካሪዎች ለእርስዎ መንገድ የመስጠት ግዴታ አለባቸው። ይህን ምልክት ሲያዩ፣ በመንገድዎ ላይ የቅድሚያ መብት ስላሎት ያለማቋረጥ መንዳት ይችላሉ። ሆኖም፣ ሌሎች አሽከርካሪዎች ቅድሚያውን ላይሰጡ ስለሚችሉ ሁልጊዜም ጥንቃቄ ማድረግ እና ለድንገተኛ ሁኔታዎች ዝግጁ መሆን አለብዎት። ይህን ምልክት ችላ ማለት ወይም ሌሎች አሽከርካሪዎች ቅድሚያዎን ካልሰጡ አደጋ ሊያስከትል ይችላል።",
+    "audio_name_filename": "309_name.mp3",
+    "audio_explanation_filename": "309_explanation.mp3",
+    "questions": [
+      {
+        "id": "Q_309_001",
+        "question_amharic": "ይህ ምልክት ሲያዩ ለማን ቅድሚያ ይስጣሉ?",
+        "question_audio": "309_q1_question.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ለእርስዎ ቅድሚያ አለ",
+            "is_correct": false,
+            "audio_filename": "309_q1_aA.mp3"
+          },
+          {
+            "id": "B",
+            "text_amharic": "ለተቃራኒ ትራፊክ ቅድሚያ ይስጡ",
+            "is_correct": true,
+            "audio_filename": "309_q1_aB.mp3"
+          },
+          {
+            "id": "C",
+            "text_amharic": "ሁሉም አብሮ ያልፋሉ",
+            "is_correct": false,
+            "audio_filename": "309_q1_aC.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ፈጣን ብቻ ያልፋል",
+            "is_correct": false,
+            "audio_filename": "309_q1_aD.mp3"
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት ለሚቃወሙ ቅድሚያ ይስጡ ማለት ነው።",
+        "explanation_wrong_amharic": "ስህተት። ይህ ምልክት ለሚቃወሙ ቅድሚያ ይስጡ ማለት ነው።",
+        "explanation_correct_audio": "309_q1_correct.mp3",
+        "explanation_wrong_audio": "309_q1_wrong.mp3"
+      },
+      {
+        "id": "Q_309_002",
+        "question_amharic": "ይህ ምልክት ብዙ ጊዜ የት ይገኛል?",
+        "question_audio": "309_q2_question.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ሰፊ ሀይዌይ ላይ",
+            "is_correct": false,
+            "audio_filename": "309_q2_aA.mp3"
+          },
+          {
+            "id": "B",
+            "text_amharic": "ጠባብ መንገድ ወይም ድልድይ ላይ",
+            "is_correct": true,
+            "audio_filename": "309_q2_aB.mp3"
+          },
+          {
+            "id": "C",
+            "text_amharic": "ክብ ዙሪያ ላይ",
+            "is_correct": false,
+            "audio_filename": "309_q2_aC.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ፓርኪንግ ላይ",
+            "is_correct": false,
+            "audio_filename": "309_q2_aD.mp3"
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ጠባብ መንገድ ወይም ድልድይ ላይ ቦታ ለአንድ ብቻ ስለሆነ ይቀመጣል።",
+        "explanation_wrong_amharic": "ስህተት። ጠባብ መንገድ ወይም ድልድይ ላይ ቦታ ለአንድ ብቻ ስለሆነ ይቀመጣል።",
+        "explanation_correct_audio": "309_q2_correct.mp3",
+        "explanation_wrong_audio": "309_q2_wrong.mp3"
+      },
+      {
+        "id": "Q_309_003",
+        "question_amharic": "ምልክቱ ምን ቀለም አለው?",
+        "question_audio": "309_q3_question.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ቀይ ካሬ",
+            "is_correct": false,
+            "audio_filename": "309_q3_aA.mp3"
+          },
+          {
+            "id": "B",
+            "text_amharic": "ሰማያዊ ካሬ ቀይ እና ነጭ ቀስቶች",
+            "is_correct": true,
+            "audio_filename": "309_q3_aB.mp3"
+          },
+          {
+            "id": "C",
+            "text_amharic": "ቢጫ ሶስት ጎን",
+            "is_correct": false,
+            "audio_filename": "309_q3_aC.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ነጭ ክብ",
+            "is_correct": false,
+            "audio_filename": "309_q3_aD.mp3"
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ምልክቱ ሰማያዊ ካሬ ሲሆን ቀይ ቀስት ወደ ተቃራኒ ነጭ ቀስት ወደ ፊት ነው።",
+        "explanation_wrong_amharic": "ስህተት። ምልክቱ ሰማያዊ ካሬ ሲሆን ቀይ ቀስት ወደ ተቃራኒ ነጭ ቀስት ወደ ፊት ነው።",
+        "explanation_correct_audio": "309_q3_correct.mp3",
+        "explanation_wrong_audio": "309_q3_wrong.mp3"
+      }
+    ]
+  },
+  {
+    "id": "ROW_ROUNDABOUT",
+    "topic_id": "right_of_way",
+    "order": 2,
+    "image_filename": "310.png",
+    "video_filename": "row_roundabout_amharic.mp4",
+    "name_hebrew": "כיכר - זכות קדימה",
+    "name_amharic": "ይህ ምልክት እርስዎ የነበሩበት ዋና መንገድ ወይም ቅድሚያ የመስጠት መብት ያለው መንገድ ማብቃቱን ያሳያል።",
+    "explanation_amharic": "ይህ ምልክት እርስዎ የነበሩበት መንገድ ቅድሚያ የመስጠት መብት ማብቃቱን ያመለክታል። ይህንን ምልክት ሲያዩ፣ ከዚህ በኋላ ቅድሚያ የመስጠት መብት እንደሌለዎት ማወቅ፣ ፍጥነትዎን መቀነስ እና ለሌሎች ተሽከርካሪዎች መንገድ ለመልቀቅ ዝግጁ መሆን አለብዎት። ይህንን ህግ አለማክበር አደጋ ሊያስከትል ወይም የትራፊክ ህግ ጥሰት ቅጣት ሊያስከትል ይችላል።",
+    "audio_name_filename": "310_name.mp3",
+    "audio_explanation_filename": "310_explanation.mp3",
+    "questions": [
+      {
+        "id": "Q_ROW_ROUND_001",
+        "question_amharic": "ክብ መንገድ ሲገቡ ቅድሚያ ለማን ነው?",
+        "question_audio": "310_q1_question.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "ለሚገቡ",
+            "image": "answer_entering.png",
+            "is_correct": false,
+            "audio_filename": "310_q1_aA.mp3"
+          },
+          {
+            "id": "B",
+            "text_amharic": "ለክብ ዉስጥ ላሉ",
+            "image": "answer_inside.png",
+            "is_correct": true,
+            "audio_filename": "310_q1_aB.mp3"
+          },
+          {
+            "id": "C",
+            "text_amharic": "ፈጣን ለሆነ",
+            "image": "answer_fastest.png",
+            "is_correct": false,
+            "audio_filename": "310_q1_aC.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ፖሊስ ሲፈቅድ ብቻ",
+            "is_correct": false,
+            "audio_filename": "310_q1_aD.mp3"
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ክብ መንገድ ሲገቡ ክብ ዉስጥ ለሚሄዱ ቅድሚያ ስጡ።",
+        "explanation_wrong_amharic": "ስህተት። ክብ ሲገቡ ክብ ዉስጥ ላሉ ቅድሚያ ስጡ።",
+        "explanation_correct_audio": "310_q1_correct.mp3",
+        "explanation_wrong_audio": "310_q1_wrong.mp3"
+      },
+      {
+        "id": "Q_ROW_ROUND_002",
+        "question_amharic": "ክብ ዉስጥ ሲሆኑ ቅድሚያ ይኖሮታል?",
+        "question_audio": "310_q2_question.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "አይኖሮታሁም",
+            "image": "answer_no.png",
+            "is_correct": false,
+            "audio_filename": "310_q2_aA.mp3"
+          },
+          {
+            "id": "B",
+            "text_amharic": "አዎ ቅድሚያ ይኖሮታሉ",
+            "image": "answer_yes.png",
+            "is_correct": true,
+            "audio_filename": "310_q2_aB.mp3"
+          },
+          {
+            "id": "C",
+            "text_amharic": "ሁሉም እኩል",
+            "image": "answer_equal.png",
+            "is_correct": false,
+            "audio_filename": "310_q2_aC.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ሁሌም ቅድሚያ ይኖሮታሉ",
+            "is_correct": false,
+            "audio_filename": "310_q2_aD.mp3"
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ክብ ዉስጥ ሲሆኑ ቅድሚያ ይኖሮታሉ ሚቀላቀሉ ጠብቁ።",
+        "explanation_wrong_amharic": "ስህተት። ክብ ዉስጥ ሲሆኑ ቅድሚያ ይኖሮታሉ።",
+        "explanation_correct_audio": "310_q2_correct.mp3",
+        "explanation_wrong_audio": "310_q2_wrong.mp3"
+      },
+      {
+        "id": "Q_ROW_ROUND_003",
+        "question_amharic": "ክብ ዉስጥ ፍጥነት ምን ያህል ይሆናል?",
+        "question_audio": "310_q3_question.mp3",
+        "answers": [
+          {
+            "id": "A",
+            "text_amharic": "90 ኪሜ",
+            "image": "answer_90.png",
+            "is_correct": false,
+            "audio_filename": "310_q3_aA.mp3"
+          },
+          {
+            "id": "B",
+            "text_amharic": "ዝቅተኛ ፍጥነት",
+            "image": "answer_low_speed.png",
+            "is_correct": true,
+            "audio_filename": "310_q3_aB.mp3"
+          },
+          {
+            "id": "C",
+            "text_amharic": "ምንም ፍጥነት ኖር ቢለው ይፈቀዳል",
+            "image": "answer_any_speed.png",
+            "is_correct": false,
+            "audio_filename": "310_q3_aC.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ምንም ፍጥነት ቅድሚያ ያሳጣሉ",
+            "is_correct": false,
+            "audio_filename": "310_q3_aD.mp3"
+          }
+        ],
+        "explanation_correct_amharic": "ትክክል! ክብ ዉስጥ ዝቅተኛ ፍጥነት ይሂዱ።",
+        "explanation_wrong_amharic": "ስህተት። ክብ ዉስጥ ዝቅተኛ ፍጥነት ሂዱ።",
+        "explanation_correct_audio": "310_q3_correct.mp3",
+        "explanation_wrong_audio": "310_q3_wrong.mp3"
       }
     ]
   },
@@ -2632,8 +3086,8 @@
     "image_filename": "safety_seatbelt.png",
     "video_filename": "safety_seatbelt_amharic.mp4",
     "name_hebrew": "חגורת בטיחות",
-    "name_amharic": "የደህንነት ቀበቶ",
-    "explanation_amharic": "የደህንነት ቀበቶ ሁልጊዜ ማሰር አስፈላጊ ነው። ሹፌርና ተሳፋሪዎች ሁሉ ቀበቶ ማሰር አለባቸው።",
+    "name_amharic": "የመቀመጫ ቀበቶ",
+    "explanation_amharic": "ሹፌሩ እና ተሳፋሪዎች የመቀመጫ ቀበቶ ማድረግ አለባቸው። ይህ ለደህንነትዎ ወሳኝ ነው።",
     "audio_name_filename": "safety_seatbelt_name.mp3",
     "audio_explanation_filename": "safety_seatbelt_explanation.mp3",
     "questions": [
@@ -2733,8 +3187,8 @@
     "image_filename": "safety_no_alcohol.png",
     "video_filename": "safety_no_alcohol_amharic.mp4",
     "name_hebrew": "אסור לשתות ולנהוג",
-    "name_amharic": "አልኮሆል ሳይጠጡ ሂዱ",
-    "explanation_amharic": "አልኮሆል ጠጥቶ ማሽከርከር ሕጋዊ አይደለም። አልኮሆሎ ቁጥጥር ያጠፋል አደጋ ያስከትላል።",
+    "name_amharic": "ጠጥቶ ማሽከርከር ክልክል",
+    "explanation_amharic": "አሽከርካሪዎች መጠጥ ጠጥተው ማሽከርከር የለባቸውም። ይህ ህግ የራስዎንና የሌሎችን ደህንነት ለመጠበቅ ነው።",
     "audio_name_filename": "safety_no_alcohol_name.mp3",
     "audio_explanation_filename": "safety_no_alcohol_explanation.mp3",
     "questions": [
@@ -2835,7 +3289,7 @@
     "video_filename": "safety_speed_camera_amharic.mp4",
     "name_hebrew": "מצלמת מהירות",
     "name_amharic": "የፍጥነት ካሜራ",
-    "explanation_amharic": "ይህ ምልክት ሲያዩ ፊት የፍጥነት ካሜራ አለ ማለት ነው። ፍጥነት ቀነሱ ቅጣት ላለማስፈሰሰ።",
+    "explanation_amharic": "እዚህ አካባቢ የፍጥነት መለኪያ ካሜራ አለ። በተፈቀደው ፍጥነት መንዳት አለብዎት።",
     "audio_name_filename": "safety_speed_camera_name.mp3",
     "audio_explanation_filename": "safety_speed_camera_explanation.mp3",
     "questions": [
@@ -2935,8 +3389,8 @@
     "image_filename": "safety_no_mobile.png",
     "video_filename": "safety_no_mobile_amharic.mp4",
     "name_hebrew": "אסור לדבר בסלולרי בנהיגה",
-    "name_amharic": "ስልክ አያውሩ ሲሄዱ",
-    "explanation_amharic": "ሲሄዱ ስልክ ማውራት ትኩረቱን ያስቀርናልና አደገኛ ነው። ሕጋዊ አይደለም ቅጣት ያስከትላል።",
+    "name_amharic": "ስልክ በመንዳት የተከለከለ",
+    "explanation_amharic": "መኪና ሲያሽከረክሩ በሞባይል ስልክ ማውራት የተከለከለ ነው። ይህ ለርስዎ እና ለሌሎች ደህንነት ወሳኝ ነው።",
     "audio_name_filename": "safety_no_mobile_name.mp3",
     "audio_explanation_filename": "safety_no_mobile_explanation.mp3",
     "questions": [

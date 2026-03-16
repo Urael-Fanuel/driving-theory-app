@@ -60,7 +60,21 @@ if (args.length < 2) {
 }
 
 const category = args[0];                // e.g. "warning"
-const SIGNS_DIR = join(__dirname, 'downloaded-signs', category);
+
+// Map category names to their Hebrew folder names in assets/images/
+const HEBREW_FOLDERS = {
+  'right_of_way':  'תמרורי זכות קדימה',
+  'prohibition':   'תמרורי איסורים והגבלות',
+  'public_transport': 'תמרורי תחבורה ציבורית',
+  'information_guidance': 'תמרורי מודיעין והדרכה',
+};
+
+// Use assets/images/{Hebrew folder} if it exists, otherwise scripts/downloaded-signs/{category}
+const hebrewFolder = HEBREW_FOLDERS[category];
+const assetsDir = hebrewFolder ? join(__dirname, '..', 'assets', 'images', hebrewFolder) : null;
+const SIGNS_DIR = (assetsDir && existsSync(assetsDir))
+  ? assetsDir
+  : join(__dirname, 'downloaded-signs', category);
 
 let signNumbers = [];
 for (const arg of args.slice(1)) {
@@ -81,10 +95,13 @@ console.log(`Storage: ${BUCKET}/${NEW_PREFIX}/  |  DB: signs.image_url updated\n
 let ok = 0, failed = 0;
 
 for (const num of signNumbers) {
-  const filename    = `${num}.png`;
-  const localPath   = join(SIGNS_DIR, filename);
-  const newPath     = `${NEW_PREFIX}/${filename}`;
-  const oldPath     = `${OLD_PREFIX}/${filename}`;
+  const filename  = `${num}.png`;
+  // Support both .png and .jpg source files
+  const localPath = existsSync(join(SIGNS_DIR, `${num}.png`))
+    ? join(SIGNS_DIR, `${num}.png`)
+    : join(SIGNS_DIR, `${num}.jpg`);
+  const newPath   = `${NEW_PREFIX}/${filename}`;
+  const oldPath   = `${OLD_PREFIX}/${filename}`;
 
   process.stdout.write(`  [${num}] `);
 
