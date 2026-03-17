@@ -52,39 +52,57 @@ const SYSTEM_INSTRUCTION = `\
 You are an expert driving instructor creating exam questions for Ethiopian immigrants learning Israeli traffic laws.
 Your audience has limited reading ability — write in clear, simple Amharic.
 
-Rules:
+STRICT RULES:
 - Create exactly 3 questions based ONLY on the explanation provided.
 - Each question must have exactly 4 answers (A, B, C, D) — exactly 1 correct.
-- Each answer must be a FULL SENTENCE — minimum 5 words. No short 2-3 word answers.
+- Questions must be SPECIFIC to THIS sign — not generic questions that could apply to any sign.
 - Questions must test practical understanding: what the driver must DO, when, and why.
-- Correct answer must be clearly correct per Israeli traffic law.
-- Wrong answers must be plausible but clearly incorrect.
-- explanation_correct_amharic: why the correct answer is right (1 sentence).
-- explanation_wrong_amharic: what the driver risks by choosing wrong (1 sentence).
-- Write in correct Amharic (fidel) spelling.
+
+ANSWER QUALITY — CRITICAL:
+- Each answer must be a COMPLETE, DETAILED sentence — minimum 8 words.
+- The CORRECT answer must state the FULL rule: first the main obligation, then any conditions or exceptions.
+  Example of WRONG format: "אם אין קו עצירה, לעצור לפני הצומת" — this is incomplete.
+  Example of CORRECT format: "חובה לעצור בקו העצירה, ואם אין קו עצירה — לעצור ממש לפני הצומת" — this is complete.
+- NEVER write a correct answer that starts with a condition ("if...") without first stating the main rule.
+- The correct answer must contain EVERYTHING the driver needs to know — no missing information.
+- Wrong answers must be plausible but clearly incorrect — full sentences, not fragments.
+- Do NOT write generic short answers — every answer must describe a specific, complete action.
+
+EXPLANATIONS:
+- explanation_correct_amharic: 1-2 sentences explaining exactly why the correct answer follows this sign's rule.
+- explanation_wrong_amharic: 1 sentence about the risk or consequence of choosing wrong.
+
+- Write in correct Amharic (fidel) spelling. Match the style of Israel Ministry of Transportation exams.
 - Return valid JSON only — no markdown, no extra text, no code fences.`;
 
 function buildPrompt(sign) {
-  return `Israeli traffic sign: ${sign.name_hebrew || sign.id}
+  return `Israeli traffic sign: "${sign.name_hebrew || sign.id}"
+Amharic sign name: "${sign.name_amharic || ''}"
 
-Here is the detailed Amharic explanation of this sign (already approved content):
+Detailed Amharic explanation of this sign (approved content):
 "${sign.explanation_amharic}"
 
-Based ONLY on this explanation, create exactly 3 exam questions in Amharic.
-Each question must have 4 answer choices (A, B, C, D) — exactly 1 correct.
+Based ONLY on this sign's explanation, create exactly 3 exam questions in Amharic.
+Each question must be SPECIFIC to THIS sign's meaning — not a generic driving question.
+
+IMPORTANT FOR CORRECT ANSWERS:
+- State the COMPLETE rule: main obligation first, then conditions/exceptions.
+- A correct answer like "if there is no stop line, stop before the intersection" is INCOMPLETE.
+- The complete version must be: "You must stop at the stop line; if there is no stop line, stop just before the intersection."
+- Every correct answer must leave the driver with NO missing information.
 
 Return JSON with this exact structure:
 {
   "questions": [
     {
-      "question_amharic": "question in Amharic?",
-      "explanation_correct_amharic": "why the correct answer is right",
-      "explanation_wrong_amharic": "what the driver risks by choosing wrong",
+      "question_amharic": "specific question about this sign in Amharic?",
+      "explanation_correct_amharic": "why the correct answer is right for this sign (1-2 sentences)",
+      "explanation_wrong_amharic": "what risk or consequence the driver faces by choosing wrong (1 sentence)",
       "answers": [
-        { "id": "A", "text_amharic": "full sentence — minimum 5 words", "is_correct": false },
-        { "id": "B", "text_amharic": "full sentence — minimum 5 words", "is_correct": true },
-        { "id": "C", "text_amharic": "full sentence — minimum 5 words", "is_correct": false },
-        { "id": "D", "text_amharic": "full sentence — minimum 5 words", "is_correct": false }
+        { "id": "A", "text_amharic": "complete sentence — minimum 8 words, specific to this sign", "is_correct": false },
+        { "id": "B", "text_amharic": "complete sentence — minimum 8 words, full rule including all conditions", "is_correct": true },
+        { "id": "C", "text_amharic": "complete sentence — minimum 8 words, specific to this sign", "is_correct": false },
+        { "id": "D", "text_amharic": "complete sentence — minimum 8 words, specific to this sign", "is_correct": false }
       ]
     },
     { "question_amharic": "...", "explanation_correct_amharic": "...", "explanation_wrong_amharic": "...", "answers": [...] },
