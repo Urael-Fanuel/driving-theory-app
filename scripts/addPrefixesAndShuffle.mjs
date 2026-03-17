@@ -41,14 +41,17 @@ function shuffleToPosition(answers, targetPos) {
   return arr;
 }
 
-// Even distribution: 10 signs × 3 questions → each of 4 positions gets 7-8
+// Even distribution: each of 4 positions gets equal share
 function getTargetPos(signIdx, qIdx) { return (signIdx * 3 + qIdx) % 4; }
 
 const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
 
+// Process prohibitions only — do NOT touch right_of_way or warning or regulatory
+const TOPICS_TO_PROCESS = ['prohibitions'];
+
 let signIdx = 0;
 const updated = data.map(sign => {
-  if (sign.topic_id !== 'right_of_way') return sign;
+  if (!TOPICS_TO_PROCESS.includes(sign.topic_id)) return sign;
   const si = signIdx++;
   return {
     ...sign,
@@ -80,7 +83,7 @@ fs.writeFileSync(filePath, JSON.stringify(updated, null, 2), 'utf8');
 
 // Verify
 const verify  = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-const rowSigns = verify.filter(s => s.topic_id === 'right_of_way');
+const rowSigns = verify.filter(s => TOPICS_TO_PROCESS.includes(s.topic_id));
 const dist = {card1:0,card2:0,card3:0,card4:0};
 rowSigns.forEach(s => s.questions.forEach(q => {
   dist[`card${q.answers.findIndex(a=>a.is_correct)+1}`]++;

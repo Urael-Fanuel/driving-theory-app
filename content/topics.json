@@ -7,7 +7,7 @@
     "color": "#C62828",
     "description_amharic": "እነዚህ ምልክቶች ህጋዊ ግዴታ ናቸው። መጣስ ቅጣት ያስከትላል።",
     "audio_intro": "topic_regulatory_intro.mp3",
-    "sign_count": 15,
+    "sign_count": 31,
     "display_order": 1
   },
   {
@@ -18,30 +18,8 @@
     "color": "#F57F17",
     "description_amharic": "እነዚህ ምልክቶች አደጋ ሊኖር እንደሚችል ያስጠነቅቃሉ። ጥንቃቄ ያስፈልጋል።",
     "audio_intro": "topic_warning_intro.mp3",
-    "sign_count": 12,
+    "sign_count": 53,
     "display_order": 2
-  },
-  {
-    "id": "information",
-    "name_amharic": "የመረጃ ምልክቶች",
-    "name_hebrew": "תמרורי מידע",
-    "icon": "🔵",
-    "color": "#1565C0",
-    "description_amharic": "እነዚህ ምልክቶች አስፈላጊ መረጃ ይሰጣሉ። አቅጣጫና አገልግሎቶችን ያሳያሉ።",
-    "audio_intro": "topic_information_intro.mp3",
-    "sign_count": 10,
-    "display_order": 3
-  },
-  {
-    "id": "road_markings",
-    "name_amharic": "የመንገድ ምልክቶች",
-    "name_hebrew": "סימוני כביש",
-    "icon": "🟡",
-    "color": "#F9A825",
-    "description_amharic": "እነዚህ ምልክቶች መንገድ ላይ ይሳሉ። መስመሮችና ቀስቶችን ያካትታሉ።",
-    "audio_intro": "topic_road_markings_intro.mp3",
-    "sign_count": 8,
-    "display_order": 4
   },
   {
     "id": "right_of_way",
@@ -51,18 +29,18 @@
     "color": "#2E7D32",
     "description_amharic": "እነዚህ ደንቦች ማን አስቀድሞ ማለፍ እንዳለበት ያሳያሉ። ጥቃቄ ያስፈልጋል።",
     "audio_intro": "topic_right_of_way_intro.mp3",
-    "sign_count": 8,
-    "display_order": 5
+    "sign_count": 10,
+    "display_order": 3
   },
   {
-    "id": "safety",
-    "name_amharic": "የደህንነት ደንቦች",
-    "name_hebrew": "בטיחות",
-    "icon": "🛡️",
-    "color": "#4A148C",
-    "description_amharic": "ደህንነትን ለማረጋገጥ አስፈላጊ ደንቦች። ሁሉም ሹፌሮች ማወቅ አለባቸው።",
-    "audio_intro": "topic_safety_intro.mp3",
-    "sign_count": 7,
-    "display_order": 6
+    "id": "prohibitions",
+    "name_amharic": "መከልከልና መገደብ የሚያሳዩ ምልክቶች",
+    "name_hebrew": "תמרורי איסורים והגבלות",
+    "icon": "🚫",
+    "color": "#B71C1C",
+    "description_amharic": "እነዚህ ምልክቶች የተወሰኑ ድርጊቶችን ይከለክላሉ ወይም ይገድባሉ። ህጉን ማክበር ግዴታ ነው።",
+    "audio_intro": "topic_prohibitions_intro.mp3",
+    "sign_count": 41,
+    "display_order": 4
   }
 ]
