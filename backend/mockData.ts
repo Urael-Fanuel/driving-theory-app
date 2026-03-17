@@ -135,7 +135,7 @@ export const questions: DBQuestion[] = rawSigns.flatMap(sign =>
     answers: q.answers.map(a => ({
       id:             a.id as 'A' | 'B' | 'C',
       text_amharic:   a.text_amharic,
-      image_url:      localImage(a.image),
+      image_url:      a.image ? localImage(a.image) : null,
       audio_url:      localAudio(`answer_${q.id}_${a.id}.mp3`),
       is_correct:     a.is_correct,
     })),

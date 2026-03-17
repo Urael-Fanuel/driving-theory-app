@@ -68,36 +68,54 @@ Strict rules — follow all without exception:
    b. Exactly what the driver MUST DO — specific actions
    c. Consequence of ignoring it (danger, fine, accident)
 
-3. Write in clear, simple Amharic that any ordinary adult can understand — no jargon.
-4. Use a respectful, moderately formal tone — NOT street slang, NOT bureaucratic language.
-5. Be 100% accurate to the Israeli Highway Code — never add or omit meaning.
-6. Use correct Amharic spelling and diacritics (fidel) — this is critical.
-7. Return valid JSON only — no markdown, no extra text, no code fences.`;
+3. questions: Exactly 3 questions that test understanding of THIS specific sign.
+   Each question must have exactly 4 answers (A, B, C, D) — exactly 1 correct.
+   Rules for questions:
+   - Questions must be directly about what this sign means and what the driver must do
+   - Each answer must be a FULL SENTENCE (not 2-3 words) — minimum 5 words
+   - Correct answer must be clearly correct per Israeli traffic law
+   - Wrong answers must be plausible but clearly wrong
+   - explanation_correct_amharic: why the correct answer is right (1 sentence)
+   - explanation_wrong_amharic: what the driver risks by choosing wrong (1 sentence)
+
+4. Write in clear, simple Amharic that any ordinary adult can understand — no jargon.
+5. Use a respectful, moderately formal tone — NOT street slang, NOT bureaucratic language.
+6. Be 100% accurate to the Israeli Highway Code — never add or omit meaning.
+7. Use correct Amharic spelling and diacritics (fidel) — this is critical.
+8. Return valid JSON only — no markdown, no extra text, no code fences.`;
 
 function buildPrompt(sign) {
   const signNum = sign.image_filename?.replace(/\.(png|jpg)$/i, '');
   const isNumeric = signNum && /^\d+$/.test(signNum);
 
   if (isNumeric) {
-    // For numbered signs: send the image + number.
-    // Gemini sees the actual sign image AND knows the official Israeli number.
     return `This is Israeli traffic sign number ${signNum} (from the Israeli Highway Code).
 
-Look at the image of this sign and use your knowledge of Israeli traffic laws (תקנות התעבורה) to write educational Amharic content for Ethiopian immigrants learning to drive in Israel.
+Look at the image and use your knowledge of Israeli traffic laws (תקנות התעבורה) to write complete educational Amharic content for Ethiopian immigrants learning to drive in Israel.
 
-Teach the learner:
-1. What this sign means (its purpose on the road)
-2. Exactly what the driver MUST DO when they see it
-3. Why it matters / consequence of ignoring it
-
-Return JSON:
+Return JSON with this exact structure:
 {
-  "name_amharic": "...",
-  "explanation_amharic": "..."
+  "name_amharic": "full descriptive sentence up to 15 words",
+  "explanation_amharic": "2-3 sentences: meaning + what driver must do + consequence",
+  "questions": [
+    {
+      "question_amharic": "question in Amharic?",
+      "explanation_correct_amharic": "why correct answer is right",
+      "explanation_wrong_amharic": "what the driver risks by choosing wrong",
+      "answers": [
+        { "id": "A", "text_amharic": "full sentence answer", "is_correct": false },
+        { "id": "B", "text_amharic": "full sentence answer", "is_correct": true },
+        { "id": "C", "text_amharic": "full sentence answer", "is_correct": false },
+        { "id": "D", "text_amharic": "full sentence answer", "is_correct": false }
+      ]
+    },
+    { "question_amharic": "...", "explanation_correct_amharic": "...", "explanation_wrong_amharic": "...", "answers": [...] },
+    { "question_amharic": "...", "explanation_correct_amharic": "...", "explanation_wrong_amharic": "...", "answers": [...] }
+  ]
 }`;
   }
 
-  // Fallback for non-numeric signs (semantic IDs)
+  // Fallback for non-numeric signs (semantic IDs) — name + explanation only
   return `Write educational Amharic content for this Israeli traffic sign.
 
 Hebrew sign name: ${sign.name_hebrew}
@@ -178,6 +196,22 @@ async function callGemini(sign, attempt = 1) {
 
   if (!parsed.name_amharic || !parsed.explanation_amharic) {
     throw new Error(`Missing fields in response: ${JSON.stringify(parsed)}`);
+  }
+
+  // Validate questions if present
+  if (parsed.questions) {
+    if (!Array.isArray(parsed.questions) || parsed.questions.length !== 3) {
+      throw new Error(`questions must be array of 3, got: ${parsed.questions?.length}`);
+    }
+    for (const q of parsed.questions) {
+      if (!q.question_amharic || !Array.isArray(q.answers) || q.answers.length !== 4) {
+        throw new Error(`Invalid question structure: ${JSON.stringify(q).slice(0, 100)}`);
+      }
+      const correctCount = q.answers.filter(a => a.is_correct).length;
+      if (correctCount !== 1) {
+        throw new Error(`Each question must have exactly 1 correct answer, got ${correctCount}`);
+      }
+    }
   }
 
   return parsed;
@@ -267,31 +301,63 @@ async function main() {
 
     const nameChanged = result.name_amharic        !== sign.name_amharic;
     const explChanged = result.explanation_amharic  !== sign.explanation_amharic;
+    const hasNewQuestions = Array.isArray(result.questions) && result.questions.length === 3;
 
-    if (!nameChanged && !explChanged) {
+    if (!nameChanged && !explChanged && !hasNewQuestions) {
       process.stdout.write(`✓  (unchanged)\n`);
       unchanged++;
     } else {
-      process.stdout.write(`✏️  changed\n`);
+      process.stdout.write(`✏️  changed${hasNewQuestions ? ' + questions' : ''}\n`);
       changed++;
 
       // Collect diff
       const diff = formatDiff('name_amharic', sign.name_amharic, result.name_amharic)
                  + formatDiff('explanation_amharic', sign.explanation_amharic, result.explanation_amharic);
-      if (diff) diffLines.push(`  ${sign.id} (${sign.name_he}):\n${diff}`);
+      if (diff) diffLines.push(`  ${sign.id} (${sign.name_hebrew}):\n${diff}`);
 
-      // Track audio files to delete
-      if (nameChanged && sign.audio_name_filename) {
-        audioToDelete.push(sign.audio_name_filename);
-      }
-      if (explChanged && sign.audio_explanation_filename) {
-        audioToDelete.push(sign.audio_explanation_filename);
+      // Track audio files to delete (name + explanation)
+      if (nameChanged && sign.audio_name_filename) audioToDelete.push(sign.audio_name_filename);
+      if (explChanged && sign.audio_explanation_filename) audioToDelete.push(sign.audio_explanation_filename);
+
+      // Track old question audio files
+      if (hasNewQuestions && sign.questions) {
+        for (const q of sign.questions) {
+          if (q.question_audio) audioToDelete.push(q.question_audio);
+          if (q.explanation_correct_audio) audioToDelete.push(q.explanation_correct_audio);
+          if (q.explanation_wrong_audio) audioToDelete.push(q.explanation_wrong_audio);
+          for (const a of (q.answers || [])) {
+            if (a.audio_filename) audioToDelete.push(a.audio_filename);
+          }
+        }
       }
 
-      // Apply changes (even in dry-run — to signs in memory, not written to disk)
+      // Apply changes
       if (!DRY_RUN) {
         sign.name_amharic        = result.name_amharic;
         sign.explanation_amharic = result.explanation_amharic;
+
+        // Apply new questions with auto-generated IDs and audio filenames
+        if (hasNewQuestions) {
+          const signNum = sign.image_filename?.replace(/\.(png|jpg)$/i, '');
+          sign.questions = result.questions.map((q, qi) => {
+            const qKey = `${signNum}_q${qi + 1}`;
+            return {
+              id: qKey,
+              question_amharic: q.question_amharic,
+              question_audio: `${qKey}_question.mp3`,
+              explanation_correct_amharic: q.explanation_correct_amharic,
+              explanation_wrong_amharic: q.explanation_wrong_amharic,
+              explanation_correct_audio: `${qKey}_correct.mp3`,
+              explanation_wrong_audio: `${qKey}_wrong.mp3`,
+              answers: q.answers.map(a => ({
+                id: a.id,
+                text_amharic: a.text_amharic,
+                is_correct: a.is_correct,
+                audio_filename: `answer_${qKey}_${a.id}.mp3`,
+              })),
+            };
+          });
+        }
       }
     }
 

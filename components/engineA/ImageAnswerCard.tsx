@@ -126,9 +126,7 @@ export function ImageAnswerCard({
             />
           ) : (
             // Placeholder if no image
-            <View style={styles.imagePlaceholder}>
-              <Text style={styles.imagePlaceholderText}>—</Text>
-            </View>
+            <View style={styles.imagePlaceholder} />
           )}
         </View>
 
@@ -189,7 +187,7 @@ const styles = StyleSheet.create({
     flex:            1,
     justifyContent:  'center',
     alignItems:      'center',
-    backgroundColor: Colors.surface,
+    backgroundColor: '#FFFFFF',
   },
   imagePlaceholderText: {
     fontSize: 24,

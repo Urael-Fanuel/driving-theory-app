@@ -200,7 +200,8 @@ async function generateAll(): Promise<void> {
 
   // Strip UTF-8 BOM if present
   const stripBOM = (s: string) => s.charCodeAt(0) === 0xFEFF ? s.slice(1) : s;
-  const signs:  Sign[]  = JSON.parse(stripBOM(fs.readFileSync(SIGNS_PATH,  'utf-8')));
+  const rawSigns = JSON.parse(stripBOM(fs.readFileSync(SIGNS_PATH, 'utf-8')));
+  const signs: Sign[] = Array.isArray(rawSigns) ? rawSigns : rawSigns.signs ?? Object.values(rawSigns);
   const topics: Topic[] = JSON.parse(stripBOM(fs.readFileSync(TOPICS_PATH, 'utf-8')));
 
   const startTime = Date.now();

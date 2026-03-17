@@ -1,12 +1,10 @@
 /**
  * scripts/deleteOldQuestions.mjs
  *
- * Deletes outdated 3-answer questions from Supabase.
- * New questions have 4 answers. Old questions (3 answers) are leftover data
- * from before the content was updated. This script removes them.
+ * Deletes questions from Supabase DB for a specific range of sign numbers.
  *
- * Run:
- *   node --env-file=.env scripts/deleteOldQuestions.mjs
+ * Usage:
+ *   node --env-file=.env scripts/deleteOldQuestions.mjs --from=301 --to=310
  */
 
 import { createClient } from '@supabase/supabase-js';
@@ -30,8 +28,8 @@ if (!process.env.EXPO_PUBLIC_SUPABASE_URL) {
 }
 
 const SUPABASE_URL = process.env.EXPO_PUBLIC_SUPABASE_URL;
-const SUPABASE_KEY = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY
-                  || process.env.SUPABASE_SERVICE_KEY;
+const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY
+                  || process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY;
 
 if (!SUPABASE_URL || !SUPABASE_KEY) {
   console.error('❌  Missing SUPABASE URL or KEY in .env');
@@ -40,60 +38,41 @@ if (!SUPABASE_URL || !SUPABASE_KEY) {
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 
+// ─── Args ─────────────────────────────────────────────────────────────────────
+const fromArg = process.argv.find(a => a.startsWith('--from='));
+const toArg   = process.argv.find(a => a.startsWith('--to='));
+
+if (!fromArg || !toArg) {
+  console.error('❌  Usage: node --env-file=.env scripts/deleteOldQuestions.mjs --from=301 --to=310');
+  process.exit(1);
+}
+
+const fromNum = parseInt(fromArg.split('=')[1]);
+const toNum   = parseInt(toArg.split('=')[1]);
+
 // ─── Main ─────────────────────────────────────────────────────────────────────
 
 async function main() {
-  console.log('🔍  Fetching all questions from Supabase...');
+  // Build list of all question IDs for this range (3 per sign)
+  const ids = [];
+  for (let n = fromNum; n <= toNum; n++) {
+    ids.push(`${n}_q1`, `${n}_q2`, `${n}_q3`);
+  }
 
-  const { data: allQuestions, error: fetchError } = await supabase
+  console.log(`\n🗑️   Deleting questions for signs ${fromNum}–${toNum} (${ids.length} IDs)...`);
+  console.log(`     IDs: ${ids.join(', ')}`);
+
+  const { error } = await supabase
     .from('questions')
-    .select('id, answers');
+    .delete()
+    .in('id', ids);
 
-  if (fetchError) {
-    console.error('❌  Failed to fetch questions:', fetchError.message);
+  if (error) {
+    console.error(`❌  Delete failed: ${error.message}`);
     process.exit(1);
   }
 
-  console.log(`📦  Total questions in DB: ${allQuestions.length}`);
-
-  // Find questions with fewer than 4 answers (old format)
-  const oldIds = allQuestions
-    .filter(q => {
-      const answers = typeof q.answers === 'string'
-        ? JSON.parse(q.answers)
-        : q.answers;
-      return Array.isArray(answers) && answers.length < 4;
-    })
-    .map(q => q.id);
-
-  console.log(`🗑️   Found ${oldIds.length} old questions (< 4 answers) to delete`);
-  console.log(`✅  Keeping ${allQuestions.length - oldIds.length} new questions (4 answers)`);
-
-  if (oldIds.length === 0) {
-    console.log('✅  Nothing to delete. DB is already clean.');
-    return;
-  }
-
-  // Delete in batches of 100 to avoid URL length limits
-  const BATCH = 100;
-  let deleted = 0;
-  for (let i = 0; i < oldIds.length; i += BATCH) {
-    const batch = oldIds.slice(i, i + BATCH);
-    const { error: delError } = await supabase
-      .from('questions')
-      .delete()
-      .in('id', batch);
-
-    if (delError) {
-      console.error(`❌  Error deleting batch ${i}–${i + BATCH}:`, delError.message);
-    } else {
-      deleted += batch.length;
-      console.log(`   Deleted ${deleted}/${oldIds.length}...`);
-    }
-  }
-
-  console.log(`\n✅  Done! Deleted ${deleted} old questions.`);
-  console.log(`📊  DB now has ${allQuestions.length - deleted} questions (all with 4 answers).`);
+  console.log(`✅  Done! Deleted questions for signs ${fromNum}–${toNum} from DB.`);
 }
 
 main().catch(err => {
