@@ -72,10 +72,10 @@ export default function EngineAHomeScreen() {
 
   const handleTopicPress = (topic: DBTopic) => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+    // Play topic name audio so non-readers know which category they entered
+    const nameAudioUrl = `${_AUDIO_BASE}/topic_${topic.id}_name.mp3`;
+    playAudio(nameAudioUrl).catch(() => {});
     router.push(`/(engineA)/topic/${topic.id}`);
-    if (topic.audio_intro_url) {
-      playAudio(topic.audio_intro_url).catch(() => {});
-    }
   };
 
   if (loading) return <LoadingScreen />;
