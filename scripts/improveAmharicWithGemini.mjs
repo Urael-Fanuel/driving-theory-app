@@ -139,6 +139,7 @@ const IMAGE_FOLDERS = [
   join(ROOT, 'assets', 'images', 'תמרורי איסורים והגבלות'),
   join(ROOT, 'assets', 'images', 'תמרורי מודיעין והדרכה'),
   join(ROOT, 'assets', 'images', 'תמרורי תחבורה ציבורית'),
+  join(ROOT, 'assets', 'images', 'תמרורי רמזורים ובקרת נתיבים'),
 ];
 
 function loadSignImage(sign) {

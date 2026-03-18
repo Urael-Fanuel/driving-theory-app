@@ -64,5 +64,16 @@
     "audio_intro": "topic_public_transport_intro.mp3",
     "sign_count": 16,
     "display_order": 6
+  },
+  {
+    "id": "traffic_lights",
+    "name_amharic": "የትራፊክ መብራቶች እና የመንገድ ቁጥጥር ምልክቶች",
+    "name_hebrew": "תמרורי רמזורים ובקרת נתיבים",
+    "icon": "🚦",
+    "color": "#E65100",
+    "description_amharic": "እነዚህ ምልክቶች የትራፊክ መብራቶችን እና የመንገድ ቁጥጥርን የሚመለከቱ ናቸው።",
+    "audio_intro": "topic_traffic_lights_intro.mp3",
+    "sign_count": 29,
+    "display_order": 7
   }
 ]

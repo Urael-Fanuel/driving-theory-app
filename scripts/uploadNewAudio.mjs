@@ -164,6 +164,7 @@ function findImagePath(filename) {
     join(IMAGES_DIR, 'תמרורי איסורים והגבלות', filename),
     join(IMAGES_DIR, 'תמרורי מודיעין והדרכה', filename),
     join(IMAGES_DIR, 'תמרורי תחבורה ציבורית', filename),
+    join(IMAGES_DIR, 'תמרורי רמזורים ובקרת נתיבים', filename),
   ];
   return candidates.find(p => existsSync(p)) ?? null;
 }
