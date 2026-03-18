@@ -166,6 +166,7 @@ function findImagePath(filename) {
     join(IMAGES_DIR, 'תמרורי תחבורה ציבורית', filename),
     join(IMAGES_DIR, 'תמרורי רמזורים ובקרת נתיבים', filename),
     join(IMAGES_DIR, 'תמרורי סימון על פני הדרך', filename),
+    join(IMAGES_DIR, 'תמרורים באתר עבודה', filename),
   ];
   return candidates.find(p => existsSync(p)) ?? null;
 }

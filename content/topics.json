@@ -86,5 +86,16 @@
     "audio_intro": "topic_road_markings_intro.mp3",
     "sign_count": 21,
     "display_order": 8
+  },
+  {
+    "id": "work_site",
+    "name_amharic": "የመንገድ ሥራ ቦታ ምልክቶች",
+    "name_hebrew": "תמרורים באתר עבודה",
+    "icon": "🚧",
+    "color": "#FF6F00",
+    "description_amharic": "እነዚህ ምልክቶች በመንገድ ሥራ ቦታዎች ላይ ሾፌሮችን ያስጠነቅቃሉ እና ደህንነቱ የተጠበቀ ሁኔታ ያሳያሉ።",
+    "audio_intro": "topic_work_site_intro.mp3",
+    "sign_count": 35,
+    "display_order": 9
   }
 ]
