@@ -124,7 +124,6 @@ export default function EngineAHomeScreen() {
           contentContainerStyle={styles.grid}
           columnWrapperStyle={styles.row}
           showsVerticalScrollIndicator={false}
-          scrollEnabled={false}
         />
 
         {/* Bottom action buttons — Exam and Progress */}
