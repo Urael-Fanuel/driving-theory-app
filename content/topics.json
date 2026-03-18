@@ -53,5 +53,16 @@
     "audio_intro": "topic_information_guidance_intro.mp3",
     "sign_count": 40,
     "display_order": 5
+  },
+  {
+    "id": "public_transport",
+    "name_amharic": "የህዝብ ማመላለሻ ትራፊክ ምልክቶች",
+    "name_hebrew": "תמרורי תחבורה ציבורית",
+    "icon": "🚌",
+    "color": "#00695C",
+    "description_amharic": "እነዚህ ምልክቶች ለህዝብ ማመላለሻ ተሽከርካሪዎች እና መንገደኞች የሚሰጡ ልዩ ምልክቶች ናቸው።",
+    "audio_intro": "topic_public_transport_intro.mp3",
+    "sign_count": 16,
+    "display_order": 6
   }
 ]

@@ -46,8 +46,8 @@ function getTargetPos(signIdx, qIdx) { return (signIdx * 3 + qIdx) % 4; }
 
 const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
 
-// Process information_guidance only — do NOT touch right_of_way, warning, regulatory, or prohibitions
-const TOPICS_TO_PROCESS = ['information_guidance'];
+// Process public_transport only — do NOT touch right_of_way, warning, regulatory, prohibitions, or information_guidance
+const TOPICS_TO_PROCESS = ['public_transport'];
 
 let signIdx = 0;
 const updated = data.map(sign => {
