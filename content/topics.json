@@ -75,5 +75,16 @@
     "audio_intro": "topic_traffic_lights_intro.mp3",
     "sign_count": 29,
     "display_order": 7
+  },
+  {
+    "id": "road_markings",
+    "name_amharic": "በመንገድ ላይ የሚሳሉ ምልክቶች",
+    "name_hebrew": "תמרורי סימון על פני הדרך",
+    "icon": "🛣️",
+    "color": "#37474F",
+    "description_amharic": "እነዚህ ምልክቶች በመንገዱ ላይ የሚሳሉ እና ለአሽከርካሪዎች አቅጣጫ የሚሰጡ ናቸው።",
+    "audio_intro": "topic_road_markings_intro.mp3",
+    "sign_count": 21,
+    "display_order": 8
   }
 ]
