@@ -162,6 +162,7 @@ function findImagePath(filename) {
     join(IMAGES_DIR, 'תמרורי הוריה', filename),
     join(IMAGES_DIR, 'תמרורי זכות קדימה', filename),
     join(IMAGES_DIR, 'תמרורי איסורים והגבלות', filename),
+    join(IMAGES_DIR, 'תמרורי מודיעין והדרכה', filename),
   ];
   return candidates.find(p => existsSync(p)) ?? null;
 }

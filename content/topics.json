@@ -42,5 +42,16 @@
     "audio_intro": "topic_prohibitions_intro.mp3",
     "sign_count": 41,
     "display_order": 4
+  },
+  {
+    "id": "information_guidance",
+    "name_amharic": "የመረጃ እና የመመሪያ የትራፊክ ምልክቶች",
+    "name_hebrew": "תמרורי מודיעין והדרכה",
+    "icon": "ℹ️",
+    "color": "#1565C0",
+    "description_amharic": "እነዚህ ምልክቶች ለሾፌሮች መረጃ እና አቅጣጫ ያቀርባሉ።",
+    "audio_intro": "topic_information_guidance_intro.mp3",
+    "sign_count": 40,
+    "display_order": 5
   }
 ]
