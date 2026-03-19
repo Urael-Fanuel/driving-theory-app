@@ -132,106 +132,106 @@
     "questions": [
       {
         "id": "302_q1",
-        "question_amharic": "ይህንን ምልክት ሲያዩ አሽከርካሪው መጀመሪያ ምን ማድረግ አለበት?",
+        "question_amharic": "ይህ የመንገድ ምልክት ምን ማለት ነው?",
         "question_audio": "302_q1_question.mp3",
-        "explanation_correct_amharic": "ጎቨዝ። ይህ ምልክት አሽከርካሪው ወደ መስቀለኛ መንገድ ወይም አደገኛ ቦታ ከመግባቱ በፊት ተሽከርካሪውን ሙሉ በሙሉ እንዲያቆም ያዛል። የማቆሚያው ቦታ መስመር ካለ ከመስመሩ በፊት፣ መስመር ከሌለ ደግሞ ከመገናኛው በፊት ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ሙሉ በሙሉ ሳያቆሙ ወይም በተሳሳተ ቦታ ማቆም አደጋ ሊያስከትል እና የትራፊክ ደንብ መጣስ ነው።",
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት ከመስቀለኛ መንገድ በፊት ሙሉ በሙሉ ማቆም እና ለሁሉም አቅጣጫ ለሚመጡ ተሽከርካሪዎች ቅድሚያ መስጠት እንዳለብዎ ያመለክታል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ከመስቀለኛ መንገድ በፊት ሙሉ በሙሉ ያቁሙ እና ለሁሉም ትራፊክ ቅድሚያ ይስጡ።",
         "explanation_correct_audio": "302_q1_correct.mp3",
         "explanation_wrong_audio": "302_q1_wrong.mp3",
         "answers": [
           {
-            "id": "C",
-            "text_amharic": "አሽከርካሪው ከመገናኛው በፊት ለጥቂት ጊዜ ቆሞ ሌሎች መኪናዎች ከሌሉ ወዲያውኑ መሄድ ይችላል።",
-            "is_correct": false,
-            "audio_filename": "answer_302_q1_C.mp3"
-          },
-          {
-            "id": "D",
-            "text_amharic": "አሽከርካሪው ከመስመሩ በኋላ ወይም ከመገናኛው ውስጥ ገብቶ መኪናዎችን ካየ በኋላ ማቆም አለበት።",
-            "is_correct": false,
-            "audio_filename": "answer_302_q1_D.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "አሽከርካሪው ፍጥነቱን ቀንስ አድርጎ መንገዱን አስተማማኝ መሆኑን ካረጋገጠ በኋላ መሄድ ይችላል።",
+            "text_amharic": "መግባት ክልክል ነው።",
             "is_correct": false,
             "audio_filename": "answer_302_q1_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "አሽከርካሪው በመስመሩ ላይ ተሽከርካሪውን ሙሉ በሙሉ ማቆም አለበት፣ መስመር ከሌለ ደግሞ ከመገናኛው በፊት ተሽከርካሪውን ሙሉ በሙሉ ማቆም አለበት።",
-            "is_correct": true,
+            "text_amharic": "ከቀኝ ለሚመጡ ተሽከርካሪዎች ቅድሚያ ይስጡ።",
+            "is_correct": false,
             "audio_filename": "answer_302_q1_B.mp3"
+          },
+          {
+            "id": "C",
+            "text_amharic": "ፍጥነትዎን ይቀንሱ እና አስፈላጊ ከሆነ ቅድሚያ ይስጡ።",
+            "is_correct": false,
+            "audio_filename": "answer_302_q1_C.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ከመስቀለኛ መንገድ በፊት ሙሉ በሙሉ ያቁሙ እና ለሁሉም ትራፊክ ቅድሚያ ይስጡ።",
+            "is_correct": true,
+            "audio_filename": "answer_302_q1_D.mp3"
           }
         ]
       },
       {
         "id": "302_q2",
-        "question_amharic": "አሽከርካሪው ይህንን ምልክት አይቶ ሙሉ በሙሉ ካቆመ በኋላ፣ ወደፊት ከመሄዱ በፊት ምን ማድረግ አለበት?",
+        "question_amharic": "በዚህ ምልክት መሰረት እንዴት መንዳት አለብዎት?",
         "question_audio": "302_q2_question.mp3",
-        "explanation_correct_amharic": "በጣም ጥሩ። ይህ ምልክት አሽከርካሪው ሙሉ በሙሉ ካቆመ በኋላ ለሌሎች ተሽከርካሪዎችና እግረኞች ቅድሚያ እንዲሰጥ እና መንገዱ አስተማማኝ መሆኑን እንዲያረጋግጥ ያዛል። ከዚያ በኋላ ብቻ በጥንቃቄ መጓዝ ይችላል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ቅድሚያ ሳይሰጡ ወይም መንገዱ አስተማማኝ መሆኑን ሳያረጋግጡ መሄድ አደጋ ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "ትክክል! \"አቁም\" ምልክት ሁልጊዜ ሙሉ በሙሉ ማቆምን ይጠይቃል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ከማቆሚያው መስመር ወይም ከመስቀለኛ መንገዱ በፊት ሙሉ በሙሉ ያቁሙ፣ በጥንቃቄ ይመልከቱ እና መንገዱ ንጹህና ደህንነቱ የተጠበቀ ሲሆን ብቻ ይቀጥሉ።",
         "explanation_correct_audio": "302_q2_correct.mp3",
         "explanation_wrong_audio": "302_q2_wrong.mp3",
         "answers": [
           {
-            "id": "C",
-            "text_amharic": "አሽከርካሪው ለሌሎች ተሽከርካሪዎችና እግረኞች ቅድሚያ ከሰጠ በኋላ መንገዱ አስተማማኝ መሆኑን አረጋግጦ በጥንቃቄ መጓዝ አለበት።",
+            "id": "A",
+            "text_amharic": "ከማቆሚያው መስመር ወይም ከመስቀለኛ መንገዱ በፊት ሙሉ በሙሉ ያቁሙ፣ በጥንቃቄ ይመልከቱ እና መንገዱ ንጹህና ደህንነቱ የተጠበቀ ሲሆን ብቻ ይቀጥሉ።",
             "is_correct": true,
-            "audio_filename": "answer_302_q2_C.mp3"
-          },
-          {
-            "id": "D",
-            "text_amharic": "አሽከርካሪው ሙሉ በሙሉ ካቆመ በኋላ ምንም ነገር ሳያረጋግጥ ወዲያውኑ መሄድ ይችላል።",
-            "is_correct": false,
-            "audio_filename": "answer_302_q2_D.mp3"
+            "audio_filename": "answer_302_q2_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "አሽከርካሪው መንገዱ አስተማማኝ መሆኑን ካረጋገጠ በኋላ ለሌሎች ቅድሚያ ሳይሰጥ መሄድ ይችላል።",
+            "text_amharic": "ፍጥነትዎን ይቀንሱ እና ከቀኝ ለሚመጡ ተሽከርካሪዎች ቅድሚያ ይስጡ።",
             "is_correct": false,
             "audio_filename": "answer_302_q2_B.mp3"
           },
           {
-            "id": "A",
-            "text_amharic": "አሽከርካሪው ለሚመጡት መኪናዎች ብቻ ቅድሚያ ከሰጠ በኋላ ወዲያውኑ መሄድ ይችላል።",
+            "id": "C",
+            "text_amharic": "ትራፊክ ሲኖር ብቻ ያቁሙ።",
             "is_correct": false,
-            "audio_filename": "answer_302_q2_A.mp3"
+            "audio_filename": "answer_302_q2_C.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "በጥንቃቄ መንዳትዎን ይቀጥሉ፣ ለዋናው መንገድ ተሽከርካሪዎች ቅድሚያ ይስጡ።",
+            "is_correct": false,
+            "audio_filename": "answer_302_q2_D.mp3"
           }
         ]
       },
       {
         "id": "302_q3",
-        "question_amharic": "ይህንን \"ሙሉ በሙሉ አቁም\" ምልክት አለማክበር ምን አይነት መዘዝ ያስከትላል?",
+        "question_amharic": "በዚህ ምልክት ባለበት መስቀለኛ መንገድ ላይ የማቆሚያ መስመር ከሌለ፣ የት ማቆም አለብዎት?",
         "question_audio": "302_q3_question.mp3",
-        "explanation_correct_amharic": "ጎሽሽ። ምልክቱን አለማክበር ከባድ የትራፊክ ጥሰት እንደሆነ እና አደጋ ሊያስከትል እንደሚችል እንዲሁም ቅጣት እንደሚያስወርድ በግልጽ ተገልጿል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የትራፊክ ደንቦችን አለማክበር የራስዎን እና የሌሎችን ህይወት አደጋ ላይ ይጥላል።",
+        "explanation_correct_amharic": "ትክክል! የማቆሚያ መስመር ከሌለ፣ ከመስቀለኛ መንገዱ በፊት ደህንነቱ በተጠበቀ ሁኔታ ማቆም እና ግልጽ እይታ ማግኘት አለብዎት።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ወደ መስቀለኛ መንገዱ ከመግባትዎ በፊት፣ የሚመጣውን ትራፊክ በግልጽ ማየት በሚችሉበት ቦታ።",
         "explanation_correct_audio": "302_q3_correct.mp3",
         "explanation_wrong_audio": "302_q3_wrong.mp3",
         "answers": [
           {
-            "id": "D",
-            "text_amharic": "ይህንን ምልክት አለማክበር ምንም አይነት ችግር አያስከትልም ምክንያቱም ሌሎች አሽከርካሪዎች ጥንቃቄ ያደርጋሉ።",
-            "is_correct": false,
-            "audio_filename": "answer_302_q3_D.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "ይህንን ምልክት አለማክበር ከባድ የትራፊክ ጥሰት ሲሆን አደገኛ አደጋ ሊያስከትልና ከፍተኛ ቅጣት ሊያስወርድ ይችላል።",
-            "is_correct": true,
+            "text_amharic": "በእግረኛ መንገድ ዳር።",
+            "is_correct": false,
             "audio_filename": "answer_302_q3_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "ይህንን ምልክት አለማክበር ቀላል የትራፊክ ጥሰት ሲሆን ትንሽ ቅጣት ብቻ ያስከትላል።",
-            "is_correct": false,
+            "text_amharic": "ወደ መስቀለኛ መንገዱ ከመግባትዎ በፊት፣ የሚመጣውን ትራፊክ በግልጽ ማየት በሚችሉበት ቦታ።",
+            "is_correct": true,
             "audio_filename": "answer_302_q3_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "ይህንን ምልክት አለማክበር አደጋ ሊያስከትል ቢችልም ምንም አይነት ቅጣት አያስከትልም።",
+            "text_amharic": "የተሻለ እይታ ለማግኘት በመስቀለኛ መንገዱ መሃል።",
             "is_correct": false,
             "audio_filename": "answer_302_q3_C.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "መስመር ከሌለ ማቆም አያስፈልግም፣ ፍጥነትዎን መቀነስ ብቻ በቂ ነው።",
+            "is_correct": false,
+            "audio_filename": "answer_302_q3_D.mp3"
           }
         ]
       }
@@ -251,34 +251,34 @@
     "questions": [
       {
         "id": "303_q1",
-        "question_amharic": "ይህን ምልክት ሲያዩ እና ወደ ክብ መንገድ (ራውንድአባውት) ሲገቡ ዋናው ግዴታዎ ምንድን ነው?",
+        "question_amharic": "በምልክቱ መሰረት እንዴት ይነዳሉ?",
         "question_audio": "303_q1_question.mp3",
-        "explanation_correct_amharic": "ዋውው በጣም ጥሩ። ይህ ምልክት ወደ ክብ መንገድ ሲገቡ ከግራ በኩል ለሚመጡ ተሽከርካሪዎች ቅድሚያ መስጠት እና ቀስ ብሎ መንዳት ግዴታ መሆኑን በግልጽ ያብራራል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ መምረጥ የትራፊክ መጨናነቅ፣ አደጋ ወይም ቅጣት ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት በክብ ቅርጽ መገናኛ ውስጥ ለሚንቀሳቀሱ ተሽከርካሪዎች ቅድሚያ መስጠት እና መገናኛውን ከቀኝ በኩል ማለፍ እንዳለብዎ ያሳያል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በክብ ቅርጽ መገናኛ ውስጥ መንገድዎን ለሚያቋርጡ ተሽከርካሪዎች ቅድሚያ ይስጡ እና መገናኛውን ከቀኝ በኩል ይለፉ።",
         "explanation_correct_audio": "303_q1_correct.mp3",
         "explanation_wrong_audio": "303_q1_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "ወደ ክብ መንገዱ ሲገቡ ከቀኝ በኩል ለሚመጡ ተሽከርካሪዎች ቅድሚያ መስጠት አለብዎት።",
+            "text_amharic": "ወደ ቀኝ ወይም ወደ ግራ ይንዱ። ቢጫ ቀስት ለመንገደኞች ትራንስፖርት ብቻ የመንገድ አቅጣጫን ያሳያል።",
             "is_correct": false,
             "audio_filename": "answer_303_q1_A.mp3"
           },
           {
-            "id": "C",
-            "text_amharic": "ወደ ክብ መንገዱ ሲገቡ በፍጥነት መንዳት እና ለሁሉም ተሽከርካሪዎች ቅድሚያ መስጠት አለብዎት።",
-            "is_correct": false,
-            "audio_filename": "answer_303_q1_C.mp3"
-          },
-          {
             "id": "B",
-            "text_amharic": "ወደ ክብ መንገዱ ሲገቡ ከግራ በኩል ለሚመጡ ተሽከርካሪዎች ቅድሚያ መስጠት እና ቀስ ብሎ መንዳት ግዴታ ነው።",
-            "is_correct": true,
+            "text_amharic": "በክብ ቅርጽ መገናኛ ውስጥ ሲነዱ፣ ወደ መገናኛው ከሚመጡት ተሽከርካሪዎች ቅድሚያ መስጠት አለብዎት።",
+            "is_correct": false,
             "audio_filename": "answer_303_q1_B.mp3"
           },
           {
+            "id": "C",
+            "text_amharic": "በክብ ቅርጽ መገናኛ ውስጥ መንገድዎን ለሚያቋርጡ ተሽከርካሪዎች ቅድሚያ ይስጡ እና መገናኛውን ከቀኝ በኩል ይለፉ።",
+            "is_correct": true,
+            "audio_filename": "answer_303_q1_C.mp3"
+          },
+          {
             "id": "D",
-            "text_amharic": "ወደ ክብ መንገዱ ሲገቡ ምንም አይነት ቅድሚያ መስጠት አያስፈልግም፣ በቀጥታ መግባት ይችላሉ።",
+            "text_amharic": "በምልክቱ የተመለከተውን ቦታ ከግራ በኩል ብቻ ይለፉ።",
             "is_correct": false,
             "audio_filename": "answer_303_q1_D.mp3"
           }
@@ -286,69 +286,69 @@
       },
       {
         "id": "303_q2",
-        "question_amharic": "ይህ ምልክት በሚታይበት ጊዜ ወደ ክብ መንገድ (ራውንድአባውት) ሲገቡ ስለ ፍጥነትዎ ምን ማድረግ አለብዎት?",
+        "question_amharic": "የምልክቱ ትርጉም ምንድን ነው?",
         "question_audio": "303_q2_question.mp3",
-        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። ምልክቱ ወደ ክብ መንገድ ሲገቡ ቀስ ብሎ መንዳት ግዴታ መሆኑን በግልጽ ይገልጻል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ፍጥነትን በተመለከተ ደንቦቹን አለመከተል አደጋ ወይም የትራፊክ መጨናነቅ ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "አዎ! ይህ ምልክት በክብ ቅርጽ መገናኛ ውስጥ ለሚንቀሳቀሱ ተሽከርካሪዎች ቅድሚያ መስጠት እና መገናኛውን ከቀኝ በኩል ማለፍ እንዳለብዎ ያሳያል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በክብ ቅርጽ መገናኛ ውስጥ መንገድዎን ለሚያቋርጡ ተሽከርካሪዎች ቅድሚያ ይስጡ እና መገናኛውን ከቀኝ በኩል ይለፉ።",
         "explanation_correct_audio": "303_q2_correct.mp3",
         "explanation_wrong_audio": "303_q2_wrong.mp3",
         "answers": [
           {
-            "id": "D",
-            "text_amharic": "ወደ ክብ መንገዱ ሲገቡ መጀመሪያ ሙሉ በሙሉ ማቆም እና ከዚያ በፍጥነት መግባት አለብዎት።",
-            "is_correct": false,
-            "audio_filename": "answer_303_q2_D.mp3"
-          },
-          {
-            "id": "C",
-            "text_amharic": "ወደ ክብ መንገዱ ሲገቡ ፍጥነትዎ ምንም ለውጥ አያስፈልገውም፣ እንደተለመደው መንዳት ይችላሉ።",
-            "is_correct": false,
-            "audio_filename": "answer_303_q2_C.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "ወደ ክብ መንገዱ ሲገቡ ፍጥነትዎን መጨመር እና በፍጥነት ማለፍ አለብዎት።",
+            "text_amharic": "ከፊት ባለው መገናኛ ላይ ወደ ግራ መታጠፍ ብቻ ነው የሚፈቀደው።",
             "is_correct": false,
             "audio_filename": "answer_303_q2_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "ወደ ክብ መንገዱ ሲገቡ ፍጥነትዎን መቀነስ እና ቀስ ብሎ መንዳት ግዴታ ነው።",
-            "is_correct": true,
+            "text_amharic": "ከፊት ባለው ክብ ቅርጽ መገናኛ ውስጥ ቅድሚያ አለዎት። መገናኛውን ከቀኝ በኩል ይለፉ።",
+            "is_correct": false,
             "audio_filename": "answer_303_q2_B.mp3"
+          },
+          {
+            "id": "C",
+            "text_amharic": "በምልክቱ የተመለከተውን ቦታ ከግራ በኩል ብቻ ይለፉ።",
+            "is_correct": false,
+            "audio_filename": "answer_303_q2_C.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "በክብ ቅርጽ መገናኛ ውስጥ መንገድዎን ለሚያቋርጡ ተሽከርካሪዎች ቅድሚያ ይስጡ እና መገናኛውን ከቀኝ በኩል ይለፉ።",
+            "is_correct": true,
+            "audio_filename": "answer_303_q2_D.mp3"
           }
         ]
       },
       {
         "id": "303_q3",
-        "question_amharic": "በዚህ ምልክት የተመለከቱትን የክብ መንገድ (ራውንድአባውት) ደንቦች አለመከተል ምን ሊያስከትል ይችላል?",
+        "question_amharic": "ምልክቱ ምን ያሳያል?",
         "question_audio": "303_q3_question.mp3",
-        "explanation_correct_amharic": "እሰይ። አቤት እውቀት! የምልክቱ ማብራሪያ ደንቦቹን አለመከተል የትራፊክ መጨናነቅ፣ አደጋ ወይም ቅጣት እንደሚያስከትል በግልጽ ይገልጻል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ መምረጥ ደህንነትን አደጋ ላይ ይጥላል እና ህጋዊ መዘዞችን ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት ከፊትዎ ክብ ቅርጽ መገናኛ እንዳለ ያሳያል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ከፊትዎ ክብ ቅርጽ መገናኛ አለ።",
         "explanation_correct_audio": "303_q3_correct.mp3",
         "explanation_wrong_audio": "303_q3_wrong.mp3",
         "answers": [
           {
-            "id": "B",
-            "text_amharic": "ደንቦቹን አለመከተል የትራፊክ መጨናነቅ፣ አደጋ ወይም ቅጣት ሊያስከትል ይችላል።",
+            "id": "A",
+            "text_amharic": "ከፊትዎ ክብ ቅርጽ መገናኛ አለ።",
             "is_correct": true,
+            "audio_filename": "answer_303_q3_A.mp3"
+          },
+          {
+            "id": "B",
+            "text_amharic": "ከመንገድ ትራፊክ አቅጣጫ በተቃራኒ አቅጣጫ ማቆም ይፈቀዳል።",
+            "is_correct": false,
             "audio_filename": "answer_303_q3_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "ደንቦቹን አለመከተል የትራፊክ ፍሰትን ያፋጥናል እና ጉዞዎን ያሳጥራል።",
+            "text_amharic": "የሚሰራ ምንጭ።",
             "is_correct": false,
             "audio_filename": "answer_303_q3_C.mp3"
           },
           {
-            "id": "A",
-            "text_amharic": "ደንቦቹን አለመከተል ምንም አይነት ችግር አያስከትልም፣ ምክንያቱም ሁሉም ሰው የራሱን መንገድ ይመርጣል።",
-            "is_correct": false,
-            "audio_filename": "answer_303_q3_A.mp3"
-          },
-          {
             "id": "D",
-            "text_amharic": "ደንቦቹን አለመከተል የሌሎች አሽከርካሪዎችን ትኩረት ይስባል እና የበለጠ ደህንነቱ የተጠበቀ ያደርገዋል።",
+            "text_amharic": "አሽከርካሪው ዩ-ተርን ማድረግ አለበት።",
             "is_correct": false,
             "audio_filename": "answer_303_q3_D.mp3"
           }
@@ -370,34 +370,34 @@
     "questions": [
       {
         "id": "304_q1",
-        "question_amharic": "ይህ ቀይ ክብ ምልክት በውስጡ ነጭ እጅ ያለው ሲታይ አሽከርካሪ ምን ማድረግ አለበት?",
+        "question_amharic": "ይህ የትራፊክ ምልክት ምን ማለት ነው?",
         "question_audio": "304_q1_question.mp3",
-        "explanation_correct_amharic": "ትክክل! ይህ ምልክት ወደፊት ባለው መንገድ መግባት በፍጹም የተከለከለ መሆኑን ያሳያል። ስለዚህ አሽከርካሪው ወዲያውኑ ማቆም እና ወደዚያ መንገድ መግባት የለበትም።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ወደተከለከለው መንገድ መግባት ከባድ የትራፊክ አደጋ እና ከፍተኛ ቅጣት ያስከትላል።",
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት ተንቀሳቃሽ የማቆሚያ ምልክት ሲሆን፣ ከፊትህ እስካለ ድረስ እንድትቆም ያዝዛል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ምልክቱ ተንቀሳቃሽ የማቆሚያ ምልክት ሲሆን፣ ከፊትህ እስካለ ድረስ እንድትቆም ያዝዛል።",
         "explanation_correct_audio": "304_q1_correct.mp3",
         "explanation_wrong_audio": "304_q1_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "አሽከርካሪው በጥንቃቄ ወደ መንገዱ መግባት ይችላል ምክንያቱም ምልክቱ ማስጠንቀቂያ ብቻ ነው።",
+            "text_amharic": "ለአፍታ ቆም ብለህ መንገድህን ቀጥል።",
             "is_correct": false,
             "audio_filename": "answer_304_q1_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "ይህ ምልክት ወደፊት ባለው መንገድ መግባት በፍጹም የተከለከለ መሆኑን ስለሚያሳይ ወዲያውኑ ማቆም እና ወደዚያ መንገድ መግባት የለበትም።",
+            "text_amharic": "ቁም! (ተንቀሳቃሽ ምልክት)፣ ምልክቱ ከፊትህ እስካለ ድረስ።",
             "is_correct": true,
             "audio_filename": "answer_304_q1_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "አሽከርካሪው ወደ ግራ ወይም ወደ ቀኝ መታጠፍ አለበት እንጂ ማቆም አያስፈልግም።",
+            "text_amharic": "ቁም እና ከፊትህ ላለው ተሻጋሪ መንገድ ቅድሚያ ስጥ።",
             "is_correct": false,
             "audio_filename": "answer_304_q1_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "ይህ ምልክት መንገዱ ጠባብ መሆኑን ያሳያል ስለዚህ ቀስ ብሎ ማሽከርከር በቂ ነው።",
+            "text_amharic": "ከፊትህ ላለው ተሻጋሪ መንገድ ቅድሚያ ስጥ – በመንገድ ላይ ሥራ በሚሠራበት ጊዜ።",
             "is_correct": false,
             "audio_filename": "answer_304_q1_D.mp3"
           }
@@ -405,34 +405,34 @@
       },
       {
         "id": "304_q2",
-        "question_amharic": "አንድ አሽከርካሪ ይህንን ቀይ ክብ ምልክት በውስጡ ነጭ እጅ ያለው ችላ ብሎ ወደተከለከለው መንገድ ቢገባ ምን ያስከትላል?",
+        "question_amharic": "ይህንን ምልክት በተለምዶ የሚጠቀመው ማነው?",
         "question_audio": "304_q2_question.mp3",
-        "explanation_correct_amharic": "ትክክል! ጥሩ ነው። የምልክቱ ማብራሪያ እንደሚያመለክተው፣ ይህንን ምልክት ችላ ማለት ከባድ የትራፊክ አደጋ፣ ከፍተኛ ቅጣት እና የፍቃድ ነጥቦች ያስከትላል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተከለከለውን መንገድ መግባት የራስን እና የሌሎችን ህይወት አደጋ ላይ ይጥላል።",
+        "explanation_correct_amharic": "ትክክል! ይህ ተንቀሳቃሽ የማቆሚያ ምልክት በተለምዶ በትራፊክ ተቆጣጣሪዎች ወይም በመንገድ ላይ በሚሰሩ ሰራተኞች ይጠቀማል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህ ምልክት በተለምዶ በትራፊክ ተቆጣጣሪዎች ወይም በመንገድ ላይ በሚሰሩ ሰራተኞች ይጠቀማል።",
         "explanation_correct_audio": "304_q2_correct.mp3",
         "explanation_wrong_audio": "304_q2_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "አሽከርካሪው ትንሽ የትራፊክ ቅጣት ብቻ ሊቀበል ይችላል እንጂ ሌላ ከባድ ችግር የለም።",
+            "text_amharic": "የእስራኤል ፖሊስ ብቻ።",
             "is_correct": false,
             "audio_filename": "answer_304_q2_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "ምንም አይነት ችግር አያስከትልም ምክንያቱም ምልክቱ ለከባድ መኪናዎች ብቻ ነው።",
+            "text_amharic": "የግል አሽከርካሪዎች።",
             "is_correct": false,
             "audio_filename": "answer_304_q2_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "ይህንን ምልክት ችላ ማለት ከባድ የትራፊክ አደጋ፣ ከፍተኛ ቅጣት እና የፍቃድ ነጥቦች ያስከትላል።",
+            "text_amharic": "የትራፊክ ተቆጣጣሪዎች ወይም የመንገድ ሰራተኞች።",
             "is_correct": true,
             "audio_filename": "answer_304_q2_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "ሌሎች አሽከርካሪዎች እንዲጠነቀቁ ብቻ ማስጠንቀቂያ ነው እንጂ ምንም ቅጣት የለውም።",
+            "text_amharic": "ትራፊክን ማቆም የሚፈልግ ማንኛውም አሽከርካሪ።",
             "is_correct": false,
             "audio_filename": "answer_304_q2_D.mp3"
           }
@@ -440,34 +440,34 @@
       },
       {
         "id": "304_q3",
-        "question_amharic": "አሽከርካሪው ይህንን ቀይ ክብ ምልክት በውስጡ ነጭ እጅ ያለው ሲያይ መቼ እርምጃ መውሰድ አለበት?",
+        "question_amharic": "ይህንን ምልክት የሚያይ አሽከርካሪ ወዲያውኑ ምን ማድረግ አለበት?",
         "question_audio": "304_q3_question.mp3",
-        "explanation_correct_amharic": "አሪፍ! ምልክቱ የምልክቱ ማብራሪያ አሽከርካሪው ይህንን ምልክት ሲያይ ወዲያውኑ ማቆም እና ወደዚያ መንገድ መግባት እንደሌለበት በግልጽ ይገልጻል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ዘግይቶ እርምጃ መውሰድ ወይም የተሳሳተ እርምጃ መውሰድ አደጋን እና የህግ ችግሮችን ያስከትላል።",
+        "explanation_correct_amharic": "ትክክል! የ'ቁም' ምልክት ሁልጊዜ ሙሉ በሙሉ ማቆምን ይጠይቃል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የ'ቁም' ምልክት ሁልጊዜ ሙሉ በሙሉ ማቆምን ይጠይቃል።",
         "explanation_correct_audio": "304_q3_correct.mp3",
         "explanation_wrong_audio": "304_q3_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "ሌላ ምልክት እስኪያይ ድረስ መጠበቅ አለበት ከዚያም እርምጃ መውሰድ ይችላል።",
+            "text_amharic": "ሌይን መቀየር።",
             "is_correct": false,
             "audio_filename": "answer_304_q3_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "ወደ መንገዱ ከገባ በኋላ ማቆም ይችላል ምክንያቱም ምልክቱ ከርቀት ይታያል።",
+            "text_amharic": "ፍጥነት ቀንስ እና በጥንቃቄ ቀጥል።",
             "is_correct": false,
             "audio_filename": "answer_304_q3_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "ትራፊክ ካለ ብቻ ማቆም አለበት፤ መንገድ ባዶ ከሆነ መግባት ይቻላል።",
+            "text_amharic": "ሆርን በመጠቀም መኖሩን ማሳወቅ።",
             "is_correct": false,
             "audio_filename": "answer_304_q3_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "ምልክቱን እንዳየ ወዲያውኑ ማቆም ግዴታ ሲሆን፣ ወደፊት ባለው መንገድ መግባት በፍጹም የተከለከለ ነው።",
+            "text_amharic": "ሙሉ በሙሉ ማቆም አለበት።",
             "is_correct": true,
             "audio_filename": "answer_304_q3_D.mp3"
           }
@@ -489,104 +489,104 @@
     "questions": [
       {
         "id": "305_q1",
-        "question_amharic": "ይህንን 'ሂድ' ወይም 'ቀጥል' የሚል ምልክት ሲያዩ አሽከርካሪ ምን ማድረግ አለበት?",
+        "question_amharic": "ይህ የመንገድ ምልክት ምን ማለት ነው?",
         "question_audio": "305_q1_question.mp3",
-        "explanation_correct_amharic": "ጎቨዝ። ይህ ምልክት አሽከርካሪው መንገዱ ንፁህ መሆኑን ካረጋገጠ በኋላ በደህና ወደፊት እንዲሄድ ፈቃድ ይሰጣል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ምልክቱን ችላ ብሎ ያለአግባብ መቆም የትራፊክ ፍሰትን ሊያስተጓጉል ይችላል።",
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት እርስዎ በዋና መንገድ ላይ እንዳሉ እና ቅድሚያ እንዳለዎት ያሳያል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህ ምልክት እርስዎ በዋና መንገድ ላይ እንዳሉ እና ቅድሚያ እንዳለዎት ያሳያል።",
         "explanation_correct_audio": "305_q1_correct.mp3",
         "explanation_wrong_audio": "305_q1_wrong.mp3",
         "answers": [
           {
-            "id": "B",
-            "text_amharic": "መንገዱ ንፁህ መሆኑን ካረጋገጠ በኋላ በደህና ወደፊት መሄድ አለበት።",
-            "is_correct": true,
-            "audio_filename": "answer_305_q1_B.mp3"
-          },
-          {
-            "id": "D",
-            "text_amharic": "ለሚመጡት ተሽከርካሪዎች ሁሉ መንገድ መስጠት እና ከዚያ በኋላ መሄድ አለበት።",
-            "is_correct": false,
-            "audio_filename": "answer_305_q1_D.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "ወዲያውኑ ማቆም እና የሌሎች ተሽከርካሪዎችን እንቅስቃሴ መጠበቅ አለበት።",
-            "is_correct": false,
+            "text_amharic": "በዋና መንገድ ላይ ነዎት።",
+            "is_correct": true,
             "audio_filename": "answer_305_q1_A.mp3"
           },
           {
+            "id": "B",
+            "text_amharic": "ማቆም አለብዎት።",
+            "is_correct": false,
+            "audio_filename": "answer_305_q1_B.mp3"
+          },
+          {
             "id": "C",
-            "text_amharic": "ፍጥነቱን ሳይቀንስ በፍጥነት ማለፍ አለበት ምክንያቱም ቅድሚያ አለው።",
+            "text_amharic": "ቅድሚያ መስጠት አለብዎት።",
             "is_correct": false,
             "audio_filename": "answer_305_q1_C.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ወደ የመኖሪያ አካባቢ እየገቡ ነው።",
+            "is_correct": false,
+            "audio_filename": "answer_305_q1_D.mp3"
           }
         ]
       },
       {
         "id": "305_q2",
-        "question_amharic": "ይህ 'ሂድ' ወይም 'ቀጥል' የሚል ምልክት ለአሽከርካሪዎች የሚሰጠው ዋና መልእክት ምንድን ነው?",
+        "question_amharic": "በዚህ ምልክት መሰረት እንዴት ይነዳሉ?",
         "question_audio": "305_q2_question.mp3",
-        "explanation_correct_amharic": "በጣም ጥሩ። ምልክቱ አሽከርካሪዎች መንገዱ ንፁህ መሆኑን ካረጋገጡ በኋላ በደህና ወደፊት እንዲጓዙ ፈቃድ ይሰጣል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የምልክቱን ትርጉም አለመረዳት አላስፈላጊ መዘግየቶችን እና የትራፊክ መጨናነቅን ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት እርስዎ በዋና መንገድ ላይ እንዳሉ እና ቅድሚያ እንዳለዎት ያሳያል። ስለዚህ፣ በሌላ ምልክት ካልተገለጸ በስተቀር መንዳትዎን ይቀጥላሉ እና ቅድሚያ አለዎት።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህ ምልክት እርስዎ በዋና መንገድ ላይ እንዳሉ እና ቅድሚያ እንዳለዎት ያሳያል። ስለዚህ፣ በሌላ ምልክት ካልተገለጸ በስተቀር መንዳትዎን ይቀጥላሉ እና ቅድሚያ አለዎት።",
         "explanation_correct_audio": "305_q2_correct.mp3",
         "explanation_wrong_audio": "305_q2_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "ወደፊት አደገኛ መታጠፊያ እንዳለ እና ፍጥነት መቀነስ እንዳለባቸው ማስጠንቀቂያ ነው።",
+            "text_amharic": "ፍጥነቴን እቀንሳለሁ እና ለሁሉም ትራፊክ ቅድሚያ ለመስጠት እዘጋጃለሁ።",
             "is_correct": false,
             "audio_filename": "answer_305_q2_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "አሽከርካሪዎች መንገዱ ንፁህ መሆኑን ካረጋገጡ በኋላ በደህና ወደፊት እንዲሄዱ ፈቃድ መስጠት ነው።",
+            "text_amharic": "መንዳት እቀጥላለሁ እና ከጎን መንገዶች ለሚመጡ ተሽከርካሪዎች ቅድሚያ አለኝ፣ በሌላ ምልክት ካልተገለጸ በስተቀር።",
             "is_correct": true,
             "audio_filename": "answer_305_q2_B.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "በዚህ ቦታ ላይ ማቆም ወይም መኪና ማቆም እንደማይፈቀድ የሚገልጽ እገዳ ነው።",
-            "is_correct": false,
-            "audio_filename": "answer_305_q2_D.mp3"
-          },
-          {
             "id": "C",
-            "text_amharic": "በሚቀጥለው መስቀለኛ መንገድ ላይ ለሁሉም ተሽከርካሪዎች ቅድሚያ መስጠት እንዳለባቸው ማሳሰቢያ ነው።",
+            "text_amharic": "ከመገናኛው በፊት ማቆም አለብኝ።",
             "is_correct": false,
             "audio_filename": "answer_305_q2_C.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "በሚቀጥለው መገናኛ ቀኝ መታጠፍ አለብኝ።",
+            "is_correct": false,
+            "audio_filename": "answer_305_q2_D.mp3"
           }
         ]
       },
       {
         "id": "305_q3",
-        "question_amharic": "ይህንን 'ሂድ' ወይም 'ቀጥል' የሚል ምልክት ችላ ብሎ ያለአግባብ መቆም ምን መዘዝ ሊያስከትል ይችላል?",
+        "question_amharic": "ይህ የመንገድ ምልክት የሚያመለክተው:",
         "question_audio": "305_q3_question.mp3",
-        "explanation_correct_amharic": "ጎሽሽ። ምልክቱን ችላ ብሎ ያለአግባብ መቆም የትራፊክ ፍሰትን ሊያስተጓጉል እና የሌሎች አሽከርካሪዎችን ቁጣ ሊያስከትል ይችላል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ያለአግባብ መቆም የትራፊክ ፍሰትን በማስተጓጎል ለሌሎች አሽከርካሪዎች ችግር ይፈጥራል።",
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት እርስዎ በዋና መንገድ ላይ እንዳሉ እና ቅድሚያ እንዳለዎት ያሳያል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህ ምልክት እርስዎ በዋና መንገድ ላይ እንዳሉ እና ቅድሚያ እንዳለዎት ያሳያል።",
         "explanation_correct_audio": "305_q3_correct.mp3",
         "explanation_wrong_audio": "305_q3_wrong.mp3",
         "answers": [
           {
-            "id": "C",
-            "text_amharic": "አሽከርካሪው የትራፊክ ፖሊስ ቅጣት እንዲጣልበት ያደርጋል ምንም እንኳን በመመሪያው ባይጠቀስም።",
-            "is_correct": false,
-            "audio_filename": "answer_305_q3_C.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "ምንም አይነት ችግር አያመጣም እና አሽከርካሪው የፈለገውን ያህል መቆም ይችላል።",
+            "text_amharic": "በመንገድ ሥራ ምክንያት ቀስ ብለው መንዳት አለብዎት።",
             "is_correct": false,
             "audio_filename": "answer_305_q3_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "የትራፊክ ፍሰትን ሊያስተጓጉል እና የሌሎች አሽከርካሪዎችን ቁጣ ሊያስከትል ይችላል።",
-            "is_correct": true,
+            "text_amharic": "ወደ አደገኛ መታጠፊያ እየቀረቡ ነው።",
+            "is_correct": false,
             "audio_filename": "answer_305_q3_B.mp3"
           },
           {
+            "id": "C",
+            "text_amharic": "ቅድሚያ ባለው መንገድ ላይ ነዎት።",
+            "is_correct": true,
+            "audio_filename": "answer_305_q3_C.mp3"
+          },
+          {
             "id": "D",
-            "text_amharic": "ለሌሎች ተሽከርካሪዎች መንገድ እንዲሰጥ ያደርጋል እና ከዚያ በኋላ ብቻ እንዲሄድ ይፈቅዳል።",
+            "text_amharic": "ወደ አንድ-አቅጣጫ መንገድ እየገቡ ነው።",
             "is_correct": false,
             "audio_filename": "answer_305_q3_D.mp3"
           }
@@ -608,69 +608,69 @@
     "questions": [
       {
         "id": "306_q1",
-        "question_amharic": "ይህንን ምልክት ሲያዩ ምን ማድረግ አለብዎት?",
+        "question_amharic": "ምልክቱ ምን ማለት ነው?",
         "question_audio": "306_q1_question.mp3",
-        "explanation_correct_amharic": "ዋውው በጣም ጥሩ። ይህ ምልክት ከፊት ለፊት የእግረኛ ማቋረጫ መኖሩን ስለሚያመለክት አሽከርካሪዎች ፍጥነታቸውን መቀነስ እና ለሚሻገሩ እግረኞች ቅድሚያ መስጠት አለባቸው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ፍጥነትን አለመቀነስ እና ለእግረኞች ቅድሚያ አለመስጠት ከባድ አደጋ ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት የእግረኛ ማቋረጫ መኖሩን ያመለክታል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የእግረኛ ማቋረጫ።",
         "explanation_correct_audio": "306_q1_correct.mp3",
         "explanation_wrong_audio": "306_q1_wrong.mp3",
         "answers": [
           {
-            "id": "D",
-            "text_amharic": "ይህ ምልክት ከፊት ለፊት የእግረኛ ማቋረጫ መኖሩን ስለሚያመለክት ፍጥነትዎን መጨመር አለብዎት።",
-            "is_correct": false,
-            "audio_filename": "answer_306_q1_D.mp3"
-          },
-          {
-            "id": "C",
-            "text_amharic": "ይህ ምልክት ከፊት ለፊት የእግረኛ ማቋረጫ መኖሩን ስለሚያመለክት ለሚሻገሩ እግረኞች ቅድሚያ መስጠት አያስፈልግም።",
-            "is_correct": false,
-            "audio_filename": "answer_306_q1_C.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "ይህ ምልክት የእግረኛ ማቋረጫ መኖሩን ስለሚያመለክት ፍጥነትዎን ሳይቀንሱ ማለፍ ይችላሉ።",
+            "text_amharic": "ለብስክሌተኞች ብቻ የሚሆን መንገድ።",
             "is_correct": false,
             "audio_filename": "answer_306_q1_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "ይህ ምልክት ከፊት ለፊት የእግረኛ ማቋረጫ መኖሩን ስለሚያመለክት ፍጥነትዎን መቀነስ እና ለሚሻገሩ እግረኞች ቅድሚያ መስጠት አለብዎት።",
-            "is_correct": true,
+            "text_amharic": "ለአካል ጉዳተኞች መኪና ማቆሚያ ብቻ የተዘጋጀ ቦታ።",
+            "is_correct": false,
             "audio_filename": "answer_306_q1_B.mp3"
+          },
+          {
+            "id": "C",
+            "text_amharic": "የአውቶቡስ ማቆሚያ።",
+            "is_correct": false,
+            "audio_filename": "answer_306_q1_C.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "የእግረኛ ማቋረጫ።",
+            "is_correct": true,
+            "audio_filename": "answer_306_q1_D.mp3"
           }
         ]
       },
       {
         "id": "306_q2",
-        "question_amharic": "ይህንን ምልክት ባዩ ጊዜ ለእግረኞች ቅድሚያ መስጠት ያለብዎት እንዴት ነው?",
+        "question_amharic": "ወደዚህ ምልክት ሲጠጉ እንዴት ይነዳሉ?",
         "question_audio": "306_q2_question.mp3",
-        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። አሽከርካሪዎች ለሚሻገሩ እግረኞች ቅድሚያ መስጠት እና ሙሉ በሙሉ መንገዱን እስኪያልፉ ድረስ መጠበቅ አለባቸው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: እግረኞች መንገዱን ሙሉ በሙሉ እስኪያልፉ ድረስ አለመጠበቅ አደጋ ሊያስከትል እና ህግን መጣስ ነው።",
+        "explanation_correct_amharic": "ትክክል! ወደ እግረኛ ማቋረጫ ሲጠጉ ፍጥነትዎን መቀነስ እና እግረኞች እንዲያቋርጡ ቅድሚያ መስጠት አለብዎት።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ፍጥነትዎን ይቀንሳሉ እና እግረኞች በደህና እንዲያቋርጡ ለማስቻል ለመቆም ዝግጁ ይሆናሉ።",
         "explanation_correct_audio": "306_q2_correct.mp3",
         "explanation_wrong_audio": "306_q2_wrong.mp3",
         "answers": [
           {
-            "id": "B",
-            "text_amharic": "ለሚሻገሩ እግረኞች ቅድሚያ መስጠት እና ሙሉ በሙሉ መንገዱን እስኪያልፉ ድረስ መጠበቅ አለብዎት።",
+            "id": "A",
+            "text_amharic": "ፍጥነትዎን ይቀንሳሉ እና እግረኞች በደህና እንዲያቋርጡ ለማስቻል ለመቆም ዝግጁ ይሆናሉ።",
             "is_correct": true,
+            "audio_filename": "answer_306_q2_A.mp3"
+          },
+          {
+            "id": "B",
+            "text_amharic": "ምልክቱ እግረኞች መጠበቅ ያለባቸውን ቦታ ስለሚያመለክት በመደበኛ ፍጥነት መንዳትዎን ይቀጥላሉ።",
+            "is_correct": false,
             "audio_filename": "answer_306_q2_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "እግረኞች መንገዱን መሻገር ከጀመሩ በኋላ በፍጥነት ማለፍ ይችላሉ።",
+            "text_amharic": "እግረኞች በፍጥነት እንዲያቋርጡ ለማድረግ ይጮሃሉ።",
             "is_correct": false,
             "audio_filename": "answer_306_q2_C.mp3"
           },
           {
-            "id": "A",
-            "text_amharic": "እግረኞች መንገዱን መሻገር ሲጀምሩ ብቻ ቅድሚያ መስጠት አለብዎት።",
-            "is_correct": false,
-            "audio_filename": "answer_306_q2_A.mp3"
-          },
-          {
             "id": "D",
-            "text_amharic": "እግረኞች መንገዱን ሲሻገሩ ፍጥነትዎን መጨመር እና ማለፍ አለብዎት።",
+            "text_amharic": "ምንም እግረኞች ባይኖሩም እንኳ በማንኛውም ሁኔታ ሙሉ በሙሉ ያቆማሉ።",
             "is_correct": false,
             "audio_filename": "answer_306_q2_D.mp3"
           }
@@ -678,36 +678,36 @@
       },
       {
         "id": "306_q3",
-        "question_amharic": "የእግረኛ ማቋረጫ ምልክትን ችላ ብሎ ደንቦቹን አለማክበር ምን ሊያስከትል ይችላል?",
+        "question_amharic": "በዚህ ምልክት በተጠቆመው የእግረኛ ማቋረጫ ፊት ለፊት ሌላ ተሽከርካሪ ማለፍ ይፈቀዳል?",
         "question_audio": "306_q3_question.mp3",
-        "explanation_correct_amharic": "እሰይ። አቤት እውቀት! የእግረኛ ማቋረጫ ደንቦችን አለማክበር ከባድ አደጋ፣ ቅጣት እና የነጥብ ቅነሳ ያስከትላል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የትራፊክ ደንቦችን አለማክበር ምንም አይነት መዘዝ እንደሌለው ማሰብ የተሳሳተ እና አደገኛ ነው።",
+        "explanation_correct_amharic": "ትክክል! የእግረኛ ማቋረጫ ፊት ለፊት ሌላ ተሽከርካሪ ማለፍ በጥብቅ የተከለከለ ነው፣ ይህም የእግረኞችን ደህንነት ለማረጋገጥ ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የእግረኛ ማቋረጫ ፊት ለፊት ሌላ ተሽከርካሪ ማለፍ የተከለከለ ነው።",
         "explanation_correct_audio": "306_q3_correct.mp3",
         "explanation_wrong_audio": "306_q3_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "የእግረኞችን መብት አለማክበር ምንም አይነት መዘዝ አያስከትልም።",
+            "text_amharic": "የእግረኛ ማቋረጫ ፊት ለፊት ሌላ ተሽከርካሪ ማለፍ የተከለከለ ነው፣ ባለ ሁለት ጎማ ተሽከርካሪ ካልሆነ በስተቀር።",
             "is_correct": false,
             "audio_filename": "answer_306_q3_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "የእግረኞችን መብት አለማክበር ከባድ አደጋ፣ ቅጣት እና የነጥብ ቅነሳ ሊያስከትል ይችላል።",
+            "text_amharic": "የእግረኛ ማቋረጫ ፊት ለፊት ሌላ ተሽከርካሪ ማለፍ የተከለከለ ነው።",
             "is_correct": true,
             "audio_filename": "answer_306_q3_B.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "የእግረኞችን መብት አለማክበር የነጥብ ቅነሳ ብቻ ያስከትላል።",
-            "is_correct": false,
-            "audio_filename": "answer_306_q3_D.mp3"
-          },
-          {
             "id": "C",
-            "text_amharic": "የእግረኞችን መብት አለማክበር ትንሽ ቅጣት ብቻ ያስከትላል።",
+            "text_amharic": "እግረኞች ከሌሉ የእግረኛ ማቋረጫ ፊት ለፊት ሌላ ተሽከርካሪ ማለፍ ይፈቀዳል።",
             "is_correct": false,
             "audio_filename": "answer_306_q3_C.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "የእግረኛ ማቋረጫ ፊት ለፊት ሌላ ተሽከርካሪ ማለፍ የተከለከለ ነው፣ ማለፉ ከቀኝ በኩል ካልተደረገ በስተቀር።",
+            "is_correct": false,
+            "audio_filename": "answer_306_q3_D.mp3"
           }
         ]
       }
@@ -727,106 +727,106 @@
     "questions": [
       {
         "id": "307_q1",
-        "question_amharic": "ይህንን ምልክት ሲያዩ ምን ማድረግ አለብዎት?",
+        "question_amharic": "በዚህ የትራፊክ ምልክት መሰረት እንዴት መንዳት አለብህ?",
         "question_audio": "307_q1_question.mp3",
-        "explanation_correct_amharic": "ትክክل! ይህ ምልክት ከፊት ለፊትህ ለሚመጣው ተሽከርካሪ ቅድሚያ እንድትሰጥ ያዝዛል። በተለይም ቀይ ቀስት ባለበት አቅጣጫ የምትሄድ ከሆነ ለጥቁር ቀስት ተሽከርካሪ መንገድ መልቀቅ አለብህ።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የመጪውን ተሽከርካሪ ቅድሚያ አለመስጠት አደጋ ሊያስከትል ወይም የትራፊክ ፍሰትን ሊያስተጓጉል ይችላል።",
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት ከፊት ለፊት ለሚመጣው ትራፊክ ቅድሚያ እንድትሰጥ ያዝዛል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህ ምልክት ከፊት ለፊት ለሚመጣው ትራፊክ ቅድሚያ እንድትሰጥ ያዝዛል።",
         "explanation_correct_audio": "307_q1_correct.mp3",
         "explanation_wrong_audio": "307_q1_wrong.mp3",
         "answers": [
           {
-            "id": "D",
-            "text_amharic": "ምልክቱ ማስጠንቀቂያ ብቻ ስለሆነ ምንም ልዩ ነገር ማድረግ አያስፈልግም።",
+            "id": "A",
+            "text_amharic": "በተለመደው ፍጥነት መንዳትህን ቀጥል – የቅድሚያ መብት ያንተ ነው።",
             "is_correct": false,
-            "audio_filename": "answer_307_q1_D.mp3"
-          },
-          {
-            "id": "C",
-            "text_amharic": "ከኋላህ ላሉት ተሽከርካሪዎች ቅድሚያ መስጠት አለብህ እና ፍጥነትህን መጨመር አለብህ።",
-            "is_correct": false,
-            "audio_filename": "answer_307_q1_C.mp3"
+            "audio_filename": "answer_307_q1_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "ከፊት ለፊትህ ለሚመጣው ተሽከርካሪ ቅድሚያ መስጠት አለብህ፤ በተለይም ቀይ ቀስት ባለው አቅጣጫ የምትሄድ ከሆነ ለጥቁር ቀስት ተሽከርካሪ መንገድ መልቀቅ ግዴታ ነው።",
-            "is_correct": true,
+            "text_amharic": "በዚህ ክፍል ያለውን እንቅስቃሴ በአጭር ጊዜ ውስጥ ለመጨረስ ፍጥነትህን ጨምር።",
+            "is_correct": false,
             "audio_filename": "answer_307_q1_B.mp3"
           },
           {
-            "id": "A",
-            "text_amharic": "በፍጥነት ማሽከርከር እና ከፊት ለፊትህ ካለው ተሽከርካሪ በፊት ማለፍ አለብህ።",
+            "id": "C",
+            "text_amharic": "ከፊት ለፊት የሚመጣው ተሽከርካሪ ሳይዘገይ እና ከመንገዱ ሳይወጣ እንዲያልፍ ፍቀድለት።",
+            "is_correct": true,
+            "audio_filename": "answer_307_q1_C.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "በቀኝ መስመር ላይ በሚያሽከረክሩበት ጊዜ ከመጠቀም ይቆጠቡ።",
             "is_correct": false,
-            "audio_filename": "answer_307_q1_A.mp3"
+            "audio_filename": "answer_307_q1_D.mp3"
           }
         ]
       },
       {
         "id": "307_q2",
-        "question_amharic": "ይህ ምልክት በየትኞቹ ቦታዎች ላይ ይገኛል እና ዋና ዓላማው ምንድን ነው?",
+        "question_amharic": "የዚህ የትራፊክ ምልክት ትርጉም ምንድን ነው?",
         "question_audio": "307_q2_question.mp3",
-        "explanation_correct_amharic": "ትክክል! ጥሩ ነው። ይህ ምልክት በተለይ ጠባብ በሆኑ መንገዶች ወይም ድልድዮች ላይ የሚቀመጥ ሲሆን፣ የመጪውን ተሽከርካሪ ቅድሚያ እንድትሰጥ ያዝዛል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የምልክቱን ትክክለኛ ቦታ እና ዓላማ አለማወቅ አሽከርካሪው የተሳሳተ ውሳኔ እንዲወስን ያደርጋል።",
+        "explanation_correct_amharic": "አዎ! ይህ ምልክት በጠባብ መንገድ ላይ ለሚመጣው ተሽከርካሪ ቅድሚያ እንድትሰጥ ያመለክታል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ምልክቱ የሚያመለክተው በጠባብ መንገድ ላይ ለሚመጣው ትራፊክ ቅድሚያ መስጠት እንዳለብህ ነው።",
         "explanation_correct_audio": "307_q2_correct.mp3",
         "explanation_wrong_audio": "307_q2_wrong.mp3",
         "answers": [
           {
-            "id": "C",
-            "text_amharic": "በማንኛውም መንገድ ላይ ይገኛል እና ሁልጊዜ መጀመሪያ እንድታልፍ ያዝዛል።",
-            "is_correct": false,
-            "audio_filename": "answer_307_q2_C.mp3"
-          },
-          {
-            "id": "D",
-            "text_amharic": "በትራፊክ መብራቶች አጠገብ ይገኛል እና መብራቱን እንድትጠብቅ ያዝዛል።",
-            "is_correct": false,
-            "audio_filename": "answer_307_q2_D.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "በትላልቅ አውራ ጎዳናዎች ላይ ብቻ ነው የሚገኘው እና ፍጥነትህን እንድትቀንስ ያዝዛል።",
+            "text_amharic": "በጠባቡ መንገድ ላይ የቅድሚያ መብት ያንተ ነው።",
             "is_correct": false,
             "audio_filename": "answer_307_q2_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "ከፊት ለፊትህ ለሚመጣው ተሽከርካሪ ቅድሚያ መስጠት አለብህ፤ ይህ ምልክት በተለይ ጠባብ በሆኑ መንገዶች ወይም ድልድዮች ላይ ይገኛል።",
-            "is_correct": true,
+            "text_amharic": "ከመንገዱ በስተቀኝ ባለው ትራፊክ ላይ ገደቦች አሉ።",
+            "is_correct": false,
             "audio_filename": "answer_307_q2_B.mp3"
+          },
+          {
+            "id": "C",
+            "text_amharic": "ከፊትህ ባለ ሁለት አቅጣጫ ትራፊክ አለ።",
+            "is_correct": false,
+            "audio_filename": "answer_307_q2_C.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "በጠባብ መንገድ ላይ ከፊት ለፊት ለሚመጣው ትራፊክ ቅድሚያ ስጥ።",
+            "is_correct": true,
+            "audio_filename": "answer_307_q2_D.mp3"
           }
         ]
       },
       {
         "id": "307_q3",
-        "question_amharic": "ይህንን ምልክት አለማክበር ምን አይነት መዘዞችን ሊያስከትል ይችላል?",
+        "question_amharic": "በዚህ የትራፊክ ምልክት መሰረት የትኛው የትራፊክ አቅጣጫ ቅድሚያ መስጠት አለበት?",
         "question_audio": "307_q3_question.mp3",
-        "explanation_correct_amharic": "አሪፍ! ምልክቱ የዚህን ምልክት ህግ አለማክበር አደጋ ሊያስከትል ወይም የትራፊክ ፍሰትን ሊያስተጓጉል እንደሚችል ግልጽ ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የምልክቱን ህግ አለማክበር አሽከርካሪውን እና ሌሎችን አደጋ ላይ ሊጥል ይችላል።",
+        "explanation_correct_amharic": "ትክክል! ቀይ ቀስት ሁልጊዜ ቅድሚያ መስጠት ያለበትን አቅጣጫ ያመለክታል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ቀይ ቀስት ያለው አቅጣጫ ቅድሚያ መስጠት አለበት, ጥቁር ቀስት ያለው አቅጣጫ ግን የቅድሚያ መብት አለው።",
         "explanation_correct_audio": "307_q3_correct.mp3",
         "explanation_wrong_audio": "307_q3_wrong.mp3",
         "answers": [
           {
-            "id": "B",
-            "text_amharic": "ይህንን ህግ አለማክበር አደጋ ሊያስከትል ወይም የትራፊክ ፍሰትን ሊያስተጓጉል ይችላል።",
+            "id": "A",
+            "text_amharic": "በቀይ ቀስት የተመለከተው አቅጣጫ።",
             "is_correct": true,
+            "audio_filename": "answer_307_q3_A.mp3"
+          },
+          {
+            "id": "B",
+            "text_amharic": "በጥቁር ቀስት የተመለከተው አቅጣጫ።",
+            "is_correct": false,
             "audio_filename": "answer_307_q3_B.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "ሌሎች አሽከርካሪዎች ለእርስዎ ቅድሚያ እንዲሰጡ ያደርጋል እና ጉዞዎን ያፋጥናል።",
-            "is_correct": false,
-            "audio_filename": "answer_307_q3_D.mp3"
-          },
-          {
             "id": "C",
-            "text_amharic": "የፖሊስ ቅጣት ብቻ ያስከትላል እንጂ አደጋ አያመጣም።",
+            "text_amharic": "ሁለቱም አቅጣጫዎች ቅድሚያ መስጠት አለባቸው።",
             "is_correct": false,
             "audio_filename": "answer_307_q3_C.mp3"
           },
           {
-            "id": "A",
-            "text_amharic": "ምንም አይነት ችግር አያመጣም ምክንያቱም ምልክቱ ማስጠንቀቂያ ብቻ ነው።",
+            "id": "D",
+            "text_amharic": "ከቀኝ የሚመጣው አቅጣጫ።",
             "is_correct": false,
-            "audio_filename": "answer_307_q3_A.mp3"
+            "audio_filename": "answer_307_q3_D.mp3"
           }
         ]
       }
@@ -846,106 +846,106 @@
     "questions": [
       {
         "id": "308_q1",
-        "question_amharic": "ይህንን ምልክት ሲያዩ ምን ማድረግ ይጠበቅብዎታል?",
+        "question_amharic": "ይህ የትራፊክ ምልክት ምን ማለት ነው?",
         "question_audio": "308_q1_question.mp3",
-        "explanation_correct_amharic": "ጎቨዝ። ይህ ምልክት መንገዱ ጠባብ በሆነበት ወይም መሰናክል ባለበት ቦታ ላይ ከፊት ለፊትህ ለሚመጣ ተሽከርካሪ ቅድሚያ እንድትሰጥ ያዝዛል። ስለዚህ፣ ተሽከርካሪ እየመጣ ከሆነ ማቆም ወይም ፍጥነት መቀነስ ግዴታ ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ሁልጊዜ ማቆም ወይም ፍጥነት መጨመር አላስፈላጊ የትራፊክ መጨናነቅን ሊያስከትል ወይም አደጋ ሊያመጣ ይችላል።",
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት ከመጪው ትራፊክ ቅድሚያ እንዲሰጡ ያዛል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ከመጪው ትራፊክ ቅድሚያ ይስጡ።",
         "explanation_correct_audio": "308_q1_correct.mp3",
         "explanation_wrong_audio": "308_q1_wrong.mp3",
         "answers": [
           {
-            "id": "D",
-            "text_amharic": "ከኋላዎ ላሉት ተሽከርካሪዎች ቅድሚያ መስጠት አለብዎት።",
-            "is_correct": false,
-            "audio_filename": "answer_308_q1_D.mp3"
-          },
-          {
-            "id": "B",
-            "text_amharic": "ይህንን ምልክት ሲያዩ መንገዱ ጠባብ በሆነበት ወይም መሰናክል ባለበት ቦታ ላይ ከፊት ለፊትዎ ተሽከርካሪ እየመጣ ከሆነ ማቆም ወይም ፍጥነትዎን መቀነስ እና እንዲያልፍ መፍቀድ አለብዎት።",
-            "is_correct": true,
-            "audio_filename": "answer_308_q1_B.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "ሁልጊዜ ማቆም እና ሌላ ተሽከርካሪ እስኪመጣ መጠበቅ አለብዎት።",
+            "text_amharic": "በመንዳት አቅጣጫዎ ባለ አንድ መንገድ።",
             "is_correct": false,
             "audio_filename": "answer_308_q1_A.mp3"
           },
           {
+            "id": "B",
+            "text_amharic": "ከመጪው ትራፊክ ቅድሚያ ይስጡ።",
+            "is_correct": true,
+            "audio_filename": "answer_308_q1_B.mp3"
+          },
+          {
             "id": "C",
-            "text_amharic": "ፍጥነትዎን መጨመር እና በፍጥነት ማለፍ አለብዎት።",
+            "text_amharic": "በተቃራኒ አቅጣጫ ባለ አንድ መንገድ።",
             "is_correct": false,
             "audio_filename": "answer_308_q1_C.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "በመንዳት አቅጣጫዎ ላለው ትራፊክ ቅድሚያ።",
+            "is_correct": false,
+            "audio_filename": "answer_308_q1_D.mp3"
           }
         ]
       },
       {
         "id": "308_q2",
-        "question_amharic": "ይህ ምልክት በዋነኝነት የሚያመለክተው ምን ዓይነት የመንገድ ሁኔታዎችን ነው?",
+        "question_amharic": "በዚህ የትራፊክ ምልክት መሰረት እንዴት ይነዳሉ?",
         "question_audio": "308_q2_question.mp3",
-        "explanation_correct_amharic": "በጣም ጥሩ። ምልክቱ በግልጽ እንደሚያሳየው፣ ይህ ህግ የሚተገበረው መንገዱ ጠባብ በሆነበት ወይም መሰናክል ባለበት ቦታ ላይ ብቻ ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የመንገዱን ሁኔታ በተሳሳተ መንገድ መረዳት አላስፈላጊ የፍጥነት ቅነሳን ወይም አደጋዎችን ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት ከመጪው ተሽከርካሪ ቅድሚያ እንዲሰጡ እና መንገዱ እስኪጸዳ ድረስ እንዲጠብቁ ያዛል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ከመጪው ተሽከርካሪ ቅድሚያ እሰጣለሁ እና መንገዱ ባዶ ከሆነ በኋላ ብቻ እገባለሁ።",
         "explanation_correct_audio": "308_q2_correct.mp3",
         "explanation_wrong_audio": "308_q2_wrong.mp3",
         "answers": [
           {
-            "id": "D",
-            "text_amharic": "የመዞሪያ መንገድ መኖሩን ያሳያል።",
+            "id": "A",
+            "text_amharic": "የመንዳት ፍጥነቴን እቀንሳለሁ ግን አላቆምም፣ ምክንያቱም ቅድሚያ የምሰጠው እኔ ነኝ።",
             "is_correct": false,
-            "audio_filename": "answer_308_q2_D.mp3"
+            "audio_filename": "answer_308_q2_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "መንገዱ ሰፊ እና ብዙ መስመሮች ባሉበት ቦታ ላይ ነው።",
+            "text_amharic": "መንዳት እቀጥላለሁ እና ከመጪው ተሽከርካሪ ቅድሚያ እንድሰጠኝ እጠብቃለሁ።",
             "is_correct": false,
             "audio_filename": "answer_308_q2_B.mp3"
           },
           {
-            "id": "A",
-            "text_amharic": "ይህ ምልክት መንገዱ ጠባብ በሆነበት ወይም መሰናክል ባለበት ቦታ ላይ ከፊት ለፊትዎ ለሚመጣ ተሽከርካሪ ቅድሚያ መስጠት እንዳለብዎ ያሳያል።",
+            "id": "C",
+            "text_amharic": "ከመጪው ተሽከርካሪ ቅድሚያ እሰጣለሁ እና መንገዱ ባዶ ከሆነ በኋላ ብቻ እገባለሁ።",
             "is_correct": true,
-            "audio_filename": "answer_308_q2_A.mp3"
+            "audio_filename": "answer_308_q2_C.mp3"
           },
           {
-            "id": "C",
-            "text_amharic": "የመኪና ማቆሚያ ቦታ መኖሩን ያሳያል።",
+            "id": "D",
+            "text_amharic": "ቀይ የትራፊክ መብራት ካለ ብቻ አቆማለሁ።",
             "is_correct": false,
-            "audio_filename": "answer_308_q2_C.mp3"
+            "audio_filename": "answer_308_q2_D.mp3"
           }
         ]
       },
       {
         "id": "308_q3",
-        "question_amharic": "ይህንን ምልክት ችላ ብለው ህጉን ካላከበሩ ምን ሊከሰት ይችላል?",
+        "question_amharic": "ይህ ምልክት በተለጠፈበት ጠባብ የመንገድ ክፍል እየቀረቡ ነው። ተሽከርካሪ ከፊትዎ ከመጣ ምን ማድረግ አለብዎት?",
         "question_audio": "308_q3_question.mp3",
-        "explanation_correct_amharic": "ጎሽሽ። የትራፊክ ምልክቶችን አለማክበር ከባድ መዘዝ ያስከትላል። ይህንን ምልክት አለማክበር አደጋ ሊያስከትል ወይም የትራፊክ ቅጣት ሊያስወጣ ይችላል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የትራፊክ ህጎችን ችላ ማለት የራስዎን እና የሌሎችን ደህንነት አደጋ ላይ ይጥላል።",
+        "explanation_correct_amharic": "ትክክል! ጠባብ መንገድ ላይ ከመጪው ተሽከርካሪ በፊት መጠበቅ ደህንነትን ያረጋግጣል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ከመጪው ተሽከርካሪ እስኪያልፍ ድረስ ጠባብ ክፍሉ ከመግባትዎ በፊት መጠበቅ አለብዎት።",
         "explanation_correct_audio": "308_q3_correct.mp3",
         "explanation_wrong_audio": "308_q3_wrong.mp3",
         "answers": [
           {
-            "id": "D",
-            "text_amharic": "መንገዱ በራስ-ሰር ይስፋፋል እና ማለፍ ይችላሉ።",
-            "is_correct": false,
-            "audio_filename": "answer_308_q3_D.mp3"
-          },
-          {
-            "id": "B",
-            "text_amharic": "ሌሎች አሽከርካሪዎች ለእርስዎ ቅድሚያ ይሰጣሉ።",
-            "is_correct": false,
-            "audio_filename": "answer_308_q3_B.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "ምንም ነገር አይከሰትም ምክንያቱም ምልክቱ የማስጠንቀቂያ ብቻ ነው።",
+            "text_amharic": "ከመጪው ተሽከርካሪ በፊት ለማለፍ ማፋጠን አለብዎት።",
             "is_correct": false,
             "audio_filename": "answer_308_q3_A.mp3"
           },
           {
+            "id": "B",
+            "text_amharic": "ወደ ጠባብ ክፍሉ መግባት እና ከመጪው ተሽከርካሪ እንዲያቆም መጠበቅ አለብዎት።",
+            "is_correct": false,
+            "audio_filename": "answer_308_q3_B.mp3"
+          },
+          {
             "id": "C",
-            "text_amharic": "ይህንን ህግ አለማክበር አደጋ ሊያስከትል ወይም የትራፊክ ቅጣት ሊያስወጣ ስለሚችል ሁልጊዜ ጥንቃቄ ማድረግ አለብዎት።",
-            "is_correct": true,
+            "text_amharic": "ከመጪው ተሽከርካሪ እንዲያቆም በመብራትዎ ምልክት መስጠት አለብዎት።",
+            "is_correct": false,
             "audio_filename": "answer_308_q3_C.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ከመጪው ተሽከርካሪ እስኪያልፍ ድረስ ጠባብ ክፍሉ ከመግባትዎ በፊት መጠበቅ አለብዎት።",
+            "is_correct": true,
+            "audio_filename": "answer_308_q3_D.mp3"
           }
         ]
       }
@@ -965,106 +965,106 @@
     "questions": [
       {
         "id": "309_q1",
-        "question_amharic": "ይህንን ምልክት ሲያዩ፣ በመጪው መስቀለኛ መንገድ ላይ የእርስዎ ዋና ግዴታ ምንድን ነው?",
+        "question_amharic": "የዚህ ምልክት ትርጉም ምንድን ነው?",
         "question_audio": "309_q1_question.mp3",
-        "explanation_correct_amharic": "ዋውው በጣም ጥሩ። ይህ ምልክት እርስዎ ቅድሚያ እንዳለዎት ያሳያል፣ ነገር ግን አደጋዎችን ለመከላከል ሁልጊዜ ጥንቃቄ ማድረግ እና ሌሎች አሽከርካሪዎች መንገድ እየሰጡ መሆኑን ማረጋገጥ አስፈላጊ ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ መምረጥ አሽከርካሪው ቅድሚያ እንዳለው በማሰብ ጥንቃቄ እንዳያደርግ ሊያደርግ ይችላል፣ ይህም አደጋ የመፍጠር እድሉ ከፍተኛ ነው።",
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት እርስዎ የመንገድ ቅድሚያ ባለው መንገድ ላይ እንዳሉ ያሳያል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህ ምልክት የቅድሚያ መብት ያለበትን መንገድ ያመለክታል።",
         "explanation_correct_audio": "309_q1_correct.mp3",
         "explanation_wrong_audio": "309_q1_wrong.mp3",
         "answers": [
           {
-            "id": "B",
-            "text_amharic": "እርስዎ የመንገድ ቅድሚያ ስላሎት ሌሎች ተሽከርካሪዎች ለእርስዎ መንገድ መስጠት አለባቸው፤ ነገር ግን አደጋን ለመከላከል ሁልጊዜ ጥንቃቄ ማድረግ እና ሌሎች አሽከርካሪዎች በትክክል መንገድ እየሰጡ መሆኑን ማረጋገጥ አለብዎት።",
+            "id": "A",
+            "text_amharic": "የመንገድ ቅድሚያ ባለው መንገድ ላይ ነዎት።",
             "is_correct": true,
+            "audio_filename": "answer_309_q1_A.mp3"
+          },
+          {
+            "id": "B",
+            "text_amharic": "ለሕዝብ ማመላለሻ የሚሆን መንገድ።",
+            "is_correct": false,
             "audio_filename": "answer_309_q1_B.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "ለእግረኞች ብቻ መንገድ መስጠት አለብዎት እንጂ ለሌሎች ተሽከርካሪዎች አይደለም።",
-            "is_correct": false,
-            "audio_filename": "answer_309_q1_D.mp3"
-          },
-          {
             "id": "C",
-            "text_amharic": "ሁልጊዜ ማቆም እና ሌሎች ተሽከርካሪዎች እንዲያልፉ መፍቀድ አለብዎት።",
+            "text_amharic": "የመንገድ ቅድሚያ በሌለው መንገድ ላይ ነዎት።",
             "is_correct": false,
             "audio_filename": "answer_309_q1_C.mp3"
           },
           {
-            "id": "A",
-            "text_amharic": "ምንም ሳይፈትሹ በፍጥነት ማሽከርከር እና መስቀለኛ መንገዱን ማለፍ አለብዎት።",
+            "id": "D",
+            "text_amharic": "ከፊትዎ የፖሊስ የፍጥነት መለኪያ አለ።",
             "is_correct": false,
-            "audio_filename": "answer_309_q1_A.mp3"
+            "audio_filename": "answer_309_q1_D.mp3"
           }
         ]
       },
       {
         "id": "309_q2",
-        "question_amharic": "ይህንን ምልክት ሲያዩ፣ ሌሎች አሽከርካሪዎች በመስቀለኛ መንገዱ ላይ ለእርስዎ ምን ማድረግ አለባቸው?",
+        "question_amharic": "በግራ በኩል ያለውን ምልክት ካለፉ በኋላ እንዴት መንዳት አለብዎት?",
         "question_audio": "309_q2_question.mp3",
-        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። ይህ ምልክት እርስዎ ዋና መንገድ ላይ እንዳሉ እና ቅድሚያ እንዳለዎት በግልጽ ያሳያል፣ ስለዚህ ሌሎች ተሽከርካሪዎች ለእርስዎ መንገድ የመስጠት ግዴታ አለባቸው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ መምረጥ ሌሎች አሽከርካሪዎች ቅድሚያውን እንዲጥሱ ሊያበረታታ ይችላል፣ ይህም በመስቀለኛ መንገድ ላይ ግጭት እንዲፈጠር ያደርጋል።",
+        "explanation_correct_amharic": "አዎ! ይህ ምልክት እርስዎ የመንገድ ቅድሚያ ባለው መንገድ ላይ እንዳሉ ስለሚያመለክት በተለመደው መንገድ መንዳት ይችላሉ።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህ ምልክት የመንገድ ቅድሚያ ያለበትን መንገድ ያመለክታል, ስለዚህ በተለመደው መንገድ መንዳት አለብዎት።",
         "explanation_correct_audio": "309_q2_correct.mp3",
         "explanation_wrong_audio": "309_q2_wrong.mp3",
         "answers": [
           {
-            "id": "B",
-            "text_amharic": "ሌሎች አሽከርካሪዎች እርስዎ ቅድሚያ እንዳለዎት ስለሚያውቁ በፍጥነት ማለፍ ይችላሉ።",
-            "is_correct": false,
-            "audio_filename": "answer_309_q2_B.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "እርስዎ ዋና መንገድ ላይ ስለሆኑ እና ቅድሚያ ስላሎት፣ ሌሎች ተሽከርካሪዎች ለእርስዎ መንገድ መስጠት እና እርስዎ እስኪያልፉ ድረስ መጠበቅ አለባቸው።",
-            "is_correct": true,
+            "text_amharic": "በመገናኛ መንገድ ላይ ላለው ትራፊክ ቅድሚያ ይስጡ።",
+            "is_correct": false,
             "audio_filename": "answer_309_q2_A.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "ሌሎች አሽከርካሪዎች እርስዎ እንዲያልፉ ከመፍቀዳቸው በፊት እንዲያቆሙ መጠበቅ አለባቸው።",
-            "is_correct": false,
-            "audio_filename": "answer_309_q2_D.mp3"
+            "id": "B",
+            "text_amharic": "በተለመደው መንገድ ይንዱ። የመንገድ ቅድሚያ ባለው መንገድ ላይ ነዎት።",
+            "is_correct": true,
+            "audio_filename": "answer_309_q2_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "ሌሎች አሽከርካሪዎች ለእርስዎ መንገድ መስጠት ያለባቸው የትራፊክ መብራት ካለ ብቻ ነው።",
+            "text_amharic": "የመንገድ ቅድሚያ ያለው መንገድ መጨረሻ።",
             "is_correct": false,
             "audio_filename": "answer_309_q2_C.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ከባቡር መስመር መገናኛ በፊት ያቁሙ።",
+            "is_correct": false,
+            "audio_filename": "answer_309_q2_D.mp3"
           }
         ]
       },
       {
         "id": "309_q3",
-        "question_amharic": "ይህንን ምልክት ሲያዩ፣ የመንገድ ቅድሚያ ቢኖርዎትም እንኳ አደጋን ለመከላከል ምን አይነት ጥንቃቄ ማድረግ አለብዎት?",
+        "question_amharic": "ይህን ምልክት ሲያዩ፣ ከጎን መንገዶች ከሚገቡ አሽከርካሪዎች ምን ይጠብቃሉ?",
         "question_audio": "309_q3_question.mp3",
-        "explanation_correct_amharic": "እሰይ። አቤት እውቀት! ምልክቱ ቅድሚያ ቢሰጥም፣ ማብራሪያው አደጋዎችን ለመከላከል ጥንቃቄ ማድረግ እና ሌሎች አሽከርካሪዎች በትክክል መንገድ እየሰጡ መሆኑን ማረጋገጥ እንደሚያስፈልግ በግልጽ ይናገራል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ጥንቃቄ አለማድረግ ወይም የተሳሳተ እርምጃ መውሰድ፣ ቅድሚያ ቢኖርም እንኳ፣ በመስቀለኛ መንገድ ላይ ወደ ከባድ አደጋ ሊያመራ ይችላል።",
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት እርስዎ የመንገድ ቅድሚያ ባለው መንገድ ላይ እንዳሉ ስለሚያመለክት፣ ከጎን መንገዶች የሚመጡ አሽከርካሪዎች ቅድሚያ ሊሰጡዎት ይገባል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የመንገድ ቅድሚያ ባለው መንገድ ላይ ስለሆኑ፣ ከጎን መንገዶች የሚመጡ አሽከርካሪዎች ቅድሚያ ሊሰጡዎት ይጠበቃል።",
         "explanation_correct_audio": "309_q3_correct.mp3",
         "explanation_wrong_audio": "309_q3_wrong.mp3",
         "answers": [
           {
+            "id": "A",
+            "text_amharic": "እነሱ እንዲቀንሱልዎ ቀንድ ይነፉብዎታል።",
+            "is_correct": false,
+            "audio_filename": "answer_309_q3_A.mp3"
+          },
+          {
             "id": "B",
-            "text_amharic": "በመስቀለኛ መንገዱ ላይ ከመግባትዎ በፊት ሁልጊዜ ሙሉ በሙሉ ማቆም እና ሌሎች ተሽከርካሪዎች እንዲያልፉ መፍቀድ አለብዎት።",
+            "text_amharic": "ከፊትዎ ወደ ትራፊክ ይገባሉ።",
             "is_correct": false,
             "audio_filename": "answer_309_q3_B.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "ምንም አይነት ጥንቃቄ ማድረግ አያስፈልግም ምክንያቱም ምልክቱ እርስዎ ሙሉ ቅድሚያ እንዳለዎት ያሳያል።",
-            "is_correct": false,
-            "audio_filename": "answer_309_q3_D.mp3"
-          },
-          {
             "id": "C",
-            "text_amharic": "የመንገድ ቅድሚያ ቢኖርዎትም እንኳ፣ ሁልጊዜ በጥንቃቄ መንዳት፣ አካባቢውን መፈተሽ እና ሌሎች አሽከርካሪዎች በትክክል መንገድ እየሰጡ መሆኑን ማረጋገጥ አለብዎት።",
+            "text_amharic": "እነሱ የመንገድ ቅድሚያ ይሰጡዎታል።",
             "is_correct": true,
             "audio_filename": "answer_309_q3_C.mp3"
           },
           {
-            "id": "A",
-            "text_amharic": "የመንገድ ቅድሚያ ስላሎት፣ ሌሎች አሽከርካሪዎች ሁልጊዜ መንገድ እንደሚሰጡዎት በመተማመን በፍጥነት ማሽከርከር አለብዎት።",
+            "id": "D",
+            "text_amharic": "በበለጠ ፍጥነት ይነዳሉ።",
             "is_correct": false,
-            "audio_filename": "answer_309_q3_A.mp3"
+            "audio_filename": "answer_309_q3_D.mp3"
           }
         ]
       }
@@ -1084,106 +1084,106 @@
     "questions": [
       {
         "id": "310_q1",
-        "question_amharic": "ይህንን ምልክት ሲያዩ የአሽከርካሪው የቅድሚያ መብት ምን ይሆናል?",
+        "question_amharic": "የዚህ ምልክት ትርጉም ምንድን ነው?",
         "question_audio": "310_q1_question.mp3",
-        "explanation_correct_amharic": "ትክክل! ይህ ምልክት አሽከርካሪው የቅድሚያ መብት የነበረው መንገድ ማብቃቱን እና ከዚህ በኋላ በሌሎች መንገዶች ላይ የቅድሚያ መብት እንደሌለው በግልጽ ያሳውቃል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ መምረጥ አሽከርካሪው የቅድሚያ መብት እንዳለው በማሰብ አደጋ ሊያስከትል ወይም የትራፊክ ደንቦችን በመጣስ ቅጣት ሊጣልበት ይችላል።",
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት ቅድሚያ የሚሰጠው መንገድ ማብቃቱን ያመለክታል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህ ምልክት ቅድሚያ የሚሰጠው መንገድ መጨረሻ መሆኑን ያመለክታል።",
         "explanation_correct_audio": "310_q1_correct.mp3",
         "explanation_wrong_audio": "310_q1_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "አሽከርካሪው አሁንም በሁሉም መንገዶች ላይ የቅድሚያ መብት አለው እና ፍጥነቱን መቀነስ አያስፈልገውም።",
+            "text_amharic": "ቅድሚያ በሚሰጥ መንገድ ላይ ነዎት።",
             "is_correct": false,
             "audio_filename": "answer_310_q1_A.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "አሽከርካሪው የቅድሚያ መብት የነበረው መንገድ ማብቃቱን ያሳያል ነገር ግን በሌሎች መንገዶች ላይ የቅድሚያ መብት አለው።",
+            "id": "B",
+            "text_amharic": "ተሽከርካሪ ማቆም የተከለከለ ነው።",
             "is_correct": false,
-            "audio_filename": "answer_310_q1_D.mp3"
+            "audio_filename": "answer_310_q1_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "አሽከርካሪው ፍጥነቱን ብቻ መቀነስ አለበት እንጂ የቅድሚያ መብቱ አይለወጥም።",
+            "text_amharic": "ፍጥነትዎን ይቀንሱ እና ለመቆም ይዘጋጁ።",
             "is_correct": false,
             "audio_filename": "answer_310_q1_C.mp3"
           },
           {
-            "id": "B",
-            "text_amharic": "አሽከርካሪው ከዚህ በኋላ በሌሎች መንገዶች ላይ የቅድሚያ መብት የለውም ምክንያቱም የቅድሚያ መብት የነበረው መንገድ ማብቃቱን ያሳያል።",
+            "id": "D",
+            "text_amharic": "ቅድሚያ የሚሰጠው መንገድ መጨረሻ።",
             "is_correct": true,
-            "audio_filename": "answer_310_q1_B.mp3"
+            "audio_filename": "answer_310_q1_D.mp3"
           }
         ]
       },
       {
         "id": "310_q2",
-        "question_amharic": "ይህንን ምልክት ሲያዩ አሽከርካሪው ምን ማድረግ አለበት?",
+        "question_amharic": "ይህን ምልክት ካዩ በኋላ አሽከርካሪ ምን ማድረግ አለበት?",
         "question_audio": "310_q2_question.mp3",
-        "explanation_correct_amharic": "ትክክል! ጥሩ ነው። ምልክቱ አሽከርካሪው ፍጥነቱን እንዲቀንስ፣ ለሌሎች ተሽከርካሪዎች ቅድሚያ ለመስጠት እንዲዘጋጅ እና የትራፊክ ደንቦችን በጥንቃቄ እንዲከተል በግልጽ ያዛል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ መምረጥ አሽከርካሪው አስፈላጊውን ጥንቃቄ እንዳያደርግ በማድረግ አደጋ ሊያስከትል ወይም የትራፊክ ደንቦችን በመጣስ ቅጣት ሊጣልበት ይችላል።",
+        "explanation_correct_amharic": "አዎ! ቅድሚያ የሚሰጠው መንገድ ሲያልቅ ለሌሎች ተሽከርካሪዎች ቅድሚያ መስጠት አለብዎት።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህ ምልክት ቅድሚያ የሚሰጠው መንገድ ማብቃቱን ስለሚያመለክት ለሌሎች ተሽከርካሪዎች ቅድሚያ ለመስጠት መዘጋጀት አለብዎት።",
         "explanation_correct_audio": "310_q2_correct.mp3",
         "explanation_wrong_audio": "310_q2_wrong.mp3",
         "answers": [
           {
-            "id": "B",
-            "text_amharic": "አሽከርካሪው ፍጥነቱን መቀነስ፣ ለሌሎች ተሽከርካሪዎች ቅድሚያ ለመስጠት መዘጋጀት እና የትራፊክ ደንቦችን በጥንቃቄ መከተል አለበት።",
-            "is_correct": true,
-            "audio_filename": "answer_310_q2_B.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "አሽከርካሪው ፍጥነቱን መጨመር አለበት ምክንያቱም የቅድሚያ መብት አለው።",
-            "is_correct": false,
+            "text_amharic": "ለሌሎች ተሽከርካሪዎች ቅድሚያ ለመስጠት ይዘጋጁ።",
+            "is_correct": true,
             "audio_filename": "answer_310_q2_A.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "አሽከርካሪው ለሌሎች ተሽከርካሪዎች ቅድሚያ መስጠት የለበትም ምክንያቱም የራሱ የቅድሚያ መብት አለው።",
+            "id": "B",
+            "text_amharic": "ፍጥነትዎን ይጨምሩ እና ይቀጥሉ።",
             "is_correct": false,
-            "audio_filename": "answer_310_q2_D.mp3"
+            "audio_filename": "answer_310_q2_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "አሽከርካሪው ምንም ማድረግ አያስፈልገውም ምክንያቱም ምልክቱ ለእሱ አይመለከትም።",
+            "text_amharic": "ወደ ቀኝ ይታጠፉ።",
             "is_correct": false,
             "audio_filename": "answer_310_q2_C.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ወደ ግራ ይታጠፉ።",
+            "is_correct": false,
+            "audio_filename": "answer_310_q2_D.mp3"
           }
         ]
       },
       {
         "id": "310_q3",
-        "question_amharic": "ይህ ምልክት አሽከርካሪው ከሌሎች ተሽከርካሪዎች ጋር በተያያዘ ምን እንዲያደርግ ያስገድደዋል?",
+        "question_amharic": "ይህ ምልክት ከዚህ ነጥብ ጀምሮ ስለ ቅድሚያ መብት ምን ያመለክታል?",
         "question_audio": "310_q3_question.mp3",
-        "explanation_correct_amharic": "አሪፍ! ምልክቱ ምልክቱ የቅድሚያ መብት ማብቃቱን ስለሚያመለክት አሽከርካሪው ለሌሎች ተሽከርካሪዎች ቅድሚያ ለመስጠት መዘጋጀት እና የትራፊክ ደንቦችን በጥንቃቄ መከተል እንዳለበት ያስገነዝባል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ መምረጥ አሽከርካሪው የቅድሚያ መብት እንዳለው በማሰብ ለሌሎች ተሽከርካሪዎች ቅድሚያ ባለመስጠት አደጋ ሊያስከትል ወይም ቅጣት ሊጣልበት ይችላል።",
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት ቅድሚያ የመስጠት መብትዎ ማብቃቱን ያመለክታል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህ ምልክት ቅድሚያ የሚሰጠው መንገድ ማብቃቱን ስለሚያመለክት ቅድሚያ የመስጠት መብትዎ አብቅቷል።",
         "explanation_correct_audio": "310_q3_correct.mp3",
         "explanation_wrong_audio": "310_q3_wrong.mp3",
         "answers": [
           {
-            "id": "D",
-            "text_amharic": "አሽከርካሪው የትራፊክ ደንቦችን መከተል አያስፈልገውም ምክንያቱም የቅድሚያ መብት አለው።",
-            "is_correct": false,
-            "audio_filename": "answer_310_q3_D.mp3"
-          },
-          {
-            "id": "B",
-            "text_amharic": "አሽከርካሪው ለሌሎች ተሽከርካሪዎች ቅድሚያ ለመስጠት መዘጋጀት እና የትራፊክ ደንቦችን በጥንቃቄ መከተል አለበት ምክንያቱም የቅድሚያ መብት የነበረው መንገድ ማብቃቱን ያሳያል።",
-            "is_correct": true,
-            "audio_filename": "answer_310_q3_B.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "አሽከርካሪው ከሌሎች ተሽከርካሪዎች በፊት የመሄድ መብት ስላለው ፍጥነቱን መጨመር አለበት።",
+            "text_amharic": "አሁንም ቅድሚያ የመስጠት መብት አለዎት።",
             "is_correct": false,
             "audio_filename": "answer_310_q3_A.mp3"
           },
           {
+            "id": "B",
+            "text_amharic": "ቅድሚያ የመስጠት መብትዎ አብቅቷል።",
+            "is_correct": true,
+            "audio_filename": "answer_310_q3_B.mp3"
+          },
+          {
             "id": "C",
-            "text_amharic": "አሽከርካሪው ለሌሎች ተሽከርካሪዎች ቅድሚያ መስጠት የለበትም ምክንያቱም ምልክቱ የቅድሚያ መብቱን ያረጋግጣል።",
+            "text_amharic": "ለእግረኞች ብቻ ቅድሚያ ይስጡ።",
             "is_correct": false,
             "audio_filename": "answer_310_q3_C.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "የመንገድ ምልክቶች የሉም።",
+            "is_correct": false,
+            "audio_filename": "answer_310_q3_D.mp3"
           }
         ]
       }

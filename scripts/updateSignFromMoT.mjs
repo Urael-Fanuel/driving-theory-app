@@ -22,7 +22,8 @@ if (!signNumArg) {
   process.exit(1);
 }
 const SIGN_NUMBER = signNumArg;       // e.g. "301"
-const MOT_IMAGE = motImageArg || null; // e.g. "TQ_PIC_3443.jpg" (overrides auto-lookup)
+// MOT_IMAGE can be comma-separated: "TQ_PIC_3443.jpg,TQ_PIC_3184.jpg"
+const MOT_IMAGES = motImageArg ? motImageArg.split(',').map(s => s.trim()) : null;
 
 // ─── Clients ──────────────────────────────────────────────────────────────────
 const supabase = createClient(
@@ -40,13 +41,13 @@ function findOurSign(signs, signNumber) {
   return signs.find(s => s.image_filename === `${signNumber}.png`);
 }
 
-function findMoTQuestionsForSign(motQs, signNumber, motImage) {
-  // If explicit MoT image provided, use it directly
-  if (motImage) {
+function findMoTQuestionsForSign(motQs, signNumber, motImages) {
+  // If explicit MoT image(s) provided, use them directly
+  if (motImages && motImages.length > 0) {
     return motQs.filter(q =>
       q.category === 'תמרורים' &&
       q.imageUrl &&
-      q.imageUrl.includes(motImage)
+      motImages.some(img => q.imageUrl.includes(img))
     );
   }
   // Otherwise try auto-lookup: TQ_PIC_3NNN.jpg where NNN = sign number
@@ -73,35 +74,36 @@ function findOurImagePath(sign) {
   const folders = readdirSync(join(ROOT, 'assets', 'images'))
     .map(f => join(ROOT, 'assets', 'images', f));
   for (const folder of folders) {
-    const p = join(folder, sign.image_filename);
-    if (existsSync(p)) return p;
+    // Try .png first, then .jpg (some signs are .jpg)
+    const base = sign.image_filename.replace(/\.(png|jpg)$/i, '');
+    for (const ext of ['.png', '.jpg', '.jpeg']) {
+      const p = join(folder, base + ext);
+      if (existsSync(p)) return p;
+    }
   }
   return null;
 }
 
-// ─── Gemini translation ───────────────────────────────────────────────────────
+// ─── Gemini: generate MoT-style questions + translate (Solution 3) ───────────
 
-async function translateQAToAmharic(motQuestions, signImagePath) {
+async function generateAndTranslateQA(signImagePath, signNameHebrew) {
   const imageBuffer = readFileSync(signImagePath);
   const base64 = imageBuffer.toString('base64');
+  const mimeType = signImagePath.toLowerCase().endsWith('.jpg') || signImagePath.toLowerCase().endsWith('.jpeg')
+    ? 'image/jpeg' : 'image/png';
 
-  const questionsJson = JSON.stringify(motQuestions.map((q, i) => ({
-    index: i + 1,
-    question_hebrew: q.questionText,
-    answers: q.answers.map(a => ({ text_hebrew: a.text, is_correct: a.isCorrect }))
-  })), null, 2);
+  const prompt = `אתה מומחה למבחני תיאוריה ישראליים ולשפת אמהרית (געז).
 
-  const prompt = `אתה מתרגם שאלות מבחן תיאוריה ישראליות מעברית לשפת אמהרית (געז).
+מצורפת תמונה של תמרור ישראלי: "${signNameHebrew}".
 
-מצורפת תמונה של התמרור הישראלי שעליו עוסקות השאלות.
+המשימה: צור 3 שאלות מבחן תיאוריה בסגנון המדויק של משרד התחבורה הישראלי, ותרגם אותן ישירות לאמהרית.
 
-הנה ${motQuestions.length} שאלות רשמיות של משרד התחבורה הישראלי בעברית:
-${questionsJson}
-
-תרגם כל שאלה ואת כל 4 תשובותיה לאמהרית.
-כמו כן, לכל שאלה:
-- כתוב "explanation_correct_amharic": הסבר קצר (משפט אחד) למה התשובה הנכונה נכונה, עם פתיחה כמו "ትክክል!" או "አዎ!"
-- כתוב "explanation_wrong_amharic": הסבר קצר (משפט אחד) למה התשובות השגויות שגויות, עם פתיחה "ስህተት! ትክክለኛው መልስ:"
+כללי יצירת שאלות בסגנון משרד התחבורה:
+- שאלה 1: "מה פירוש התמרור?" או "מה מורה התמרור?"
+- שאלה 2: "כיצד תנהג על פי התמרור?" או "מה מחייב התמרור?"
+- שאלה 3: שאלה ספציפית על הוראת התמרור או מצב הדרך
+- כל שאלה: 4 תשובות (1 נכונה, 3 שגויות ומפתות)
+- התשובות השגויות צריכות להיות הגיוניות אך לא נכונות
 
 החזר ONLY JSON בפורמט הבא ללא שום טקסט נוסף:
 {
@@ -126,16 +128,112 @@ ${questionsJson}
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       contents: [{ parts: [
-        { inline_data: { mime_type: 'image/png', data: base64 } },
+        { inline_data: { mime_type: mimeType, data: base64 } },
         { text: prompt },
       ]}],
-      generationConfig: { temperature: 0.2, maxOutputTokens: 4096 },
+      generationConfig: { temperature: 0.3, maxOutputTokens: 8192 },
     }),
   });
   const data = await res.json();
-  const text = data.candidates?.[0]?.content?.parts?.[0]?.text?.trim() || '';
+  const parts = data.candidates?.[0]?.content?.parts || [];
+  const textPart = parts.find(p => p.text) || parts[0];
+  const text = textPart?.text?.trim() || '';
   const jsonStr = text.replace(/^```json\s*/i, '').replace(/\s*```$/i, '').trim();
-  return JSON.parse(jsonStr);
+  try {
+    return JSON.parse(jsonStr);
+  } catch (e) {
+    console.error('Raw Gemini response (first 500 chars):', text.substring(0, 500));
+    throw e;
+  }
+}
+
+// ─── Gemini translation ───────────────────────────────────────────────────────
+
+async function translateQAToAmharic(motQuestions, signImagePath) {
+  const imageBuffer = readFileSync(signImagePath);
+  const base64 = imageBuffer.toString('base64');
+  const mimeType = signImagePath.toLowerCase().endsWith('.jpg') || signImagePath.toLowerCase().endsWith('.jpeg')
+    ? 'image/jpeg' : 'image/png';
+
+  const questionsJson = JSON.stringify(motQuestions.map((q, i) => ({
+    index: i + 1,
+    question_hebrew: q.questionText,
+    answers: q.answers.map(a => ({ text_hebrew: a.text, is_correct: a.isCorrect }))
+  })), null, 2);
+
+  const needSupplement = motQuestions.length < 3;
+  const supplementNote = needSupplement
+    ? `\nיש לך רק ${motQuestions.length} שאלות רשמיות. אתה חייב להוסיף ${3 - motQuestions.length} שאלה/ות נוספת בסגנון זהה לשאלות משרד התחבורה, על בסיס תמונת התמרור. שאלות נוספות לא יחזרו על מה שכבר נשאל.\nהחזר בסך הכל בדיוק 3 שאלות.\n`
+    : '';
+
+  const prompt = `אתה מומחה לתמרורי ישראל ולמבחני תיאוריה, ומתרגם לאמהרית (געז).
+
+מצורפת תמונה של תמרור ישראלי.
+
+━━━ שלב 1: זהה את התמרור ━━━
+לפני הכל, הסתכל על התמונה והגדר לעצמך:
+- מהו סוג התמרור? (חובה / אזהרה / מידע / איסור / זכות קדימה וכו')
+- מה המשמעות המדויקת שלו?
+- מה הוא מצווה על הנהג לעשות?
+
+━━━ שלב 2: אמת את השאלות ━━━
+הנה ${motQuestions.length} שאלות שנשלחו מבנק השאלות של משרד התחבורה:
+${questionsJson}
+${supplementNote}
+עבור כל שאלה ותשובה — בדוק: "האם שאלה זו והתשובה הנכונה שלה מדברות על התמרור שאני רואה בתמונה?"
+- אם כן → תרגם אותה לאמהרית
+- אם לא (אין קשר לתמרור בתמונה) → החלף אותה בשאלה חדשה שאתה יוצר בסגנון MoT, שאכן עוסקת בתמרור הנכון
+
+━━━ שלב 3: החזר בדיוק 3 שאלות ━━━
+כללי חובה לתרגום/יצירה:
+- "מה פירוש התמרור?" / "מה מורה התמרור?" → תרגם כ"ምልክቱ ምን ያዝዛል?" (לא "ምን ያሳያል")
+- "כיצד תנהג?" → תרגם כשאלת התנהגות, התשובה חייבת לתאר פעולה
+- כל שאלה: 4 תשובות (1 נכונה, 3 שגויות ומפתות)
+- לכל שאלה: "explanation_correct_amharic" עם פתיחה "ትክክል!" או "አዎ!"
+- לכל שאלה: "explanation_wrong_amharic" עם פתיחה "ስህተት! ትክክለኛው መልስ:"
+- לפני החזרת JSON: ודא שכל תשובה נכונה עונה ישירות על השאלה שלה
+
+החזר ONLY JSON בפורמט הבא ללא שום טקסט נוסף:
+{
+  "questions": [
+    {
+      "index": 1,
+      "question_amharic": "...",
+      "explanation_correct_amharic": "ትክክል! ...",
+      "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ...",
+      "answers": [
+        {"text_amharic": "...", "is_correct": true},
+        {"text_amharic": "...", "is_correct": false},
+        {"text_amharic": "...", "is_correct": false},
+        {"text_amharic": "...", "is_correct": false}
+      ]
+    }
+  ]
+}`;
+
+  const res = await fetch(API_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      contents: [{ parts: [
+        { inline_data: { mime_type: mimeType, data: base64 } },
+        { text: prompt },
+      ]}],
+      generationConfig: { temperature: 0.2, maxOutputTokens: 8192 },
+    }),
+  });
+  const data = await res.json();
+  // Gemini 2.5 flash may return thinking + output parts; find the text part
+  const parts = data.candidates?.[0]?.content?.parts || [];
+  const textPart = parts.find(p => p.text) || parts[0];
+  const text = textPart?.text?.trim() || '';
+  const jsonStr = text.replace(/^```json\s*/i, '').replace(/\s*```$/i, '').trim();
+  try {
+    return JSON.parse(jsonStr);
+  } catch (e) {
+    console.error('Raw Gemini response (first 500 chars):', text.substring(0, 500));
+    throw e;
+  }
 }
 
 // ─── Delete old audio files ───────────────────────────────────────────────────
@@ -204,16 +302,16 @@ async function main() {
   console.log(`✅ Our sign: ${sign.id} (${sign.name_hebrew})`);
 
   // 2. Find MoT questions for this sign
-  const motQuestions = findMoTQuestionsForSign(motQs, SIGN_NUMBER, MOT_IMAGE);
+  const motQuestions = findMoTQuestionsForSign(motQs, SIGN_NUMBER, MOT_IMAGES);
   console.log(`📋 MoT questions found: ${motQuestions.length}`);
   motQuestions.forEach((q, i) => console.log(`   Q${i+1}: ${q.questionText}`));
 
-  if (motQuestions.length === 0) {
-    console.error(`❌ No MoT questions found for sign ${SIGN_NUMBER}`);
-    process.exit(1);
-  }
   if (motQuestions.length < 3) {
-    console.warn(`⚠️  Only ${motQuestions.length} MoT questions — need to supplement from past exams`);
+    if (motQuestions.length === 0) {
+      console.log(`⚠️  No MoT questions found — using Solution 3 (Gemini generates MoT-style questions)`);
+    } else {
+      console.warn(`⚠️  Only ${motQuestions.length} MoT questions — Gemini will supplement to reach 3`);
+    }
   }
 
   // 3. Find our sign image
@@ -221,9 +319,15 @@ async function main() {
   if (!imgPath) { console.error('❌ Sign image not found'); process.exit(1); }
   console.log(`🖼️  Image: ${imgPath.split('\\').slice(-2).join('\\')}`);
 
-  // 4. Translate via Gemini
-  console.log('\n🤖 Translating to Amharic via Gemini...');
-  const translatedQA = await translateQAToAmharic(motQuestions, imgPath);
+  // 4. Generate/translate via Gemini
+  let translatedQA;
+  if (motQuestions.length === 0) {
+    console.log('\n🤖 Generating MoT-style questions + translating to Amharic via Gemini...');
+    translatedQA = await generateAndTranslateQA(imgPath, sign.name_hebrew);
+  } else {
+    console.log('\n🤖 Translating to Amharic via Gemini...');
+    translatedQA = await translateQAToAmharic(motQuestions, imgPath);
+  }
   console.log(`✅ Translated ${translatedQA.questions.length} questions`);
   translatedQA.questions.forEach((q, i) => {
     console.log(`   Q${i+1}: ${q.question_amharic.substring(0, 60)}`);
