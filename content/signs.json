@@ -13,34 +13,34 @@
     "questions": [
       {
         "id": "301_q1",
-        "question_amharic": "ይህንን ምልክት ሲያዩ አሽከርካሪው ምን ማድረግ አለበት?",
+        "question_amharic": "የዚህ ምልክት ትርጉም ምንድን ነው?",
         "question_audio": "301_q1_question.mp3",
-        "explanation_correct_amharic": "ትክክل! ይህ ምልክት የመንገድ ቅድሚያ እንደሌለን ስለሚያሳይ፣ አሽከርካሪው ፍጥነቱን መቀነስ፣ አስፈላጊ ከሆነም ሙሉ በሙሉ ማቆም እና ለሌሎች ተሽከርካሪዎች ቅድሚያ መስጠት አለበት።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ መምረጥ አደጋ ሊያስከትል እና የትራፊክ ህግን መጣስ ነው።",
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት ከፊትህ ባለው ተሻጋሪ መንገድ ላይ ላለው ትራፊክ ቅድሚያ እንድትሰጥ ያስገድዳል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ከፊትህ ባለው ተሻጋሪ መንገድ ላይ ላለው ትራፊክ ቅድሚያ መስጠት ነው።",
         "explanation_correct_audio": "301_q1_correct.mp3",
         "explanation_wrong_audio": "301_q1_wrong.mp3",
         "answers": [
           {
-            "id": "B",
-            "text_amharic": "ፍጥነቱን መቀነስ፣ አስፈላጊ ከሆነም ሙሉ በሙሉ ማቆም እና ከሌሎች መንገዶች ለሚመጡ ተሽከርካሪዎች ሁሉ ቅድሚያ መስጠት አለበት።",
+            "id": "A",
+            "text_amharic": "ከፊትህ ባለው ተሻጋሪ መንገድ ላይ ላለው ትራፊክ ቅድሚያ ስጥ።",
             "is_correct": true,
+            "audio_filename": "answer_301_q1_A.mp3"
+          },
+          {
+            "id": "B",
+            "text_amharic": "ቁም እና ከፊትህ ለሚመጣ ተሽከርካሪ ቅድሚያ ስጥ።",
+            "is_correct": false,
             "audio_filename": "answer_301_q1_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "ምንም ነገር ማድረግ የለበትም ምክንያቱም እሱ ሁልጊዜ የመንገድ ቅድሚያ አለው።",
+            "text_amharic": "አጠቃላይ አደጋ።",
             "is_correct": false,
             "audio_filename": "answer_301_q1_C.mp3"
           },
           {
-            "id": "A",
-            "text_amharic": "ፍጥነቱን ጨምሮ በፍጥነት ማለፍ አለበት ምክንያቱም እሱ የመንገድ ቅድሚያ አለው።",
-            "is_correct": false,
-            "audio_filename": "answer_301_q1_A.mp3"
-          },
-          {
             "id": "D",
-            "text_amharic": "ወደ ግራ ብቻ መታጠፍ አለበት እና ለሌሎች ተሽከርካሪዎች ቅድሚያ መስጠት አያስፈልግም።",
+            "text_amharic": "ወደ መስቀለኛ መንገዱ ለሚመጡ ሁሉም ተሽከርካሪዎች ቅድሚያ ስጥ።",
             "is_correct": false,
             "audio_filename": "answer_301_q1_D.mp3"
           }
@@ -48,69 +48,69 @@
       },
       {
         "id": "301_q2",
-        "question_amharic": "ይህ ምልክት በመስቀለኛ መንገድ ላይ የመንገድ ቅድሚያን በተመለከተ ምን ያሳያል?",
+        "question_amharic": "ይህ ምልክት ሲኖር እንዴት መንዳት አለብህ?",
         "question_audio": "301_q2_question.mp3",
-        "explanation_correct_amharic": "ትክክል! ጥሩ ነው። ምልክቱ በግልጽ እንደሚያሳየው የመንገድ ቅድሚያ የለንም እና ከሁሉም አቅጣጫ ለሚመጡ ተሽከርካሪዎች ቅድሚያ መስጠት አለብን።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የመንገድ ቅድሚያ አለኝ ብሎ ማሰብ አደገኛ ግጭት ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "አዎ! ይህ ምልክት በተሻጋሪው መንገድ ላይ ያለው ተሽከርካሪ ፍጥነቱን እና አቅጣጫውን ሳይቀይር እንዲያልፍ መፍቀድ እንዳለብህ ያሳያል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በተሻጋሪው መንገድ ላይ ያለው ተሽከርካሪ ፍጥነቱን እና የመንገዱን አቅጣጫ ሳይቀይር እንቅስቃሴውን እንዲቀጥል መፍቀድ ነው።",
         "explanation_correct_audio": "301_q2_correct.mp3",
         "explanation_wrong_audio": "301_q2_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "አሽከርካሪው ሁልጊዜ የመንገድ ቅድሚያ አለው እና ማቆም አያስፈልገውም።",
+            "text_amharic": "ሂድ! ከፊትህ ባለው መስቀለኛ መንገድ ላይ የቅድሚያ መብት አለህ።",
             "is_correct": false,
             "audio_filename": "answer_301_q2_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "አሽከርካሪው የመንገድ ቅድሚያ የለውም እና ከሌሎች መንገዶች ለሚመጡ ተሽከርካሪዎች ሁሉ ቅድሚያ መስጠት አለበት።",
+            "text_amharic": "በተሻጋሪው መንገድ ላይ ያለው ተሽከርካሪ ፍጥነቱን እና የመንገዱን አቅጣጫ ሳይቀይር እንቅስቃሴውን እንዲቀጥል መፍቀድ አለብህ።",
             "is_correct": true,
             "audio_filename": "answer_301_q2_B.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "አሽከርካሪው ለቀኝ ለሚመጡ ተሽከርካሪዎች ብቻ ቅድሚያ መስጠት አለበት።",
-            "is_correct": false,
-            "audio_filename": "answer_301_q2_D.mp3"
-          },
-          {
             "id": "C",
-            "text_amharic": "አሽከርካሪው ለትላልቅ ተሽከርካሪዎች ብቻ ቅድሚያ መስጠት አለበት እንጂ ለትንንሽ መኪናዎች አይደለም።",
+            "text_amharic": "ሙሉ በሙሉ ማቆም እና ወደ ቀኝ እና ግራ በመመልከት የሚመጣውን ትራፊክ መፈተሽ አለብህ።",
             "is_correct": false,
             "audio_filename": "answer_301_q2_C.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ማቆም እና መንዳት መቀጠል አለብህ: በመስቀለኛ መንገዱ ላይ የቅድሚያ መብት አለህ።",
+            "is_correct": false,
+            "audio_filename": "answer_301_q2_D.mp3"
           }
         ]
       },
       {
         "id": "301_q3",
-        "question_amharic": "ይህንን ምልክት አለማክበር ምን የሚያስከትለው መዘዝ አለ?",
+        "question_amharic": "ይህ ምልክት ምን ያስገድዳል?",
         "question_audio": "301_q3_question.mp3",
-        "explanation_correct_amharic": "አሪፍ! ምልክቱ ምልክቱን አለማክበር ከባድ አደጋ፣ የገንዘብ ቅጣት እና የነጥብ ቅጣት እንደሚያስከትል በግልጽ ተገልጿል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ህጉን አለማክበር ለራስ እና ለሌሎች አሽከርካሪዎች ደህንነት አደጋ ይፈጥራል።",
+        "explanation_correct_amharic": "ትክክል! ምልክቱ ከፊትህ ባለው ተሻጋሪ መንገድ ላይ ላለው ትራፊክ ቅድሚያ እንድትሰጥ ያስገድዳል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ከፊትህ ባለው ተሻጋሪ መንገድ ላይ ላለው ትራፊክ ቅድሚያ መስጠት ነው።",
         "explanation_correct_audio": "301_q3_correct.mp3",
         "explanation_wrong_audio": "301_q3_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "ምንም አይነት መዘዝ የለውም ምክንያቱም ማስጠንቀቂያ ብቻ ነው እና ህግ አይደለም።",
+            "text_amharic": "ከቀኝ ለሚመጣ ተሽከርካሪ ብቻ ቅድሚያ መስጠት አለብህ።",
             "is_correct": false,
             "audio_filename": "answer_301_q3_A.mp3"
           },
           {
-            "id": "C",
-            "text_amharic": "ትንሽ መዘግየት ብቻ ያስከትላል እና ምንም አይነት ቅጣት የለውም።",
-            "is_correct": false,
-            "audio_filename": "answer_301_q3_C.mp3"
-          },
-          {
             "id": "B",
-            "text_amharic": "ከባድ አደጋ፣ የገንዘብ ቅጣት እና የነጥብ ቅጣት ያስከትላል።",
-            "is_correct": true,
+            "text_amharic": "ማቆም እና ከተሻጋሪው መንገድ ትራፊክ የቅድሚያ መብት መቀበል።",
+            "is_correct": false,
             "audio_filename": "answer_301_q3_B.mp3"
           },
           {
+            "id": "C",
+            "text_amharic": "ከፊትህ ባለው ተሻጋሪ መንገድ ላይ ላለው ትራፊክ ቅድሚያ መስጠት።",
+            "is_correct": true,
+            "audio_filename": "answer_301_q3_C.mp3"
+          },
+          {
             "id": "D",
-            "text_amharic": "የፖሊስ መኮንን ፈገግታ ብቻ ያገኛሉ እና ምንም አይነት ችግር አይኖርም።",
+            "text_amharic": "በተሻጋሪው መንገድ ላይ ያሉ አሽከርካሪዎች ላንተ ቅድሚያ መስጠት አለባቸው።",
             "is_correct": false,
             "audio_filename": "answer_301_q3_D.mp3"
           }

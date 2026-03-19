@@ -1,0 +1,1661 @@
+{
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3453.jpg": {
+    "sign_description": "מפגש מסילת ברזל ללא מחסום",
+    "sign_type": "אזהרה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "להאט, לבדוק שאין רכבת מתקרבת ולעצור במידת הצורך."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3667.jpg": {
+    "sign_description": "רמזור אור צהוב",
+    "sign_type": "רמזור",
+    "sign_number_visible": null,
+    "what_driver_must_do": "עצור אם אפשר בבטחה."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3368.jpg": {
+    "sign_description": "אזהרה: מעבר חצייה להולכי רגל",
+    "sign_type": "אזהרה",
+    "sign_number_visible": "135",
+    "what_driver_must_do": "התקרבות למעבר חצייה, יש להאט ולהיות מוכן לעצור למען הולכי רגל."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_31073.jpg": {
+    "sign_description": "מספר דרך אזורית 75",
+    "sign_type": "מודיעין",
+    "sign_number_visible": "75",
+    "what_driver_must_do": "הנהג מבין שהוא נמצא או מתקרב לדרך אזורית מספר 75."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3190.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Expected double-quoted property name in JSON at position 77 (line 3 column 29)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3560.jpg": {
+    "sign_description": "זכות קדימה על תנועה נגדית",
+    "sign_type": "זכות קדימה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "לנהג יש זכות קדימה על פני תנועה ממול."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3464.jpg": {
+    "sign_description": "עלייה תלולה",
+    "sign_type": "אזהרה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "היכון לעלייה תלולה בכביש והתאם את הנהיגה."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3434.jpg": {
+    "sign_description": "התמזגות תנועה מימין",
+    "sign_type": "אזהרה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "היכון לתנועה המתמזגת מימין"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3183.jpg": {
+    "sign_description": "תמרור עצור",
+    "sign_type": "זכות קדימה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "על הנהג לעצור עצירה מוחלטת לפני קו העצירה ולתת זכות קדימה."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3419.jpg": {
+    "sign_description": "אזהרה: רוכבי אופניים בדרך",
+    "sign_type": "אזהרה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "על הנהג לנהוג בזהירות ולהיות מודע לנוכחות רוכבי אופניים בדרך."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3641.jpg": {
+    "sign_description": "חץ ישר על הכביש",
+    "sign_type": "סימון כביש",
+    "sign_number_visible": null,
+    "what_driver_must_do": "על הנהג לנסוע ישר בלבד בנתיב זה."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3402.jpg": {
+    "sign_description": "מהמורת מהירות / מעבר חצייה מוגבה",
+    "sign_type": "סימון כביש",
+    "sign_number_visible": "512",
+    "what_driver_must_do": "להאט לפני מהמורת מהירות או מעבר חצייה מוגבה."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_31802.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 134 (line 5 column 27)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3015.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 86 (line 4 column 23)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_31307.jpg": {
+    "sign_description": "חובה להשתמש באות קולי",
+    "sign_type": "חובה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "על הנהג להשתמש באות קולי (צופר) במקום זה."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3443.jpg": {
+    "sign_description": "תן זכות קדימה",
+    "sign_type": "זכות קדימה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "האט ותן זכות קדימה לתנועה בדרך החוצה."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3449.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 167 (line 5 column 59)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3471.jpg": {
+    "sign_description": "אזהרה: ילדים בדרך",
+    "sign_type": "אזהרה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "יש לנהוג בזהירות מוגברת ולהאט את המהירות עקב הימצאות ילדים בקרבת מקום."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3466.jpg": {
+    "sign_description": "כביש חלק, סכנת החלקה",
+    "sign_type": "אזהרה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "יש לנהוג בזהירות מוגברת עקב סכנת החלקה."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_31507.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Expected double-quoted property name in JSON at position 103 (line 4 column 32)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_31269.jpg": {
+    "sign_description": "מעבר חצייה עם חצים",
+    "sign_type": "סימון כביש",
+    "sign_number_visible": null,
+    "what_driver_must_do": "לתת זכות קדימה להולכי רגל החוצים את הכביש"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3385.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 79 (line 4 column 9)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3461.jpg": {
+    "sign_description": "התקרבות לתמרור עצור",
+    "sign_type": "אזהרה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "הנהג חייב להתכונן לעצירה מוחלטת לפני תמרור עצור."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3491.jpg": {
+    "sign_description": "אין כניסה",
+    "sign_type": "איסור",
+    "sign_number_visible": null,
+    "what_driver_must_do": "הכניסה אסורה לרכב מכל סוג."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3538.jpg": {
+    "sign_description": "מעגל ירוק עם המילה סע/GO",
+    "sign_type": "חובה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "על הנהג להמשיך בנסיעה."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3537.jpg": {
+    "sign_description": "תמרור עצור",
+    "sign_type": "זכות קדימה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "על הנהג לעצור עצירה מוחלטת ולתת זכות קדימה לתנועה חוצה."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3507.jpg": {
+    "sign_description": "איסור כניסה למשאיות מעל 8 טון",
+    "sign_type": "איסור",
+    "sign_number_visible": null,
+    "what_driver_must_do": "אסור לנהג משאית שמשקלה הכולל עולה על 8 טון להיכנס."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_31569.jpg": {
+    "sign_description": "אין כניסה לסוסים",
+    "sign_type": "איסור",
+    "sign_number_visible": "411",
+    "what_driver_must_do": "אסור להיכנס עם סוסים לאזור זה."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3505.jpg": {
+    "sign_description": "אין כניסה לרכב מנועי",
+    "sign_type": "איסור",
+    "sign_number_visible": null,
+    "what_driver_must_do": "אסור לנהג להיכנס עם רכב מנועי לשטח המסומן בתמרור."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3616.jpg": {
+    "sign_description": "מנהרה לפניך",
+    "sign_type": "מודיעין",
+    "sign_number_visible": null,
+    "what_driver_must_do": "הנהג מתקרב למנהרה ועליו להיערך בהתאם לתנאי הדרך, כגון הדלקת אורות."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3656.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 85 (line 4 column 15)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3382.jpg": {
+    "sign_description": "התמזגות דרך מימין",
+    "sign_type": "אזהרה",
+    "sign_number_visible": "123",
+    "what_driver_must_do": "היכון לתנועה מתמזגת מימין."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_31036.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unexpected end of JSON input"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3545.jpg": {
+    "sign_description": "חובה לנסוע ישר",
+    "sign_type": "חובה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "על הנהג להמשיך בנסיעה ישר בלבד."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3541.jpg": {
+    "sign_description": "חובה לפנות שמאלה",
+    "sign_type": "חובה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "על הנהג לפנות שמאלה בלבד בצומת הקרוב."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3441.jpg": {
+    "sign_description": "מפגש מסילת ברזל ללא מחסום",
+    "sign_type": "אזהרה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "להאט, להסתכל ולהקשיב לרכבת לפני חציית המסילה."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3215.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unexpected end of JSON input"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3590.jpg": {
+    "sign_description": "חובה לנסוע ישר",
+    "sign_type": "חובה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "על הנהג לנסוע ישר בלבד."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3462.jpg": {
+    "sign_description": "אזהרה לפני תמרור עצור",
+    "sign_type": "אזהרה",
+    "sign_number_visible": "139",
+    "what_driver_must_do": "היכון לעצור לפני תמרור עצור"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3369.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 88 (line 4 column 28)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3439.jpg": {
+    "sign_description": "עומס תנועה לפניך",
+    "sign_type": "אזהרה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "היכון לעומס תנועה והאט את מהירות נסיעתך."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3216.jpg": {
+    "sign_description": "מקום שמור/נגיש לנכים",
+    "sign_type": "מודיעין",
+    "sign_number_visible": null,
+    "what_driver_must_do": "מקום זה מיועד לשימוש אנשים עם מוגבלויות."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3475.jpg": {
+    "sign_description": "אזהרה כללית",
+    "sign_type": "אזהרה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "יש לנהוג בזהירות עקב סכנה כללית."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3694.jpg": {
+    "sign_description": "אין כניסה לרכב מסחרי כבד",
+    "sign_type": "איסור",
+    "sign_number_visible": null,
+    "what_driver_must_do": "אסור לנהג רכב מסחרי כבד להיכנס לאזור זה."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3572.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 84 (line 4 column 16)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_31022.jpg": {
+    "sign_description": "איסור כניסה לרכב מעל 12 מטר",
+    "sign_type": "איסור",
+    "sign_number_visible": null,
+    "what_driver_must_do": "נהג רכב שאורכו עולה על 12 מטר אינו רשאי להיכנס לדרך זו."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3682.jpg": {
+    "sign_description": "אי תנועה",
+    "sign_type": "סימון כביש",
+    "sign_number_visible": null,
+    "what_driver_must_do": "אסור לעלות על אי תנועה."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3609.jpg": {
+    "sign_description": "סימון מכשול/מפגע בדרך",
+    "sign_type": "סימון כביש",
+    "sign_number_visible": null,
+    "what_driver_must_do": "לשים לב למכשול/מפגע בדרך ולנהוג בזהירות."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3416.jpg": {
+    "sign_description": "עבודות בדרך",
+    "sign_type": "אזהרה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "האט וסע בזהירות עקב עבודות בדרך."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3456.jpg": {
+    "sign_description": "צומת מסילת ברזל ללא מחסום",
+    "sign_type": "אזהרה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "יש להאט, להסתכל ולוודא שאין רכבת מתקרבת לפני חציית המסילה."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3633.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Expected double-quoted property name in JSON at position 78 (line 3 column 29)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3786.jpg": {
+    "sign_description": "עבודות בדרך לפניך",
+    "sign_type": "אתר עבודה",
+    "sign_number_visible": "9901",
+    "what_driver_must_do": "היזהר וסע בזהירות עקב עבודות בדרך."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3663.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 81 (line 4 column 9)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3432.jpg": {
+    "sign_description": "רמזור לפניך",
+    "sign_type": "אזהרה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "היכון לרמזור והתאם את מהירות נסיעתך."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3548.jpg": {
+    "sign_description": "חניון חנה וסע לאוטובוס",
+    "sign_type": "מודיעין",
+    "sign_number_visible": null,
+    "what_driver_must_do": "הנהג יכול לחנות את רכבו ולהמשיך בנסיעה באוטובוס."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3396.jpg": {
+    "sign_description": "חובה לנסוע ישר",
+    "sign_type": "חובה",
+    "sign_number_visible": "424",
+    "what_driver_must_do": "על הנהג להמשיך בנסיעה ישר בלבד."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3530.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 80 (line 3 column 20)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3657.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 82 (line 4 column 9)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_31219.jpg": {
+    "sign_description": "מנהרה לפניך",
+    "sign_type": "אזהרה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "היכון לכניסה למנהרה."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3603.jpg": {
+    "sign_description": "אתר קמפינג",
+    "sign_type": "מודיעין",
+    "sign_number_visible": null,
+    "what_driver_must_do": "הנהג מבין כי זהו אתר קמפינג."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3636.jpg": {
+    "sign_description": "קו הפרדה כפול רצוף",
+    "sign_type": "סימון כביש",
+    "sign_number_visible": null,
+    "what_driver_must_do": "אסור לחצות או לנסוע על הקו."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3361.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 160 (line 5 column 58)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_31556.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unexpected end of JSON input"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3627.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Expected double-quoted property name in JSON at position 77 (line 3 column 26)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3448.jpg": {
+    "sign_description": "אבנים מתדרדרות",
+    "sign_type": "אזהרה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "יש לנהוג בזהירות עקב סכנת אבנים מתדרדרות מהצד."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3550.jpg": {
+    "sign_description": "כיכר תנועה",
+    "sign_type": "חובה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "יש להיכנס לכיכר ולנסוע בכיוון החצים."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3512.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 80 (line 4 column 4)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3420.jpg": {
+    "sign_description": "צומת דרכים לא מסומן",
+    "sign_type": "אזהרה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "היכון לצומת דרכים לא מסומן, האטה והיה מוכן לתת זכות קדימה לרכב הבא מימין."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3395.jpg": {
+    "sign_description": "אסור לפנות ימינה",
+    "sign_type": "איסור",
+    "sign_number_visible": "428",
+    "what_driver_must_do": "הנהג אינו רשאי לפנות ימינה בצומת זה."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3495.jpg": {
+    "sign_description": "תן זכות קדימה לתנועה ממול",
+    "sign_type": "זכות קדימה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "על הנהג לתת זכות קדימה לתנועה הבאה ממול."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3436.jpg": {
+    "sign_description": "היצרות דרך מימין",
+    "sign_type": "אזהרה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "היערך להיצרות הדרך מימין."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3912.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Expected double-quoted property name in JSON at position 76 (line 3 column 26)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3490.jpg": {
+    "sign_description": "אין כניסה",
+    "sign_type": "איסור",
+    "sign_number_visible": null,
+    "what_driver_must_do": "אסור להיכנס לנתיב או לדרך זו."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3677.jpg": {
+    "sign_description": "אין כניסה לכל רכב",
+    "sign_type": "איסור",
+    "sign_number_visible": null,
+    "what_driver_must_do": "אסור לנהג להיכנס לדרך זו."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_31204.jpg": {
+    "sign_description": "כביש ארצי מספר 75",
+    "sign_type": "מודיעין",
+    "sign_number_visible": "611",
+    "what_driver_must_do": "הנהג מבין שהוא נמצא או מתקרב לכביש ארצי מספר 75."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3658.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 76 (line 3 column 27)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3414.jpg": {
+    "sign_description": "הדרך צרה מימין",
+    "sign_type": "אזהרה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "להיערך לצימצום רוחב הכביש מימין."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3579.jpg": {
+    "sign_description": "תן זכות קדימה לתנועה ממול",
+    "sign_type": "זכות קדימה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "על הנהג לתת זכות קדימה לתנועה הבאה ממול."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_03/he/TQ_PIC_3673.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 84 (line 4 column 8)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3383.jpg": {
+    "sign_description": "מהירות מינימלית 55 קמ\"ש",
+    "sign_type": "חובה",
+    "sign_number_visible": "218",
+    "what_driver_must_do": "על הנהג לנסוע במהירות של 55 קמ\"ש לפחות."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3418.jpg": {
+    "sign_description": "גובה מירבי מותר לרכב",
+    "sign_type": "איסור",
+    "sign_number_visible": "4.6",
+    "what_driver_must_do": "אסור לנסוע עם רכב שגובהו עולה על 4.6 מטרים."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3683.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 109 (line 5 column 4)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3372.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Expected double-quoted property name in JSON at position 79 (line 3 column 24)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_31278.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 77 (line 4 column 8)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3365.jpg": {
+    "sign_description": "צומת T עם דרך מימין",
+    "sign_type": "אזהרה",
+    "sign_number_visible": "115",
+    "what_driver_must_do": "היערך לצומת T עם דרך מימין."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3407.jpg": {
+    "sign_description": "דרך משובשת או מהמורות",
+    "sign_type": "אזהרה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "האט וסע בזהירות עקב דרך משובשת או מהמורות לפניך."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3585.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 85 (line 4 column 8)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3679.jpg": {
+    "sign_description": "נתיב סגור לתנועה",
+    "sign_type": "רמזור",
+    "sign_number_visible": null,
+    "what_driver_must_do": "אסור לנסוע בנתיב זה."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3451.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 88 (line 4 column 16)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3539.jpg": {
+    "sign_description": "חובה לפנות ימינה",
+    "sign_type": "חובה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "על הנהג לפנות ימינה בלבד."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3607.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 81 (line 3 column 23)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3486.jpg": {
+    "sign_description": "אזהרה: טרקטורים בדרך",
+    "sign_type": "אזהרה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "על הנהג לנהוג בזהירות עקב נוכחות טרקטורים איטיים בדרך."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3473.jpg": {
+    "sign_description": "תנועה דו-סטרית",
+    "sign_type": "אזהרה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "הנהג צריך להיות מודע לתנועה דו-סטרית בכביש."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_31348.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 82 (line 4 column 16)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3605.jpg": {
+    "sign_description": "זיהוי כביש מספר 1",
+    "sign_type": "מודיעין",
+    "sign_number_visible": "1",
+    "what_driver_must_do": "הנהג נמצא על כביש מספר 1 או מתקרב אליו."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3644.jpg": {
+    "sign_description": "סימון נתיבים בצומת",
+    "sign_type": "סימון כביש",
+    "sign_number_visible": null,
+    "what_driver_must_do": "הנהג יבחר נתיב לפי כיוון נסיעתו המיועד."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3675.jpg": {
+    "sign_description": "נתיב פתוח",
+    "sign_type": "מודיעין",
+    "sign_number_visible": null,
+    "what_driver_must_do": "הנתיב מסומן כפתוח לנסיעה."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_31572.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 84 (line 4 column 15)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3430.jpg": {
+    "sign_description": "אזהרה: כיכר תנועה לפניך",
+    "sign_type": "אזהרה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "להתכונן לכניסה לכיכר תנועה ולציית לכללי התנועה בה."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3358.jpg": {
+    "sign_description": "התמזגות נתיבים מימין",
+    "sign_type": "חובה",
+    "sign_number_visible": "622",
+    "what_driver_must_do": "הנהג חייב להשתלב בנתיב השמאלי."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3531.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 75 (line 3 column 17)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3664.jpg": {
+    "sign_description": "רמזור עם אור אדום דולק",
+    "sign_type": "רמזור",
+    "sign_number_visible": null,
+    "what_driver_must_do": "עצור לפני קו העצירה או הצומת."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_31477.jpg": {
+    "sign_description": "איסור כניסת אופניים",
+    "sign_type": "איסור",
+    "sign_number_visible": "412",
+    "what_driver_must_do": "אסור לרכוב על אופניים בדרך זו."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3435.jpg": {
+    "sign_description": "התמזגות נתיבים משמאל",
+    "sign_type": "אזהרה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "היזהר מהתמזגות נתיב משמאל והתאם את מהירותך."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3470.jpg": {
+    "sign_description": "מעבר חצייה לפניך",
+    "sign_type": "אזהרה",
+    "sign_number_visible": "135",
+    "what_driver_must_do": "האט והיכון למעבר חצייה והולכי רגל."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3426.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unexpected end of JSON input"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3499.jpg": {
+    "sign_description": "איסור עקיפה לרכב משא",
+    "sign_type": "איסור",
+    "sign_number_visible": null,
+    "what_driver_must_do": "אסור לנהג רכב משא לעקוף רכב מנועי אחר."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3355.jpg": {
+    "sign_description": "תמרור עצור",
+    "sign_type": "זכות קדימה",
+    "sign_number_visible": "302",
+    "what_driver_must_do": "עצור עצירה מוחלטת לפני קו העצירה ותן זכות קדימה."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3509.jpg": {
+    "sign_description": "רוחב מירבי מותר 2.1 מטר",
+    "sign_type": "איסור",
+    "sign_number_visible": "2.1",
+    "what_driver_must_do": "אסור להיכנס לרכב שרוחבו, כולל המטען, עולה על 2.1 מטר."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3625.jpg": {
+    "sign_description": "בית קפה או נקודת רענון",
+    "sign_type": "מודיעין",
+    "sign_number_visible": null,
+    "what_driver_must_do": "הנהג מבין כי בקרבת מקום יש בית קפה או נקודת רענון."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3556.jpg": {
+    "sign_description": "בית חולים או עזרה ראשונה",
+    "sign_type": "מודיעין",
+    "sign_number_visible": null,
+    "what_driver_must_do": "הנהג מבין שבקרבת מקום יש בית חולים או תחנת עזרה ראשונה."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3497.jpg": {
+    "sign_description": "איסור עקיפה",
+    "sign_type": "איסור",
+    "sign_number_visible": null,
+    "what_driver_must_do": "אסור לנהג לעקוף כלי רכב אחרים."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3571.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 88 (line 4 column 9)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3494.jpg": {
+    "sign_description": "אסור לבצע פניית פרסה",
+    "sign_type": "איסור",
+    "sign_number_visible": null,
+    "what_driver_must_do": "אסור לבצע פניית פרסה במקום זה."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3578.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 86 (line 4 column 15)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3618.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Expected double-quoted property name in JSON at position 76 (line 3 column 26)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3513.jpg": {
+    "sign_description": "עבור באחד הצדדים",
+    "sign_type": "חובה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "על הנהג לעבור את המכשול מימין או משמאל."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3186.jpg": {
+    "sign_description": "רמזור אור צהוב",
+    "sign_type": "רמזור",
+    "sign_number_visible": null,
+    "what_driver_must_do": "התכונן לעצור או לפנות את הצומת בזהירות."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3356.jpg": {
+    "sign_description": "בליטות או גבשושיות בכביש",
+    "sign_type": "אזהרה",
+    "sign_number_visible": "101",
+    "what_driver_must_do": "האט וסע בזהירות עקב מהמורות בכביש."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3960.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Expected double-quoted property name in JSON at position 86 (line 3 column 26)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3568.jpg": {
+    "sign_description": "קצה דרך מהירה",
+    "sign_type": "מודיעין",
+    "sign_number_visible": null,
+    "what_driver_must_do": "כללי הדרך המהירה אינם חלים עוד."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3602.jpg": {
+    "sign_description": "כניסה ליישוב",
+    "sign_type": "מודיעין",
+    "sign_number_visible": null,
+    "what_driver_must_do": "הנהג נכנס לאזור יישוב ועליו לנהוג בהתאם לתקנות הנהיגה ביישוב."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_03/he/TQ_PIC_3976.jpg": {
+    "sign_description": "תן זכות קדימה לתנועה ממול",
+    "sign_type": "זכות קדימה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "על הנהג לתת זכות קדימה לתנועה הבאה ממול."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3503.jpg": {
+    "sign_description": "איסור כניסת אופנועים",
+    "sign_type": "איסור",
+    "sign_number_visible": null,
+    "what_driver_must_do": "אסורה הכניסה לאופנועים."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3552.jpg": {
+    "sign_description": "עבור משני הצדדים",
+    "sign_type": "חובה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "על הנהג לעבור את המכשול משני צדדיו, מימין או משמאל."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3409.jpg": {
+    "sign_description": "עיקול חד ימינה",
+    "sign_type": "אזהרה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "על הנהג להאט ולהיערך לעיקול חד ימינה."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3634.jpg": {
+    "sign_description": "קו הפרדה מקווקו על הכביש",
+    "sign_type": "סימון כביש",
+    "sign_number_visible": null,
+    "what_driver_must_do": "מותר לחצות את הקו בזהירות לצורך עקיפה או שינוי נתיב."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3796.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 137 (line 5 column 42)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3423.jpg": {
+    "sign_description": "צומת דרכים, דרך צדדית מימין",
+    "sign_type": "אזהרה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "הנהג נדרש לנהוג בזהירות עקב צומת דרכים מימין."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3153.jpg": {
+    "sign_description": "הגבלת מהירות מירבית 40 קמ\"ש",
+    "sign_type": "איסור",
+    "sign_number_visible": "40",
+    "what_driver_must_do": "אסור לנהוג במהירות העולה על 40 קמ\"ש."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3661.jpg": {
+    "sign_description": "מבנה עילי",
+    "sign_type": "אזהרה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "להיזהר ממבנה עילי קרוב"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_31237.jpg": {
+    "sign_description": "ירידה תלולה באורך 2500 מטר",
+    "sign_type": "אזהרה",
+    "sign_number_visible": "2500",
+    "what_driver_must_do": "על הנהג להאט, לשלב הילוך נמוך ולהיות מוכן לירידה תלולה וארוכה."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3508.jpg": {
+    "sign_description": "איסור כניסה, משקל מעל 6 טון",
+    "sign_type": "איסור",
+    "sign_number_visible": "6",
+    "what_driver_must_do": "אסור לנהוג ברכב שמשקלו הכולל עולה על 6 טון."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3623.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Expected double-quoted property name in JSON at position 77 (line 3 column 26)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3600.jpg": {
+    "sign_description": "תחנת דלק",
+    "sign_type": "מודיעין",
+    "sign_number_visible": null,
+    "what_driver_must_do": "מציין מיקום תחנת דלק קרובה."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3785.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 83 (line 4 column 9)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3468.jpg": {
+    "sign_description": "אזהרה: מעבר חצייה להולכי רגל",
+    "sign_type": "אזהרה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "האט והיכון לעצור למען הולכי רגל במעבר חצייה קרוב."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3373.jpg": {
+    "sign_description": "דרך חד-סטרית קדימה",
+    "sign_type": "מודיעין",
+    "sign_number_visible": "618",
+    "what_driver_must_do": "הנהג צריך לדעת שהדרך שלפניו היא חד-סטרית בכיוון החץ."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_31535.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 90 (line 4 column 28)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_31078.jpg": {
+    "sign_description": "תמרור הכוונה ליעדים ומספרי כבישים",
+    "sign_type": "מודיעין",
+    "sign_number_visible": "293, 264",
+    "what_driver_must_do": "הנהג צריך לבחור את הנתיב המתאים ליעדו לפי ההכוונה המוצגת."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3759.jpg": {
+    "sign_description": "חרוט אזהרה, עבודות בכביש",
+    "sign_type": "אתר עבודה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "לנהוג בזהירות עקב עבודות בכביש או מכשול."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3635.jpg": {
+    "sign_description": "בית קולנוע",
+    "sign_type": "מודיעין",
+    "sign_number_visible": null,
+    "what_driver_must_do": "מציין קרבת בית קולנוע"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3147.jpg": {
+    "sign_description": "תחילת כביש מהיר",
+    "sign_type": "מודיעין",
+    "sign_number_visible": null,
+    "what_driver_must_do": "הנהג נכנס לכביש מהיר ועליו לנהוג בהתאם לתקנותיו."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_31729.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 84 (line 4 column 16)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_31390.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Expected double-quoted property name in JSON at position 87 (line 3 column 33)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3386.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Expected double-quoted property name in JSON at position 74 (line 3 column 26)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3445.jpg": {
+    "sign_description": "מעבר חשמלית לשני הכיוונים",
+    "sign_type": "אזהרה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "על הנהג לנקוט זהירות מוגברת עקב מעבר חשמלית משני הכיוונים."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3963.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 139 (line 5 column 8)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3378.jpg": {
+    "sign_description": "כביש דו-סטרי לפניך",
+    "sign_type": "אזהרה",
+    "sign_number_visible": "145",
+    "what_driver_must_do": "היזהר מתנועה ממול"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3380.jpg": {
+    "sign_description": "חובה לנסוע ישר",
+    "sign_type": "חובה",
+    "sign_number_visible": "203",
+    "what_driver_must_do": "על הנהג להמשיך בנסיעה ישר בלבד."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3413.jpg": {
+    "sign_description": "כביש מפותל, עיקול ראשון ימינה",
+    "sign_type": "אזהרה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "האט וסע בזהירות עקב כביש מפותל עם עיקול ראשון ימינה."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3482.jpg": {
+    "sign_description": "פנייה ימינה",
+    "sign_type": "חובה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "על הנהג לפנות ימינה בלבד."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3650.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 77 (line 4 column 16)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3670.jpg": {
+    "sign_description": "צמצום נתיבים",
+    "sign_type": "מודיעין",
+    "sign_number_visible": null,
+    "what_driver_must_do": "על הנהג להתמזג בבטחה לנתיב הממשיך."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3363.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 75 (line 4 column 4)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3371.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 74 (line 4 column 4)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_31519.jpg": {
+    "sign_description": "קצה תחנת מוניות",
+    "sign_type": "מודיעין",
+    "sign_number_visible": null,
+    "what_driver_must_do": "הנהג מבין כי הסתיים אזור תחנת המוניות."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3390.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Expected double-quoted property name in JSON at position 80 (line 3 column 29)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3562.jpg": {
+    "sign_description": "דרך לרכב מנועי בלבד",
+    "sign_type": "חובה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "הדרך מיועדת לרכב מנועי בלבד, ואסורה לתנועת הולכי רגל, אופניים ורכב איטי."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3397.jpg": {
+    "sign_description": "אין כניסה לכל רכב",
+    "sign_type": "איסור",
+    "sign_number_visible": "401",
+    "what_driver_must_do": "אסור לנהג להיכנס לנתיב או לדרך המסומנת בתמרור זה."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3181.jpg": {
+    "sign_description": "תמרור עצור עם כף יד",
+    "sign_type": "זכות קדימה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "על הנהג לעצור עצירה מוחלטת ולתת זכות קדימה לכל התנועה."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3639.jpg": {
+    "sign_description": "חץ נתיב לפניה שמאלה",
+    "sign_type": "סימון כביש",
+    "sign_number_visible": null,
+    "what_driver_must_do": "על הנהג בנתיב זה לפנות שמאלה."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3564.jpg": {
+    "sign_description": "מהירות מינימלית מותרת 55 קמ\"ש",
+    "sign_type": "חובה",
+    "sign_number_visible": "55",
+    "what_driver_must_do": "על הנהג לנסוע במהירות של 55 קמ\"ש לפחות."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3428.jpg": {
+    "sign_description": "צומת דרכים לא סימטריות",
+    "sign_type": "אזהרה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "היזהר מצומת דרכים לא סימטריות קדימה."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3583.jpg": {
+    "sign_description": "חניון",
+    "sign_type": "מודיעין",
+    "sign_number_visible": null,
+    "what_driver_must_do": "מציין מקום חניה מוסדר לרכב."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_31276.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 89 (line 4 column 27)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3519.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unexpected end of JSON input"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3377.jpg": {
+    "sign_description": "עצור ותן זכות קדימה",
+    "sign_type": "זכות קדימה",
+    "sign_number_visible": "302",
+    "what_driver_must_do": "עצור לחלוטין ותן זכות קדימה לכל כלי הרכב והולכי הרגל."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3527.jpg": {
+    "sign_description": "אסורה העצירה",
+    "sign_type": "איסור",
+    "sign_number_visible": null,
+    "what_driver_must_do": "אסור לעצור או להחנות את הרכב במקום זה."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3411.jpg": {
+    "sign_description": "עיקולים מסוכנים, ראשון ימינה",
+    "sign_type": "אזהרה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "האט והיערך לסדרת עיקולים מסוכנים, כשהראשון ימינה."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3528.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Expected ',' or '}' after property value in JSON at position 90 (line 4 column 30)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3652.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 83 (line 4 column 8)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3659.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Expected double-quoted property name in JSON at position 76 (line 3 column 24)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3595.jpg": {
+    "sign_description": "דרך ראשית, זכות קדימה",
+    "sign_type": "זכות קדימה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "לנהג יש זכות קדימה בצומת הבא."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3593.jpg": {
+    "sign_description": "מעבר חצייה להולכי רגל",
+    "sign_type": "מודיעין",
+    "sign_number_visible": null,
+    "what_driver_must_do": "יש לצפות להולכי רגל ולהאט, ובמידת הצורך לעצור ולתת להם זכות קדימה."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_31731.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unexpected end of JSON input"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3685.jpg": {
+    "sign_description": "צומת T עם דרך צדדית משמאל",
+    "sign_type": "אזהרה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "היזהר מצומת T עם דרך צדדית משמאל והיה מוכן לרכבים נכנסים."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3669.jpg": {
+    "sign_description": "רמזורים עם חץ ירוק שמאלה וימינה",
+    "sign_type": "רמזור",
+    "sign_number_visible": null,
+    "what_driver_must_do": "מותר לפנות בכיוון החץ הירוק."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3599.jpg": {
+    "sign_description": "בית חולים",
+    "sign_type": "מודיעין",
+    "sign_number_visible": null,
+    "what_driver_must_do": "בית חולים בקרבת מקום."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3597.jpg": {
+    "sign_description": "קץ דרך עם זכות קדימה",
+    "sign_type": "זכות קדימה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "הנהג אינו עוד בדרך עם זכות קדימה."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3405.jpg": {
+    "sign_description": "אזהרה: רמזור לפניך",
+    "sign_type": "אזהרה",
+    "sign_number_visible": "122",
+    "what_driver_must_do": "היכון לרמזור והתאם את מהירות הנסיעה."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3359.jpg": {
+    "sign_description": "כביש דו-סטרי לפניך",
+    "sign_type": "אזהרה",
+    "sign_number_visible": "145",
+    "what_driver_must_do": "הנהג צריך להיות מודע לכך שהכביש הופך לדו-סטרי ולנהוג בהתאם."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3622.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 83 (line 4 column 15)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3415.jpg": {
+    "sign_description": "היצרות דרך משני הצדדים",
+    "sign_type": "אזהרה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "לנהוג בזהירות עקב היצרות הכביש משני הצדדים."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3647.jpg": {
+    "sign_description": "סימון חניה עם חריגה מותרת",
+    "sign_type": "סימון כביש",
+    "sign_number_visible": null,
+    "what_driver_must_do": "לחנות במקום המסומן, כאשר חלק מהרכב רשאי לחרוג מהקו המקווקו."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3576.jpg": {
+    "sign_description": "אין כניסה לאופניים",
+    "sign_type": "איסור",
+    "sign_number_visible": null,
+    "what_driver_must_do": "אסור לרכוב על אופניים במקום זה."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3511.jpg": {
+    "sign_description": "תחנת מכס",
+    "sign_type": "חובה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "על הנהג לעצור לבדיקת מכס."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3522.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 85 (line 4 column 23)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3624.jpg": {
+    "sign_description": "מסעדה או מקום אכילה",
+    "sign_type": "מודיעין",
+    "sign_number_visible": null,
+    "what_driver_must_do": "הנהג מודע לקיומה של מסעדה או מקום אכילה בקרבת מקום."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3577.jpg": {
+    "sign_description": "שביל אופניים חובה",
+    "sign_type": "חובה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "שביל זה מיועד לרכיבת אופניים בלבד."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3575.jpg": {
+    "sign_description": "אין כניסה לבהמות רכיבה",
+    "sign_type": "איסור",
+    "sign_number_visible": null,
+    "what_driver_must_do": "אסורה כניסת בהמות רכיבה לדרך זו."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_31570.jpg": {
+    "sign_description": "אזהרה: מעבר חצייה להולכי רגל",
+    "sign_type": "אזהרה",
+    "sign_number_visible": "135",
+    "what_driver_must_do": "להאט, לנהוג בזהירות ולהיות מוכן לעצור להולכי רגל."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3662.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Expected double-quoted property name in JSON at position 73 (line 3 column 29)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3632.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Expected double-quoted property name in JSON at position 75 (line 3 column 24)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3676.jpg": {
+    "sign_description": "חץ ירוק מטה",
+    "sign_type": "רמזור",
+    "sign_number_visible": null,
+    "what_driver_must_do": "הנתיב פתוח לתנועה."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3680.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unexpected token 'א', \"או מכשול\" \"... is not valid JSON"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3608.jpg": {
+    "sign_description": "רמזור אדום וצהוב דולקים",
+    "sign_type": "רמזור",
+    "sign_number_visible": null,
+    "what_driver_must_do": "להתכונן לנסיעה, הרמזור עומד להתחלף לירוק."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3628.jpg": {
+    "sign_description": "אזור מיתון תנועה",
+    "sign_type": "מודיעין",
+    "sign_number_visible": null,
+    "what_driver_must_do": "לנהוג באיטיות ובזהירות מרבית, להולכי רגל קדימות."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3484.jpg": {
+    "sign_description": "בליטה או דבשת בכביש",
+    "sign_type": "אזהרה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "האט את מהירות הנסיעה עקב בליטה בכביש."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3093.jpg": {
+    "sign_description": "רמזור ירוק לתחבורה ציבורית",
+    "sign_type": "רמזור",
+    "sign_number_visible": null,
+    "what_driver_must_do": "רק רכב ציבורי רשאי להמשיך בנסיעה."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3375.jpg": {
+    "sign_description": "אזהרה: מעבר חצייה",
+    "sign_type": "אזהרה",
+    "sign_number_visible": "135",
+    "what_driver_must_do": "להאט ולהיות מוכן לעצור להולכי רגל"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_31638.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 80 (line 4 column 8)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_31803.jpg": {
+    "sign_description": "אזהרה כללית מפני סכנה",
+    "sign_type": "אזהרה",
+    "sign_number_visible": "150",
+    "what_driver_must_do": "יש לנהוג בזהירות מוגברת ולהיות מוכן לכל סכנה."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3184.jpg": {
+    "sign_description": "תמרור עצור עם כף יד",
+    "sign_type": "זכות קדימה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "על הנהג לעצור עצירה מוחלטת לפני קו העצירה ולתת זכות קדימה."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3459.jpg": {
+    "sign_description": "מפגש מסילת ברזל ללא מחסום",
+    "sign_type": "אזהרה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "יש להיזהר ממפגש מסילת ברזל ללא מחסום ולהתכונן לעצירה במידת הצורך."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3180.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 74 (line 3 column 8)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3674.jpg": {
+    "sign_description": "מפגש מסילת ברזל",
+    "sign_type": "אזהרה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "להיזהר ולהיות מוכן לעצור לפני המסילה."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3381.jpg": {
+    "sign_description": "כביש דו-סטרי לפניך",
+    "sign_type": "אזהרה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "הנהג צריך להיות מודע לתנועה משני הכיוונים בכביש."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_31123.jpg": {
+    "sign_description": "הכוונה ליעדים: יבנה, שוק, רכבת",
+    "sign_type": "מודיעין",
+    "sign_number_visible": null,
+    "what_driver_must_do": "הנהג יבין את ההכוונה ליעדים השונים ויבחר את הנתיב המתאים."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3182.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unexpected end of JSON input"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3580.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Expected double-quoted property name in JSON at position 80 (line 3 column 23)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_31387.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 80 (line 4 column 4)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3586.jpg": {
+    "sign_description": "דרך ללא מוצא",
+    "sign_type": "מודיעין",
+    "sign_number_visible": null,
+    "what_driver_must_do": "הנהג צריך לדעת שהדרך שלפניו היא ללא מוצא."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_31760.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 79 (line 3 column 24)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3492.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 83 (line 4 column 8)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3642.jpg": {
+    "sign_description": "חץ נסיעה ישר בנתיב",
+    "sign_type": "סימון כביש",
+    "sign_number_visible": null,
+    "what_driver_must_do": "על הנהג להמשיך ישר בנתיב זה."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3911.jpg": {
+    "sign_description": "חובה לנסוע ישר",
+    "sign_type": "חובה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "על הנהג לנסוע ישר בלבד בצומת הקרוב."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3394.jpg": {
+    "sign_description": "מעבר חצייה להולכי רגל",
+    "sign_type": "אזהרה",
+    "sign_number_visible": "135",
+    "what_driver_must_do": "על הנהג להאט ולהיזהר מהולכי רגל העוברים במעבר החצייה."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3549.jpg": {
+    "sign_description": "פנה ימינה או שמאלה",
+    "sign_type": "חובה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "על הנהג לפנות ימינה או שמאלה בלבד."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3672.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Expected double-quoted property name in JSON at position 78 (line 3 column 24)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3631.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 75 (line 3 column 20)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3310.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 79 (line 4 column 4)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3360.jpg": {
+    "sign_description": "צומת T",
+    "sign_type": "אזהרה",
+    "sign_number_visible": "117",
+    "what_driver_must_do": "הנהג צריך להיות מוכן לצומת T."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_31467.jpg": {
+    "sign_description": "חובה לפנות ימינה או שמאלה",
+    "sign_type": "חובה",
+    "sign_number_visible": "208",
+    "what_driver_must_do": "על הנהג לפנות ימינה או שמאלה בלבד בצומת הקרוב."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3557.jpg": {
+    "sign_description": "קו הפרדה מקווקו בכביש",
+    "sign_type": "סימון כביש",
+    "sign_number_visible": null,
+    "what_driver_must_do": "מותר לחצות את הקו בזהירות, למשל לעקיפה"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3384.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Expected double-quoted property name in JSON at position 79 (line 3 column 24)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3493.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 83 (line 4 column 15)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3957.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 84 (line 4 column 9)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3400.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 87 (line 4 column 15)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3376.jpg": {
+    "sign_description": "אזהרת ילדים בקרבת כביש",
+    "sign_type": "אזהרה",
+    "sign_number_visible": "136",
+    "what_driver_must_do": "על הנהג לנהוג בזהירות מוגברת עקב הימצאות ילדים בקרבת הכביש."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3501.jpg": {
+    "sign_description": "אין כניסה לרכב מנועי",
+    "sign_type": "איסור",
+    "sign_number_visible": null,
+    "what_driver_must_do": "אסורה הכניסה לרכב מנועי לקטע דרך זה."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3540.jpg": {
+    "sign_description": "חובה לפנות שמאלה",
+    "sign_type": "חובה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "על הנהג לפנות שמאלה."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3649.jpg": {
+    "sign_description": "מפגש מסילת ברזל ללא מחסום",
+    "sign_type": "אזהרה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "יש להיזהר מרכבת מתקרבת ולעצור במידת הצורך."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3651.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 87 (line 4 column 23)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3523.jpg": {
+    "sign_description": "כיכר תנועה",
+    "sign_type": "חובה",
+    "sign_number_visible": "303",
+    "what_driver_must_do": "הקף את הכיכר בכיוון החיצים."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3447.jpg": {
+    "sign_description": "חץ פנייה ימינה",
+    "sign_type": "סימון כביש",
+    "sign_number_visible": null,
+    "what_driver_must_do": "הנתיב מיועד לפנייה ימינה בלבד."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3598.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 82 (line 4 column 16)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3544.jpg": {
+    "sign_description": "חץ פונה ימינה",
+    "sign_type": "חובה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "הנהג חייב לפנות ימינה בכיוון החץ."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3404.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Expected double-quoted property name in JSON at position 81 (line 3 column 29)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3684.jpg": {
+    "sign_description": "מעבר משני צדדים",
+    "sign_type": "אזהרה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "על הנהג לעקוף את המכשול מימין או משמאל."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3370.jpg": {
+    "sign_description": "התמזגות דרך משמאל",
+    "sign_type": "אזהרה",
+    "sign_number_visible": "126",
+    "what_driver_must_do": "היזהר מתנועה המתמזגת משמאל והיה מוכן להאט."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3367.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 78 (line 4 column 9)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3640.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 83 (line 3 column 27)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_31007.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Expected double-quoted property name in JSON at position 87 (line 3 column 26)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3403.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 85 (line 4 column 4)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3524.jpg": {
+    "sign_description": "אסורה עצירה והעמדה",
+    "sign_type": "איסור",
+    "sign_number_visible": null,
+    "what_driver_must_do": "אסור לעצור או להעמיד את הרכב במקום זה, אפילו לא להורדת נוסעים."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3666.jpg": {
+    "sign_description": "רמזור ירוק דולק",
+    "sign_type": "רמזור",
+    "sign_number_visible": null,
+    "what_driver_must_do": "הנהג רשאי לנסוע קדימה בזהירות."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_31769.jpg": {
+    "sign_description": "מעבר חצייה להולכי רגל",
+    "sign_type": "סימון כביש",
+    "sign_number_visible": "811",
+    "what_driver_must_do": "יש לתת זכות קדימה להולכי רגל החוצים."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3630.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 76 (line 4 column 9)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3567.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 85 (line 3 column 23)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3391.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 79 (line 4 column 8)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_31711.jpg": {
+    "sign_description": "מעבר משמאל באתר עבודה",
+    "sign_type": "אתר עבודה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "על הנהג לעבור את המכשול מצד שמאל."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_31801.jpg": {
+    "sign_description": "עמדת טעינה לרכב חשמלי",
+    "sign_type": "מודיעין",
+    "sign_number_visible": "131-ד",
+    "what_driver_must_do": "נהג רכב חשמלי יכול לטעון את רכבו במקום זה."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3582.jpg": {
+    "sign_description": "אין כניסה למשאיות",
+    "sign_type": "איסור",
+    "sign_number_visible": null,
+    "what_driver_must_do": "אסור לנהג משאית להיכנס לקטע הדרך המסומן."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3387.jpg": {
+    "sign_description": "מתן זכות קדימה לתנועה ממול",
+    "sign_type": "זכות קדימה",
+    "sign_number_visible": "307",
+    "what_driver_must_do": "על הנהג לתת זכות קדימה לרכב הבא ממול."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3690.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 139 (line 5 column 35)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3643.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Expected double-quoted property name in JSON at position 78 (line 3 column 29)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3581.jpg": {
+    "sign_description": "שביל משולב לאופניים ולהולכי רגל",
+    "sign_type": "חובה",
+    "sign_number_visible": null,
+    "what_driver_must_do": "על הנהג לדעת כי זהו שביל המיועד לאופניים ולהולכי רגל בלבד."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_02/he/TQ_PIC_3966.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 89 (line 4 column 23)"
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3504.jpg": {
+    "sign_description": "נתיב שמאלי מתמזג",
+    "sign_type": "מודיעין",
+    "sign_number_visible": "622",
+    "what_driver_must_do": "להיות מודע להתמזגות נתיב משמאל."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3362.jpg": {
+    "sign_description": "בליטה או דבשת בכביש",
+    "sign_type": "אזהרה",
+    "sign_number_visible": "144",
+    "what_driver_must_do": "להאט ולהיערך לבליטה או דבשת בכביש."
+  },
+  "https://www.gov.il/BlobFolder/generalpage/tq_pic_01/he/TQ_PIC_3393.jpg": {
+    "sign_description": "",
+    "sign_type": "",
+    "sign_number_visible": null,
+    "what_driver_must_do": "",
+    "error": "Unterminated string in JSON at position 93 (line 4 column 23)"
+  }
+}
