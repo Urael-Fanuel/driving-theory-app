@@ -256,8 +256,21 @@ export async function getRandomExamQuestions(count: number = 30): Promise<DBQues
 /**
  * Fetch questions for a specific sign.
  */
+const _questionsCache = new Map<string, DBQuestion[]>();
+
+export function getQuestionsFromCache(signId: string): DBQuestion[] | null {
+  return _questionsCache.get(signId) ?? null;
+}
+
 export async function getQuestionsBySign(signId: string): Promise<DBQuestion[]> {
-  if (USE_MOCK) return mockData.questions.filter(q => q.sign_id === signId);
+  const cached = _questionsCache.get(signId);
+  if (cached) return cached;
+
+  if (USE_MOCK) {
+    const qs = mockData.questions.filter(q => q.sign_id === signId);
+    _questionsCache.set(signId, qs);
+    return qs;
+  }
 
   try {
     const { data, error } = await supabase
@@ -266,7 +279,9 @@ export async function getQuestionsBySign(signId: string): Promise<DBQuestion[]> 
       .eq('sign_id', signId);
 
     if (error) throw error;
-    return (data ?? []).map(normalizeQuestion);
+    const qs = (data ?? []).map(normalizeQuestion);
+    _questionsCache.set(signId, qs);
+    return qs;
   } catch (err) {
     console.error('[api] getQuestionsBySign:', err);
     return mockData.questions.filter(q => q.sign_id === signId);

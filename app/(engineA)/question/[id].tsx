@@ -68,7 +68,7 @@ export default function EngineAQuestionScreen() {
   const [sign,          setSign]          = useState<DBSign | null>(null);
   const [questions,     setQuestions]     = useState<DBQuestion[]>([]);
   const [topicSigns,    setTopicSigns]    = useState<DBSign[]>([]);
-  const [loading,       setLoading]       = useState(true);
+  const [loading,       setLoading]       = useState(() => !api.getSignsFromCache() || !api.getQuestionsFromCache(signId));
   const [answeredIndex,     setAnsweredIndex]     = useState<number | null>(null);
   const [showFeedback,      setShowFeedback]      = useState(false);
   const [playingAnswerIndex, setPlayingAnswerIndex] = useState<number | null>(null);
