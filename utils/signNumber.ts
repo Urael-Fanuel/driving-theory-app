@@ -12,10 +12,10 @@ export function extractSignNumber(imageUrl?: string): string | null {
 
 /**
  * Returns true if this sign should show a number badge.
- * Stage: warning signs (101–153) + right_of_way signs (301–310).
+ * Stage: warning signs (101–153) + regulatory signs (201–231) + right_of_way signs (301–310).
  */
 export function shouldShowSignBadge(imageUrl?: string): boolean {
   const num = parseInt(extractSignNumber(imageUrl) ?? '');
   if (isNaN(num)) return false;
-  return (num >= 101 && num <= 153) || (num >= 301 && num <= 310);
+  return (num >= 101 && num <= 153) || (num >= 201 && num <= 231) || (num >= 301 && num <= 310);
 }
