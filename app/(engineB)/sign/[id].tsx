@@ -43,7 +43,7 @@ export default function EngineBSignScreen() {
 
   const [sign,       setSign]       = useState<DBSign | null>(null);
   const [topicSigns, setTopicSigns] = useState<DBSign[]>([]);
-  const [loading,    setLoading]    = useState(true);
+  const [loading,    setLoading]    = useState(() => !api.getSignsFromCache());
 
   useEffect(() => {
     async function load() {

@@ -50,7 +50,7 @@ export default function EngineASignScreen() {
   const { markSignViewed } = useProgress();
 
   const [sign,        setSign]        = useState<DBSign | null>(null);
-  const [loading,     setLoading]     = useState(true);
+  const [loading,     setLoading]     = useState(() => !api.getSignsFromCache());
   const [audioEnded,  setAudioEnded]  = useState(false);
   const [replayCount, setReplayCount] = useState(0);
   const [topicSigns,  setTopicSigns]  = useState<DBSign[]>([]);

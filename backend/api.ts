@@ -146,13 +146,21 @@ export async function getSignWithQuestions(signId: string): Promise<SignWithQues
 /**
  * Fetch all signs (used for exam question pool).
  */
+let _signsCache: Sign[] | null = null;
+
+export function getSignsFromCache(): Sign[] | null {
+  return _signsCache;
+}
+
 export async function getAllSigns(): Promise<Sign[]> {
-  if (USE_MOCK) return mockData.signs;
+  if (_signsCache) return _signsCache;
+  if (USE_MOCK) { _signsCache = mockData.signs; return _signsCache; }
 
   try {
     const { data, error } = await supabase.from('signs').select('*');
     if (error) throw error;
-    return data ?? [];
+    _signsCache = data ?? [];
+    return _signsCache;
   } catch (err) {
     console.error('[api] getAllSigns:', err);
     return mockData.signs;
