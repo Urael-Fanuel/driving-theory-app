@@ -40,6 +40,7 @@ import { AudioButton } from '../../../components/shared/AudioButton';
 import { DBSign, DBQuestion } from '../../../backend/supabaseClient';
 import * as api from '../../../backend/api';
 import { useProgress } from '../../../hooks/useProgress';
+import { extractSignNumber, shouldShowSignBadge } from '../../../utils/signNumber';
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
@@ -202,11 +203,18 @@ export default function EngineBQuestionScreen() {
       >
         {/* Sign image */}
         {sign?.image_url && (
-          <Image
-            source={{ uri: sign.image_url }}
-            style={styles.signImage}
-            resizeMode="contain"
-          />
+          <View style={styles.signImageWrapper}>
+            <Image
+              source={{ uri: sign.image_url }}
+              style={styles.signImage}
+              resizeMode="contain"
+            />
+            {shouldShowSignBadge(sign.image_url) && (
+              <View style={styles.signNumberBadge}>
+                <Text style={styles.signNumberText}>{extractSignNumber(sign.image_url)}</Text>
+              </View>
+            )}
+          </View>
         )}
 
         {/* Question text + optional audio */}
@@ -402,11 +410,31 @@ const styles = StyleSheet.create({
     // Extra bottom padding so last answer isn't hidden behind nav
     paddingBottom: 24,
   },
+  signImageWrapper: {
+    position:        'relative',
+    width:           110,
+    height:          110,
+  },
   signImage: {
     width:           110,
     height:          110,
     borderRadius:    16,
     backgroundColor: '#FFFFFF',
+  },
+  signNumberBadge: {
+    position:        'absolute',
+    top:             6,
+    left:            6,
+    backgroundColor: 'rgba(0,0,0,0.55)',
+    borderRadius:    4,
+    paddingHorizontal: 6,
+    paddingVertical: 2,
+    zIndex:          1,
+  },
+  signNumberText: {
+    color:      '#FFFFFF',
+    fontSize:   11,
+    fontWeight: 'bold',
   },
   questionContainer: {
     alignSelf:       'stretch',

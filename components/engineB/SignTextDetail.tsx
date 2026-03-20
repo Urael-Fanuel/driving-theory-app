@@ -29,6 +29,7 @@ import {
 import { Colors } from '../../constants/colors';
 import { AudioButton } from '../shared/AudioButton';
 import { DBSign } from '../../backend/supabaseClient';
+import { extractSignNumber, shouldShowSignBadge } from '../../utils/signNumber';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -57,6 +58,11 @@ export function SignTextDetail({ sign, style }: SignTextDetailProps) {
         ) : (
           <View style={styles.imagePlaceholder}>
             <Text style={styles.placeholderIcon}>🚦</Text>
+          </View>
+        )}
+        {shouldShowSignBadge(sign.image_url) && (
+          <View style={styles.signNumberBadge}>
+            <Text style={styles.signNumberText}>{extractSignNumber(sign.image_url)}</Text>
           </View>
         )}
       </View>
@@ -114,6 +120,22 @@ const styles = StyleSheet.create({
     shadowOpacity:   0.3,
     shadowRadius:    10,
     elevation:       8,
+    position:        'relative',
+  },
+  signNumberBadge: {
+    position:        'absolute',
+    top:             8,
+    left:            8,
+    backgroundColor: 'rgba(0,0,0,0.55)',
+    borderRadius:    5,
+    paddingHorizontal: 7,
+    paddingVertical: 3,
+    zIndex:          1,
+  },
+  signNumberText: {
+    color:      '#FFFFFF',
+    fontSize:   12,
+    fontWeight: 'bold',
   },
   image: {
     width:           '100%',

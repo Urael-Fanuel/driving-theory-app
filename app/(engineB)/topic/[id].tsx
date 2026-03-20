@@ -22,6 +22,7 @@ import { ProgressBar } from '../../../components/shared/ProgressBar';
 import { DBSign, DBTopic } from '../../../backend/supabaseClient';
 import * as api from '../../../backend/api';
 import { useProgress } from '../../../hooks/useProgress';
+import { extractSignNumber, shouldShowSignBadge } from '../../../utils/signNumber';
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
@@ -81,6 +82,11 @@ export default function EngineBTopicScreen() {
             />
           ) : (
             <Text style={styles.imagePlaceholder}>🚦</Text>
+          )}
+          {shouldShowSignBadge(item.image_url) && (
+            <View style={styles.signNumberBadge}>
+              <Text style={styles.signNumberText}>{extractSignNumber(item.image_url)}</Text>
+            </View>
           )}
         </View>
 
@@ -212,6 +218,22 @@ const styles = StyleSheet.create({
     alignItems:      'center',
     overflow:        'hidden',
     flexShrink:      0,
+    position:        'relative',
+  },
+  signNumberBadge: {
+    position:        'absolute',
+    top:             3,
+    left:            3,
+    backgroundColor: 'rgba(0,0,0,0.55)',
+    borderRadius:    3,
+    paddingHorizontal: 4,
+    paddingVertical: 1,
+    zIndex:          1,
+  },
+  signNumberText: {
+    color:      '#FFFFFF',
+    fontSize:   9,
+    fontWeight: 'bold',
   },
   signImage: {
     width:           '100%',

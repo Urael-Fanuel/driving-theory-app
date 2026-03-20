@@ -7,6 +7,7 @@
  */
 
 import React, { useEffect, useState } from 'react';
+import { extractSignNumber, shouldShowSignBadge } from '../../../utils/signNumber';
 import {
   View,
   Image,
@@ -83,6 +84,13 @@ export default function EngineATopicScreen() {
         ) : (
           <View style={styles.signPlaceholder}>
             <Text style={styles.signPlaceholderIcon}>🚦</Text>
+          </View>
+        )}
+
+        {/* Sign number badge */}
+        {shouldShowSignBadge(item.image_url) && (
+          <View style={styles.signNumberBadge}>
+            <Text style={styles.signNumberText}>{extractSignNumber(item.image_url)}</Text>
           </View>
         )}
 
@@ -172,6 +180,20 @@ const styles = StyleSheet.create({
   },
   signPlaceholderIcon: {
     fontSize: 32,
+  },
+  signNumberBadge: {
+    position:        'absolute',
+    top:             4,
+    left:            4,
+    backgroundColor: 'rgba(0,0,0,0.55)',
+    borderRadius:    4,
+    paddingHorizontal: 5,
+    paddingVertical: 2,
+  },
+  signNumberText: {
+    color:      '#FFFFFF',
+    fontSize:   10,
+    fontWeight: 'bold',
   },
   viewedBadge: {
     position:        'absolute',

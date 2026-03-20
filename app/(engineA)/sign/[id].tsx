@@ -39,6 +39,7 @@ import { DBSign } from '../../../backend/supabaseClient';
 import * as api from '../../../backend/api';
 import { useAudio, playAndAwaitAudio } from '../../../hooks/useAudio';
 import { useProgress } from '../../../hooks/useProgress';
+import { extractSignNumber, shouldShowSignBadge } from '../../../utils/signNumber';
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
@@ -216,6 +217,11 @@ export default function EngineASignScreen() {
               <Text style={styles.placeholderIcon}>🚧</Text>
             </View>
           )}
+          {shouldShowSignBadge(sign.image_url) && (
+            <View style={styles.signNumberBadge}>
+              <Text style={styles.signNumberText}>{extractSignNumber(sign.image_url)}</Text>
+            </View>
+          )}
         </View>
 
         {/* Control row: Prev | Play/Pause | Next */}
@@ -309,6 +315,22 @@ const styles = StyleSheet.create({
     borderRadius:    16,
     overflow:        'hidden',
     backgroundColor: '#FFFFFF',
+    position:        'relative',
+  },
+  signNumberBadge: {
+    position:        'absolute',
+    top:             10,
+    left:            10,
+    backgroundColor: 'rgba(0,0,0,0.55)',
+    borderRadius:    5,
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    zIndex:          1,
+  },
+  signNumberText: {
+    color:      '#FFFFFF',
+    fontSize:   14,
+    fontWeight: 'bold',
   },
   signImage: {
     width:  '100%',

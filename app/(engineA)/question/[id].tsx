@@ -44,6 +44,7 @@ import { DBSign, DBQuestion } from '../../../backend/supabaseClient';
 import * as api from '../../../backend/api';
 import { useAudio, waitForAudioEnd, playAndAwaitAudio } from '../../../hooks/useAudio';
 import { useProgress } from '../../../hooks/useProgress';
+import { extractSignNumber, shouldShowSignBadge } from '../../../utils/signNumber';
 import { useVoiceRecognition } from '../../../hooks/useVoiceRecognition';
 
 // ─── Number announcement URLs (played before each answer) ─────────────────────
@@ -335,6 +336,11 @@ export default function EngineAQuestionScreen() {
               style={styles.signImage}
               resizeMode="contain"
             />
+            {shouldShowSignBadge(sign.image_url) && (
+              <View style={styles.signNumberBadge}>
+                <Text style={styles.signNumberText}>{extractSignNumber(sign.image_url)}</Text>
+              </View>
+            )}
           </View>
         )}
 
@@ -475,6 +481,22 @@ const styles = StyleSheet.create({
     borderRadius:    20,
     overflow:        'hidden',
     backgroundColor: '#FFFFFF',
+    position:        'relative',
+  },
+  signNumberBadge: {
+    position:        'absolute',
+    top:             8,
+    left:            8,
+    backgroundColor: 'rgba(0,0,0,0.55)',
+    borderRadius:    5,
+    paddingHorizontal: 7,
+    paddingVertical: 3,
+    zIndex:          1,
+  },
+  signNumberText: {
+    color:      '#FFFFFF',
+    fontSize:   12,
+    fontWeight: 'bold',
   },
   signImage: {
     width:           '100%',
