@@ -86,7 +86,7 @@ function findOurImagePath(sign) {
 
 // ─── Gemini: generate MoT-style questions + translate (Solution 3) ───────────
 
-async function generateAndTranslateQA(signImagePath, signNameHebrew) {
+async function generateAndTranslateQA(signImagePath, sign) {
   const imageBuffer = readFileSync(signImagePath);
   const base64 = imageBuffer.toString('base64');
   const mimeType = signImagePath.toLowerCase().endsWith('.jpg') || signImagePath.toLowerCase().endsWith('.jpeg')
@@ -94,7 +94,14 @@ async function generateAndTranslateQA(signImagePath, signNameHebrew) {
 
   const prompt = `אתה מומחה למבחני תיאוריה ישראליים ולשפת אמהרית (געז).
 
-מצורפת תמונה של תמרור ישראלי: "${signNameHebrew}".
+מצורפת תמונה של תמרור ישראלי.
+
+━━━ זהות התמרור (מאומת מראש — אל תנחש) ━━━
+שם עברי: "${sign.name_hebrew}"
+שם באמהרית: "${sign.name_amharic}"
+הסבר באמהרית: "${sign.explanation_amharic}"
+
+השתמש במידע הזה כדי להבין בדיוק מה התמרור מצווה ומי חייב לעשות מה.
 
 המשימה: צור 3 שאלות מבחן תיאוריה בסגנון המדויק של משרד התחבורה הישראלי, ותרגם אותן ישירות לאמהרית.
 
@@ -149,7 +156,7 @@ async function generateAndTranslateQA(signImagePath, signNameHebrew) {
 
 // ─── Gemini translation ───────────────────────────────────────────────────────
 
-async function translateQAToAmharic(motQuestions, signImagePath) {
+async function translateQAToAmharic(motQuestions, signImagePath, sign) {
   const imageBuffer = readFileSync(signImagePath);
   const base64 = imageBuffer.toString('base64');
   const mimeType = signImagePath.toLowerCase().endsWith('.jpg') || signImagePath.toLowerCase().endsWith('.jpeg')
@@ -163,20 +170,21 @@ async function translateQAToAmharic(motQuestions, signImagePath) {
 
   const needSupplement = motQuestions.length < 3;
   const supplementNote = needSupplement
-    ? `\nיש לך רק ${motQuestions.length} שאלות רשמיות. אתה חייב להוסיף ${3 - motQuestions.length} שאלה/ות נוספת בסגנון זהה לשאלות משרד התחבורה, על בסיס תמונת התמרור. שאלות נוספות לא יחזרו על מה שכבר נשאל.\nהחזר בסך הכל בדיוק 3 שאלות.\n`
+    ? `\nיש לך רק ${motQuestions.length} שאלות רשמיות. אתה חייב להוסיף ${3 - motQuestions.length} שאלה/ות נוספת בסגנון זהה לשאלות משרד התחבורה, על בסיס תיאור התמרור. שאלות נוספות לא יחזרו על מה שכבר נשאל.\nהחזר בסך הכל בדיוק 3 שאלות.\n`
     : '';
 
   const prompt = `אתה מומחה לתמרורי ישראל ולמבחני תיאוריה, ומתרגם לאמהרית (געז).
 
 מצורפת תמונה של תמרור ישראלי.
 
-━━━ שלב 1: זהה את התמרור ━━━
-לפני הכל, הסתכל על התמונה והגדר לעצמך:
-- מהו סוג התמרור? (חובה / אזהרה / מידע / איסור / זכות קדימה וכו')
-- מה המשמעות המדויקת שלו?
-- מה הוא מצווה על הנהג לעשות?
+━━━ זהות התמרור (מאומת מראש — אל תנחש) ━━━
+שם עברי: "${sign.name_hebrew}"
+שם באמהרית: "${sign.name_amharic}"
+הסבר באמהרית: "${sign.explanation_amharic}"
 
-━━━ שלב 2: אמת את השאלות ━━━
+השתמש במידע הזה כדי לדעת בדיוק מה התמרור מצווה ומי חייב לעשות מה — לא לנחש מהתמונה.
+
+━━━ שלב 1: אמת את השאלות ━━━
 הנה ${motQuestions.length} שאלות שנשלחו מבנק השאלות של משרד התחבורה:
 ${questionsJson}
 ${supplementNote}
@@ -323,10 +331,10 @@ async function main() {
   let translatedQA;
   if (motQuestions.length === 0) {
     console.log('\n🤖 Generating MoT-style questions + translating to Amharic via Gemini...');
-    translatedQA = await generateAndTranslateQA(imgPath, sign.name_hebrew);
+    translatedQA = await generateAndTranslateQA(imgPath, sign);
   } else {
     console.log('\n🤖 Translating to Amharic via Gemini...');
-    translatedQA = await translateQAToAmharic(motQuestions, imgPath);
+    translatedQA = await translateQAToAmharic(motQuestions, imgPath, sign);
   }
   console.log(`✅ Translated ${translatedQA.questions.length} questions`);
   translatedQA.questions.forEach((q, i) => {

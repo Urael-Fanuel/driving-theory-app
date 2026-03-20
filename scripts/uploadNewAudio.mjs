@@ -52,9 +52,10 @@ if (!SUPABASE_URL || !SERVICE_KEY) {
 
 const supabase = createClient(SUPABASE_URL, SERVICE_KEY);
 
-/** Compute the public Storage URL for an audio filename */
+/** Compute the public Storage URL for an audio filename — with cache-bust to force CDN refresh */
+const CACHE_BUST = Date.now();
 function audioUrl(filename) {
-  return `${SUPABASE_URL}/storage/v1/object/public/${BUCKET}/${filename}`;
+  return `${SUPABASE_URL}/storage/v1/object/public/${BUCKET}/${filename}?v=${CACHE_BUST}`;
 }
 
 // ─── Load signs.json ──────────────────────────────────────────────────────────
@@ -127,13 +128,16 @@ for (let i = 0; i < uniqueFiles.length; i++) {
     continue;
   }
 
+  // Delete first to guarantee CDN cache invalidation (upsert alone is not enough)
+  await supabase.storage.from(BUCKET).remove([filename]);
+
   const fileData = readFileSync(localPath);
   const { error } = await supabase.storage
     .from(BUCKET)
     .upload(filename, fileData, {
       contentType:  'audio/mpeg',
-      cacheControl: '31536000',
-      upsert:       true,
+      cacheControl: '3600',
+      upsert:       false,
     });
 
   if (error) {
