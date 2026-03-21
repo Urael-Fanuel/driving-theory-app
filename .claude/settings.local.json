@@ -151,7 +151,9 @@
       "Read(//c/Users/Yakov/Desktop/**)",
       "Bash(timeout 3)",
       "Bash(node -e \"require\\(''''pg''''\\)\")",
-      "Bash(supabase --version)"
+      "Bash(supabase --version)",
+      "Bash(for num:*)",
+      "Bash(done)"
     ]
   },
   "hooks": {
