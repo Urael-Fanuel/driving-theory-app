@@ -88,7 +88,79 @@
       "Bash(npx tsx backend/generateNumberAudio.ts)",
       "Bash(npx tsc --noEmit --skipLibCheck)",
       "Bash(git init)",
-      "Bash(git add .)"
+      "Bash(git add .)",
+      "Bash(ls C:UsersYakovDesktopdriving-theory-appassetsimages14*.png)",
+      "Bash(findstr \"14\")",
+      "Bash(findstr \"144\\\\|145\\\\|146\\\\|147\\\\|148\\\\|149\\\\|150\\\\|151\\\\|152\\\\|153\")",
+      "WebFetch(domain:commons.wikimedia.org)",
+      "WebFetch(domain:en.wikipedia.org)",
+      "WebFetch(domain:he.wikipedia.org)",
+      "Bash(node -e \":*)",
+      "Bash(cp assets/images/תמרורי הוריה/*.png assets/images/)",
+      "Bash(ls assets/images/*.png)",
+      "Bash(grep -E \"^.*/\\(2[0-2][0-9]|231\\)\\\\.png$\")",
+      "Bash(npx tsx:*)",
+      "Bash(ls C:/Users/Yakov/Desktop/driving-theory-app/assets/images/*.png)",
+      "WebSearch",
+      "Bash(find \"/c/Users/Yakov/Desktop/driving-theory-app/app/\\(engineB\\)\" -type f -name \"*.tsx\")",
+      "Bash(jq \".signs[] | select\\(.id == \"\"SIGN_BUMP\"\"\\)\")",
+      "Bash(jq \".signs[] | select\\(.id == \"\"ROW_END_PRIORITY\"\"\\)\")",
+      "Bash(npx expo:*)",
+      "Bash(grep -c '\"\"topic_id\"\":\\\\s*\"\"right_of_way\"\"' \"C:\\\\Users\\\\Yakov\\\\Desktop\\\\driving-theory-app\\\\content\\\\signs.json\")",
+      "Bash(grep -n \"explanation_amharic\\\\|name_amharic\\\\|name_hebrew\\\\|explanation\" app/\\\\\\(engineB\\\\\\)/sign/[id].tsx)",
+      "Bash(grep -n \"sign\\\\.\\\\|signData\\\\.\\\\|\\\\.name\\\\|\\\\.explanation\\\\|\\\\.amharic\\\\|\\\\.hebrew\" app/\\\\\\(engineB\\\\\\)/sign/[id].tsx)",
+      "Bash(grep -n \"Text\\\\|name\\\\|explanation\" app/\\\\\\(engineB\\\\\\)/sign/[id].tsx)",
+      "Bash(ls assets/images/*.jpg)",
+      "Bash(find C:/Users/Yakov/Desktop/driving-theory-app/app -name question* -o -name *question*)",
+      "Bash(ls \"C:/Users/Yakov/Desktop/driving-theory-app/app/\\(engineA\\)/question/\")",
+      "Bash(ls \"C:/Users/Yakov/Desktop/driving-theory-app/app/\\(engineB\\)/question/\")",
+      "Bash(find C:/Users/Yakov/Desktop/driving-theory-app/components -name ImageAnswerCard* -o -name *AnswerCard*)",
+      "Bash(jq \".[] | select\\(.topic_id == \"\"regulatory\"\"\\) | {id, topic_id, image_filename, name_hebrew, name_amharic: \\(.name_amharic | .[0:50]\\), questions_count: \\(.questions | length\\)}\" content/signs.json)",
+      "Bash(iconv -f UTF-8 -t UTF-8)",
+      "Bash(jq '.[] | select\\(.topic_id == \"\"regulatory\"\"\\) | {id, image: .image_filename, hebrew: .name_hebrew, amharic: .name_amharic[:50], questions: \\(.questions | length\\)}' content/signs.json)",
+      "Bash(for dir:*)",
+      "Bash(do echo:*)",
+      "WebFetch(domain:anglo-list.com)",
+      "WebFetch(domain:wiki.aaroads.com)",
+      "Bash(find \"C:\\\\Users\\\\Yakov\\\\Desktop\\\\driving-theory-app\\\\scripts\\\\\" -type f -name \"*download*.mjs\" -o -name \"*download*.ts \")",
+      "WebFetch(domain:l4me.org.il)",
+      "WebFetch(domain:tamrurim.co.il)",
+      "WebFetch(domain:www.megapro.org.il)",
+      "WebFetch(domain:www.traffic-safety.co.il)",
+      "WebFetch(domain:mitmachim.top)",
+      "WebFetch(domain:www.adcidl.com)",
+      "Bash(curl -s \"https://commons.wikimedia.org/w/api.php?action=query&list=allimages&aisort=name&aiprefix=Israel_road_sign&ailimit=500&aiprop=url&format=json\")",
+      "Bash(node --env-file=.env -e \":*)",
+      "Bash(cat -n \"C:\\\\Users\\\\Yakov\\\\Desktop\\\\driving-theory-app\\\\app\\\\\\(engineA\\)\\\\home.tsx\")",
+      "Bash(Remove-Item \"C:\\\\Users\\\\Yakov\\\\Desktop\\\\driving-theory-app\\\\.git\\\\index.lock\" -Force)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(findstr /R \"^125\\\\|^126\\\\|sign_125\\\\|sign_126\")",
+      "Bash(findstr \"125\\\\|sign_125\\\\|sign_126\\\\|126\")",
+      "Bash(findstr /I \"125\\\\|126\")",
+      "Bash(echo \"$TEMP\")",
+      "Read(//tmp/**)",
+      "Bash(cygpath -w /tmp/signs_old.json)",
+      "Skill(update-config)",
+      "Skill(update-config:*)",
+      "Bash(echo \"EXIT:$?\")",
+      "Bash(grep -rn \"extractSignNumber.*=== ''301''\" app/ components/ --include=\"*.tsx\" -l)",
+      "Bash(ls \"C:\\\\Users\\\\Yakov\\\\Desktop\\\\driving-theory-app\\\\scripts\\\\output\"\" 2>/dev/null || echo \"not found \")"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"C:/Users/Yakov/Desktop/driving-theory-app/scripts/githubGuard.mjs\"",
+            "timeout": 10
+          }
+        ]
+      }
     ]
   }
 }

@@ -47,7 +47,7 @@ function getTargetPos(signIdx, qIdx) { return (signIdx * 3 + qIdx) % 4; }
 const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
 
 // Process warning only for signs 125+126 fix
-const TOPICS_TO_PROCESS = ['warning'];
+const TOPICS_TO_PROCESS = ['prohibitions'];
 
 let signIdx = 0;
 const updated = data.map(sign => {

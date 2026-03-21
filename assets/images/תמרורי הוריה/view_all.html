@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>תמרורי הוריה 201-231</title>
+<style>
+  body { background: #1a1a2e; color: white; font-family: Arial; padding: 20px; }
+  .grid { display: flex; flex-wrap: wrap; gap: 16px; }
+  .item { background: #16213e; border-radius: 8px; padding: 12px; text-align: center; width: 130px; }
+  .item img { width: 100px; height: 100px; object-fit: contain; background: white; border-radius: 4px; }
+  .num { font-size: 18px; font-weight: bold; color: #4CAF50; margin-top: 8px; }
+</style>
+</head>
+<body>
+<h2>תמרורי הוריה — זיהוי תמונות</h2>
+<div class="grid">
+</div>
+<script>
+const nums = [201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231];
+const grid = document.querySelector('.grid');
+nums.forEach(n => {
+  const div = document.createElement('div');
+  div.className = 'item';
+  div.innerHTML = `<img src="${n}.png" onerror="this.style.background='red'"><div class="num">${n}</div>`;
+  grid.appendChild(div);
+});
+</script>
+</body>
+</html>
