@@ -14,6 +14,17 @@ import { createClient } from '@supabase/supabase-js';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
 
+// ─── Correct answer prefixes (rotate per sign+question) ───────────────────────
+const CORRECT_PREFIXES = [
+  'እሰይ የኔ ጎቨዝ።',
+  'ትክክል፥ አቬት እውቀት።',
+  'ጎሽ።',
+  'እንድያ ነው።',
+  'አቬት ችሎታ፥ ትክክል።',
+  'በጣም አሪፍ።',
+  'ትክክል።',
+];
+
 // ─── CLI args ─────────────────────────────────────────────────────────────────
 const signNumArg = process.argv.find((a, i) => process.argv[i - 1] === '--sign-number');
 const motImageArg = process.argv.find((a, i) => process.argv[i - 1] === '--mot-image');
@@ -269,7 +280,15 @@ function buildQuestionsArray(signNumber, translatedQA, signIdx) {
       id: qId,
       question_amharic: tq.question_amharic,
       question_audio: `${qId}_question.mp3`,
-      explanation_correct_amharic: tq.explanation_correct_amharic,
+      explanation_correct_amharic: (() => {
+        // Replace Gemini's generic prefix (ትክክል! / አዎ!) with our rotating prefix
+        const prefixIdx = (parseInt(signNumber) + qIdx) % CORRECT_PREFIXES.length;
+        const prefix = CORRECT_PREFIXES[prefixIdx];
+        const stripped = tq.explanation_correct_amharic
+          .replace(/^(ትክክል!|አዎ!|ትክክል።|ጎሽ።)\s*/u, '')
+          .trim();
+        return `${prefix} ${stripped}`;
+      })(),
       explanation_wrong_amharic: tq.explanation_wrong_amharic,
       explanation_correct_audio: `${qId}_correct.mp3`,
       explanation_wrong_audio: `${qId}_wrong.mp3`,
