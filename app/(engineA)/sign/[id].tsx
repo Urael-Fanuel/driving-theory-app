@@ -31,6 +31,7 @@ import {
   Image,
   ScrollView,
 } from 'react-native';
+import { VideoModal } from '../../../components/shared/VideoModal';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import * as Haptics from 'expo-haptics';
 import { Colors } from '../../../constants/colors';
@@ -50,11 +51,12 @@ export default function EngineASignScreen() {
   const { stopAudio, pauseAudio, resumeAudio, audioState } = useAudio();
   const { markSignViewed } = useProgress();
 
-  const [sign,        setSign]        = useState<DBSign | null>(null);
-  const [loading,     setLoading]     = useState(() => !api.getSignsFromCache());
-  const [audioEnded,  setAudioEnded]  = useState(false);
-  const [replayCount, setReplayCount] = useState(0);
-  const [topicSigns,  setTopicSigns]  = useState<DBSign[]>([]);
+  const [sign,         setSign]         = useState<DBSign | null>(null);
+  const [loading,      setLoading]      = useState(() => !api.getSignsFromCache());
+  const [audioEnded,   setAudioEnded]   = useState(false);
+  const [replayCount,  setReplayCount]  = useState(0);
+  const [topicSigns,   setTopicSigns]   = useState<DBSign[]>([]);
+  const [videoVisible, setVideoVisible] = useState(false);
 
   const quizButtonAnim = useRef(new Animated.Value(0)).current;
   const pulseAnim      = useRef(new Animated.Value(1)).current;
@@ -224,6 +226,26 @@ export default function EngineASignScreen() {
           )}
         </View>
 
+        {/* Video button — only shown when sign has a video */}
+        {sign.video_url && (
+          <TouchableOpacity
+            style={styles.videoBtn}
+            onPress={() => setVideoVisible(true)}
+            accessibilityLabel="ቪዲዮ ተመልከት"
+          >
+            <Text style={styles.videoBtnIcon}>▶</Text>
+          </TouchableOpacity>
+        )}
+
+        {/* Video modal */}
+        {sign.video_url && (
+          <VideoModal
+            visible={videoVisible}
+            videoUri={sign.video_url}
+            onClose={() => setVideoVisible(false)}
+          />
+        )}
+
         {/* Control row: Prev | Play/Pause | Next */}
         <View style={styles.controlRow}>
 
@@ -344,6 +366,20 @@ const styles = StyleSheet.create({
   },
   placeholderIcon: {
     fontSize: 64,
+  },
+  videoBtn: {
+    width:           72,
+    height:          72,
+    borderRadius:    36,
+    backgroundColor: '#1A1A2E',
+    justifyContent:  'center',
+    alignItems:      'center',
+    borderWidth:     1,
+    borderColor:     '#3A3A5E',
+  },
+  videoBtnIcon: {
+    color:    '#FFFFFF',
+    fontSize: 28,
   },
   controlRow: {
     flexDirection:  'row',

@@ -146,7 +146,12 @@
       "Skill(update-config:*)",
       "Bash(echo \"EXIT:$?\")",
       "Bash(grep -rn \"extractSignNumber.*=== ''301''\" app/ components/ --include=\"*.tsx\" -l)",
-      "Bash(ls \"C:\\\\Users\\\\Yakov\\\\Desktop\\\\driving-theory-app\\\\scripts\\\\output\"\" 2>/dev/null || echo \"not found \")"
+      "Bash(ls \"C:\\\\Users\\\\Yakov\\\\Desktop\\\\driving-theory-app\\\\scripts\\\\output\"\" 2>/dev/null || echo \"not found \")",
+      "Bash(ls C:UsersYakovDesktopסרטון תמרור עצור*)",
+      "Read(//c/Users/Yakov/Desktop/**)",
+      "Bash(timeout 3)",
+      "Bash(node -e \"require\\(''''pg''''\\)\")",
+      "Bash(supabase --version)"
     ]
   },
   "hooks": {

@@ -17,7 +17,7 @@
  * └─────────────────────┘
  */
 
-import React from 'react';
+import React, { useState } from 'react';
 import {
   View,
   Text,
@@ -25,9 +25,11 @@ import {
   StyleSheet,
   ScrollView,
   ViewStyle,
+  TouchableOpacity,
 } from 'react-native';
 import { Colors } from '../../constants/colors';
 import { AudioButton } from '../shared/AudioButton';
+import { VideoModal } from '../shared/VideoModal';
 import { DBSign } from '../../backend/supabaseClient';
 import { extractSignNumber, shouldShowSignBadge } from '../../utils/signNumber';
 
@@ -41,6 +43,8 @@ interface SignTextDetailProps {
 // ─── Component ────────────────────────────────────────────────────────────────
 
 export function SignTextDetail({ sign, style }: SignTextDetailProps) {
+  const [videoVisible, setVideoVisible] = useState(false);
+
   return (
     <ScrollView
       style={[styles.container, style]}
@@ -66,6 +70,27 @@ export function SignTextDetail({ sign, style }: SignTextDetailProps) {
           </View>
         )}
       </View>
+
+      {/* Video button — only shown when sign has a video */}
+      {sign.video_url && (
+        <TouchableOpacity
+          style={styles.videoBtn}
+          onPress={() => setVideoVisible(true)}
+          accessibilityLabel="ቪዲዮ ተመልከት"
+        >
+          <Text style={styles.videoBtnIcon}>▶</Text>
+          <Text style={styles.videoBtnText}>ቪዲዮ ተመልከት</Text>
+        </TouchableOpacity>
+      )}
+
+      {/* Video modal */}
+      {sign.video_url && (
+        <VideoModal
+          visible={videoVisible}
+          videoUri={sign.video_url}
+          onClose={() => setVideoVisible(false)}
+        />
+      )}
 
       {/* Sign name block */}
       <View style={styles.nameBlock}>
@@ -150,6 +175,29 @@ const styles = StyleSheet.create({
   },
   placeholderIcon: {
     fontSize: 80,
+  },
+
+  // ── Video button ─────────────────────────────────────────────────────────────
+  videoBtn: {
+    flexDirection:   'row',
+    alignItems:      'center',
+    justifyContent:  'center',
+    backgroundColor: '#1A1A2E',
+    borderRadius:    14,
+    paddingVertical: 12,
+    paddingHorizontal: 24,
+    gap:             10,
+    borderWidth:     1,
+    borderColor:     '#3A3A5E',
+  },
+  videoBtnIcon: {
+    color:    '#FFFFFF',
+    fontSize: 18,
+  },
+  videoBtnText: {
+    color:      '#FFFFFF',
+    fontSize:   16,
+    fontWeight: '600',
   },
 
   // ── Name block ───────────────────────────────────────────────────────────────
