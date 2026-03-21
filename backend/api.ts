@@ -276,7 +276,8 @@ export async function getQuestionsBySign(signId: string): Promise<DBQuestion[]> 
     const { data, error } = await supabase
       .from('questions')
       .select('*')
-      .eq('sign_id', signId);
+      .eq('sign_id', signId)
+      .order('id');
 
     if (error) throw error;
     const qs = (data ?? []).map(normalizeQuestion);
