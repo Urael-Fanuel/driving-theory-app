@@ -19570,106 +19570,106 @@
     "questions": [
       {
         "id": "631_q1",
-        "question_amharic": "በዚህ ምልክት ላይ ያለው '2500' ቁጥር ምን ያመለክታል?",
+        "question_amharic": "ምልክቱ ምን ያዝዛል?",
         "question_audio": "631_q1_question.mp3",
-        "explanation_correct_amharic": "ትክክل! ይህ ምልክት አሽከርካሪው ወደፊት ሊያገኘው የሚችለውን የመንገድ ሁኔታ ወይም መድረሻ ርቀት ያሳያል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የፍጥነት ገደብ፣ የመንገድ መዘጋት ወይም የማቆሚያ ምልክቶች የተለየ ቅርፅ አላቸው፤ ይህ ምልክት የርቀት መረጃ ይሰጣል።",
+        "explanation_correct_amharic": "ትክክል፥ አቬት እውቀት። ይህ ምልክት ወደፊት 2500 ሜትር ርቀት ላይ አንድ አስፈላጊ ቦታ፣ መውጫ ወይም መታጠፊያ እንደሚገኝ ያሳውቃል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ምልክቱ ወደፊት 2500 ሜትር ርቀት ላይ አንድ አስፈላጊ መድረሻ፣ መውጫ ወይም መታጠፊያ እንዳለ ያመለክታል።",
         "explanation_correct_audio": "631_q1_correct.mp3",
         "explanation_wrong_audio": "631_q1_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "የተፈቀደው ከፍተኛ ፍጥነት በሰዓት 2500 ኪሎ ሜትር መሆኑን ያሳያል።",
+            "text_amharic": "ምልክቱ ከፍተኛውን የ2500 ሜትር ከፍታ ያመለክታል።",
             "is_correct": false,
             "audio_filename": "answer_631_q1_A.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "ለ2500 ሰከንዶች ያህል ማቆም እንዳለብዎት ያሳያል።",
-            "is_correct": false,
-            "audio_filename": "answer_631_q1_D.mp3"
-          },
-          {
             "id": "B",
-            "text_amharic": "ወደፊት 2500 ሜትር ርቀት ላይ አንድ የተወሰነ ቦታ ወይም መድረሻ እንዳለ ያመለክታል።",
-            "is_correct": true,
+            "text_amharic": "የተፈቀደው ፍጥነት 2500 ኪሜ/ሰ ነው።",
+            "is_correct": false,
             "audio_filename": "answer_631_q1_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "መንገዱ ለቀጣዮቹ 2500 ሜትር ዝግ መሆኑን ያሳያል።",
+            "text_amharic": "ከፊት ካለው ተሽከርካሪ 2500 ሜትር ርቀት መያዝ አለበት።",
             "is_correct": false,
             "audio_filename": "answer_631_q1_C.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ምልክቱ ወደፊት 2500 ሜትር ርቀት ላይ አንድ አስፈላጊ መድረሻ፣ መውጫ ወይም መታጠፊያ እንዳለ ያመለክታል።",
+            "is_correct": true,
+            "audio_filename": "answer_631_q1_D.mp3"
           }
         ]
       },
       {
         "id": "631_q2",
-        "question_amharic": "አሽከርካሪው ይህንን ምልክት ካየ በኋላ ምን ማድረግ አለበት?",
+        "question_amharic": "ይህን ምልክት የሚያይ አሽከርካሪ እንዴት መንዳት አለበት?",
         "question_audio": "631_q2_question.mp3",
-        "explanation_correct_amharic": "ትክክል! ጥሩ ነው። ይህ ምልክት አሽከርካሪው ለሚመጣው የመንገድ ለውጥ ወይም መድረሻ አስቀድሞ እንዲዘጋጅ ያስችለዋል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ምልክቱን ችላ ማለት ወይም የተሳሳተ እርምጃ መውሰድ የመንገድ ደህንነትን አደጋ ላይ ይጥላል።",
+        "explanation_correct_amharic": "ጎሽ። አሽከርካሪው ይህንን ምልክት ሲያይ ለሚመጣው ነገር አስቀድሞ መዘጋጀት፣ ፍጥነቱን ማስተካከል እና ትክክለኛውን መስመር መያዝ አለበት።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: አሽከርካሪው ለሚመጣው ነገር አስቀድሞ መዘጋጀት፣ ፍጥነቱን ማስተካከል እና ትክክለኛውን መስመር መያዝ አለበት።",
         "explanation_correct_audio": "631_q2_correct.mp3",
         "explanation_wrong_audio": "631_q2_wrong.mp3",
         "answers": [
           {
-            "id": "D",
-            "text_amharic": "ምልክቱ አስገዳጅ ስላልሆነ ችላ ማለት አለበት።",
-            "is_correct": false,
-            "audio_filename": "answer_631_q2_D.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "ተሽከርካሪውን ወዲያውኑ ማቆም አለበት።",
-            "is_correct": false,
+            "text_amharic": "አሽከርካሪው ለሚመጣው ነገር አስቀድሞ መዘጋጀት፣ ፍጥነቱን ማስተካከል እና ትክክለኛውን መስመር መያዝ አለበት።",
+            "is_correct": true,
             "audio_filename": "answer_631_q2_A.mp3"
           },
           {
+            "id": "B",
+            "text_amharic": "አሽከርካሪው በፍጥነት ለመድረስ ፍጥነቱን መጨመር አለበት።",
+            "is_correct": false,
+            "audio_filename": "answer_631_q2_B.mp3"
+          },
+          {
             "id": "C",
-            "text_amharic": "መድረሻው ለመድረስ ፍጥነቱን መጨመር አለበት።",
+            "text_amharic": "አሽከርካሪው የመንገድ ካርታውን ለመፈተሽ ከመንገድ ዳር ማቆም አለበት።",
             "is_correct": false,
             "audio_filename": "answer_631_q2_C.mp3"
           },
           {
-            "id": "B",
-            "text_amharic": "ለሚመጣው መውጫ፣ መታጠፊያ ወይም ሌላ አስፈላጊ ነገር አስቀድሞ መዘጋጀት አለበት።",
-            "is_correct": true,
-            "audio_filename": "answer_631_q2_B.mp3"
+            "id": "D",
+            "text_amharic": "አሽከርካሪው ምልክቱን ችላ ብሎ በመደበኛነት መንዳት መቀጠል አለበት።",
+            "is_correct": false,
+            "audio_filename": "answer_631_q2_D.mp3"
           }
         ]
       },
       {
         "id": "631_q3",
-        "question_amharic": "ይህንን ምልክት ችላ በማለት ሊከሰት የሚችለው አደጋ ምንድን ነው?",
+        "question_amharic": "አንድ አሽከርካሪ የዚህን ምልክት መመሪያ ችላ ካለ ምን ሊከሰት ይችላል?",
         "question_audio": "631_q3_question.mp3",
-        "explanation_correct_amharic": "አሪፍ! ምልክቱ የርቀት መረጃን ችላ ማለት አሽከርካሪው መንገድ እንዲስት ወይም አደገኛ የመንዳት ባህሪ እንዲያሳይ ያደርጋል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ምልክቱን አለማክበር ወደ ትራፊክ ጥሰት እና አደጋ ሊያመራ ይችላል እንጂ ከጎማ መበላሸት ጋር ቀጥተኛ ግንኙነት የለውም።",
+        "explanation_correct_amharic": "እንድያ ነው። ይህንን መረጃ ችላ ማለት መንገድን ለመሳት፣ ድንገተኛ የመስመር ለውጥ ለማድረግ ወይም አደጋ ሊያስከትል ይችላል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: አሽከርካሪው መንገዱን ሊስት፣ ድንገተኛ የመስመር ለውጥ ሊያደርግ ወይም አደጋ ሊያስከትል ይችላል።",
         "explanation_correct_audio": "631_q3_correct.mp3",
         "explanation_wrong_audio": "631_q3_wrong.mp3",
         "answers": [
           {
+            "id": "A",
+            "text_amharic": "አሽከርካሪው በጣም በዝግታ በመንዳት ቅጣት ይደርስበታል።",
+            "is_correct": false,
+            "audio_filename": "answer_631_q3_A.mp3"
+          },
+          {
             "id": "B",
-            "text_amharic": "የታሰበውን መውጫ ወይም መታጠፊያ ማለፍ፣ ድንገተኛ የመስመር ለውጥ ማድረግ ወይም አደጋ ሊያስከትል ይችላል።",
+            "text_amharic": "አሽከርካሪው መንገዱን ሊስት፣ ድንገተኛ የመስመር ለውጥ ሊያደርግ ወይም አደጋ ሊያስከትል ይችላል።",
             "is_correct": true,
             "audio_filename": "answer_631_q3_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "መኪናው በራስ-ሰር ፍጥነቱን ይቀንሳል።",
+            "text_amharic": "አሽከርካሪው ከሚጠበቀው ጊዜ ቀድሞ ወደ መድረሻው ይደርሳል።",
             "is_correct": false,
             "audio_filename": "answer_631_q3_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "በጣም በዝግታ በመንዳት ቅጣት ይጣልበታል።",
+            "text_amharic": "ምንም ልዩ ነገር የለም፣ ምልክቱ ለመምከር ብቻ ነው።",
             "is_correct": false,
             "audio_filename": "answer_631_q3_D.mp3"
-          },
-          {
-            "id": "A",
-            "text_amharic": "የመኪና ጎማ ሊፈነዳ ይችላል።",
-            "is_correct": false,
-            "audio_filename": "answer_631_q3_A.mp3"
           }
         ]
       }
@@ -19689,106 +19689,106 @@
     "questions": [
       {
         "id": "632_q1",
-        "question_amharic": "ይህንን የመንገድ ምልክት ሲያዩ ምን ማድረግ አለብዎት?",
+        "question_amharic": "ምልክቱ ምን ያዝዛል?",
         "question_audio": "632_q1_question.mp3",
-        "explanation_correct_amharic": "ጎቨዝ። ይህ ምልክት ወደ ቀኝ መታጠፍ ግዴታ መሆኑን በግልፅ ያሳያል፣ ስለዚህ አሽከርካሪው ወደ ቀኝ መታጠፍ አለበት።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ምልክቱን አለማክበር የትራፊክ ህግ ጥሰት ሲሆን አደጋ ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "ጎሽ። ምልክቱ በሚቀጥለው መስቀለኛ መንገድ ላይ ወደ ቀኝ ብቻ መታጠፍ ግዴታ መሆኑን ያመለክታል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ምልክቱ በሚቀጥለው መስቀለኛ መንገድ ላይ ወደ ቀኝ ብቻ መታጠፍ ግዴታ መሆኑን ያመለክታል።",
         "explanation_correct_audio": "632_q1_correct.mp3",
         "explanation_wrong_audio": "632_q1_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "ወደ ግራ መታጠፍ አለብኝ።",
+            "text_amharic": "ወደ ቀኝ መታጠፍ የተከለከለ ነው።",
             "is_correct": false,
             "audio_filename": "answer_632_q1_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "ወደ ቀኝ መታጠፍ አለብኝ።",
-            "is_correct": true,
+            "text_amharic": "ወደ ቀኝ መታጠፍ ይፈቀዳል እንጂ ግዴታ አይደለም።",
+            "is_correct": false,
             "audio_filename": "answer_632_q1_B.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "መኪናዬን አቁሜ መጠበቅ አለብኝ።",
-            "is_correct": false,
-            "audio_filename": "answer_632_q1_D.mp3"
+            "id": "C",
+            "text_amharic": "በሚቀጥለው መስቀለኛ መንገድ ላይ ወደ ቀኝ ብቻ መታጠፍ ግዴታ ነው።",
+            "is_correct": true,
+            "audio_filename": "answer_632_q1_C.mp3"
           },
           {
-            "id": "C",
-            "text_amharic": "ቀጥ ብዬ መሄድ እችላለሁ።",
+            "id": "D",
+            "text_amharic": "ከመታጠፍዎ በፊት ፍጥነትዎን መቀነስ አለብዎት።",
             "is_correct": false,
-            "audio_filename": "answer_632_q1_C.mp3"
+            "audio_filename": "answer_632_q1_D.mp3"
           }
         ]
       },
       {
         "id": "632_q2",
-        "question_amharic": "ይህንን ምልክት ሲያዩ አሽከርካሪው ምን ዓይነት ጥንቃቄዎችን ማድረግ አለበት?",
+        "question_amharic": "አሽከርካሪው ይህንን ምልክት ሲያይ እንዴት መንዳት አለበት?",
         "question_audio": "632_q2_question.mp3",
-        "explanation_correct_amharic": "በጣም ጥሩ። ደህንነቱ የተጠበቀ መታጠፍ ለማድረግ ፍጥነት መቀነስ፣ ምልክት መስጠት እና ጥንቃቄ ማድረግ ወሳኝ ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ተገቢውን ጥንቃቄ አለማድረግ አደጋዎችን እና የትራፊክ ቅጣቶችን ያስከትላል።",
+        "explanation_correct_amharic": "እንድያ ነው። አሽከርካሪው ይህንን ምልክት ሲያይ ፍጥነቱን መቀነስ፣ የምልክት መብራቱን ማብራት እና በጥንቃቄ ወደ ቀኝ ብቻ መታጠፍ አለበት።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: አሽከርካሪው ይህንን ምልክት ሲያይ ፍጥነቱን መቀነስ፣ የምልክት መብራቱን ማብራት እና በጥንቃቄ ወደ ቀኝ ብቻ መታጠፍ አለበት።",
         "explanation_correct_audio": "632_q2_correct.mp3",
         "explanation_wrong_audio": "632_q2_wrong.mp3",
         "answers": [
           {
+            "id": "A",
+            "text_amharic": "ቆሞ ተጨማሪ መመሪያዎችን መጠበቅ አለበት።",
+            "is_correct": false,
+            "audio_filename": "answer_632_q2_A.mp3"
+          },
+          {
+            "id": "B",
+            "text_amharic": "እንደፈለገው ወደ ግራ ወይም ቀጥ ብሎ መሄድ ይችላል።",
+            "is_correct": false,
+            "audio_filename": "answer_632_q2_B.mp3"
+          },
+          {
             "id": "C",
-            "text_amharic": "የሌሎች መኪናዎችን እንቅስቃሴ ሳልጠብቅ መታጠፍ አለብኝ።",
+            "text_amharic": "ምልክቱ ለከባድ ተሽከርካሪዎች ብቻ ስለሆነ ቀጥ ብሎ መሄድ አለበት።",
             "is_correct": false,
             "audio_filename": "answer_632_q2_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "ወደ የትኛውም አቅጣጫ መሄድ እችላለሁ።",
-            "is_correct": false,
-            "audio_filename": "answer_632_q2_D.mp3"
-          },
-          {
-            "id": "B",
-            "text_amharic": "ፍጥነቴን ቀንሼ፣ የምልክት መብራቴን አብርቼ በጥንቃቄ መታጠፍ አለብኝ።",
+            "text_amharic": "በሚቀጥለው መስቀለኛ መንገድ ላይ ወደ ቀኝ ብቻ መታጠፍ፣ ፍጥነቱን መቀነስ እና የምልክት መብራቱን ማብራት አለበት።",
             "is_correct": true,
-            "audio_filename": "answer_632_q2_B.mp3"
-          },
-          {
-            "id": "A",
-            "text_amharic": "ፍጥነቴን ጨምሬ በፍጥነት መታጠፍ አለብኝ።",
-            "is_correct": false,
-            "audio_filename": "answer_632_q2_A.mp3"
+            "audio_filename": "answer_632_q2_D.mp3"
           }
         ]
       },
       {
         "id": "632_q3",
-        "question_amharic": "ይህንን የግዴታ መታጠፊያ ምልክት ችላ ማለት ምን ሊያስከትል ይችላል?",
+        "question_amharic": "ይህንን ምልክት አለማክበር የሚያስከትለው ውጤት ምንድን ነው?",
         "question_audio": "632_q3_question.mp3",
-        "explanation_correct_amharic": "ጎሽሽ። የግዴታ ምልክቶችን አለማክበር የህግ ቅጣት እና የመንገድ ደህንነት አደጋዎችን ያስከትላል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የትራፊክ ምልክቶችን ችላ ማለት ለራስ እና ለሌሎች አሽከርካሪዎች አደጋን ይፈጥራል።",
+        "explanation_correct_amharic": "አቬት ችሎታ፥ ትክክል። ምልክቱን አለማክበር የትራፊክ ህግ ጥሰት ሲሆን አደጋ ሊያስከትል ይችላል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ምልክቱን አለማክበር የትራፊክ ህግ ጥሰት ሲሆን አደጋ ሊያስከትል ይችላል።",
         "explanation_correct_audio": "632_q3_correct.mp3",
         "explanation_wrong_audio": "632_q3_wrong.mp3",
         "answers": [
           {
-            "id": "D",
-            "text_amharic": "የነዳጅ ፍጆታዬን ይቀንሳል።",
-            "is_correct": false,
-            "audio_filename": "answer_632_q3_D.mp3"
-          },
-          {
-            "id": "C",
-            "text_amharic": "ሌሎች አሽከርካሪዎች ለእኔ መንገድ ይሰጡኛል።",
-            "is_correct": false,
-            "audio_filename": "answer_632_q3_C.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "ምንም ችግር የለውም፣ መንገዱ ክፍት ከሆነ ቀጥ ብዬ መሄድ እችላለሁ።",
-            "is_correct": false,
+            "text_amharic": "ምልክቱን አለማክበር የትራፊክ ህግ ጥሰት ሲሆን አደጋ ሊያስከትል ይችላል።",
+            "is_correct": true,
             "audio_filename": "answer_632_q3_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "የትራፊክ ህግ ጥሰት እና አደጋ ሊያስከትል ይችላል።",
-            "is_correct": true,
+            "text_amharic": "ልዩ ውጤት የለውም፣ ግን መታዘዝ ይመከራል።",
+            "is_correct": false,
             "audio_filename": "answer_632_q3_B.mp3"
+          },
+          {
+            "id": "C",
+            "text_amharic": "አሽከርካሪው ማስጠንቀቂያ ብቻ ይቀበላል።",
+            "is_correct": false,
+            "audio_filename": "answer_632_q3_C.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ምልክቱ ለምክር ብቻ የታሰበ እንጂ አስገዳጅ አይደለም።",
+            "is_correct": false,
+            "audio_filename": "answer_632_q3_D.mp3"
           }
         ]
       }
@@ -19808,69 +19808,69 @@
     "questions": [
       {
         "id": "633_q1",
-        "question_amharic": "ይህ ሰማያዊ ምልክት በመንገድ ላይ ምን ያሳያል?",
+        "question_amharic": "በሥዕሉ ላይ የሚታየው ምልክት ምን ያዝዛል?",
         "question_audio": "633_q1_question.mp3",
-        "explanation_correct_amharic": "ዋውው በጣም ጥሩ። ይህ ምልክት አሽከርካሪዎች ከፊት ለፊት ዋሻ እንዳለ እንዲያውቁ ያደርጋል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ምልክቱን በተሳሳተ መንገድ መተርጎም ለዋሻው ዝግጁ እንዳይሆኑ ያደርጋል ይህም አደጋ ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "እንድያ ነው። ይህ ምልክት አሽከርካሪዎች ከፊት ለፊት ዋሻ እንዳለ እንዲያውቁ ያደርጋል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ከፊት ለፊት ዋሻ መግቢያ አለ።",
         "explanation_correct_audio": "633_q1_correct.mp3",
         "explanation_wrong_audio": "633_q1_wrong.mp3",
         "answers": [
           {
+            "id": "A",
+            "text_amharic": "የማይደርስ መንገድ።",
+            "is_correct": false,
+            "audio_filename": "answer_633_q1_A.mp3"
+          },
+          {
             "id": "B",
-            "text_amharic": "ከፊት ለፊት ዋሻ እንዳለ ያመለክታል።",
+            "text_amharic": "ከፊት ለፊት ዋሻ መግቢያ አለ።",
             "is_correct": true,
             "audio_filename": "answer_633_q1_B.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "የመኪና ማቆሚያ ቦታ አለ ማለት ነው።",
-            "is_correct": false,
-            "audio_filename": "answer_633_q1_D.mp3"
-          },
-          {
             "id": "C",
-            "text_amharic": "ወደ ዋሻው መግባት የተከለከለ ነው።",
+            "text_amharic": "የመሬት ውስጥ የመኪና ማቆሚያ ቦታ።",
             "is_correct": false,
             "audio_filename": "answer_633_q1_C.mp3"
           },
           {
-            "id": "A",
-            "text_amharic": "መንገዱ ጠባብ ይሆናል ማለት ነው።",
+            "id": "D",
+            "text_amharic": "ለእግረኞች የመሬት ውስጥ መተላለፊያ።",
             "is_correct": false,
-            "audio_filename": "answer_633_q1_A.mp3"
+            "audio_filename": "answer_633_q1_D.mp3"
           }
         ]
       },
       {
         "id": "633_q2",
-        "question_amharic": "ይህን ምልክት ሲያዩ ወደ ዋሻ ከመግባትዎ በፊት ምን ማድረግ አለብዎት?",
+        "question_amharic": "ይህን ምልክት ሲያዩ እንዴት ይነዳሉ?",
         "question_audio": "633_q2_question.mp3",
-        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። ዋሻ ውስጥ ጥሩ እይታ እንዲኖር የፊት መብራቶችን ማብራት እና ደህንነትን ለመጠበቅ ፍጥነት መቀነስ አስፈላጊ ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ፍጥነት መጨመር ወይም መብራት አለማብራት በዋሻ ውስጥ አደጋ የመፍጠር እድሉ ከፍተኛ ነው።",
+        "explanation_correct_amharic": "አቬት ችሎታ፥ ትክክል። ወደ ዋሻው ከመግባትዎ በፊት ፍጥነትዎን መቀነስ፣ የፊት መብራቶችዎን ማብራት እና ከፊት ካለው ተሽከርካሪ በቂ ርቀት መያዝ አለብዎት።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ፍጥነቴን እቀንሳለሁ፣ የፊት መብራቶቼን አበራለሁ እና ከፊት ካለው ተሽከርካሪ በቂ የደህንነት ርቀት እጠብቃለሁ።",
         "explanation_correct_audio": "633_q2_correct.mp3",
         "explanation_wrong_audio": "633_q2_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "ፍጥነቱን ጨምሮ በፍጥነት ማለፍ አለበት።",
+            "text_amharic": "የዋሻውን ሁኔታ ለመፈተሽ ከመንገዱ ዳር እቆማለሁ።",
             "is_correct": false,
             "audio_filename": "answer_633_q2_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "የፊት መብራቶቹን ማብራት እና ፍጥነቱን መቀነስ አለበት።",
-            "is_correct": true,
+            "text_amharic": "ዋሻውን በፍጥነት ለማለፍ ፍጥነቴን እጨምራለሁ።",
+            "is_correct": false,
             "audio_filename": "answer_633_q2_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "ተሽከርካሪውን አቁሞ መጠበቅ አለበት።",
-            "is_correct": false,
+            "text_amharic": "ፍጥነቴን እቀንሳለሁ፣ የፊት መብራቶቼን አበራለሁ እና ከፊት ካለው ተሽከርካሪ በቂ የደህንነት ርቀት እጠብቃለሁ።",
+            "is_correct": true,
             "audio_filename": "answer_633_q2_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "ወደ ሌላ መንገድ መታጠፍ አለበት።",
+            "text_amharic": "ሌሎች አሽከርካሪዎችን ለማስጠንቀቅ ያለማቋረጥ እጮሃለሁ።",
             "is_correct": false,
             "audio_filename": "answer_633_q2_D.mp3"
           }
@@ -19878,36 +19878,36 @@
       },
       {
         "id": "633_q3",
-        "question_amharic": "በዋሻ ውስጥ ያሉትን የትራፊክ ህጎች አለማክበር ምን አደጋ ሊያስከትል ይችላል?",
+        "question_amharic": "በዋሻ ውስጥ በሚያሽከረክሩበት ጊዜ በተለይ አስፈላጊ የሆነው የትኛው ተግባር ነው?",
         "question_audio": "633_q3_question.mp3",
-        "explanation_correct_amharic": "እሰይ። አቤት እውቀት! በዋሻ ውስጥ በቂ ብርሃን ባለመኖሩ እና ፍጥነት ባለመቀነሱ ምክንያት አደጋዎች ሊከሰቱ ይችላሉ።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የዋሻ ህጎችን አለማክበር ለትራፊክ አደጋ፣ ለቅጣት ወይም ለሌሎች አደገኛ ሁኔታዎች ያጋልጣል።",
+        "explanation_correct_amharic": "በጣም አሪፍ። በዋሻ ውስጥ ሁልጊዜም ቢሆን የፊት መብራቶችን ማብራት እና የደህንነት ርቀትን መጠበቅ አስፈላጊ ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በቀን ውስጥም ቢሆን መብራቶችን ማብራት እና የደህንነት ርቀትን መጠበቅ።",
         "explanation_correct_audio": "633_q3_correct.mp3",
         "explanation_wrong_audio": "633_q3_wrong.mp3",
         "answers": [
           {
-            "id": "D",
-            "text_amharic": "የትራፊክ መጨናነቅ ይፈጠራል።",
-            "is_correct": false,
-            "audio_filename": "answer_633_q3_D.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "የነዳጅ ፍጆታ ይጨምራል።",
+            "text_amharic": "የትራፊክ መጨናነቅ ካለ በዋሻው ውስጥ ማቆም።",
             "is_correct": false,
             "audio_filename": "answer_633_q3_A.mp3"
           },
           {
+            "id": "B",
+            "text_amharic": "በፍጥነት ለመውጣት በከፍተኛ ፍጥነት መንዳት።",
+            "is_correct": false,
+            "audio_filename": "answer_633_q3_B.mp3"
+          },
+          {
             "id": "C",
-            "text_amharic": "በቂ ብርሃን ባለመኖሩ ወይም ፍጥነት ባለመቀነሱ አደጋ ሊከሰት ይችላል።",
-            "is_correct": true,
+            "text_amharic": "በተሻለ ሁኔታ ለማየት ከፍተኛ ጨረር መብራቶችን መጠቀም።",
+            "is_correct": false,
             "audio_filename": "answer_633_q3_C.mp3"
           },
           {
-            "id": "B",
-            "text_amharic": "የመኪናው ጎማ ሊፈነዳ ይችላል።",
-            "is_correct": false,
-            "audio_filename": "answer_633_q3_B.mp3"
+            "id": "D",
+            "text_amharic": "በቀን ውስጥም ቢሆን መብራቶችን ማብራት እና የደህንነት ርቀትን መጠበቅ።",
+            "is_correct": true,
+            "audio_filename": "answer_633_q3_D.mp3"
           }
         ]
       }
@@ -19927,69 +19927,69 @@
     "questions": [
       {
         "id": "634_q1",
-        "question_amharic": "ይህ ምልክት ምን ማለት ነው?",
+        "question_amharic": "በሥዕሉ ላይ የሚታየው ምልክት ምን ያዝዛል?",
         "question_audio": "634_q1_question.mp3",
-        "explanation_correct_amharic": "ትክክل! ይህ ምልክት ዋሻው ማብቃቱን እና ከዋሻው ውጭ ባለው መንገድ ላይ መንዳት እንደሚቀጥሉ ያሳያል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ መምረጥ የዋሻውን ህጎች በተሳሳተ መንገድ እንዲረዱ እና አደጋ ውስጥ እንዲገቡ ያደርጋል።",
+        "explanation_correct_amharic": "አቬት ችሎታ፥ ትክክል። ይህ ምልክት አሽከርካሪዎች ከዋሻው እየወጡ መሆናቸውን ያመለክታል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ምልክቱ በዋሻ ውስጥ ያለ የመንገድ ክፍል መጨረሻ መሆኑን ያመለክታል።",
         "explanation_correct_audio": "634_q1_correct.mp3",
         "explanation_wrong_audio": "634_q1_wrong.mp3",
         "answers": [
           {
+            "id": "A",
+            "text_amharic": "ምልክቱ በዋሻ ውስጥ ያለ የመንገድ ክፍል መጨረሻ መሆኑን ያመለክታል።",
+            "is_correct": true,
+            "audio_filename": "answer_634_q1_A.mp3"
+          },
+          {
+            "id": "B",
+            "text_amharic": "ምልክቱ ወደ ዋሻ መግቢያ መሆኑን ያመለክታል።",
+            "is_correct": false,
+            "audio_filename": "answer_634_q1_B.mp3"
+          },
+          {
             "id": "C",
-            "text_amharic": "ወደ ዋሻው መግባት የተከለከለ መሆኑን ያሳያል።",
+            "text_amharic": "ምልክቱ ወደ ዋሻ መግባት የተከለከለ መሆኑን ያመለክታል።",
             "is_correct": false,
             "audio_filename": "answer_634_q1_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "በዋሻ ውስጥ መብራት ማብራት እንደሌለብዎት ያሳውቃል።",
+            "text_amharic": "ምልክቱ በዋሻ ውስጥ መብራቶችን ማብራት ግዴታ መሆኑን ያመለክታል።",
             "is_correct": false,
             "audio_filename": "answer_634_q1_D.mp3"
-          },
-          {
-            "id": "A",
-            "text_amharic": "ዋሻው አሁን እንደሚጀምር ያሳያል።",
-            "is_correct": false,
-            "audio_filename": "answer_634_q1_A.mp3"
-          },
-          {
-            "id": "B",
-            "text_amharic": "ዋሻው ማብቃቱን እና ከዋሻው እየወጡ መሆኑን ያመለክታል።",
-            "is_correct": true,
-            "audio_filename": "answer_634_q1_B.mp3"
           }
         ]
       },
       {
         "id": "634_q2",
-        "question_amharic": "ይህንን ምልክት ሲያዩ አሽከርካሪው ምን ማድረግ አለበት?",
+        "question_amharic": "አሽከርካሪው ይህንን ምልክት ካየ በኋላ እንዴት መንዳት አለበት?",
         "question_audio": "634_q2_question.mp3",
-        "explanation_correct_amharic": "ትክክል! ጥሩ ነው። ከዋሻው ሲወጡ የብርሃን እና የመንገድ ሁኔታ ስለሚለዋወጥ አሽከርካሪው ፍጥነቱን ማስተካከል እና ጥንቃቄ ማድረግ አለበት።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ትክክለኛውን እርምጃ አለመውሰድ በአዲስ የመንገድ ሁኔታዎች ምክንያት ግራ መጋባትና አደጋ ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "በጣም አሪፍ። ከዋሻው ከወጡ በኋላ አሽከርካሪዎች ለውጭው የመንገድ ሁኔታ እና ለብርሃን ለውጥ ትኩረት በመስጠት ፍጥነታቸውን እና የመንዳት ስልታቸውን ማስተካከል አለባቸው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የመንጃ ፍጥነቱን እና ትኩረቱን ከውጭው የመንገድ ሁኔታ እና ከብርሃን ለውጦች ጋር ማስተካከል አለበት።",
         "explanation_correct_audio": "634_q2_correct.mp3",
         "explanation_wrong_audio": "634_q2_wrong.mp3",
         "answers": [
           {
-            "id": "B",
-            "text_amharic": "ለውጭው የመንገድ ሁኔታ እና ለብርሃን ለውጥ ትኩረት በመስጠት ፍጥነቱን ማስተካከል አለበት።",
-            "is_correct": true,
-            "audio_filename": "answer_634_q2_B.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "ፍጥነቱን ጨምሮ በፍጥነት ከዋሻው መውጣት አለበት።",
+            "text_amharic": "በዋሻው ውስጥ በነበሩት ተመሳሳይ ፍጥነት እና ህጎች መንዳት ይቀጥላል።",
             "is_correct": false,
             "audio_filename": "answer_634_q2_A.mp3"
           },
           {
+            "id": "B",
+            "text_amharic": "የመንጃ ፍጥነቱን እና ትኩረቱን ከውጭው የመንገድ ሁኔታ እና ከብርሃን ለውጦች ጋር ማስተካከል አለበት።",
+            "is_correct": true,
+            "audio_filename": "answer_634_q2_B.mp3"
+          },
+          {
             "id": "C",
-            "text_amharic": "መብራቶቹን ማጥፋት እና መኪናውን ማቆም አለበት።",
+            "text_amharic": "ከብርሃን ጋር ለመላመድ ተሽከርካሪውን ከመንገዱ ዳር ያቆማል።",
             "is_correct": false,
             "audio_filename": "answer_634_q2_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "በዋሻ ውስጥ የሚተገበሩትን ህጎች መከተል መቀጠል አለበት።",
+            "text_amharic": "አስፈላጊ ባይሆንም ዋናውን የፊት መብራቶችን ያበራል።",
             "is_correct": false,
             "audio_filename": "answer_634_q2_D.mp3"
           }
@@ -19997,36 +19997,36 @@
       },
       {
         "id": "634_q3",
-        "question_amharic": "የዚህ ምልክት ዋና ዓላማ ምንድን ነው?",
+        "question_amharic": "በዋሻው ውስጥ ተፈጻሚ የነበሩት የትኞቹ ልዩ ህጎች ከዚህ ምልክት በኋላ ተፈጻሚ አይሆኑም?",
         "question_audio": "634_q3_question.mp3",
-        "explanation_correct_amharic": "አሪፍ! ምልክቱ ይህ ምልክት የዋሻው ልዩ ህጎች ማብቃታቸውን በማሳወቅ አሽከርካሪዎች ለውጭው መንገድ እንዲዘጋጁ ይረዳል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የዚህን ምልክት ዓላማ አለመረዳት አሽከርካሪው አላስፈላጊ ህጎችን እንዲከተል ወይም አስፈላጊ የሆኑትን እንዲያጣ ያደርገዋል።",
+        "explanation_correct_amharic": "ትክክል። ይህ ምልክት በዋሻ ውስጥ የሚተገበሩ ልዩ ህጎች፣ ለምሳሌ የፍጥነት ገደብ ወይም የመብራት አጠቃቀም፣ አሁን እንደማይተገበሩ ያሳውቃል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በዋሻው ውስጥ ተፈጻሚ የነበሩት እንደ የፍጥነት ገደብ ወይም የመብራት አጠቃቀም ግዴታ ያሉ ልዩ ህጎች ከእንግዲህ ተፈጻሚ አይሆኑም።",
         "explanation_correct_audio": "634_q3_correct.mp3",
         "explanation_wrong_audio": "634_q3_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "አሽከርካሪዎች ወደ ሌላ ዋሻ እንዲገቡ ለማዘጋጀት ነው።",
+            "text_amharic": "የቅድሚያ መብት ህጎች ብቻ።",
             "is_correct": false,
             "audio_filename": "answer_634_q3_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "በዋሻ ውስጥ የተጣሉ እገዳዎች እና ልዩ ህጎች አሁን እንደማይተገበሩ ለማሳወቅ ነው።",
-            "is_correct": true,
+            "text_amharic": "የማለፍ እና የምልክት ህጎች ብቻ።",
+            "is_correct": false,
             "audio_filename": "answer_634_q3_B.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "አሽከርካሪዎች በዋሻ ውስጥ እንዲያቆሙ ለማዘዝ ነው።",
-            "is_correct": false,
-            "audio_filename": "answer_634_q3_D.mp3"
+            "id": "C",
+            "text_amharic": "በዋሻው ውስጥ ተፈጻሚ የነበሩት እንደ የፍጥነት ገደብ ወይም የመብራት አጠቃቀም ግዴታ ያሉ ልዩ ህጎች ከእንግዲህ ተፈጻሚ አይሆኑም።",
+            "is_correct": true,
+            "audio_filename": "answer_634_q3_C.mp3"
           },
           {
-            "id": "C",
-            "text_amharic": "በዋሻ ውስጥ መብራቶችን ማብራት ግዴታ መሆኑን ለማስታወስ ነው።",
+            "id": "D",
+            "text_amharic": "የማቆም እና የመቆም ህጎች ብቻ።",
             "is_correct": false,
-            "audio_filename": "answer_634_q3_C.mp3"
+            "audio_filename": "answer_634_q3_D.mp3"
           }
         ]
       }
@@ -20046,106 +20046,106 @@
     "questions": [
       {
         "id": "635_q1",
-        "question_amharic": "ይህ የእሳት አደጋ ማስጠንቀቂያ ምልክት ምን ያሳያል?",
+        "question_amharic": "በሥዕሉ ላይ የሚታየው ምልክት ምን ያዝዛል?",
         "question_audio": "635_q1_question.mp3",
-        "explanation_correct_amharic": "ጎቨዝ። ምልክቱ በደረቅ የአየር ሁኔታ ወይም በደን አካባቢዎች የእሳት አደጋ ከፍተኛ መሆኑን ያስጠነቅቃል፣ ስለዚህ ከፍተኛ ጥንቃቄ ማድረግ ያስፈልጋል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የእሳት አደጋ ማስጠንቀቂያ ምልክትን ችላ ማለት ከባድ የደን ቃጠሎ ሊያስከትል እና በህግ ተጠያቂነትን ያመጣል።",
+        "explanation_correct_amharic": "በጣም አሪፍ። ይህ ምልክት በአካባቢው ከፍተኛ የእሳት አደጋ መኖሩን ያስጠነቅቃል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ምልክቱ በአካባቢው ከፍተኛ የእሳት አደጋ መኖሩን ያመለክታል።",
         "explanation_correct_audio": "635_q1_correct.mp3",
         "explanation_wrong_audio": "635_q1_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "በዚህ አካባቢ የካምፕ እሳት ማቀጣጠል ይፈቀዳል ማለት ነው።",
+            "text_amharic": "ከደን ሥራዎች የሚመጣ አደጋ ማስጠንቀቂያ መሆኑን።",
             "is_correct": false,
             "audio_filename": "answer_635_q1_A.mp3"
           },
           {
+            "id": "B",
+            "text_amharic": "ለሽርሽር ብቻ የተመደበ የደን አካባቢ መሆኑን።",
+            "is_correct": false,
+            "audio_filename": "answer_635_q1_B.mp3"
+          },
+          {
             "id": "C",
-            "text_amharic": "በዚህ መንገድ ላይ የእሳት አደጋ መከላከያ ጣቢያ እንዳለ ያመለክታል።",
+            "text_amharic": "በብዙ እፅዋት የበለፀገ የተፈጥሮ ጥበቃ ቦታ መግቢያ መሆኑን።",
             "is_correct": false,
             "audio_filename": "answer_635_q1_C.mp3"
           },
           {
-            "id": "B",
-            "text_amharic": "በአካባቢው የእሳት አደጋ ከፍተኛ ስለሆነ ጥንቃቄ ማድረግ እንደሚያስፈልግ ያሳያል።",
-            "is_correct": true,
-            "audio_filename": "answer_635_q1_B.mp3"
-          },
-          {
             "id": "D",
-            "text_amharic": "በዚህ አካባቢ ማጨስ የሚፈቀድ መሆኑን ያሳያል።",
-            "is_correct": false,
+            "text_amharic": "በአካባቢው ከፍተኛ የእሳት አደጋ መኖሩን።",
+            "is_correct": true,
             "audio_filename": "answer_635_q1_D.mp3"
           }
         ]
       },
       {
         "id": "635_q2",
-        "question_amharic": "ይህን ምልክት ሲያዩ አሽከርካሪዎች ምን ማድረግ የለባቸውም?",
+        "question_amharic": "ይህን ምልክት ሲያዩ እንዴት መንዳት አለብዎት?",
         "question_audio": "635_q2_question.mp3",
-        "explanation_correct_amharic": "በጣም ጥሩ። ምልክቱ የእሳት አደጋን ስለሚያመለክት፣ ሲጋራ ማጨስ ወይም በቀላሉ ሊቃጠሉ የሚችሉ ነገሮችን ከመኪና ውስጥ መጣል በጥብቅ የተከለከለ ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በእሳት አደጋ አካባቢ እሳት ሊያስነሱ የሚችሉ ድርጊቶችን መፈጸም የደን ቃጠሎን በማስነሳት ከባድ ቅጣት ያስከትላል።",
+        "explanation_correct_amharic": "ትክክል። ይህ ምልክት በሚታይበት ጊዜ እሳት ሊያስከትሉ የሚችሉ ድርጊቶችን ማስወገድ ወሳኝ ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ምልክቱ እሳት ሊያስከትሉ የሚችሉ ድርጊቶችን በጥብቅ ይከለክላል።",
         "explanation_correct_audio": "635_q2_correct.mp3",
         "explanation_wrong_audio": "635_q2_wrong.mp3",
         "answers": [
           {
-            "id": "D",
-            "text_amharic": "የእሳት አደጋ መከላከያ ቁሳቁሶችን ይዘው መሄድ አለባቸው።",
-            "is_correct": false,
-            "audio_filename": "answer_635_q2_D.mp3"
-          },
-          {
-            "id": "C",
-            "text_amharic": "የእሳት አደጋ ምልክቱን ለሌሎች አሽከርካሪዎች ማሳየት አለባቸው።",
-            "is_correct": false,
-            "audio_filename": "answer_635_q2_C.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "ፍጥነታቸውን መቀነስ እና አካባቢውን በጥንቃቄ መመልከት አለባቸው።",
-            "is_correct": false,
+            "text_amharic": "የሚቃጠሉ ሲጋራዎችን ወይም በቀላሉ የሚቀጣጠሉ ነገሮችን ከመኪና ውስጥ ከመጣል እና እሳት ከማቀጣጠል ሙሉ በሙሉ መቆጠብ።",
+            "is_correct": true,
             "audio_filename": "answer_635_q2_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "ሲጋራ ማጨስ ወይም በቀላሉ ሊቃጠሉ የሚችሉ ነገሮችን ከመኪና ውስጥ መጣል የለባቸውም።",
-            "is_correct": true,
+            "text_amharic": "የመንዳት ፍጥነትን መቀነስ እና ድንገተኛ ማቆሚያ ለማድረግ ዝግጁ መሆን።",
+            "is_correct": false,
             "audio_filename": "answer_635_q2_B.mp3"
+          },
+          {
+            "id": "C",
+            "text_amharic": "የነዳጅ መፍሰስ ስጋት ስላለ የመኪናውን የነዳጅ መጠን መፈተሽ።",
+            "is_correct": false,
+            "audio_filename": "answer_635_q2_C.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "የሚታይነትን ለመጨመር በቀን ውስጥም ቢሆን የፊት መብራቶችን ማብራት።",
+            "is_correct": false,
+            "audio_filename": "answer_635_q2_D.mp3"
           }
         ]
       },
       {
         "id": "635_q3",
-        "question_amharic": "ይህን የእሳት አደጋ ማስጠንቀቂያ ምልክት ችላ ማለቱ ምን መዘዝ ሊያስከትል ይችላል?",
+        "question_amharic": "በምልክቱ ላይ የተመለከተው የእሳት አደጋ በተለይ በየትኞቹ ሁኔታዎች ከፍተኛ ይሆናል?",
         "question_audio": "635_q3_question.mp3",
-        "explanation_correct_amharic": "ጎሽሽ። የእሳት አደጋ ማስጠንቀቂያ ምልክትን ችላ ማለት ከባድ የደን ቃጠሎዎችን ሊያስከትል እና በህግ ተጠያቂነትን ያመጣል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የእሳት አደጋ ማስጠንቀቂያዎችን አለማክበር ህይወትን፣ ንብረትን እና የተፈጥሮ ሀብትን አደጋ ላይ ይጥላል እንዲሁም ከባድ የህግ ቅጣት ያስከትላል።",
+        "explanation_correct_amharic": "እሰይ የኔ ጎቨዝ። ምልክቱ በተለይ ደረቅ በሆነ የአየር ሁኔታ ወይም በደን አካባቢዎች የእሳት አደጋ ከፍተኛ መሆኑን ያስጠነቅቃል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የእሳት አደጋ በተለይ ደረቅ የአየር ሁኔታ ባለበት ወይም በደን አካባቢዎች ከፍተኛ ይሆናል።",
         "explanation_correct_audio": "635_q3_correct.mp3",
         "explanation_wrong_audio": "635_q3_wrong.mp3",
         "answers": [
           {
+            "id": "A",
+            "text_amharic": "ከባድ ዝናብ ወይም ነጎድጓድ በሚኖርበት ጊዜ።",
+            "is_correct": false,
+            "audio_filename": "answer_635_q3_A.mp3"
+          },
+          {
             "id": "B",
-            "text_amharic": "በአካባቢው የደን ቃጠሎ ሊያስከትል እና በህግ ተጠያቂነትን ሊያመጣ ይችላል።",
+            "text_amharic": "ደረቅ የአየር ሁኔታ ባለበት ወይም በደን አካባቢዎች።",
             "is_correct": true,
             "audio_filename": "answer_635_q3_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "የመንገድ ጥገና ስራዎች ሊዘገዩ ይችላሉ።",
+            "text_amharic": "ከፍተኛ ሕንፃዎች ባሉባቸው ጥቅጥቅ ያሉ የከተማ አካባቢዎች።",
             "is_correct": false,
             "audio_filename": "answer_635_q3_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "የነዳጅ ፍጆታ ሊጨምር ይችላል።",
+            "text_amharic": "እንደ ወንዞች ወይም ሐይቆች ባሉ ትላልቅ የውሃ ምንጮች አቅራቢያ።",
             "is_correct": false,
             "audio_filename": "answer_635_q3_D.mp3"
-          },
-          {
-            "id": "A",
-            "text_amharic": "መንገዱ ላይ የትራፊክ መጨናነቅ ሊፈጠር ይችላል።",
-            "is_correct": false,
-            "audio_filename": "answer_635_q3_A.mp3"
           }
         ]
       }
@@ -20165,106 +20165,106 @@
     "questions": [
       {
         "id": "636_q1",
-        "question_amharic": "ይህ ምልክት ከፊትህ ስላለው መንገድ ምን ያሳያል?",
+        "question_amharic": "ምልክቱ ምን ያዝዛል?",
         "question_audio": "636_q1_question.mp3",
-        "explanation_correct_amharic": "ዋውው በጣም ጥሩ። ምልክቱ ሁለቱ ቀስቶች እና የብስክሌት ምልክት በመንገዱ ላይ ባለ ሁለት አቅጣጫ ትራፊክ እና የብስክሌት ነጂዎች መኖራቸውን ያመለክታሉ።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ ከመረጡ፣ በመንገዱ ላይ ስላለው ትክክለኛ የትራፊክ ሁኔታ ግራ በመጋባት አደጋ ሊያስከትሉ ይችላሉ።",
+        "explanation_correct_amharic": "ትክክል። ይህ ምልክት ወደፊት ባለ መንገድ ላይ ተሽከርካሪዎች በሁለት አቅጣጫ እንደሚሄዱና ብስክሌቶችም እንደሚኖሩ ያሳያል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ምልክቱ ወደፊት ባለ መንገድ ላይ ተሽከርካሪዎች በሁለት አቅጣጫ እንደሚሄዱና ብስክሌቶችም እንደሚኖሩ ያሳያል።",
         "explanation_correct_audio": "636_q1_correct.mp3",
         "explanation_wrong_audio": "636_q1_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "መንገዱ ለብስክሌቶች ብቻ የተዘጋጀ ነው።",
+            "text_amharic": "ወደፊት ባለ ሁለት አቅጣጫ መንገድ ላይ ብስክሌቶች ብቻ እንደሚፈቀዱ ያሳያል።",
             "is_correct": false,
             "audio_filename": "answer_636_q1_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "መንገዱ በሁለት አቅጣጫ ትራፊክ ያለበት ሲሆን ብስክሌቶችም ይኖሩበታል።",
-            "is_correct": true,
+            "text_amharic": "ወደፊት ባለ አንድ አቅጣጫ መንገድ ላይ ብስክሌቶችም እንደሚኖሩ ያሳያል።",
+            "is_correct": false,
             "audio_filename": "answer_636_q1_B.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "መንገዱ ለሁሉም ትራፊክ ዝግ ነው።",
-            "is_correct": false,
-            "audio_filename": "answer_636_q1_D.mp3"
+            "id": "C",
+            "text_amharic": "ወደፊት ባለ መንገድ ላይ ተሽከርካሪዎች በሁለት አቅጣጫ እንደሚሄዱና ብስክሌቶችም እንደሚኖሩ ያሳያል።",
+            "is_correct": true,
+            "audio_filename": "answer_636_q1_C.mp3"
           },
           {
-            "id": "C",
-            "text_amharic": "መንገዱ ለአንድ አቅጣጫ ተሽከርካሪዎች ብቻ ነው።",
+            "id": "D",
+            "text_amharic": "ወደፊት ባለ አንድ አቅጣጫ መንገድ ላይ ብስክሌቶች መንዳት የተከለከለ መሆኑን ያሳያል።",
             "is_correct": false,
-            "audio_filename": "answer_636_q1_C.mp3"
+            "audio_filename": "answer_636_q1_D.mp3"
           }
         ]
       },
       {
         "id": "636_q2",
-        "question_amharic": "ይህን ምልክት ሲያዩ አሽከርካሪው ምን ማድረግ አለበት?",
+        "question_amharic": "ይህንን ምልክት ሲያዩ እንዴት መንዳት አለብዎት?",
         "question_audio": "636_q2_question.mp3",
-        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። ይህ ምልክት አሽከርካሪው ጥንቃቄ እንዲያደርግ እና ከሁለቱም አቅጣጫ ለሚመጡ ተሽከርካሪዎች እና ብስክሌቶች ዝግጁ እንዲሆን ያስገድደዋል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ትክክለኛውን እርምጃ አለመውሰድ ከፊት ለፊት ከሚመጡ ተሽከርካሪዎች ወይም ብስክሌት ነጂዎች ጋር ግጭት ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "እሰይ የኔ ጎቨዝ። ይህ ምልክት ባለ ሁለት አቅጣጫ መንገድ ላይ ብስክሌቶች መኖራቸውን ስለሚያመለክት፣ ከፊት ለፊት የሚመጡ ተሽከርካሪዎችን እና ብስክሌት ነጂዎችን መጠበቅ፣ ፍጥነትዎን መቀነስ እና በጥንቃቄ መንዳት አለብዎት።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ከፊት ለፊት የሚመጡ ተሽከርካሪዎችን እና ብስክሌት ነጂዎችን መጠበቅ፣ ፍጥነትዎን መቀነስ እና በጥንቃቄ መንዳት አለብዎት።",
         "explanation_correct_audio": "636_q2_correct.mp3",
         "explanation_wrong_audio": "636_q2_wrong.mp3",
         "answers": [
           {
+            "id": "A",
+            "text_amharic": "ከብስክሌት ነጂዎች ለመራቅ በግራ መስመር ብቻ መንዳት አለብዎት።",
+            "is_correct": false,
+            "audio_filename": "answer_636_q2_A.mp3"
+          },
+          {
+            "id": "B",
+            "text_amharic": "ፍጥነትዎን በመጨመር ክፍሉን በፍጥነት ማለፍ አለብዎት።",
+            "is_correct": false,
+            "audio_filename": "answer_636_q2_B.mp3"
+          },
+          {
             "id": "C",
-            "text_amharic": "ቆሞ ምልክት እስኪሰጠው መጠበቅ አለበት።",
+            "text_amharic": "መንገዱን እንዲለቁላቸው ለብስክሌት ነጂዎች መለከት መንፋት አለብዎት።",
             "is_correct": false,
             "audio_filename": "answer_636_q2_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "ወደ ግራ ሳይመለከት በቀኝ በኩል ብቻ መንዳት አለበት።",
-            "is_correct": false,
-            "audio_filename": "answer_636_q2_D.mp3"
-          },
-          {
-            "id": "B",
-            "text_amharic": "ከፊት ለፊት ለሚመጡ ተሽከርካሪዎች እና ብስክሌቶች ዝግጁ መሆን አለበት።",
+            "text_amharic": "ከፊት ለፊት የሚመጡ ተሽከርካሪዎችን እና ብስክሌት ነጂዎችን መጠበቅ፣ ፍጥነትዎን መቀነስ እና በጥንቃቄ መንዳት አለብዎት።",
             "is_correct": true,
-            "audio_filename": "answer_636_q2_B.mp3"
-          },
-          {
-            "id": "A",
-            "text_amharic": "በፍጥነት ለማለፍ ፍጥነቱን መጨመር አለበት።",
-            "is_correct": false,
-            "audio_filename": "answer_636_q2_A.mp3"
+            "audio_filename": "answer_636_q2_D.mp3"
           }
         ]
       },
       {
         "id": "636_q3",
-        "question_amharic": "ይህን ምልክት ችላ ማለት ምን አደጋ ያስከትላል?",
+        "question_amharic": "ይህንን ምልክት ካዩ በኋላ አስፈላጊውን ጥንቃቄ ካላደረጉ ምን ሊከሰት ይችላል?",
         "question_audio": "636_q3_question.mp3",
-        "explanation_correct_amharic": "እሰይ። አቤት እውቀት! ምልክቱን ችላ ማለት አሽከርካሪው ለሁለት አቅጣጫ ትራፊክ እና ለብስክሌቶች ዝግጁ እንዳይሆን በማድረግ አደጋ የመፍጠር እድልን ይጨምራል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: አደጋን ሊያስከትል የሚችልን ምልክት ችላ ማለት ህይወትን አደጋ ላይ ይጥላል እና ከባድ የትራፊክ ቅጣት ያስከትላል።",
+        "explanation_correct_amharic": "ትክክል፥ አቬት እውቀት። ምልክቱ ባለ ሁለት አቅጣጫ መንገድ ላይ ብስክሌቶች መኖራቸውን ስለሚያመለክት፣ ጥንቃቄ አለማድረግ ከአደጋ፣ ከብስክሌት ነጂዎች ጋር ግጭት ወይም የትራፊክ ጥሰት ቅጣት ሊያስከትል ይችላል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: አደጋ፣ ከብስክሌት ነጂዎች ጋር ግጭት ወይም የትራፊክ ጥሰት ቅጣት ሊያስከትል ይችላል።",
         "explanation_correct_audio": "636_q3_correct.mp3",
         "explanation_wrong_audio": "636_q3_wrong.mp3",
         "answers": [
           {
-            "id": "D",
-            "text_amharic": "ከሌሎች አሽከርካሪዎች ማስጠንቀቂያ ይደርስብዎታል።",
-            "is_correct": false,
-            "audio_filename": "answer_636_q3_D.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "መንገድ ሊጠፋብዎ ይችላል።",
-            "is_correct": false,
+            "text_amharic": "አደጋ፣ ከብስክሌት ነጂዎች ጋር ግጭት ወይም የትራፊክ ጥሰት ቅጣት ሊያስከትል ይችላል።",
+            "is_correct": true,
             "audio_filename": "answer_636_q3_A.mp3"
           },
           {
+            "id": "B",
+            "text_amharic": "ወደ መድረሻዎ ለመድረስ ረዘም ላለ ጊዜ መጠበቅ ይኖርብዎታል።",
+            "is_correct": false,
+            "audio_filename": "answer_636_q3_B.mp3"
+          },
+          {
             "id": "C",
-            "text_amharic": "ወደ መድረሻዎ ዘግይተው ይደርሳሉ።",
+            "text_amharic": "አማራጭ መንገድ መፈለግ ይኖርብዎታል።",
             "is_correct": false,
             "audio_filename": "answer_636_q3_C.mp3"
           },
           {
-            "id": "B",
-            "text_amharic": "ከፊት ለፊት ከሚመጣ ተሽከርካሪ ወይም ከብስክሌት ነጂ ጋር አደጋ ሊያደርሱ ይችላሉ።",
-            "is_correct": true,
-            "audio_filename": "answer_636_q3_B.mp3"
+            "id": "D",
+            "text_amharic": "በቀን ውስጥም ቢሆን የፊት መብራቶችን ማብራት ይኖርብዎታል።",
+            "is_correct": false,
+            "audio_filename": "answer_636_q3_D.mp3"
           }
         ]
       }
@@ -20284,96 +20284,108 @@
     "questions": [
       {
         "id": "637_q1",
-        "question_amharic": "ይህ የድንገተኛ ጊዜ ማቆሚያ (bay) ዋና ዓላማ ምንድን ነው?",
+        "question_amharic": "ይህ ምልክት ምን ማለት ነው?",
         "question_audio": "637_q1_question.mp3",
+        "explanation_correct_amharic": "እሰይ የኔ ጎቨዝ። ይህ ምልክት ከፊት ለፊት በግራ በኩል የአደጋ ጊዜ ማቆሚያ (bay) እንዳለ ያሳያል፣ ይህም ለድንገተኛ ሁኔታዎች ብቻ የታሰበ ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ከፊት ለፊት በግራ በኩል የአደጋ ጊዜ ማቆሚያ (bay) እንዳለ ያሳያል። ይህ ምልክት የመንገድ መስመር መቀላቀልን ሳይሆን የአደጋ ጊዜ ማቆሚያ መኖሩን ያመለክታል።",
+        "explanation_correct_audio": "637_q1_correct.mp3",
+        "explanation_wrong_audio": "637_q1_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "የቴክኒክ ብልሽት ሲያጋጥም ወይም በጤና ምክንያት ጉዞን መቀጠል በማይቻልበት ጊዜ ከመንገድ አደጋ ለመጠበቅ።",
-            "is_correct": true
+            "text_amharic": "ከፊት ለፊት ከግራ በኩል ወደ ዋናው መንገድ የሚቀላቀል የመንገድ መስመር አለ።",
+            "is_correct": false,
+            "audio_filename": "answer_637_q1_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "ለስልክ ጥሪ ወይም ለአጭር እረፍት የሚውል ነው።",
-            "is_correct": false
+            "text_amharic": "ከፊት ለፊት በግራ በኩል የአደጋ ጊዜ ማቆሚያ (bay) እንዳለ ያሳያል።",
+            "is_correct": true,
+            "audio_filename": "answer_637_q1_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "ጓደኞችን ለመጠበቅ ወይም ለመገናኘት ቦታ ነው።",
-            "is_correct": false
+            "text_amharic": "ከፊት ለፊት የእረፍት ቦታ እና መኪና ማቆም የሚፈቀድበት ቦታ አለ።",
+            "is_correct": false,
+            "audio_filename": "answer_637_q1_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "ምግብ ለመብላት ወይም መጠጥ ለመግዛት የሚቆምበት ቦታ ነው።",
-            "is_correct": false
+            "text_amharic": "ከፊት ለፊት ከመንገድ ከመውጣትዎ በፊት ፍጥነት የሚቀንስበት መስመር አለ።",
+            "is_correct": false,
+            "audio_filename": "answer_637_q1_D.mp3"
           }
-        ],
-        "explanation_correct_amharic": "ትክክል! ይህ ምልክት የድንገተኛ ጊዜ ማቆሚያው በዋነኝነት የተዘጋጀው ተሽከርካሪዎች በቴክኒክ ብልሽት ወይም በጤና ምክንያት ጉዞ መቀጠል በማይችሉበት ጊዜ ከትራፊክ አደጋ ለመጠበቅ ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የድንገተኛ ጊዜ ማቆሚያው ለድንገተኛ ላልሆኑ ጉዳዮች (እንደ ስልክ ጥሪ፣ እረፍት ወይም ጓደኛ መጠበቅ) መጠቀም ደህንነትን አደጋ ላይ ይጥላል።",
-        "explanation_correct_audio": "637_q1_correct.mp3",
-        "explanation_wrong_audio": "637_q1_wrong.mp3"
+        ]
       },
       {
         "id": "637_q2",
-        "question_amharic": "የድንገተኛ ጊዜ ማቆሚያውን (bay) ሲጠቀሙ 'ከባድ ስህተት' ተብሎ የሚጠቀሰው የትኛው ድርጊት ነው?",
+        "question_amharic": "በዚህ ምልክት መሰረት እንዴት መንዳት አለብዎት?",
         "question_audio": "637_q2_question.mp3",
+        "explanation_correct_amharic": "ትክክል፥ አቬት እውቀት። የአደጋ ጊዜ ማቆሚያዎች ለቴክኒክ ብልሽት ወይም በጤና ምክንያት ጉዞን መቀጠል በማይቻልበት ጊዜ ብቻ ጥቅም ላይ መዋል አለባቸው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የአደጋ ጊዜ ማቆሚያውን የምጠቀመው የቴክኒክ ብልሽት ሲገጥመኝ ወይም በጤና ምክንያት ጉዞዬን መቀጠል ሳልችል ብቻ ነው። የአደጋ ጊዜ ማቆሚያዎችን ለስልክ ጥሪ ወይም ለእረፍት መጠቀም ከባድ ስህተት ነው።",
+        "explanation_correct_audio": "637_q2_correct.mp3",
+        "explanation_wrong_audio": "637_q2_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "የቴክኒክ ብልሽት ሲያጋጥም መጠቀም።",
-            "is_correct": false
+            "text_amharic": "ማቆሚያውን ችላ ብዬ አስፈላጊ ከሆነ በመንገዱ ዳር ላይ አቆማለሁ።",
+            "is_correct": false,
+            "audio_filename": "answer_637_q2_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "ድንገተኛ ላልሆኑ ጉዳዮች (እንደ ስልክ ጥሪ ወይም እረፍት) መጠቀም።",
-            "is_correct": true
+            "text_amharic": "ለአጭር እረፍት ወይም ለስልክ ጥሪ የአደጋ ጊዜ ማቆሚያው ላይ አቆማለሁ።",
+            "is_correct": false,
+            "audio_filename": "answer_637_q2_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "በጤና ምክንያት ጉዞን መቀጠል ሲያቅት መጠቀም።",
-            "is_correct": false
+            "text_amharic": "የአደጋ ጊዜ ማቆሚያውን የምጠቀመው የቴክኒክ ብልሽት ሲገጥመኝ ወይም በጤና ምክንያት ጉዞዬን መቀጠል ሳልችል ብቻ ነው።",
+            "is_correct": true,
+            "audio_filename": "answer_637_q2_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "ሌሎች አደጋ ላይ ያሉ ተሽከርካሪዎችን ለመርዳት መጠቀም።",
-            "is_correct": false
+            "text_amharic": "ፍጥነቴን ቀንሼ ሌሎች ተሽከርካሪዎች ከማቆሚያው እንዲቀላቀሉ እፈቅዳለሁ።",
+            "is_correct": false,
+            "audio_filename": "answer_637_q2_D.mp3"
           }
-        ],
-        "explanation_correct_amharic": "ትክክል! ጥሩ ነው። የድንገተኛ ጊዜ ማቆሚያው ለከባድ ድንገተኛ አደጋዎች ብቻ ታስቦ የተሰራ ሲሆን ለስልክ ጥሪ ወይም ለእረፍት መጠቀም የሌሎችን ደህንነት አደጋ ላይ ሊጥል ይችላል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በቴክኒክ ብልሽት ወይም በጤና ምክንያት ማቆም የድንገተኛ ጊዜ ማቆሚያው ዋና እና ትክክለኛ ዓላማ ነው። ሌሎች ተሽከርካሪዎችን መርዳትም ሰብአዊነት ነው።",
-        "explanation_correct_audio": "637_q2_correct.mp3",
-        "explanation_wrong_audio": "637_q2_wrong.mp3"
+        ]
       },
       {
         "id": "637_q3",
-        "question_amharic": "በድንገተኛ ማቆሚያው ውስጥ ከማቆም ይልቅ በመንገዱ ዳር ላይ መቆም ምን አደጋ ያጋልጣል?",
+        "question_amharic": "የአደጋ ጊዜ ማቆሚያን ያለአግባብ መጠቀም ዋናው አደጋ ምንድነው?",
         "question_audio": "637_q3_question.mp3",
+        "explanation_correct_amharic": "ጎሽ። የአደጋ ጊዜ ማቆሚያዎችን ያለአግባብ መጠቀም በእውነተኛ አደጋ ውስጥ ያሉ ተሽከርካሪዎች ደህንነቱ የተጠበቀ መጠጊያ እንዳያገኙ ያደርጋል፣ ይህም ለአደጋ ያጋልጣቸዋል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በእውነተኛ አደጋ ውስጥ ያለ ተሽከርካሪ ማቆሚያውን እንዳይጠቀም መከልከል እና ለአደጋ ማጋለጥ። ዋናው አደጋ የሌሎች አሽከርካሪዎች ደህንነት ነው።",
+        "explanation_correct_audio": "637_q3_correct.mp3",
+        "explanation_wrong_audio": "637_q3_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "ከድንገተኛ ማቆሚያው የበለጠ ደህንነቱ የተጠበቀ ነው።",
-            "is_correct": false
+            "text_amharic": "የአደጋ ጊዜ ተሽከርካሪዎችን እንቅስቃሴ ማዘግየት።",
+            "is_correct": false,
+            "audio_filename": "answer_637_q3_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "ለአጭር ጊዜ ማቆሚያዎች ይፈቀዳል እና ምንም አደጋ የለውም።",
-            "is_correct": false
+            "text_amharic": "ህገወጥ አጠቃቀም ከፍተኛ የገንዘብ ቅጣት ያስከትላል።",
+            "is_correct": false,
+            "audio_filename": "answer_637_q3_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "በከፍተኛ ፍጥነት በሚያልፉ መኪኖች የመመታት አደጋ ያጋልጣል እንዲሁም ለሌሎች አሽከርካሪዎች አደገኛ ሁኔታ ይፈጥራል።",
-            "is_correct": true
+            "text_amharic": "አስፈላጊ የሆነ የመንገድ መስመር መዝጋት።",
+            "is_correct": false,
+            "audio_filename": "answer_637_q3_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "ለሌሎች አሽከርካሪዎች አደገኛ አይደለም ምክንያቱም እነሱም ማየት ይችላሉ።",
-            "is_correct": false
+            "text_amharic": "በእውነተኛ አደጋ ውስጥ ያለ ተሽከርካሪ ማቆሚያውን እንዳይጠቀም መከልከል እና ለአደጋ ማጋለጥ።",
+            "is_correct": true,
+            "audio_filename": "answer_637_q3_D.mp3"
           }
-        ],
-        "explanation_correct_amharic": "አሪፍ! ምልክቱ በመንገዱ ዳር መቆም በከፍተኛ ፍጥነት በሚያልፉ መኪኖች የመመታት ከፍተኛ አደጋ አለው። በተጨማሪም የቆመ መኪና በማይጠብቁ ሌሎች አሽከርካሪዎች ላይ ያልተጠበቀ እና አደገኛ ሁኔታ ይፈጥራል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በመንገዱ ዳር መቆም እጅግ አደገኛ ሲሆን በህግም የተከለከለ ነው። ደህንነቱ የተጠበቀ አይደለም፣ አይፈቀድም፣ እና ለሁሉም የመንገድ ተጠቃሚዎች አደጋ ያመጣል።",
-        "explanation_correct_audio": "637_q3_correct.mp3",
-        "explanation_wrong_audio": "637_q3_wrong.mp3"
+        ]
       }
     ]
   },
@@ -20391,104 +20403,104 @@
     "questions": [
       {
         "id": "638_q1",
-        "question_amharic": "ይህ ሰማያዊ ምልክት ምን ያመለክታል?",
+        "question_amharic": "ይህ ምልክት ምን ማለት ነው?",
         "question_audio": "638_q1_question.mp3",
-        "explanation_correct_amharic": "ጎቨዝ። ይህ ምልክት አሽከርካሪዎች ተሳፋሪዎችን ለማውረድ ወይም ለመጫን ብቻ ለአጭር ጊዜ እንዲቆሙ ይፈቅዳል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ መምረጥ መኪናውን አላግባብ በማቆም የትራፊክ ህግን መጣስ እና ቅጣት ያስከትላል።",
+        "explanation_correct_amharic": "ትክክል፥ አቬት እውቀት። ይህ ምልክት ተሳፋሪዎችን ለማውረድ ወይም ለመጫን ለአጭር ጊዜ መቆም የሚፈቀድበትን ቦታ ያመለክታል። አሽከርካሪው ተሽከርካሪውን ትቶ መሄድ ወይም ለረጅም ጊዜ ማቆም የለበትም።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ተሳፋሪዎችን ለማውረድ ወይም ለመጫን ለአጭር ጊዜ መቆም የሚፈቀድበት ቦታ።",
         "explanation_correct_audio": "638_q1_correct.mp3",
         "explanation_wrong_audio": "638_q1_wrong.mp3",
         "answers": [
           {
+            "id": "A",
+            "text_amharic": "ተሳፋሪዎችን ለማውረድ ወይም ለመጫን ለአጭር ጊዜ መቆም የሚፈቀድበት ቦታ።",
+            "is_correct": true,
+            "audio_filename": "answer_638_q1_A.mp3"
+          },
+          {
+            "id": "B",
+            "text_amharic": "ለአጭር ጊዜ ማቆም የሚፈቀድበት ቦታ።",
+            "is_correct": false,
+            "audio_filename": "answer_638_q1_B.mp3"
+          },
+          {
             "id": "C",
-            "text_amharic": "ይህ ለታክሲዎች ብቻ የተዘጋጀ የመቆሚያ ቦታ ነው።",
+            "text_amharic": "መቆም የተከለከለበት ቦታ።",
             "is_correct": false,
             "audio_filename": "answer_638_q1_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "በዚህ ቦታ መቆምም ሆነ ማቆም ፈጽሞ የተከለከለ ነው።",
+            "text_amharic": "ታክሲዎች ተሳፋሪዎችን የሚጭኑበት ልዩ ቦታ።",
             "is_correct": false,
             "audio_filename": "answer_638_q1_D.mp3"
-          },
-          {
-            "id": "A",
-            "text_amharic": "መኪናዎን ለረጅም ሰዓት አቁመው መሄድ የሚችሉበት ቦታ ነው።",
-            "is_correct": false,
-            "audio_filename": "answer_638_q1_A.mp3"
-          },
-          {
-            "id": "B",
-            "text_amharic": "ተሳፋሪዎችን ለማውረድ ወይም ለመጫን ለአጭር ጊዜ መቆም የሚፈቀድበት ቦታ ነው።",
-            "is_correct": true,
-            "audio_filename": "answer_638_q1_B.mp3"
           }
         ]
       },
       {
         "id": "638_q2",
-        "question_amharic": "ይህንን ምልክት ሲያዩ አሽከርካሪው ምን ማድረግ አለበት?",
+        "question_amharic": "በዚህ ምልክት መሰረት እንዴት ይነዳሉ?",
         "question_audio": "638_q2_question.mp3",
-        "explanation_correct_amharic": "በጣም ጥሩ። የምልክቱ ዓላማ ተሳፋሪዎች በአስተማማኝ ሁኔታ እንዲወርዱ ወይም እንዲሳፈሩ መፍቀድ ሲሆን፣ መኪናውን ትቶ መሄድ ግን አይፈቀድም።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በተሳሳተ መንገድ መቆም ወይም ማቆም የትራፊክ ፍሰትን ሊያስተጓጉል እና የትራፊክ ህግን በመጣስ ቅጣት ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "ጎሽ። በዚህ ምልክት በተመለከተው ቦታ ላይ ተሳፋሪዎችን ለማውረድ ወይም ለመጫን አስፈላጊውን ጊዜ ብቻ መቆም አለብዎት፣ ተሽከርካሪውን ሳይለቁ።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ተሳፋሪዎችን ለማውረድ ወይም ለመጫን አስፈላጊውን ጊዜ ብቻ አቆማለሁ፣ ተሽከርካሪውን ሳልለቅ።",
         "explanation_correct_audio": "638_q2_correct.mp3",
         "explanation_wrong_audio": "638_q2_wrong.mp3",
         "answers": [
           {
-            "id": "B",
-            "text_amharic": "ተሳፋሪዎችን ለማውረድ ወይም ለመጫን የሚያስፈልገውን አጭር ጊዜ ብቻ መቆም አለበት።",
-            "is_correct": true,
-            "audio_filename": "answer_638_q2_B.mp3"
-          },
-          {
-            "id": "D",
-            "text_amharic": "ተሳፋሪዎች እንዲመጡ ለማመልከት ያለማቋረጥ ቀንድ መነፋት አለበት።",
-            "is_correct": false,
-            "audio_filename": "answer_638_q2_D.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "መኪናውን አቁሞ ለረጅም ጊዜ ከቦታው መራቅ አለበት።",
+            "text_amharic": "ለአጭር ጊዜ አቁሜ ተሽከርካሪውን ትቼ መሄድ እችላለሁ።",
             "is_correct": false,
             "audio_filename": "answer_638_q2_A.mp3"
           },
           {
+            "id": "B",
+            "text_amharic": "ተሳፋሪዎችን ለማውረድ ወይም ለመጫን አስፈላጊውን ጊዜ ብቻ አቆማለሁ፣ ተሽከርካሪውን ሳልለቅ።",
+            "is_correct": true,
+            "audio_filename": "answer_638_q2_B.mp3"
+          },
+          {
             "id": "C",
-            "text_amharic": "በዚህ ቦታ ላይ በፍጥነት ማሽከርከር አለበት ምክንያቱም የመኪና ማቆሚያ የለም።",
+            "text_amharic": "በተሽከርካሪው ውስጥ እስካለሁ ድረስ ለረጅም ጊዜ መቆም እችላለሁ።",
             "is_correct": false,
             "audio_filename": "answer_638_q2_C.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "በፍጹም ማቆም የለብኝም።",
+            "is_correct": false,
+            "audio_filename": "answer_638_q2_D.mp3"
           }
         ]
       },
       {
         "id": "638_q3",
-        "question_amharic": "በዚህ ምልክት በተመለከተው ቦታ ላይ መኪናን ለረጅም ጊዜ ማቆም ምን የሚያስከትል ውጤት አለው?",
+        "question_amharic": "በዚህ ምልክት በተመለከተው ቦታ ላይ ከሚከተሉት ድርጊቶች ውስጥ የትኛው እንደ ጥሰት ይቆጠራል?",
         "question_audio": "638_q3_question.mp3",
-        "explanation_correct_amharic": "ጎሽሽ። ይህ ቦታ ለአጭር ጊዜ ተሳፋሪዎችን ለማውረድ ወይም ለመጫን ብቻ የተፈቀደ በመሆኑ፣ ለረጅም ጊዜ ማቆም የህግ ጥሰት ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የትራፊክ ህግን ችላ ማለት የትራፊክ ፍሰትን ከማስተጓጎል በተጨማሪ የገንዘብ ቅጣት እና ሌሎች ህጋዊ እርምጃዎችን ያስከትላል።",
+        "explanation_correct_amharic": "እንድያ ነው። በዚህ ምልክት በተመለከተው ቦታ ላይ ተሽከርካሪውን ትቶ መሄድ ወይም ለረጅም ጊዜ ማቆም የተከለከለ ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ተሽከርካሪውን ትቶ መሄድ ወይም ለረጅም ጊዜ ማቆም።",
         "explanation_correct_audio": "638_q3_correct.mp3",
         "explanation_wrong_audio": "638_q3_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "ምንም ችግር የለውም፣ ምክንያቱም ነጻ የመኪና ማቆሚያ ቦታ ነው።",
+            "text_amharic": "ተሳፋሪ ለመጫን ለአጭር ጊዜ መቆም።",
             "is_correct": false,
             "audio_filename": "answer_638_q3_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "የትራፊክ ህግን በመጣስ ቅጣት ይጣልብዎታል።",
-            "is_correct": true,
+            "text_amharic": "ተሳፋሪ ለማውረድ ለአጭር ጊዜ መቆም።",
+            "is_correct": false,
             "audio_filename": "answer_638_q3_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "መኪናዎ ወዲያውኑ ያለ ማስጠንቀቂያ ይጎተታል።",
-            "is_correct": false,
+            "text_amharic": "ተሽከርካሪውን ትቶ መሄድ ወይም ለረጅም ጊዜ ማቆም።",
+            "is_correct": true,
             "audio_filename": "answer_638_q3_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "ሌሎች አሽከርካሪዎች ቦታ ስለለቀቁላቸው ያመሰግኑዎታል።",
+            "text_amharic": "በተሽከርካሪው ውስጥ ሆኖ ለአጭር ጊዜ መቆም።",
             "is_correct": false,
             "audio_filename": "answer_638_q3_D.mp3"
           }
@@ -20510,106 +20522,106 @@
     "questions": [
       {
         "id": "639_q1",
-        "question_amharic": "ይህ ሰማያዊ ምልክት ምን ያመለክታል?",
+        "question_amharic": "ይህ ምልክት ምን ያዝዛል?",
         "question_audio": "639_q1_question.mp3",
-        "explanation_correct_amharic": "ዋውው በጣም ጥሩ። ምልክቱ እግረኞች በተለይም ተማሪዎች የሚጠቀሙበትን መንገድ ስለሚያሳይ አሽከርካሪዎች ጥንቃቄ ማድረግ አለባቸው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ መምረጥ እግረኞችን በተለይም ህጻናትን ለአደጋ በማጋለጥ ከባድ ጉዳት ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "ጎሽ። ይህ ምልክት ለእግረኞች በተለይም ለህፃናት ወይም ለተማሪዎች የተዘጋጀ ልዩ መንገድ መሆኑን ያመለክታል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህ ምልክት ለእግረኞች በተለይም ለህፃናት ወይም ለተማሪዎች የተዘጋጀ መንገድ መሆኑን ያመለክታል።",
         "explanation_correct_audio": "639_q1_correct.mp3",
         "explanation_wrong_audio": "639_q1_wrong.mp3",
         "answers": [
           {
-            "id": "C",
-            "text_amharic": "ይህ ምልክት ለትምህርት ቤት አውቶቡሶች ማቆሚያ ቦታ መሆኑን ያሳያል።",
-            "is_correct": false,
-            "audio_filename": "answer_639_q1_C.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "ይህ ምልክት ተሽከርካሪዎች ብቻ የሚሄዱበት መንገድ መሆኑን ያሳያል።",
+            "text_amharic": "ለህፃናት ብቻ የተዘጋጀ የመጫወቻ ስፍራ ነው።",
             "is_correct": false,
             "audio_filename": "answer_639_q1_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "ይህ ምልክት እግረኞች በተለይም ልጆች የሚሄዱበት ልዩ መንገድ መሆኑን ያመለክታል።",
-            "is_correct": true,
+            "text_amharic": "እግረኞች እንዳያልፉ የተከለከለ አካባቢ ነው።",
+            "is_correct": false,
             "audio_filename": "answer_639_q1_B.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "ይህ ምልክት የግንባታ ቦታ ሲሆን ሰራተኞች የሚገኙበት መሆኑን ያሳያል።",
+            "id": "C",
+            "text_amharic": "አቅራቢያ ያለ የእግረኛ መሻገሪያ ነው።",
             "is_correct": false,
+            "audio_filename": "answer_639_q1_C.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ለእግረኞች በተለይም ለህፃናት ወይም ለተማሪዎች የተዘጋጀ መንገድ ነው።",
+            "is_correct": true,
             "audio_filename": "answer_639_q1_D.mp3"
           }
         ]
       },
       {
         "id": "639_q2",
-        "question_amharic": "አሽከርካሪ ይህንን ምልክት ሲያይ ምን ማድረግ አለበት?",
+        "question_amharic": "ይህን ምልክት ሲያዩ እንዴት መንዳት አለብዎት?",
         "question_audio": "639_q2_question.mp3",
-        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። በእግረኛ መንገድ ላይ ሁልጊዜ ፍጥነትን መቀነስ እና ለእግረኞች ቅድሚያ መስጠት የህግ ግዴታ ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ትክክለኛውን እርምጃ አለመውሰድ አደጋ ሊያስከትል እና ለእግረኞች ከባድ ጉዳት ሊያደርስ ይችላል።",
+        "explanation_correct_amharic": "እንድያ ነው። ይህ ምልክት በሚታይበት ጊዜ ፍጥነትዎን መቀነስ፣ ከፍተኛ ጥንቃቄ ማድረግ እና ለእግረኞች ቅድሚያ መስጠት አለብዎት።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ፍጥነትዎን መቀነስ፣ ከፍተኛ ጥንቃቄ ማድረግ እና ለእግረኞች ቅድሚያ መስጠት አለብዎት።",
         "explanation_correct_audio": "639_q2_correct.mp3",
         "explanation_wrong_audio": "639_q2_wrong.mp3",
         "answers": [
           {
+            "id": "A",
+            "text_amharic": "ፍጥነትዎን መቀነስ፣ ከፍተኛ ጥንቃቄ ማድረግ እና ለእግረኞች ቅድሚያ መስጠት አለብዎት።",
+            "is_correct": true,
+            "audio_filename": "answer_639_q2_A.mp3"
+          },
+          {
+            "id": "B",
+            "text_amharic": "በተለመደው ፍጥነት መንዳትዎን መቀጠል፣ ነገር ግን በድንገት ለማቆም ዝግጁ መሆን።",
+            "is_correct": false,
+            "audio_filename": "answer_639_q2_B.mp3"
+          },
+          {
             "id": "C",
-            "text_amharic": "እግረኞች በፍጥነት እንዲሄዱ ለማስጠንቀቅ ጮክ ብሎ መለከት መምታት አለበት።",
+            "text_amharic": "እግረኞችን ከመንገድ እንዲርቁ ለማስጠንቀቅ መለከት መምታት።",
             "is_correct": false,
             "audio_filename": "answer_639_q2_C.mp3"
           },
           {
-            "id": "A",
-            "text_amharic": "አካባቢውን በፍጥነት ለማለፍ ፍጥነቱን መጨመር አለበት።",
-            "is_correct": false,
-            "audio_filename": "answer_639_q2_A.mp3"
-          },
-          {
             "id": "D",
-            "text_amharic": "ሙሉ በሙሉ ቆሞ ሁሉም እግረኞች አካባቢውን እስኪለቁ ድረስ መጠበቅ አለበት።",
+            "text_amharic": "አካባቢውን በፍጥነት ለማለፍ ፍጥነት መጨመር።",
             "is_correct": false,
             "audio_filename": "answer_639_q2_D.mp3"
-          },
-          {
-            "id": "B",
-            "text_amharic": "ፍጥነቱን መቀነስ፣ ከፍተኛ ጥንቃቄ ማድረግ እና ለእግረኞች ቅድሚያ መስጠት አለበት።",
-            "is_correct": true,
-            "audio_filename": "answer_639_q2_B.mp3"
           }
         ]
       },
       {
         "id": "639_q3",
-        "question_amharic": "ይህንን ምልክት ችላ ማለት የሚያስከትለው ዋና አደጋ ምንድን ነው?",
+        "question_amharic": "ይህ ምልክት የት ሊገኝ ይችላል?",
         "question_audio": "639_q3_question.mp3",
-        "explanation_correct_amharic": "እሰይ። አቤት እውቀት! የእግረኛ መንገድ ምልክትን ችላ ማለት እግረኞችን ለአደጋ በማጋለጥ ለከፋ አደጋ ሊዳርግ ይችላል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የምልክቱን ትርጉም አለመረዳት የሰዎችን ህይወት አደጋ ላይ የሚጥል ከባድ ስህተት ነው።",
+        "explanation_correct_amharic": "አቬት ችሎታ፥ ትክክል። ይህ ምልክት ብዙውን ጊዜ በትምህርት ቤቶች ወይም በመኖሪያ አካባቢዎች አቅራቢያ ይገኛል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህ ምልክት ብዙውን ጊዜ በትምህርት ቤቶች ወይም በመኖሪያ አካባቢዎች አቅራቢያ ይገኛል።",
         "explanation_correct_audio": "639_q3_correct.mp3",
         "explanation_wrong_audio": "639_q3_wrong.mp3",
         "answers": [
           {
-            "id": "B",
-            "text_amharic": "እግረኞችን በተለይም ህጻናትን የሚያካትት አደጋ ማድረስ።",
-            "is_correct": true,
-            "audio_filename": "answer_639_q3_B.mp3"
-          },
-          {
-            "id": "D",
-            "text_amharic": "ወደሚቀጥለው መንገድ መታጠፊያውን ማጣት።",
-            "is_correct": false,
-            "audio_filename": "answer_639_q3_D.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "የትራፊክ መጨናነቅ ውስጥ መግባት።",
+            "text_amharic": "ወደ አውራ ጎዳና መግቢያ ላይ።",
             "is_correct": false,
             "audio_filename": "answer_639_q3_A.mp3"
           },
           {
+            "id": "B",
+            "text_amharic": "የትምህርት ቤቶች ወይም የመኖሪያ አካባቢዎች አቅራቢያ።",
+            "is_correct": true,
+            "audio_filename": "answer_639_q3_B.mp3"
+          },
+          {
             "id": "C",
-            "text_amharic": "ያለማሰብ ነዳጅ ማለቅ።",
+            "text_amharic": "በኢንዱስትሪ አካባቢዎች ብቻ።",
             "is_correct": false,
             "audio_filename": "answer_639_q3_C.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "የእግረኛ መንገድ ባለበት በማንኛውም ቦታ።",
+            "is_correct": false,
+            "audio_filename": "answer_639_q3_D.mp3"
           }
         ]
       }
@@ -20622,41 +20634,41 @@
     "image_filename": "640.png",
     "video_filename": null,
     "name_hebrew": "640",
-    "name_amharic": "ይህ ምልክት እግረኞች በዚህ መንገድ ላይ እንዲሄዱ እንደማይፈቀድ ያመለክታል።",
-    "explanation_amharic": "ይህ ምልክት እግረኞች (ልጆችን ጨምሮ) በዚህ መንገድ ላይ እንዲሄዱ እንደማይፈቀድ በግልጽ ያሳያል። አላማውም የእግረኞችን ደህንነት ለመጠበቅ እና የመንገድ ትራፊክ ፍሰትን ለማስጠበቅ ነው። አሽከርካሪዎች በዚህ መንገድ ላይ እግረኞች እንደማይኖሩ በመገመት መንዳት አለባቸው፣ ነገር ግን ሁልጊዜም ጥንቃቄ ማድረግ አለባቸው። ይህንን ህግ መጣስ እግረኞችን አደጋ ላይ ሊጥል እና የትራፊክ ቅጣት ሊያስከትል ይችላል።",
+    "name_amharic": "የህፃናት መራመጃ አካባቢ መጨረሻ — ምልክት 639ን የሚሽር",
+    "explanation_amharic": "ይህ ምልክት በምልክት 639 የተወሰነውን የልዩ አካባቢ መጨረሻ ያመለክታል። የምልክት 639ን መመሪያዎች ይሰርዛል እና መደበኛውን የመንዳት ህግጋት ይመልሳል። ከዚህ ምልክት በኋላ ለእግረኛ ህፃናት ልዩ ጥንቃቄ አያስፈልግም።",
     "audio_name_filename": "640_name.mp3",
     "audio_explanation_filename": "640_explanation.mp3",
     "questions": [
       {
         "id": "640_q1",
-        "question_amharic": "ይህ ሰማያዊ ምልክት ከጥቁር ሰያፍ መስመር ጋር ምን ያሳያል?",
+        "question_amharic": "ይህ የመንገድ ምልክት ምን ማለት ነው?",
         "question_audio": "640_q1_question.mp3",
-        "explanation_correct_amharic": "ትክክል! ይህ ምልክት ምልክቱ እግረኞች በመንገዱ ላይ እንዳይሄዱ የሚከለክል ሲሆን ለደህንነታቸው ሲባል ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ መምረጥ እግረኞችን አደጋ ላይ ሊጥል እና የትራፊክ ህግን መጣስ ነው።",
+        "explanation_correct_amharic": "አቬት ችሎታ፥ ትክክል። ትክክለኛው መልስ! ይህ ምልክት የህፃናት መራመጃ አካባቢ ማብቃቱን ያሳያል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የህፃናት መራመጃ አካባቢ መጨረሻ ነው። ይህ ምልክት የአካባቢውን ማብቂያ እንጂ መጀመሪያውን አያሳይም።",
         "explanation_correct_audio": "640_q1_correct.mp3",
         "explanation_wrong_audio": "640_q1_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "እግረኞች በዚህ መንገድ ላይ በነጻነት መሄድ እንደሚችሉ ያሳያል።",
+            "text_amharic": "ህፃናት ወደዚህ አካባቢ እንዳይገቡ የተከለከለ ነው።",
             "is_correct": false,
             "audio_filename": "answer_640_q1_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "እግረኞች በዚህ መንገድ ላይ እንዲሄዱ እንደማይፈቀድ ያመለክታል።",
-            "is_correct": true,
+            "text_amharic": "የህፃናት መራመጃ አካባቢ መጀመሪያ።",
+            "is_correct": false,
             "audio_filename": "answer_640_q1_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "ልጆች ብቻ በዚህ መንገድ ላይ መሄድ እንደማይችሉ ያሳያል።",
-            "is_correct": false,
+            "text_amharic": "የህፃናት መራመጃ አካባቢ መጨረሻ።",
+            "is_correct": true,
             "audio_filename": "answer_640_q1_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "አሽከርካሪዎች እግረኞችን እንዲያልፉ የሚያስችል ቦታ ነው።",
+            "text_amharic": "ከፊት ለፊት የህፃናት መሻገሪያ አለ።",
             "is_correct": false,
             "audio_filename": "answer_640_q1_D.mp3"
           }
@@ -20664,71 +20676,71 @@
       },
       {
         "id": "640_q2",
-        "question_amharic": "ይህን ምልክት ያየ አሽከርካሪ ምን አይነት ጥንቃቄ ማድረግ አለበት?",
+        "question_amharic": "ይህን ምልክት ካለፉ በኋላ የመንገድ ህጎች ምን ይሆናሉ?",
         "question_audio": "640_q2_question.mp3",
-        "explanation_correct_amharic": "ትክክል! ጥሩ ነው። ምልክቱ እግረኞች የተከለከሉበት ቦታ በመሆኑ አሽከርካሪው እግረኞች እንደማይኖሩ በመገመት መንዳት አለበት።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ መምረጥ የመንገድ ህግን መጣስ እና አላስፈላጊ ግራ መጋባት ሊፈጥር ይችላል።",
+        "explanation_correct_amharic": "በጣም አሪፍ። ትክክለኛው መልስ! ይህ ምልክት የህፃናት አካባቢ ደንቦችን ስለሚሽር፣ መደበኛ የመንዳት ህጎች ተፈጻሚ ይሆናሉ።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ለእግረኛ ህፃናት ልዩ ጥንቃቄ ማድረግ አያስፈልግም፣ እና መደበኛ የመንዳት ህጎች ይመለሳሉ። ምልክቱ የልዩ ጥንቃቄ አስፈላጊነትን እንጂ የህፃናትን መከልከል አያመለክትም።",
         "explanation_correct_audio": "640_q2_correct.mp3",
         "explanation_wrong_audio": "640_q2_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "እግረኞች ሊኖሩ ስለሚችሉ ፍጥነቱን መቀነስ አለበት።",
+            "text_amharic": "የፍጥነት ገደቡ ያለገደብ ሊጨምር ይችላል።",
             "is_correct": false,
             "audio_filename": "answer_640_q2_A.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "መንገዱ ለእግረኞች ክፍት መሆኑን የሚያሳይ ምልክት ነው።",
-            "is_correct": false,
-            "audio_filename": "answer_640_q2_D.mp3"
-          },
-          {
             "id": "B",
-            "text_amharic": "እግረኞች በዚህ መንገድ ላይ እንደማይኖሩ በመገመት መንዳት አለበት፣ ግን ሁልጊዜም ጥንቃቄ ማድረግ አለበት።",
-            "is_correct": true,
+            "text_amharic": "ለእግረኛ ህፃናት ልዩ ጥንቃቄ ማድረጉን መቀጠል ያስፈልጋል።",
+            "is_correct": false,
             "audio_filename": "answer_640_q2_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "ለእግረኞች ቅድሚያ ለመስጠት መኪናውን ማቆም አለበት።",
+            "text_amharic": "ህፃናት ወደዚህ አካባቢ እንዳይገቡ የተከለከሉ ናቸው።",
             "is_correct": false,
             "audio_filename": "answer_640_q2_C.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ለእግረኛ ህፃናት ልዩ ጥንቃቄ ማድረግ አያስፈልግም፣ እና መደበኛ የመንዳት ህጎች ይመለሳሉ።",
+            "is_correct": true,
+            "audio_filename": "answer_640_q2_D.mp3"
           }
         ]
       },
       {
         "id": "640_q3",
-        "question_amharic": "አሽከርካሪ ይህንን 'እግረኞች የተከለከሉ' ምልክት ችላ ቢል ምን ሊከሰት ይችላል?",
+        "question_amharic": "በምልክት 639 እና በምልክት 640 መካከል ያለው ግንኙነት ምንድን ነው?",
         "question_audio": "640_q3_question.mp3",
-        "explanation_correct_amharic": "አሪፍ! ምልክቱ ምልክቱን ችላ ማለት ህግን መጣስ ሲሆን፣ ምንም እንኳን እግረኞች ባይኖሩም ቅጣት ያስከትላል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የመንገድ ህጎችን ችላ ማለት የትራፊክ ቅጣት እና አደጋ ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "ትክክል። ትክክለኛው መልስ! ምልክት 640 የልዩ የህፃናት አካባቢ ማብቂያ ሲሆን፣ ምልክት 639 ደግሞ መጀመሪያውን ያመለክታል። ስለዚህ 640 የ639ን መመሪያዎች ይሰርዛል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ምልክት 640 ምልክት 639ን ይሰርዛል። ሁለቱ ምልክቶች ተቃራኒ ትርጉም ያላቸው እና አንዱ የሌላውን ተጽእኖ የሚያስቆም ነው።",
         "explanation_correct_audio": "640_q3_correct.mp3",
         "explanation_wrong_audio": "640_q3_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "ምንም አይነት ችግር አይፈጠርም ምክንያቱም እግረኞች እዚያ አይኖሩም።",
-            "is_correct": false,
+            "text_amharic": "ምልክት 640 ምልክት 639ን ይሰርዛል።",
+            "is_correct": true,
             "audio_filename": "answer_640_q3_A.mp3"
           },
           {
+            "id": "B",
+            "text_amharic": "ምልክት 639 ምልክት 640ን ይሰርዛል።",
+            "is_correct": false,
+            "audio_filename": "answer_640_q3_B.mp3"
+          },
+          {
             "id": "C",
-            "text_amharic": "መንገዱን ለሌሎች ተሽከርካሪዎች በነጻነት እንዲጠቀም ያስችለዋል።",
+            "text_amharic": "በሁለቱ ምልክቶች መካከል ምንም ግንኙነት የለም።",
             "is_correct": false,
             "audio_filename": "answer_640_q3_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "ሌሎች አሽከርካሪዎች በፍጥነት እንዲያልፉ ይረዳል።",
+            "text_amharic": "ሁለቱ ምልክቶች ተመሳሳይ ትርጉም አላቸው።",
             "is_correct": false,
             "audio_filename": "answer_640_q3_D.mp3"
-          },
-          {
-            "id": "B",
-            "text_amharic": "እግረኞች ባይኖሩም ህጉን በመጣስ የትራፊክ ቅጣት ሊጣልበት ይችላል።",
-            "is_correct": true,
-            "audio_filename": "answer_640_q3_B.mp3"
           }
         ]
       }
