@@ -11001,97 +11001,109 @@
     "audio_explanation_filename": "sign_231_explanation.mp3",
     "questions": [
       {
-        "id": "Q_SIGN_231_001",
-        "question_amharic": "ይህን የትራፊክ ምልክት ስታይ ምን ማድረግ ይገባል?",
-        "question_audio": "q_231_001.mp3",
+        "id": "231_q1",
+        "question_amharic": "ይህ ምልክት ምን ማለት ነው?",
+        "question_audio": "231_q1_question.mp3",
+        "explanation_correct_amharic": "እሰይ የኔ ጎቨዝ። ይህ ምልክት ለሕዝብ ማመላለሻ (አውቶቡሶች) እና ለአራት ወይም ከዚያ በላይ ተሳፋሪዎች ላሏቸው መኪናዎች ብቻ የተፈቀደው የክፍያ መንገድ ማብቃቱን ያሳያል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህ ምልክት ለሕዝብ ማመላለሻ (አውቶቡሶች) እና ለአራት ወይም ከዚያ በላይ ተሳፋሪዎች ላሏቸው መኪናዎች ብቻ የተፈቀደው የክፍያ መንገድ ማብቃቱን ያሳያል።",
+        "explanation_correct_audio": "231_q1_correct.mp3",
+        "explanation_wrong_audio": "231_q1_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "አሁንም በክፍያ መንገድ ላይ እንዳለ በማሰብ ክፍያ መፈጸም መቀጠል።",
-            "is_correct": false
+            "text_amharic": "ለሕዝብ ማመላለሻ ብቻ የተመደበ መስመር።",
+            "is_correct": false,
+            "audio_filename": "answer_231_q1_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "ፍጥነትን መጨመር እና ሌሎች የመንገድ ህጎችን ችላ ማለት።",
-            "is_correct": false
+            "text_amharic": "ለሕዝብ ማመላለሻ (አውቶቡሶች) እና ለአራት ወይም ከዚያ በላይ ተሳፋሪዎች ላሏቸው ተሽከርካሪዎች የተፈቀደው የክፍያ መንገድ መጀመሪያ።",
+            "is_correct": false,
+            "audio_filename": "answer_231_q1_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "ለሕዝብ ማመላለሻ እና ለአራት ወይም ከዚያ በላይ ተሳፋሪዎች የተፈቀደው የክፍያ መንገድ ማብቃቱን ተረድቶ እንደአስፈላጊነቱ ማሽከርከር።",
-            "is_correct": true
+            "text_amharic": "ለሁሉም የተሽከርካሪ ዓይነቶች የተለመደ የክፍያ መንገድ።",
+            "is_correct": false,
+            "audio_filename": "answer_231_q1_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "ወዲያውኑ ወደ ሌላ መንገድ መቀየር።",
-            "is_correct": false
+            "text_amharic": "ለሕዝብ ማመላለሻ (አውቶቡሶች) እና ለአራት ወይም ከዚያ በላይ ተሳፋሪዎች ላሏቸው ተሽከርካሪዎች የተፈቀደው የክፍያ መንገድ ማብቂያ።",
+            "is_correct": true,
+            "audio_filename": "answer_231_q1_D.mp3"
           }
-        ],
-        "explanation_correct_amharic": "ትክክል! ይህ ምልክት የተወሰነው የክፍያ መንገድ ማብቃቱን ያሳያል፣ ስለዚህ አሽከርካሪው የመንገዱን ሁኔታ ተረድቶ ማሽከርከር አለበት።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ለሕዝብ ማመላለሻ እና ለአራት ወይም ከዚያ በላይ ተሳፋሪዎች የተፈቀደው የክፍያ መንገድ ማብቃቱን ተረድቶ እንደአስፈላጊነቱ ማሽከርከር። ምልክቱ የክፍያ መንገዱ ማብቃቱን ስለሚያሳይ ክፍያ መፈጸም መቀጠል አያስፈልግም።",
-        "explanation_correct_audio": "q_231_001_correct.mp3",
-        "explanation_wrong_audio": "q_231_001_wrong.mp3"
+        ]
       },
       {
-        "id": "Q_SIGN_231_002",
-        "question_amharic": "ይህ ምልክት በየትኛው የምልክት ምድብ ውስጥ ይመደባል?",
-        "question_audio": "q_231_002.mp3",
+        "id": "231_q2",
+        "question_amharic": "በዚህ ምልክት መሰረት እንዴት መንዳት አለብዎት?",
+        "question_audio": "231_q2_question.mp3",
+        "explanation_correct_amharic": "ትክክል፥ አቬት እውቀት። ይህ ምልክት ለሕዝብ ማመላለሻ (አውቶቡሶች) እና ለአራት ወይም ከዚያ በላይ ተሳፋሪዎች ላሏቸው መኪናዎች ብቻ የተፈቀደው የክፍያ መንገድ ማብቃቱን ያሳያል። አሽከርካሪው ይህንን ምልክት ካየ በኋላ በመንገዱ ላይ ለሚደረጉ ለውጦች ትኩረት መስጠት እና እንደአስፈላጊነቱ ማሽከርከር አለበት።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህ ምልክት ለሕዝብ ማመላለሻ (አውቶቡሶች) እና ለአራት ወይም ከዚያ በላይ ተሳፋሪዎች ላሏቸው መኪናዎች ብቻ የተፈቀደው የክፍያ መንገድ ማብቃቱን ያሳያል። አሽከርካሪው ይህንን ምልክት ካየ በኋላ በመንገዱ ላይ ለሚደረጉ ለውጦች ትኩረት መስጠት እና እንደአስፈላጊነቱ ማሽከርከር አለበት።",
+        "explanation_correct_audio": "231_q2_correct.mp3",
+        "explanation_wrong_audio": "231_q2_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "የማስጠንቀቂያ ምልክቶች።",
-            "is_correct": false
+            "text_amharic": "ልዩ የመንገድ ሁኔታዎች ስላበቁ፣ በትራፊክ ደንቦች ላይ ለሚደረጉ ለውጦች ትኩረት እሰጣለሁ እና በዚህ መሰረት እነዳለሁ።",
+            "is_correct": true,
+            "audio_filename": "answer_231_q2_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "የቅድሚያ መብት ምልክቶች።",
-            "is_correct": false
+            "text_amharic": "ለሕዝብ ማመላለሻ እና ለአራት ወይም ከዚያ በላይ ተሳፋሪዎች በተመደበው የክፍያ መንገድ ላይ እንዳለሁ አድርጌ መንዳት እቀጥላለሁ።",
+            "is_correct": false,
+            "audio_filename": "answer_231_q2_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "የመረጃ ምልክቶች።",
-            "is_correct": false
+            "text_amharic": "ለቀጣዩ ጉዞ የክፍያ ክፍያ ለመፈጸም እዘጋጃለሁ።",
+            "is_correct": false,
+            "audio_filename": "answer_231_q2_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "የትእዛዝ ምልክቶች።",
-            "is_correct": true
+            "text_amharic": "በዚህ መስመር ላይ አውቶቡሶች ብቻ እንዲቀጥሉ ተፈቅዶላቸዋል።",
+            "is_correct": false,
+            "audio_filename": "answer_231_q2_D.mp3"
           }
-        ],
-        "explanation_correct_amharic": "ትክክል! ይህ ምልክት የተወሰነ የመንገድ ህግ ወይም ገደብ ማብቃቱን ስለሚያመለክት የትእዛዝ ምልክት ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የትእዛዝ ምልክቶች። ይህ ምልክት የተወሰነ የመንገድ ህግ ወይም ገደብ ማብቃቱን ስለሚያመለክት የትእዛዝ ምልክት ነው።",
-        "explanation_correct_audio": "q_231_002_correct.mp3",
-        "explanation_wrong_audio": "q_231_002_wrong.mp3"
+        ]
       },
       {
-        "id": "Q_SIGN_231_003",
-        "question_amharic": "ይህ የትራፊክ ምልክት ምንን ያመለክታል?",
-        "question_audio": "q_231_003.mp3",
+        "id": "231_q3",
+        "question_amharic": "ከዚህ ምልክት በኋላ ስለ መንገዱ ምን እውነት ነው?",
+        "question_audio": "231_q3_question.mp3",
+        "explanation_correct_amharic": "ጎሽ። ይህ ምልክት ለሕዝብ ማመላለሻ (አውቶቡሶች) እና ለአራት ወይም ከዚያ በላይ ተሳፋሪዎች ላሏቸው መኪናዎች ብቻ የተፈቀደው የክፍያ መንገድ ማብቃቱን ያሳያል። ስለዚህ፣ ከዚህ ምልክት በኋላ ልዩ ገደቦች እና ፈቃዶች አይተገበሩም።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህ ምልክት ለሕዝብ ማመላለሻ (አውቶቡሶች) እና ለአራት ወይም ከዚያ በላይ ተሳፋሪዎች ላሏቸው መኪናዎች ብቻ የተፈቀደው የክፍያ መንገድ ማብቃቱን ያሳያል። ስለዚህ፣ ከዚህ ምልክት በኋላ ልዩ ገደቦች እና ፈቃዶች አይተገበሩም።",
+        "explanation_correct_audio": "231_q3_correct.mp3",
+        "explanation_wrong_audio": "231_q3_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "ለሕዝብ ማመላለሻ እና ለአራት ወይም ከዚያ በላይ ተሳፋሪዎች የተፈቀደው የክፍያ መንገድ ማብቃቱን።",
-            "is_correct": true
+            "text_amharic": "የክፍያ መንገዱ ይቀጥላል፣ ነገር ግን አሁን ለሁሉም የተሽከርካሪ ዓይነቶች ክፍት ነው።",
+            "is_correct": false,
+            "audio_filename": "answer_231_q3_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "የአውቶቡስ መስመር መጀመሩን።",
-            "is_correct": false
+            "text_amharic": "ለሕዝብ ማመላለሻ (አውቶቡሶች) እና ለአራት ወይም ከዚያ በላይ ተሳፋሪዎች ላሏቸው ተሽከርካሪዎች የተከፈለው መንገድ ልዩ ገደቦች እና ፈቃዶች ከእንግዲህ አይተገበሩም።",
+            "is_correct": true,
+            "audio_filename": "answer_231_q3_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "በዚህ መንገድ ላይ መኪና ማቆም የተከለከለ መሆኑን።",
-            "is_correct": false
+            "text_amharic": "መንገዱ ከክፍያ ነፃ ይሆናል፣ ነገር ግን ለሕዝብ ማመላለሻ ብቻ።",
+            "is_correct": false,
+            "audio_filename": "answer_231_q3_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "አዲስ የክፍያ መንገድ መጀመሩን።",
-            "is_correct": false
+            "text_amharic": "አሁን በዚህ መስመር ላይ ለመጓጓዣ ተሽከርካሪዎች ማቆም ተፈቅዷል።",
+            "is_correct": false,
+            "audio_filename": "answer_231_q3_D.mp3"
           }
-        ],
-        "explanation_correct_amharic": "ትክክል! በምልክቱ ላይ ያለው ሰያፍ መስመር የክፍያ መንገዱ ማብቃቱን ያመለክታል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ለሕዝብ ማመላለሻ እና ለአራት ወይም ከዚያ በላይ ተሳፋሪዎች የተፈቀደው የክፍያ መንገድ ማብቃቱን። ሰያፍ መስመሩ የማብቂያ ምልክት ነው።",
-        "explanation_correct_audio": "q_231_003_correct.mp3",
-        "explanation_wrong_audio": "q_231_003_wrong.mp3"
+        ]
       }
     ]
   },
