@@ -285,7 +285,7 @@ function buildQuestionsArray(signNumber, translatedQA, signIdx) {
         const prefixIdx = (parseInt(signNumber) + qIdx) % CORRECT_PREFIXES.length;
         const prefix = CORRECT_PREFIXES[prefixIdx];
         const stripped = tq.explanation_correct_amharic
-          .replace(/^(ትክክል!|አዎ!|ትክክል።|ጎሽ።)\s*/u, '')
+          .replace(/^(ትክክል!|አዎ!|እሰይ የኔ ጎቨዝ[።!]?|ትክክል፥ አቬት እውቀት[።!]?|ጎሽ[።!]?|እንድያ ነው[።!]?|አቬት ችሎታ፥ ትክክል[።!]?|በጣም አሪፍ[።!]?|ትክክል[።!]?)\s*/u, '')
           .trim();
         return `${prefix} ${stripped}`;
       })(),
