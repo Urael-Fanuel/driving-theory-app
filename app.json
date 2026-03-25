@@ -16,6 +16,7 @@
         "foregroundImage": "./assets/icons/adaptive-icon.png",
         "backgroundColor": "#1a1a2e"
       },
+      "allowBackup": false,
       "minSdkVersion": 26,
       "package": "com.drivingtheory.ethiopian",
       "permissions": [

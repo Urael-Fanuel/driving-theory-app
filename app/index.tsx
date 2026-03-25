@@ -23,7 +23,7 @@
  * On mount: auto-play welcome audio
  */
 
-import React, { useEffect, useRef } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import {
   View,
   Text,
@@ -33,27 +33,54 @@ import {
   Dimensions,
   SafeAreaView,
 } from 'react-native';
+
 import { useRouter } from 'expo-router';
 import * as Haptics from 'expo-haptics';
 import { Colors } from '../constants/colors';
 import { Typography } from '../constants/typography';
-import { useAudio } from '../hooks/useAudio';
+import { useAudio, playAndAwaitAudio } from '../hooks/useAudio';
 import { useEngine } from '../contexts/EngineContext';
+import DisclaimerModal from '../components/shared/DisclaimerModal';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
+
+// Module-level flag — persists across re-mounts within the same JS session
+let welcomeSequencePlayed = false;
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
 export default function EngineSelectionScreen() {
   const router        = useRouter();
-  const { setEngineType } = useEngine();
-  const { playAudio } = useAudio();
+  const { setEngineType, hasSeenDisclaimer, acceptDisclaimer, isLoading } = useEngine();
+  const { playAudio, stopAudio, pauseAudio, resumeAudio, audioState } = useAudio();
+  const [highlightedEngine, setHighlightedEngine] = useState<'A' | 'B' | null>(null);
+  const activeTokenRef = useRef<{ cancelled: boolean } | null>(null);
 
   // Entrance animations
   const titleAnim  = useRef(new Animated.Value(0)).current;
   const cardAAnim  = useRef(new Animated.Value(60)).current;
   const cardBAnim  = useRef(new Animated.Value(60)).current;
   const fadeAnim   = useRef(new Animated.Value(0)).current;
+
+  // Pulse animation for speaker buttons
+  const pulseAnim  = useRef(new Animated.Value(1)).current;
+
+  // Cancel sequence and stop audio when leaving screen
+  useEffect(() => {
+    return () => {
+      if (activeTokenRef.current) activeTokenRef.current.cancelled = true;
+      stopAudio().catch(() => {});
+    };
+  }, []);
+
+  useEffect(() => {
+    Animated.loop(
+      Animated.sequence([
+        Animated.timing(pulseAnim, { toValue: 1.18, duration: 700, useNativeDriver: true }),
+        Animated.timing(pulseAnim, { toValue: 1,    duration: 700, useNativeDriver: true }),
+      ])
+    ).start();
+  }, []);
 
   useEffect(() => {
     // Staggered entrance
@@ -67,13 +94,34 @@ export default function EngineSelectionScreen() {
       Animated.spring(cardBAnim, { toValue: 0, useNativeDriver: true, speed: 10 }),
     ]).start();
 
-    // Auto-play welcome audio
-    // "እንኳን ደህና መጡ! ድምጽ ወይም ፅሁፍ ይምረጡ"
-    playAudio('assets/audio/welcome_select_mode.mp3').catch(() => {});
+    // Auto-play sequence only on first visit after disclaimer (not on return visits)
+    if (!isLoading && hasSeenDisclaimer && !welcomeSequencePlayed) {
+      welcomeSequencePlayed = true;
+      runWelcomeSequence();
+    }
+  }, [isLoading, hasSeenDisclaimer]);
+
+  const runWelcomeSequence = useCallback(async () => {
+    const token = { cancelled: false };
+    activeTokenRef.current = token;
+    try {
+      await playAndAwaitAudio('assets/audio/welcome_select_mode.mp3', () => token.cancelled);
+      if (token.cancelled) return;
+      setHighlightedEngine('A');
+      await playAndAwaitAudio('assets/audio/explain_mode_a.mp3', () => token.cancelled);
+      if (token.cancelled) return;
+      setHighlightedEngine('B');
+      await playAndAwaitAudio('assets/audio/explain_mode_b.mp3', () => token.cancelled);
+    } finally {
+      setHighlightedEngine(null);
+    }
   }, []);
 
   const selectEngine = (engine: 'A' | 'B') => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+    if (activeTokenRef.current) activeTokenRef.current.cancelled = true;
+    stopAudio().catch(() => {});
+    setHighlightedEngine(engine);
     setEngineType(engine);
 
     if (engine === 'A') {
@@ -87,14 +135,34 @@ export default function EngineSelectionScreen() {
 
   const explainEngine = async (engine: 'A' | 'B') => {
     await Haptics.selectionAsync();
+
+    // Toggle pause/resume if this engine is already active
+    if (highlightedEngine === engine) {
+      if (audioState === 'playing') { await pauseAudio().catch(() => {}); return; }
+      if (audioState === 'paused')  { await resumeAudio().catch(() => {}); return; }
+    }
+
+    // Cancel any running sequence and start fresh
+    if (activeTokenRef.current) activeTokenRef.current.cancelled = true;
+    await stopAudio();
+    setHighlightedEngine(engine);
     const audioFile = engine === 'A'
       ? 'assets/audio/explain_mode_a.mp3'
       : 'assets/audio/explain_mode_b.mp3';
-    await playAudio(audioFile).catch(() => {});
+    await playAndAwaitAudio(audioFile, () => false).catch(() => {});
+    setHighlightedEngine(null);
   };
 
   return (
     <SafeAreaView style={styles.safeArea}>
+      {/* Disclaimer — shown once on first launch */}
+      {!isLoading && (
+        <DisclaimerModal
+          visible={!hasSeenDisclaimer}
+          onAccept={acceptDisclaimer}
+        />
+      )}
+
       <Animated.View style={[styles.container, { opacity: fadeAnim }]}>
         {/* App title */}
         <Animated.View style={[styles.titleContainer, { opacity: titleAnim }]}>
@@ -105,7 +173,7 @@ export default function EngineSelectionScreen() {
         {/* Engine A Card — NON-READER */}
         <Animated.View style={{ transform: [{ translateY: cardAAnim }] }}>
           <TouchableOpacity
-            style={[styles.engineCard, styles.engineCardA]}
+            style={[styles.engineCard, styles.engineCardA, highlightedEngine === 'A' && styles.cardHighlighted]}
             onPress={() => selectEngine('A')}
             activeOpacity={0.85}
             accessibilityLabel="ድምጽ ብቻ ማጥናት - Engine A"
@@ -118,14 +186,16 @@ export default function EngineSelectionScreen() {
 
             {/* Info button — plays audio explaining this mode */}
             <TouchableOpacity
-              style={styles.infoButton}
-              onPress={(e) => {
-                e.stopPropagation();
-                explainEngine('A');
-              }}
+              onPress={(e) => { e.stopPropagation(); explainEngine('A'); }}
               accessibilityLabel="ይህ ምርጫ ምን ማለት ነው?"
+              style={styles.infoButtonWrapper}
             >
-              <Text style={styles.infoIcon}>🔊</Text>
+              <Animated.View style={[styles.infoButton, { transform: [{ scale: pulseAnim }] }]}>
+                <Text style={styles.infoIcon}>
+                  {highlightedEngine === 'A' && audioState === 'playing' ? '⏸' : '▶️'}
+                </Text>
+              </Animated.View>
+              <Text style={styles.infoHint}>ይጫኑ</Text>
             </TouchableOpacity>
           </TouchableOpacity>
         </Animated.View>
@@ -140,7 +210,7 @@ export default function EngineSelectionScreen() {
         {/* Engine B Card — AMHARIC READER */}
         <Animated.View style={{ transform: [{ translateY: cardBAnim }] }}>
           <TouchableOpacity
-            style={[styles.engineCard, styles.engineCardB]}
+            style={[styles.engineCard, styles.engineCardB, highlightedEngine === 'B' && styles.cardHighlighted]}
             onPress={() => selectEngine('B')}
             activeOpacity={0.85}
             accessibilityLabel="ፅሁፍና ድምጽ ማጥናት - Engine B"
@@ -153,25 +223,20 @@ export default function EngineSelectionScreen() {
 
             {/* Info button */}
             <TouchableOpacity
-              style={styles.infoButton}
-              onPress={(e) => {
-                e.stopPropagation();
-                explainEngine('B');
-              }}
+              onPress={(e) => { e.stopPropagation(); explainEngine('B'); }}
               accessibilityLabel="ይህ ምርጫ ምን ማለት ነው?"
+              style={styles.infoButtonWrapper}
             >
-              <Text style={styles.infoIcon}>🔊</Text>
+              <Animated.View style={[styles.infoButton, { transform: [{ scale: pulseAnim }] }]}>
+                <Text style={styles.infoIcon}>
+                  {highlightedEngine === 'B' && audioState === 'playing' ? '⏸' : '▶️'}
+                </Text>
+              </Animated.View>
+              <Text style={styles.infoHintDark}>ይጫኑ</Text>
             </TouchableOpacity>
           </TouchableOpacity>
         </Animated.View>
 
-        {/* Welcome audio replay */}
-        <TouchableOpacity
-          style={styles.replayWelcome}
-          onPress={() => playAudio('assets/audio/welcome_select_mode.mp3').catch(() => {})}
-        >
-          <Text style={styles.replayText}>🔊</Text>
-        </TouchableOpacity>
       </Animated.View>
     </SafeAreaView>
   );
@@ -224,6 +289,14 @@ const styles = StyleSheet.create({
   engineCardA: {
     backgroundColor: Colors.primary,
   },
+  cardHighlighted: {
+    borderWidth:   3,
+    borderColor:   Colors.secondary,
+    shadowColor:   Colors.secondary,
+    shadowOpacity: 0.9,
+    shadowRadius:  20,
+    elevation:     20,
+  },
   engineCardB: {
     backgroundColor: Colors.card,
     borderWidth:     2,
@@ -240,6 +313,10 @@ const styles = StyleSheet.create({
     ...Typography.h2,
     color: Colors.textPrimary,
   },
+  infoButtonWrapper: {
+    alignItems: 'center',
+    gap:        4,
+  },
   infoButton: {
     width:           56,
     height:          56,
@@ -250,6 +327,16 @@ const styles = StyleSheet.create({
   },
   infoIcon: {
     fontSize: 28,
+  },
+  infoHint: {
+    fontSize:   11,
+    color:      'rgba(255,255,255,0.85)',
+    fontWeight: '600',
+  },
+  infoHintDark: {
+    fontSize:   11,
+    color:      Colors.textSecondary,
+    fontWeight: '600',
   },
 
   // ── Divider ───────────────────────────────────────────────────

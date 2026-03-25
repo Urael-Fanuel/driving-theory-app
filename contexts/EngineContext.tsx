@@ -39,6 +39,10 @@ export interface EngineContextValue {
   reset: () => void;
   /** Whether loading from storage is still in progress */
   isLoading: boolean;
+  /** True if user has already accepted the disclaimer */
+  hasSeenDisclaimer: boolean;
+  /** Mark disclaimer as accepted and persist */
+  acceptDisclaimer: () => void;
 }
 
 // ─── Storage helpers ──────────────────────────────────────────────────────────
@@ -48,6 +52,7 @@ const PREFS_PATH = (FileSystem.documentDirectory ?? '') + 'app_prefs.json';
 interface StoredPrefs {
   engineType?: EngineType;
   userId?: string;
+  hasSeenDisclaimer?: boolean;
 }
 
 async function readPrefs(): Promise<StoredPrefs> {
@@ -123,9 +128,10 @@ const EngineContext = createContext<EngineContextValue | null>(null);
 // ─── Provider ─────────────────────────────────────────────────────────────────
 
 export function EngineProvider({ children }: { children: ReactNode }) {
-  const [engineType, setEngineTypeState] = useState<EngineType | null>(null);
-  const [userId,     setUserId]          = useState<string | null>(null);
-  const [isLoading,  setIsLoading]       = useState(true);
+  const [engineType,         setEngineTypeState]  = useState<EngineType | null>(null);
+  const [userId,             setUserId]           = useState<string | null>(null);
+  const [isLoading,          setIsLoading]        = useState(true);
+  const [hasSeenDisclaimer,  setHasSeenDisclaimer] = useState(false);
 
   // ── Load persisted prefs + resolve userId on mount ──────────────────────────
   useEffect(() => {
@@ -134,6 +140,8 @@ export function EngineProvider({ children }: { children: ReactNode }) {
         const prefs = await readPrefs();
 
         if (prefs.engineType) setEngineTypeState(prefs.engineType);
+        // hasSeenDisclaimer is intentionally NOT loaded from storage —
+        // the disclaimer must appear on every fresh app session.
 
         // Resolve userId via anonymous auth (or fallback UUID)
         const resolvedId = await resolveUserId(prefs.userId);
@@ -204,6 +212,11 @@ export function EngineProvider({ children }: { children: ReactNode }) {
     }
   }, []) as () => void;
 
+  const acceptDisclaimer = useCallback(() => {
+    setHasSeenDisclaimer(true);
+    // Not persisted — disclaimer shows again on next app session.
+  }, []) as () => void;
+
   const value: EngineContextValue = {
     engineType,
     setEngineType,
@@ -211,6 +224,8 @@ export function EngineProvider({ children }: { children: ReactNode }) {
     hasSelectedEngine: engineType !== null,
     reset,
     isLoading,
+    hasSeenDisclaimer,
+    acceptDisclaimer,
   };
 
   return (

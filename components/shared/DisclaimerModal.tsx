@@ -83,8 +83,7 @@ export default function DisclaimerModal({ visible, onAccept }: Props) {
   };
 
   const speakerIcon =
-    audioState === 'playing' ? '⏸' :
-    audioState === 'paused'  ? '▶️' : '🔊';
+    audioState === 'playing' ? '⏸' : '▶️';
 
   return (
     <Modal visible={visible} animationType="slide" statusBarTranslucent>
