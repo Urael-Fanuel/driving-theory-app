@@ -24085,113 +24085,113 @@
     "image_filename": "713.png",
     "video_filename": null,
     "name_hebrew": "713",
-    "name_amharic": "ይህ ምልክት ለአውቶቡስ ወይም ለተወሰኑ ተሽከርካሪዎች ብቻ የተፈቀደውን የመንቀሳቀስ አቅጣጫ የሚያሳይ የትራፊክ መብራት ነው።",
-    "explanation_amharic": "ይህ የትራፊክ መብራት ለአውቶቡሶች፣ ለታክሲዎች ወይም ለተወሰኑ ተሽከርካሪዎች ብቻ የተዘጋጀ ነው። ነጭ ቀጥ ያለ መስመር ወደፊት መሄድ እንደሚፈቀድ ያሳያል፣ ነጭ ሰያፍ መስመር ደግሞ መታጠፍ እንደሚፈቀድ ያመለክታል። አሽከርካሪዎች ይህንን ምልክት ሲያዩ፣ ተሽከርካሪያቸው ለዚህ መብራት የተፈቀደ ከሆነ ብቻ የተመለከተውን አቅጣጫ መከተል አለባቸው፤ ያለበለዚያ የትራፊክ ፍሰትን በማስተጓጎል ቅጣት ሊጣልባቸው ይችላል።",
+    "name_amharic": "አቀባዊ እና ወደ ቀኝ ያዘነበለ ነጭ አራት ማዕዘን ምልክት",
+    "explanation_amharic": "ቀጥ ያለ ነጭ መብራት እና ወደ ቀኝ ያጋደለ ነጭ አራት ማዕዘን ቅርጽ ያለው መብራት ሲበራ፣ ወደፊት እንዲሄዱ ይፈቅዳል። በቀጥታ ወይም ወደ ቀኝ ይንዱ፣ ወደ ቀኝ ያጋደለው ነጭ አራት ማዕዘን ቅርጽ ያለው መብራት የላይኛው ጫፍ ወደሚያመለክተው አቅጣጫ። በተጨማሪም፣ በዚያው አቅጣጫ ዩ-ተርን ማድረግ ይፈቀዳል፣ በሌላ የትራፊክ ምልክት ካልተከለከለ በስተቀር። መብራቱ ብልጭ ድርግም የሚል ከሆነ፣ ምልክቱ እየተጠናቀቀ ሲሆን ምልክት 716 ሊታይ ነው።",
     "audio_name_filename": "713_name.mp3",
     "audio_explanation_filename": "713_explanation.mp3",
     "questions": [
       {
         "id": "713_q1",
-        "question_amharic": "ነጭ ቀጥ ያለ መስመር ያለው የትራፊክ መብራት ለአውቶቡስ አሽከርካሪ ምን ማለት ነው?",
+        "question_amharic": "ይህ የትራፊክ ምልክት ምን ማለት ነው?",
         "question_audio": "713_q1_question.mp3",
-        "explanation_correct_amharic": "ትክክል! ይህ ምልክት ነጭ ቀጥ ያለ መስመር ያለው መብራት ለአውቶቡስ አሽከርካሪዎች ቀጥ ብሎ መሄድ እንደሚፈቀድ ያመለክታል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ መምረጥ የትራፊክ ፍሰትን ሊያስተጓጉል እና አደጋ ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "አቬት ችሎታ፥ ትክክል። ይህ ምልክት ወደፊት እንዲሄዱ ይፈቅዳል፣ በቀጥታ ወይም ወደ ቀኝ እንዲነዱ ያስችላል፣ እና በሌላ ምልክት ካልተከለከለ በስተቀር ወደ ቀኝ ዩ-ተርን ማድረግ ይፈቀዳል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህ ምልክት ወደፊት እንዲሄዱ ይፈቅዳል፣ በቀጥታ ወይም ወደ ቀኝ እንዲነዱ ያስችላል፣ እና በሌላ ምልክት ካልተከለከለ በስተቀር ወደ ቀኝ ዩ-ተርን ማድረግ ይፈቀዳል።",
         "explanation_correct_audio": "713_q1_correct.mp3",
         "explanation_wrong_audio": "713_q1_wrong.mp3",
         "answers": [
           {
-            "id": "B",
-            "text_amharic": "የአውቶቡስ አሽከርካሪው ቀጥ ብሎ ወደፊት እንዲሄድ ተፈቅዶለታል።",
-            "is_correct": true,
-            "audio_filename": "answer_713_q1_B.mp3"
-          },
-          {
-            "id": "D",
-            "text_amharic": "ይህ መብራት ለአውቶቡሶች የተዘጋጀ አይደለም።",
-            "is_correct": false,
-            "audio_filename": "answer_713_q1_D.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "የአውቶቡስ አሽከርካሪው ወዲያውኑ ማቆም አለበት።",
+            "text_amharic": "መቆም አለብዎት እና ወደፊት መሄድ አይፈቀድም።",
             "is_correct": false,
             "audio_filename": "answer_713_q1_A.mp3"
           },
           {
+            "id": "B",
+            "text_amharic": "ወደፊት እንዲሄዱ ይፈቅዳል፣ በቀጥታ ወይም ወደ ቀኝ እንዲነዱ ያስችላል፣ እና በሌላ ምልክት ካልተከለከለ በስተቀር ወደ ቀኝ ዩ-ተርን ማድረግ ይፈቀዳል።",
+            "is_correct": true,
+            "audio_filename": "answer_713_q1_B.mp3"
+          },
+          {
             "id": "C",
-            "text_amharic": "የአውቶቡስ አሽከርካሪው ወደ ቀኝ ወይም ወደ ግራ መታጠፍ አለበት።",
+            "text_amharic": "ወደ ቀኝ ብቻ እንዲነዱ ይፈቅዳል፣ እና ዩ-ተርን ማድረግ አይፈቀድም።",
             "is_correct": false,
             "audio_filename": "answer_713_q1_C.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ወደፊት እንዲሄዱ ይፈቅዳል፣ ግን ወደ ቀኝ መታጠፍ ወይም ዩ-ተርን ማድረግ የተከለከለ ነው።",
+            "is_correct": false,
+            "audio_filename": "answer_713_q1_D.mp3"
           }
         ]
       },
       {
         "id": "713_q2",
-        "question_amharic": "ነጭ መስመሮች ያሉት የዚህን ልዩ የትራፊክ መብራት መመሪያ ማን መከተል አለበት?",
+        "question_amharic": "ይህን ምልክት ሲያዩ እንዴት መምራት አለብዎት?",
         "question_audio": "713_q2_question.mp3",
-        "explanation_correct_amharic": "ትክክል! ጥሩ ነው። ይህ መብራት በተለይ ለሕዝብ ማመላለሻ ተሽከርካሪዎች ወይም ለተወሰኑ መስመሮች የተዘጋጀ ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህንን መብራት በስህተት መከተል የትራፊክ ደንቦችን መጣስ እና ቅጣት ያስከትላል።",
+        "explanation_correct_amharic": "ትክክል! ይህን ምልክት ሲያዩ በቀጥታ ወይም ወደ ቀኝ መንዳት ይችላሉ፣ እና በሌላ ምልክት ካልተከለከለ በስተቀር ወደ ቀኝ ዩ-ተርን ማድረግ ይችላሉ።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በቀጥታ ወይም ወደ ቀኝ መንዳት ይችላሉ፣ እና በሌላ ምልክት ካልተከለከለ በስተቀር ወደ ቀኝ ዩ-ተርን ማድረግ ይችላሉ።",
         "explanation_correct_audio": "713_q2_correct.mp3",
         "explanation_wrong_audio": "713_q2_wrong.mp3",
         "answers": [
           {
-            "id": "C",
-            "text_amharic": "የግል መኪና አሽከርካሪዎች ብቻ ይህንን መብራት መከተል አለባቸው።",
+            "id": "A",
+            "text_amharic": "ወደ ቀኝ ብቻ መታጠፍ አለብዎት እና ዩ-ተርን ማድረግ አይችሉም።",
             "is_correct": false,
-            "audio_filename": "answer_713_q2_C.mp3"
+            "audio_filename": "answer_713_q2_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "የአውቶቡስና የታክሲ አሽከርካሪዎች ወይም በተወሰኑ መስመሮች ላይ ያሉ ተሽከርካሪዎች ብቻ መከተል አለባቸው።",
+            "text_amharic": "በቀጥታ ወይም ወደ ቀኝ መንዳት ይችላሉ፣ እና በሌላ ምልክት ካልተከለከለ በስተቀር ወደ ቀኝ ዩ-ተርን ማድረግ ይችላሉ።",
             "is_correct": true,
             "audio_filename": "answer_713_q2_B.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "እግረኞች መንገዱን ለማቋረጥ ይህንን መብራት መከተል አለባቸው።",
+            "id": "C",
+            "text_amharic": "ወደ ግራ ብቻ መታጠፍ ይችላሉ።",
             "is_correct": false,
-            "audio_filename": "answer_713_q2_D.mp3"
+            "audio_filename": "answer_713_q2_C.mp3"
           },
           {
-            "id": "A",
-            "text_amharic": "በመንገድ ላይ ያሉ ሁሉም አሽከርካሪዎች ይህንን መብራት መከተል አለባቸው።",
+            "id": "D",
+            "text_amharic": "ወዲያውኑ ማቆም እና የትራፊክ ፍሰት እስኪፈቅድ መጠበቅ አለብዎት።",
             "is_correct": false,
-            "audio_filename": "answer_713_q2_A.mp3"
+            "audio_filename": "answer_713_q2_D.mp3"
           }
         ]
       },
       {
         "id": "713_q3",
-        "question_amharic": "አንድ የግል መኪና አሽከርካሪ ይህንን መብራት ለአውቶቡስ የታሰበ መሆኑን ሳያውቅ ቀጥ ብሎ ቢሄድ ምን ሊከሰት ይችላል?",
+        "question_amharic": "ይህ ምልክት ብልጭ ድርግም የሚል ከሆነ ምን ማለት ነው?",
         "question_audio": "713_q3_question.mp3",
-        "explanation_correct_amharic": "አሪፍ! ምልክቱ ይህ መብራት ለተወሰኑ ተሽከርካሪዎች ብቻ ስለሆነ፣ የግል መኪና አሽከርካሪዎች መከተል የለባቸውም።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ እርምጃ መውሰድ የትራፊክ ደንቦችን መጣስ፣ ቅጣት መቀበል እና አደጋ ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "አዎ! ምልክቱ ብልጭ ድርግም የሚል ከሆነ፣ ምልክቱ እየተጠናቀቀ ሲሆን ምልክት 716 ሊታይ ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ምልክቱ እየተጠናቀቀ ሲሆን ምልክት 716 ሊታይ ነው።",
         "explanation_correct_audio": "713_q3_correct.mp3",
         "explanation_wrong_audio": "713_q3_wrong.mp3",
         "answers": [
           {
-            "id": "C",
-            "text_amharic": "አሽከርካሪው የትራፊክ ደንቦችን በመከተሉ ልዩ ሽልማት ያገኛል።",
+            "id": "A",
+            "text_amharic": "ወዲያውኑ ማቆም እና መብራቱ እስኪረጋጋ መጠበቅ አለብዎት።",
             "is_correct": false,
+            "audio_filename": "answer_713_q3_A.mp3"
+          },
+          {
+            "id": "B",
+            "text_amharic": "ወደ ቀኝ ብቻ መታጠፍ አለብዎት።",
+            "is_correct": false,
+            "audio_filename": "answer_713_q3_B.mp3"
+          },
+          {
+            "id": "C",
+            "text_amharic": "ምልክቱ እየተጠናቀቀ ሲሆን ምልክት 716 ሊታይ ነው።",
+            "is_correct": true,
             "audio_filename": "answer_713_q3_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "አሽከርካሪው ወዲያውኑ ተመልሶ መሄድ አለበት።",
+            "text_amharic": "ወደፊት እንዲሄዱ ይፈቀዳል ነገር ግን በጥንቃቄ።",
             "is_correct": false,
             "audio_filename": "answer_713_q3_D.mp3"
-          },
-          {
-            "id": "B",
-            "text_amharic": "አሽከርካሪው የትራፊክ ቅጣት ሊጣልበት እና የትራፊክ ፍሰትን ሊያስተጓጉል ይችላል።",
-            "is_correct": true,
-            "audio_filename": "answer_713_q3_B.mp3"
-          },
-          {
-            "id": "A",
-            "text_amharic": "ምንም የሚያስከትለው ነገር የለም፣ ሁሉም የትራፊክ መብራቶች ለሁሉም ሰው የሚተገበሩ ናቸው።",
-            "is_correct": false,
-            "audio_filename": "answer_713_q3_A.mp3"
           }
         ]
       }
@@ -24204,113 +24204,113 @@
     "image_filename": "714.png",
     "video_filename": null,
     "name_hebrew": "714",
-    "name_amharic": "ይህ ምልክት ለአውቶቡሶች፣ ለታክሲዎች እና ለሌሎች የህዝብ ማመላለሻ ተሽከርካሪዎች ብቻ የሚያገለግል የትራፊክ መብራት መሆኑን ያመለክታል።",
-    "explanation_amharic": "ይህ ምልክት ለአውቶቡሶች፣ ለታክሲዎች እና ለሌሎች የህዝብ ማመላለሻ ተሽከርካሪዎች ብቻ የሚሰራ ልዩ የትራፊክ መብራት ነው። የግል ተሽከርካሪ አሽከርካሪዎች ይህንን ምልክት ችላ ብለው ለመደበኛ የትራፊክ መብራቶች ትኩረት መስጠት አለባቸው። የህዝብ ማመላለሻ አሽከርካሪዎች ግን በመብራቱ ላይ የሚታየውን ምልክት (ለምሳሌ ቀጥ ያለ ነጭ መስመር ለመሄድ፣ የተዘበራረቀ መስመር ለማቆም ወይም ለመታጠፍ) መከተል አለባቸው። ይህንን መብራት በትክክል አለመከተል የትራፊክ ፍሰትን ሊያስተጓጉል እና አደጋ ሊያስከትል ይችላል።",
+    "name_amharic": "አቀባዊ እና ወደ ግራ ያዘነበለ ነጭ አራት ማዕዘን ምልክት",
+    "explanation_amharic": "ቀጥ ያለ እና ወደ ግራ ያዘነበለ ነጭ አራት ማዕዘን ቅርጽ ያላቸው መብራቶች ሲበሩ፣ ወደፊት እንዲሄዱ ያሳያል። በቀጥታ መሄድ ወይም ወደ ግራ መታጠፍ ይችላሉ፤ የመታጠፊያው አቅጣጫ በግራ በኩል ባለው ያዘነበለ መብራት ይታያል። ወደ ግራ መታጠፍ በሚፈቀድበት አቅጣጫ ዩ-ተርን ማድረግ ይፈቀዳል፣ በሌላ ምልክት ካልተከለከለ በስተቀር። መብራቱ ብልጭ ድርግም የሚል ከሆነ፣ ምልክቱ እየተጠናቀቀ መሆኑን እና ምልክት 716 ሊታይ መሆኑን ያመለክታል።",
     "audio_name_filename": "714_name.mp3",
     "audio_explanation_filename": "714_explanation.mp3",
     "questions": [
       {
         "id": "714_q1",
-        "question_amharic": "ይህ የትራፊክ ምልክት በዋነኛነት ለማን ነው የሚያገለግለው?",
+        "question_amharic": "ይህ ምልክት ምን ማለት ነው?",
         "question_audio": "714_q1_question.mp3",
-        "explanation_correct_amharic": "ጎቨዝ። ይህ ልዩ የትራፊክ መብራት የተሰራው ለህዝብ ማመላለሻ ተሽከርካሪዎች ብቻ ሲሆን የግል ተሽከርካሪዎች ሊከተሉት አይገባም።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህን ምልክት ለሁሉም ተሽከርካሪዎች ነው ብሎ ማሰብ ግራ መጋባትና አደጋ ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "ትክክል! ምልክቱ ቀጥ ብለው እንዲሄዱ ወይም ወደ ግራ እንዲታጠፉ ይፈቅዳል። ወደ ግራ መታጠፍ በሚፈቀድበት አቅጣጫ ዩ-ተርን ማድረግም ይፈቀዳል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ምልክቱ ቀጥ ብለው መሄድ ወይም ወደ ግራ መታጠፍ እንደሚችሉ ያሳያል፤ ወደ ግራ ዩ-ተርን ማድረግም ይፈቀዳል።",
         "explanation_correct_audio": "714_q1_correct.mp3",
         "explanation_wrong_audio": "714_q1_wrong.mp3",
         "answers": [
           {
-            "id": "B",
-            "text_amharic": "ለግል ተሽከርካሪዎች ብቻ የሚያገለግል የትራፊክ መብራት ነው።",
-            "is_correct": false,
-            "audio_filename": "answer_714_q1_B.mp3"
-          },
-          {
-            "id": "D",
-            "text_amharic": "ለእግረኞች መንገድ የሚያሳይ ምልክት ነው።",
-            "is_correct": false,
-            "audio_filename": "answer_714_q1_D.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "ለሁሉም የመንገድ ተጠቃሚዎች እኩል ያገለግላል።",
+            "text_amharic": "ወደ ግራ ብቻ መታጠፍ እንደሚችሉ ያሳያል።",
             "is_correct": false,
             "audio_filename": "answer_714_q1_A.mp3"
           },
           {
+            "id": "B",
+            "text_amharic": "ወደፊት ብቻ መሄድ እንደሚችሉ ያሳያል።",
+            "is_correct": false,
+            "audio_filename": "answer_714_q1_B.mp3"
+          },
+          {
             "id": "C",
-            "text_amharic": "ለአውቶቡሶች፣ ለታክሲዎች እና ለሌሎች የህዝብ ማመላለሻ ተሽከርካሪዎች ብቻ የሚያገለግል ነው።",
+            "text_amharic": "ቀጥ ብለው መሄድ ወይም ወደ ግራ መታጠፍ እንደሚችሉ ያሳያል፤ ወደ ግራ ዩ-ተርን ማድረግም ይፈቀዳል።",
             "is_correct": true,
             "audio_filename": "answer_714_q1_C.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ማቆም እና ወደ ግራ ለመታጠፍ መዘጋጀት እንዳለብዎ ያሳያል።",
+            "is_correct": false,
+            "audio_filename": "answer_714_q1_D.mp3"
           }
         ]
       },
       {
         "id": "714_q2",
-        "question_amharic": "የግል ተሽከርካሪ አሽከርካሪ ይህንን ምልክት ሲያይ ምን ማድረግ አለበት?",
+        "question_amharic": "በዚህ ምልክት መሰረት እንዴት መንዳት አለብዎት?",
         "question_audio": "714_q2_question.mp3",
-        "explanation_correct_amharic": "በጣም ጥሩ። የግል ተሽከርካሪ አሽከርካሪዎች ይህንን ምልክት ችላ ብለው ለመደበኛ የትራፊክ መብራቶች መታዘዝ አለባቸው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የግል ተሽከርካሪ አሽከርካሪዎች የህዝብ ማመላለሻ መብራትን ለመከተል ከሞከሩ አደጋ ሊያስከትሉ ይችላሉ።",
+        "explanation_correct_amharic": "አዎ! ይህ ምልክት ቀጥ ብለው እንዲሄዱ ወይም ወደ ግራ እንዲታጠፉ ይፈቅዳል። በተጨማሪም፣ በሌላ ምልክት ካልተከለከለ በስተቀር፣ ወደ ግራ ዩ-ተርን ማድረግ ይችላሉ።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ቀጥ ብለው ይሂዱ ወይም ወደ ግራ ይታጠፉ፤ በሌላ ምልክት ካልተከለከለ በስተቀር ወደ ግራ ዩ-ተርን ማድረግ ይፈቀዳል።",
         "explanation_correct_audio": "714_q2_correct.mp3",
         "explanation_wrong_audio": "714_q2_wrong.mp3",
         "answers": [
           {
-            "id": "C",
-            "text_amharic": "ይህንን ምልክት ችላ ብሎ ለመደበኛ የትራፊክ መብራቶች ትኩረት መስጠት አለበት።",
-            "is_correct": true,
-            "audio_filename": "answer_714_q2_C.mp3"
-          },
-          {
-            "id": "D",
-            "text_amharic": "የህዝብ ማመላለሻ ተሽከርካሪዎች እስኪሄዱ ድረስ መጠበቅ አለበት።",
+            "id": "A",
+            "text_amharic": "ወደ ግራ ብቻ መታጠፍ አለብዎት።",
             "is_correct": false,
-            "audio_filename": "answer_714_q2_D.mp3"
+            "audio_filename": "answer_714_q2_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "በምልክቱ ላይ የሚታየውን መመሪያ በመከተል ወደፊት መሄድ አለበት።",
+            "text_amharic": "ወዲያውኑ ማቆም እና ቀጣዩን ምልክት መጠበቅ አለብዎት።",
             "is_correct": false,
             "audio_filename": "answer_714_q2_B.mp3"
           },
           {
-            "id": "A",
-            "text_amharic": "በምልክቱ ላይ የሚታየውን መመሪያ በመከተል ወዲያውኑ ማቆም አለበት።",
+            "id": "C",
+            "text_amharic": "ቀጥ ብለው ብቻ መሄድ አለብዎት።",
             "is_correct": false,
-            "audio_filename": "answer_714_q2_A.mp3"
+            "audio_filename": "answer_714_q2_C.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ቀጥ ብለው ይሂዱ ወይም ወደ ግራ ይታጠፉ፤ በሌላ ምልክት ካልተከለከለ በስተቀር ወደ ግራ ዩ-ተርን ማድረግ ይፈቀዳል።",
+            "is_correct": true,
+            "audio_filename": "answer_714_q2_D.mp3"
           }
         ]
       },
       {
         "id": "714_q3",
-        "question_amharic": "የህዝብ ማመላለሻ ተሽከርካሪ አሽከርካሪ ይህንን ምልክት ሲያይ ምን ማድረግ አለበት?",
+        "question_amharic": "በዚህ ምልክት ላይ ያሉት መብራቶች ብልጭ ድርግም የሚሉ ከሆነ ምን ማለት ነው?",
         "question_audio": "714_q3_question.mp3",
-        "explanation_correct_amharic": "ጎሽሽ። የህዝብ ማመላለሻ አሽከርካሪዎች ይህንን ምልክት በመከተል በመብራቱ ላይ የሚታየውን መመሪያ በትክክል መፈጸም አለባቸው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የህዝብ ማመላለሻ አሽከርካሪዎች ይህንን ምልክት ችላ ካሉ የትራፊክ ፍሰትን ሊያስተጓጉሉ እና ቅጣት ሊጣልባቸው ይችላል።",
+        "explanation_correct_amharic": "እሰይ የኔ ጎቨዝ። መብራቶቹ ብልጭ ድርግም የሚሉ ከሆነ፣ የአሁኑ ምልክት እየተጠናቀቀ መሆኑን እና ቀጣዩ ምልክት (716) ሊመጣ መሆኑን ያመለክታል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ምልክቱ እየተጠናቀቀ መሆኑን እና ምልክት 716 ሊታይ መሆኑን ያመለክታል።",
         "explanation_correct_audio": "714_q3_correct.mp3",
         "explanation_wrong_audio": "714_q3_wrong.mp3",
         "answers": [
           {
+            "id": "A",
+            "text_amharic": "ወዲያውኑ ማቆም እንዳለብዎት ያመለክታል።",
+            "is_correct": false,
+            "audio_filename": "answer_714_q3_A.mp3"
+          },
+          {
+            "id": "B",
+            "text_amharic": "ወደ ግራ ብቻ በጥንቃቄ መታጠፍ እንደሚችሉ ያመለክታል።",
+            "is_correct": false,
+            "audio_filename": "answer_714_q3_B.mp3"
+          },
+          {
             "id": "C",
-            "text_amharic": "ሁልጊዜ ማቆም እና ሌሎች ተሽከርካሪዎች እንዲያልፉ መፍቀድ አለበት።",
+            "text_amharic": "መብራቱ የተበላሸ መሆኑን ያመለክታል።",
             "is_correct": false,
             "audio_filename": "answer_714_q3_C.mp3"
           },
           {
-            "id": "B",
-            "text_amharic": "በምልክቱ ላይ የሚታየውን የተለየ መመሪያ (ለምሳሌ ለመሄድ ወይም ለማቆም) መከተል አለበት።",
-            "is_correct": true,
-            "audio_filename": "answer_714_q3_B.mp3"
-          },
-          {
             "id": "D",
-            "text_amharic": "ፍጥነቱን ጨምሮ በተቻለ ፍጥነት ማለፍ አለበት።",
-            "is_correct": false,
+            "text_amharic": "ምልክቱ እየተጠናቀቀ መሆኑን እና ምልክት 716 ሊታይ መሆኑን ያመለክታል።",
+            "is_correct": true,
             "audio_filename": "answer_714_q3_D.mp3"
-          },
-          {
-            "id": "A",
-            "text_amharic": "ይህንን ምልክት ችላ ብሎ ለመደበኛ የትራፊክ መብራቶች ትኩረት መስጠት አለበት።",
-            "is_correct": false,
-            "audio_filename": "answer_714_q3_A.mp3"
           }
         ]
       }
@@ -24323,113 +24323,113 @@
     "image_filename": "715.png",
     "video_filename": null,
     "name_hebrew": "715",
-    "name_amharic": "ይህ ምልክት የባቡር መሻገሪያ መብራቶችን የሚያሳይ ሲሆን ባቡር ሲመጣ ወይም ሲያልፍ ያመለክታል።",
-    "explanation_amharic": "ይህ ምልክት የባቡር መሻገሪያ ላይ የሚገኝ ሲሆን ባቡር መምጣቱን ወይም መሻገሪያው ነጻ መሆኑን ያሳያል። ቀይ መብራቶች ብልጭ ድርግም ሲሉ ወዲያውኑ ማቆም እና ባቡሩ እስኪያልፍ መጠበቅ አለብዎት፤ ነጭ መብራት ሲበራ ግን በጥንቃቄ ማለፍ ይችላሉ። ይህን ምልክት ችላ ማለት ለከባድ አደጋ፣ ለሞት ወይም ለትልቅ የገንዘብ ቅጣት ሊያጋልጥ ይችላል።",
+    "name_amharic": "አቀባዊ እና ወደ ሁለቱም አቅጣጫ ያዘነበሉ ነጭ አራት ማዕዘን ምልክቶች",
+    "explanation_amharic": "ቀጥ ያለ ነጭ መብራት እና ወደ ሁለቱም አቅጣጫ ያዘነበሉ ነጭ መብራቶች ሲበሩ፣ ወደፊት መሄድ ይቻላል። ይህ ማለት ቀጥ ብሎ፣ ወደ ቀኝ ወይም ወደ ግራ መንዳት ይፈቀዳል። በሌላ የትራፊክ ምልክት ካልተከለከለ በስተቀር ዩ-ተርን ማድረግም ይፈቀዳል። መብራቱ ብልጭ ድርግም የሚል ከሆነ፣ የአሁኑ ምልክት እየተጠናቀቀ ሲሆን ምልክት 716 ሊታይ ነው።",
     "audio_name_filename": "715_name.mp3",
     "audio_explanation_filename": "715_explanation.mp3",
     "questions": [
       {
         "id": "715_q1",
-        "question_amharic": "በዚህ የባቡር መሻገሪያ ምልክት ላይ ቀይ መብራቶች ብልጭ ድርግም ሲሉ ምን ማለት ነው?",
+        "question_amharic": "ይህ የትራፊክ ምልክት ምን ማለት ነው?",
         "question_audio": "715_q1_question.mp3",
-        "explanation_correct_amharic": "ዋውው በጣም ጥሩ። ቀይ መብራቶች ብልጭ ድርግም ሲሉ ባቡር እየመጣ መሆኑን ወይም መሻገሪያው ላይ መሆኑን ስለሚያመለክቱ ወዲያውኑ ማቆም ግዴታ ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ቀይ መብራት ብልጭ ድርግም ሲል ሳያቆሙ ማለፍ ለከባድ የባቡር አደጋ እና ለሞት ሊዳርግ ይችላል።",
+        "explanation_correct_amharic": "አዎ! ይህ ምልክት አሽከርካሪዎች ቀጥ ብለው፣ ወደ ቀኝ፣ ወደ ግራ እንዲሄዱ እና በሌላ ምልክት ካልተከለከለ በስተቀር ዩ-ተርን እንዲያደርጉ ይፈቅዳል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህ ምልክት ቀጥ ብሎ፣ ወደ ቀኝ፣ ወደ ግራ መንዳት እና ዩ-ተርን ማድረግ ይፈቀዳል (በሌላ ምልክት ካልተከለከለ በስተቀር) ማለት ነው።",
         "explanation_correct_audio": "715_q1_correct.mp3",
         "explanation_wrong_audio": "715_q1_wrong.mp3",
         "answers": [
           {
-            "id": "C",
-            "text_amharic": "ወደ ቀኝ ወይም ወደ ግራ መታጠፍ ይችላሉ።",
+            "id": "A",
+            "text_amharic": "ወደፊት ብቻ መሄድ ይፈቀዳል።",
             "is_correct": false,
+            "audio_filename": "answer_715_q1_A.mp3"
+          },
+          {
+            "id": "B",
+            "text_amharic": "ወደ ቀኝ ወይም ወደ ግራ ብቻ መታጠፍ ይፈቀዳል።",
+            "is_correct": false,
+            "audio_filename": "answer_715_q1_B.mp3"
+          },
+          {
+            "id": "C",
+            "text_amharic": "ቀጥ ብሎ፣ ወደ ቀኝ፣ ወደ ግራ መንዳት እና ዩ-ተርን ማድረግ ይፈቀዳል (በሌላ ምልክት ካልተከለከለ በስተቀር)።",
+            "is_correct": true,
             "audio_filename": "answer_715_q1_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "ከፊት ለፊት የእግረኛ መሻገሪያ አለ።",
+            "text_amharic": "ማቆም እና ቀይ መብራት መጠበቅ ያስፈልጋል።",
             "is_correct": false,
             "audio_filename": "answer_715_q1_D.mp3"
-          },
-          {
-            "id": "B",
-            "text_amharic": "ባቡር እየመጣ ነው ወይም መሻገሪያው ላይ ነው፣ ወዲያውኑ ማቆም አለብዎት።",
-            "is_correct": true,
-            "audio_filename": "answer_715_q1_B.mp3"
-          },
-          {
-            "id": "A",
-            "text_amharic": "መንገዱ ክፍት ነው፣ በፍጥነት ማለፍ ይችላሉ።",
-            "is_correct": false,
-            "audio_filename": "answer_715_q1_A.mp3"
           }
         ]
       },
       {
         "id": "715_q2",
-        "question_amharic": "በባቡር መሻገሪያ ምልክት ላይ ነጭ መብራት ሲበራ አሽከርካሪ ምን ማድረግ አለበት?",
+        "question_amharic": "ይህ ምልክት ሲበራ እንዴት መንዳት አለብዎት?",
         "question_audio": "715_q2_question.mp3",
-        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። ነጭ መብራት መሻገሪያው ነጻ መሆኑን ስለሚያመለክት፣ አሽከርካሪው ባቡር አለመኖሩን አረጋግጦ በጥንቃቄ ማለፍ ይችላል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ነጭ መብራት ሲበራ ያለጥንቃቄ ወይም በፍጥነት ማለፍ ባቡር ባይኖርም እንኳ ሌሎች አደጋዎችን ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "እሰይ የኔ ጎቨዝ። ይህ ምልክት ሲበራ፣ ቀጥ ብለው፣ ወደ ቀኝ፣ ወደ ግራ መንዳት ወይም በሌላ ምልክት ካልተከለከለ በስተቀር ዩ-ተርን ማድረግ ይችላሉ።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህ ምልክት ሲበራ፣ ቀጥ ብለው፣ ወደ ቀኝ፣ ወደ ግራ መንዳት ወይም ዩ-ተርን ማድረግ ይችላሉ (በሌላ ምልክት ካልተከለከለ በስተቀር)።",
         "explanation_correct_audio": "715_q2_correct.mp3",
         "explanation_wrong_audio": "715_q2_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "ማቆም እና ቀይ መብራቶችን መጠበቅ አለበት።",
+            "text_amharic": "ማቆም እና ቀጣዩን ምልክት መጠበቅ አለብዎት።",
             "is_correct": false,
             "audio_filename": "answer_715_q2_A.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "ተመልሶ ሌላ መንገድ መፈለግ አለበት።",
-            "is_correct": false,
-            "audio_filename": "answer_715_q2_D.mp3"
+            "id": "B",
+            "text_amharic": "ቀጥ ብለው፣ ወደ ቀኝ፣ ወደ ግራ መንዳት ወይም ዩ-ተርን ማድረግ ይችላሉ (በሌላ ምልክት ካልተከለከለ በስተቀር)።",
+            "is_correct": true,
+            "audio_filename": "answer_715_q2_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "በፍጥነት ለማለፍ ፍጥነቱን መጨመር አለበት።",
+            "text_amharic": "ወደፊት ብቻ መሄድ አለብዎት።",
             "is_correct": false,
             "audio_filename": "answer_715_q2_C.mp3"
           },
           {
-            "id": "B",
-            "text_amharic": "ባቡር አለመኖሩን በማረጋገጥ በጥንቃቄ ማለፍ ይችላል።",
-            "is_correct": true,
-            "audio_filename": "answer_715_q2_B.mp3"
+            "id": "D",
+            "text_amharic": "ለቀጣዩ ምልክት ለመዘጋጀት ፍጥነትዎን መቀነስ አለብዎት።",
+            "is_correct": false,
+            "audio_filename": "answer_715_q2_D.mp3"
           }
         ]
       },
       {
         "id": "715_q3",
-        "question_amharic": "ቀይ መብራቶች ብልጭ ድርግም በሚሉበት የባቡር መሻገሪያ ምልክትን ችላ ማለት የሚያስከትለው ውጤት ምንድን ነው?",
+        "question_amharic": "ይህ ምልክት ሲበራ ዩ-ተርን ማድረግ ይፈቀዳል?",
         "question_audio": "715_q3_question.mp3",
-        "explanation_correct_amharic": "እሰይ። አቤት እውቀት! የባቡር መሻገሪያ ምልክትን ችላ ማለት ከባቡር ጋር ለሚፈጠር ግጭት እና ለከፋ የሕይወትና የንብረት አደጋ ስለሚያጋልጥ በጣም ከባድ ቅጣት ያስከትላል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የባቡር መሻገሪያ ምልክትን ችላ ማለት ቀላል ጉዳይ አይደለም፤ ለሞት የሚዳርግ አደጋ ሊያስከትል ስለሚችል ይህንን ማቃለል የለብንም።",
+        "explanation_correct_amharic": "ትክክል፥ አቬት እውቀት። አዎ፣ ይህ ምልክት ሲበራ ዩ-ተርን ማድረግ ይፈቀዳል፣ ነገር ግን በሌላ የትራፊክ ምልክት ካልተከለከለ በስተቀር።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: አዎ፣ በሌላ የትራፊክ ምልክት ካልተከለከለ በስተቀር ዩ-ተርን ማድረግ ይፈቀዳል።",
         "explanation_correct_audio": "715_q3_correct.mp3",
         "explanation_wrong_audio": "715_q3_wrong.mp3",
         "answers": [
           {
-            "id": "B",
-            "text_amharic": "ለከባድ አደጋ፣ ለሞት ወይም ለትልቅ የገንዘብ ቅጣት ሊያጋልጥ ይችላል።",
-            "is_correct": true,
-            "audio_filename": "answer_715_q3_B.mp3"
-          },
-          {
-            "id": "D",
-            "text_amharic": "ለሌሎች አሽከርካሪዎች ትንሽ መዘግየት ብቻ ያስከትላል።",
-            "is_correct": false,
-            "audio_filename": "answer_715_q3_D.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "ቀላል የትራፊክ ጥሰት ሲሆን ምንም እውነተኛ አደጋ የለውም።",
+            "text_amharic": "አዎ፣ ሁልጊዜ ይፈቀዳል።",
             "is_correct": false,
             "audio_filename": "answer_715_q3_A.mp3"
           },
           {
+            "id": "B",
+            "text_amharic": "ዩ-ተርን የሚፈቀደው መብራቱ ብልጭ ድርግም የሚል ከሆነ ብቻ ነው።",
+            "is_correct": false,
+            "audio_filename": "answer_715_q3_B.mp3"
+          },
+          {
             "id": "C",
-            "text_amharic": "ከፖሊስ መኮንን ማስጠንቀቂያ ብቻ ሊያገኙ ይችላሉ።",
+            "text_amharic": "አይ፣ ዩ-ተርን በፍጹም አይፈቀድም።",
             "is_correct": false,
             "audio_filename": "answer_715_q3_C.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "አዎ፣ በሌላ የትራፊክ ምልክት ካልተከለከለ በስተቀር ይፈቀዳል።",
+            "is_correct": true,
+            "audio_filename": "answer_715_q3_D.mp3"
           }
         ]
       }
