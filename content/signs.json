@@ -23490,41 +23490,41 @@
     "image_filename": "708.png",
     "video_filename": null,
     "name_hebrew": "708",
-    "name_amharic": "ይህ ምልክት የትራፊክ መብራት ቀይ መብራት መሆኑን ያመለክታል።",
-    "explanation_amharic": "ይህ ምልክት የትራፊክ መብራት ቀይ መብራት መሆኑን ያሳያል። ቀይ መብራት ሲበራ አሽከርካሪው ከመቆሚያ መስመሩ በፊት ወይም የእግረኛ ማቋረጫው ላይ ሳይደርስ ሙሉ በሙሉ ማቆም አለበት። ይህን ምልክት ችላ ማለት ከባድ የትራፊክ አደጋ፣ ከፍተኛ ቅጣት እና የፍቃድ ነጥቦች ያስከትላል።",
+    "name_amharic": "አግድም ነጭ አራት ማዕዘን ምልክት",
+    "explanation_amharic": "ይህ አግድም አራት ማዕዘን ነጭ መብራት 'ቁም!' ማለት ነው። የማቆሚያ መስመር ወይም የእግረኛ ማቋረጫ ካለ፣ ከነሱ በፊት መቆም አለብዎት። የማቆሚያ መስመር ወይም የእግረኛ ማቋረጫ ከሌለ፣ በአቅራቢያው ካለው የትራፊክ መብራት አጠገብ ይቁሙ። ይህ የላይኛው ነጭ መብራት በርቶ እያለ የማቆሚያ መስመሩን፣ የእግረኛ ማቋረጫውን ማለፍ ወይም ወደ መስቀለኛ መንገድ መግባት የተከለከለ ነው።",
     "audio_name_filename": "708_name.mp3",
     "audio_explanation_filename": "708_explanation.mp3",
     "questions": [
       {
         "id": "708_q1",
-        "question_amharic": "ይህ ምልክት ምን ማለት ነው?",
+        "question_amharic": "ይህ የትራፊክ መብራት ምልክት ምን ማለት ነው?",
         "question_audio": "708_q1_question.mp3",
-        "explanation_correct_amharic": "ትክክል፥ አቬት እውቀት። ይህ ምልክት የትራፊክ መብራት ቀይ መብራት መሆኑን ያመለክታል፣ ይህም ሙሉ በሙሉ ማቆም እንዳለብዎት ያሳያል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህ ምልክት የትራፊክ መብራት ቀይ መብራት መሆኑን ያመለክታል፣ ይህም ሙሉ በሙሉ ማቆም እንዳለብዎት ያሳያል።",
+        "explanation_correct_amharic": "አዎ! ይህ አግድም አራት ማዕዘን ነጭ መብራት 'ቁም!' ማለት ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህ አግድም አራት ማዕዘን ነጭ መብራት 'ቁም!' ማለት ነው።",
         "explanation_correct_audio": "708_q1_correct.mp3",
         "explanation_wrong_audio": "708_q1_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "የትራፊክ መብራቱ ከጥቅም ውጪ ሆኗል።",
+            "text_amharic": "በጥንቃቄ ይቀጥሉ.",
             "is_correct": false,
             "audio_filename": "answer_708_q1_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "ተሽከርካሪዎች እንዳይገቡ የተከለከለ ነው።",
+            "text_amharic": "የህዝብ ማመላለሻ ብቻ እንዲያልፍ ይፈቀዳል.",
             "is_correct": false,
             "audio_filename": "answer_708_q1_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "የትራፊክ መብራት ቀይ መብራት መሆኑን ያመለክታል፣ እና ሙሉ በሙሉ ማቆም አለብዎት።",
+            "text_amharic": "ቁም!",
             "is_correct": true,
             "audio_filename": "answer_708_q1_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "ለመቆም ይዘጋጁ።",
+            "text_amharic": "ለመቆም ይዘጋጁ.",
             "is_correct": false,
             "audio_filename": "answer_708_q1_D.mp3"
           }
@@ -23532,34 +23532,34 @@
       },
       {
         "id": "708_q2",
-        "question_amharic": "በዚህ ምልክት መሰረት እንዴት ይነዳሉ?",
+        "question_amharic": "ይህ የላይኛው ነጭ መብራት በርቶ እያለ እንዴት መምራት አለብዎት?",
         "question_audio": "708_q2_question.mp3",
-        "explanation_correct_amharic": "ጎሽ። ቀይ መብራት ሲበራ ከመቆሚያ መስመሩ በፊት ወይም የእግረኛ ማቋረጫው ላይ ሳይደርሱ ሙሉ በሙሉ ማቆም አለብዎት።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ቀይ መብራት ሲበራ ከመቆሚያ መስመሩ በፊት ወይም የእግረኛ ማቋረጫው ላይ ሳይደርሱ ሙሉ በሙሉ ማቆም አለብዎት።",
+        "explanation_correct_amharic": "እሰይ የኔ ጎቨዝ። ይህ የላይኛው ነጭ መብራት በርቶ እያለ፣ የማቆሚያ መስመር ወይም የእግረኛ ማቋረጫ ካለ ከነሱ በፊት መቆም አለብዎት። ከሌለ ደግሞ በአቅራቢያው ካለው የትራፊክ መብራት አጠገብ ይቁሙ።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የማቆሚያ መስመር ወይም የእግረኛ ማቋረጫ ካለ ከነሱ በፊት ይቁሙ፤ ከሌለ በአቅራቢያው ካለው የትራፊክ መብራት አጠገብ ይቁሙ.",
         "explanation_correct_audio": "708_q2_correct.mp3",
         "explanation_wrong_audio": "708_q2_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "መንገዱ ግልጽ ከሆነ ይቀጥላሉ።",
+            "text_amharic": "ተቃራኒ ትራፊክ ካለ ብቻ ይቁሙ.",
             "is_correct": false,
             "audio_filename": "answer_708_q2_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "ፍጥነትዎን ይቀንሱ እና በጥንቃቄ ይቀጥሉ።",
+            "text_amharic": "ፍጥነትዎን ይቀንሱ እና በጥንቃቄ ይቀጥሉ.",
             "is_correct": false,
             "audio_filename": "answer_708_q2_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "ሌሎች ተሽከርካሪዎች ካሉ ብቻ ያቆማሉ።",
+            "text_amharic": "መንገዱ ግልጽ ከሆነ ይቀጥሉ.",
             "is_correct": false,
             "audio_filename": "answer_708_q2_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "ከመቆሚያ መስመሩ በፊት ወይም የእግረኛ ማቋረጫው ላይ ሳይደርሱ ሙሉ በሙሉ ያቆማሉ።",
+            "text_amharic": "የማቆሚያ መስመር ወይም የእግረኛ ማቋረጫ ካለ ከነሱ በፊት ይቁሙ፤ ከሌለ በአቅራቢያው ካለው የትራፊክ መብራት አጠገብ ይቁሙ.",
             "is_correct": true,
             "audio_filename": "answer_708_q2_D.mp3"
           }
@@ -23567,34 +23567,34 @@
       },
       {
         "id": "708_q3",
-        "question_amharic": "ይህንን ምልክት ችላ ማለት የሚያስከትለው ውጤት ምንድን ነው?",
+        "question_amharic": "ይህ የላይኛው ነጭ መብራት በርቶ እያለ ምን ማድረግ የተከለከለ ነው?",
         "question_audio": "708_q3_question.mp3",
-        "explanation_correct_amharic": "እንድያ ነው። ይህን ምልክት ችላ ማለት ከባድ የትራፊክ አደጋ፣ ከፍተኛ ቅጣት እና የፍቃድ ነጥቦች ያስከትላል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህን ምልክት ችላ ማለት ከባድ የትራፊክ አደጋ፣ ከፍተኛ ቅጣት እና የፍቃድ ነጥቦች ያስከትላል።",
+        "explanation_correct_amharic": "ትክክል፥ አቬት እውቀት። ይህ የላይኛው ነጭ መብራት በርቶ እያለ የማቆሚያ መስመሩን፣ የእግረኛ ማቋረጫውን ማለፍ ወይም ወደ መስቀለኛ መንገድ መግባት የተከለከለ ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የማቆሚያ መስመሩን፣ የእግረኛ ማቋረጫውን ማለፍ ወይም ወደ መስቀለኛ መንገድ መግባት.",
         "explanation_correct_audio": "708_q3_correct.mp3",
         "explanation_wrong_audio": "708_q3_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "ከባድ የትራፊክ አደጋ፣ ከፍተኛ ቅጣት እና የፍቃድ ነጥቦች ያስከትላል።",
-            "is_correct": true,
+            "text_amharic": "መለከት መንፋት.",
+            "is_correct": false,
             "audio_filename": "answer_708_q3_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "ቀላል ጥሰት ብቻ ነው።",
-            "is_correct": false,
+            "text_amharic": "የማቆሚያ መስመሩን፣ የእግረኛ ማቋረጫውን ማለፍ ወይም ወደ መስቀለኛ መንገድ መግባት.",
+            "is_correct": true,
             "audio_filename": "answer_708_q3_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "ትራፊክ ከሌለ ችላ ማለት ይችላሉ።",
+            "text_amharic": "ወደ ቀኝ መታጠፍ.",
             "is_correct": false,
             "audio_filename": "answer_708_q3_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "ለተወሰኑ የተሽከርካሪ ዓይነቶች ብቻ ነው የሚሰራው።",
+            "text_amharic": "መስመር መቀየር.",
             "is_correct": false,
             "audio_filename": "answer_708_q3_D.mp3"
           }
@@ -23609,41 +23609,41 @@
     "image_filename": "709.png",
     "video_filename": null,
     "name_hebrew": "709",
-    "name_amharic": "ይህ ምልክት በባቡር መስመር ማቋረጫ ላይ የሚገኝ የትራፊክ መብራት መሆኑን ያመለክታል።",
-    "explanation_amharic": "ይህ ምልክት በባቡር መስመር ማቋረጫ ላይ የሚገኝ ልዩ የትራፊክ መብራት ሲሆን አሽከርካሪዎች ባቡር በሚያልፍበት ጊዜ ደህንነታቸውን እንዲጠብቁ መመሪያ ይሰጣል። ቀይ አግድም መስመር ሲበራ ወዲያውኑ ማቆም አለብዎት፤ ቢጫ ክብ ሲበራ ለመቆም መዘጋጀት ወይም ምንም ባቡር እንደሌለ ካረጋገጡ በኋላ በጥንቃቄ ማለፍ አለብዎት፤ አረንጓዴ ክብ ሲበራ ደግሞ መንገዱ ክፍት ስለሆነ በደህና መሄድ ይችላሉ። ይህን ምልክት ችላ ማለት ከባቡር ጋር ግጭት በመፍጠር ለከፋ አደጋ፣ ለሞት ወይም ለከባድ ቅጣት ሊዳርግ ይችላል።",
+    "name_amharic": "አግድም ነጭ አራት ማዕዘን እና ክብ ምልክት",
+    "explanation_amharic": "አግድም ነጭ አራት ማዕዘን እና ክብ ነጭ መብራት አብረው ሲበሩ መቆም ግዴታ ነው። የማቆሚያ መስመርን፣ የእግረኛ መሻገሪያን ወይም መገናኛን ማለፍ የተከለከለ ሲሆን፣ እነዚህ ሁለቱም ነጭ መብራቶች አብረው እስከበሩ ድረስ መቆም አለብዎት። ወደፊት ለመሄድ መዘጋጀት ያለብዎት ምልክቱ ሲቀየር ነው።",
     "audio_name_filename": "709_name.mp3",
     "audio_explanation_filename": "709_explanation.mp3",
     "questions": [
       {
         "id": "709_q1",
-        "question_amharic": "በሥዕሉ ላይ የሚታየው የትራፊክ ምልክት ምን ያሳያል?",
+        "question_amharic": "ይህ ምልክት ምን ማለት ነው?",
         "question_audio": "709_q1_question.mp3",
-        "explanation_correct_amharic": "ጎሽ። ይህ ምልክት በባቡር መስመር ማቋረጫ ላይ የሚገኝ ልዩ የትራፊክ መብራት ሲሆን አሽከርካሪዎች ባቡር በሚያልፍበት ጊዜ ደህንነታቸውን እንዲጠብቁ መመሪያ ይሰጣል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህ ምልክት በባቡር መስመር ማቋረጫ ላይ የሚገኝ ልዩ የትራፊክ መብራት መሆኑን ያመለክታል።",
+        "explanation_correct_amharic": "እሰይ የኔ ጎቨዝ። ምልክቱ አግድም ነጭ አራት ማዕዘን እና ክብ ነጭ መብራቶች አብረው ሲበሩ መቆም ግዴታ መሆኑን ያመለክታል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: አግድም ነጭ አራት ማዕዘን እና ክብ ነጭ መብራቶች አብረው ሲበሩ መቆም ግዴታ መሆኑን ያመለክታል።",
         "explanation_correct_audio": "709_q1_correct.mp3",
         "explanation_wrong_audio": "709_q1_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "በመንገድ መስቀለኛ መንገድ ላይ የሚገኝ መደበኛ የትራፊክ መብራት ነው።",
-            "is_correct": false,
+            "text_amharic": "አግድም ነጭ አራት ማዕዘን እና ክብ ነጭ መብራቶች አብረው ሲበሩ መቆም ግዴታ መሆኑን ያመለክታል።",
+            "is_correct": true,
             "audio_filename": "answer_709_q1_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "በባቡር መስመር ማቋረጫ ላይ የሚገኝ ልዩ የትራፊክ መብራት ነው።",
-            "is_correct": true,
+            "text_amharic": "ፍጥነትዎን እንዲቀንሱ እና ለመቆም እንዲዘጋጁ ያዛል።",
+            "is_correct": false,
             "audio_filename": "answer_709_q1_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "በመንገድ ሥራ ምክንያት መንገድ መዘጋቱን የሚያመለክት ምልክት ነው።",
+            "text_amharic": "ወደፊት መሄድ እንደሚችሉ ያመለክታል።",
             "is_correct": false,
             "audio_filename": "answer_709_q1_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "ለእግረኛ ማቋረጫ የሚያገለግል ምልክት ነው።",
+            "text_amharic": "በጥንቃቄ ማለፍ እንደሚችሉ ያመለክታል።",
             "is_correct": false,
             "audio_filename": "answer_709_q1_D.mp3"
           }
@@ -23651,34 +23651,34 @@
       },
       {
         "id": "709_q2",
-        "question_amharic": "የባቡር መስመር ማቋረጫ ላይ ወደዚህ ምልክት ሲጠጉ እንዴት ይነዳሉ?",
+        "question_amharic": "በዚህ ምልክት መሰረት እንዴት መምራት አለብዎት?",
         "question_audio": "709_q2_question.mp3",
-        "explanation_correct_amharic": "እንድያ ነው። ቀይ አግድም መስመር ሲበራ ወዲያውኑ ማቆም አለብዎት፤ ቢጫ ክብ ሲበራ ለመቆም መዘጋጀት ወይም ምንም ባቡር እንደሌለ ካረጋገጡ በኋላ በጥንቃቄ ማለፍ አለብዎት፤ አረንጓዴ ክብ ሲበራ ደግሞ መንገዱ ክፍት ስለሆነ በደህና መሄድ ይችላሉ።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ቀይ አግድም መስመር ሲበራ ወዲያውኑ ማቆም አለብዎት፤ ቢጫ ክብ ሲበራ ለመቆም መዘጋጀት ወይም ምንም ባቡር እንደሌለ ካረጋገጡ በኋላ በጥንቃቄ ማለፍ አለብዎት፤ አረንጓዴ ክብ ሲበራ ደግሞ መንገዱ ክፍት ስለሆነ በደህና መሄድ ይችላሉ።",
+        "explanation_correct_amharic": "ትክክል፥ አቬት እውቀት። አግድም ነጭ አራት ማዕዘን እና ክብ ነጭ መብራቶች አብረው ሲበሩ፣ የማቆሚያ መስመርን፣ የእግረኛ መሻገሪያን ወይም መገናኛን ማለፍ የተከለከለ ስለሆነ ሙሉ በሙሉ ማቆም እና ምልክቱ እስኪቀየር መጠበቅ አለብዎት።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የማቆሚያ መስመርን፣ የእግረኛ መሻገሪያን ወይም መገናኛን ሳያልፉ ሙሉ በሙሉ ማቆም እና ምልክቱ እስኪቀየር መጠበቅ አለብዎት።",
         "explanation_correct_audio": "709_q2_correct.mp3",
         "explanation_wrong_audio": "709_q2_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "አረንጓዴ መብራት ቢበራም እንኳ ፍጥነቴን ቀንሼ እጅግ በጣም በጥንቃቄ እሻገራለሁ።",
-            "is_correct": false,
+            "text_amharic": "የማቆሚያ መስመርን፣ የእግረኛ መሻገሪያን ወይም መገናኛን ሳያልፉ ሙሉ በሙሉ ማቆም እና ምልክቱ እስኪቀየር መጠበቅ አለብዎት።",
+            "is_correct": true,
             "audio_filename": "answer_709_q2_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "የትኛውም መብራት ቢበራ ሁልጊዜ ከባቡር መስመሩ በፊት አቆማለሁ።",
+            "text_amharic": "ፍጥነትዎን ቀንስ እና ለመቆም ተዘጋጅ።",
             "is_correct": false,
             "audio_filename": "answer_709_q2_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "ቀይ መብራት ሲበራ ወዲያውኑ አቆማለሁ፤ ቢጫ መብራት ሲበራ ለመቆም እዘጋጃለሁ ወይም ባቡር እንደሌለ ካረጋገጥኩ በኋላ በጥንቃቄ እሻገራለሁ፤ አረንጓዴ መብራት ሲበራ ደግሞ በደህና እሄዳለሁ።",
-            "is_correct": true,
+            "text_amharic": "ሌሎች ተሽከርካሪዎች ከሌሉ ማለፍ ይችላሉ።",
+            "is_correct": false,
             "audio_filename": "answer_709_q2_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "በመስቀለኛ መንገድ ላይ እንዳለ መደበኛ የትራፊክ መብራት እቆጥረዋለሁ፣ እና አረንጓዴ መብራት ከሆነ በፍጥነት እሻገራለሁ።",
+            "text_amharic": "ለሌሎች ትራፊክ ቀይ መብራት ካለ ብቻ ማቆም አለብዎት።",
             "is_correct": false,
             "audio_filename": "answer_709_q2_D.mp3"
           }
@@ -23686,35 +23686,35 @@
       },
       {
         "id": "709_q3",
-        "question_amharic": "በዚህ ምልክት ላይ ቢጫው መብራት (መካከለኛው) ሲበራ ምን ማድረግ አለብዎት?",
+        "question_amharic": "አግድም ነጭ አራት ማዕዘን እና ክብ ነጭ መብራቶች አብረው ሲበሩ ምን ማድረግ የተከለከለ ነው?",
         "question_audio": "709_q3_question.mp3",
-        "explanation_correct_amharic": "አቬት ችሎታ፥ ትክክል። ቢጫ ክብ ሲበራ ለመቆም መዘጋጀት ወይም ምንም ባቡር እንደሌለ ካረጋገጡ በኋላ በጥንቃቄ ማለፍ አለብዎት።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ቢጫ ክብ ሲበራ ለመቆም መዘጋጀት ወይም ምንም ባቡር እንደሌለ ካረጋገጡ በኋላ በጥንቃቄ ማለፍ አለብዎት።",
+        "explanation_correct_amharic": "ጎሽ! አግድም ነጭ አራት ማዕዘን እና ክብ ነጭ መብራቶች አብረው እስከበሩ ድረስ የማቆሚያ መስመርን፣ የእግረኛ መሻገሪያን ወይም መገናኛን ማለፍ የተከለከለ ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የማቆሚያ መስመርን፣ የእግረኛ መሻገሪያን ወይም መገናኛን ማለፍ የተከለከለ ነው።",
         "explanation_correct_audio": "709_q3_correct.mp3",
         "explanation_wrong_audio": "709_q3_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "ቢጫው መብራት ማቋረጫው ለትራፊክ ዝግ መሆኑን ያመለክታል።",
+            "text_amharic": "የህዝብ ማመላለሻ ተሽከርካሪዎች እንዲያልፉ መፍቀድ የተከለከለ ነው።",
             "is_correct": false,
             "audio_filename": "answer_709_q3_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "ባቡር ሊመጣ ስለሆነ ወዲያውኑ ማቆም አለብዎት።",
-            "is_correct": false,
+            "text_amharic": "የማቆሚያ መስመርን፣ የእግረኛ መሻገሪያን ወይም መገናኛን ማለፍ የተከለከለ ነው።",
+            "is_correct": true,
             "audio_filename": "answer_709_q3_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "ፍጥነትዎን ጨምረው ማቋረጫውን በተቻለ ፍጥነት ማለፍ አለብዎት።",
+            "text_amharic": "ወደፊት ለመሄድ መዘጋጀት የተከለከለ ነው።",
             "is_correct": false,
             "audio_filename": "answer_709_q3_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "ለመቆም መዘጋጀት አለብዎት፣ ወይም ባቡር እንደማይመጣ ካረጋገጡ በኋላ በጥንቃቄ ማለፍ አለብዎት።",
-            "is_correct": true,
+            "text_amharic": "ተሽከርካሪዎን ማቆም የተከለከለ ነው።",
+            "is_correct": false,
             "audio_filename": "answer_709_q3_D.mp3"
           }
         ]
@@ -23728,41 +23728,41 @@
     "image_filename": "710.png",
     "video_filename": null,
     "name_hebrew": "710",
-    "name_amharic": "ይህ ምልክት ለህዝብ ማመላለሻ ተሽከርካሪዎች ብቻ የሚያገለግል የትራፊክ መብራት መሆኑን ያመለክታል።",
-    "explanation_amharic": "ይህ የትራፊክ መብራት ለአውቶቡሶች፣ ለታክሲዎች እና ለሌሎች የህዝብ ማመላለሻ ተሽከርካሪዎች ብቻ የታሰበ ነው። ነጭ ቀጥ ያለ መስመር ሲበራ፣ የህዝብ ማመላለሻ ተሽከርካሪዎች ወደፊት መሄድ እንደሚችሉ ያሳያል፤ የግል ተሽከርካሪ አሽከርካሪዎች ግን ይህንን መብራት ችላ ብለው ለመደበኛ የትራፊክ መብራቶች ትኩረት መስጠት አለባቸው። ይህንን መብራት ችላ ማለት ወይም በስህተት መከተል የትራፊክ አደጋ ወይም ቅጣት ሊያስከትል ይችላል።",
+    "name_amharic": "ቀጥ ያለ ነጭ አራት ማዕዘን ምልክት",
+    "explanation_amharic": "ይህ ቀጥ ያለ ነጭ አራት ማዕዘን ብርሃን ወደፊት እንድትሄዱ ወይም ቀጥታ እንድትነዱ ያሳያል። መብራቱ ብልጭ ድርግም የሚል ከሆነ፣ ምልክቱ እያበቃ መሆኑን እና ምልክት 716 ሊታይ መሆኑን ያመለክታል።",
     "audio_name_filename": "710_name.mp3",
     "audio_explanation_filename": "710_explanation.mp3",
     "questions": [
       {
         "id": "710_q1",
-        "question_amharic": "በምስሉ ላይ የሚታየው ምልክት ምን ማለት ነው?",
+        "question_amharic": "ይህ የመንገድ ምልክት ምን ማለት ነው?",
         "question_audio": "710_q1_question.mp3",
-        "explanation_correct_amharic": "እንድያ ነው። ይህ ምልክት ለህዝብ ማመላለሻ ተሽከርካሪዎች (እንደ አውቶቡሶች እና ታክሲዎች) ብቻ የሚያገለግል ልዩ የትራፊክ መብራት መሆኑን ያመለክታል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህ ምልክት ለህዝብ ማመላለሻ ተሽከርካሪዎች ብቻ የሚያገለግል ልዩ የትራፊክ መብራት መሆኑን ያመለክታል። ለግል ተሽከርካሪዎች አይደለም።",
+        "explanation_correct_amharic": "ትክክል፥ አቬት እውቀት። ",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህ ምልክት ወደፊት መሄድ ወይም ቀጥታ መንዳት እንደሚቻል ያሳያል።",
         "explanation_correct_audio": "710_q1_correct.mp3",
         "explanation_wrong_audio": "710_q1_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "ይህ የትራፊክ መብራት ለህዝብ ማመላለሻ ተሽከርካሪዎች ብቻ የተዘጋጀ ነው።",
+            "text_amharic": "ወደፊት መሄድ ወይም ቀጥታ መንዳት እንደሚቻል ያሳያል።",
             "is_correct": true,
             "audio_filename": "answer_710_q1_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "ለሁሉም የተሽከርካሪ አይነቶች የግዴታ ማቆሚያ ምልክት ነው።",
+            "text_amharic": "ወደ ቀኝ መታጠፍ እንደሚቻል ያሳያል።",
             "is_correct": false,
             "audio_filename": "answer_710_q1_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "የህዝብ ማመላለሻ መስመርን የሚያመለክት ምልክት ነው።",
+            "text_amharic": "መቆም እንዳለብዎ ያሳያል።",
             "is_correct": false,
             "audio_filename": "answer_710_q1_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "ለሁሉም ተሽከርካሪዎች የተለመደ የትራፊክ መብራት ነው።",
+            "text_amharic": "ወደ ግራ መታጠፍ እንደሚቻል ያሳያል።",
             "is_correct": false,
             "audio_filename": "answer_710_q1_D.mp3"
           }
@@ -23770,69 +23770,69 @@
       },
       {
         "id": "710_q2",
-        "question_amharic": "የግል ተሽከርካሪ አሽከርካሪ ከሆንክ እና እንደዚህ አይነት የትራፊክ መብራት ካጋጠመህ እንዴት ትነዳለህ?",
+        "question_amharic": "ይህን ምልክት ሲያዩ እንዴት መንዳት አለብዎት?",
         "question_audio": "710_q2_question.mp3",
-        "explanation_correct_amharic": "አቬት ችሎታ፥ ትክክል። የግል ተሽከርካሪ አሽከርካሪዎች ይህንን የትራፊክ መብራት ችላ ብለው ለመደበኛ የትራፊክ መብራቶች ትኩረት መስጠት አለባቸው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የግል ተሽከርካሪ አሽከርካሪዎች ይህንን የትራፊክ መብራት ችላ ብለው ለመደበኛ የትራፊክ መብራቶች ትኩረት መስጠት አለባቸው። ይህ መብራት ለእነሱ የታሰበ አይደለም።",
+        "explanation_correct_amharic": "ጎሽ! ",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህን ምልክት ሲያዩ ወደፊት ቀጥታ መንዳት አለብዎት።",
         "explanation_correct_audio": "710_q2_correct.mp3",
         "explanation_wrong_audio": "710_q2_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "አቆም እና በዚህ መብራት ላይ አረንጓዴ መብራት እስኪበራ እጠብቃለሁ።",
+            "text_amharic": "ወደ ግራ መታጠፍ አለብዎት።",
             "is_correct": false,
             "audio_filename": "answer_710_q2_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "ይህን መብራት ችላ ብዬ የተለመዱትን የትራፊክ መብራቶች እከተላለሁ።",
-            "is_correct": true,
+            "text_amharic": "በጥንቃቄ ወደ ማንኛውም አቅጣጫ መሄድ ይችላሉ።",
+            "is_correct": false,
             "audio_filename": "answer_710_q2_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "የህዝብ ማመላለሻ ተሽከርካሪዎች ከእኔ በፊት እንዲያልፉ እፈቅዳለሁ።",
+            "text_amharic": "ወዲያውኑ ማቆም አለብዎት።",
             "is_correct": false,
             "audio_filename": "answer_710_q2_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "መብራቱ ካዘዘኝ ብቻ ወደ ህዝብ ማመላለሻ መስመር እገባለሁ።",
-            "is_correct": false,
+            "text_amharic": "ወደፊት ቀጥታ መንዳት አለብዎት።",
+            "is_correct": true,
             "audio_filename": "answer_710_q2_D.mp3"
           }
         ]
       },
       {
         "id": "710_q3",
-        "question_amharic": "በዚህ የትራፊክ መብራት ላይ የሚታየው ነጭ ቀጥ ያለ መስመር ምን ማለት ነው?",
+        "question_amharic": "ይህ ቀጥ ያለ ነጭ አራት ማዕዘን ብርሃን ብልጭ ድርግም የሚል ከሆነ ምን ማለት ነው?",
         "question_audio": "710_q3_question.mp3",
-        "explanation_correct_amharic": "በጣም አሪፍ። ነጭ ቀጥ ያለ መስመር ሲበራ፣ የህዝብ ማመላለሻ ተሽከርካሪዎች (አውቶቡሶች፣ ታክሲዎች) ወደፊት መሄድ እንደሚችሉ ያሳያል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ነጭ ቀጥ ያለ መስመር ሲበራ፣ የህዝብ ማመላለሻ ተሽከርካሪዎች ወደፊት መሄድ እንደሚችሉ ያሳያል። ይህ ምልክት ለግል ተሽከርካሪዎች አይመለከትም።",
+        "explanation_correct_amharic": "እንድያ ነው! ብልጭ ድርግም የሚል ነጭ አራት ማዕዘን ብርሃን ምልክቱ እያበቃ መሆኑን እና ምልክት 716 ሊመጣ መሆኑን ያመለክታል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ብልጭ ድርግም የሚል ነጭ አራት ማዕዘን ብርሃን ምልክቱ እያበቃ መሆኑን እና ምልክት 716 ሊመጣ መሆኑን ያመለክታል።",
         "explanation_correct_audio": "710_q3_correct.mp3",
         "explanation_wrong_audio": "710_q3_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "ለሁሉም ተሽከርካሪዎች ወደፊት እንዲሄዱ እንደተፈቀደላቸው ያሳያል።",
-            "is_correct": false,
+            "text_amharic": "ምልክቱ እያበቃ መሆኑን እና ምልክት 716 ሊታይ መሆኑን ያመለክታል።",
+            "is_correct": true,
             "audio_filename": "answer_710_q3_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "የትራፊክ መብራቱ ብልሽት እንዳለበት እና ልዩ ጥንቃቄ እንደሚያስፈልግ ያሳያል።",
+            "text_amharic": "አደጋ እንዳለ እና ወዲያውኑ ማቆም እንዳለብዎ ያሳያል።",
             "is_correct": false,
             "audio_filename": "answer_710_q3_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "ለህዝብ ማመላለሻ ተሽከርካሪዎች ወደፊት እንዲሄዱ እንደተፈቀደላቸው ያሳያል።",
-            "is_correct": true,
+            "text_amharic": "የመንገድ ምልክቱ ብልሽት እንዳለበት ያሳያል።",
+            "is_correct": false,
             "audio_filename": "answer_710_q3_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "ይህ የእግረኛ መሻገሪያ መሆኑን ያመለክታል።",
+            "text_amharic": "በፍጥነት ማለፍ እንዳለብዎ ያሳያል።",
             "is_correct": false,
             "audio_filename": "answer_710_q3_D.mp3"
           }
