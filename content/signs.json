@@ -25632,76 +25632,76 @@
     "image_filename": "726.png",
     "video_filename": null,
     "name_hebrew": "726",
-    "name_amharic": "ይህ ምልክት በመንገድ ላይ ያለን መሰናክል ከሁለቱም አቅጣጫ ማለፍ እንደሚቻል ያሳያል።",
-    "explanation_amharic": "ይህ ምልክት በመንገድ ላይ ያለን መሰናክል (ለምሳሌ ደሴት ወይም የትራፊክ መለያ) ከግራ ወይም ከቀኝ በኩል ማለፍ እንደሚቻል ያመለክታል። አሽከርካሪው መሰናክሉን ሲያይ እንደ የትራፊክ ፍሰት እና የመንገድ ሁኔታ ከሁለቱም አቅጣጫ በጥንቃቄ ማለፍ አለበት። ይህን ምልክት ችላ ማለት አደጋ ሊያስከትል ወይም የትራፊክ ፍሰትን ሊያስተጓጉል ይችላል።",
+    "name_amharic": "የመውጫ መስመር ምልክት",
+    "explanation_amharic": "ይህ የመውጫ መስመር ምልክት ሲሆን፣ ከመንገድ ለመውጣት ምልክቱ ከላይ በተቀመጠበት መስመር ይንዱ። በሌሊት የተሻለ እይታ እንዲኖረው ጥቁር ዳራ ያለው ሌላ ዓይነትም አለ።",
     "audio_name_filename": "726_name.mp3",
     "audio_explanation_filename": "726_explanation.mp3",
     "questions": [
       {
         "id": "726_q1",
-        "question_amharic": "ይህ የትራፊክ ምልክት ምን ያሳያል?",
+        "question_amharic": "ይህ የመንገድ ምልክት ምን ማለት ነው?",
         "question_audio": "726_q1_question.mp3",
-        "explanation_correct_amharic": "ጎቨዝ። ምልክቱ በመንገድ ላይ ያለን መሰናክል ከሁለቱም አቅጣጫ ማለፍ እንደሚቻል በግልጽ ያሳያል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ መምረጥ የመንገድ ላይ መሰናክልን በአግባቡ ባለማለፍ አደጋ ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "እንድያ ነው! ይህ ምልክት የመውጫ መስመርን ያመለክታል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህ የመውጫ መስመር ምልክት ነው።",
         "explanation_correct_audio": "726_q1_correct.mp3",
         "explanation_wrong_audio": "726_q1_wrong.mp3",
         "answers": [
           {
-            "id": "D",
-            "text_amharic": "በመንገዱ ላይ አደገኛ መታጠፊያ እንዳለ ያስጠነቅቃል።",
-            "is_correct": false,
-            "audio_filename": "answer_726_q1_D.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "በመንገዱ ላይ ወደፊት መሄድ ብቻ እንደሚፈቀድ ያሳያል።",
+            "text_amharic": "ይህ ቀጥ ብሎ ለመሄድ የሚያገለግል መስመር ነው።",
             "is_correct": false,
             "audio_filename": "answer_726_q1_A.mp3"
           },
           {
-            "id": "C",
-            "text_amharic": "ወደ ግራ ወይም ወደ ቀኝ መታጠፍ የተከለከለ መሆኑን ያሳያል።",
+            "id": "B",
+            "text_amharic": "ይህ ለአደጋ ጊዜ ተሽከርካሪዎች መስመር ነው።",
             "is_correct": false,
+            "audio_filename": "answer_726_q1_B.mp3"
+          },
+          {
+            "id": "C",
+            "text_amharic": "ይህ የመውጫ መስመር ምልክት ነው።",
+            "is_correct": true,
             "audio_filename": "answer_726_q1_C.mp3"
           },
           {
-            "id": "B",
-            "text_amharic": "በመንገድ ላይ ያለን መሰናክል ከግራ ወይም ከቀኝ በኩል ማለፍ እንደሚቻል ያመለክታል።",
-            "is_correct": true,
-            "audio_filename": "answer_726_q1_B.mp3"
+            "id": "D",
+            "text_amharic": "ይህ የመግቢያ መስመር ምልክት ነው።",
+            "is_correct": false,
+            "audio_filename": "answer_726_q1_D.mp3"
           }
         ]
       },
       {
         "id": "726_q2",
-        "question_amharic": "ይህን ምልክት ሲያዩ አሽከርካሪው ምን ማድረግ አለበት?",
+        "question_amharic": "በዚህ ምልክት መሰረት አሽከርካሪዎች እንዴት መተግበር አለባቸው?",
         "question_audio": "726_q2_question.mp3",
-        "explanation_correct_amharic": "በጣም ጥሩ። አሽከርካሪው የትራፊክ ፍሰትን እና የመንገድ ሁኔታን በመመልከት መሰናክሉን ከሁለቱም አቅጣጫ በጥንቃቄ ማለፍ አለበት።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ትክክለኛውን እርምጃ አለመውሰድ የትራፊክ ፍሰትን ሊያስተጓጉል ወይም አደጋ ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "አቬት ችሎታ፥ ትክክል። ከመንገድ ለመውጣት ምልክቱ ከላይ በተቀመጠበት መስመር መንዳት አለብዎት።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ከመንገድ ለመውጣት ምልክቱ ከላይ በተቀመጠበት መስመር ይንዱ።",
         "explanation_correct_audio": "726_q2_correct.mp3",
         "explanation_wrong_audio": "726_q2_wrong.mp3",
         "answers": [
           {
-            "id": "B",
-            "text_amharic": "የትራፊክ ፍሰትን እና የመንገድ ሁኔታን ከግምት ውስጥ በማስገባት መሰናክሉን ከግራ ወይም ከቀኝ በጥንቃቄ ማለፍ አለበት።",
-            "is_correct": true,
-            "audio_filename": "answer_726_q2_B.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "ፍጥነቱን ጨምሮ መሰናክሉን በፍጥነት ማለፍ አለበት።",
-            "is_correct": false,
+            "text_amharic": "ከመንገድ ለመውጣት ምልክቱ ከላይ በተቀመጠበት መስመር ይንዱ።",
+            "is_correct": true,
             "audio_filename": "answer_726_q2_A.mp3"
           },
           {
+            "id": "B",
+            "text_amharic": "ይህ መስመር በዋናው መንገድ ላይ ለመቀጠል ነው።",
+            "is_correct": false,
+            "audio_filename": "answer_726_q2_B.mp3"
+          },
+          {
             "id": "C",
-            "text_amharic": "መኪናውን አቁሞ የትራፊክ ፖሊስ እስኪመጣ መጠበቅ አለበት።",
+            "text_amharic": "ከመንገድ ለመውጣት በማንኛውም መስመር መንዳት ይችላሉ።",
             "is_correct": false,
             "audio_filename": "answer_726_q2_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "ወደ ግራ ወይም ወደ ቀኝ ብቻ መታጠፍ እንዳለበት መወሰን አለበት።",
+            "text_amharic": "አቁመው የትራፊክ መመሪያ ይጠብቁ።",
             "is_correct": false,
             "audio_filename": "answer_726_q2_D.mp3"
           }
@@ -25709,35 +25709,35 @@
       },
       {
         "id": "726_q3",
-        "question_amharic": "ይህንን ምልክት ችላ ማለት ምን ሊያስከትል ይችላል?",
+        "question_amharic": "ስለዚህ የመውጫ መስመር ምልክት ትክክለኛው መግለጫ የትኛው ነው?",
         "question_audio": "726_q3_question.mp3",
-        "explanation_correct_amharic": "ጎሽሽ። ምልክቱን ችላ ማለት አሽከርካሪው መሰናክልን በአግባቡ እንዳያልፍ በማድረግ አደጋ ሊያስከትል ይችላል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ምልክቱን ችላ ማለት የትራፊክ ደንቦችን መጣስ እና ለራስ እና ለሌሎች አደጋ መፍጠር ነው።",
+        "explanation_correct_amharic": "ትክክል! በሌሊት የተሻለ እይታ እንዲኖረው ጥቁር ዳራ ያለው ሌላ ዓይነትም አለ።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በሌሊት የተሻለ እይታ እንዲኖረው ጥቁር ዳራ ያለው ሌላ ዓይነትም አለ።",
         "explanation_correct_audio": "726_q3_correct.mp3",
         "explanation_wrong_audio": "726_q3_wrong.mp3",
         "answers": [
           {
-            "id": "C",
-            "text_amharic": "የመንገድ ላይ መሰናክሉ በራሱ ይጠፋል ብሎ ማሰብ ነው።",
-            "is_correct": false,
-            "audio_filename": "answer_726_q3_C.mp3"
-          },
-          {
-            "id": "B",
-            "text_amharic": "የትራፊክ ፍሰትን ማስተጓጎል ወይም የመንገድ አደጋ ሊያስከትል ይችላል።",
-            "is_correct": true,
-            "audio_filename": "answer_726_q3_B.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "ምንም አይነት ችግር ሳይፈጠር ጉዞውን መቀጠል ይችላል።",
+            "text_amharic": "ይህ ምልክት የሚታየው በቀን ብርሃን ብቻ ነው።",
             "is_correct": false,
             "audio_filename": "answer_726_q3_A.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "በመንገዱ ላይ ያለውን መሰናክል በየትኛውም መንገድ ማለፍ እንደሚቻል ያሳያል።",
+            "id": "B",
+            "text_amharic": "በሌሊት ብልጭ ድርግም የሚሉ መብራቶች አሉት።",
             "is_correct": false,
+            "audio_filename": "answer_726_q3_B.mp3"
+          },
+          {
+            "id": "C",
+            "text_amharic": "በሌሊት የትራፊክ ፍሰት ሲጨምር ቀለሙን ይለውጣል።",
+            "is_correct": false,
+            "audio_filename": "answer_726_q3_C.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "በሌሊት የተሻለ እይታ እንዲኖረው ጥቁር ዳራ ያለው ሌላ ዓይነትም አለ።",
+            "is_correct": true,
             "audio_filename": "answer_726_q3_D.mp3"
           }
         ]
@@ -25751,113 +25751,113 @@
     "image_filename": "727.png",
     "video_filename": null,
     "name_hebrew": "727",
-    "name_amharic": "ይህ ምልክት ለብስክሌት ነጂዎች ቀይ የትራፊክ መብራት ሲሆን እንዲቆሙ ያዛል።",
-    "explanation_amharic": "ይህ የትራፊክ መብራት በተለይ ለብስክሌት ነጂዎች የተዘጋጀ ነው። ቀይ የብስክሌት ምልክት ብስክሌት ነጂዎች ከመገናኛ መንገዱ ወይም ከተሰመረው መስመር በፊት ሙሉ በሙሉ እንዲቆሙ ያዛል። ይህንን ምልክት የሚያይ የብስክሌት ነጂ አደጋን ወይም ቅጣትን ለማስወገድ መብራቱ አረንጓዴ እስኪሆን ድረስ መጠበቅ አለበት።",
+    "name_amharic": "ለብስክሌት ነጂዎች ቀይ መብራት",
+    "explanation_amharic": "ይህ ምልክት ለብስክሌት ነጂዎች ቀይ መብራት ሲሆን 'ቁም!' የሚል ትዕዛዝ ይሰጣል። የማቆሚያ መስመር ወይም የእግረኛ ማቋረጫ ካለ፣ ከነሱ በፊት ማቆም ግዴታ ነው። ካልተሰመረ ደግሞ፣ ለትራፊክ መብራቱ ቅርብ በሆነ ቦታ ቁም፤ ከትራፊክ መብራቱ በላይ የቀስት ምልክት ካለ፣ ለተጠቀሰው አቅጣጫ ብቻ ይሠራል። ቀይ መብራቱ እስካበራ ድረስ የማቆሚያ መስመሩን፣ የእግረኛ ማቋረጫውን ማለፍ ወይም ወደ መስቀለኛ መንገድ መግባት የተከለከለ ነው።",
     "audio_name_filename": "727_name.mp3",
     "audio_explanation_filename": "727_explanation.mp3",
     "questions": [
       {
         "id": "727_q1",
-        "question_amharic": "ይህ ቀይ የብስክሌት ምልክት የትራፊክ መብራት ለብስክሌት ነጂዎች ምን ማለት ነው?",
+        "question_amharic": "ይህ ምልክት ምን ማለት ነው?",
         "question_audio": "727_q1_question.mp3",
-        "explanation_correct_amharic": "ዋውው በጣም ጥሩ። ይህ ምልክት ቀይ መብራት ሲሆን ብስክሌት ነጂዎች ወዲያውኑ እንዲቆሙ ያዛል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ቀይ መብራትን ችላ ማለት አደጋን ወይም የትራፊክ ቅጣትን ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "አቬት ችሎታ፥ ትክክል። ይህ ምልክት ለብስክሌት ነጂዎች ቀይ መብራት ሲሆን እንዲቆሙ ያዛል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ለብስክሌት ነጂዎች ቀይ መብራት ሲሆን እንዲቆሙ ያዛል።",
         "explanation_correct_audio": "727_q1_correct.mp3",
         "explanation_wrong_audio": "727_q1_wrong.mp3",
         "answers": [
           {
-            "id": "D",
-            "text_amharic": "ብስክሌት ነጂዎች ከማለፋቸው በፊት እግረኞችን መፈለግ አለባቸው።",
+            "id": "A",
+            "text_amharic": "የብስክሌት መንገድ መኖሩን ያሳያል።",
             "is_correct": false,
-            "audio_filename": "answer_727_q1_D.mp3"
-          },
-          {
-            "id": "C",
-            "text_amharic": "ብስክሌት ነጂዎች ፍጥነታቸውን ቀንስው ለመቆም መዘጋጀት አለባቸው።",
-            "is_correct": false,
-            "audio_filename": "answer_727_q1_C.mp3"
+            "audio_filename": "answer_727_q1_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "ብስክሌት ነጂዎች ሙሉ በሙሉ መቆም አለባቸው።",
-            "is_correct": true,
+            "text_amharic": "ለሁሉም ተሽከርካሪዎች ቀይ መብራት ሲሆን እንዲቆሙ ያዛል።",
+            "is_correct": false,
             "audio_filename": "answer_727_q1_B.mp3"
           },
           {
-            "id": "A",
-            "text_amharic": "ብስክሌት ነጂዎች በጥንቃቄ ማለፍ ይችላሉ።",
+            "id": "C",
+            "text_amharic": "ለብስክሌት ነጂዎች ቀይ መብራት ሲሆን እንዲቆሙ ያዛል።",
+            "is_correct": true,
+            "audio_filename": "answer_727_q1_C.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ለብስክሌት ነጂዎች አረንጓዴ መብራት ሲሆን እንዲቀጥሉ ያዛል።",
             "is_correct": false,
-            "audio_filename": "answer_727_q1_A.mp3"
+            "audio_filename": "answer_727_q1_D.mp3"
           }
         ]
       },
       {
         "id": "727_q2",
-        "question_amharic": "አንድ የብስክሌት ነጂ ይህንን ምልክት ሲያይ በትክክል ምን ማድረግ አለበት?",
+        "question_amharic": "በዚህ ምልክት መሰረት እንዴት መምራት አለብዎት?",
         "question_audio": "727_q2_question.mp3",
-        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። የብስክሌት ቀይ መብራት ማለት ብስክሌት ነጂው ከመገናኛ መንገዱ በፊት ሙሉ በሙሉ መቆም አለበት ማለት ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ቀይ መብራትን አለማክበር ከባድ አደጋዎችን ሊያስከትል ወይም ከፍተኛ ቅጣት ሊያስወጣ ይችላል።",
+        "explanation_correct_amharic": "ትክክል! የማቆሚያ መስመር ወይም የእግረኛ ማቋረጫ ካለ ከነሱ በፊት መቆም፣ ካልተሰመረ ደግሞ ለትራፊክ መብራቱ ቅርብ በሆነ ቦታ መቆም አለብዎት።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የማቆሚያ መስመር ወይም የእግረኛ ማቋረጫ ካለ ከነሱ በፊት መቆም፣ ካልተሰመረ ደግሞ ለትራፊክ መብራቱ ቅርብ በሆነ ቦታ መቆም አለብዎት።",
         "explanation_correct_audio": "727_q2_correct.mp3",
         "explanation_wrong_audio": "727_q2_wrong.mp3",
         "answers": [
           {
-            "id": "D",
-            "text_amharic": "ለሚመጡት ተሽከርካሪዎች መንገድ ሰጥቶ ከዚያ ማለፍ አለበት።",
-            "is_correct": false,
-            "audio_filename": "answer_727_q2_D.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "መንገዱ ንጹህ ከሆነ መንዳት መቀጠል አለበት።",
+            "text_amharic": "ሌሎች ተሽከርካሪዎች ካሉ ብቻ መቆም አለብኝ።",
             "is_correct": false,
             "audio_filename": "answer_727_q2_A.mp3"
           },
           {
+            "id": "B",
+            "text_amharic": "ወደ ቀኝ መታጠፍ ከፈለግኩ መንገዱ ጥርት ካለ ማለፍ እችላለሁ።",
+            "is_correct": false,
+            "audio_filename": "answer_727_q2_B.mp3"
+          },
+          {
             "id": "C",
-            "text_amharic": "ሌሎች ተሽከርካሪዎች ከሌሉ ወደ ቀኝ መታጠፍ አለበት።",
+            "text_amharic": "በጥንቃቄ ማለፍ እችላለሁ።",
             "is_correct": false,
             "audio_filename": "answer_727_q2_C.mp3"
           },
           {
-            "id": "B",
-            "text_amharic": "ከተሰመረው መስመር በፊት ቆሞ አረንጓዴ መብራት እስኪበራ መጠበቅ አለበት።",
+            "id": "D",
+            "text_amharic": "የማቆሚያ መስመር ወይም የእግረኛ ማቋረጫ ካለ ከነሱ በፊት መቆም፣ ካልተሰመረ ደግሞ ለትራፊክ መብራቱ ቅርብ በሆነ ቦታ መቆም አለብኝ።",
             "is_correct": true,
-            "audio_filename": "answer_727_q2_B.mp3"
+            "audio_filename": "answer_727_q2_D.mp3"
           }
         ]
       },
       {
         "id": "727_q3",
-        "question_amharic": "አንድ የብስክሌት ነጂ ይህንን ቀይ መብራት ችላ ብሎ ካለፈ ምን ሊገጥመው ይችላል?",
+        "question_amharic": "ቀይ መብራቱ በሚበራበት ጊዜ በዚህ ምልክት መሰረት ምን ማድረግ የተከለከለ ነው?",
         "question_audio": "727_q3_question.mp3",
-        "explanation_correct_amharic": "እሰይ። አቤት እውቀት! የትራፊክ መብራትን አለማክበር አደጋን የመፍጠር እና የህግ ቅጣት የመጣል አደጋ አለው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የትራፊክ ህጎችን አለማክበር ለራስ እና ለሌሎች አሽከርካሪዎች አደገኛ ሁኔታዎችን ይፈጥራል።",
+        "explanation_correct_amharic": "አዎ! ቀይ መብራቱ እስካበራ ድረስ የማቆሚያ መስመሩን፣ የእግረኛ ማቋረጫውን ማለፍ ወይም ወደ መስቀለኛ መንገድ መግባት የተከለከለ ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የማቆሚያ መስመሩን፣ የእግረኛ ማቋረጫውን ማለፍ ወይም ወደ መስቀለኛ መንገድ መግባት የተከለከለ ነው።",
         "explanation_correct_audio": "727_q3_correct.mp3",
         "explanation_wrong_audio": "727_q3_wrong.mp3",
         "answers": [
           {
-            "id": "B",
-            "text_amharic": "አደጋ ሊያደርስ ወይም የትራፊክ ቅጣት ሊጣልበት ይችላል።",
+            "id": "A",
+            "text_amharic": "የማቆሚያ መስመሩን፣ የእግረኛ ማቋረጫውን ማለፍ ወይም ወደ መስቀለኛ መንገድ መግባት የተከለከለ ነው።",
             "is_correct": true,
+            "audio_filename": "answer_727_q3_A.mp3"
+          },
+          {
+            "id": "B",
+            "text_amharic": "ሌላ ትራፊክ ከሌለ የማቆሚያ መስመሩን ማለፍ ይፈቀዳል።",
+            "is_correct": false,
             "audio_filename": "answer_727_q3_B.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "ለብስክሌት ነጂዎች ምክር ብቻ ስለሆነ ምንም አይገጥመውም።",
-            "is_correct": false,
-            "audio_filename": "answer_727_q3_D.mp3"
-          },
-          {
             "id": "C",
-            "text_amharic": "አደጋ ካላደረሰ በስተቀር አይቀጣም።",
+            "text_amharic": "ወደ መስቀለኛ መንገድ መግባት ብቻ ነው የተከለከለው፣ መስመሮችን ማለፍ ግን ይቻላል።",
             "is_correct": false,
             "audio_filename": "answer_727_q3_C.mp3"
           },
           {
-            "id": "A",
-            "text_amharic": "ከፖሊስ መኮንን ማስጠንቀቂያ ብቻ ሊያገኝ ይችላል።",
+            "id": "D",
+            "text_amharic": "ይህ መብራት ለእግረኞች ስለሆነ ለብስክሌት ነጂዎች አይመለከትም።",
             "is_correct": false,
-            "audio_filename": "answer_727_q3_A.mp3"
+            "audio_filename": "answer_727_q3_D.mp3"
           }
         ]
       }
@@ -25870,41 +25870,41 @@
     "image_filename": "728.png",
     "video_filename": null,
     "name_hebrew": "728",
-    "name_amharic": "ይህ ምልክት ብስክሌተኞች መንገዳቸውን እንዲቀጥሉ የሚፈቅድ የትራፊክ መብራት መሆኑን ያመለክታል።",
-    "explanation_amharic": "ይህ የትራፊክ መብራት በተለይ ለብስክሌት ነጂዎች የተዘጋጀ ነው። አረንጓዴ የብስክሌት ምልክት ብስክሌተኞች መንገዳቸውን በደህና እንዲቀጥሉ ይፈቅዳል። የመኪና አሽከርካሪዎች ይህንን ምልክት ሲያዩ፣ ብስክሌተኞች መንቀሳቀስ እንደሚችሉ መረዳት እና በተለይ በሚታጠፉበት ጊዜ ለብስክሌት ነጂዎች ቅድሚያ መስጠት አለባቸው። ይህንን ባለማድረግ የብስክሌት ነጂዎችን አደጋ ላይ መጣል ወይም የትራፊክ ደንቦችን በመጣስ ቅጣት ሊያስከትል ይችላል።",
+    "name_amharic": "ለብስክሌት ነጂዎች አረንጓዴ መብራት",
+    "explanation_amharic": "ይህ ምልክት ለብስክሌት ነጂዎች አረንጓዴ መብራት ሲሆን እንዲያልፉ ይፈቅዳል። በዚህ ጊዜ ቀጥ ብሎ፣ ወደ ቀኝ፣ ወደ ግራ መሄድ ወይም ዞሮ መመለስ (ዩ-ተርን) ይፈቀዳል። ከመብራቱ በላይ የተገጠመ ሌላ የመመሪያ ምልክት የተለየ መመሪያ ካልሰጠ በስተቀር። ይህ ምልክት በተለይ ለብስክሌት ነጂዎች የተዘጋጀ ነው።",
     "audio_name_filename": "728_name.mp3",
     "audio_explanation_filename": "728_explanation.mp3",
     "questions": [
       {
         "id": "728_q1",
-        "question_amharic": "ይህ አረንጓዴ የብስክሌት የትራፊክ መብራት ምን ማለት ነው?",
+        "question_amharic": "ይህ ምልክት ምን ማለት ነው?",
         "question_audio": "728_q1_question.mp3",
-        "explanation_correct_amharic": "ትክክل! ይህ ምልክት በተለይ ለብስክሌት ነጂዎች የተዘጋጀ ሲሆን አረንጓዴው ብርሃን ብስክሌተኞች እንዲያልፉ ይፈቅዳል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ ከመረጡ፣ የትራፊክ ደንቦችን በመጣስ የብስክሌት ነጂዎችን አደጋ ላይ ሊጥሉ ይችላሉ።",
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት ለብስክሌት ነጂዎች አረንጓዴ መብራት ሲሆን፣ ከመብራቱ በላይ የተገጠመ ሌላ የመመሪያ ምልክት የተለየ መመሪያ ካልሰጠ በስተቀር እንዲያልፉ ይፈቅዳል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህ ምልክት ለብስክሌት ነጂዎች አረንጓዴ መብራት ሲሆን እንዲያልፉ ይፈቅዳል። ሌሎች መልሶች የተሳሳቱ የተሽከርካሪ ዓይነቶችን ወይም የተሳሳተ የመብራት ትርጉምን ያመለክታሉ።",
         "explanation_correct_audio": "728_q1_correct.mp3",
         "explanation_wrong_audio": "728_q1_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "ሁሉም ተሽከርካሪዎች መንገዳቸውን መቀጠል ይችላሉ።",
+            "text_amharic": "ለብስክሌት ነጂዎች እንዲቆሙ የሚያዝ ቀይ መብራት ነው።",
             "is_correct": false,
             "audio_filename": "answer_728_q1_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "ብስክሌተኞች ብቻ መንገዳቸውን እንዲቀጥሉ ይፈቀድላቸዋል።",
+            "text_amharic": "ለብስክሌት ነጂዎች አረንጓዴ መብራት ሲሆን እንዲያልፉ ይፈቅዳል።",
             "is_correct": true,
             "audio_filename": "answer_728_q1_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "እግረኞች መንገዱን መሻገር ይችላሉ።",
+            "text_amharic": "ለእግረኞች እንዲያልፉ የሚያስችል አረንጓዴ መብራት ነው።",
             "is_correct": false,
             "audio_filename": "answer_728_q1_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "መኪኖች ወዲያውኑ ማቆም አለባቸው።",
+            "text_amharic": "ለመኪናዎች አረንጓዴ መብራት ሲሆን እንዲያልፉ ይፈቅዳል።",
             "is_correct": false,
             "audio_filename": "answer_728_q1_D.mp3"
           }
@@ -25912,34 +25912,34 @@
       },
       {
         "id": "728_q2",
-        "question_amharic": "የመኪና አሽከርካሪ እንደመሆንዎ መጠን፣ በአንድ መስቀለኛ መንገድ ላይ ይህን አረንጓዴ የብስክሌት መብራት ሲያዩ ምን ማድረግ አለብዎት?",
+        "question_amharic": "በዚህ ምልክት መሰረት ብስክሌት ነጂዎች እንዴት መተግበር አለባቸው?",
         "question_audio": "728_q2_question.mp3",
-        "explanation_correct_amharic": "ትክክል! ጥሩ ነው። ይህ መብራት ብስክሌተኞች እንዲንቀሳቀሱ ስለሚፈቅድ፣ የመኪና አሽከርካሪዎች ለደህንነት ሲባል ጥንቃቄ ማድረግ እና ቅድሚያ መስጠት አለባቸው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህን ባለማድረግ የብስክሌት ነጂዎችን አደጋ ላይ ሊጥሉ ወይም የትራፊክ ደንቦችን ሊጥሱ ይችላሉ።",
+        "explanation_correct_amharic": "አዎ! ምልክቱ ለብስክሌት ነጂዎች ቀጥ ብሎ፣ ወደ ቀኝ፣ ወደ ግራ መሄድ ወይም ዞሮ መመለስ እንደሚፈቀድ ያሳያል፣ ከመብራቱ በላይ ሌላ የመመሪያ ምልክት ካልከለከለ በስተቀር።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ብስክሌት ነጂዎች ቀጥ ብለው፣ ወደ ቀኝ፣ ወደ ግራ መሄድ ወይም ዞሮ መመለስ ይችላሉ፣ ሌላ ምልክት ካልከለከለ በስተቀር። ሌሎች መልሶች የተሳሳቱ እገዳዎችን ወይም ድርጊቶችን ያመለክታሉ።",
         "explanation_correct_audio": "728_q2_correct.mp3",
         "explanation_wrong_audio": "728_q2_wrong.mp3",
         "answers": [
           {
-            "id": "C",
-            "text_amharic": "ይህ መብራት ለመኪናዎች ስላልሆነ ችላ ማለት አለብዎት።",
-            "is_correct": false,
-            "audio_filename": "answer_728_q2_C.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "ብስክሌተኞች ከመድረሳቸው በፊት ለማለፍ ፍጥነትዎን መጨመር አለብዎት።",
+            "text_amharic": "ብስክሌት ነጂዎች መኪናዎች እስኪያልፉ መጠበቅ አለባቸው።",
             "is_correct": false,
             "audio_filename": "answer_728_q2_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "በጣም መጠንቀቅ እና መንገዱን ሊያቋርጡ ለሚችሉ ብስክሌተኞች ቅድሚያ መስጠት አለብዎት።",
-            "is_correct": true,
+            "text_amharic": "ብስክሌት ነጂዎች ሙሉ በሙሉ ማቆም አለባቸው።",
+            "is_correct": false,
             "audio_filename": "answer_728_q2_B.mp3"
           },
           {
+            "id": "C",
+            "text_amharic": "ብስክሌት ነጂዎች ቀጥ ብለው፣ ወደ ቀኝ፣ ወደ ግራ መሄድ ወይም ዞሮ መመለስ ይችላሉ፣ ሌላ ምልክት ካልከለከለ በስተቀር።",
+            "is_correct": true,
+            "audio_filename": "answer_728_q2_C.mp3"
+          },
+          {
             "id": "D",
-            "text_amharic": "ብስክሌተኞች መንገዱን እንዲለቁ ለማድረግ መለከት መንፋት አለብዎት።",
+            "text_amharic": "ብስክሌት ነጂዎች ቀጥ ብለው ብቻ መሄድ ይችላሉ።",
             "is_correct": false,
             "audio_filename": "answer_728_q2_D.mp3"
           }
@@ -25947,36 +25947,36 @@
       },
       {
         "id": "728_q3",
-        "question_amharic": "የመኪና አሽከርካሪ ይህንን አረንጓዴ የብስክሌት መብራት ችላ ቢል ምን አደጋ ሊደርስ ይችላል?",
+        "question_amharic": "ይህ ምልክት በዋነኝነት ለማን ነው የታሰበው?",
         "question_audio": "728_q3_question.mp3",
-        "explanation_correct_amharic": "አሪፍ! ምልክቱ ይህን ምልክት ችላ ማለት በብስክሌት ነጂዎች ላይ አደጋ ሊያስከትል እና በህግ ቅጣት ያስከትላል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህን ምልክት ችላ ማለት ከባድ አደጋዎችን እና የህግ ችግሮችን ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "እሰይ የኔ ጎቨዝ። ይህ ምልክት በተለይ ለብስክሌት ነጂዎች የተዘጋጀ ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ለብስክሌት ነጂዎች ብቻ። ምልክቱ የብስክሌት ምልክት ስላለው ለብስክሌት ነጂዎች ብቻ ነው።",
         "explanation_correct_audio": "728_q3_correct.mp3",
         "explanation_wrong_audio": "728_q3_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "ምንም አደጋ የለውም፣ ለመኪናዎች አግባብነት የለውም።",
+            "text_amharic": "ለእግረኞች።",
             "is_correct": false,
             "audio_filename": "answer_728_q3_A.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "የመኪናው የራሱ የትራፊክ መብራት ቀይ ይሆናል።",
-            "is_correct": false,
-            "audio_filename": "answer_728_q3_D.mp3"
-          },
-          {
             "id": "B",
-            "text_amharic": "ለመኪናው ትንሽ መዘግየት ብቻ ያስከትላል።",
+            "text_amharic": "ለሞተር ሳይክሎች።",
             "is_correct": false,
             "audio_filename": "answer_728_q3_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "ከብስክሌት ነጂ ጋር አደጋ ሊያስከትል ወይም የገንዘብ ቅጣት ሊጣልበት ይችላል።",
+            "text_amharic": "ለብስክሌት ነጂዎች ብቻ።",
             "is_correct": true,
             "audio_filename": "answer_728_q3_C.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ለሁሉም ተሽከርካሪዎች።",
+            "is_correct": false,
+            "audio_filename": "answer_728_q3_D.mp3"
           }
         ]
       }
@@ -25989,111 +25989,111 @@
     "image_filename": "729.png",
     "video_filename": null,
     "name_hebrew": "729",
-    "name_amharic": "ይህ ምልክት ለብስክሌት ነጂዎች የሚሆን የትራፊክ መብራት ሲሆን ጥንቃቄ እንዲያደርጉ ያሳያል።",
-    "explanation_amharic": "ይህ ምልክት ለብስክሌት ነጂዎች የሚሆን ቢጫ የትራፊክ መብራት ነው። አረንጓዴው መብራት ወደ ቀይ ሊቀየር መሆኑን ወይም ቀዩ መብራት ወደ አረንጓዴ ሊቀየር መሆኑን ያመለክታል። ብስክሌት ነጂዎች ደህንነቱ በተጠበቀ ሁኔታ ማቆም ከቻሉ መቆም አለባቸው፤ ካልሆነ ግን በጥንቃቄ ማለፍ አለባቸው። ይህንን ምልክት ችላ ማለት አደጋ ሊያስከትል ወይም ቅጣት ሊያስወርድ ይችላል።",
+    "name_amharic": "ለብስክሌት ነጂዎች ቢጫ መብራት",
+    "explanation_amharic": "ይህ ምልክት ለብስክሌት ነጂዎች የሚሆን ቢጫ መብራት ነው። ቢጫ መብራት ሲበራ፣ በአስተማማኝ ሁኔታ ከመገናኛው በፊት ማቆም ከቻሉ፣ ማቆም አለብዎት። በአስተማማኝ ሁኔታ ማቆም ካልቻሉ ወይም መገናኛውን ከገቡ፣ ወዲያውኑ መገናኛውን አልፈው ማጽዳት አለብዎት። ይህ መመሪያ በተለይ ለብስክሌት ነጂዎች የተዘጋጀ ነው።",
     "audio_name_filename": "729_name.mp3",
     "audio_explanation_filename": "729_explanation.mp3",
     "questions": [
       {
         "id": "729_q1",
-        "question_amharic": "ይህ ምልክት ለብስክሌት ነጂዎች ምን ያሳያል?",
+        "question_amharic": "ይህ የመንገድ ምልክት ምን ማለት ነው?",
         "question_audio": "729_q1_question.mp3",
-        "explanation_correct_amharic": "ጎቨዝ። ይህ ቢጫ መብራት አረንጓዴው ወደ ቀይ ወይም ቀዩ ወደ አረንጓዴ ሊቀየር መሆኑን ስለሚያሳይ ብስክሌት ነጂዎች ጥንቃቄ ማድረግ አለባቸው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ወዲያውኑ ማቆም አደጋ ሊያስከትል ይችላል፣ ያለጥንቃቄ ማለፍ ደግሞ ከባድ አደጋ ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "አዎ! ይህ ምልክት ለብስክሌት ነጂዎች የሚሆን ቢጫ መብራት መሆኑን ያመለክታል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህ ምልክት ለብስክሌት ነጂዎች የሚሆን ቢጫ መብራት መሆኑን ያመለክታል።",
         "explanation_correct_audio": "729_q1_correct.mp3",
         "explanation_wrong_audio": "729_q1_wrong.mp3",
         "answers": [
           {
-            "id": "B",
-            "text_amharic": "ብስክሌት ነጂዎች ለመቆም መዘጋጀት አለባቸው፣ ወይም በደህና ማቆም ካልቻሉ በጥንቃቄ ማለፍ አለባቸው።",
-            "is_correct": true,
-            "audio_filename": "answer_729_q1_B.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "ብስክሌት ነጂዎች ወዲያውኑ ማቆም አለባቸው።",
+            "text_amharic": "ብስክሌት ነጂዎች እንዲያልፉ የሚፈቅድ አረንጓዴ መብራት ነው።",
             "is_correct": false,
             "audio_filename": "answer_729_q1_A.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "ይህ መብራት ለመኪናዎች እንጂ ለብስክሌቶች አይደለም።",
+            "id": "B",
+            "text_amharic": "ሁሉም ተሽከርካሪዎች እንዲቆሙ የሚያዝ ቢጫ መብራት ነው።",
             "is_correct": false,
-            "audio_filename": "answer_729_q1_D.mp3"
+            "audio_filename": "answer_729_q1_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "ብስክሌት ነጂዎች የመንገድ ቅድሚያ ስላላቸው ያለጥንቃቄ ማለፍ ይችላሉ።",
+            "text_amharic": "ለብስክሌት ነጂዎች የሚሆን ቀይ መብራት ነው።",
             "is_correct": false,
             "audio_filename": "answer_729_q1_C.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ለብስክሌት ነጂዎች የሚሆን ቢጫ መብራት ነው።",
+            "is_correct": true,
+            "audio_filename": "answer_729_q1_D.mp3"
           }
         ]
       },
       {
         "id": "729_q2",
-        "question_amharic": "አንድ ብስክሌት ነጂ ይህንን ቢጫ የብስክሌት መብራት ሲያይ ምን ማድረግ አለበት?",
+        "question_amharic": "ይህንን ምልክት ሲያዩ እንደ ብስክሌት ነጂ እንዴት መምራት አለብዎት?",
         "question_audio": "729_q2_question.mp3",
-        "explanation_correct_amharic": "በጣም ጥሩ። የቢጫ መብራት ዓላማ ብስክሌት ነጂዎች ለመቆም እንዲዘጋጁ ወይም በጥንቃቄ እንዲያልፉ ማስጠንቀቅ ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ፍጥነት መጨመር ወይም መብራቱን ችላ ማለት አደጋንና የትራፊክ ደንብ መጣስ ያስከትላል።",
+        "explanation_correct_amharic": "እሰይ የኔ ጎቨዝ። ቢጫ መብራት ሲበራ፣ በአስተማማኝ ሁኔታ ከመገናኛው በፊት ማቆም ከቻሉ ማቆም አለብዎት። ካልቻሉ ወይም መገናኛውን ከገቡ፣ ወዲያውኑ መገናኛውን አልፈው ማጽዳት አለብዎት።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በአስተማማኝ ሁኔታ ከመገናኛው በፊት ማቆም ከቻሉ ያቁሙ፤ ካልቻሉ ወይም መገናኛውን ከገቡ ወዲያውኑ አልፈው ያጽዱ።",
         "explanation_correct_audio": "729_q2_correct.mp3",
         "explanation_wrong_audio": "729_q2_wrong.mp3",
         "answers": [
           {
-            "id": "D",
-            "text_amharic": "የትራፊክ ፖሊስ መጥቶ እስኪመራ መጠበቅ አለበት።",
-            "is_correct": false,
-            "audio_filename": "answer_729_q2_D.mp3"
+            "id": "A",
+            "text_amharic": "በአስተማማኝ ሁኔታ ከመገናኛው በፊት ማቆም ከቻሉ ያቁሙ፤ ካልቻሉ ወይም መገናኛውን ከገቡ ወዲያውኑ አልፈው ያጽዱ።",
+            "is_correct": true,
+            "audio_filename": "answer_729_q2_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "ደህንነቱ በተጠበቀ ሁኔታ ማቆም ከቻለ ለመቆም መዘጋጀት አለበት፣ ወይም አስቀድሞ መገናኛ ውስጥ ከሆነ በጥንቃቄ ማለፍ አለበት።",
-            "is_correct": true,
+            "text_amharic": "ለሌሎች ተሽከርካሪዎች መንገድ በመስጠት ብቻ መገናኛውን ማለፍ ይችላሉ።",
+            "is_correct": false,
             "audio_filename": "answer_729_q2_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "መብራቱ የተበላሸ ነው ብሎ ችላ ማለት አለበት።",
+            "text_amharic": "ሁልጊዜ መገናኛውን አልፈው ማጽዳት አለብዎት።",
             "is_correct": false,
             "audio_filename": "answer_729_q2_C.mp3"
           },
           {
-            "id": "A",
-            "text_amharic": "ቀይ ከመሆኑ በፊት መገናኛውን ለማለፍ ፍጥነቱን መጨመር አለበት።",
+            "id": "D",
+            "text_amharic": "ሁልጊዜ ከመገናኛው በፊት ማቆም አለብዎት።",
             "is_correct": false,
-            "audio_filename": "answer_729_q2_A.mp3"
+            "audio_filename": "answer_729_q2_D.mp3"
           }
         ]
       },
       {
         "id": "729_q3",
-        "question_amharic": "አንድ ብስክሌት ነጂ ይህንን ቢጫ የብስክሌት መብራት ችላ ቢል ሊደርስበት የሚችለው አደጋ ምንድን ነው?",
+        "question_amharic": "ለብስክሌት ነጂዎች ቢጫ መብራት ሲበራ፣ በአስተማማኝ ሁኔታ ከመገናኛው በፊት ማቆም ካልቻሉ ምን ማድረግ አለብዎት?",
         "question_audio": "729_q3_question.mp3",
-        "explanation_correct_amharic": "ጎሽሽ። የቢጫ መብራት ማስጠንቀቂያን ችላ ማለት የትራፊክ ደንብ መጣስ ሲሆን አደጋን ወይም ቅጣትን ያስከትላል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ቢጫ መብራቶች የማስጠንቀቂያ ብቻ አይደሉም፤ እነሱን ችላ ማለት ከባድ መዘዝ ያስከትላል።",
+        "explanation_correct_amharic": "ትክክል፥ አቬት እውቀት። በአስተማማኝ ሁኔታ ማቆም ካልቻሉ ወይም መገናኛውን ከገቡ፣ ወዲያውኑ መገናኛውን አልፈው ማጽዳት አለብዎት።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ወዲያውኑ መገናኛውን አልፈው ማጽዳት አለብዎት።",
         "explanation_correct_audio": "729_q3_correct.mp3",
         "explanation_wrong_audio": "729_q3_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "ቢጫ መብራቶች የማስጠንቀቂያ ብቻ ስለሆኑ ምንም ነገር አይደርስበትም።",
-            "is_correct": false,
+            "text_amharic": "ወዲያውኑ መገናኛውን አልፈው ማጽዳት አለብዎት።",
+            "is_correct": true,
             "audio_filename": "answer_729_q3_A.mp3"
           },
           {
+            "id": "B",
+            "text_amharic": "መገናኛውን ከመግባትዎ በፊት መጠበቅ አለብዎት።",
+            "is_correct": false,
+            "audio_filename": "answer_729_q3_B.mp3"
+          },
+          {
             "id": "C",
-            "text_amharic": "መብራቱ ወዲያውኑ ወደ አረንጓዴ ይቀየራል።",
+            "text_amharic": "ወደ ቀኝ ወይም ወደ ግራ መታጠፍ አለብዎት።",
             "is_correct": false,
             "audio_filename": "answer_729_q3_C.mp3"
           },
           {
-            "id": "B",
-            "text_amharic": "ከሌሎች ተሽከርካሪዎች ወይም እግረኞች ጋር አደጋ ሊደርስበት ይችላል፣ ወይም የትራፊክ ቅጣት ሊጣልበት ይችላል።",
-            "is_correct": true,
-            "audio_filename": "answer_729_q3_B.mp3"
-          },
-          {
             "id": "D",
-            "text_amharic": "ከሌሎች ብስክሌት ነጂዎች ማስጠንቀቂያ ብቻ ይቀበላል።",
+            "text_amharic": "መብራቱ አረንጓዴ እስኪሆን ድረስ በመገናኛው ውስጥ መቆም አለብዎት።",
             "is_correct": false,
             "audio_filename": "answer_729_q3_D.mp3"
           }
