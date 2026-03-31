@@ -349,19 +349,26 @@ export async function upsertUser(
 export async function saveAnswer(
   userId: string,
   questionId: string,
-  isCorrect: boolean
+  isCorrect: boolean,
+  retries = 3
 ): Promise<void> {
   if (USE_MOCK) return;
 
-  try {
-    const { error } = await supabase.rpc('upsert_user_progress', {
-      p_user_id:     userId,
-      p_question_id: questionId,
-      p_is_correct:  isCorrect,
-    });
-    if (error) throw error;
-  } catch (err) {
-    console.error('[api] saveAnswer:', err);
+  for (let attempt = 0; attempt < retries; attempt++) {
+    try {
+      const { error } = await supabase.rpc('upsert_user_progress', {
+        p_user_id:     userId,
+        p_question_id: questionId,
+        p_is_correct:  isCorrect,
+      });
+      if (error) throw error;
+      return; // success
+    } catch (err) {
+      console.warn(`[api] saveAnswer attempt ${attempt + 1}/${retries}:`, err);
+      if (attempt < retries - 1) {
+        await new Promise(resolve => setTimeout(resolve, 1000 * (attempt + 1)));
+      }
+    }
   }
 }
 

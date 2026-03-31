@@ -17,6 +17,7 @@ import { useState, useCallback, useEffect, useRef } from 'react';
 import { DBQuestion } from '../backend/supabaseClient';
 import * as api from '../backend/api';
 import { useEngine } from '../contexts/EngineContext';
+import { enqueue, dequeue } from '../utils/answerQueue';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -81,6 +82,8 @@ export interface UseExamReturn {
   answers: ExamAnswer[];
   /** Jump to any question by index (restores answered state if already answered) */
   goToQuestion: (index: number) => void;
+  /** True while an answer is being saved to the server */
+  isSaving: boolean;
 }
 
 // ─── Constants ────────────────────────────────────────────────────────────────
@@ -101,6 +104,7 @@ export function useExam(): UseExamReturn {
   const [lastAnswerCorrect, setLastAnswerCorrect] = useState<boolean | null>(null);
   const [selectedAnswerId, setSelectedAnswerId]   = useState<string | null>(null);
   const [elapsedSeconds, setElapsedSeconds]   = useState(0);
+  const [isSaving, setIsSaving]               = useState(false);
 
   const startTimeRef = useRef<number>(Date.now());
   const timerRef     = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -159,9 +163,17 @@ export function useExam(): UseExamReturn {
     setSelectedAnswerId(answerId);
     setPhase(isCorrect ? 'feedback_correct' : 'feedback_wrong');
 
-    // Save to backend
+    // Save locally first, then sync to Supabase
+    console.log('[useExam] userId:', userId);
     if (userId) {
-      api.saveAnswer(userId, question.id, isCorrect).catch(() => {});
+      setIsSaving(true);
+      enqueue({ userId, questionId: question.id, isCorrect })
+        .then(queueId =>
+          api.saveAnswer(userId, question.id, isCorrect)
+            .then(() => dequeue(queueId))
+        )
+        .catch(err => console.warn('[useExam] save failed:', err))
+        .finally(() => setTimeout(() => setIsSaving(false), 800));
     }
   }, [questions, currentIndex, phase, userId]);
 
@@ -289,5 +301,6 @@ export function useExam(): UseExamReturn {
     elapsedSeconds,
     answers,
     goToQuestion,
+    isSaving,
   };
 }

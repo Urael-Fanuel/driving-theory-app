@@ -38,6 +38,7 @@ export default function EngineBExamScreen() {
     lastAnswerCorrect,
     selectedAnswerId,
     elapsedSeconds,
+    isSaving,
   } = useExam();
 
   const [showFeedback, setShowFeedback] = React.useState(false);
@@ -115,6 +116,9 @@ export default function EngineBExamScreen() {
         </View>
         <Text style={styles.timer}>{timerText}</Text>
       </View>
+      {isSaving && (
+        <Text style={{ textAlign: 'center', color: '#888', fontSize: 11, marginTop: 2 }}>ማስቀመጥ...</Text>
+      )}
 
       <ScrollView
         contentContainerStyle={styles.content}

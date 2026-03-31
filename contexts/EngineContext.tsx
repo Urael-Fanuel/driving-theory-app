@@ -21,6 +21,7 @@ import React, {
 import * as FileSystem from 'expo-file-system/legacy';
 import { supabase } from '../backend/supabaseClient';
 import * as api from '../backend/api';
+import { flushQueue } from '../utils/answerQueue';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -156,6 +157,9 @@ export function EngineProvider({ children }: { children: ReactNode }) {
         if (prefs.engineType) {
           api.upsertUser(resolvedId, prefs.engineType).catch(() => {});
         }
+
+        // Flush any answers that were saved locally but not yet sent to Supabase
+        flushQueue().catch(() => {});
       } catch (err) {
         console.warn('[EngineContext] Failed to load prefs:', err);
         setUserId(generateUUID());

@@ -58,6 +58,7 @@ export default function EngineAExamScreen() {
     selectedAnswerId,
     answers,
     goToQuestion,
+    isSaving,
   } = useExam();
 
   const { playAudio, stopAudio, pauseAudio, resumeAudio, audioState } = useAudio();
@@ -298,6 +299,9 @@ export default function EngineAExamScreen() {
         />
         <Text style={styles.timerIcon}>⏱</Text>
       </View>
+      {isSaving && (
+        <Text style={{ textAlign: 'center', color: '#888', fontSize: 11, marginTop: 2 }}>ማስቀመጥ...</Text>
+      )}
 
       <ScrollView
         contentContainerStyle={styles.content}
