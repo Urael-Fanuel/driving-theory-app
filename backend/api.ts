@@ -257,6 +257,15 @@ export async function getRandomExamQuestions(count: number = 30): Promise<DBQues
  * Fetch questions for a specific sign.
  */
 const _questionsCache = new Map<string, DBQuestion[]>();
+const QUESTIONS_CACHE_LIMIT = 100;
+
+function setCachedQuestions(signId: string, questions: DBQuestion[]): void {
+  if (_questionsCache.size >= QUESTIONS_CACHE_LIMIT) {
+    const oldestKey = _questionsCache.keys().next().value;
+    _questionsCache.delete(oldestKey);
+  }
+  _questionsCache.set(signId, questions);
+}
 
 export function getQuestionsFromCache(signId: string): DBQuestion[] | null {
   return _questionsCache.get(signId) ?? null;
@@ -268,7 +277,7 @@ export async function getQuestionsBySign(signId: string): Promise<DBQuestion[]> 
 
   if (USE_MOCK) {
     const qs = mockData.questions.filter(q => q.sign_id === signId);
-    _questionsCache.set(signId, qs);
+    setCachedQuestions(signId, qs);
     return qs;
   }
 
@@ -281,7 +290,7 @@ export async function getQuestionsBySign(signId: string): Promise<DBQuestion[]> 
 
     if (error) throw error;
     const qs = (data ?? []).map(normalizeQuestion);
-    _questionsCache.set(signId, qs);
+    setCachedQuestions(signId, qs);
     return qs;
   } catch (err) {
     console.error('[api] getQuestionsBySign:', err);
