@@ -22,7 +22,7 @@ export function useNetworkStatus() {
     }
 
     check();
-    const interval = setInterval(check, 1000);
+    const interval = setInterval(check, 300);
     return () => {
       cancelled = true;
       clearInterval(interval);
