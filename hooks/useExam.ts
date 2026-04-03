@@ -18,6 +18,7 @@ import { DBQuestion } from '../backend/supabaseClient';
 import * as api from '../backend/api';
 import { useEngine } from '../contexts/EngineContext';
 import { enqueue, dequeue } from '../utils/answerQueue';
+import { prefetchQuestionAudio, clearAudioCache } from '../services/audioCache';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -137,6 +138,9 @@ export function useExam(): UseExamReturn {
       }, 1000);
 
       setPhase('question');
+
+      // Prefetch audio for first 3 questions in background
+      qs.slice(0, 3).forEach(q => prefetchQuestionAudio(q));
     } catch (error) {
       console.error('[useExam] Failed to load questions:', error);
       // Keep in loading state — UI should show error
@@ -189,6 +193,9 @@ export function useExam(): UseExamReturn {
     } else {
       setCurrentIndex(nextIndex);
       setPhase('question');
+
+      // Prefetch audio for next 3 questions in background
+      questions.slice(nextIndex + 1, nextIndex + 4).forEach(q => prefetchQuestionAudio(q));
     }
   }, [currentIndex, questions.length, answers]);
 
@@ -253,6 +260,9 @@ export function useExam(): UseExamReturn {
     setResult(examResult);
     setElapsedSeconds(duration);
     setPhase('result');
+
+    // Clear cached audio — exam is done
+    clearAudioCache().catch(() => {});
   }
 
   // ── Navigate to any question (view answered, or advance to unanswered) ────────

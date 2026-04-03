@@ -10,6 +10,7 @@
 import { useState, useCallback, useRef, useEffect } from 'react';
 import { Audio, AVPlaybackStatus } from 'expo-av';
 import { getStorageUrl, BUCKETS } from '../backend/supabaseClient';
+import { getLocalAudioUri } from '../services/audioCache';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -114,6 +115,9 @@ export async function playAndAwaitAudio(
     const cdnUrl = getStorageUrl(BUCKETS.AUDIO, filename);
     if (cdnUrl) uri = cdnUrl;
   }
+
+  // Use locally cached file if available (offline support)
+  uri = await getLocalAudioUri(uri).catch(() => uri);
 
   _emit('loading');
   await _stop();
@@ -253,6 +257,9 @@ export function useAudio(): UseAudioReturn {
       const cdnUrl = getStorageUrl(BUCKETS.AUDIO, filename);
       if (cdnUrl) uri = cdnUrl;
     }
+
+    // Use locally cached file if available (offline support)
+    uri = await getLocalAudioUri(uri).catch(() => uri);
 
     try {
       _emit('loading');

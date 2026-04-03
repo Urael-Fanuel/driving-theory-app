@@ -27,6 +27,8 @@ import { VoiceAnswerButton } from '../../../components/engineA/VoiceAnswerButton
 import { AudioFeedback } from '../../../components/engineA/AudioFeedback';
 import { ProgressBar } from '../../../components/shared/ProgressBar';
 import { useExam } from '../../../hooks/useExam';
+import { useNetworkStatus } from '../../../hooks/useNetworkStatus';
+import { isQuestionAudioReady, prefetchQuestionAudio, preCacheAudioBatch } from '../../../services/audioCache';
 import { useAudio, playAndAwaitAudio } from '../../../hooks/useAudio';
 import { useVoiceRecognition } from '../../../hooks/useVoiceRecognition';
 import * as api from '../../../backend/api';
@@ -62,15 +64,65 @@ export default function EngineAExamScreen() {
   } = useExam();
 
   const { playAudio, stopAudio, pauseAudio, resumeAudio, audioState } = useAudio();
-  const [showFeedback,       setShowFeedback]       = useState(false);
-  const [playingAnswerIndex, setPlayingAnswerIndex] = useState<number | null>(null);
-  const [signs,              setSigns]              = useState<DBSign[]>([]);
-  const [isTabFocused,       setIsTabFocused]       = useState(false);
+  const [showFeedback,             setShowFeedback]             = useState(false);
+  const isConnected = useNetworkStatus();
+  const [currentQuestionAudioReady, setCurrentQuestionAudioReady] = useState(true);
+  const [audioRestartKey,          setAudioRestartKey]          = useState(0);
+  const prevConnectedRef  = useRef(true);
+  const isConnectedRef    = useRef(isConnected);
+  const [playingAnswerIndex,       setPlayingAnswerIndex]       = useState<number | null>(null);
+  const [signs,                    setSigns]                    = useState<DBSign[]>([]);
+  const [isTabFocused,             setIsTabFocused]             = useState(false);
+
+  // Keep isConnectedRef in sync — lets runSequence read connectivity synchronously
+  useEffect(() => { isConnectedRef.current = isConnected; }, [isConnected]);
 
   // Load all signs once on mount (for displaying the sign image per question)
   useEffect(() => {
     api.getAllSigns().then(setSigns).catch(() => {});
   }, []);
+
+  // Check audio cache only when internet disconnects — not proactively.
+  // While connected: assume ready. When offline: check if audio is actually cached.
+  useEffect(() => {
+    if (isConnected) {
+      setCurrentQuestionAudioReady(true);
+      return;
+    }
+    if (!currentQuestion) return;
+    isQuestionAudioReady(currentQuestion)
+      .then(ready => setCurrentQuestionAudioReady(ready))
+      .catch(() => setCurrentQuestionAudioReady(false));
+  }, [isConnected, currentQuestion?.id]);
+
+  // On reconnect: kill the running sequence immediately, re-download audio for current + next 3,
+  // then restart sequence from the beginning of the current question.
+  useEffect(() => {
+    const wasConnected = prevConnectedRef.current;
+    prevConnectedRef.current = isConnected;
+    if (!wasConnected && isConnected && questions.length > 0) {
+      // Kill sequence synchronously first, then await the actual native stop
+      // before restarting. Without await, short files like "አንድ" (0.3s) can
+      // finish playing before stopAsync() reaches the native layer.
+      sequenceCancelledRef.current = true;
+      stopAudio();
+      questions.slice(currentIndex, currentIndex + 4).forEach(q => prefetchQuestionAudio(q));
+      setAudioRestartKey(k => k + 1);
+    }
+  }, [isConnected]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // Prefetch images for current + next 3 questions (for offline support)
+  // Image.prefetch() stores into OS image cache, available when offline
+  useEffect(() => {
+    if (signs.length === 0 || questions.length === 0) return;
+    questions.slice(currentIndex, currentIndex + 4).forEach(q => {
+      const sign = signs.find(s => s.id === q.sign_id);
+      if (sign?.image_url) Image.prefetch(sign.image_url).catch(() => {});
+      q.answers.forEach((a: any) => {
+        if (a.image_url) Image.prefetch(a.image_url).catch(() => {});
+      });
+    });
+  }, [currentIndex, signs.length, audioRestartKey]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const currentSign = signs.find(s => s.id === currentQuestion?.sign_id) ?? null;
 
@@ -81,6 +133,10 @@ export default function EngineAExamScreen() {
   // When voice recognition fails, this ref signals the audio sequence to stop
   // so the failure audio can play cleanly without being interrupted.
   const voiceFailedRef = useRef(false);
+
+  // Synchronous cancellation for reconnect: set true BEFORE preCacheAudioBatch resolves
+  // so the running sequence stops immediately without waiting for a re-render cycle.
+  const sequenceCancelledRef = useRef(false);
 
   // Stable callback ref so useVoiceRecognition doesn't re-init on re-renders
   const answerCallbackRef = useRef<(idx: number) => void>(() => {});
@@ -140,10 +196,11 @@ export default function EngineAExamScreen() {
   useEffect(() => {
     if (phase !== 'question' || !currentQuestion || !isTabFocused) return;
     voiceFailedRef.current = false; // Reset for new question
+    sequenceCancelledRef.current = false; // Reset reconnect cancellation flag
     cancelListening();
     setShowFeedback(false);
     let cancelled = false;
-    const isCancelled = () => cancelled || voiceFailedRef.current;
+    const isCancelled = () => cancelled || voiceFailedRef.current || sequenceCancelledRef.current;
 
     async function runSequence() {
       await stopAudio();
@@ -157,6 +214,10 @@ export default function EngineAExamScreen() {
 
       await new Promise(res => setTimeout(res, 1000));
       if (isCancelled() || phaseRef.current !== 'question') return;
+
+      // If offline at this point — stop here. The reconnect handler will restart
+      // the sequence from scratch, so "አንድ" can never play before question audio.
+      if (!isConnectedRef.current) return;
 
       for (let i = 0; i < currentQuestion!.answers.length && i < 4; i++) {
         if (isCancelled() || phaseRef.current !== 'question') return;
@@ -179,7 +240,7 @@ export default function EngineAExamScreen() {
       cancelled = true;
       setPlayingAnswerIndex(null);
     };
-  }, [currentQuestion?.id, isTabFocused]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [currentQuestion?.id, isTabFocused, audioRestartKey]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // ── Voice failure → stop sequence, play audio instead of showing text ────────
   useEffect(() => {
@@ -302,6 +363,17 @@ export default function EngineAExamScreen() {
       {isSaving && (
         <Text style={{ textAlign: 'center', color: '#888', fontSize: 11, marginTop: 2 }}>ማስቀመጥ...</Text>
       )}
+      {!isConnected && !currentQuestionAudioReady && phase === 'question' && (
+        <View style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(0,0,0,0.85)', justifyContent: 'center', alignItems: 'center', zIndex: 999, padding: 32 }}>
+          <Text style={{ color: '#fff', fontSize: 48, marginBottom: 16 }}>📵</Text>
+          <Text style={{ color: '#fff', fontSize: 18, textAlign: 'center', marginBottom: 8 }}>{'ኢንተርኔት የለም'}</Text>
+          <Text style={{ color: '#ccc', fontSize: 14, textAlign: 'center', marginBottom: 32 }}>{'ድምፅ ማጫወት አይቻልም። እባክዎ ኢንተርኔት ሲኖር ይመለሱ።'}</Text>
+          <TouchableOpacity onPress={() => { router.navigate('/(engineA)/home'); }}
+            style={{ backgroundColor: '#e67e22', paddingHorizontal: 32, paddingVertical: 12, borderRadius: 24 }}>
+            <Text style={{ color: '#fff', fontSize: 16 }}>{'ወደ ቤት ተመለስ'}</Text>
+          </TouchableOpacity>
+        </View>
+      )}
 
       <ScrollView
         contentContainerStyle={styles.content}
@@ -312,6 +384,7 @@ export default function EngineAExamScreen() {
         {currentSign?.image_url && (
           <View style={styles.signImageContainer}>
             <Image
+              key={audioRestartKey}
               source={{ uri: currentSign.image_url }}
               style={styles.signImage}
               resizeMode="contain"

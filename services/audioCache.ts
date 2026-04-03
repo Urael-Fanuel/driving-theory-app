@@ -12,11 +12,15 @@
  * Cache invalidation: URL-based (if URL matches cached URL, use cache)
  */
 
-import * as FileSystem from 'expo-file-system';
+import * as FileSystem from 'expo-file-system/legacy';
 
 // ─── Config ───────────────────────────────────────────────────────────────────
 
-const AUDIO_CACHE_DIR = FileSystem.documentDirectory + 'audio/';
+const AUDIO_CACHE_DIR = (FileSystem.documentDirectory ?? '') + 'audio/';
+const MAX_CACHED_FILES = 35;
+
+/** FIFO queue of locally cached file paths — enforces MAX_CACHED_FILES limit */
+const _cacheQueue: string[] = [];
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
@@ -80,13 +84,77 @@ function downloadInBackground(url: string, localPath: string): void {
     .then(result => {
       if (result.status !== 200) {
         console.warn('[audioCache] Download failed:', url, result.status);
-        // Delete partial file
         FileSystem.deleteAsync(localPath, { idempotent: true }).catch(() => {});
+        return;
+      }
+      // Track in FIFO queue — evict oldest if over limit
+      _cacheQueue.push(localPath);
+      if (_cacheQueue.length > MAX_CACHED_FILES) {
+        const oldest = _cacheQueue.shift();
+        if (oldest) FileSystem.deleteAsync(oldest, { idempotent: true }).catch(() => {});
       }
     })
     .catch(err => {
       console.warn('[audioCache] Background download error:', url, err);
     });
+}
+
+/**
+ * Prefetch all audio for a question (7 files) in the background.
+ * Called while user is answering the current question.
+ */
+export function prefetchQuestionAudio(question: {
+  question_audio_url?: string;
+  explanation_correct_audio_url?: string;
+  explanation_wrong_audio_url?: string;
+  answers: { audio_url?: string }[];
+}): void {
+  const urls = [
+    question.question_audio_url,
+    question.explanation_correct_audio_url,
+    question.explanation_wrong_audio_url,
+    ...question.answers.map(a => a.audio_url),
+  ].filter((u): u is string => !!u && !u.startsWith('assets/'));
+
+  urls.forEach(url => {
+    const localPath = getCachePath(url);
+    FileSystem.getInfoAsync(localPath).then(info => {
+      if (!info.exists) downloadInBackground(url, localPath);
+    }).catch(() => {});
+  });
+}
+
+/**
+ * Check if all audio for a question is available locally.
+ */
+export async function isQuestionAudioReady(question: {
+  question_audio_url?: string;
+  answers: { audio_url?: string }[];
+}): Promise<boolean> {
+  const urls = [
+    question.question_audio_url,
+    ...question.answers.map(a => a.audio_url),
+  ].filter((u): u is string => !!u && !u.startsWith('assets/'));
+
+  for (const url of urls) {
+    const info = await FileSystem.getInfoAsync(getCachePath(url)).catch(() => ({ exists: false }));
+    if (!info.exists) return false;
+  }
+  return true;
+}
+
+/**
+ * Get local URI for an audio URL if cached, otherwise return remote URL.
+ */
+export async function getLocalAudioUri(url: string): Promise<string> {
+  if (!url || url.startsWith('assets/')) return url;
+  try {
+    const localPath = getCachePath(url);
+    const info = await FileSystem.getInfoAsync(localPath);
+    return info.exists ? localPath : url;
+  } catch {
+    return url;
+  }
 }
 
 /**
@@ -183,9 +251,10 @@ export async function clearAudioCache(): Promise<void> {
   try {
     await FileSystem.deleteAsync(AUDIO_CACHE_DIR, { idempotent: true });
     await ensureCacheDir();
+    _cacheQueue.length = 0;
     console.log('[audioCache] Cache cleared');
   } catch (error) {
-    console.error('[audioCache] Failed to clear cache:', error);
+    console.warn('[audioCache] Failed to clear cache:', error);
   }
 }
 

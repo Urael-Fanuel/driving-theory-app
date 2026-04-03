@@ -529,7 +529,7 @@ export async function saveExamSession(
       topicBreakdown,
     };
   } catch (err) {
-    console.error('[api] saveExamSession:', err);
+    console.warn('[api] saveExamSession:', err);
     return { sessionId: 'error-' + Date.now(), score, total, passed, topicBreakdown };
   }
 }
