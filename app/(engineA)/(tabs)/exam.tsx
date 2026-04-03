@@ -106,7 +106,18 @@ export default function EngineAExamScreen() {
       // finish playing before stopAsync() reaches the native layer.
       sequenceCancelledRef.current = true;
       stopAudio();
+      // Prefetch audio for current + next 3 questions
       questions.slice(currentIndex, currentIndex + 4).forEach(q => prefetchQuestionAudio(q));
+      // Pre-warm image cache for current question's sign + answer images
+      // so they're ready immediately when Image remounts via key={audioRestartKey}
+      const currentQ = questions[currentIndex];
+      if (currentQ) {
+        const sign = signs.find((s: any) => s.id === currentQ.sign_id);
+        if (sign?.image_url) Image.prefetch(sign.image_url).catch(() => {});
+        currentQ.answers?.forEach((a: any) => {
+          if (a.image_url) Image.prefetch(a.image_url).catch(() => {});
+        });
+      }
       setAudioRestartKey(k => k + 1);
     }
   }, [isConnected]); // eslint-disable-line react-hooks/exhaustive-deps
