@@ -4505,7 +4505,7 @@
     "video_filename": "sign_129_amharic.mp4",
     "name_hebrew": "מסילת ברזל ללא מחסום",
     "name_amharic": "ከፊትህ የትራም መስመር መሻገሪያ ያለ ማገጃ መኖሩን ያመለክታል።",
-    "explanation_amharic": "ይህ ምልክት ከፊት ለፊትህ የትራም መስመር መሻገሪያ ያለ ማገጃ እንዳለ ያስጠነቅቀናል። አሽከርካሪው ይህንን ምልክት ሲያይ ፍጥነቱን መቀነስ፣ ለትራም መምጣት ትኩረት መስጠት እና ደህንነቱ የተጠበቀ መሆኑን ካረጋገጠ በኋላ መሻገር አለበት።",
+    "explanation_amharic": "ይህ ምልክት ከፊት ለፊትህ የትራም መስመር መሻገሪያ ያለ ማገጃ እንዳለ ያስጠነቅቀናል። አሽከርካሪው ይህንን ምልክት ሲያይ ፍጥነቱን መቀነስ፣ ለትራም መምጣት ትኩረት መስጠት እና ደህንነቱ የተጠበቀ መሆኑን ካረጋገጠ በኋላ ማለፍ አለበት።",
     "audio_name_filename": "sign_129_name.mp3",
     "audio_explanation_filename": "sign_129_explanation.mp3",
     "questions": [
@@ -4516,7 +4516,7 @@
         "answers": [
           {
             "id": "A",
-            "text_amharic": "ፍጥነትን መቀነስ፣ ለትራም መምጣት ትኩረት መስጠት እና ደህንነቱ የተጠበቀ መሆኑን ካረጋገጠ በኋላ መሻገር።",
+            "text_amharic": "ፍጥነትን መቀነስ፣ ለትራም መምጣት ትኩረት መስጠት እና ደህንነቱ የተጠበቀ መሆኑን ካረጋገጠ በኋላ ማለፍ።",
             "image": "answer_slow_down.png",
             "is_correct": true
           },
@@ -4539,7 +4539,7 @@
           }
         ],
         "explanation_correct_amharic": "ትክክል! የትራም መስመር መሻገሪያ ያለ ማገጃ ሲሆን፣ ፍጥነት መቀነስ እና ለትራም መምጣት ዝግጁ መሆን የራስህን እና የሌሎችን ደህንነት ይጠብቃል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ፍጥነትን መቀነስ፣ ለትራም መምጣት ትኩረት መስጠት እና ደህንነቱ የተጠበቀ መሆኑን ካረጋገጠ በኋላ መሻገር። ፍጥነት መጨመር ወይም ምልክቱን ችላ ማለት ከባድ አደጋ ሊያስከትል ይችላል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ፍጥነትን መቀነስ፣ ለትራም መምጣት ትኩረት መስጠት እና ደህንነቱ የተጠበቀ መሆኑን ካረጋገጠ በኋላ ማለፍ። ፍጥነት መጨመር ወይም ምልክቱን ችላ ማለት ከባድ አደጋ ሊያስከትል ይችላል።",
         "explanation_correct_audio": "q_129_001_correct.mp3",
         "explanation_wrong_audio": "q_129_001_wrong.mp3"
       },
@@ -4621,7 +4621,7 @@
     "video_filename": "sign_130_amharic.mp4",
     "name_hebrew": "מסילת ברזל 300 מ׳",
     "name_amharic": "ከፊትህ 300 ሜትር ርቀት ላይ የባቡር መስመር መሻገሪያ መኖሩን ያመለክታል።",
-    "explanation_amharic": "ይህ ምልክት ከፊት ለፊትህ በ300 ሜትር ርቀት ላይ የባቡር መስመር መሻገሪያ እንዳለ ያስጠነቅቀናል። አሽከርካሪው ይህንን ምልክት ሲያይ ፍጥነቱን መቀነስ፣ ለባቡር መምጣት ትኩረት መስጠት እና ደህንነቱ የተጠበቀ መሆኑን ካረጋገጠ በኋላ መሻገር አለበት።",
+    "explanation_amharic": "ይህ ምልክት ከፊት ለፊትህ በ300 ሜትር ርቀት ላይ የባቡር መስመር መሻገሪያ እንዳለ ያስጠነቅቀናል። አሽከርካሪው ይህንን ምልክት ሲያይ ፍጥነቱን መቀነስ፣ ለባቡር መምጣት ትኩረት መስጠት እና ደህንነቱ የተጠበቀ መሆኑን ካረጋገጠ በኋላ ማለፍ አለበት።",
     "audio_name_filename": "sign_130_name.mp3",
     "audio_explanation_filename": "sign_130_explanation.mp3",
     "questions": [
@@ -4649,13 +4649,13 @@
           },
           {
             "id": "B",
-            "text_amharic": "ፍጥነትን መቀነስ፣ ለባቡር መምጣት ትኩረት መስጠት እና ደህንነቱ የተጠበቀ መሆኑን ካረጋገጠ በኋላ መሻገር።",
+            "text_amharic": "ፍጥነትን መቀነስ፣ ለባቡር መምጣት ትኩረት መስጠት እና ደህንነቱ የተጠበቀ መሆኑን ካረጋገጠ በኋላ ማለፍ።",
             "image": "answer_speed_up.png",
             "is_correct": true
           }
         ],
         "explanation_correct_amharic": "ትክክል! ይህ ምልክት የባቡር መስመር መሻገሪያ መቃረቡን ስለሚያመለክት፣ ፍጥነት መቀነስ እና ጥንቃቄ ማድረግ አደጋን ለመከላከል ወሳኝ ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ፍጥነትን መቀነስ፣ ለባቡር መምጣት ትኩረት መስጠት እና ደህንነቱ የተጠበቀ መሆኑን ካረጋገጠ በኋላ መሻገር። ፍጥነት መጨመር ወይም ምልክቱን ችላ ማለት ከባድ አደጋ ሊያስከትል ይችላል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ፍጥነትን መቀነስ፣ ለባቡር መምጣት ትኩረት መስጠት እና ደህንነቱ የተጠበቀ መሆኑን ካረጋገጠ በኋላ ማለፍ። ፍጥነት መጨመር ወይም ምልክቱን ችላ ማለት ከባድ አደጋ ሊያስከትል ይችላል።",
         "explanation_correct_audio": "q_130_001_correct.mp3",
         "explanation_wrong_audio": "q_130_001_wrong.mp3"
       },
@@ -4737,7 +4737,7 @@
     "video_filename": "sign_131_amharic.mp4",
     "name_hebrew": "מסילת ברזל 200 מ׳",
     "name_amharic": "ከፊትህ ባለው መንገድ ላይ 200 ሜትር ርቀት ላይ የባቡር መስመር መሻገሪያ መኖሩን ያመለክታል።",
-    "explanation_amharic": "ይህ ምልክት ከፊት ለፊትህ በ200 ሜትር ርቀት ላይ የባቡር መስመር መሻገሪያ እንዳለ ያስጠነቅቀናል። አሽከርካሪው ይህንን ምልክት ሲያይ ፍጥነቱን መቀነስ፣ ለባቡር መምጣት ትኩረት መስጠት እና ደህንነቱ የተጠበቀ መሆኑን ካረጋገጠ በኋላ መሻገር አለበት።",
+    "explanation_amharic": "ይህ ምልክት ከፊት ለፊትህ በ200 ሜትር ርቀት ላይ የባቡር መስመር መሻገሪያ እንዳለ ያስጠነቅቀናል። አሽከርካሪው ይህንን ምልክት ሲያይ ፍጥነቱን መቀነስ፣ ለባቡር መምጣት ትኩረት መስጠት እና ደህንነቱ የተጠበቀ መሆኑን ካረጋገጠ በኋላ ማለፍ አለበት።",
     "audio_name_filename": "sign_131_name.mp3",
     "audio_explanation_filename": "sign_131_explanation.mp3",
     "questions": [
@@ -4759,7 +4759,7 @@
           },
           {
             "id": "C",
-            "text_amharic": "ፍጥነትን መቀነስ፣ ለባቡር መምጣት ትኩረት መስጠት እና ደህንነቱ የተጠበቀ መሆኑን ካረጋገጠ በኋላ መሻገር።",
+            "text_amharic": "ፍጥነትን መቀነስ፣ ለባቡር መምጣት ትኩረት መስጠት እና ደህንነቱ የተጠበቀ መሆኑን ካረጋገጠ በኋላ ማለፍ።",
             "image": "answer_continue.png",
             "is_correct": true
           },
@@ -4771,7 +4771,7 @@
           }
         ],
         "explanation_correct_amharic": "ትክክል! ይህ ምልክት የባቡር መስመር መሻገሪያ መቃረቡን ስለሚያመለክት፣ ፍጥነት መቀነስ እና ጥንቃቄ ማድረግ አደጋን ለመከላከል ወሳኝ ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ፍጥነትን መቀነስ፣ ለባቡር መምጣት ትኩረት መስጠት እና ደህንነቱ የተጠበቀ መሆኑን ካረጋገጠ በኋላ መሻገር። ፍጥነት መጨመር ወይም ምልክቱን ችላ ማለት ከባድ አደጋ ሊያስከትል ይችላል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ፍጥነትን መቀነስ፣ ለባቡር መምጣት ትኩረት መስጠት እና ደህንነቱ የተጠበቀ መሆኑን ካረጋገጠ በኋላ ማለፍ። ፍጥነት መጨመር ወይም ምልክቱን ችላ ማለት ከባድ አደጋ ሊያስከትል ይችላል።",
         "explanation_correct_audio": "q_131_001_correct.mp3",
         "explanation_wrong_audio": "q_131_001_wrong.mp3"
       },
@@ -4853,7 +4853,7 @@
     "video_filename": "sign_132_amharic.mp4",
     "name_hebrew": "מסילת ברזל 100 מ׳",
     "name_amharic": "ከፊትህ ባለው መንገድ ላይ 100 ሜትር ርቀት ላይ የባቡር መስመር መሻገሪያ መኖሩን ያመለክታል።",
-    "explanation_amharic": "ይህ ምልክት ከፊት ለፊትህ በ100 ሜትር ርቀት ላይ የባቡር መስመር መሻገሪያ እንዳለ ያስጠነቅቀናል። አሽከርካሪው ይህንን ምልክት ሲያይ ፍጥነቱን መቀነስ፣ ለባቡር መምጣት ትኩረት መስጠት እና ደህንነቱ የተጠበቀ መሆኑን ካረጋገጠ በኋላ መሻገር አለበት።",
+    "explanation_amharic": "ይህ ምልክት ከፊት ለፊትህ በ100 ሜትር ርቀት ላይ የባቡር መስመር መሻገሪያ እንዳለ ያስጠነቅቀናል። አሽከርካሪው ይህንን ምልክት ሲያይ ፍጥነቱን መቀነስ፣ ለባቡር መምጣት ትኩረት መስጠት እና ደህንነቱ የተጠበቀ መሆኑን ካረጋገጠ በኋላ ማለፍ አለበት።",
     "audio_name_filename": "sign_132_name.mp3",
     "audio_explanation_filename": "sign_132_explanation.mp3",
     "questions": [
@@ -4972,7 +4972,7 @@
     "video_filename": "sign_133_amharic.mp4",
     "name_hebrew": "מסילת ברזל — תלול יחיד",
     "name_amharic": "ይህ ምልክት ከፊት ለፊትህ ያለ ማገጃ አንድ የባቡር መስመር መሻገሪያ መኖሩን ያመለክታል።",
-    "explanation_amharic": "ይህ ምልክት ከፊት ለፊትህ ያለ ማገጃ አንድ የባቡር መስመር መሻገሪያ መኖሩን ያስጠነቅቀናል። አሽከርካሪው ይህንን ምልክት ሲያይ ፍጥነቱን መቀነስ፣ በሁለቱም አቅጣጫ ለሚመጣ ባቡር ትኩረት መስጠት እና ደህንነቱ የተጠበቀ መሆኑን ካረጋገጠ በኋላ ብቻ መሻገር አለበት።",
+    "explanation_amharic": "ይህ ምልክት ከፊት ለፊትህ ያለ ማገጃ አንድ የባቡር መስመር መሻገሪያ መኖሩን ያስጠነቅቀናል። አሽከርካሪው ይህንን ምልክት ሲያይ ፍጥነቱን መቀነስ፣ በሁለቱም አቅጣጫ ለሚመጣ ባቡር ትኩረት መስጠት እና ደህንነቱ የተጠበቀ መሆኑን ካረጋገጠ በኋላ ብቻ ማለፍ አለበት።",
     "audio_name_filename": "sign_133_name.mp3",
     "audio_explanation_filename": "sign_133_explanation.mp3",
     "questions": [
@@ -5091,7 +5091,7 @@
     "video_filename": "sign_134_amharic.mp4",
     "name_hebrew": "מסילת ברזל — מסילות רבות",
     "name_amharic": "ይህ ምልክት ከፊት ለፊትህ ያለ ማገጃ በርካታ የባቡር መስመሮች መሻገሪያ መኖሩን ያመለክታል።",
-    "explanation_amharic": "ይህ ምልክት ከፊት ለፊትህ ያለ ማገጃ በርካታ የባቡር መስመሮች መሻገሪያ መኖሩን ያስጠነቅቀናል። አሽከርካሪው ይህንን ምልክት ሲያይ ፍጥነቱን መቀነስ፣ በሁለቱም አቅጣጫ ለሚመጣ ባቡር ትኩረት መስጠት እና ደህንነቱ የተጠበቀ መሆኑን ካረጋገጠ በኋላ ብቻ እያንዳንዱን መስመር በከፍተኛ ጥንቃቄ መሻገር አለበት።",
+    "explanation_amharic": "ይህ ምልክት ከፊት ለፊትህ ያለ ማገጃ በርካታ የባቡር መስመሮች መሻገሪያ መኖሩን ያስጠነቅቀናል። አሽከርካሪው ይህንን ምልክት ሲያይ ፍጥነቱን መቀነስ፣ በሁለቱም አቅጣጫ ለሚመጣ ባቡር ትኩረት መስጠት እና ደህንነቱ የተጠበቀ መሆኑን ካረጋገጠ በኋላ ብቻ እያንዳንዱን መስመር በከፍተኛ ጥንቃቄ ማለፍ አለበት።",
     "audio_name_filename": "sign_134_name.mp3",
     "audio_explanation_filename": "sign_134_explanation.mp3",
     "questions": [
@@ -5119,13 +5119,13 @@
           },
           {
             "id": "B",
-            "text_amharic": "ፍጥነትን መቀነስ፣ በሁለቱም አቅጣጫ ለሚመጣ ባቡር ትኩረት መስጠት እና ደህንነቱ የተጠበቀ መሆኑን ካረጋገጠ በኋላ እያንዳንዱን መስመር በከፍተኛ ጥንቃቄ መሻገር።",
+            "text_amharic": "ፍጥነትን መቀነስ፣ በሁለቱም አቅጣጫ ለሚመጣ ባቡር ትኩረት መስጠት እና ደህንነቱ የተጠበቀ መሆኑን ካረጋገጠ በኋላ እያንዳንዱን መስመር በከፍተኛ ጥንቃቄ ማለፍ።",
             "image": "answer_speed_up.png",
             "is_correct": true
           }
         ],
-        "explanation_correct_amharic": "ትክክል! ይህ ምልክት ያለ ማገጃ በርካታ የባቡር መስመሮች መሻገሪያ መቃረቡን ስለሚያመለክት፣ ፍጥነት መቀነስ እና እያንዳንዱን መስመር በከፍተኛ ጥንቃቄ መሻገር አደጋን ለመከላከል ወሳኝ ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ፍጥነትን መቀነስ፣ በሁለቱም አቅጣጫ ለሚመጣ ባቡር ትኩረት መስጠት እና ደህንነቱ የተጠበቀ መሆኑን ካረጋገጠ በኋላ እያንዳንዱን መስመር በከፍተኛ ጥንቃቄ መሻገር። ፍጥነት መጨመር ወይም ምልክቱን ችላ ማለት ከባድ አደጋ ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት ያለ ማገጃ በርካታ የባቡር መስመሮች መሻገሪያ መቃረቡን ስለሚያመለክት፣ ፍጥነት መቀነስ እና እያንዳንዱን መስመር በከፍተኛ ጥንቃቄ ማለፍ አደጋን ለመከላከል ወሳኝ ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ፍጥነትን መቀነስ፣ በሁለቱም አቅጣጫ ለሚመጣ ባቡር ትኩረት መስጠት እና ደህንነቱ የተጠበቀ መሆኑን ካረጋገጠ በኋላ እያንዳንዱን መስመር በከፍተኛ ጥንቃቄ ማለፍ። ፍጥነት መጨመር ወይም ምልክቱን ችላ ማለት ከባድ አደጋ ሊያስከትል ይችላል።",
         "explanation_correct_audio": "q_134_001_correct.mp3",
         "explanation_wrong_audio": "q_134_001_wrong.mp3"
       },
@@ -6541,8 +6541,8 @@
         "id": "146_q2",
         "question_amharic": "በምስሉ ላይ የሚታየው ምልክት ምን ያዝዛል?",
         "question_audio": "146_q2_question.mp3",
-        "explanation_correct_amharic": "ትክክል! ይህ ምልክት አሽከርካሪው ፍጥነቱን እንዲቀንስ፣ መንገዱን በጥንቃቄ እንዲከታተል እና እንስሳት ለመሻገር ዝግጁ እንዲሆን ያዝዛል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ፍጥነትን መቀነስ፣ መንገዱን በጥንቃቄ መከታተል እና እንስሳት ለመሻገር ዝግጁ መሆን። ይህ ምልክት አሽከርካሪው ጥንቃቄ እንዲያደርግ እና ለእንስሳት መሻገሪያ ዝግጁ እንዲሆን ያስጠነቅቃል።",
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት አሽከርካሪው ፍጥነቱን እንዲቀንስ፣ መንገዱን በጥንቃቄ እንዲከታተል እና እንስሳት ለማለፍ ዝግጁ እንዲሆን ያዝዛል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ፍጥነትን መቀነስ፣ መንገዱን በጥንቃቄ መከታተል እና እንስሳት ለማለፍ ዝግጁ መሆን። ይህ ምልክት አሽከርካሪው ጥንቃቄ እንዲያደርግ እና ለእንስሳት መሻገሪያ ዝግጁ እንዲሆን ያስጠነቅቃል።",
         "explanation_correct_audio": "146_q2_correct.mp3",
         "explanation_wrong_audio": "146_q2_wrong.mp3",
         "answers": [
@@ -6560,7 +6560,7 @@
           },
           {
             "id": "C",
-            "text_amharic": "ፍጥነትን መቀነስ፣ መንገዱን በጥንቃቄ መከታተል እና እንስሳት ለመሻገር ዝግጁ መሆን።",
+            "text_amharic": "ፍጥነትን መቀነስ፣ መንገዱን በጥንቃቄ መከታተል እና እንስሳት ለማለፍ ዝግጁ መሆን።",
             "is_correct": true,
             "audio_filename": "answer_146_q2_C.mp3"
           },
@@ -12915,7 +12915,7 @@
         "answers": [
           {
             "id": "A",
-            "text_amharic": "ምልክቱ ከፍተኛው የፍጥነት ገደብ 46 ኪ.ሜ/ሰዓት መሆኑን ያዝዛል።",
+            "text_amharic": "ምልክቱ ከፍተኛው የፍጥነት ገደብ 46 ኪሎሚቴር በሰዓት መሆኑን ያዝዛል።",
             "is_correct": false,
             "audio_filename": "answer_416_q1_A.mp3"
           },
@@ -13895,8 +13895,8 @@
         "id": "424_q2",
         "question_amharic": "በዚህ ምልክት መሰረት እንዴት ይነዳሉ?",
         "question_audio": "424_q2_question.mp3",
-        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። ትክክል! በዚህ አካባቢ ሁሉም የከተማ ትራፊክ ደንቦች ተፈጻሚ ይሆናሉ እና ፍጥነቱ ካልተገለጸ ከፍተኛው ፍጥነት 50 ኪ.ሜ/ሰ ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በከተማ የትራፊክ ደንቦች መሰረት መንዳት እና ፍጥነቱ ካልተገለጸ ከፍተኛው ፍጥነት 50 ኪ.ሜ/ሰ ነው።",
+        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። ትክክል! በዚህ አካባቢ ሁሉም የከተማ ትራፊክ ደንቦች ተፈጻሚ ይሆናሉ እና ፍጥነቱ ካልተገለጸ ከፍተኛው ፍጥነት 50 ኪሎሚቴር በሰዓት ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በከተማ የትራፊክ ደንቦች መሰረት መንዳት እና ፍጥነቱ ካልተገለጸ ከፍተኛው ፍጥነት 50 ኪሎሚቴር በሰዓት ነው።",
         "explanation_correct_audio": "424_q2_correct.mp3",
         "explanation_wrong_audio": "424_q2_wrong.mp3",
         "answers": [
@@ -13914,13 +13914,13 @@
           },
           {
             "id": "A",
-            "text_amharic": "በከተማ የትራፊክ ደንቦች መሰረት እነዳለሁ፣ እና ሌላ ካልተገለጸ በሰዓት ቢበዛ 50 ኪ.ሜ.።",
+            "text_amharic": "በከተማ የትራፊክ ደንቦች መሰረት እነዳለሁ፣ እና ሌላ ካልተገለጸ በሰዓት ቢበዛ 50 ኪሎሚቴር።",
             "is_correct": true,
             "audio_filename": "answer_424_q2_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "በሰዓት ቢበዛ 70 ኪ.ሜ. እነዳለሁ።",
+            "text_amharic": "በሰዓት ቢበዛ 70 ኪሎሚቴር እነዳለሁ።",
             "is_correct": false,
             "audio_filename": "answer_424_q2_B.mp3"
           }
@@ -13930,14 +13930,14 @@
         "id": "424_q3",
         "question_amharic": "በዚህ ምልክት በተጠቀሰው አካባቢ ሌላ የፍጥነት ምልክት ካልተቀመጠ የሚፈቀደው ከፍተኛ ፍጥነት ስንት ነው?",
         "question_audio": "424_q3_question.mp3",
-        "explanation_correct_amharic": "እሰይ። አቤት እውቀት! ትክክል! በዚህ አካባቢ ሌላ የፍጥነት ምልክት ካልተቀመጠ የሚፈቀደው ከፍተኛ ፍጥነት 50 ኪ.ሜ/ሰ ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: 50 ኪ.ሜ/ሰ።",
+        "explanation_correct_amharic": "እሰይ። አቤት እውቀት! ትክክል! በዚህ አካባቢ ሌላ የፍጥነት ምልክት ካልተቀመጠ የሚፈቀደው ከፍተኛ ፍጥነት 50 ኪሎሚቴር በሰዓት ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: 50 ኪሎሚቴር በሰዓት።",
         "explanation_correct_audio": "424_q3_correct.mp3",
         "explanation_wrong_audio": "424_q3_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "80 ኪ.ሜ/ሰ።",
+            "text_amharic": "80 ኪሎሚቴር በሰዓት።",
             "is_correct": false,
             "audio_filename": "answer_424_q3_A.mp3"
           },
@@ -13955,7 +13955,7 @@
           },
           {
             "id": "B",
-            "text_amharic": "50 ኪ.ሜ/ሰ።",
+            "text_amharic": "50 ኪሎሚቴር በሰዓት።",
             "is_correct": true,
             "audio_filename": "answer_424_q3_B.mp3"
           }
@@ -14074,7 +14074,7 @@
           },
           {
             "id": "C",
-            "text_amharic": "የተፈቀደው የፍጥነት መጠን በራስ-ሰር ወደ 50 ኪ.ሜ በሰዓት ይቀንሳል።",
+            "text_amharic": "የተፈቀደው የፍጥነት መጠን በራስ-ሰር ወደ 50 ኪሎሚቴር በሰዓት ይቀንሳል።",
             "is_correct": false,
             "audio_filename": "answer_425_q3_C.mp3"
           }
@@ -14105,25 +14105,25 @@
         "answers": [
           {
             "id": "A",
-            "text_amharic": "በመንገዱ ላይ የተፈቀደው ዝቅተኛው ፍጥነት 40 ወይም 60 ኪ.ሜ በሰዓት ነው።",
+            "text_amharic": "በመንገዱ ላይ የተፈቀደው ዝቅተኛው ፍጥነት 40 ወይም 60 ኪሎሚቴር በሰዓት ነው።",
             "is_correct": false,
             "audio_filename": "answer_426_q1_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "በመንገዱ ላይ የተፈቀደው ከፍተኛ ፍጥነት በምልክቱ ላይ በተጠቀሰው ቁጥር መሰረት 40 ወይም 60 ኪ.ሜ በሰዓት ነው።",
+            "text_amharic": "በመንገዱ ላይ የተፈቀደው ከፍተኛ ፍጥነት በምልክቱ ላይ በተጠቀሰው ቁጥር መሰረት 40 ወይም 60 ኪሎሚቴር በሰዓት ነው።",
             "is_correct": true,
             "audio_filename": "answer_426_q1_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "በ40 ወይም 60 ኪ.ሜ በሰዓት ፍጥነት መንዳት ይመከራል።",
+            "text_amharic": "በ40 ወይም 60 ኪሎሚቴር በሰዓት ፍጥነት መንዳት ይመከራል።",
             "is_correct": false,
             "audio_filename": "answer_426_q1_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "የተፈቀደው ፍጥነት 40 ወይም 60 ኪ.ሜ በሰዓት ለከባድ ተሽከርካሪዎች ብቻ ነው።",
+            "text_amharic": "የተፈቀደው ፍጥነት 40 ወይም 60 ኪሎሚቴር በሰዓት ለከባድ ተሽከርካሪዎች ብቻ ነው።",
             "is_correct": false,
             "audio_filename": "answer_426_q1_D.mp3"
           }
@@ -14140,7 +14140,7 @@
         "answers": [
           {
             "id": "A",
-            "text_amharic": "በትክክል በ40 ወይም 60 ኪ.ሜ በሰዓት ፍጥነት ይነዳል፣ ሳይበልጥም ሳያንስም።",
+            "text_amharic": "በትክክል በ40 ወይም 60 ኪሎሚቴር በሰዓት ፍጥነት ይነዳል፣ ሳይበልጥም ሳያንስም።",
             "is_correct": false,
             "audio_filename": "answer_426_q2_A.mp3"
           },
@@ -16485,7 +16485,7 @@
         "answers": [
           {
             "id": "A",
-            "text_amharic": "እስከ ቅርብ መንገድ ያለው ርቀት (በኪ.ሜ)።",
+            "text_amharic": "እስከ ቅርብ መንገድ ያለው ርቀት (በኪሎሚቴር)።",
             "is_correct": false,
             "audio_filename": "answer_605_q1_A.mp3"
           },
@@ -16497,7 +16497,7 @@
           },
           {
             "id": "C",
-            "text_amharic": "እስከ ቅርብ መስቀለኛ መንገድ ያለው ርቀት (በኪ.ሜ)።",
+            "text_amharic": "እስከ ቅርብ መስቀለኛ መንገድ ያለው ርቀት (በኪሎሚቴር)።",
             "is_correct": false,
             "audio_filename": "answer_605_q1_C.mp3"
           },
@@ -17318,7 +17318,7 @@
         "answers": [
           {
             "id": "A",
-            "text_amharic": "ምልክቱ ወደ አንድ የተወሰነ መድረሻ ያለውን ርቀት ያሳያል፣ ይህም 24 ኪ.ሜ. ነው።",
+            "text_amharic": "ምልክቱ ወደ አንድ የተወሰነ መድረሻ ያለውን ርቀት ያሳያል፣ ይህም 24 ኪሎሚቴር ነው።",
             "is_correct": false,
             "audio_filename": "answer_612_q1_A.mp3"
           },
@@ -19466,7 +19466,7 @@
           },
           {
             "id": "B",
-            "text_amharic": "ከዚህ በኋላ ከፍተኛው ፍጥነት 2500 ኪ.ሜ በሰዓት ነው።",
+            "text_amharic": "ከዚህ በኋላ ከፍተኛው ፍጥነት 2500 ኪሎሚቴር በሰዓት ነው።",
             "is_correct": false,
             "audio_filename": "answer_630_q1_B.mp3"
           },
@@ -19495,7 +19495,7 @@
         "answers": [
           {
             "id": "A",
-            "text_amharic": "ፍጥነቴን ወደ 2500 ኪ.ሜ በሰዓት መጨመር አለብኝ።",
+            "text_amharic": "ፍጥነቴን ወደ ሁለት ሺህ አምስት መቶ ኪሎሚቴር በሰዓት መጨመር አለብኝ።",
             "is_correct": false,
             "audio_filename": "answer_630_q2_A.mp3"
           },
@@ -22420,7 +22420,7 @@
     "video_filename": null,
     "name_hebrew": "515",
     "name_amharic": "የህዝብ ትራንስፖርት መስመር",
-    "explanation_amharic": "ድርብ ያልተቋረጠ መስመር ከቢጫ አልማዞች ጋር ተጣምሮ ይገኛል — መስመሮቹን መሻገር የተከለከለ ነው። በዚህ መስመር መንዳት የሚፈቀደው በትራፊክ ምልክት 230 ወይም 501 ላይ በተገለጹት ተሽከርካሪዎች፣ ወይም በአቅራቢያው ባለው መስቀለኛ መንገድ በትራፊክ ምልክት 514 መሰረት ለሚታጠፉ ተሽከርካሪዎች ብቻ ነው። በዚህ መስመር ላይ ተሽከርካሪዎችን ማቆም ወይም ማቆሚያ ማድረግ የተከለከለ ነው፣ በሌላ መንገድ ካልተገለጸ በስተቀር።",
+    "explanation_amharic": "ድርብ ያልተቋረጠ መስመር ከቢጫ አልማዞች ጋር ተጣምሮ ይገኛል — መስመሮቹን ማለፍ የተከለከለ ነው። በዚህ መስመር መንዳት የሚፈቀደው በትራፊክ ምልክት 230 ወይም 501 ላይ በተገለጹት ተሽከርካሪዎች፣ ወይም በአቅራቢያው ባለው መስቀለኛ መንገድ በትራፊክ ምልክት 514 መሰረት ለሚታጠፉ ተሽከርካሪዎች ብቻ ነው። በዚህ መስመር ላይ ተሽከርካሪዎችን ማቆም ወይም ማቆሚያ ማድረግ የተከለከለ ነው፣ በሌላ መንገድ ካልተገለጸ በስተቀር።",
     "audio_name_filename": "515_name.mp3",
     "audio_explanation_filename": "515_explanation.mp3",
     "questions": [
@@ -22428,8 +22428,8 @@
         "id": "515_q1",
         "question_amharic": "ድርብ ያልተቋረጠ መስመር ከቢጫ አልማዞች ጋር ምን ማለት ነው?",
         "question_audio": "515_q1_question.mp3",
-        "explanation_correct_amharic": "እሰይ የኔ ጎቨዝ። ትክክል! ድርብ ያልተቋረጠ መስመር ከቢጫ አልማዞች ጋር መስመሮቹን መሻገር የተከለከለ መሆኑን እና የህዝብ ትራንስፖርት መስመርን ያመለክታል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: መስመሮቹን መሻገር የተከለከለ ሲሆን የህዝብ ትራንስፖርት መስመርን ያመለክታል።",
+        "explanation_correct_amharic": "እሰይ የኔ ጎቨዝ። ትክክል! ድርብ ያልተቋረጠ መስመር ከቢጫ አልማዞች ጋር መስመሮቹን ማለፍ የተከለከለ መሆኑን እና የህዝብ ትራንስፖርት መስመርን ያመለክታል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: መስመሮቹን ማለፍ የተከለከለ ሲሆን የህዝብ ትራንስፖርት መስመርን ያመለክታል።",
         "explanation_correct_audio": "515_q1_correct.mp3",
         "explanation_wrong_audio": "515_q1_wrong.mp3",
         "answers": [
@@ -22453,7 +22453,7 @@
           },
           {
             "id": "D",
-            "text_amharic": "መስመሮቹን መሻገር የተከለከለ ሲሆን የህዝብ ትራንስፖርት መስመርን ያመለክታል።",
+            "text_amharic": "መስመሮቹን ማለፍ የተከለከለ ሲሆን የህዝብ ትራንስፖርት መስመርን ያመለክታል።",
             "is_correct": true,
             "audio_filename": "answer_515_q1_D.mp3"
           }
@@ -22538,7 +22538,7 @@
     "image_filename": "516.png",
     "video_filename": null,
     "name_hebrew": "516",
-    "name_amharic": "የህዝብ ማመላለሻ መስመር፣ መሻገር የሚፈቀድበትና የሚከለከልበት",
+    "name_amharic": "የህዝብ ማመላለሻ መስመር፣ ማለፍ የሚፈቀድበትና የሚከለከልበት",
     "explanation_amharic": "የተቆራረጠ መስመር ከቀጣይ መስመር አጠገብ ቢጫ የአልማዝ ቅርጽ ምልክቶች ጋር ተጣምሮ ይገኛል። መስመሮቹን ማቋረጥ የሚፈቀደው — መጀመሪያ የተቆራረጠውን (ያልተቀጣጠለ) መስመር ካቋረጡ፣ ከዚያ በኋላ ብቻ ቀጣዩን (ያልተቋረጠ) መስመር ማቋረጥ ይፈቀዳል። በዚህ መስመር መንዳት የሚፈቀደው በትራፊክ ምልክት 230 ወይም 501 ላይ በተገለጸው ተሽከርካሪ፣ ወይም በአቅራቢያው ባለው መስቀለኛ መንገድ በትራፊክ ምልክት 514 መሰረት ለሚታጠፍ ተሽከርካሪ ነው። በመስመሩ ውስጥ ተሽከርካሪዎችን ማቆም ወይም ማቆሚያ ማድረግ የተከለከለ ነው፣ ሌላ ካልተገለጸ በስተቀር።",
     "audio_name_filename": "516_name.mp3",
     "audio_explanation_filename": "516_explanation.mp3",
@@ -24833,7 +24833,7 @@
           },
           {
             "id": "D",
-            "text_amharic": "እግረኞች ለመሻገር እንዲዘጋጁ ያሳያል።",
+            "text_amharic": "እግረኞች ለማለፍ እንዲዘጋጁ ያሳያል።",
             "is_correct": false,
             "audio_filename": "answer_719_q1_D.mp3"
           }
@@ -26108,113 +26108,113 @@
     "image_filename": "801.png",
     "video_filename": null,
     "name_hebrew": "801",
-    "name_amharic": "ይህ መስመር የትራፊክ መስመሮችን የሚለይ ሲሆን ደህንነቱ የተጠበቀ ከሆነ ለመቅደም ወይም መስመር ለመቀየር መሻገር ይፈቀዳል።",
-    "explanation_amharic": "ይህ የተቆራረጠ ነጭ መስመር በተመሳሳይ አቅጣጫ የሚሄዱ የትራፊክ መስመሮችን ይለያል። አሽከርካሪዎች ደህንነቱ የተጠበቀ መሆኑን ካረጋገጡ በኋላ ሌሎች ተሽከርካሪዎችን ለመቅደም፣ መስመር ለመቀየር ወይም ለመታጠፍ ይህንን መስመር መሻገር ይችላሉ። ደህንነቱ ባልተጠበቀ ሁኔታ መስመሩን መሻገር አደጋ ሊያስከትል ወይም የትራፊክ ህግን በመጣስ ቅጣት ሊያስከትል ይችላል።",
+    "name_amharic": "የነጭ ነጠላ የተቆራረጠ የመስመር ምልክት",
+    "explanation_amharic": "ይህ ነጭ የተቆራረጠ መስመር በሁለት መንገድ መካከል ድንበር ነው። ሁልጊዜ በቀኝ በኩል ይንዱ። ይህን መስመር በመኪናዎ ሙሉ አካል ወይም በከፊሉ ማለፍ ያለምንም ምክኛት አይፈቀድም። ሆኖም በህጉ መሰረት ህጉን ጠብቀው የሚፈቀድልዎት በሚከተሉት ሁኔታዎች ብቻ ነው። 1. ቀስ ብሎ የሚሄድን ተሽከርካሪ ለማለፍ - ማለፉን ሲጨርሱ ወደ ቀኝ መመለስ አለቦት። 2. ለሌላ ሕጋዊ ዓላማ፡ ለምሳሌ ለመታጠፍ ለመዘጋጀት፣ ወደ ሌላ መስመር ለመቀላቀል፣ ወይም በመንገዱ ላይ ያለን እንቅፋት ለማለፍ።",
     "audio_name_filename": "801_name.mp3",
     "audio_explanation_filename": "801_explanation.mp3",
     "questions": [
       {
         "id": "801_q1",
-        "question_amharic": "ይህ የተቆራረጠ ነጭ መስመር በመንገድ ላይ ምን ያሳያል?",
+        "question_amharic": "ይህ ምልክት ምን ማለት ነው?",
         "question_audio": "801_q1_question.mp3",
-        "explanation_correct_amharic": "ትክክል! ይህ ምልክት የተቆራረጠ ነጭ መስመር ደህንነቱ የተጠበቀ ከሆነ ለመቅደም ወይም መስመር ለመቀየር መሻገር እንደሚቻል ያመለክታል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህንን መስመር ደህንነቱ ባልተጠበቀ ሁኔታ መሻገር ወይም ህጉን አለማወቅ አደጋ ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "ትክክል፥ አቬት እውቀት። ይህ ነጭ የተቆራረጠ መስመር የመንገድ መስመርን ያመለክታል፤ ሌላ ተሽከርካሪ ለማለፍ ይህን መስመር ማለፍ ይፈቀዳል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህ የተቆራረጠ ነጭ መስመር የመንገድ መስመር ሲሆን ለመቅደም ማለፍ ይፈቀዳል።",
         "explanation_correct_audio": "801_q1_correct.mp3",
         "explanation_wrong_audio": "801_q1_wrong.mp3",
         "answers": [
           {
-            "id": "B",
-            "text_amharic": "ደህንነቱ የተጠበቀ ከሆነ ለመቅደም ወይም መስመር ለመቀየር ይህንን መስመር መሻገር ይፈቀዳል።",
-            "is_correct": true,
-            "audio_filename": "answer_801_q1_B.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "ይህንን መስመር በማንኛውም ሁኔታ መሻገር ፈጽሞ የተከለከለ ነው።",
-            "is_correct": false,
+            "text_amharic": "ይህ የተቆራረጠ ነጭ መስመር የመንገድ መስመር ሲሆን ለመቅደም ማለፍ ይፈቀዳል።",
+            "is_correct": true,
             "audio_filename": "answer_801_q1_A.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "ይህ መስመር ለአውቶቡሶች ብቻ የተዘጋጀ መስመር መሆኑን ያሳያል።",
+            "id": "B",
+            "text_amharic": "ይህ መስመር ሁልጊዜም ማለፍ የተከለከለ ነው።",
             "is_correct": false,
-            "audio_filename": "answer_801_q1_D.mp3"
+            "audio_filename": "answer_801_q1_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "ይህ መስመር የእግረኛ ማቋረጫ ቦታ መሆኑን ያመለክታል።",
+            "text_amharic": "ይህ መስመር የመንገድ ዳር ምልክት ነው።",
             "is_correct": false,
             "audio_filename": "answer_801_q1_C.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "በዚህ መስመር ላይ ማቆም ይፈቀዳል።",
+            "is_correct": false,
+            "audio_filename": "answer_801_q1_D.mp3"
           }
         ]
       },
       {
         "id": "801_q2",
-        "question_amharic": "የተቆራረጠ ነጭ መስመርን መቼ መሻገር ይፈቀዳል?",
+        "question_amharic": "በዚህ ምልክት መሰረት እንዴት መንዳት አለብዎት?",
         "question_audio": "801_q2_question.mp3",
-        "explanation_correct_amharic": "ትክክል! ጥሩ ነው። የተቆራረጠ መስመርን መሻገር የሚፈቀደው ደህንነቱ የተጠበቀ መሆኑን ካረጋገጡ እና ሌሎች እገዳዎች ከሌሉ ብቻ ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ደህንነቱ ሳይረጋገጥ መስመር መሻገር የትራፊክ አደጋዎችን እና ከባድ ቅጣቶችን ያስከትላል።",
+        "explanation_correct_amharic": "ጎሽ! በዚህ ምልክት መሰረት ሁልጊዜ በቀኝ በኩል ባለው መስመር መንዳት እና ሌላ ተሽከርካሪ ለማለፍ ብቻ መስመሩን ማለፍ ይፈቀዳል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በቀኝ በኩል ባለው መስመር ይንዱ፤ ሌላ መኪና ለማለፍ ብቻ መስመሩን ያልፉ።",
         "explanation_correct_audio": "801_q2_correct.mp3",
         "explanation_wrong_audio": "801_q2_wrong.mp3",
         "answers": [
           {
-            "id": "D",
-            "text_amharic": "የትራፊክ ሁኔታ ምንም ይሁን ምን በማንኛውም ጊዜ መሻገር ይቻላል።",
-            "is_correct": false,
-            "audio_filename": "answer_801_q2_D.mp3"
-          },
-          {
-            "id": "C",
-            "text_amharic": "ደህንነቱ የተጠበቀ መሆኑን ሲያረጋግጡ እና ሌሎች የሚከለክሉ ምልክቶች ከሌሉ ነው።",
-            "is_correct": true,
-            "audio_filename": "answer_801_q2_C.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "በመንገድ ላይ ሌሎች መኪኖች በማይኖሩበት ጊዜ ብቻ ነው።",
-            "is_correct": false,
+            "text_amharic": "ሁልጊዜ በቀኝ በኩል ይንዱ፤ ቀስ ብሎ የሚሄድን ተሽከርካሪ ለማለፍ ወይም ለሌላ ህጋዊ ዓላማ ብቻ ማለፍ ይፈቀዳል።",
+            "is_correct": true,
             "audio_filename": "answer_801_q2_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "የፖሊስ መኮንን ፈቃድ ሲሰጥ ብቻ ነው።",
+            "text_amharic": "በማንኛውም ጊዜ መስመሩን ማለፍ ይችላሉ።",
             "is_correct": false,
             "audio_filename": "answer_801_q2_B.mp3"
+          },
+          {
+            "id": "C",
+            "text_amharic": "ፍጥነትዎን መቀነስ እና ማቆም አለብዎት።",
+            "is_correct": false,
+            "audio_filename": "answer_801_q2_C.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "በመንገዱ መሀል መንዳት አለብዎት።",
+            "is_correct": false,
+            "audio_filename": "answer_801_q2_D.mp3"
           }
         ]
       },
       {
         "id": "801_q3",
-        "question_amharic": "የተቆራረጠ ነጭ መስመርን ደህንነቱ ባልተጠበቀ ሁኔታ መሻገር ዋነኛው አደጋ ምንድነው?",
+        "question_amharic": "ይህን የተቆራረጠ መስመር ማለፍ የሚፈቀደው መቼ ነው?",
         "question_audio": "801_q3_question.mp3",
-        "explanation_correct_amharic": "አሪፍ! ምልክቱ ደህንነቱ ባልተጠበቀ ሁኔታ መስመር መሻገር ለትራፊክ አደጋዎች እና ለህግ ጥሰት ቅጣቶች ያጋልጣል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የደህንነት ደንቦችን ችላ ማለት የራስዎን እና የሌሎችን ህይወት አደጋ ላይ ይጥላል።",
+        "explanation_correct_amharic": "እንድያ ነው! ይህ የተቆራረጠ መስመር ሌላ ተሽከርካሪ ለማለፍ ሲፈልጉ ብቻ ማለፍ እንደሚፈቀድ በግልጽ ያመለክታል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ሌላ ተሽከርካሪ ለማለፍ ሲፈልጉ ብቻ ማለፍ ይፈቀዳል።",
         "explanation_correct_audio": "801_q3_correct.mp3",
         "explanation_wrong_audio": "801_q3_wrong.mp3",
         "answers": [
           {
-            "id": "D",
-            "text_amharic": "ወደ መድረሻዎ በፍጥነት መድረስ ይችላሉ።",
+            "id": "A",
+            "text_amharic": "ወደ ግራ ለመታጠፍ ብቻ ማለፍ ይፈቀዳል።",
             "is_correct": false,
-            "audio_filename": "answer_801_q3_D.mp3"
+            "audio_filename": "answer_801_q3_A.mp3"
+          },
+          {
+            "id": "B",
+            "text_amharic": "በምንም ሁኔታ ማለፍ አይፈቀድም።",
+            "is_correct": false,
+            "audio_filename": "answer_801_q3_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "መኪናዎ ሊቆሽሽ ይችላል።",
+            "text_amharic": "በማንኛውም ጊዜ ማለፍ ይፈቀዳል።",
             "is_correct": false,
             "audio_filename": "answer_801_q3_C.mp3"
           },
           {
-            "id": "B",
-            "text_amharic": "የትራፊክ አደጋ ማድረስ ወይም የገንዘብ ቅጣት መቀበል ነው።",
+            "id": "D",
+            "text_amharic": "ሌላ ተሽከርካሪ ለማለፍ ሲፈልጉ ብቻ ማለፍ ይፈቀዳል።",
             "is_correct": true,
-            "audio_filename": "answer_801_q3_B.mp3"
-          },
-          {
-            "id": "A",
-            "text_amharic": "ከሌሎች አሽከርካሪዎች ማስጠንቀቂያ መቀበል ነው።",
-            "is_correct": false,
-            "audio_filename": "answer_801_q3_A.mp3"
+            "audio_filename": "answer_801_q3_D.mp3"
           }
         ]
       }
@@ -26227,111 +26227,111 @@
     "image_filename": "802.png",
     "video_filename": null,
     "name_hebrew": "802",
-    "name_amharic": "ይህ ምልክት እግረኞች መንገዱን በደህና የሚያቋርጡበትን ቦታ ያሳያል።",
-    "explanation_amharic": "ይህ ምልክት እግረኞች መንገዱን በደህና የሚያቋርጡበትን ቦታ ያመለክታል። አሽከርካሪዎች ይህንን ምልክት ሲያዩ ፍጥነታቸውን መቀነስ፣ እግረኞች ካሉ እንዲያልፉ መፍቀድ እና ሙሉ በሙሉ እስኪያልፉ ድረስ መጠበቅ አለባቸው። ይህንን ህግ አለማክበር ለእግረኞች አደጋ ሊያስከትል፣ ከፍተኛ ቅጣት ሊያስወጣ እና የመንጃ ፍቃድ ነጥቦችን ሊያስመዘግብ ይችላል።",
+    "name_amharic": "የነጭ ድርብ የተቆራረጠ የመስመር ምልክት",
+    "explanation_amharic": "ይህ ነጭ ባለሁለት የተቆራረጠ መስመር አቅጣጫው ሊቀየር የሚችል መንገድ ወይም መስመር ነው። በዚህ መስመር ላይ መንዳት አይፈቀድም። ከላይ ምልክቶች 201 እስከ 203፣ 206 እስከ 212፣ ወይም 724 እስከ 724פ ከተቀመጡ ብቻ በዚህ መስመር ማለፍ ይፈቀዳል።",
     "audio_name_filename": "802_name.mp3",
     "audio_explanation_filename": "802_explanation.mp3",
     "questions": [
       {
         "id": "802_q1",
-        "question_amharic": "ይህ የመንገድ ላይ ምልክት ምን ያሳያል?",
+        "question_amharic": "ይህ ምልክት ምን ማለት ነው?",
         "question_audio": "802_q1_question.mp3",
-        "explanation_correct_amharic": "ጎቨዝ። ይህ ምልክት እግረኞች መንገዱን በደህና የሚያቋርጡበትን ቦታ የሚያመለክት ሲሆን፣ ቅድሚያም የሚሰጣቸው እነሱ ናቸው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የምልክቱን ትርጉም አለማወቅ እግረኞችን አደጋ ላይ ሊጥል እና የትራፊክ ህግን መጣስ ነው።",
+        "explanation_correct_amharic": "ጎሽ! ይህ ነጭ ባለሁለት የተቆራረጠ መስመር አቅጣጫው ሊቀየር የሚችል መንገድ ወይም መስመር መሆኑን ያመለክታል። በዚህ መስመር ላይ ያለ ፍቃድ መንዳት አይፈቀድም። መንዳት የሚፈቀደው ከላይ በተቀመጡ የተወሰኑ የትራፊክ ምልክቶች ሲፈቀድ ብቻ ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህ አቅጣጫው ሊቀየር የሚችል መንገድ ወይም መስመር ሲሆን፣ በተለየ ምልክት ካልተፈቀደ በስተቀር መንዳት አይፈቀድም።",
         "explanation_correct_audio": "802_q1_correct.mp3",
         "explanation_wrong_audio": "802_q1_wrong.mp3",
         "answers": [
           {
-            "id": "C",
-            "text_amharic": "ለአውቶቡሶች ማቆሚያ ቦታ ነው።",
-            "is_correct": false,
-            "audio_filename": "answer_802_q1_C.mp3"
-          },
-          {
-            "id": "D",
-            "text_amharic": "ከፊት ለፊት የግንባታ ቦታ መኖሩን ያመለክታል።",
-            "is_correct": false,
-            "audio_filename": "answer_802_q1_D.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "ተሽከርካሪዎች ለምርመራ መቆም ያለባቸው ቦታ ነው።",
+            "text_amharic": "ይህ የአደጋ ጊዜ ማቆሚያ መስመር ነው።",
             "is_correct": false,
             "audio_filename": "answer_802_q1_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "እግረኞች መንገዱን ለማቋረጥ ቅድሚያ የሚሰጣቸው ቦታ ነው።",
-            "is_correct": true,
+            "text_amharic": "ይህ መስመር ተሽከርካሪዎችን ማለፍ የተከለከለ መሆኑን ያመለክታል።",
+            "is_correct": false,
             "audio_filename": "answer_802_q1_B.mp3"
+          },
+          {
+            "id": "C",
+            "text_amharic": "ይህ አቅጣጫው ሊቀየር የሚችል መንገድ ወይም መስመር ሲሆን፣ በተለየ ምልክት ካልተፈቀደ በስተቀር መንዳት አይፈቀድም።",
+            "is_correct": true,
+            "audio_filename": "answer_802_q1_C.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ይህ የመንገዱን ዳርቻ የሚያሳይ ሲሆን ማቆም የተከለከለ ነው።",
+            "is_correct": false,
+            "audio_filename": "answer_802_q1_D.mp3"
           }
         ]
       },
       {
         "id": "802_q2",
-        "question_amharic": "አሽከርካሪ ይህንን ምልክት ሲያይ ምን ማድረግ አለበት?",
+        "question_amharic": "በዚህ ምልክት መሰረት እንዴት መንዳት አለብዎት?",
         "question_audio": "802_q2_question.mp3",
-        "explanation_correct_amharic": "በጣም ጥሩ። አሽከርካሪዎች በእግረኛ ማቋረጫ ላይ ሁልጊዜ ፍጥነታቸውን መቀነስ እና ለእግረኞች ቅድሚያ መስጠት አለባቸው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በእግረኛ ማቋረጫ ላይ ጥንቃቄ አለማድረግ ለእግረኞች ከባድ አደጋ ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "እንድያ ነው! ይህ መስመር አቅጣጫው ሊቀየር የሚችል በመሆኑ፣ ከላይ የሚታይ የትራፊክ ምልክት መንዳት እንደሚፈቅድ ካላሳየ በስተቀር በዚህ መስመር ላይ መንዳት የለብዎትም።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ከላይ የሚታይ የትራፊክ ምልክት መንዳት እንደሚፈቅድ ካላሳየ በስተቀር በዚህ መስመር ላይ መንዳት የለብዎትም።",
         "explanation_correct_audio": "802_q2_correct.mp3",
         "explanation_wrong_audio": "802_q2_wrong.mp3",
         "answers": [
           {
-            "id": "C",
-            "text_amharic": "ፍጥነቱን መቀነስ፣ ለመቆም መዘጋጀት እና ለእግረኞች ቅድሚያ መስጠት አለበት።",
-            "is_correct": true,
-            "audio_filename": "answer_802_q2_C.mp3"
-          },
-          {
-            "id": "B",
-            "text_amharic": "እግረኞችን ከመንገድ እንዲርቁ ለማስጠንቀቅ ቀንድ መምታት አለበት።",
-            "is_correct": false,
-            "audio_filename": "answer_802_q2_B.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "አካባቢውን በፍጥነት ለማለፍ ፍጥነቱን መጨመር አለበት።",
+            "text_amharic": "በዚህ መስመር ላይ በማንኛውም ጊዜ መንዳት ይችላሉ።",
             "is_correct": false,
             "audio_filename": "answer_802_q2_A.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "ፖሊስ ከሌለ በተመሳሳይ ፍጥነት መቀጠል አለበት።",
+            "id": "B",
+            "text_amharic": "ይህ መስመር ለአውቶቡሶች ብቻ የተዘጋጀ ነው።",
             "is_correct": false,
+            "audio_filename": "answer_802_q2_B.mp3"
+          },
+          {
+            "id": "C",
+            "text_amharic": "በዚህ መስመር ላይ መንዳት የሚፈቀደው በምሽት ብቻ ነው።",
+            "is_correct": false,
+            "audio_filename": "answer_802_q2_C.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ከላይ የሚታይ የትራፊክ ምልክት መንዳት እንደሚፈቅድ ካላሳየ በስተቀር በዚህ መስመር ላይ መንዳት የለብዎትም።",
+            "is_correct": true,
             "audio_filename": "answer_802_q2_D.mp3"
           }
         ]
       },
       {
         "id": "802_q3",
-        "question_amharic": "በዚህ የእግረኛ ማቋረጫ ላይ ለእግረኞች ቅድሚያ አለመስጠት የሚያስከትለው ውጤት ምንድነው?",
+        "question_amharic": "በዚህ ባለሁለት የተቆራረጠ ነጭ መስመር ላይ መንዳት የሚፈቀደው መቼ ነው?",
         "question_audio": "802_q3_question.mp3",
-        "explanation_correct_amharic": "ጎሽሽ። በእግረኛ ማቋረጫ ላይ ህጉን አለማክበር ከባድ የትራፊክ ጥሰት ሲሆን፣ ለከፍተኛ ቅጣት እና አደጋ ያጋልጣል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የእግረኞችን ደህንነት ችላ ማለት ህይወትን አደጋ ላይ የሚጥል እና ከባድ ህጋዊ መዘዝ የሚያስከትል ነው።",
+        "explanation_correct_amharic": "አቬት ችሎታ፥ ትክክል። በዚህ መስመር ላይ መንዳት የሚፈቀደው ከላይ በተቀመጡ የተወሰኑ የትራፊክ ምልክቶች (ለምሳሌ 201-203፣ 206-212 ወይም 724-724ፍ) ሲፈቀድ ብቻ ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ከላይ በተቀመጡ የተወሰኑ የትራፊክ ምልክቶች (ለምሳሌ 201-203) መንዳት ሲፈቀድ ብቻ።",
         "explanation_correct_audio": "802_q3_correct.mp3",
         "explanation_wrong_audio": "802_q3_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "የትራፊክ ፖሊስ ትንሽ ማስጠንቀቂያ ብቻ ይሰጣል።",
+            "text_amharic": "ከሰዓት በኋላ ብቻ።",
             "is_correct": false,
             "audio_filename": "answer_802_q3_A.mp3"
           },
           {
-            "id": "C",
-            "text_amharic": "ከባድ አደጋ፣ ከፍተኛ ቅጣት እና የመንጃ ፍቃድ ነጥቦች የመጋለጥ እድል አለ።",
-            "is_correct": true,
-            "audio_filename": "answer_802_q3_C.mp3"
-          },
-          {
             "id": "B",
-            "text_amharic": "አደጋ ካልተከሰተ ምንም የሚያስከትለው ውጤት የለም።",
+            "text_amharic": "ሁልጊዜ መንዳት ይፈቀዳል።",
             "is_correct": false,
             "audio_filename": "answer_802_q3_B.mp3"
           },
           {
+            "id": "C",
+            "text_amharic": "ከላይ በተቀመጡ የተወሰኑ የትራፊክ ምልክቶች (ለምሳሌ 201-203) መንዳት ሲፈቀድ ብቻ።",
+            "is_correct": true,
+            "audio_filename": "answer_802_q3_C.mp3"
+          },
+          {
             "id": "D",
-            "text_amharic": "እግረኞች አሽከርካሪው እስኪያልፍ ድረስ በቀላሉ ይጠብቃሉ።",
+            "text_amharic": "የትራፊክ መጨናነቅ ሲኖር ብቻ።",
             "is_correct": false,
             "audio_filename": "answer_802_q3_D.mp3"
           }
@@ -26346,41 +26346,41 @@
     "image_filename": "803.png",
     "video_filename": null,
     "name_hebrew": "803",
-    "name_amharic": "ይህ የመንገድ ምልክት መሻገር ወይም መርገጥ በፍጹም የተከለከለበትን ቀጣይነት ያለው መስመር ያሳያል።",
-    "explanation_amharic": "እነዚህ ሁለት ቀጣይነት ያላቸው ነጭ መስመሮች የመንገዱን ዳርቻ፣ የትራፊክ መስመሮችን ወይም መሻገር የተከለከለባቸውን ቦታዎች ያመለክታሉ። አሽከርካሪዎች እነዚህን መስመሮች መሻገር፣ መርገጥ ወይም በእነሱ ላይ መንዳት በፍጹም የለባቸውም። ይህንን ህግ መጣስ የትራፊክ ጥሰት ሲሆን ቅጣት፣ የፍቃድ ነጥቦች እና ከባድ አደጋ ሊያስከትል ይችላል።",
+    "name_amharic": "ነጭ ድርብ ተከታታይ የመለያ መስመር",
+    "explanation_amharic": "ይህ ነጭ ባለሁለት ተከታታይ የመለያ መስመር ነው። የመንገድ አቅጣጫዎችን የሚለይ ሲሆን፣ ሁልጊዜ ከመስመሮቹ በስተቀኝ በኩል መንዳት አለብዎት። በምንም ሁኔታ ቢሆን በመኪናው አካል ወይም በከፊል መስመሮቹን ማለፍ በፍጹም የተከለከለ ነው።",
     "audio_name_filename": "803_name.mp3",
     "audio_explanation_filename": "803_explanation.mp3",
     "questions": [
       {
         "id": "803_q1",
-        "question_amharic": "ይህ ሁለት ቀጣይነት ያለው ነጭ መስመር ምን ማለት ነው?",
+        "question_amharic": "ይህ የመንገድ ምልክት ምን ያሳያል?",
         "question_audio": "803_q1_question.mp3",
-        "explanation_correct_amharic": "ዋውው በጣም ጥሩ። ቀጣይነት ያለው ነጭ መስመር አሽከርካሪዎች መሻገር ወይም መርገጥ እንደሌለባቸው የሚያመለክት የትራፊክ ምልክት ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: መስመሩን መሻገር ወይም መርገጥ የትራፊክ ህግን መጣስ ሲሆን አደጋ ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "እንድያ ነው! ይህ ምልክት የመንገድ አቅጣጫዎችን የሚለይ ነጭ ባለሁለት ተከታታይ የመለያ መስመር መሆኑን ያሳያል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህ ምልክት የመንገድ አቅጣጫዎችን የሚለይ ነጭ ባለሁለት ተከታታይ የመለያ መስመር መሆኑን ያሳያል።",
         "explanation_correct_audio": "803_q1_correct.mp3",
         "explanation_wrong_audio": "803_q1_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "መንገዱ ባዶ ከሆነ ለመቅደም መስመሩን መሻገር ይፈቀዳል።",
+            "text_amharic": "ነጠላ ነጭ ተከታታይ የመለያ መስመር።",
             "is_correct": false,
             "audio_filename": "answer_803_q1_A.mp3"
           },
           {
-            "id": "C",
-            "text_amharic": "በቅርቡ የሚታጠፉ ከሆነ በመስመሩ ላይ መንዳት ይችላሉ።",
-            "is_correct": false,
-            "audio_filename": "answer_803_q1_C.mp3"
-          },
-          {
             "id": "B",
-            "text_amharic": "በፍጹም መስመሩን መሻገር ወይም መርገጥ አይፈቀድም።",
-            "is_correct": true,
+            "text_amharic": "በተመሳሳይ አቅጣጫ የሚሄዱ መስመሮችን የሚለይ ነጭ የተቆራረጠ መስመር።",
+            "is_correct": false,
             "audio_filename": "answer_803_q1_B.mp3"
           },
           {
+            "id": "C",
+            "text_amharic": "የመንገድ አቅጣጫዎችን የሚለይ ነጭ ባለሁለት ተከታታይ የመለያ መስመር።",
+            "is_correct": true,
+            "audio_filename": "answer_803_q1_C.mp3"
+          },
+          {
             "id": "D",
-            "text_amharic": "እነዚህ መስመሮች የብስክሌት መንገድን ያመለክታሉ።",
+            "text_amharic": "ለመኪና ማቆሚያ የሚያገለግል ነጭ መስመር።",
             "is_correct": false,
             "audio_filename": "answer_803_q1_D.mp3"
           }
@@ -26388,71 +26388,71 @@
       },
       {
         "id": "803_q2",
-        "question_amharic": "አሽከርካሪዎች እነዚህን ሁለት ቀጣይነት ያላቸው ነጭ መስመሮች ሲያዩ ምን ማድረግ አለባቸው?",
+        "question_amharic": "ይህንን ምልክት ሲያዩ እንዴት መንዳት አለብዎት?",
         "question_audio": "803_q2_question.mp3",
-        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። የቀጣይነት መስመሮች ዓላማ አሽከርካሪዎች በተወሰነ መስመር ውስጥ እንዲቆዩ እና እንዳይሻገሩ መምራት ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: መስመሮቹን መሻገር ወይም መንካት አደጋ ሊያስከትል ወይም የትራፊክ ህግን መጣስ ሊሆን ይችላል።",
+        "explanation_correct_amharic": "አቬት ችሎታ፥ ትክክል። በዚህ ምልክት መሰረት ሁልጊዜ ከመስመሮቹ በስተቀኝ በኩል መንዳት እና በምንም ሁኔታ መስመሮቹን ማለፍ የለብዎትም።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ሁልጊዜ ከመስመሮቹ በስተቀኝ በኩል መንዳት እና በምንም ሁኔታ በመኪናው አካል ወይም በከፊል መስመሮቹን ማለፍ የለብዎትም።",
         "explanation_correct_audio": "803_q2_correct.mp3",
         "explanation_wrong_audio": "803_q2_wrong.mp3",
         "answers": [
           {
-            "id": "C",
-            "text_amharic": "ወደ መንገድ መሃል ለመንዳት መስመሮቹን እንደ መመሪያ መጠቀም አለባቸው።",
-            "is_correct": false,
-            "audio_filename": "answer_803_q2_C.mp3"
-          },
-          {
-            "id": "D",
-            "text_amharic": "ወዲያውኑ ማቆም እና ተጨማሪ መመሪያዎችን መጠበቅ አለባቸው።",
-            "is_correct": false,
-            "audio_filename": "answer_803_q2_D.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "ሌሎች ተሽከርካሪዎችን በፍጥነት ለማለፍ ፍጥነታቸውን መጨመር አለባቸው።",
+            "text_amharic": "በአስቸኳይ ጊዜ ብቻ መስመሮቹን ማለፍ ይቻላል።",
             "is_correct": false,
             "audio_filename": "answer_803_q2_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "በአሁኑ መስመራቸው ውስጥ መቆየት እና መስመሮቹን አለመሻገር ወይም አለመንካት አለባቸው።",
+            "text_amharic": "ሁልጊዜ ከመስመሮቹ በስተቀኝ በኩል መንዳት እና በምንም ሁኔታ በመኪናው አካል ወይም በከፊል መስመሮቹን ማለፍ የለብዎትም።",
             "is_correct": true,
             "audio_filename": "answer_803_q2_B.mp3"
+          },
+          {
+            "id": "C",
+            "text_amharic": "ደህንነቱ የተጠበቀ ከሆነ ለማለፍ መስመሮቹን ማለፍ ይፈቀዳል።",
+            "is_correct": false,
+            "audio_filename": "answer_803_q2_C.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ትራፊክ ከሌለ በስተቀር ሁልጊዜ ከመስመሮቹ በስተቀኝ መንዳት አለብዎት።",
+            "is_correct": false,
+            "audio_filename": "answer_803_q2_D.mp3"
           }
         ]
       },
       {
         "id": "803_q3",
-        "question_amharic": "እነዚህን ቀጣይነት ያላቸው ነጭ መስመሮች መሻገር ወይም መርገጥ የሚያስከትለው ውጤት ምንድን ነው?",
+        "question_amharic": "ነጭ ባለሁለት ተከታታይ የመለያ መስመርን በተመለከተ ትክክለኛው ደንብ የትኛው ነው?",
         "question_audio": "803_q3_question.mp3",
-        "explanation_correct_amharic": "እሰይ። አቤት እውቀት! የእስራኤል የትራፊክ ህግ እነዚህን መስመሮች መሻገርን በጥብቅ ይከለክላል ምክንያቱም አደገኛ እና ህገወጥ ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህንን ህግ ችላ ማለት ቅጣት፣ የፍቃድ ነጥቦች እና ለራስ እና ለሌሎች አሽከርካሪዎች አደጋ ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "ትክክል! ነጭ ባለሁለት ተከታታይ የመለያ መስመርን በመኪናው አካል ወይም በከፊል ማለፍ በምንም ሁኔታ በፍጹም የተከለከለ ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በመኪናው አካል ወይም በከፊል መስመሮቹን ማለፍ በምንም ሁኔታ በፍጹም የተከለከለ ነው።",
         "explanation_correct_audio": "803_q3_correct.mp3",
         "explanation_wrong_audio": "803_q3_wrong.mp3",
         "answers": [
           {
-            "id": "B",
-            "text_amharic": "የትራፊክ ጥሰት ሲሆን ቅጣት፣ የፍቃድ ነጥቦች እና ከባድ አደጋ ሊያስከትል ይችላል።",
-            "is_correct": true,
-            "audio_filename": "answer_803_q3_B.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "በአጠቃላይ ይፈቀዳል፣ ግን ለአጭር ርቀት ብቻ ነው።",
+            "text_amharic": "መስመሮቹን በከፊል ማለፍ ይፈቀዳል፣ ነገር ግን ሙሉ በሙሉ ማለፍ አይፈቀድም።",
             "is_correct": false,
             "audio_filename": "answer_803_q3_A.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "ምንም አደጋ እስካልተከሰተ ድረስ ምንም የተለየ ውጤት የለውም።",
-            "is_correct": false,
-            "audio_filename": "answer_803_q3_D.mp3"
+            "id": "B",
+            "text_amharic": "በመኪናው አካል ወይም በከፊል መስመሮቹን ማለፍ በምንም ሁኔታ በፍጹም የተከለከለ ነው።",
+            "is_correct": true,
+            "audio_filename": "answer_803_q3_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "የበለጠ ተለዋዋጭነት በመፍቀድ የትራፊክ ፍሰትን ለማሻሻል ይረዳል።",
+            "text_amharic": "መስመሮቹ የመንገድ አቅጣጫዎችን ይለያሉ፣ ነገር ግን በአስቸኳይ ጊዜ ማለፍ ይፈቀዳል።",
             "is_correct": false,
             "audio_filename": "answer_803_q3_C.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ተቃራኒ ትራፊክ ከሌለ መስመሮቹን ማለፍ ይቻላል።",
+            "is_correct": false,
+            "audio_filename": "answer_803_q3_D.mp3"
           }
         ]
       }
@@ -26465,113 +26465,113 @@
     "image_filename": "804.png",
     "video_filename": null,
     "name_hebrew": "804",
-    "name_amharic": "ይህ ምልክት መንገዱ ላይ የብስክሌት መስመር መኖሩን እና ብስክሌቶች የሚሄዱበትን አቅጣጫ ያሳያል።",
-    "explanation_amharic": "ይህ የመንገድ ላይ ምልክት ብስክሌቶች ብቻ እንዲጠቀሙበት የተፈቀደ ልዩ መስመር መኖሩን ያመለክታል። ቀስቱ ብስክሌተኞች መሄድ ያለባቸውን አቅጣጫ ያሳያል። የመኪና አሽከርካሪዎች ይህንን መስመር መግባት፣ ማቆም ወይም ማገድ ፈጽሞ የተከለከለ ነው። ይህንን ህግ መጣስ የትራፊክ ቅጣት ያስከትላል እንዲሁም ከብስክሌተኞች ጋር አደጋ ሊያደርስ ይችላል።",
+    "name_amharic": "የብስክሌት መስመር ምልክት",
+    "explanation_amharic": "ይህ መስመር ወይም መንገድ ለብስክሌቶች ብቻ የተዘጋጀ ነው። ብስክሌተኞች በቀስት ምልክቱ በሚያሳየው አቅጣጫ ብቻ መንዳት አለባቸው። ሌሎች ተሽከርካሪዎች ወደዚህ መስመር መግባት ፈጽሞ የተከለከለ ነው።",
     "audio_name_filename": "804_name.mp3",
     "audio_explanation_filename": "804_explanation.mp3",
     "questions": [
       {
         "id": "804_q1",
-        "question_amharic": "ይህ የመንገድ ላይ ምልክት ምን ያመለክታል?",
+        "question_amharic": "ይህ ምልክት ምን ማለት ነው?",
         "question_audio": "804_q1_question.mp3",
-        "explanation_correct_amharic": "ትክክل! ይህ ምልክት ብስክሌቶች ብቻ እንዲጠቀሙበት የተፈቀደ ልዩ መስመር መኖሩን እና የሚሄዱበትን አቅጣጫ በግልጽ ያሳያል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ መምረጥ የመንገድ ህጎችን መጣስ እና ከብስክሌተኞች ጋር አደጋ ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "አቬት ችሎታ፥ ትክክል። ይህ መስመር ወይም መንገድ ለብስክሌቶች ብቻ የተዘጋጀ ሲሆን፣ ብስክሌተኞች በቀስት ምልክቱ በሚያሳየው አቅጣጫ ብቻ መንዳት አለባቸው። ሌሎች ተሽከርካሪዎች ወደዚህ መስመር መግባት ፈጽሞ የተከለከለ ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህ መስመር ወይም መንገድ ለብስክሌቶች ብቻ የተዘጋጀ ሲሆን፣ ብስክሌተኞች በቀስት ምልክቱ በሚያሳየው አቅጣጫ ብቻ መንዳት አለባቸው። ሌሎች ተሽከርካሪዎች ወደዚህ መስመር መግባት ፈጽሞ የተከለከለ ነው።",
         "explanation_correct_audio": "804_q1_correct.mp3",
         "explanation_wrong_audio": "804_q1_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "መኪናዎች ለጊዜው ማቆም የሚችሉበት መስመር መሆኑን ያመለክታል።",
+            "text_amharic": "ብስክሌተኞች በማንኛውም አቅጣጫ መንዳት የሚችሉበት መስመር ነው።",
             "is_correct": false,
             "audio_filename": "answer_804_q1_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "ብስክሌቶች ብቻ የሚጠቀሙበትን መስመር እና የሚሄዱበትን አቅጣጫ ያመለክታል።",
-            "is_correct": true,
+            "text_amharic": "ይህ መስመር ለሁሉም ተሽከርካሪዎች ክፍት ነው፣ ነገር ግን ብስክሌቶች ቅድሚያ አላቸው።",
+            "is_correct": false,
             "audio_filename": "answer_804_q1_B.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "ሁሉም ተሽከርካሪዎች የሚጠቀሙበት አጠቃላይ የትራፊክ መስመር መሆኑን ያመለክታል።",
-            "is_correct": false,
-            "audio_filename": "answer_804_q1_D.mp3"
-          },
-          {
             "id": "C",
-            "text_amharic": "እግረኞች መንገድ የሚያቋርጡበት ቦታ መሆኑን ያመለክታል።",
+            "text_amharic": "ብስክሌተኞች ከሌሎች ተሽከርካሪዎች እንዲጠነቀቁ የሚያስጠነቅቅ ምልክት ነው።",
             "is_correct": false,
             "audio_filename": "answer_804_q1_C.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ይህ መስመር ወይም መንገድ ለብስክሌቶች ብቻ የተዘጋጀ ሲሆን፣ ብስክሌተኞች በቀስት ምልክቱ በሚያሳየው አቅጣጫ ብቻ መንዳት አለባቸው። ሌሎች ተሽከርካሪዎች ወደዚህ መስመር መግባት ፈጽሞ የተከለከለ ነው።",
+            "is_correct": true,
+            "audio_filename": "answer_804_q1_D.mp3"
           }
         ]
       },
       {
         "id": "804_q2",
-        "question_amharic": "የመኪና አሽከርካሪ እንደመሆንዎ መጠን ይህንን ምልክት በመንገድ ላይ ሲያዩ ምን ማድረግ አለብዎት?",
+        "question_amharic": "በዚህ ምልክት መሰረት እንዴት መንዳት አለብዎት?",
         "question_audio": "804_q2_question.mp3",
-        "explanation_correct_amharic": "ትክክል! ጥሩ ነው። ይህ መስመር ለብስክሌቶች ብቻ የተከለለ ስለሆነ የመኪና አሽከርካሪዎች ወደ ውስጥ መግባት፣ ማቆም ወይም ማገድ ፈጽሞ የተከለከለ ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የብስክሌት መስመርን መጣስ የትራፊክ ቅጣት የሚያስከትል ሲሆን የብስክሌተኞችን ደህንነት አደጋ ላይ ይጥላል።",
+        "explanation_correct_amharic": "ትክክል! ሌላ ተሽከርካሪ እየነዳሁ ከሆነ፣ ወደዚህ መስመር መግባት ፈጽሞ የተከለከለ ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ሌላ ተሽከርካሪ እየነዳሁ ከሆነ፣ ወደዚህ መስመር መግባት ፈጽሞ የተከለከለ ነው።",
         "explanation_correct_audio": "804_q2_correct.mp3",
         "explanation_wrong_audio": "804_q2_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "መስመሩ ባዶ ከሆነ በጥንቃቄ በብስክሌት መስመሩ ውስጥ መንዳት አለብዎት።",
+            "text_amharic": "ሌላ ተሽከርካሪ እየነዳሁ ከሆነ፣ ፍጥነቴን ቀንሼ መስመሩን ከብስክሌቶች ጋር መጋራት አለብኝ።",
             "is_correct": false,
             "audio_filename": "answer_804_q2_A.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "ፍጥነትዎን በመቀነስ ብስክሌቶች ወደ ዋናው የትራፊክ መስመር እንዲገቡ መፍቀድ አለብዎት።",
-            "is_correct": false,
-            "audio_filename": "answer_804_q2_D.mp3"
-          },
-          {
             "id": "B",
-            "text_amharic": "ይህ መስመር ለብስክሌቶች ብቻ ስለሆነ ወደ ውስጥ መግባት፣ ማቆም ወይም ማቆም የለብዎትም።",
-            "is_correct": true,
+            "text_amharic": "ሌላ ተሽከርካሪ እየነዳሁ ከሆነ፣ ብስክሌቶች ከሌሉ ወደዚህ መስመር መግባት እችላለሁ።",
+            "is_correct": false,
             "audio_filename": "answer_804_q2_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "ሌሎች ተሽከርካሪዎችን ለማለፍ ይህንን መስመር መጠቀም አለብዎት።",
+            "text_amharic": "ብስክሌት እየነዳሁ ከሆነ፣ በቀስት ምልክቱ በተቃራኒ አቅጣጫ መሄድ እችላለሁ።",
             "is_correct": false,
             "audio_filename": "answer_804_q2_C.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ሌላ ተሽከርካሪ እየነዳሁ ከሆነ፣ ወደዚህ መስመር መግባት ፈጽሞ የተከለከለ ነው።",
+            "is_correct": true,
+            "audio_filename": "answer_804_q2_D.mp3"
           }
         ]
       },
       {
         "id": "804_q3",
-        "question_amharic": "የመኪና አሽከርካሪ ይህንን ምልክት ችላ ብሎ በብስክሌት መስመር ውስጥ ቢነዳ የሚያስከትለው ውጤት ምንድን ነው?",
+        "question_amharic": "ሌሎች ተሽከርካሪዎች ወደዚህ የብስክሌት መስመር እንዲገቡ ተፈቅዶላቸዋል?",
         "question_audio": "804_q3_question.mp3",
-        "explanation_correct_amharic": "አሪፍ! ምልክቱ የብስክሌት መስመርን መጣስ በህግ የተከለከለ ሲሆን ቅጣት የሚያስከትል ከመሆኑም በላይ የብስክሌተኞችን ህይወት አደጋ ላይ ይጥላል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የብስክሌት መስመርን መጠቀም የብስክሌተኞችን ደህንነት አደጋ ላይ የሚጥል ከባድ የትራፊክ ጥሰት ነው።",
+        "explanation_correct_amharic": "አዎ! አይ፣ ሌሎች ተሽከርካሪዎች ወደዚህ መስመር መግባት ፈጽሞ የተከለከለ ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: አይ፣ ሌሎች ተሽከርካሪዎች ወደዚህ መስመር መግባት ፈጽሞ የተከለከለ ነው።",
         "explanation_correct_audio": "804_q3_correct.mp3",
         "explanation_wrong_audio": "804_q3_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "የትራፊክ ፍሰቱን በተሻለ ሁኔታ እንዲሄድ ይረዳል.",
+            "text_amharic": "አዎ፣ ብስክሌቶች ከሌሉ ብቻ።",
             "is_correct": false,
             "audio_filename": "answer_804_q3_A.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "በብስክሌት ነጂዎች ላይ ብቻ ተጽዕኖ ያሳድራል እንጂ በመኪና አሽከርካሪዎች ላይ አይደለም።",
-            "is_correct": false,
-            "audio_filename": "answer_804_q3_D.mp3"
+            "id": "B",
+            "text_amharic": "አይ፣ ሌሎች ተሽከርካሪዎች ወደዚህ መስመር መግባት ፈጽሞ የተከለከለ ነው።",
+            "is_correct": true,
+            "audio_filename": "answer_804_q3_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "በተጨናነቀ ሰዓት ካልሆነ በአጠቃላይ ይፈቀዳል።",
+            "text_amharic": "አዎ፣ ሞተር ሳይክሎች ብቻ።",
             "is_correct": false,
             "audio_filename": "answer_804_q3_C.mp3"
           },
           {
-            "id": "B",
-            "text_amharic": "የትራፊክ ቅጣት ሊያስከትል እና ከብስክሌት ነጂ ጋር አደጋ ሊያደርስ ይችላል።",
-            "is_correct": true,
-            "audio_filename": "answer_804_q3_B.mp3"
+            "id": "D",
+            "text_amharic": "አዎ፣ ለመታጠፍ ከሆነ።",
+            "is_correct": false,
+            "audio_filename": "answer_804_q3_D.mp3"
           }
         ]
       }
@@ -26584,76 +26584,76 @@
     "image_filename": "805.png",
     "video_filename": null,
     "name_hebrew": "805",
-    "name_amharic": "ይህ ምልክት በመንገድ ላይ መስመሮችን የሚለይ ሲሆን፣ ደህንነቱ የተጠበቀ ከሆነ ማለፍ እንደሚቻል ያመለክታል።",
-    "explanation_amharic": "ይህ የመንገድ ላይ ምልክት በመንገዱ ላይ ያሉትን የትራፊክ መስመሮች የሚለይ ሲሆን፣ አሽከርካሪዎች ደህንነቱ የተጠበቀ ከሆነ መስመር መቀየር ወይም ሌላ ተሽከርካሪ ማለፍ እንደሚችሉ ያሳያል። ይህን መስመር ከማለፍዎ በፊት የኋላ መመልከቻ መስታወትዎን ማየት፣ ምልክት መስጠት እና ደህንነቱ የተጠበቀ መሆኑን ማረጋገጥ አለብዎት። ያለ ጥንቃቄ መስመር መቀየር ወይም ማለፍ አደጋ ሊያስከትል ወይም የትራፊክ ህግን በመጣስ ቅጣት ሊያስወጣ ይችላል።",
+    "name_amharic": "ጥቅጥቅ ያለ ነጭ የተቆራረጠ የማስጠንቀቂያ መስመር",
+    "explanation_amharic": "ይህ ጥቅጥቅ ያለ ነጭ የተቆራረጠ መስመር ወደፊት ሁለት ተከታታይ የመንገድ መለያያ መስመሮች እንደሚመጡ የሚያስጠነቅቅ ምልክት ነው። እነዚህን ሁለት ተከታታይ መስመሮች ማለፍ ፈጽሞ የተከለከለ ነው። ስለዚህ፣ እነዚህ ድርብ ተከታታይ መስመሮች ከመጀመራቸው በፊት ወደ ቀኝ መስመር ይቀይሩ።",
     "audio_name_filename": "805_name.mp3",
     "audio_explanation_filename": "805_explanation.mp3",
     "questions": [
       {
         "id": "805_q1",
-        "question_amharic": "ይህ በመንገድ ላይ የሚታየው የተቆራረጠ ነጭ መስመር ምን ማለት ነው?",
+        "question_amharic": "ይህ የመንገድ ምልክት ምን ማለት ነው?",
         "question_audio": "805_q1_question.mp3",
-        "explanation_correct_amharic": "ጎቨዝ። ይህ የተቆራረጠ ነጭ መስመር አሽከርካሪዎች ደህንነቱ የተጠበቀ ከሆነ መስመር እንዲቀይሩ ወይም እንዲያልፉ ይፈቅዳል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: መስመሩን መሻገር እንደማይቻል ማሰብ ወይም ያለ ጥንቃቄ መሻገር አደጋን ወይም የትራፊክ ቅጣትን ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "ትክክል! ይህ ጥቅጥቅ ያለ ነጭ የተቆራረጠ መስመር ወደፊት ሁለት ተከታታይ የመንገድ መለያያ መስመሮች እንደሚመጡ የሚያስጠነቅቅ ምልክት ሲሆን፣ እነዚህን መስመሮች ማለፍ ፈጽሞ የተከለከለ ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህ ጥቅጥቅ ያለ ነጭ የተቆራረጠ መስመር ወደፊት ሁለት ተከታታይ የመንገድ መለያያ መስመሮች እንደሚመጡ የሚያስጠነቅቅ ምልክት ሲሆን፣ እነዚህን መስመሮች ማለፍ ፈጽሞ የተከለከለ ነው።",
         "explanation_correct_audio": "805_q1_correct.mp3",
         "explanation_wrong_audio": "805_q1_wrong.mp3",
         "answers": [
           {
-            "id": "B",
-            "text_amharic": "ደህንነቱ የተጠበቀ መሆኑን ካረጋገጡ በኋላ መስመሩን መሻገር ወይም ማለፍ ይፈቀዳል።",
-            "is_correct": true,
-            "audio_filename": "answer_805_q1_B.mp3"
-          },
-          {
-            "id": "D",
-            "text_amharic": "ይህ መስመር የፍጥነት ገደብ መኖሩን ያመለክታል።",
-            "is_correct": false,
-            "audio_filename": "answer_805_q1_D.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "ይህ መስመር በፍጹም መሻገር እንደማይቻል ያመለክታል።",
-            "is_correct": false,
+            "text_amharic": "ወደፊት ድርብ ተከታታይ የመንገድ መለያያ መስመር እንደሚመጣ የሚያስጠነቅቅ ሲሆን፣ ይህም ማለፍ የተከለከለ ነው።",
+            "is_correct": true,
             "audio_filename": "answer_805_q1_A.mp3"
           },
           {
+            "id": "B",
+            "text_amharic": "ይህ መስመር የመንገዱን ዳርቻ ያመለክታል።",
+            "is_correct": false,
+            "audio_filename": "answer_805_q1_B.mp3"
+          },
+          {
             "id": "C",
-            "text_amharic": "ይህ መስመር የእግረኛ ማቋረጫ መሆኑን ያመለክታል።",
+            "text_amharic": "ይህ መስመር ማለፍ የሚፈቀድበት የተለመደ የተቆራረጠ መስመር ነው።",
             "is_correct": false,
             "audio_filename": "answer_805_q1_C.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ይህ መስመር ጊዜያዊ የመንገድ መዘጋትን ያመለክታል።",
+            "is_correct": false,
+            "audio_filename": "answer_805_q1_D.mp3"
           }
         ]
       },
       {
         "id": "805_q2",
-        "question_amharic": "ይህንን የተቆራረጠ መስመር አቋርጦ ወደ ሌላ መስመር ከመግባትዎ በፊት ምን ማድረግ አለብዎት?",
+        "question_amharic": "ይህንን ምልክት ሲያዩ እንዴት መምራት አለብዎት?",
         "question_audio": "805_q2_question.mp3",
-        "explanation_correct_amharic": "በጣም ጥሩ። መስመር ከመቀየርዎ በፊት የኋላ መመልከቻ መስታወትዎን ማየት፣ ምልክት መስጠት እና ደህንነቱ የተጠበቀ መሆኑን ማረጋገጥ ግዴታ ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ያለ ጥንቃቄ መስመር መቀየር ከሌሎች ተሽከርካሪዎች ጋር ግጭት ሊፈጥር እና ከባድ አደጋ ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "አዎ! ድርብ ተከታታይ የመንገድ መለያያ መስመሮች ከመጀመራቸው በፊት ወደ ቀኝ መስመር መቀየር አለብዎት።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ድርብ ተከታታይ የመንገድ መለያያ መስመሮች ከመጀመራቸው በፊት ወደ ቀኝ መስመር መቀየር አለብዎት።",
         "explanation_correct_audio": "805_q2_correct.mp3",
         "explanation_wrong_audio": "805_q2_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "ፍጥነትዎን በመጨመር በፍጥነት ወደ ሌላኛው መስመር መግባት አለብዎት።",
+            "text_amharic": "ለመቅደም መዘጋጀት አለብዎት።",
             "is_correct": false,
             "audio_filename": "answer_805_q2_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "የኋላ መመልከቻ መስታወትዎን ማየት፣ ምልክት መስጠት እና ደህንነቱ የተጠበቀ መሆኑን ማረጋገጥ አለብዎት።",
+            "text_amharic": "ድርብ ተከታታይ የመንገድ መለያያ መስመሮች ከመጀመራቸው በፊት ወደ ቀኝ መስመር መቀየር አለብዎት።",
             "is_correct": true,
             "audio_filename": "answer_805_q2_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "መኪናዎን በማቆም ሌላ መስመር ለመግባት ፍቃድ መጠበቅ አለብዎት።",
+            "text_amharic": "አሁን ባሉበት መስመር ይቀጥሉ ነገር ግን ጥንቃቄ ያድርጉ።",
             "is_correct": false,
             "audio_filename": "answer_805_q2_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "ምንም አይነት ጥንቃቄ ሳያደርጉ በቀጥታ መስመር መቀየር ይችላሉ።",
+            "text_amharic": "ፍጥነትዎን ቀንስው ሙሉ በሙሉ ማቆም አለብዎት።",
             "is_correct": false,
             "audio_filename": "answer_805_q2_D.mp3"
           }
@@ -26661,36 +26661,36 @@
       },
       {
         "id": "805_q3",
-        "question_amharic": "ይህንን የተቆራረጠ መስመር ያለ ጥንቃቄ ወይም ደህንነቱ ባልተጠበቀ መንገድ ከተሻገሩ ምን ሊከሰት ይችላል?",
+        "question_amharic": "ይህ ጥቅጥቅ ያለ ነጭ የተቆራረጠ መስመር ዋና ዓላማ ምንድን ነው?",
         "question_audio": "805_q3_question.mp3",
-        "explanation_correct_amharic": "ጎሽሽ። ደህንነቱ ባልተጠበቀ መንገድ መስመር መቀየር ወይም ማለፍ አደጋን ሊያስከትል ወይም በህግ የሚያስቀጣ ጥፋት ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ያለ ጥንቃቄ መስመር መሻገር የራስዎን እና የሌሎችን ህይወት አደጋ ላይ ይጥላል እንዲሁም ከባድ የገንዘብ ቅጣት ያስከትላል።",
+        "explanation_correct_amharic": "እሰይ የኔ ጎቨዝ። ዋናው ዓላማው አሽከርካሪው ወደፊት ድርብ ተከታታይ የመንገድ መለያያ መስመር እንደሚመጣ ለማስጠንቀቅ እና ከመጀመሩ በፊት ወደ ቀኝ መስመር እንዲቀይር ለማዘዝ ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ዋናው ዓላማው አሽከርካሪው ወደፊት ድርብ ተከታታይ የመንገድ መለያያ መስመር እንደሚመጣ ለማስጠንቀቅ እና ከመጀመሩ በፊት ወደ ቀኝ መስመር እንዲቀይር ለማዘዝ ነው።",
         "explanation_correct_audio": "805_q3_correct.mp3",
         "explanation_wrong_audio": "805_q3_wrong.mp3",
         "answers": [
           {
-            "id": "D",
-            "text_amharic": "የፍጥነት ገደቡ በራስ-ሰር ይጨምራል።",
-            "is_correct": false,
-            "audio_filename": "answer_805_q3_D.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "ምንም አይነት ችግር አይፈጠርም ምክንያቱም መስመሩ የተቆራረጠ ነው።",
+            "text_amharic": "መንገዱ ግልጽ ከሆነ መስመሩን ማለፍ እንደሚፈቀድ ለማመልከት ነው።",
             "is_correct": false,
             "audio_filename": "answer_805_q3_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "የትራፊክ አደጋ ሊከሰት ወይም የትራፊክ ህግን በመጣስ ቅጣት ሊጣልብዎ ይችላል።",
-            "is_correct": true,
+            "text_amharic": "ለአደጋ ጊዜ ተሽከርካሪዎች ጊዜያዊ መስመር ነው።",
+            "is_correct": false,
             "audio_filename": "answer_805_q3_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "ሌሎች አሽከርካሪዎች ለእርስዎ ቦታ ይሰጡዎታል ተብሎ ይጠበቃል።",
+            "text_amharic": "እግረኛ ማቋረጫ ቦታ መኖሩን ለማመልከት ነው።",
             "is_correct": false,
             "audio_filename": "answer_805_q3_C.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "አሽከርካሪው ወደፊት ድርብ ተከታታይ የመንገድ መለያያ መስመር እንደሚመጣ ለማስጠንቀቅ እና ከመጀመሩ በፊት ወደ ቀኝ መስመር እንዲቀይር ለማዘዝ ነው።",
+            "is_correct": true,
+            "audio_filename": "answer_805_q3_D.mp3"
           }
         ]
       }
@@ -26731,7 +26731,7 @@
           },
           {
             "id": "A",
-            "text_amharic": "ጠንካራውን መስመር በማንኛውም ጊዜ መሻገር ይፈቀዳል።",
+            "text_amharic": "ጠንካራውን መስመር በማንኛውም ጊዜ ማለፍ ይፈቀዳል።",
             "is_correct": false,
             "audio_filename": "answer_806_q1_A.mp3"
           },
@@ -30868,8 +30868,8 @@
     "image_filename": "920.png",
     "video_filename": null,
     "name_hebrew": "920",
-    "name_amharic": "ይህ ምልክት በመንገድ ላይ ሁለት ተከታታይ ቢጫ መስመሮች ሲሆኑ መሻገር ወይም ማለፍ ክልክል መሆኑን ያመለክታል።",
-    "explanation_amharic": "ይህ ምልክት በመንገድ ላይ የሚገኙ ሁለት ተከታታይ ቢጫ መስመሮችን ያሳያል። እነዚህ መስመሮች የመንገድ ክፍፍልን የሚያመለክቱ ሲሆን፣ አሽከርካሪዎች መስመሮቹን መሻገር፣ ማለፍ ወይም ወደ ግራ መታጠፍ ፈጽሞ የተከለከለ ነው። ይህንን ህግ መጣስ የትራፊክ አደጋ ሊያስከትል፣ ቅጣት ሊያስወጣ ወይም ነጥቦች ሊያስመዘግብ ይችላል።",
+    "name_amharic": "ይህ ምልክት በመንገድ ላይ ሁለት ተከታታይ ቢጫ መስመሮች ሲሆኑ ማለፍ ወይም ማለፍ ክልክል መሆኑን ያመለክታል።",
+    "explanation_amharic": "ይህ ምልክት በመንገድ ላይ የሚገኙ ሁለት ተከታታይ ቢጫ መስመሮችን ያሳያል። እነዚህ መስመሮች የመንገድ ክፍፍልን የሚያመለክቱ ሲሆን፣ አሽከርካሪዎች መስመሮቹን ማለፍ፣ ማለፍ ወይም ወደ ግራ መታጠፍ ፈጽሞ የተከለከለ ነው። ይህንን ህግ መጣስ የትራፊክ አደጋ ሊያስከትል፣ ቅጣት ሊያስወጣ ወይም ነጥቦች ሊያስመዘግብ ይችላል።",
     "audio_name_filename": "920_name.mp3",
     "audio_explanation_filename": "920_explanation.mp3",
     "questions": [
@@ -30877,8 +30877,8 @@
         "id": "920_q1",
         "question_amharic": "በመንገድ ላይ ሁለት ተከታታይ ቢጫ መስመሮች ሲያዩ ምን ማለት ነው?",
         "question_audio": "920_q1_question.mp3",
-        "explanation_correct_amharic": "ጎቨዝ። ሁለት ተከታታይ ቢጫ መስመሮች መሻገር፣ ማለፍ ወይም ወደ ግራ መታጠፍ ፈጽሞ የተከለከለ መሆኑን ያመለክታሉ።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: መስመሩን መሻገር የትራፊክ ደንቦችን መጣስ ሲሆን አደጋ ሊያስከትል ወይም ቅጣት ሊያስወጣ ይችላል።",
+        "explanation_correct_amharic": "ጎቨዝ። ሁለት ተከታታይ ቢጫ መስመሮች ማለፍ፣ ማለፍ ወይም ወደ ግራ መታጠፍ ፈጽሞ የተከለከለ መሆኑን ያመለክታሉ።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: መስመሩን ማለፍ የትራፊክ ደንቦችን መጣስ ሲሆን አደጋ ሊያስከትል ወይም ቅጣት ሊያስወጣ ይችላል።",
         "explanation_correct_audio": "920_q1_correct.mp3",
         "explanation_wrong_audio": "920_q1_wrong.mp3",
         "answers": [
@@ -30890,7 +30890,7 @@
           },
           {
             "id": "B",
-            "text_amharic": "ለማለፍም ሆነ ወደ ግራ ለመታጠፍ ጨምሮ በምንም ምክንያት መሻገር የለብዎትም።",
+            "text_amharic": "ለማለፍም ሆነ ወደ ግራ ለመታጠፍ ጨምሮ በምንም ምክንያት ማለፍ የለብዎትም።",
             "is_correct": true,
             "audio_filename": "answer_920_q1_B.mp3"
           },
@@ -30902,7 +30902,7 @@
           },
           {
             "id": "A",
-            "text_amharic": "መንገዱ ባዶ ከሆነ ለማለፍ መሻገር ይችላሉ።",
+            "text_amharic": "መንገዱ ባዶ ከሆነ ለማለፍ ማለፍ ይችላሉ።",
             "is_correct": false,
             "audio_filename": "answer_920_q1_A.mp3"
           }
@@ -30912,7 +30912,7 @@
         "id": "920_q2",
         "question_amharic": "ሁለት ተከታታይ ቢጫ መስመሮችን ሲያዩ የትኛው ተግባር በጥብቅ የተከለከለ ነው?",
         "question_audio": "920_q2_question.mp3",
-        "explanation_correct_amharic": "በጣም ጥሩ። ሁለት ተከታታይ ቢጫ መስመሮችን መሻገር የትራፊክ ደንቦችን የሚጥስ እና አደገኛ ተግባር ነው።",
+        "explanation_correct_amharic": "በጣም ጥሩ። ሁለት ተከታታይ ቢጫ መስመሮችን ማለፍ የትራፊክ ደንቦችን የሚጥስ እና አደገኛ ተግባር ነው።",
         "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተከለከለውን ተግባር መፈጸም የትራፊክ አደጋ ሊያስከትል ወይም ህጋዊ ቅጣት ሊያስወጣ ይችላል።",
         "explanation_correct_audio": "920_q2_correct.mp3",
         "explanation_wrong_audio": "920_q2_wrong.mp3",
@@ -30931,7 +30931,7 @@
           },
           {
             "id": "B",
-            "text_amharic": "መስመሮቹን በመሻገር መስመር መቀየር።",
+            "text_amharic": "መስመሮቹን በማለፍ መስመር መቀየር።",
             "is_correct": true,
             "audio_filename": "answer_920_q2_B.mp3"
           },
@@ -30945,9 +30945,9 @@
       },
       {
         "id": "920_q3",
-        "question_amharic": "ሁለት ተከታታይ ቢጫ መስመሮችን በመሻገር የሚያስከትለው ውጤት ምንድነው?",
+        "question_amharic": "ሁለት ተከታታይ ቢጫ መስመሮችን በማለፍ የሚያስከትለው ውጤት ምንድነው?",
         "question_audio": "920_q3_question.mp3",
-        "explanation_correct_amharic": "ጎሽሽ። ሁለት ተከታታይ ቢጫ መስመሮችን መሻገር ከባድ የትራፊክ ጥሰት ሲሆን ቅጣት፣ ነጥቦች እና የአደጋ ስጋት ያስከትላል።",
+        "explanation_correct_amharic": "ጎሽሽ። ሁለት ተከታታይ ቢጫ መስመሮችን ማለፍ ከባድ የትራፊክ ጥሰት ሲሆን ቅጣት፣ ነጥቦች እና የአደጋ ስጋት ያስከትላል።",
         "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የመንገድ ህጎችን መጣስ ሁልጊዜም የሚያስከትለው ውጤት አለው፣ ፖሊስ ባያይም እንኳን አደጋ ሊከሰት ይችላል።",
         "explanation_correct_audio": "920_q3_correct.mp3",
         "explanation_wrong_audio": "920_q3_wrong.mp3",
@@ -30987,7 +30987,7 @@
     "image_filename": "921.png",
     "video_filename": null,
     "name_hebrew": "921",
-    "name_amharic": "ይህ ምልክት ጊዜያዊ የመንገድ መስመር መለያ ሲሆን መሻገር እንደሚፈቀድ ያሳያል።",
+    "name_amharic": "ይህ ምልክት ጊዜያዊ የመንገድ መስመር መለያ ሲሆን ማለፍ እንደሚፈቀድ ያሳያል።",
     "explanation_amharic": "ይህ ምልክት በመንገድ ላይ ጊዜያዊ የትራፊክ መስመር መለያ ሲሆን፣ መስመሩን አቋርጦ ማለፍ እንደሚፈቀድ ያመለክታል። አሽከርካሪው ይህንን ምልክት ሲያይ፣ መስመሩን አቋርጦ ማለፍ ቢፈቀድም፣ በመንገድ ላይ ለሚደረጉ ጊዜያዊ ለውጦች እና ለሚሰሩ ሠራተኞች ከፍተኛ ጥንቃቄ ማድረግ አለበት። ጥንቃቄ አለማድረግ አደጋ ሊያስከትል ወይም የትራፊክ ደንቦችን በመጣስ ቅጣት ሊያስከትል ይችላል።",
     "audio_name_filename": "921_name.mp3",
     "audio_explanation_filename": "921_explanation.mp3",
@@ -31106,8 +31106,8 @@
     "image_filename": "922.png",
     "video_filename": null,
     "name_hebrew": "922",
-    "name_amharic": "ይህ ምልክት ጊዜያዊ የመንገድ መስመሮችን ያሳያል፤ ጠንካራው መሻገር አይፈቀድም፣ የተቆራረጠው ግን ይቻላል።",
-    "explanation_amharic": "ይህ ምልክት በመንገድ ላይ ጊዜያዊ ለውጦች ወይም የጥገና ሥራዎች ሲኖሩ የሚታዩ ብርቱካናማ የመንገድ መስመሮችን ያመለክታል። ጠንካራው ብርቱካናማ መስመር መሻገር እንደማይፈቀድ ያሳያል፣ የተቆራረጠው ብርቱካናማ መስመር ግን ጥንቃቄ በማድረግ መሻገር እንደሚቻል ያመለክታል። አሽከርካሪዎች እነዚህን መስመሮች ሲያዩ ፍጥነታቸውን መቀነስ፣ ትኩረት መስጠት እና የትራፊክ ደንቦችን በጥብቅ መከተል አለባቸው፤ አለበለዚያ አደጋ ሊያስከትል ወይም ቅጣት ሊያስወጣ ይችላል።",
+    "name_amharic": "ይህ ምልክት ጊዜያዊ የመንገድ መስመሮችን ያሳያል፤ ጠንካራው ማለፍ አይፈቀድም፣ የተቆራረጠው ግን ይቻላል።",
+    "explanation_amharic": "ይህ ምልክት በመንገድ ላይ ጊዜያዊ ለውጦች ወይም የጥገና ሥራዎች ሲኖሩ የሚታዩ ብርቱካናማ የመንገድ መስመሮችን ያመለክታል። ጠንካራው ብርቱካናማ መስመር ማለፍ እንደማይፈቀድ ያሳያል፣ የተቆራረጠው ብርቱካናማ መስመር ግን ጥንቃቄ በማድረግ ማለፍ እንደሚቻል ያመለክታል። አሽከርካሪዎች እነዚህን መስመሮች ሲያዩ ፍጥነታቸውን መቀነስ፣ ትኩረት መስጠት እና የትራፊክ ደንቦችን በጥብቅ መከተል አለባቸው፤ አለበለዚያ አደጋ ሊያስከትል ወይም ቅጣት ሊያስወጣ ይችላል።",
     "audio_name_filename": "922_name.mp3",
     "audio_explanation_filename": "922_explanation.mp3",
     "questions": [
@@ -31150,20 +31150,20 @@
         "id": "922_q2",
         "question_amharic": "ጠንካራው ብርቱካናማ መስመር ምን ማለት ነው?",
         "question_audio": "922_q2_question.mp3",
-        "explanation_correct_amharic": "ትክክል! ጥሩ ነው። ጠንካራ መስመር፣ ብርቱካናማም ይሁን ነጭ፣ መሻገር እንደማይፈቀድ የሚያሳይ ግልጽ የመንገድ ህግ ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ጠንካራ መስመርን መሻገር የትራፊክ ደንብን መጣስ ሲሆን፣ አደጋ ሊያስከትል ወይም ቅጣት ሊያስወጣ ይችላል።",
+        "explanation_correct_amharic": "ትክክል! ጥሩ ነው። ጠንካራ መስመር፣ ብርቱካናማም ይሁን ነጭ፣ ማለፍ እንደማይፈቀድ የሚያሳይ ግልጽ የመንገድ ህግ ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ጠንካራ መስመርን ማለፍ የትራፊክ ደንብን መጣስ ሲሆን፣ አደጋ ሊያስከትል ወይም ቅጣት ሊያስወጣ ይችላል።",
         "explanation_correct_audio": "922_q2_correct.mp3",
         "explanation_wrong_audio": "922_q2_wrong.mp3",
         "answers": [
           {
             "id": "B",
-            "text_amharic": "አሽከርካሪው መስመሩን መሻገር እንደማይፈቀድለት ያመለክታል።",
+            "text_amharic": "አሽከርካሪው መስመሩን ማለፍ እንደማይፈቀድለት ያመለክታል።",
             "is_correct": true,
             "audio_filename": "answer_922_q2_B.mp3"
           },
           {
             "id": "A",
-            "text_amharic": "አሽከርካሪው መስመሩን መሻገር እንደሚችል ያመለክታል።",
+            "text_amharic": "አሽከርካሪው መስመሩን ማለፍ እንደሚችል ያመለክታል።",
             "is_correct": false,
             "audio_filename": "answer_922_q2_A.mp3"
           },
@@ -31185,8 +31185,8 @@
         "id": "922_q3",
         "question_amharic": "አሽከርካሪው የተቆራረጠውን ብርቱካናማ መስመር ሲያይ ምን ማድረግ አለበት?",
         "question_audio": "922_q3_question.mp3",
-        "explanation_correct_amharic": "አሪፍ! ምልክቱ የተቆራረጠ መስመር መሻገር የሚፈቀደው ደህንነቱ የተጠበቀ መሆኑን ካረጋገጡ እና ጥንቃቄ ካደረጉ በኋላ ብቻ ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ደህንነቱን ሳያረጋግጡ የተቆራረጠ መስመርን መሻገር ወይም ፈጽሞ አለመሻገር የትራፊክ ፍሰትን ሊያስተጓጉል ወይም አደጋ ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "አሪፍ! ምልክቱ የተቆራረጠ መስመር ማለፍ የሚፈቀደው ደህንነቱ የተጠበቀ መሆኑን ካረጋገጡ እና ጥንቃቄ ካደረጉ በኋላ ብቻ ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ደህንነቱን ሳያረጋግጡ የተቆራረጠ መስመርን ማለፍ ወይም ፈጽሞ አለማለፍ የትራፊክ ፍሰትን ሊያስተጓጉል ወይም አደጋ ሊያስከትል ይችላል።",
         "explanation_correct_audio": "922_q3_correct.mp3",
         "explanation_wrong_audio": "922_q3_wrong.mp3",
         "answers": [
@@ -31198,19 +31198,19 @@
           },
           {
             "id": "B",
-            "text_amharic": "ጥንቃቄ በማድረግ እና ደህንነቱ የተጠበቀ መሆኑን ካረጋገጠ በኋላ መስመሩን መሻገር ይችላል።",
+            "text_amharic": "ጥንቃቄ በማድረግ እና ደህንነቱ የተጠበቀ መሆኑን ካረጋገጠ በኋላ መስመሩን ማለፍ ይችላል።",
             "is_correct": true,
             "audio_filename": "answer_922_q3_B.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "መስመሩን ፈጽሞ መሻገር የለበትም።",
+            "text_amharic": "መስመሩን ፈጽሞ ማለፍ የለበትም።",
             "is_correct": false,
             "audio_filename": "answer_922_q3_D.mp3"
           },
           {
             "id": "A",
-            "text_amharic": "ምንም እንኳን ደህንነቱ የተጠበቀ ባይሆንም ወዲያውኑ መስመሩን መሻገር አለበት።",
+            "text_amharic": "ምንም እንኳን ደህንነቱ የተጠበቀ ባይሆንም ወዲያውኑ መስመሩን ማለፍ አለበት።",
             "is_correct": false,
             "audio_filename": "answer_922_q3_A.mp3"
           }
@@ -31610,7 +31610,7 @@
           },
           {
             "id": "A",
-            "text_amharic": "እግረኞች መንገዱን የት መሻገር እንደሚችሉ ለማሳየት ነው።",
+            "text_amharic": "እግረኞች መንገዱን የት ማለፍ እንደሚችሉ ለማሳየት ነው።",
             "is_correct": false,
             "audio_filename": "answer_926_q1_A.mp3"
           },

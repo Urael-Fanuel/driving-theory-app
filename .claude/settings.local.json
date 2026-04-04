@@ -153,10 +153,38 @@
       "Bash(node -e \"require\\(''''pg''''\\)\")",
       "Bash(supabase --version)",
       "Bash(for num:*)",
-      "Bash(done)"
+      "Bash(done)",
+      "Bash(ls C:UsersYakovDesktopdriving-theory-appassetsaudio434*)",
+      "Bash(find C:UsersYakovDesktopdriving-theory-appassetsaudio -name 434*)",
+      "Bash(find C:UsersYakovDesktopdriving-theory-appassetsaudio -name 433*)",
+      "Bash(powershell -Command \"Remove-Item ''''assets\\\\audio\\\\435*'''',''''assets\\\\audio\\\\436*'''',''''assets\\\\audio\\\\answer_435*'''',''''assets\\\\audio\\\\answer_436*'''' -Force -ErrorAction SilentlyContinue\")",
+      "Bash(powershell -Command \"Remove-Item ''''assets\\\\audio\\\\435*'''',''''assets\\\\audio\\\\436*'''',''''assets\\\\audio\\\\answer_435*'''',''''assets\\\\audio\\\\answer_436*'''' -Force -ErrorAction SilentlyContinue; Write-Host ''''deleted''''\")",
+      "Bash(rm /c/Users/Yakov/Desktop/driving-theory-app/assets/audio/511_*.mp3 /c/Users/Yakov/Desktop/driving-theory-app/assets/audio/answer_511_*.mp3 2)",
+      "Bash(/dev/null npx:*)",
+      "Bash(for i:*)",
+      "Bash(xargs grep:*)",
+      "Bash(pandoc \"C:\\\\Users\\\\Yakov\\\\Downloads\\\\terms_of_service.docx\" -o /tmp/terms.md)",
+      "Bash(ls C:/Users/Yakov/Desktop/driving-theory-app/assets/audio/701_*.mp3)",
+      "Bash(ls -la *.jsonl)",
+      "Bash(grep -n --context C:/Users/Yakov/.claude/projects/C--Users-Yakov-Desktop-driving-theory-app/20a76348-8513-47d7-96ae-9e9ce7dae682.jsonl)",
+      "Bash(Remove-Item \"C:\\\\Users\\\\Yakov\\\\Desktop\\\\driving-theory-app\\\\assets\\\\audio\\\\706_explanation.mp3\" -Force)",
+      "Bash(Remove-Item \"C:\\\\Users\\\\Yakov\\\\Desktop\\\\driving-theory-app\\\\assets\\\\audio\\\\707_explanation.mp3\" -Force)",
+      "Bash(Write-Host \"Deleted\")",
+      "Bash(xargs -I{} rm assets/audio/{})"
     ]
   },
   "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"C:/Users/Yakov/Desktop/driving-theory-app/scripts/noAssumptionsReminder.mjs\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
     "PreToolUse": [
       {
         "matcher": "Bash",
