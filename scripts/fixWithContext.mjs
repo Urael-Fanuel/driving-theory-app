@@ -189,16 +189,20 @@ async function main() {
 
   // Step 2: Generate Amharic explanation
   console.log('\nGenerating Amharic explanation...');
-  const explPrompt = `You are an expert in Israeli traffic signs and a professional Amharic (Ge'ez script) translator.
+  const explPrompt = `You are an Israeli traffic sign expert teaching Ethiopian immigrants in Israel to understand driving theory in simple Amharic.
 
 The official Hebrew description of this traffic sign is:
 "${contextArg}"
 
-Your task:
-1. Write a clear, accurate, professional explanation in Amharic about the meaning of this sign.
-2. Cover all important points from the Hebrew description.
-3. Use simple, clear language — no more than 4 sentences.
-4. Return ONLY the Amharic text, no headers, no JSON, no extra explanations.`;
+Write a clear explanation in Amharic. Follow these rules STRICTLY:
+1. Include ALL information from the Hebrew description — do NOT skip, shorten, or omit any rule, number, condition, or instruction.
+2. Write in very SIMPLE Amharic that any person with basic literacy can understand — no complex words or academic language.
+3. Do NOT repeat words from the same root in the same sentence (e.g. avoid using ምልክት, ምልክቱ, ምልክቶች together in one sentence).
+4. Avoid complex verb forms — use the simplest possible phrasing.
+5. Clearly state what the driver MUST DO and what is FORBIDDEN.
+6. If the Hebrew mentions: overtaking (עקיפה), sign numbers (like 813, 926, 201 etc.), distances, specific conditions, times (day/night), or exceptions — include ALL of them in the explanation.
+7. Maximum 4-5 short sentences.
+8. Return ONLY the Amharic text — no headers, no JSON, no extra text.`;
 
   const explanationAmharic = await callGemini(explPrompt, imagePath);
   console.log(`New explanation: ${explanationAmharic.slice(0, 100)}...`);
@@ -214,22 +218,26 @@ Amharic explanation: "${explanationAmharic}"
 
 Task: Create 3 exam questions in the style of the Israeli Ministry of Transport, translated to Amharic.
 
-Rules:
+STRICT RULES:
 - Question 1: "What does this sign mean?" style
 - Question 2: "How do you behave according to this sign?" style
-- Question 3: Specific question about the sign's instruction
-- Each question: 4 answers (1 correct, 3 plausible but wrong)
-- explanation_correct_amharic starts with the Amharic word for "Correct!"
-- explanation_wrong_amharic starts with "ስህተት! ትክክለኛው መልስ: " (Wrong! The correct answer is:)
+- Question 3: Specific question about one key rule from this sign
+- Each question has exactly 4 answers (1 correct, 3 plausible but wrong)
+- All answers must be in SIMPLE Amharic — no complex words
+- The 3 wrong answers must be believable but clearly incorrect based on the Hebrew description
+- explanation_correct_amharic: MUST be a FULL meaningful sentence (minimum 8 words) explaining WHY the answer is correct — never just one word or a fragment
+- explanation_wrong_amharic: MUST start with "ስህተት! ትክክለኛው መልስ: " then explain the correct answer in full
+- Do NOT repeat words from the same root in the same sentence
+- The correct answer must always be placed FIRST in the answers array (it will be shuffled later)
 
-Return ONLY valid JSON:
+Return ONLY valid JSON (no markdown, no extra text):
 {
   "questions": [
     {
       "index": 1,
       "question_amharic": "...",
-      "explanation_correct_amharic": "ትክክል! ...",
-      "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ...",
+      "explanation_correct_amharic": "ትክክል! [full sentence explaining why this is correct]",
+      "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: [full sentence with the correct answer]",
       "answers": [
         {"text_amharic": "...", "is_correct": true},
         {"text_amharic": "...", "is_correct": false},

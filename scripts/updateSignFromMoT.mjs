@@ -152,7 +152,16 @@ async function generateAndTranslateQA(signImagePath, sign) {
       generationConfig: { temperature: 0.3, maxOutputTokens: 8192 },
     }),
   });
-  const data = await res.json();
+  const rawText = await res.text();
+  let data;
+  try { data = JSON.parse(rawText); } catch(e) {
+    console.error('API raw response:', rawText.slice(0, 300));
+    throw new Error('Failed to parse API response: ' + e.message);
+  }
+  if (data.error) {
+    console.error('Gemini API error:', JSON.stringify(data.error));
+    throw new Error('Gemini API error: ' + data.error.message);
+  }
   const parts = data.candidates?.[0]?.content?.parts || [];
   const textPart = parts.find(p => p.text) || parts[0];
   const text = textPart?.text?.trim() || '';
@@ -160,6 +169,7 @@ async function generateAndTranslateQA(signImagePath, sign) {
   try {
     return JSON.parse(jsonStr);
   } catch (e) {
+    console.error('finishReason:', data.candidates?.[0]?.finishReason);
     console.error('Raw Gemini response (first 500 chars):', text.substring(0, 500));
     throw e;
   }

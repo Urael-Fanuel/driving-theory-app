@@ -23,6 +23,7 @@ import { TextFeedback } from '../../../components/engineB/TextFeedback';
 import { AudioButton } from '../../../components/shared/AudioButton';
 import { ProgressBar } from '../../../components/shared/ProgressBar';
 import { useExam } from '../../../hooks/useExam';
+import { useNetworkStatus } from '../../../hooks/useNetworkStatus';
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
@@ -42,6 +43,7 @@ export default function EngineBExamScreen() {
   } = useExam();
 
   const [showFeedback, setShowFeedback] = React.useState(false);
+  const isConnected = useNetworkStatus();
 
   // Show feedback after answer
   useEffect(() => {
@@ -102,7 +104,7 @@ export default function EngineBExamScreen() {
     <SafeAreaView style={styles.safeArea}>
       {/* Header with timer */}
       <View style={styles.header}>
-        <TouchableOpacity style={styles.exitButton} onPress={() => router.navigate('/(engineB)/home')}>
+        <TouchableOpacity style={styles.exitButton} onPress={() => { router.navigate('/(engineB)/home'); }}>
           <Text style={styles.exitIcon}>✕</Text>
         </TouchableOpacity>
         <View style={styles.headerCenter}>
@@ -118,6 +120,11 @@ export default function EngineBExamScreen() {
       </View>
       {isSaving && (
         <Text style={{ textAlign: 'center', color: '#888', fontSize: 11, marginTop: 2 }}>ማስቀመጥ...</Text>
+      )}
+      {!isConnected && (
+        <Text style={{ textAlign: 'center', color: '#fff', backgroundColor: '#e67e22', fontSize: 12, padding: 4 }}>
+          {'ኢንተርኔት የለም — ድምፁ አይሰራም። ጽሑፉን ማንበብ ይቻላል።'}
+        </Text>
       )}
 
       <ScrollView
