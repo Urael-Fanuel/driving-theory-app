@@ -93,21 +93,21 @@ function isUUID(s: string): boolean {
  * Resolve user ID via Supabase anonymous auth (preferred) or local UUID fallback.
  * Anonymous auth gives a real auth.uid() that satisfies RLS policies.
  */
-async function resolveUserId(storedId?: string): Promise<string> {
+async function resolveUserId(storedId?: string): Promise<{ id: string; fromSupabase: boolean }> {
   if (supabase && process.env.EXPO_PUBLIC_SUPABASE_URL) {
     try {
       // Re-use existing session if available (persists across restarts)
       const { data: { session } } = await supabase.auth.getSession();
       if (session?.user?.id) {
         console.log('[EngineContext] Reusing Supabase anonymous session');
-        return session.user.id;
+        return { id: session.user.id, fromSupabase: true };
       }
 
       // Sign in anonymously — creates a new session stored by Supabase
       const { data, error } = await supabase.auth.signInAnonymously();
       if (!error && data?.user?.id) {
         console.log('[EngineContext] Signed in anonymously:', data.user.id);
-        return data.user.id;
+        return { id: data.user.id, fromSupabase: true };
       }
       console.warn('[EngineContext] Anonymous sign-in failed:', error?.message);
     } catch (err) {
@@ -116,10 +116,11 @@ async function resolveUserId(storedId?: string): Promise<string> {
   }
 
   // Fallback: use stored ID if it's a valid UUID, otherwise generate one
-  if (storedId && isUUID(storedId)) return storedId;
+  // Note: fromSupabase=false means upsertUser will be skipped (no valid auth session)
+  if (storedId && isUUID(storedId)) return { id: storedId, fromSupabase: false };
   const newId = generateUUID();
   console.log('[EngineContext] Using local UUID fallback:', newId);
-  return newId;
+  return { id: newId, fromSupabase: false };
 }
 
 // ─── Context ──────────────────────────────────────────────────────────────────
@@ -145,7 +146,7 @@ export function EngineProvider({ children }: { children: ReactNode }) {
         // the disclaimer must appear on every fresh app session.
 
         // Resolve userId via anonymous auth (or fallback UUID)
-        const resolvedId = await resolveUserId(prefs.userId);
+        const { id: resolvedId, fromSupabase } = await resolveUserId(prefs.userId);
         setUserId(resolvedId);
 
         // Persist resolved userId (may differ from stored if session resumed)
@@ -153,8 +154,9 @@ export function EngineProvider({ children }: { children: ReactNode }) {
           await writePrefs({ ...prefs, userId: resolvedId });
         }
 
-        // Ensure user row exists in DB for returning users
-        if (prefs.engineType) {
+        // Ensure user row exists in DB — only when Supabase auth succeeded
+        // (avoids RLS violation when using local fallback UUID)
+        if (prefs.engineType && fromSupabase) {
           api.upsertUser(resolvedId, prefs.engineType).catch(() => {});
         }
 

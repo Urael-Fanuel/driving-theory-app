@@ -74,6 +74,8 @@ export default function EngineAQuestionScreen() {
   const [showFeedback,      setShowFeedback]      = useState(false);
   const [playingAnswerIndex, setPlayingAnswerIndex] = useState<number | null>(null);
   const [qIndex,        setQIndex]        = useState(initialIndex);
+  // Incremented to restart the audio sequence (e.g. user taps ▶️ when stuck)
+  const [audioRestartKey,   setAudioRestartKey]   = useState(0);
 
   const currentQuestion = questions[qIndex] ?? null;
 
@@ -144,6 +146,13 @@ export default function EngineAQuestionScreen() {
     const isCancelled = () => cancelled || voiceFailedRef.current;
 
     async function runSequence() {
+      // Stop any audio that was playing before this screen (e.g. sign explanation).
+      // This is critical when entering from the sign screen: without an explicit
+      // stopAudio() the old _sound object stays set, and subsequent pause/resume
+      // can silently fail.
+      await stopAudio();
+      if (isCancelled()) return;
+
       // Always wait exactly 1 second before starting (consistent delay for all cases).
       await new Promise(res => setTimeout(res, 1000));
       skipInitialWaitRef.current = false;
@@ -179,7 +188,7 @@ export default function EngineAQuestionScreen() {
       cancelled = true;
       setPlayingAnswerIndex(null);
     };
-  }, [currentQuestion?.id]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [currentQuestion?.id, audioRestartKey]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // ── Voice failure → stop sequence, play audio instead of showing text ────────
   useEffect(() => {
@@ -270,6 +279,12 @@ export default function EngineAQuestionScreen() {
       await pauseAudio();
     } else if (audioState === 'paused') {
       await resumeAudio();
+    } else {
+      // idle / finished / error / loading → restart the sequence from the beginning.
+      // This covers the case where the button appears "stuck" because audio stopped
+      // unexpectedly (e.g. after entering from sign explanation screen).
+      stopAudio();
+      setAudioRestartKey(k => k + 1);
     }
   };
 

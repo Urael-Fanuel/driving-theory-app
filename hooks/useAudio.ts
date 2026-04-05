@@ -325,7 +325,13 @@ export function useAudio(): UseAudioReturn {
         _emit('playing');
       } catch (error) {
         console.warn('[useAudio] Resume failed:', error);
+        // playAsync threw — sound is in bad state; reset so the UI can restart
+        _emit('idle');
       }
+    } else {
+      // No sound loaded (e.g. was unloaded by a concurrent _stop call).
+      // Reset to idle so the caller can detect this and restart the sequence.
+      _emit('idle');
     }
   }, []);
 
