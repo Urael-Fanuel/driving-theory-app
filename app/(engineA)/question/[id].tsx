@@ -32,8 +32,9 @@ import {
   SafeAreaView,
   Text,
   ScrollView,
+  BackHandler,
 } from 'react-native';
-import { useLocalSearchParams, useRouter } from 'expo-router';
+import { useLocalSearchParams, useRouter, useFocusEffect } from 'expo-router';
 import * as Haptics from 'expo-haptics';
 import { Colors } from '../../../constants/colors';
 import { LoadingScreen } from '../../../components/shared/LoadingScreen';
@@ -303,15 +304,37 @@ export default function EngineAQuestionScreen() {
     setQIndex(newIndex);
   }, [questions.length, stopAudio, cancelListening]);
 
+  // ── Back — always go to the CURRENT sign's explanation screen ───────────────
+  // Using router.back() is wrong: if user navigated prev/next sign, back would
+  // return to the original sign (the one they entered from), not the current one.
+  const handleBack = useCallback(() => {
+    stopAudio();
+    cancelListening();
+    router.replace(`/(engineA)/sign/${signId}` as any);
+  }, [signId, router, stopAudio, cancelListening]);
+
+  // Intercept Android hardware back button so it also goes to current sign
+  useFocusEffect(
+    useCallback(() => {
+      const sub = BackHandler.addEventListener('hardwareBackPress', () => {
+        handleBack();
+        return true; // prevent default (which would call router.back())
+      });
+      return () => sub.remove();
+    }, [handleBack])
+  );
+
   // ── Navigate to next question (after feedback) ──────────────────────────────
   const handleNext = useCallback(() => {
     const nextIndex = qIndex + 1;
     if (nextIndex < questions.length) {
       navigateToQuestion(nextIndex);
     } else {
-      router.back();
+      // Go to the current sign's explanation screen (not router.back() which
+      // would return to the original entry sign, not the last-viewed sign).
+      handleBack();
     }
-  }, [qIndex, questions.length, router, navigateToQuestion]);
+  }, [qIndex, questions.length, navigateToQuestion, handleBack]);
 
   // ── Render ─────────────────────────────────────────────────────────────────
   if (loading) return <LoadingScreen />;
@@ -343,6 +366,15 @@ export default function EngineAQuestionScreen() {
         showsVerticalScrollIndicator={false}
         scrollEnabled={!showFeedback}
       >
+        {/* Back button — returns to current sign's explanation screen */}
+        <TouchableOpacity
+          style={styles.backButton}
+          onPress={handleBack}
+          accessibilityLabel="ወደ ኋላ ተመለስ"
+        >
+          <Text style={styles.backIcon}>←</Text>
+        </TouchableOpacity>
+
         {/* Sign image */}
         {sign?.image_url && (
           <View style={styles.signImageContainer}>
@@ -489,6 +521,19 @@ const styles = StyleSheet.create({
     padding:    16,
     alignItems: 'center',
     gap:        24,
+  },
+  backButton: {
+    width:           52,
+    height:          52,
+    borderRadius:    26,
+    backgroundColor: Colors.card,
+    justifyContent:  'center',
+    alignItems:      'center',
+    alignSelf:       'flex-start',
+  },
+  backIcon: {
+    fontSize: 24,
+    color:    Colors.textPrimary,
   },
   signImageContainer: {
     width:           200,
