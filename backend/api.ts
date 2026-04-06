@@ -399,7 +399,7 @@ export async function recordSignView(
     });
     if (error) throw error;
   } catch (err) {
-    console.error('[api] recordSignView:', err);
+    console.warn('[api] recordSignView:', err);
   }
 }
 
