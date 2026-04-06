@@ -101,6 +101,12 @@ export default function EngineAExamScreen() {
     const wasConnected = prevConnectedRef.current;
     prevConnectedRef.current = isConnected;
     if (!wasConnected && isConnected && questions.length > 0) {
+      // Only restart when asking a question. During feedback phase,
+      // AudioFeedback manages its own audio — stopAudio() here would set
+      // audioState to 'idle', which AudioFeedback never checks for, so the
+      // Next button would never appear and the user would be stuck.
+      if (phaseRef.current !== 'question') return;
+
       // Kill sequence synchronously first, then await the actual native stop
       // before restarting. Without await, short files like "አንድ" (0.3s) can
       // finish playing before stopAsync() reaches the native layer.
