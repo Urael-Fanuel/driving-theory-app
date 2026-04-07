@@ -98,4 +98,71 @@
     "sign_count": 35,
     "display_order": 9
   }
+,
+  {
+    "id": "mind_safety",
+    "name_amharic": "አዕምሮ እና ደህንነት",
+    "name_hebrew": "מוח ובטיחות",
+    "icon": "🧠",
+    "color": "#6A1B9A",
+    "description_amharic": "ትኩረት ማጣት፣ ምላሽ ጊዜ፣ ድካም እና አደጋ ለማወቅ።",
+    "audio_intro": "topic_mind_safety_intro.mp3",
+    "sign_count": 0,
+    "display_order": 10
+  },
+  {
+    "id": "society_law",
+    "name_amharic": "ማህበረሰብ እና ህግ",
+    "name_hebrew": "חברה וחוק",
+    "icon": "🤝",
+    "color": "#1565C0",
+    "description_amharic": "የሹፌሮች ሃላፊነት፣ ማህበራዊ ግፊት፣ አልኮልና ሹፌርነት።",
+    "audio_intro": "topic_society_law_intro.mp3",
+    "sign_count": 0,
+    "display_order": 11
+  },
+  {
+    "id": "the_road",
+    "name_amharic": "የመንገድ ሁኔታዎች",
+    "name_hebrew": "תנאי הדרך",
+    "icon": "🏙️",
+    "color": "#2E7D32",
+    "description_amharic": "የመንገድ አካባቢ፣ ከተማ ውስጥ ሹፌርነት፣ መስቀለኛ መንገድ፣ ከባድ ሁኔታዎች።",
+    "audio_intro": "topic_the_road_intro.mp3",
+    "sign_count": 0,
+    "display_order": 12
+  },
+  {
+    "id": "my_vehicle",
+    "name_amharic": "ትክክለኛ አነዳድ",
+    "name_hebrew": "נהיגה נכונה",
+    "icon": "🚘",
+    "color": "#37474F",
+    "description_amharic": "መኪናን በደህንነት ማስኬድ፣ ቁጥጥር እና ፍጥነት።",
+    "audio_intro": "topic_my_vehicle_intro.mp3",
+    "sign_count": 0,
+    "display_order": 13
+  },
+  {
+    "id": "two_wheelers",
+    "name_amharic": "ሁለት ጎማ ተሽከርካሪዎች",
+    "name_hebrew": "דו-גלגלי",
+    "icon": "🏍️",
+    "color": "#E65100",
+    "description_amharic": "ሞተርሳይክል እና የኤሌክትሪክ ብስክሌቶች።",
+    "audio_intro": "topic_two_wheelers_intro.mp3",
+    "sign_count": 0,
+    "display_order": 14
+  },
+  {
+    "id": "basics_license",
+    "name_amharic": "መሠረቶች እና ፍቃድ",
+    "name_hebrew": "יסודות ורישיון",
+    "icon": "📋",
+    "color": "#00695C",
+    "description_amharic": "የሹፌርነት ትምህርት መሠረቶች፣ ደህንነታዊ ሹፌርነት መርሆዎች።",
+    "audio_intro": "topic_basics_license_intro.mp3",
+    "sign_count": 0,
+    "display_order": 15
+  }
 ]

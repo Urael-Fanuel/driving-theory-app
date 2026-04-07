@@ -95,15 +95,7 @@ export function TopicCard({
           </View>
         )}
 
-        {/* Audio button */}
-        {topic.audio_intro_url ? (
-          <AudioButton
-            audioUri={topic.audio_intro_url}
-            size={44}
-            variant="ghost"
-            style={styles.audioBtn}
-          />
-        ) : null}
+        {/* Audio button removed — Engine B users can read */}
 
         {/* Progress bar at bottom */}
         {progressPercent > 0 && (
@@ -150,15 +142,15 @@ const styles = StyleSheet.create({
     opacity: 0.9,
   },
   iconContainer: {
-    width:          60,
-    height:         60,
-    borderRadius:   30,
+    width:          84,
+    height:         84,
+    borderRadius:   42,
     justifyContent: 'center',
     alignItems:     'center',
     marginRight:    12,
   },
   icon: {
-    fontSize: 30,
+    fontSize: 64,
   },
   textContainer: {
     flex: 1,
