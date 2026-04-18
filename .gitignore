@@ -44,3 +44,9 @@ yarn-error.log*
 
 # Test coverage
 coverage/
+
+# Temporary working folders
+temp_behavioral/
+
+# Source PDFs (data already extracted to JSON files)
+*.pdf

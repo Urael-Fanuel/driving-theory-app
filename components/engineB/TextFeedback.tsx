@@ -22,6 +22,7 @@ import * as Haptics from 'expo-haptics';
 import { Colors } from '../../constants/colors';
 import { Typography } from '../../constants/typography';
 import { AudioButton } from '../shared/AudioButton';
+import { speakAndAwait, stopTTS } from '../../utils/googleTTS';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -29,6 +30,8 @@ interface TextFeedbackProps {
   isCorrect: boolean;
   explanationText: string;
   explanationAudioUri?: string;
+  /** Amharic text to auto-play via TTS on mount (used by behavioral subtopics) */
+  ttsText?: string;
   onNext: () => void;
 }
 
@@ -38,6 +41,7 @@ export function TextFeedback({
   isCorrect,
   explanationText,
   explanationAudioUri,
+  ttsText,
   onNext,
 }: TextFeedbackProps) {
   const slideAnim = useRef(new Animated.Value(100)).current;
@@ -56,7 +60,16 @@ export function TextFeedback({
       Animated.spring(slideAnim, { toValue: 0, useNativeDriver: true, speed: 15 }),
       Animated.timing(fadeAnim,  { toValue: 1, duration: 250, useNativeDriver: true }),
     ]).start();
-  }, []);
+
+    // Auto-play TTS feedback (behavioral subtopics)
+    if (ttsText) {
+      speakAndAwait(ttsText).catch(() => {});
+    }
+
+    return () => {
+      if (ttsText) stopTTS().catch(() => {});
+    };
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const bgColor       = isCorrect ? Colors.correctDark  : Colors.wrongDark;
   const borderColor   = isCorrect ? Colors.correct       : Colors.wrong;

@@ -1,0 +1,468 @@
+{
+  "topicId": "vehicle_knowledge",
+  "name_amharic": "መኪናን ማወቅ",
+  "name_hebrew": "הכרת הרכב",
+  "icon": "🔧",
+  "color": "#4527A0",
+  "levels": [
+    {
+      "id": "vk_l1",
+      "level": 1,
+      "name_hebrew": "הרכב מבחוץ",
+      "name_amharic": "",
+      "icon": "🚗",
+      "color": "#388E3C",
+      "subtopics": [
+        {
+          "id": "vk_l1_s1",
+          "name_hebrew": "חזית הרכב",
+          "icon": "🔦",
+          "explanation_amharic": "ይህ የመኪናው ክፍል እንድናይ እና ሌሎችም እኛን እንድያዩን ያደርጋል። መኪናውንም ከትንሽ ጉዳት ይከላከላል።",
+          "narration_script": "እነሆ የመኪናውን ፊት ለፊት ተመልከቱ።\n\nእነዚህ ትላልቅ መብራቶች የፊት መብራቶች ይባላሉ። በጨለማ ጊዜ መንገዱን እንድናይ ይረዱናል። ሌሎች አሽከርካሪዎችም መኪናችንን በደንብ እንዲያዩ ያደርጋሉ።\n\nከነዚህ ትንሽ በታች ያሉት ደግሞ የመታጠፊያ መብራቶች ናቸው። ወደ ግራ ወይም ወደ ቀኝ መታጠፍ ስንፈልግ እነዚህ መብራቶች ብልጭ ድርግም ይላሉ። ይህም ለሌሎች አሽከርካሪዎች የት እንደምንታጠፍ ያሳያል።\n\nበመኪናው ፊት ለፊት ያለው ጠንካራ ክፍል ባምፐር ይባላል። እሱ መኪናችንን ከትንሽ ጉዳት ይከላከላል።\n\nይሄ ቁጥርና ፊደል ያለው ሰሌዳ ደግሞ የመኪናው መለያ ቁጥር ነው። እያንዳንዱ መኪና የራሱ የሆነ መለያ አለው።\n\nየመኪናው ፊት ለፊት ለመንዳት እና ለደህንነት በጣም አስፈላጊ ነው።",
+          "image_description": "Front of a modern car, close up, showing headlights, turn signals, bumper, and license plate.",
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_vk_l1_s1_narration.mp3",
+          "video_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/videos/behavioral_vk_l1_s1.mp4",
+          "questions": [
+            {
+              "question_amharic": "በጨለማ ጊዜ መንገዱን እንድናይ የሚረዳን የትኛው የመኪና ክፍል ነው?",
+              "answers": [
+                {
+                  "text_amharic": "መታጠፊያ መብራት",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የፊት መብራት",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ባምፐር",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "መለያ ቁጥር",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "ወደ ሌላ መንገድ መታጠፍ ስንፈልግ፣ ለሌሎች አሽከርካሪዎች ለማሳየት የምንጠቀመው ምንድን ነው?",
+              "answers": [
+                {
+                  "text_amharic": "የፊት መብራቶች",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ባምፐር",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የመታጠፊያ መብራቶች",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "የመኪናው በር",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "በመኪናው ፊት ለፊት ከትንሽ ግጭት የሚከላከለው የትኛው ጠንካራ ክፍል ነው?",
+              "answers": [
+                {
+                  "text_amharic": "የፊት መብራት",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የመታጠፊያ መብራት",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "መለያ ቁጥር",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ባምፐር",
+                  "is_correct": true
+                }
+              ]
+            }
+          ],
+          "video_search_meta": {
+            "video_type": "static",
+            "pexels_query": "car front exterior parked silver sedan"
+          }
+        },
+        {
+          "id": "vk_l1_s2",
+          "name_hebrew": "צדדי הרכב",
+          "icon": "🚪"
+        },
+        {
+          "id": "vk_l1_s3",
+          "name_hebrew": "אחורי הרכב",
+          "icon": "💡"
+        },
+        {
+          "id": "vk_l1_s4",
+          "name_hebrew": "הגלגלים",
+          "icon": "⚫"
+        }
+      ]
+    },
+    {
+      "id": "vk_l2",
+      "level": 2,
+      "name_hebrew": "נכנסים לרכב",
+      "name_amharic": "",
+      "icon": "🪑",
+      "color": "#388E3C",
+      "subtopics": [
+        {
+          "id": "vk_l2_s5",
+          "name_hebrew": "כניסה ויציאה מהרכב",
+          "icon": "🚪"
+        },
+        {
+          "id": "vk_l2_s1",
+          "name_hebrew": "חגורת בטיחות",
+          "icon": "💺",
+          "explanation_amharic": "የደህንነት ቀበቶ። መኪና ውስጥ ያለ እያንዳንዱ ሰው ሁልጊዜ የደህንነት ቀበቶ ማድረግ አለበት። ይህ ህግ ነው፣ እና ህይወትዎን ለመጠበቅ በጣም አስፈላጊ ነው። የደህንነት ቀበቶ አደጋ ሲደርስ ሰውነትዎ ከመቀመጫው እንዳይወጣ ወይም እንዳይጎዳ ይከላከላል። ህፃናት ደግሞ ለዕድሜያቸው እና ለክብደታቸው ተስማሚ በሆነ ልዩ መቀመጫ፣ ማለትም የህፃናት መቀመጫ ወይም ከፍ የሚያደርግ መቀመጫ፣ መታሰር አለባቸው። የአየር ከረጢት ባለበት የፊት መቀመጫ ላይ ህፃናትን በልዩ መቀመጫ ማስቀመጥ አደገኛ ነው። ለህፃናት በጣም አስተማማኝ ቦታ የኋላ መቀመጫ ነው። አስታውሱ፣ የደህንነት ቀበቶ አደጋን አይከላከልም፣ ነገር ግን አደጋ ቢደርስ ጉዳትን ይቀንሳል እና ህይወት ያድናል።",
+          "narration_script": "የደህንነት ቀበቶ። መኪና ውስጥ ያለ እያንዳንዱ ሰው ሁልጊዜ የደህንነት ቀበቶ ማድረግ አለበት። ይህ ህግ ነው፣ እና ህይወትዎን ለመጠበቅ በጣም አስፈላጊ ነው። የደህንነት ቀበቶ አደጋ ሲደርስ ሰውነትዎ ከመቀመጫው እንዳይወጣ ወይም እንዳይጎዳ ይከላከላል። ህፃናት ደግሞ ለዕድሜያቸው እና ለክብደታቸው ተስማሚ በሆነ ልዩ መቀመጫ፣ ማለትም የህፃናት መቀመጫ ወይም ከፍ የሚያደርግ መቀመጫ፣ መታሰር አለባቸው። የአየር ከረጢት ባለበት የፊት መቀመጫ ላይ ህፃናትን በልዩ መቀመጫ ማስቀመጥ አደገኛ ነው። ለህፃናት በጣም አስተማማኝ ቦታ የኋላ መቀመጫ ነው። አስታውሱ፣ የደህንነት ቀበቶ አደጋን አይከላከልም፣ ነገር ግን አደጋ ቢደርስ ጉዳትን ይቀንሳል እና ህይወት ያድናል።",
+          "image_description": "A diverse group of adults and children in a car, all wearing seatbelts correctly. Show car seats and booster seats for children in the back.",
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_vk_l2_s1_narration.mp3",
+          "questions": [
+            {
+              "question_amharic": "የደህንነት ቀበቶ ዋና ዓላማ ምንድን ነው?",
+              "answers": [
+                {
+                  "text_amharic": "አደጋ እንዳይደርስ ለመከላከል",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "በአደጋ ጊዜ የሚደርሰውን ጉዳት ለመቀነስ እና ህይወትን ለማዳን",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ሹፌሩ ቀጥ ብሎ እንዲቀመጥ ለመርዳት",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ሹፌሩ ንቁ ሆኖ እንዲቆይ ለመርዳት",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "በመኪና ውስጥ የደህንነት ቀበቶ ስለማድረግ ህጉ ምን ይላል?",
+              "answers": [
+                {
+                  "text_amharic": "ረጅም ርቀት ሲጓዙ ብቻ የደህንነት ቀበቶ ማድረግ ግዴታ ነው",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ሹፌሩ እና ከፊት የተቀመጠው ተሳፋሪ ብቻ የደህንነት ቀበቶ ማድረግ አለባቸው",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ሁሉም ተሳፋሪዎች፣ በማንኛውም ጉዞ እና በማንኛውም ርቀት፣ የደህንነት ቀበቶ ማድረግ አለባቸው",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ልጆች ብቻ የደህንነት ቀበቶ ማድረግ አለባቸው",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "የአየር ከረጢት (Airbag) ባለበት የፊት መቀመጫ ላይ ልጅን በልዩ መቀመጫ (የህፃናት መቀመጫ ወይም ከፍ የሚያደርግ መቀመጫ) ማስቀመጥ ሲቻል የትኛው ሁኔታ ትክክል ነው?",
+              "answers": [
+                {
+                  "text_amharic": "የአየር ከረጢቱ ንቁ ከሆነ ምንም ችግር የለውም",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ህፃኑ ከስምንት አመት በላይ ከሆነ ይቻላል",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ህፃኑ በደንብ ከታሰረ ሁልጊዜም ይቻላል",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የአየር ከረጢቱ ንቁ ካልሆነ ወይም ከተቋረጠ ብቻ ይቻላል",
+                  "is_correct": true
+                }
+              ]
+            }
+          ],
+          "book_pages": [
+            17,
+            132,
+            133
+          ],
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/vk_l2_s1_image.jpg"
+        },
+        {
+          "id": "vk_l2_s2",
+          "name_hebrew": "כוונון מושב ומראות",
+          "icon": "🪞"
+        },
+        {
+          "id": "vk_l2_s3",
+          "name_hebrew": "ההגה",
+          "icon": "🎯"
+        },
+        {
+          "id": "vk_l2_s4",
+          "name_hebrew": "הדוושות",
+          "icon": "🦶"
+        },
+        {
+          "id": "vk_l2_s6",
+          "name_hebrew": "מתג הצתה",
+          "icon": "🔑"
+        },
+        {
+          "id": "vk_l2_s7",
+          "name_hebrew": "ידית הילוכים",
+          "icon": "⚙️"
+        }
+      ]
+    },
+    {
+      "id": "vk_l3",
+      "level": 3,
+      "name_hebrew": "לוח השעונים — חלק א׳",
+      "name_amharic": "",
+      "icon": "🕐",
+      "color": "#F57F17",
+      "subtopics": [
+        {
+          "id": "vk_l3_s1",
+          "name_hebrew": "מד מהירות",
+          "icon": "💨"
+        },
+        {
+          "id": "vk_l3_s2",
+          "name_hebrew": "מד דלק",
+          "icon": "⛽"
+        }
+      ]
+    },
+    {
+      "id": "vk_l4",
+      "level": 4,
+      "name_hebrew": "התאורה של הרכב",
+      "name_amharic": "",
+      "icon": "💡",
+      "color": "#F57F17",
+      "subtopics": [
+        {
+          "id": "vk_l4_s1",
+          "name_hebrew": "פנסים קדמיים",
+          "icon": "🔦"
+        },
+        {
+          "id": "vk_l4_s2",
+          "name_hebrew": "פנסים אחוריים ואורות עצירה",
+          "icon": "🔴"
+        },
+        {
+          "id": "vk_l4_s3",
+          "name_hebrew": "אורות חיווי",
+          "icon": "🟡"
+        },
+        {
+          "id": "vk_l4_s4",
+          "name_hebrew": "אורות חירום",
+          "icon": "⚠️"
+        }
+      ]
+    },
+    {
+      "id": "vk_l5",
+      "level": 5,
+      "name_hebrew": "מחסה המנוע — מה יש שם",
+      "name_amharic": "",
+      "icon": "⚙️",
+      "color": "#E65100",
+      "subtopics": [
+        {
+          "id": "vk_l5_s1",
+          "name_hebrew": "המנוע",
+          "icon": "⚙️"
+        },
+        {
+          "id": "vk_l5_s2",
+          "name_hebrew": "שמן מנוע",
+          "icon": "🛢️"
+        },
+        {
+          "id": "vk_l5_s3",
+          "name_hebrew": "נוזל קירור",
+          "icon": "💧"
+        },
+        {
+          "id": "vk_l5_s4",
+          "name_hebrew": "הסוללה / מצבר",
+          "icon": "🔋"
+        },
+        {
+          "id": "vk_l5_s5",
+          "name_hebrew": "נוזל בלמים",
+          "icon": "🔵"
+        }
+      ]
+    },
+    {
+      "id": "vk_l6",
+      "level": 6,
+      "name_hebrew": "בדיקות לפני נסיעה",
+      "name_amharic": "",
+      "icon": "🔍",
+      "color": "#E65100",
+      "subtopics": [
+        {
+          "id": "vk_l6_s1",
+          "name_hebrew": "בדיקת רמת שמן",
+          "icon": "🛢️"
+        },
+        {
+          "id": "vk_l6_s2",
+          "name_hebrew": "בדיקת רמת נוזל קירור",
+          "icon": "💧"
+        },
+        {
+          "id": "vk_l6_s3",
+          "name_hebrew": "מצב הסוללה",
+          "icon": "🔋"
+        },
+        {
+          "id": "vk_l6_s4",
+          "name_hebrew": "מה עוד בודקים לפני יציאה",
+          "icon": "✅"
+        }
+      ]
+    },
+    {
+      "id": "vk_l7",
+      "level": 7,
+      "name_hebrew": "לוח השעונים — נורות אזהרה",
+      "name_amharic": "",
+      "icon": "⚠️",
+      "color": "#E65100",
+      "subtopics": [
+        {
+          "id": "vk_l7_s1",
+          "name_hebrew": "נורת שמן",
+          "icon": "🔴"
+        },
+        {
+          "id": "vk_l7_s2",
+          "name_hebrew": "נורת טמפרטורה",
+          "icon": "🌡️"
+        },
+        {
+          "id": "vk_l7_s3",
+          "name_hebrew": "נורת סוללה",
+          "icon": "🔋"
+        },
+        {
+          "id": "vk_l7_s4",
+          "name_hebrew": "נורת בלמים",
+          "icon": "⚠️"
+        },
+        {
+          "id": "vk_l7_s5",
+          "name_hebrew": "נורת ABS",
+          "icon": "🛑"
+        },
+        {
+          "id": "vk_l7_s6",
+          "name_hebrew": "שאר נורות חשובות",
+          "icon": "💡"
+        }
+      ]
+    },
+    {
+      "id": "vk_l8",
+      "level": 8,
+      "name_hebrew": "הצמיגים לעומק",
+      "name_amharic": "",
+      "icon": "⚫",
+      "color": "#C62828",
+      "subtopics": [
+        {
+          "id": "vk_l8_s1",
+          "name_hebrew": "לחץ אוויר בצמיגים",
+          "icon": "🌬️"
+        },
+        {
+          "id": "vk_l8_s2",
+          "name_hebrew": "שחיקת הצמיג",
+          "icon": "📉"
+        },
+        {
+          "id": "vk_l8_s3",
+          "name_hebrew": "תקר — מה עושים",
+          "icon": "🛑"
+        }
+      ]
+    },
+    {
+      "id": "vk_l9",
+      "level": 9,
+      "name_hebrew": "מערכת הבלמים",
+      "name_amharic": "",
+      "icon": "🛑",
+      "color": "#C62828",
+      "subtopics": [
+        {
+          "id": "vk_l9_s1",
+          "name_hebrew": "איך בלמים עובדים",
+          "icon": "⚙️"
+        },
+        {
+          "id": "vk_l9_s2",
+          "name_hebrew": "בלם רגל",
+          "icon": "🦶"
+        },
+        {
+          "id": "vk_l9_s3",
+          "name_hebrew": "בלם יד",
+          "icon": "✋"
+        },
+        {
+          "id": "vk_l9_s4",
+          "name_hebrew": "ABS — מהו",
+          "icon": "🔴"
+        }
+      ]
+    },
+    {
+      "id": "vk_l10",
+      "level": 10,
+      "name_hebrew": "מערכות בטיחות",
+      "name_amharic": "",
+      "icon": "🛡️",
+      "color": "#1565C0",
+      "subtopics": [
+        {
+          "id": "vk_l10_s1",
+          "name_hebrew": "כריות אוויר",
+          "icon": "💨"
+        },
+        {
+          "id": "vk_l10_s2",
+          "name_hebrew": "חגורות בטיחות — לעומק",
+          "icon": "🔒"
+        },
+        {
+          "id": "vk_l10_s3",
+          "name_hebrew": "משולש אזהרה + עזרה ראשונה",
+          "icon": "🔺"
+        }
+      ]
+    }
+  ]
+}

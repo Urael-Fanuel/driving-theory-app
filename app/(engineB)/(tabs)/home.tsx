@@ -54,9 +54,19 @@ export default function EngineBHomeScreen() {
     load();
   }, []);
 
+  // Behavioral topics (no road signs — use scaffolding screen)
+  const BEHAVIORAL_TOPICS = [
+    'vehicle_knowledge', 'mind_safety', 'society_law',
+    'the_road', 'my_vehicle', 'two_wheelers', 'basics_license',
+  ];
+
   const handleTopicPress = async (topic: DBTopic) => {
     await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-    router.push(`/(engineB)/topic/${topic.id}`);
+    if (BEHAVIORAL_TOPICS.includes(topic.id)) {
+      router.push(`/(engineB)/behavioral/${topic.id}`);
+    } else {
+      router.push(`/(engineB)/topic/${topic.id}`);
+    }
   };
 
   if (loading) return <LoadingScreen message="ርዕሰ ጉዳዮችን እየጫነ..." />;

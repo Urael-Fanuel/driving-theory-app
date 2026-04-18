@@ -63,7 +63,7 @@ export default function EngineAExamScreen() {
     isSaving,
   } = useExam();
 
-  const { playAudio, stopAudio, pauseAudio, resumeAudio, audioState } = useAudio();
+  const { playAudio, stopAudio, audioState } = useAudio();
   const [showFeedback,             setShowFeedback]             = useState(false);
   const isConnected = useNetworkStatus();
   const [currentQuestionAudioReady, setCurrentQuestionAudioReady] = useState(true);
@@ -191,6 +191,7 @@ export default function EngineAExamScreen() {
     if (!answer) return;
 
     cancelListening(); // Stop any ongoing recording
+    sequenceCancelledRef.current = true; // Stop runSequence immediately before stopAudio resolves
     stopAudio();
     setPlayingAnswerIndex(null);
     submitAnswer(answer.id);
@@ -217,7 +218,8 @@ export default function EngineAExamScreen() {
     cancelListening();
     setShowFeedback(false);
     let cancelled = false;
-    const isCancelled = () => cancelled || voiceFailedRef.current || sequenceCancelledRef.current;
+    const isCancelled = () =>
+      cancelled || voiceFailedRef.current || sequenceCancelledRef.current || phaseRef.current !== 'question';
 
     async function runSequence() {
       await stopAudio();
@@ -230,24 +232,33 @@ export default function EngineAExamScreen() {
       if (isCancelled()) return;
 
       await new Promise(res => setTimeout(res, 1000));
-      if (isCancelled() || phaseRef.current !== 'question') return;
+      if (isCancelled()) return;
 
       // If offline at this point — stop here. The reconnect handler will restart
       // the sequence from scratch, so "አንድ" can never play before question audio.
       if (!isConnectedRef.current) return;
 
       for (let i = 0; i < currentQuestion!.answers.length && i < 4; i++) {
-        if (isCancelled() || phaseRef.current !== 'question') return;
+        if (isCancelled()) return;
 
         setPlayingAnswerIndex(i);
 
         await playAndAwaitAudio(NUMBER_URLS[i], isCancelled);
-        if (isCancelled() || phaseRef.current !== 'question') return;
+        if (isCancelled()) return;
+
+        // Yield to the macrotask queue so any pending tap events are processed
+        // before we start the next clip — prevents one extra audio clip playing.
+        await new Promise<void>(r => setTimeout(r, 0));
+        if (isCancelled()) return;
 
         const answer = currentQuestion!.answers[i];
         const answerUrl = answer?.audio_url
           || `${_AUDIO_BASE}/answer_${qId}_${answer?.id}.mp3`;
         await playAndAwaitAudio(answerUrl, isCancelled);
+        if (isCancelled()) return;
+
+        // Yield again before the next number announcement.
+        await new Promise<void>(r => setTimeout(r, 0));
       }
       setPlayingAnswerIndex(null);
     }
@@ -328,12 +339,16 @@ export default function EngineAExamScreen() {
     goToQuestion(currentIndex + 1);
   };
 
-  // ── Pause / Resume audio ────────────────────────────────────────────────────
-  const handleAudioButton = async () => {
-    if (audioState === 'playing') {
-      await pauseAudio();
-    } else if (audioState === 'paused') {
-      await resumeAudio();
+  // ── Stop / Restart audio sequence ──────────────────────────────────────────
+  // ⏸ → cancel the running sequence and stop audio immediately.
+  // ▶️ → restart the full sequence from scratch (question → answers).
+  const handleAudioButton = () => {
+    if (audioState === 'playing' || audioState === 'loading') {
+      sequenceCancelledRef.current = true;
+      stopAudio();
+    } else {
+      // idle / paused / finished / error → restart full sequence
+      setAudioRestartKey(k => k + 1);
     }
   };
 

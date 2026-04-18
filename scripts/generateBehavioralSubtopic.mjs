@@ -1,0 +1,274 @@
+/**
+ * generateBehavioralSubtopic.mjs
+ *
+ * Generates full content for ONE behavioral sub-topic:
+ *   1. Gemini  → Amharic explanation + narration script + 3 questions
+ *   2. TTS     → narration MP3 (am-ET voice)
+ *   3. ffmpeg  → colored background + MP3 → MP4
+ *   4. Supabase → upload MP3 + MP4
+ *   5. JSON    → update vehicle_knowledge_scaffold.json
+ *
+ * Usage:
+ *   node --env-file=.env scripts/generateBehavioralSubtopic.mjs --subtopic vk_l1_s1
+ */
+
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs';
+import { join, dirname } from 'path';
+import { fileURLToPath } from 'url';
+import { execSync } from 'child_process';
+import https from 'https';
+import { createClient } from '@supabase/supabase-js';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const ROOT          = join(__dirname, '..');
+const SCAFFOLD_PATH = join(ROOT, 'content', 'vehicle_knowledge_scaffold.json');
+const TEMP_DIR      = join(ROOT, 'temp_behavioral');
+
+if (!existsSync(TEMP_DIR)) mkdirSync(TEMP_DIR, { recursive: true });
+
+// ─── Load .env if needed ───────────────────────────────────────────────────────
+if (!process.env.EXPO_PUBLIC_SUPABASE_URL) {
+  const envPath = join(ROOT, '.env');
+  if (existsSync(envPath)) {
+    for (const line of readFileSync(envPath, 'utf8').split('\n')) {
+      const trimmed = line.trim();
+      if (!trimmed || trimmed.startsWith('#')) continue;
+      const eq = trimmed.indexOf('=');
+      if (eq < 1) continue;
+      const k = trimmed.slice(0, eq).trim();
+      const v = trimmed.slice(eq + 1).trim();
+      if (k && !(k in process.env)) process.env[k] = v;
+    }
+  }
+}
+
+// ─── Args + env ────────────────────────────────────────────────────────────────
+const subtopicArg = process.argv.indexOf('--subtopic');
+const SUBTOPIC_ID  = subtopicArg >= 0 ? process.argv[subtopicArg + 1] : 'vk_l1_s1';
+
+const GEMINI_KEY  = process.env.GEMINI_API_KEY;
+const TTS_KEY     = process.env.EXPO_PUBLIC_GOOGLE_TTS_KEY;
+const SUPABASE_URL = process.env.EXPO_PUBLIC_SUPABASE_URL;
+const SERVICE_KEY  = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+if (!GEMINI_KEY || !TTS_KEY || !SUPABASE_URL || !SERVICE_KEY) {
+  console.error('❌ Missing env variables: GEMINI_API_KEY / EXPO_PUBLIC_GOOGLE_TTS_KEY / SUPABASE_URL / SERVICE_KEY');
+  process.exit(1);
+}
+
+const supabase     = createClient(SUPABASE_URL, SERVICE_KEY);
+const GEMINI_MODEL = 'gemini-2.5-flash';
+
+// ─── Load scaffold ─────────────────────────────────────────────────────────────
+const scaffold = JSON.parse(readFileSync(SCAFFOLD_PATH, 'utf8'));
+
+let foundLevel    = null;
+let foundSubtopic = null;
+for (const level of scaffold.levels) {
+  const sub = level.subtopics.find(s => s.id === SUBTOPIC_ID);
+  if (sub) { foundLevel = level; foundSubtopic = sub; break; }
+}
+
+if (!foundSubtopic) {
+  console.error(`❌ Sub-topic "${SUBTOPIC_ID}" not found. Check vehicle_knowledge_scaffold.json`);
+  process.exit(1);
+}
+
+console.log(`\n🎯 Sub-topic: "${foundSubtopic.name_hebrew}" (${SUBTOPIC_ID})`);
+console.log(`   Level ${foundLevel.level}: ${foundLevel.name_hebrew}`);
+
+// ─── Helper: HTTPS POST → Buffer ──────────────────────────────────────────────
+function httpsPost(hostname, path, body) {
+  return new Promise((resolve, reject) => {
+    const buf = Buffer.isBuffer(body) ? body : Buffer.from(JSON.stringify(body));
+    const req = https.request({
+      hostname,
+      path,
+      method: 'POST',
+      headers: {
+        'Content-Type':   'application/json',
+        'Content-Length': buf.byteLength,
+      },
+    }, (res) => {
+      const chunks = [];
+      res.on('data', c => chunks.push(c));
+      res.on('end', () => resolve(Buffer.concat(chunks)));
+    });
+    req.on('error', reject);
+    req.write(buf);
+    req.end();
+  });
+}
+
+// ─── Step 1: Gemini → content ─────────────────────────────────────────────────
+console.log('\n⏳ שלב 1: Gemini מייצר תוכן...');
+
+const prompt = `\
+You are creating educational driving content for Ethiopian immigrants learning Israeli driving theory.
+Topic: "הכרת הרכב" — Getting to know the car (Israeli Ministry of Transport curriculum).
+Level ${foundLevel.level}: "${foundLevel.name_hebrew}"
+Sub-topic: "${foundSubtopic.name_hebrew}"
+
+IMPORTANT RULES:
+- Base ALL content strictly on the Israeli Ministry of Transport (משרד התחבורה) driving theory curriculum.
+- Write only factual, accurate information — do NOT invent or guess.
+- Focus on what a driver in Israel must know and is tested on in the Israeli theory exam.
+- The audience is illiterate adults who learn only through AUDIO and VISUAL.
+- Language must be very simple Amharic — like explaining to a child, no technical jargon.
+- Questions must reflect what is actually tested in the Israeli driving theory exam.
+
+Return this exact JSON (no markdown, no code fences):
+{
+  "explanation_amharic": "2-3 very simple Amharic sentences explaining this sub-topic based on Israeli driving theory",
+  "narration_script": "30-45 second narration in Amharic. Describe what we see and why it matters for safe driving in Israel. Write naturally as if speaking aloud. Keep it simple and factually accurate.",
+  "image_description": "Short English description for a stock photo search (e.g. 'front of modern car headlights close up')",
+  "questions": [
+    {
+      "question_amharic": "Question in Amharic about this sub-topic (based on Israeli theory exam style)?",
+      "answers": [
+        { "text_amharic": "Full sentence answer", "is_correct": false },
+        { "text_amharic": "Full sentence answer — this is the correct one", "is_correct": true },
+        { "text_amharic": "Full sentence answer", "is_correct": false },
+        { "text_amharic": "Full sentence answer", "is_correct": false }
+      ]
+    },
+    {
+      "question_amharic": "Second question?",
+      "answers": [
+        { "text_amharic": "...", "is_correct": false },
+        { "text_amharic": "...", "is_correct": false },
+        { "text_amharic": "...", "is_correct": true },
+        { "text_amharic": "...", "is_correct": false }
+      ]
+    },
+    {
+      "question_amharic": "Third question?",
+      "answers": [
+        { "text_amharic": "...", "is_correct": false },
+        { "text_amharic": "...", "is_correct": false },
+        { "text_amharic": "...", "is_correct": false },
+        { "text_amharic": "...", "is_correct": true }
+      ]
+    }
+  ]
+}`;
+
+const geminiBody = {
+  contents: [{ parts: [{ text: prompt }] }],
+  generationConfig: { temperature: 0.7, maxOutputTokens: 8192 },
+};
+
+const geminiRaw = await httpsPost(
+  'generativelanguage.googleapis.com',
+  `/v1beta/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_KEY}`,
+  geminiBody
+);
+
+let content;
+try {
+  const parsed = JSON.parse(geminiRaw.toString('utf-8'));
+  if (parsed.error) throw new Error(parsed.error.message);
+  const text = parsed.candidates?.[0]?.content?.parts?.[0]?.text ?? '';
+  const cleaned = text.replace(/^```json\s*/i, '').replace(/\s*```\s*$/i, '').trim();
+  content = JSON.parse(cleaned);
+} catch (e) {
+  console.error('❌ Gemini parse error:', e.message);
+  console.error('Raw:', geminiRaw.toString('utf-8').substring(0, 300));
+  process.exit(1);
+}
+
+console.log('  ✅ תוכן נוצר');
+console.log(`  📝 הסבר: ${content.explanation_amharic?.substring(0, 80)}...`);
+console.log(`  🎙️  נרטיב: ${content.narration_script?.substring(0, 80)}...`);
+console.log(`  ❓ שאלות: ${content.questions?.length ?? 0}`);
+
+// ─── Step 2: Google TTS → MP3 ─────────────────────────────────────────────────
+console.log('\n⏳ שלב 2: Google TTS → MP3...');
+
+const ttsBody = {
+  input:       { text: content.narration_script },
+  voice:       { languageCode: 'am-ET', name: 'am-ET-Standard-A', ssmlGender: 'FEMALE' },
+  audioConfig: { audioEncoding: 'MP3', speakingRate: 0.85, pitch: 0.0,
+                 effectsProfileId: ['handset-class-device'] },
+};
+
+const ttsRaw = await httpsPost(
+  'texttospeech.googleapis.com',
+  `/v1/text:synthesize?key=${TTS_KEY}`,
+  ttsBody
+);
+
+let mp3Buffer;
+try {
+  const ttsData = JSON.parse(ttsRaw.toString('utf-8'));
+  if (ttsData.error) throw new Error(ttsData.error.message);
+  mp3Buffer = Buffer.from(ttsData.audioContent, 'base64');
+} catch (e) {
+  console.error('❌ TTS error:', e.message);
+  process.exit(1);
+}
+
+const mp3Path = join(TEMP_DIR, `${SUBTOPIC_ID}_narration.mp3`);
+writeFileSync(mp3Path, mp3Buffer);
+console.log(`  ✅ MP3 נשמר (${(mp3Buffer.byteLength / 1024).toFixed(1)} KB)`);
+
+// ─── Step 3: ffmpeg → MP4 ─────────────────────────────────────────────────────
+console.log('\n⏳ שלב 3: ffmpeg → MP4...');
+
+const mp4Path   = join(TEMP_DIR, `${SUBTOPIC_ID}.mp4`);
+const bgColor   = (foundLevel.color ?? '#4527A0').replace('#', '0x');
+
+// ffmpeg: solid color background + narration audio → MP4
+// (image will be added in future iteration)
+const ffmpegCmd = `ffmpeg -y -f lavfi -i "color=c=${bgColor}:s=640x480:r=25" -i "${mp3Path}" -c:v libx264 -tune stillimage -c:a aac -b:a 192k -pix_fmt yuv420p -shortest "${mp4Path}"`;
+
+try {
+  execSync(ffmpegCmd, { stdio: 'pipe' });
+  const mp4Size = readFileSync(mp4Path).byteLength;
+  console.log(`  ✅ MP4 נוצר (${(mp4Size / 1024).toFixed(1)} KB)`);
+} catch (e) {
+  console.error('❌ ffmpeg נכשל:', e.stderr?.toString().substring(0, 200) ?? e.message);
+  process.exit(1);
+}
+
+// ─── Step 4: Upload to Supabase ────────────────────────────────────────────────
+console.log('\n⏳ שלב 4: העלאה ל-Supabase...');
+
+// Upload MP3 → audio bucket
+const mp3Filename = `behavioral_${SUBTOPIC_ID}_narration.mp3`;
+const { error: audioErr } = await supabase.storage
+  .from('audio')
+  .upload(mp3Filename, mp3Buffer, { contentType: 'audio/mpeg', upsert: true });
+if (audioErr) { console.error(`  ⚠️  שגיאה בהעלאת MP3: ${audioErr.message}`); }
+else { console.log(`  ✅ MP3 הועלה: ${mp3Filename}`); }
+
+// Upload MP4 → videos bucket
+const mp4Buffer   = readFileSync(mp4Path);
+const mp4Filename = `behavioral_${SUBTOPIC_ID}.mp4`;
+const { error: videoErr } = await supabase.storage
+  .from('videos')
+  .upload(mp4Filename, mp4Buffer, { contentType: 'video/mp4', upsert: true });
+if (videoErr) { console.error(`  ⚠️  שגיאה בהעלאת MP4: ${videoErr.message}`); }
+else { console.log(`  ✅ MP4 הועלה: ${mp4Filename}`); }
+
+const audioUrl = supabase.storage.from('audio').getPublicUrl(mp3Filename).data.publicUrl;
+const videoUrl = supabase.storage.from('videos').getPublicUrl(mp4Filename).data.publicUrl;
+
+// ─── Step 5: Update scaffold JSON ─────────────────────────────────────────────
+console.log('\n⏳ שלב 5: עדכון vehicle_knowledge_scaffold.json...');
+
+foundSubtopic.explanation_amharic = content.explanation_amharic;
+foundSubtopic.narration_script    = content.narration_script;
+foundSubtopic.image_description   = content.image_description;
+foundSubtopic.narration_audio_url = audioUrl;
+foundSubtopic.video_url           = videoUrl;
+foundSubtopic.questions           = content.questions;
+
+writeFileSync(SCAFFOLD_PATH, JSON.stringify(scaffold, null, 2), 'utf8');
+console.log('  ✅ JSON עודכן');
+
+// ─── Summary ───────────────────────────────────────────────────────────────────
+console.log('\n✅ הושלם בהצלחה!');
+console.log(`   🎙️  Audio: ${audioUrl}`);
+console.log(`   🎬 Video: ${videoUrl}`);
+console.log(`   💡 Image needed: "${content.image_description}"`);

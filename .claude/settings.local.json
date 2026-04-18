@@ -175,7 +175,12 @@
       "Bash(ls C:/Users/Yakov/.claude/projects/C--Users-Yakov-Desktop-driving-theory-app/*.jsonl)",
       "Bash(find C:/Users/Yakov/.claude/ -name *.jsonl)",
       "Bash(powershell -command \"Get-ChildItem ''C:\\\\Users\\\\Yakov\\\\.claude\\\\projects\\\\C--Users-Yakov-Desktop-driving-theory-app'' | Sort-Object LastWriteTime | Select-Object Name, LastWriteTime, CreationTime\")",
-      "Bash(powershell -command \"Get-ChildItem ''C:\\\\Users\\\\Yakov\\\\Desktop\\\\driving-theory-app'' | Sort-Object LastWriteTime -Descending | Select-Object Name, LastWriteTime, Length | Select-Object -First 20\")"
+      "Bash(powershell -command \"Get-ChildItem ''C:\\\\Users\\\\Yakov\\\\Desktop\\\\driving-theory-app'' | Sort-Object LastWriteTime -Descending | Select-Object Name, LastWriteTime, Length | Select-Object -First 20\")",
+      "WebFetch(domain:www.gov.il)",
+      "WebFetch(domain:mot.gov.il)",
+      "Bash(findstr /i \"nyala ebrima abyssinica noto ethiopic amharic\")",
+      "Bash(grep -i -E \"\\\\.ttf$\")",
+      "Bash(del \"C:\\\\Users\\\\Yakov\\\\.claude\\\\plans\\\\deep-coalescing-forest.md\")"
     ]
   },
   "hooks": {

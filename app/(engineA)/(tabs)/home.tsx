@@ -70,12 +70,22 @@ export default function EngineAHomeScreen() {
     playAudio(`${_AUDIO_BASE}/home_welcome_a.mp3`).catch(() => {});
   }, []);
 
+  // Behavioral topics (no road signs — use scaffolding screen)
+  const BEHAVIORAL_TOPICS = [
+    'vehicle_knowledge', 'mind_safety', 'society_law',
+    'the_road', 'my_vehicle', 'two_wheelers', 'basics_license',
+  ];
+
   const handleTopicPress = (topic: DBTopic) => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
     // Play topic name audio so non-readers know which category they entered
     const nameAudioUrl = `${_AUDIO_BASE}/topic_${topic.id}_name.mp3`;
     playAudio(nameAudioUrl).catch(() => {});
-    router.push(`/(engineA)/topic/${topic.id}`);
+    if (BEHAVIORAL_TOPICS.includes(topic.id)) {
+      router.push(`/(engineA)/behavioral/${topic.id}`);
+    } else {
+      router.push(`/(engineA)/topic/${topic.id}`);
+    }
   };
 
   if (loading) return <LoadingScreen />;

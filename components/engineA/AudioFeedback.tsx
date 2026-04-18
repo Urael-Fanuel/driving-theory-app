@@ -2,20 +2,22 @@
  * AGENT 3 — components/engineA/AudioFeedback.tsx
  * Full-screen feedback overlay for Engine A after answering a question.
  *
- * Layout (correct):
+ * Layout:
  * ┌─────────────────────┐
- * │  ✅ (large icon)    │  ← Green overlay
- * │                     │
- * │  Audio plays        │  ← Auto-plays explanation
- * │  explanation        │
- * │                     │
- * │  [Next →]           │  ← Button appears after audio
+ * │  ✅ / ❌            │  ← Large icon (green / red overlay)
+ * │  🔊                 │  ← Audio playing indicator
+ * │  [▶]               │  ← Next button (appears after audio ends)
  * └─────────────────────┘
  *
- * NO TEXT shown to Engine A users — audio only.
+ * NO TEXT shown — Engine A users cannot read. Audio only.
+ *
+ * Two audio modes:
+ *   explanationAudioUri  — pre-recorded URL (used by signs)
+ *   ttsText              — Amharic text spoken via Google TTS (used by behavioral subtopics)
+ * If both are provided, ttsText takes priority.
  */
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import {
   View,
   Text,
@@ -25,18 +27,20 @@ import {
 } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import { Colors } from '../../constants/colors';
-import { Typography } from '../../constants/typography';
 import { useAudio } from '../../hooks/useAudio';
+import { speakAndAwait } from '../../utils/googleTTS';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
 interface AudioFeedbackProps {
   isCorrect: boolean;
-  /** Audio file URI for the explanation */
+  /** Pre-recorded audio URL (used by signs). Ignored when ttsText is provided. */
   explanationAudioUri: string;
+  /** Amharic text to speak via Google TTS (used by behavioral subtopics). */
+  ttsText?: string;
   /** Called when user taps Next */
   onNext: () => void;
-  /** Auto-show next button after N ms (default: after audio) */
+  /** Auto-show next button after N ms (skips audio wait) */
   autoAdvanceMs?: number;
 }
 
@@ -45,17 +49,20 @@ interface AudioFeedbackProps {
 export function AudioFeedback({
   isCorrect,
   explanationAudioUri,
+  ttsText,
   onNext,
   autoAdvanceMs,
 }: AudioFeedbackProps) {
   const { playAudio, audioState } = useAudio();
-  const [showNext, setShowNext] = React.useState(false);
+  const [showNext,    setShowNext]    = useState(false);
+  const [ttsPlaying,  setTtsPlaying]  = useState(false);
+
   const iconScale = useRef(new Animated.Value(0)).current;
   const fadeIn    = useRef(new Animated.Value(0)).current;
 
-  // Play feedback audio and animate on mount
+  // ── Mount: haptic + entrance animation + audio ────────────────────────────
   useEffect(() => {
-    // Haptic feedback
+    // Haptic
     Haptics.notificationAsync(
       isCorrect
         ? Haptics.NotificationFeedbackType.Success
@@ -68,45 +75,56 @@ export function AudioFeedback({
       Animated.timing(fadeIn,    { toValue: 1, duration: 300, useNativeDriver: true }),
     ]).start();
 
-    // Play explanation audio
-    const audioFile = explanationAudioUri;
-    playAudio(audioFile).catch(() => {});
-
-    // Show next button after auto-advance delay or after audio finishes
     if (autoAdvanceMs) {
       const t = setTimeout(() => setShowNext(true), autoAdvanceMs);
       return () => clearTimeout(t);
     }
-  }, []);
 
-  // Show next button when audio finishes
+    if (ttsText) {
+      // TTS mode — speak the text, show next button when done
+      setTtsPlaying(true);
+      speakAndAwait(ttsText)
+        .catch(() => {})
+        .finally(() => {
+          setTtsPlaying(false);
+          setTimeout(() => setShowNext(true), 800);
+        });
+    } else {
+      // URL mode — play pre-recorded audio (sign behaviour)
+      playAudio(explanationAudioUri).catch(() => {});
+    }
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // ── URL mode: show next button when audio finishes ────────────────────────
   useEffect(() => {
+    if (ttsText) return;  // TTS mode handles its own completion
     if (audioState === 'finished' || audioState === 'error') {
-      // Small delay so user sees the result before next appears
       const t = setTimeout(() => setShowNext(true), 800);
       return () => clearTimeout(t);
     }
-  }, [audioState]);
+  }, [audioState, ttsText]);
 
-  const bgColor = isCorrect ? Colors.overlayCorrect : Colors.overlayWrong;
-  const icon    = isCorrect ? '✅' : '❌';
+  const bgColor    = isCorrect ? Colors.overlayCorrect : Colors.overlayWrong;
+  const icon       = isCorrect ? '✅' : '❌';
+  const showSpeaker = ttsText
+    ? ttsPlaying
+    : (audioState === 'playing' || audioState === 'loading');
 
   return (
     <Animated.View style={[styles.overlay, { backgroundColor: bgColor, opacity: fadeIn }]}>
       <View style={styles.content}>
+
         {/* Large result icon */}
-        <Animated.Text
-          style={[styles.resultIcon, { transform: [{ scale: iconScale }] }]}
-        >
+        <Animated.Text style={[styles.resultIcon, { transform: [{ scale: iconScale }] }]}>
           {icon}
         </Animated.Text>
 
         {/* Audio playing indicator */}
-        {(audioState === 'playing' || audioState === 'loading') && (
+        {showSpeaker && (
           <Text style={styles.audioIndicator}>🔊</Text>
         )}
 
-        {/* Next button */}
+        {/* Next button — appears after audio ends */}
         {showNext && (
           <TouchableOpacity
             style={styles.nextButton}
@@ -118,6 +136,7 @@ export function AudioFeedback({
             <Text style={styles.nextIcon}>▶</Text>
           </TouchableOpacity>
         )}
+
       </View>
     </Animated.View>
   );
