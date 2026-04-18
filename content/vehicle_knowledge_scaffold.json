@@ -17,72 +17,72 @@
           "id": "vk_l1_s1",
           "name_hebrew": "חזית הרכב",
           "icon": "🔦",
-          "explanation_amharic": "ይህ የመኪናው ክፍል እንድናይ እና ሌሎችም እኛን እንድያዩን ያደርጋል። መኪናውንም ከትንሽ ጉዳት ይከላከላል።",
-          "narration_script": "እነሆ የመኪናውን ፊት ለፊት ተመልከቱ።\n\nእነዚህ ትላልቅ መብራቶች የፊት መብራቶች ይባላሉ። በጨለማ ጊዜ መንገዱን እንድናይ ይረዱናል። ሌሎች አሽከርካሪዎችም መኪናችንን በደንብ እንዲያዩ ያደርጋሉ።\n\nከነዚህ ትንሽ በታች ያሉት ደግሞ የመታጠፊያ መብራቶች ናቸው። ወደ ግራ ወይም ወደ ቀኝ መታጠፍ ስንፈልግ እነዚህ መብራቶች ብልጭ ድርግም ይላሉ። ይህም ለሌሎች አሽከርካሪዎች የት እንደምንታጠፍ ያሳያል።\n\nበመኪናው ፊት ለፊት ያለው ጠንካራ ክፍል ባምፐር ይባላል። እሱ መኪናችንን ከትንሽ ጉዳት ይከላከላል።\n\nይሄ ቁጥርና ፊደል ያለው ሰሌዳ ደግሞ የመኪናው መለያ ቁጥር ነው። እያንዳንዱ መኪና የራሱ የሆነ መለያ አለው።\n\nየመኪናው ፊት ለፊት ለመንዳት እና ለደህንነት በጣም አስፈላጊ ነው።",
-          "image_description": "Front of a modern car, close up, showing headlights, turn signals, bumper, and license plate.",
+          "explanation_amharic": "የመኪናው ፊት ለደህንነት መንዳት በጣም አስፈላጊ የሆኑ መብራቶች እና የመኪና ሰሌዳ አሉት። እነዚህ ክፍሎች ሁል ጊዜ በትክክል መስራት አለባቸው።",
+          "narration_script": "የመኪናውን ፊት እንመልከት። እዚህ የፊት መብራቶችን እናያለን። እነዚህ መብራቶች ማታ ላይ መንገዱን ለማየት እና እኛን እንዲያዩን ይረዳሉ። ሁለት ዋና መብራቶች አሉ፡ ዝቅተኛ እና ከፍተኛ። ዝቅተኛ መብራት ሁልጊዜ እንጠቀማለን። ከፍተኛ መብራት የምንጠቀመው መንገድ በጣም ጨለማ ሲሆን እና ሌላ መኪና ከሌለ ብቻ ነው። ሌላ መኪና ሲመጣ ወዲያውኑ ወደ ዝቅተኛ መብራት መቀየር አለብን።\nከዚያም አቅጣጫ ጠቋሚዎች አሉ። እነዚህ ለመታጠፍ ወይም መስመር ለመቀየር ስንፈልግ ሌሎች አሽከርካሪዎች እንዲያውቁ ይረዳሉ።\nበመጨረሻም፣ የመኪና ታርጋው ሁልጊዜ ንጹህና የሚታይ መሆን አለበት። እነዚህ ክፍሎች ለደህንነት መንዳት በጣም አስፈላጊ ናቸው።",
+          "image_description": "Front of a modern car, showing headlights (on), turn signals (off), and a clean license plate.",
           "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_vk_l1_s1_narration.mp3",
           "video_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/videos/behavioral_vk_l1_s1.mp4",
           "questions": [
             {
-              "question_amharic": "በጨለማ ጊዜ መንገዱን እንድናይ የሚረዳን የትኛው የመኪና ክፍል ነው?",
+              "question_amharic": "ከፍተኛ የፊት መብራቶችን (የሩቅ መብራቶችን) መቼ መጠቀም አለብን?",
               "answers": [
                 {
-                  "text_amharic": "መታጠፊያ መብራት",
+                  "text_amharic": "ሁልጊዜ መጠቀም እንችላለን።",
                   "is_correct": false
                 },
                 {
-                  "text_amharic": "የፊት መብራት",
+                  "text_amharic": "መንገድ በጣም ጨለማ ሲሆን እና ሌላ መኪና ከሌለ ብቻ።",
                   "is_correct": true
                 },
                 {
-                  "text_amharic": "ባምፐር",
+                  "text_amharic": "በከተማ ውስጥ ስንነዳ መጠቀም አለብን።",
                   "is_correct": false
                 },
                 {
-                  "text_amharic": "መለያ ቁጥር",
+                  "text_amharic": "ዝናብ በሚዘንብበት ጊዜ መጠቀም አለብን።",
                   "is_correct": false
                 }
               ]
             },
             {
-              "question_amharic": "ወደ ሌላ መንገድ መታጠፍ ስንፈልግ፣ ለሌሎች አሽከርካሪዎች ለማሳየት የምንጠቀመው ምንድን ነው?",
+              "question_amharic": "አቅጣጫ ጠቋሚዎች (አትቶት) ለምን አስፈላጊ ናቸው?",
               "answers": [
                 {
-                  "text_amharic": "የፊት መብራቶች",
+                  "text_amharic": "መኪናው ቆንጆ እንዲመስል ለማድረግ ነው።",
                   "is_correct": false
                 },
                 {
-                  "text_amharic": "ባምፐር",
-                  "is_correct": false
-                },
-                {
-                  "text_amharic": "የመታጠፊያ መብራቶች",
+                  "text_amharic": "ሌሎች አሽከርካሪዎች ምን እንደምናደርግ እንዲያውቁ ለማድረግ ነው።",
                   "is_correct": true
                 },
                 {
-                  "text_amharic": "የመኪናው በር",
+                  "text_amharic": "መንገዱን ለማብራት ነው።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የመኪናውን ኤሌክትሪክ ለመፈተሽ ነው።",
                   "is_correct": false
                 }
               ]
             },
             {
-              "question_amharic": "በመኪናው ፊት ለፊት ከትንሽ ግጭት የሚከላከለው የትኛው ጠንካራ ክፍል ነው?",
+              "question_amharic": "የመኪናው ታርጋ (ሰሌዳ) ምን አይነት መሆን አለበት?",
               "answers": [
                 {
-                  "text_amharic": "የፊት መብራት",
-                  "is_correct": false
-                },
-                {
-                  "text_amharic": "የመታጠፊያ መብራት",
-                  "is_correct": false
-                },
-                {
-                  "text_amharic": "መለያ ቁጥር",
-                  "is_correct": false
-                },
-                {
-                  "text_amharic": "ባምፐር",
+                  "text_amharic": "ሁልጊዜ ንጹህ እና የሚታይ መሆን አለበት።",
                   "is_correct": true
+                },
+                {
+                  "text_amharic": "ቆሻሻ ከሆነ መሸፈን ይቻላል።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "በቀን ብቻ የሚታይ መሆን አለበት።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "አሮጌ ከሆነ ሊነሳ ይችላል።",
+                  "is_correct": false
                 }
               ]
             }
@@ -120,7 +120,82 @@
         {
           "id": "vk_l2_s5",
           "name_hebrew": "כניסה ויציאה מהרכב",
-          "icon": "🚪"
+          "icon": "🚪",
+          "book_pages": [
+            12,
+            13
+          ],
+          "explanation_amharic": "መኪና ውስጥ ስትገቡ ወይም ስትወጡ ሁልጊዜ አካባቢውን በጥንቃቄ መፈተሽ አለባችሁ። መኪናው ቆሞ መሆን አለበት፣ እና ተሳፋሪዎች ወደ መንገድ ሳይሆን ወደ የእግረኛ መንገድ መውጣት አለባቸው። የመኪናው አሽከርካሪ የሁሉም ሰው ደህንነት ሃላፊነት አለበት።",
+          "narration_script": "ውድ ተማሪዎች፣ ከመኪና መግባትና መውጣት በጣም አስፈላጊ የደህንነት ጉዳይ ነው። መኪና ውስጥ ከመግባታችሁ በፊት፣ ከመኪናው ፊት ለፊት በመሄድ ከሁለቱም አቅጣጫ ትራፊክ መኖሩን ማረጋገጥ አለባችሁ። በሩን ስትከፍቱ በትንሹ ብቻ ከፍታችሁ በፍጥነት ገብታችሁ ዝጉት። ከመኪና ስትወጡ ደግሞ፣ በመስታወቶች ተጠቅማችሁ የትራፊኩን ሁኔታ ተመልከቱ። የሞቱ ቦታዎችን ለመሸፈን ሰውነታችሁን ወደ ግራ አዘንብሉ። በሩን በትንሹ ከፍታችሁ በፍጥነት ወደ የእግረኛ መንገድ ውጡ። ሁልጊዜ አስታውሱ፣ መኪናው ቆሞ ካልሆነ በቀር በር መክፈት ወይም ወደ መንገድ መውረድ አይፈቀድም። የአሽከርካሪው ሃላፊነት ተሳፋሪዎች በተለይ ከኋላ የተቀመጡት፣ ወደ የእግረኛ መንገድ እንጂ ወደ መንገድ እንዳይወርዱ ማረጋገጥ ነው። ደህንነታችሁ ይቀድማል!",
+          "image_description": "Driver carefully checking surroundings from front of car before opening door to enter, with a sidewalk visible. Emphasize safety and awareness.",
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_vk_l2_s5_narration.mp3",
+          "video_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/videos/behavioral_vk_l2_s5.mp4",
+          "questions": [
+            {
+              "question_amharic": "መኪናው እየነዳ ሳለ በሮቹን መክፈት ይፈቀዳል ወይ?",
+              "answers": [
+                {
+                  "text_amharic": "መኪናው ቀስ ብሎ እየሄደ ከሆነ ይፈቀዳል።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ረጅም ጭነት ሲያጓጉዙ ይፈቀዳል።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "በፍጹም አይፈቀድም።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "በመኪናው ውስጥ ተሳፋሪዎች ከሌሉ ይፈቀዳል።",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "ከአሽከርካሪው ጎን ከአንድ በላይ ተሳፋሪ ማጓጓዝ ይፈቀዳል ወይ?",
+              "answers": [
+                {
+                  "text_amharic": "የፊት ወንበሩ አንድ የተያያዘ ወንበር ከሆነ ይፈቀዳል።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "በፍጹም አይፈቀድም።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ከአሽከርካሪው ቀበቶ በተጨማሪ ሁለት የደህንነት ቀበቶዎች ካሉ ይፈቀዳል።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የመኪናው ፍቃድ ካልፈቀደ በቀር አይፈቀድም።",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "አሽከርካሪው ወደ መኪናው ከመግባቱ በፊት ከየትኛው ወገን መቅረብ አለበት?",
+              "answers": [
+                {
+                  "text_amharic": "ከመኪናው ኋላ፣ ጀርባው ወደ ትራፊኩ ዞሮ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ከመኪናው ፊት ለፊት፣ የአሽከርካሪው ፊት ወደ ትራፊኩ ዞሮ።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "አሽከርካሪው ወደ መኪናው በሚቀርብበት አቅጣጫ ምንም ለውጥ የለውም፣ ምክንያቱም ሌሎች አሽከርካሪዎች ወደ መኪናው የሚገባውን አሽከርካሪ አደጋ ላይ መጣል አይፈቀድላቸውም።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ከመኪናው ኋላ፣ የአሽከርካሪው ጀርባ ወደ ትራፊኩ ዞሮ፣ ከቀኝ በር - እዚያ ከመንገድ ትራፊክ ምንም አደጋ የለም።",
+                  "is_correct": false
+                }
+              ]
+            }
+          ],
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/vk_l2_s5_image.jpg"
         },
         {
           "id": "vk_l2_s1",

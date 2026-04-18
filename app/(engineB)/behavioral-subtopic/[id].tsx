@@ -155,6 +155,12 @@ export default function BehavioralSubtopicScreenB() {
   const handleAnswerSelect = async (answerIndex: number) => {
     if (selectedAnswer !== null) return;
     if (!currentQ) return;
+
+    // Stop TTS immediately — user already read the question
+    ttsSpeakingRef.current = false;
+    setTtsSpeaking(false);
+    await stopTTS();
+
     await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
     setSelectedAnswer(answerIndex);
 

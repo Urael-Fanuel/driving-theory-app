@@ -11,6 +11,7 @@ import React, { useState } from 'react';
 import {
   View,
   Text,
+  Image,
   TouchableOpacity,
   StyleSheet,
   FlatList,
@@ -31,6 +32,7 @@ interface Subtopic {
   name_hebrew: string;
   name_amharic?: string;
   icon: string;
+  image_url?: string;
 }
 
 interface Level {
@@ -152,7 +154,11 @@ export default function BehavioralTopicScreenB() {
                 onPress={() => handleSubtopicPress(sub, item)}
                 activeOpacity={0.75}
               >
-                <Text style={styles.subtopicIcon}>{sub.icon}</Text>
+                {sub.image_url ? (
+                  <Image source={{ uri: sub.image_url }} style={styles.subtopicThumb} resizeMode="cover" />
+                ) : (
+                  <Text style={styles.subtopicIcon}>{sub.icon}</Text>
+                )}
                 <Text style={styles.subtopicName} numberOfLines={1}>
                   {sub.name_amharic || sub.name_hebrew}
                 </Text>
@@ -339,6 +345,12 @@ const styles = StyleSheet.create({
   subtopicIcon: {
     fontSize:   22,
     flexShrink: 0,
+  },
+  subtopicThumb: {
+    width:        36,
+    height:       36,
+    borderRadius: 8,
+    flexShrink:   0,
   },
   subtopicName: {
     ...Typography.body,

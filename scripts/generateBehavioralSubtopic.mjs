@@ -21,8 +21,9 @@ import { createClient } from '@supabase/supabase-js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT          = join(__dirname, '..');
-const SCAFFOLD_PATH = join(ROOT, 'content', 'vehicle_knowledge_scaffold.json');
-const TEMP_DIR      = join(ROOT, 'temp_behavioral');
+const SCAFFOLD_PATH  = join(ROOT, 'content', 'vehicle_knowledge_scaffold.json');
+const BOOK_PATH      = join(ROOT, 'content', 'theory_book_text.json');
+const TEMP_DIR       = join(ROOT, 'temp_behavioral');
 
 if (!existsSync(TEMP_DIR)) mkdirSync(TEMP_DIR, { recursive: true });
 
@@ -59,8 +60,9 @@ if (!GEMINI_KEY || !TTS_KEY || !SUPABASE_URL || !SERVICE_KEY) {
 const supabase     = createClient(SUPABASE_URL, SERVICE_KEY);
 const GEMINI_MODEL = 'gemini-2.5-flash';
 
-// ─── Load scaffold ─────────────────────────────────────────────────────────────
+// ─── Load scaffold + book ──────────────────────────────────────────────────────
 const scaffold = JSON.parse(readFileSync(SCAFFOLD_PATH, 'utf8'));
+const book     = JSON.parse(readFileSync(BOOK_PATH, 'utf8'));
 
 let foundLevel    = null;
 let foundSubtopic = null;
@@ -103,6 +105,15 @@ function httpsPost(hostname, path, body) {
 // ─── Step 1: Gemini → content ─────────────────────────────────────────────────
 console.log('\n⏳ שלב 1: Gemini מייצר תוכן...');
 
+// Extract relevant book pages if defined on the subtopic
+const bookPages     = foundSubtopic.book_pages ?? [];
+const bookPageTexts = bookPages
+  .map(p => book.pages.find(pg => pg.page === p)?.text ?? '')
+  .filter(t => t.length > 0);
+const bookSection = bookPageTexts.length > 0
+  ? `\n\nTHE FOLLOWING IS THE OFFICIAL BOOK TEXT (pages ${bookPages.join(', ')}) — base ALL content ONLY on this:\n---\n${bookPageTexts.join('\n\n')}\n---`
+  : '';
+
 const prompt = `\
 You are creating educational driving content for Ethiopian immigrants learning Israeli driving theory.
 Topic: "הכרת הרכב" — Getting to know the car (Israeli Ministry of Transport curriculum).
@@ -110,12 +121,12 @@ Level ${foundLevel.level}: "${foundLevel.name_hebrew}"
 Sub-topic: "${foundSubtopic.name_hebrew}"
 
 IMPORTANT RULES:
-- Base ALL content strictly on the Israeli Ministry of Transport (משרד התחבורה) driving theory curriculum.
-- Write only factual, accurate information — do NOT invent or guess.
+- Base ALL content STRICTLY AND ONLY on the official book text provided below. Do NOT add information from outside the book.
+- Write only what appears in the official text — do NOT invent or guess.
 - Focus on what a driver in Israel must know and is tested on in the Israeli theory exam.
 - The audience is illiterate adults who learn only through AUDIO and VISUAL.
 - Language must be very simple Amharic — like explaining to a child, no technical jargon.
-- Questions must reflect what is actually tested in the Israeli driving theory exam.
+- Questions must be based ONLY on the book text provided.${bookSection}
 
 Return this exact JSON (no markdown, no code fences):
 {
