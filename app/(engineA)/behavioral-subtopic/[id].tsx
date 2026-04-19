@@ -161,12 +161,15 @@ export default function BehavioralSubtopicScreenA() {
         );
         if (cancelled) { sound.unloadAsync(); return; }
         soundRef.current = sound;
-        setNarState('playing');
-        await sound.playAsync();
+        // Register callback BEFORE playAsync so we never miss a status update.
+        // Tracks isPlaying → 'playing' and didJustFinish → 'idle'.
         sound.setOnPlaybackStatusUpdate((s) => {
           if (!s.isLoaded) return;
-          if (s.didJustFinish) { setNarState('idle'); }
+          if (s.isPlaying)          setNarState('playing');
+          else if (s.didJustFinish) setNarState('idle');
         });
+        setNarState('playing');  // optimistic — shows ⏸ immediately after load
+        await sound.playAsync();
       } catch { setNarState('idle'); }
     }
 

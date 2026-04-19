@@ -518,7 +518,81 @@
         {
           "id": "vk_l2_s6",
           "name_hebrew": "מתג הצתה",
-          "icon": "🔑"
+          "icon": "🔑",
+          "book_pages": [
+            14
+          ],
+          "explanation_amharic": "የማስነሻ ቁልፍ ከመሪው አምድ አጠገብ፣ ሹፌሩ ፊት ለፊት ባለው ዳሽቦርድ ላይ ይገኛል።\n\nይህ ቁልፍ ለመኪናው በጣም አስፈላጊ ነው። ሞተሩን የምታስነሳበት፣ የኤሌክትሪክ ስርዓቶችን ከሞተሩ ጋር የምታገናኝበት እና ሞተሩን የምታጠፋበት እሱ ነው። ደግሞ የመሪ መቆለፊያ ሆኖ ያገለግላል።\n\nየማስነሻ ቁልፉ ብዙ የአሠራር ቦታዎች አሉት። ጫፉ ላይ ምንጭ አለው። ሞተሩ ሲሰራ ማስነሻውን ወዲያውኑ ለማቆም ይረዳል። ይህ ማስነሻው እንዳይበላሽ ለመከላከል ነው።\n\nአንዳንድ አዳዲስ መኪኖች ላይ ደግሞ የብረት ቁልፍ ሳይሆን መግነጢሳዊ ካርድ በመጠቀም መኪናውን ያስነሳሉ።",
+          "narration_script": "የማስነሻ ቁልፍ ከመሪው አምድ አጠገብ፣ ሹፌሩ ፊት ለፊት ባለው ዳሽቦርድ ላይ ይገኛል።\n\nይህ ቁልፍ ለመኪናው በጣም አስፈላጊ ነው። ሞተሩን የምታስነሳበት፣ የኤሌክትሪክ ስርዓቶችን ከሞተሩ ጋር የምታገናኝበት እና ሞተሩን የምታጠፋበት እሱ ነው። ደግሞ የመሪ መቆለፊያ ሆኖ ያገለግላል።\n\nየማስነሻ ቁልፉ ብዙ የአሠራር ቦታዎች አሉት። ጫፉ ላይ ምንጭ አለው። ሞተሩ ሲሰራ ማስነሻውን ወዲያውኑ ለማቆም ይረዳል። ይህ ማስነሻው እንዳይበላሽ ለመከላከል ነው።\n\nአንዳንድ አዳዲስ መኪኖች ላይ ደግሞ የብረት ቁልፍ ሳይሆን መግነጢሳዊ ካርድ በመጠቀም መኪናውን ያስነሳሉ።",
+          "image_description": "Extreme close-up of a car ignition switch with a key inserted. The ignition keyhole is located on the RIGHT side of the steering column — as seen from the driver's seat, the key is to the RIGHT of the steering wheel, never the left. Key is inserted and turned. The ignition cylinder and key fill the entire frame. No other objects visible.",
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_vk_l2_s6_narration_1776618029258.mp3",
+          "video_url": "",
+          "questions": [
+            {
+              "question_amharic": "የማስነሻ ቁልፍ ዋና ተግባር ምንድን ነው?",
+              "answers": [
+                {
+                  "text_amharic": "መኪናውን ለማስነሳት ብቻ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ሞተሩን ለማስነሳት እና ለማጥፋት፣ የኤሌክትሪክ ስርዓቶችን ለማገናኘት እና መሪውን ለመቆለፍ።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "የመኪናውን ፍጥነት ለመቆጣጠር።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የመኪናውን መብራቶች ለማብራት።",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "የማስነሻ ቁልፍ ብዙውን ጊዜ የት ይገኛል?",
+              "answers": [
+                {
+                  "text_amharic": "በመኪናው በር ላይ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "በመኪናው ወንበሮች መካከል።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ከመሪው አምድ አጠገብ ወይም በመኪናው የፊት ዳሽቦርድ ላይ።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ከመኪናው ጎማ ስር።",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "የማስነሻ ቁልፍ ለምን ምንጭ ያለው ጫፍ አለው?",
+              "answers": [
+                {
+                  "text_amharic": "በቀላሉ እንዲዞር ለማድረግ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የመኪናውን በሮች ለመቆለፍ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ሞተሩ ሲሰራ ማስነሻውን ወዲያውኑ ለማቆም እና ማስነሻው እንዳይበላሽ ለመከላከል ነው።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "የሙዚቃ ድምጽን ለመቆጣጠር።",
+                  "is_correct": false
+                }
+              ]
+            }
+          ],
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/vk_l2_s6_image_1776616903405.jpg"
         },
         {
           "id": "vk_l2_s7",

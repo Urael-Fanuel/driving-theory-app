@@ -111,7 +111,9 @@ export function AudioButton({
 
   // ── Icon & colours based on state ────────────────────────────────────────────
 
-  const icon = isThisActive && audioState === 'playing' ? '⏸'
+  // Show ⏸ while this button owns the audio — both during loading and playing.
+  // This prevents the ▶️ flash that would otherwise appear during the 'loading' phase.
+  const icon = isThisActive && (audioState === 'playing' || audioState === 'loading') ? '⏸'
              : '▶️';
 
   const bgColor = variant === 'primary'
