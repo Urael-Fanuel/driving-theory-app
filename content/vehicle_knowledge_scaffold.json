@@ -439,7 +439,81 @@
         {
           "id": "vk_l2_s4",
           "name_hebrew": "הדוושות",
-          "icon": "🦶"
+          "icon": "🦶",
+          "book_pages": [
+            13
+          ],
+          "explanation_amharic": "ውድ ተማሪዎቻችን፣ አሁን በመኪና ውስጥ ስላሉት ፔዳሎች እንማራለን። ፔዳሎች መኪናውን ለመቆጣጠር የሚያስችሉ በጣም አስፈላጊ ክፍሎች ናቸው። በቀኝ በኩል ያለው ፔዳል የነዳጅ ፔዳል ነው። ይህ ፔዳል የመኪናውን ፍጥነት ለመጨመር ወይም ለመቀነስ ያገለግላል። በቀኝ እግርዎ ተረከዝዎን ወለሉ ላይ በማድረግ ቀስ በቀስ መጫን እና መልቀቅ አለብዎት። በመሃል ላይ ያለው ፔዳል ብሬክ ይባላል። ይህ ፔዳል መኪናውን ለማቀዝቀዝ ወይም ለማቆም ያገለግላል። እሱንም በቀኝ እግርዎ ነው የሚጫኑት፣ እና ሲጫኑት የብሬክ መብራቶች ይበራሉ። በግራ በኩል ያለው ፔዳል ክላች ይባላል። ክላች ጊር ለመቀየር፣ በዝግታ ለመንዳት፣ ለማቆም እና ለመንቀሳቀስ ያገለግላል። በግራ እግርዎ ነው የሚጫኑት። ሙሉ በሙሉ ወደ ታች ሲጫኑት ሞተሩን ከጊር ሳጥኑ ይለያል፣ ቀስ በቀስ ሲለቁት ደግሞ ያገናኛል። እነዚህን ፔዳሎች በትክክል እና በደህና እንዴት መጠቀም እንዳለብዎ ማወቅ ለመንዳት በጣም አስፈላጊ ነው።",
+          "narration_script": "ውድ ተማሪዎቻችን፣ አሁን በመኪና ውስጥ ስላሉት ፔዳሎች እንማራለን። ፔዳሎች መኪናውን ለመቆጣጠር የሚያስችሉ በጣም አስፈላጊ ክፍሎች ናቸው። በቀኝ በኩል ያለው ፔዳል የነዳጅ ፔዳል ነው። ይህ ፔዳል የመኪናውን ፍጥነት ለመጨመር ወይም ለመቀነስ ያገለግላል። በቀኝ እግርዎ ተረከዝዎን ወለሉ ላይ በማድረግ ቀስ በቀስ መጫን እና መልቀቅ አለብዎት። በመሃል ላይ ያለው ፔዳል ብሬክ ይባላል። ይህ ፔዳል መኪናውን ለማቀዝቀዝ ወይም ለማቆም ያገለግላል። እሱንም በቀኝ እግርዎ ነው የሚጫኑት፣ እና ሲጫኑት የብሬክ መብራቶች ይበራሉ። በግራ በኩል ያለው ፔዳል ክላች ይባላል። ክላች ጊር ለመቀየር፣ በዝግታ ለመንዳት፣ ለማቆም እና ለመንቀሳቀስ ያገለግላል። በግራ እግርዎ ነው የሚጫኑት። ሙሉ በሙሉ ወደ ታች ሲጫኑት ሞተሩን ከጊር ሳጥኑ ይለያል፣ ቀስ በቀስ ሲለቁት ደግሞ ያገናኛል። እነዚህን ፔዳሎች በትክክል እና በደህና እንዴት መጠቀም እንዳለብዎ ማወቅ ለመንዳት በጣም አስፈላጊ ነው።",
+          "image_description": "Extreme close-up of three car foot pedals on the driver's side floor only: clutch pedal on the left, brake pedal in the center, gas pedal on the right. Camera angle is from driver looking straight down at their own feet. Only the driver's floor mat and three pedals are visible. Absolutely no passenger seat, no passenger floor, no other side of the car.",
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_vk_l2_s4_narration_1776595747043.mp3",
+          "video_url": "",
+          "questions": [
+            {
+              "question_amharic": "ፍጥነትን ለመጨመር ወይም ለመቀነስ የሚያገለግለው ፔዳል የትኛው ነው?",
+              "answers": [
+                {
+                  "text_amharic": "ክላች",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ብሬክ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የነዳጅ ፔዳል",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "መሪ",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "የብሬክ ፔዳልን ለመጫን የትኛውን እግር መጠቀም አለብዎት?",
+              "answers": [
+                {
+                  "text_amharic": "የግራ እግር",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ሁለቱንም እግሮች",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የቀኝ እግር",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "የትኛውንም እግር",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "የክላች ፔዳል ዋና ተግባር ምንድነው?",
+              "answers": [
+                {
+                  "text_amharic": "የብሬክ መብራቶችን ለማብራት",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "መኪናውን በፍጥነት ለማሽከርከር",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ጊር ለመቀየር እና ሞተሩን ከጊር ሳጥኑ ጋር ለማገናኘት/ለመለያየት",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "መኪናውን ለመምራት",
+                  "is_correct": false
+                }
+              ]
+            }
+          ],
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/vk_l2_s4_image_1776597495063.jpg"
         },
         {
           "id": "vk_l2_s6",

@@ -95,7 +95,7 @@ console.log('\n⏳ שלב 1: Imagen מייצר תמונה...');
 // Craft a detailed prompt for a photorealistic, educational, Israeli-context image
 const imagenPrompt = `${imageDescription}.
 Photorealistic, high quality, well-lit, clear and informative image.
-Israeli road context, modern car, daytime.
+Modern car, daytime.
 Safe and educational driving illustration.
 No text or watermarks in the image.`;
 
@@ -133,10 +133,21 @@ console.log(`  ✅ תמונה נשמרה (${(imageBuffer.byteLength / 1024).toFi
 // ─── Step 2: Upload to Supabase ────────────────────────────────────────────────
 console.log('\n⏳ שלב 2: העלאה ל-Supabase...');
 
-const filename = `behavioral/${SUBTOPIC_ID}_image.jpg`;
+// Delete old image if exists
+if (foundSubtopic.image_url) {
+  const oldFile = foundSubtopic.image_url.split('/images/').pop()?.split('?')[0];
+  if (oldFile) {
+    await supabase.storage.from('images').remove([oldFile]);
+    console.log(`  🗑️  נמחק ישן: ${oldFile}`);
+  }
+}
+
+// Timestamp suffix → bypasses CDN cache
+const ts       = Date.now();
+const filename = `behavioral/${SUBTOPIC_ID}_image_${ts}.jpg`;
 const { error: uploadErr } = await supabase.storage
   .from('images')
-  .upload(filename, imageBuffer, { contentType: 'image/jpeg', upsert: true });
+  .upload(filename, imageBuffer, { contentType: 'image/jpeg', upsert: false });
 
 if (uploadErr) {
   console.error('❌ Upload error:', uploadErr.message);
