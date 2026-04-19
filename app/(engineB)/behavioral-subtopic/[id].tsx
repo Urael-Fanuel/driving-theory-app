@@ -494,7 +494,7 @@ const styles = StyleSheet.create({
   explainText: {
     ...Typography.body,
     color: Colors.textPrimary,
-    lineHeight: 26,
+    lineHeight: 30,
   },
   explainAudioRow: { alignItems: 'center' },
   continueBtn: {

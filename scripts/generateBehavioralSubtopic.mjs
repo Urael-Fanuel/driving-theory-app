@@ -128,6 +128,7 @@ IMPORTANT RULES:
 - CRITICAL: Write ONLY in Amharic. Do NOT use any English words in the Amharic text. If a concept has no Amharic word (e.g. ABS, ESP), use the Amharic transliteration only as last resort.
 - Do NOT include production notes or image references like "(Image: ...)" inside the narration_script.
 - Do NOT mention "Israel" or any country name. The content applies to ALL countries — treat every rule as a universal driving rule.
+- FORMAT: In narration_script, separate logical sections with \\n\\n (double newline). Each section covers one topic (e.g. intro, then each component, then conclusion). This creates readable paragraphs in the app.
 - Questions must be based ONLY on the book text provided.${bookSection}
 
 Return this exact JSON (no markdown, no code fences):
