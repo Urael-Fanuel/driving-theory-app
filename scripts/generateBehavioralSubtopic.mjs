@@ -15,7 +15,6 @@
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
-import { execSync } from 'child_process';
 import https from 'https';
 import { createClient } from '@supabase/supabase-js';
 
@@ -126,6 +125,9 @@ IMPORTANT RULES:
 - Focus on what a driver in Israel must know and is tested on in the Israeli theory exam.
 - The audience is illiterate adults who learn only through AUDIO and VISUAL.
 - Language must be very simple Amharic — like explaining to a child, no technical jargon.
+- CRITICAL: Write ONLY in Amharic. Do NOT use any English words in the Amharic text. If a concept has no Amharic word (e.g. ABS, ESP), use the Amharic transliteration only as last resort.
+- Do NOT include production notes or image references like "(Image: ...)" inside the narration_script.
+- Do NOT mention "Israel" or any country name. The content applies to ALL countries — treat every rule as a universal driving rule.
 - Questions must be based ONLY on the book text provided.${bookSection}
 
 Return this exact JSON (no markdown, no code fences):
@@ -166,7 +168,7 @@ Return this exact JSON (no markdown, no code fences):
 
 const geminiBody = {
   contents: [{ parts: [{ text: prompt }] }],
-  generationConfig: { temperature: 0.7, maxOutputTokens: 8192 },
+  generationConfig: { temperature: 0.7, maxOutputTokens: 8192, responseMimeType: 'application/json' },
 };
 
 const geminiRaw = await httpsPost(
@@ -180,8 +182,7 @@ try {
   const parsed = JSON.parse(geminiRaw.toString('utf-8'));
   if (parsed.error) throw new Error(parsed.error.message);
   const text = parsed.candidates?.[0]?.content?.parts?.[0]?.text ?? '';
-  const cleaned = text.replace(/^```json\s*/i, '').replace(/\s*```\s*$/i, '').trim();
-  content = JSON.parse(cleaned);
+  content = JSON.parse(text);
 } catch (e) {
   console.error('❌ Gemini parse error:', e.message);
   console.error('Raw:', geminiRaw.toString('utf-8').substring(0, 300));
@@ -223,52 +224,26 @@ const mp3Path = join(TEMP_DIR, `${SUBTOPIC_ID}_narration.mp3`);
 writeFileSync(mp3Path, mp3Buffer);
 console.log(`  ✅ MP3 נשמר (${(mp3Buffer.byteLength / 1024).toFixed(1)} KB)`);
 
-// ─── Step 3: ffmpeg → MP4 ─────────────────────────────────────────────────────
-console.log('\n⏳ שלב 3: ffmpeg → MP4...');
+// ─── Step 3: Upload to Supabase ────────────────────────────────────────────────
+console.log('\n⏳ שלב 3: העלאה ל-Supabase...');
 
-const mp4Path   = join(TEMP_DIR, `${SUBTOPIC_ID}.mp4`);
-const bgColor   = (foundLevel.color ?? '#4527A0').replace('#', '0x');
-
-// ffmpeg: solid color background + narration audio → MP4
-// (image will be added in future iteration)
-const ffmpegCmd = `ffmpeg -y -f lavfi -i "color=c=${bgColor}:s=640x480:r=25" -i "${mp3Path}" -c:v libx264 -tune stillimage -c:a aac -b:a 192k -pix_fmt yuv420p -shortest "${mp4Path}"`;
-
-try {
-  execSync(ffmpegCmd, { stdio: 'pipe' });
-  const mp4Size = readFileSync(mp4Path).byteLength;
-  console.log(`  ✅ MP4 נוצר (${(mp4Size / 1024).toFixed(1)} KB)`);
-} catch (e) {
-  console.error('❌ ffmpeg נכשל:', e.stderr?.toString().substring(0, 200) ?? e.message);
-  process.exit(1);
-}
-
-// ─── Step 4: Upload to Supabase ────────────────────────────────────────────────
-console.log('\n⏳ שלב 4: העלאה ל-Supabase...');
-
-// Upload MP3 → audio bucket
-const mp3Filename = `behavioral_${SUBTOPIC_ID}_narration.mp3`;
+// Timestamp suffix → bypasses local audio cache on device
+const ts = Date.now();
+const mp3Filename = `behavioral_${SUBTOPIC_ID}_narration_${ts}.mp3`;
 const { error: audioErr } = await supabase.storage
   .from('audio')
-  .upload(mp3Filename, mp3Buffer, { contentType: 'audio/mpeg', upsert: true });
+  .upload(mp3Filename, mp3Buffer, { contentType: 'audio/mpeg', upsert: false });
 if (audioErr) { console.error(`  ⚠️  שגיאה בהעלאת MP3: ${audioErr.message}`); }
 else { console.log(`  ✅ MP3 הועלה: ${mp3Filename}`); }
 
-// Upload MP4 → videos bucket
-const mp4Buffer   = readFileSync(mp4Path);
-const mp4Filename = `behavioral_${SUBTOPIC_ID}.mp4`;
-const { error: videoErr } = await supabase.storage
-  .from('videos')
-  .upload(mp4Filename, mp4Buffer, { contentType: 'video/mp4', upsert: true });
-if (videoErr) { console.error(`  ⚠️  שגיאה בהעלאת MP4: ${videoErr.message}`); }
-else { console.log(`  ✅ MP4 הועלה: ${mp4Filename}`); }
-
 const audioUrl = supabase.storage.from('audio').getPublicUrl(mp3Filename).data.publicUrl;
-const videoUrl = supabase.storage.from('videos').getPublicUrl(mp4Filename).data.publicUrl;
+const videoUrl = '';
 
-// ─── Step 5: Update scaffold JSON ─────────────────────────────────────────────
-console.log('\n⏳ שלב 5: עדכון vehicle_knowledge_scaffold.json...');
+// ─── Step 4: Update scaffold JSON ─────────────────────────────────────────────
+console.log('\n⏳ שלב 4: עדכון vehicle_knowledge_scaffold.json...');
 
-foundSubtopic.explanation_amharic = content.explanation_amharic;
+// Content parity rule: explanation_amharic (Engine B text) must equal narration_script (Engine A audio)
+foundSubtopic.explanation_amharic = content.narration_script;
 foundSubtopic.narration_script    = content.narration_script;
 foundSubtopic.image_description   = content.image_description;
 foundSubtopic.narration_audio_url = audioUrl;
@@ -281,5 +256,4 @@ console.log('  ✅ JSON עודכן');
 // ─── Summary ───────────────────────────────────────────────────────────────────
 console.log('\n✅ הושלם בהצלחה!');
 console.log(`   🎙️  Audio: ${audioUrl}`);
-console.log(`   🎬 Video: ${videoUrl}`);
 console.log(`   💡 Image needed: "${content.image_description}"`);
