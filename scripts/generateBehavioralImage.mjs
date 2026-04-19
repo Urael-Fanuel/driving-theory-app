@@ -27,8 +27,15 @@ if (!existsSync(TEMP_DIR)) mkdirSync(TEMP_DIR, { recursive: true });
 const subtopicArg  = process.argv.indexOf('--subtopic');
 const SUBTOPIC_ID  = subtopicArg >= 0 ? process.argv[subtopicArg + 1] : null;
 
+// Optional --field flag: which scaffold field to write the URL to (default: image_url)
+// Use --field image_url_2 to generate a second image without touching image_url.
+const fieldArg    = process.argv.indexOf('--field');
+const IMAGE_FIELD = fieldArg >= 0 ? process.argv[fieldArg + 1] : 'image_url';
+// The description field to read (image_description_2 when writing to image_url_2)
+const DESC_FIELD  = IMAGE_FIELD === 'image_url' ? 'image_description' : `${IMAGE_FIELD.replace('_url', '_description')}`;
+
 if (!SUBTOPIC_ID) {
-  console.error('❌ Usage: node generateBehavioralImage.mjs --subtopic <id>');
+  console.error('❌ Usage: node generateBehavioralImage.mjs --subtopic <id> [--field image_url_2]');
   process.exit(1);
 }
 
@@ -57,13 +64,14 @@ if (!foundSubtopic) {
   process.exit(1);
 }
 
-const imageDescription = foundSubtopic.image_description;
+const imageDescription = foundSubtopic[DESC_FIELD];
 if (!imageDescription) {
-  console.error(`❌ Sub-topic "${SUBTOPIC_ID}" has no image_description field.`);
+  console.error(`❌ Sub-topic "${SUBTOPIC_ID}" has no "${DESC_FIELD}" field.`);
   process.exit(1);
 }
 
 console.log(`\n🎯 Sub-topic: "${foundSubtopic.name_hebrew}" (${SUBTOPIC_ID})`);
+console.log(`   🖼️  Field: ${IMAGE_FIELD}`);
 console.log(`   📝 Image description: ${imageDescription}`);
 
 // ─── Helper: HTTPS POST → Buffer ──────────────────────────────────────────────
@@ -133,9 +141,9 @@ console.log(`  ✅ תמונה נשמרה (${(imageBuffer.byteLength / 1024).toFi
 // ─── Step 2: Upload to Supabase ────────────────────────────────────────────────
 console.log('\n⏳ שלב 2: העלאה ל-Supabase...');
 
-// Delete old image if exists
-if (foundSubtopic.image_url) {
-  const oldFile = foundSubtopic.image_url.split('/images/').pop()?.split('?')[0];
+// Delete old image if exists (only for the field being updated)
+if (foundSubtopic[IMAGE_FIELD]) {
+  const oldFile = foundSubtopic[IMAGE_FIELD].split('/images/').pop()?.split('?')[0];
   if (oldFile) {
     await supabase.storage.from('images').remove([oldFile]);
     console.log(`  🗑️  נמחק ישן: ${oldFile}`);
@@ -143,8 +151,10 @@ if (foundSubtopic.image_url) {
 }
 
 // Timestamp suffix → bypasses CDN cache
+// For image_url_2 add a "2" suffix to make filename distinct from image_url
 const ts       = Date.now();
-const filename = `behavioral/${SUBTOPIC_ID}_image_${ts}.jpg`;
+const fieldSuffix = IMAGE_FIELD === 'image_url' ? '' : `_${IMAGE_FIELD.replace('image_url_', '')}`;
+const filename = `behavioral/${SUBTOPIC_ID}_image${fieldSuffix}_${ts}.jpg`;
 const { error: uploadErr } = await supabase.storage
   .from('images')
   .upload(filename, imageBuffer, { contentType: 'image/jpeg', upsert: false });
@@ -160,7 +170,7 @@ console.log(`  ✅ תמונה הועלתה: ${imageUrl}`);
 // ─── Step 3: Update scaffold JSON ─────────────────────────────────────────────
 console.log('\n⏳ שלב 3: עדכון scaffold JSON...');
 
-foundSubtopic.image_url = imageUrl;
+foundSubtopic[IMAGE_FIELD] = imageUrl;
 writeFileSync(SCAFFOLD_PATH, JSON.stringify(scaffold, null, 2), 'utf8');
 console.log('  ✅ JSON עודכן');
 

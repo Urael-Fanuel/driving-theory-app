@@ -55,6 +55,7 @@ interface Subtopic {
   explanation_amharic?: string;
   narration_audio_url?: string;
   image_url?: string;
+  image_url_2?: string;
   questions?: Question[];
 }
 interface Level    { id: string; level: number; name_hebrew: string; color: string; subtopics: Subtopic[]; }
@@ -234,9 +235,20 @@ export default function BehavioralSubtopicScreenB() {
             <Text style={styles.backIcon}>←</Text>
           </TouchableOpacity>
 
-          {/* Image / icon */}
+          {/* Image / icon — dual layout when image_url_2 exists */}
           <View style={styles.explainImageWrap}>
-            {subtopic.image_url ? (
+            {subtopic.image_url && subtopic.image_url_2 ? (
+              <View style={styles.dualImageRow}>
+                <View style={styles.dualImageCell}>
+                  <Image source={{ uri: subtopic.image_url }} style={styles.dualImage} resizeMode="contain" />
+                  <Text style={styles.dualImageLabel}>አውቶማቲክ</Text>
+                </View>
+                <View style={styles.dualImageCell}>
+                  <Image source={{ uri: subtopic.image_url_2 }} style={styles.dualImage} resizeMode="contain" />
+                  <Text style={styles.dualImageLabel}>ማኑዋል</Text>
+                </View>
+              </View>
+            ) : subtopic.image_url ? (
               <Image source={{ uri: subtopic.image_url }} style={styles.explainImage} resizeMode="contain" />
             ) : (
               <View style={styles.explainImagePlaceholder}>
@@ -484,6 +496,21 @@ const styles = StyleSheet.create({
     flex: 1, justifyContent: 'center', alignItems: 'center',
     backgroundColor: Colors.surface,
   },
+  // ── Dual image layout (when image_url_2 exists) ─────────────────────────────
+  dualImageRow: {
+    flex: 1, flexDirection: 'row',
+  },
+  dualImageCell: {
+    flex: 1, flexDirection: 'column', alignItems: 'center',
+  },
+  dualImage: {
+    flex: 1, width: '100%',
+  },
+  dualImageLabel: {
+    fontSize: 12, color: Colors.textSecondary,
+    textAlign: 'center', paddingBottom: 6, fontWeight: '600',
+  },
+
   explainBox: {
     alignSelf: 'stretch',
     backgroundColor: Colors.card,

@@ -597,7 +597,83 @@
         {
           "id": "vk_l2_s7",
           "name_hebrew": "ידית הילוכים",
-          "icon": "⚙️"
+          "icon": "⚙️",
+          "book_pages": [
+            14
+          ],
+          "explanation_amharic": "ይህ የማርሽ መቀየሪያ ነው። በመኪናው ውስጥ በፊት መቀመጫዎች መካከል ወይም ከመሪው አጠገብ ይገኛል።\n\nይህ የማርሽ መቀየሪያ መኪናው ምን ያህል ኃይል እንደሚኖረው እና በምን ያህል ፍጥነት እንደሚሄድ ይወስናል። ወደፊት የሚሄዱ ብዙ ማርሾች፣ ወደ ኋላ የሚሄድ ማርሽ እና ስራ ፈት ቦታ አለው።\n\nማርሽ ለመቀየር፣ ክላቹን መርገጥ እና በተመሳሳይ ጊዜ ነዳጅ መስጠትን ማቆም አለብዎት። የማርሾቹ ቦታዎች ደግሞ የማርሽ መቀየሪያው እጀታ ጫፍ ላይ ባለው ስዕል ላይ ይታያሉ።\n\nሁለት ዓይነት ማርሽ አለ፡ ማኑዋል እና አውቶማቲክ። ማኑዋል ማርሽ ሹፌሩ ክላቹን ረግጦ ማርሽ ይቀይራል። አውቶማቲክ ማርሽ ግን መኪናው ራሱ ማርሽ ይቀይራል — ሹፌሩ ክላቹን አይጠቀምም።",
+          "narration_script": "ይህ የማርሽ መቀየሪያ ነው። በመኪናው ውስጥ በፊት መቀመጫዎች መካከል ወይም ከመሪው አጠገብ ይገኛል።\n\nይህ የማርሽ መቀየሪያ መኪናው ምን ያህል ኃይል እንደሚኖረው እና በምን ያህል ፍጥነት እንደሚሄድ ይወስናል። ወደፊት የሚሄዱ ብዙ ማርሾች፣ ወደ ኋላ የሚሄድ ማርሽ እና ስራ ፈት ቦታ አለው።\n\nማርሽ ለመቀየር፣ ክላቹን መርገጥ እና በተመሳሳይ ጊዜ ነዳጅ መስጠትን ማቆም አለብዎት። የማርሾቹ ቦታዎች ደግሞ የማርሽ መቀየሪያው እጀታ ጫፍ ላይ ባለው ስዕል ላይ ይታያሉ።\n\nሁለት ዓይነት ማርሽ አለ፡ ማኑዋል እና አውቶማቲክ። ማኑዋል ማርሽ ሹፌሩ ክላቹን ረግጦ ማርሽ ይቀይራል። አውቶማቲክ ማርሽ ግን መኪናው ራሱ ማርሽ ይቀይራል — ሹፌሩ ክላቹን አይጠቀምም።",
+          "image_description": "Car interior, close-up of an automatic gear selector (P-R-N-D) in the center console, modern car, no manual shifter visible.",
+          "image_description_2": "Car interior, close-up of a manual gear shift stick with H-pattern gear positions on the knob showing gears 1-5 and R (reverse), center console, no automatic selector visible.",
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_vk_l2_s7_narration_1776622870214.mp3",
+          "video_url": "",
+          "questions": [
+            {
+              "question_amharic": "የማርሽ መቀየሪያው ብዙውን ጊዜ በመኪና ውስጥ የት ነው የሚገኘው?",
+              "answers": [
+                {
+                  "text_amharic": "ከመኪናው ውጭ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ከኋላ መቀመጫዎች ስር።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "በፊት መቀመጫዎች መካከል ወይም ከመሪው አጠገብ።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "በመኪናው ጣሪያ ላይ።",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "ማርሽ ለመቀየር ምን ማድረግ ያስፈልጋል?",
+              "answers": [
+                {
+                  "text_amharic": "ብሬክን ብቻ መርገጥ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ክላቹን መርገጥ እና በተመሳሳይ ጊዜ ነዳጅ መስጠት።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ክላቹን መርገጥ እና በተመሳሳይ ጊዜ ነዳጅ መስጠትን ማቆም።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "መሪውን ብቻ ማዞር።",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "የማርሾቹን ቦታዎች እንዴት መለየት እንችላለን?",
+              "answers": [
+                {
+                  "text_amharic": "በመኪናው ቀለም።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "በመኪናው ውስጥ በሚሰማው ድምጽ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የማርሽ መቀየሪያው እጀታ ጫፍ ላይ ባለው ስዕል መሰረት።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "በመኪናው መስኮቶች መጠን።",
+                  "is_correct": false
+                }
+              ]
+            }
+          ],
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/vk_l2_s7_image_1776622032496.jpg",
+          "image_url_2": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/vk_l2_s7_image_2_1776622857487.jpg"
         }
       ]
     },

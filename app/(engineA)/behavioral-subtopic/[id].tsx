@@ -83,7 +83,7 @@ interface Answer   { text_amharic: string; is_correct: boolean; }
 interface Question { question_amharic: string; answers: Answer[]; }
 interface Subtopic {
   id: string; name_hebrew: string; icon: string;
-  narration_audio_url?: string; image_url?: string; questions?: Question[];
+  narration_audio_url?: string; image_url?: string; image_url_2?: string; questions?: Question[];
 }
 interface Level    { id: string; level: number; name_hebrew: string; color: string; subtopics: Subtopic[]; }
 interface Scaffold { topicId: string; levels: Level[]; }
@@ -419,9 +419,20 @@ export default function BehavioralSubtopicScreenA() {
             <Text style={styles.backIcon}>←</Text>
           </TouchableOpacity>
 
-          {/* Large image / icon */}
+          {/* Large image / icon — dual layout when image_url_2 exists */}
           <View style={styles.imageContainer}>
-            {subtopic.image_url ? (
+            {subtopic.image_url && subtopic.image_url_2 ? (
+              <View style={styles.dualImageRow}>
+                <View style={styles.dualImageCell}>
+                  <Image source={{ uri: subtopic.image_url }} style={styles.dualImage} resizeMode="contain" />
+                  <Text style={styles.dualImageLabel}>አውቶማቲክ</Text>
+                </View>
+                <View style={styles.dualImageCell}>
+                  <Image source={{ uri: subtopic.image_url_2 }} style={styles.dualImage} resizeMode="contain" />
+                  <Text style={styles.dualImageLabel}>ማኑዋል</Text>
+                </View>
+              </View>
+            ) : subtopic.image_url ? (
               <Image source={{ uri: subtopic.image_url }} style={styles.fullImage} resizeMode="contain" />
             ) : (
               <View style={styles.imagePlaceholder}>
@@ -616,6 +627,21 @@ const styles = StyleSheet.create({
   imagePlaceholder: {
     flex: 1, justifyContent: 'center', alignItems: 'center',
     backgroundColor: Colors.surface,
+  },
+
+  // ── Dual image layout (when image_url_2 exists) ─────────────────────────────
+  dualImageRow: {
+    flex: 1, flexDirection: 'row',
+  },
+  dualImageCell: {
+    flex: 1, flexDirection: 'column', alignItems: 'center',
+  },
+  dualImage: {
+    flex: 1, width: '100%',
+  },
+  dualImageLabel: {
+    fontSize: 12, color: Colors.textSecondary,
+    textAlign: 'center', paddingBottom: 6, fontWeight: '600',
   },
 
   startQuizBtn: {
