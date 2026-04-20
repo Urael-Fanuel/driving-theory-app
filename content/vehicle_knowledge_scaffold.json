@@ -687,13 +687,158 @@
       "subtopics": [
         {
           "id": "vk_l3_s1",
-          "name_hebrew": "מד מהירות",
-          "icon": "💨"
+          "name_hebrew": "שלושת לוחות השעונים",
+          "icon": "🕐",
+          "book_pages": [
+            15
+          ],
+          "explanation_amharic": "ዳሽቦርዱ ሹፌሩ ፊት ለፊት ያለ ሰሌዳ ሲሆን ሶስት ዋና ዋና ሰዓት ሰቆች (መለኪያዎች) አሉት። እያንዳንዱ ሰዓት ሰቅ ስለ መኪናው ሁኔታ ወሳኝ መረጃ ይሰጣል።\n\nትልቁ ሰዓት ሰቅ — የፍጥነት መለኪያ — በዳሽቦርዱ ማዕከል ይቀምጣል። ቀስቱ የሚያሳየው ቁጥር ኪ.ሜ/ሰ ሲሆን፣ መኪናው አሁን እየሄደ ያለውን ፍጥነት ያሳያል።\n\nሁለተኛው ሰዓት ሰቅ — ታኮሜትር — በዳሽቦርዱ ግራ ይቀምጣል። RPM ተብሎ ይሰፈራል። ሞተሩ ምን ያህል ፍጥነት ሲሰራ እንደሆነ ያሳያል — ማርሽ ሲቀይሩ ለማጣቀሻ ጠቃሚ ነው።\n\nሦስተኛው ሰዓት ሰቅ — የነዳጅ መለኪያ — በዳሽቦርዱ ቀኝ ይቀምጣል። ⛽ ምልክት አለው። ባኩ ውስጥ ምን ያህል ነዳጅ እንደቀረ ያሳያል — ቀስቱ ወደ E ሲቀርብ ነዳጅ ሊሞሉ ጊዜው ደርሷል።",
+          "narration_script": "ዳሽቦርዱ ሹፌሩ ፊት ለፊት ያለ ሰሌዳ ሲሆን ሶስት ዋና ዋና ሰዓት ሰቆች (መለኪያዎች) አሉት። እያንዳንዱ ሰዓት ሰቅ ስለ መኪናው ሁኔታ ወሳኝ መረጃ ይሰጣል።\n\nትልቁ ሰዓት ሰቅ — የፍጥነት መለኪያ — በዳሽቦርዱ ማዕከል ይቀምጣል። ቀስቱ የሚያሳየው ቁጥር ኪ.ሜ/ሰ ሲሆን፣ መኪናው አሁን እየሄደ ያለውን ፍጥነት ያሳያል።\n\nሁለተኛው ሰዓት ሰቅ — ታኮሜትር — በዳሽቦርዱ ግራ ይቀምጣል። RPM ተብሎ ይሰፈራል። ሞተሩ ምን ያህል ፍጥነት ሲሰራ እንደሆነ ያሳያል — ማርሽ ሲቀይሩ ለማጣቀሻ ጠቃሚ ነው።\n\nሦስተኛው ሰዓት ሰቅ — የነዳጅ መለኪያ — በዳሽቦርዱ ቀኝ ይቀምጣል። ⛽ ምልክት አለው። ባኩ ውስጥ ምን ያህል ነዳጅ እንደቀረ ያሳያል — ቀስቱ ወደ E ሲቀርብ ነዳጅ ሊሞሉ ጊዜው ደርሷል።",
+          "image_description": "Car analog dashboard instrument cluster with three round gauges. LEFT gauge: tachometer, the text 'RPM' is printed in large clear white English letters prominently inside the gauge face, numbers 0 through 8 around the dial, one single needle. CENTER gauge: the largest gauge, speedometer, the text 'km/h' is printed in large clear white English letters prominently inside the gauge face, numbers 0 through 200 around the dial, one single needle. RIGHT gauge: fuel gauge with exactly ONE single needle only, a small fuel pump icon symbol, E marker on one side and F marker on the other, absolutely no second needle, no extra pointer, no rpm or km/h text. Black dial faces, white markings, modern car interior, photorealistic.",
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_vk_l3_s1_narration_1776664740564.mp3",
+          "video_url": "",
+          "questions": [
+            {
+              "question_amharic": "ትልቁ ሰዓት ሰቅ (የፍጥነት መለኪያ) የት ይቀምጣል?",
+              "answers": [
+                {
+                  "text_amharic": "ዳሽቦርዱ ቀኝ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ዳሽቦርዱ ማዕከል",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ዳሽቦርዱ ግራ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ከዳሽቦርዱ ውጭ",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "ታኮሜትር ምን ያሳያል?",
+              "answers": [
+                {
+                  "text_amharic": "ነዳጁ ምን ያህል እንደቀረ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ሞተሩ ምን ያህል ፍጥነት ሲሰራ እንደሆነ (RPM)",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "መኪናው ምን ያህል ፍጥነት እየሄደ እንደሆነ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ሞተሩ ምን ያህል ሙቀት እንደሆነ",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "⛽ ምልክት ያለው ሰዓት ሰቅ ምን ያሳያል?",
+              "answers": [
+                {
+                  "text_amharic": "ፍጥነቱ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ሞተሩ ምን ያህል ሲሰራ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ባኩ ውስጥ ምን ያህል ነዳጅ እንደቀረ",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ሞተሩ ሙቀት",
+                  "is_correct": false
+                }
+              ]
+            }
+          ],
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/vk_l3_s1_image_1776667160931.jpg"
         },
         {
           "id": "vk_l3_s2",
-          "name_hebrew": "מד דלק",
-          "icon": "⛽"
+          "name_hebrew": "נורות אזהרה בלוח השעונים",
+          "icon": "⚠️",
+          "explanation_amharic": "ዳሽቦርዱ ላይ ትናንሽ ብርሃን ምልክቶች አሉ — እነዚህ የማስጠንቀቂያ ምልክቶች ናቸው። ምልክቱ ቀይ ከሆነ አስቸኳይ አደጋ ማለት ነው — ወዲያውኑ አቁምና ፈትሽ። ምልክቱ ቢጫ ከሆነ ማስጠንቀቂያ ማለት ነው — ወዲያውኑ ማቆም አያስፈልግም፣ ነገር ግን ቶሎ ወደ ሜካኒክ ወስዶ ማሳየት ያስፈልጋል።\n\nቀይ ምልክቶች — ወዲያውኑ አቁም!\n\nየዘይት ግፊት ምልክት ሲበራ ሞተሩ ዘይት ግፊት የለውም ማለት ነው — ወዲያውኑ አቁምና ሞተሩን አጥፋ፤ ካልቆሙ ሞተሩ ሊበላሽ ይችላል።\n\nየሙቀት ምልክት ሲበራ ሞተሩ እጅግ ሞቃ ነው ማለት ነው — ወዲያውኑ አቁምና ሞተሩን አጥፋ።\n\nየባትሪ ምልክት ሲበራ ባትሪ መሙሊያ ስርዓት ችግር አለበት ማለት ነው — ወደ ሜካኒክ ወስዶ ማሳየት ያስፈልጋል።\n\nየብሬክ ምልክት ሲበራ ብሬኩ ላይ ችግር አለ ማለት ነው — ወይም የእጅ ብሬክ ወጥቷል፤ ፈትሽ፤ የእጅ ብሬኩ ካልተለቀቀ ወዲያውኑ ልቀቀው።\n\nSRS ምልክት ሲበራ የ SRS አየር ከረጢት ስርዓት ችግር አለበት ማለት ነው — ወደ ሜካኒክ ወስዶ ማሳየት ያስፈልጋል።\n\nEPS ምልክት ሲበራ የ EPS ኤሌክትሪክ ሹፌሪያ ስርዓት ችግር አለበት ማለት ነው — ወደ ሜካኒክ ወስዶ ማሳየት ያስፈልጋል።\n\nየቀበቶ ምልክት ሲበራ ቀበቶ አልታሠረም ማለት ነው — ወዲያውኑ ቀበቶ ታስር።\n\nየደጃፍ ምልክት ሲበራ አንዱ ደጃፍ በትክክል አልተዘጋም ማለት ነው — ሁሉንም ደጃፎች ዝጋ።\n\nቢጫ ምልክቶች — ቶሎ ወደ ሜካኒክ ወስዶ ማሳየት ያስፈልጋል።\n\nCheck Engine ምልክት ሲበራ ሞተሩ ወይም የጭስ ማስወጫ ስርዓት ችግር አለበት ማለት ነው።\n\nTPMS ምልክት ሲበራ የጎማ ግፊት ዝቅ ብሏል ማለት ነው — ጎሞቹ ፈትሽና ግፊቱን ሙሉ።\n\nABS ምልክት ሲበራ ABS ብሬክ ስርዓት ችግር አለበት ማለት ነው።\n\nESP ምልክት ሲበራ ESP የሩጫ ሚዛን ስርዓት ችግር አለበት ማለት ነው።\n\nየነዳጅ ምልክት ሲበራ ነዳጅ ዝቅ ብሏል ማለት ነው — ቶሎ ነዳጅ ሙሉ።\n\nየብሬክ ፐድ ምልክት ሲበራ የብሬክ ፐዶቹ ያረጁ ናቸው ማለት ነው — ወደ ሜካኒክ ወስዶ ቀይር።\n\nGlow Plug ምልክት ሲበራ ሞተሩ እየሞቀ ነው ማለት ነው — ለዲዘል ሞተር ብቻ ሲሆን ምልክቱ ሲጠፋ ሞተሩን ማስነሳት ይቻላል።\n\nWasher ምልክት ሲበራ የፊት ብርጭቆ ማፅጃ ፈሳሽ አልቋል ማለት ነው — ሙሉ።\n\nአረንጓዴ ምልክቶች አደጋ አሳባቂ አይደሉም — አንዳንድ ስርዓት እየሰራ ስለሆነ ያሳያሉ፣ ለምሳሌ አቅጣጫ ጠቋሚ ሲሰራ።\n\nዳሽቦርዱ ላይ ከተጠቀሱት ሌሎችም ምልክቶች አሉ — ሁሉም ሹፌሮች ሊያውቋቸው ይገባቸዋል። ምልክት ሲበራ ምን ማለት እንደሆነ ካላወቁ፣ ዕቃ ማኑዋሉን ያንብቡ ወይም ሜካኒክ ያማክሩ።",
+          "narration_script": "ዳሽቦርዱ ላይ ትናንሽ ብርሃን ምልክቶች አሉ — እነዚህ የማስጠንቀቂያ ምልክቶች ናቸው። ምልክቱ ቀይ ከሆነ አስቸኳይ አደጋ ማለት ነው — ወዲያውኑ አቁምና ፈትሽ። ምልክቱ ቢጫ ከሆነ ማስጠንቀቂያ ማለት ነው — ወዲያውኑ ማቆም አያስፈልግም፣ ነገር ግን ቶሎ ወደ ሜካኒክ ወስዶ ማሳየት ያስፈልጋል።\n\nቀይ ምልክቶች — ወዲያውኑ አቁም!\n\nየዘይት ግፊት ምልክት ሲበራ ሞተሩ ዘይት ግፊት የለውም ማለት ነው — ወዲያውኑ አቁምና ሞተሩን አጥፋ፤ ካልቆሙ ሞተሩ ሊበላሽ ይችላል።\n\nየሙቀት ምልክት ሲበራ ሞተሩ እጅግ ሞቃ ነው ማለት ነው — ወዲያውኑ አቁምና ሞተሩን አጥፋ።\n\nየባትሪ ምልክት ሲበራ ባትሪ መሙሊያ ስርዓት ችግር አለበት ማለት ነው — ወደ ሜካኒክ ወስዶ ማሳየት ያስፈልጋል።\n\nየብሬክ ምልክት ሲበራ ብሬኩ ላይ ችግር አለ ማለት ነው — ወይም የእጅ ብሬክ ወጥቷል፤ ፈትሽ፤ የእጅ ብሬኩ ካልተለቀቀ ወዲያውኑ ልቀቀው።\n\nSRS ምልክት ሲበራ የ SRS አየር ከረጢት ስርዓት ችግር አለበት ማለት ነው — ወደ ሜካኒክ ወስዶ ማሳየት ያስፈልጋል።\n\nEPS ምልክት ሲበራ የ EPS ኤሌክትሪክ ሹፌሪያ ስርዓት ችግር አለበት ማለት ነው — ወደ ሜካኒክ ወስዶ ማሳየት ያስፈልጋል።\n\nየቀበቶ ምልክት ሲበራ ቀበቶ አልታሠረም ማለት ነው — ወዲያውኑ ቀበቶ ታስር።\n\nየደጃፍ ምልክት ሲበራ አንዱ ደጃፍ በትክክል አልተዘጋም ማለት ነው — ሁሉንም ደጃፎች ዝጋ።\n\nቢጫ ምልክቶች — ቶሎ ወደ ሜካኒክ ወስዶ ማሳየት ያስፈልጋል።\n\nCheck Engine ምልክት ሲበራ ሞተሩ ወይም የጭስ ማስወጫ ስርዓት ችግር አለበት ማለት ነው።\n\nTPMS ምልክት ሲበራ የጎማ ግፊት ዝቅ ብሏል ማለት ነው — ጎሞቹ ፈትሽና ግፊቱን ሙሉ።\n\nABS ምልክት ሲበራ ABS ብሬክ ስርዓት ችግር አለበት ማለት ነው።\n\nESP ምልክት ሲበራ ESP የሩጫ ሚዛን ስርዓት ችግር አለበት ማለት ነው።\n\nየነዳጅ ምልክት ሲበራ ነዳጅ ዝቅ ብሏል ማለት ነው — ቶሎ ነዳጅ ሙሉ።\n\nየብሬክ ፐድ ምልክት ሲበራ የብሬክ ፐዶቹ ያረጁ ናቸው ማለት ነው — ወደ ሜካኒክ ወስዶ ቀይር።\n\nGlow Plug ምልክት ሲበራ ሞተሩ እየሞቀ ነው ማለት ነው — ለዲዘል ሞተር ብቻ ሲሆን ምልክቱ ሲጠፋ ሞተሩን ማስነሳት ይቻላል።\n\nWasher ምልክት ሲበራ የፊት ብርጭቆ ማፅጃ ፈሳሽ አልቋል ማለት ነው — ሙሉ።\n\nአረንጓዴ ምልክቶች አደጋ አሳባቂ አይደሉም — አንዳንድ ስርዓት እየሰራ ስለሆነ ያሳያሉ፣ ለምሳሌ አቅጣጫ ጠቋሚ ሲሰራ።\n\nዳሽቦርዱ ላይ ከተጠቀሱት ሌሎችም ምልክቶች አሉ — ሁሉም ሹፌሮች ሊያውቋቸው ይገባቸዋል። ምልክት ሲበራ ምን ማለት እንደሆነ ካላወቁ፣ ዕቃ ማኑዋሉን ያንብቡ ወይም ሜካኒክ ያማክሩ።",
+          "image_description": "Car dashboard warning lights display showing two rows of illuminated indicator symbols on a dark background. TOP ROW — red warning lights: oil pressure symbol (oil can icon), engine temperature symbol (thermometer in liquid), battery symbol (rectangle with plus and minus), brake warning symbol (circle with exclamation mark), airbag SRS symbol (seated person with circle), power steering EPS symbol (steering wheel with exclamation mark), seatbelt symbol (person with belt), open door symbol (car with open door). BOTTOM ROW — yellow/amber warning lights: check engine symbol (engine outline), tire pressure TPMS symbol (tire cross-section with exclamation), ABS symbol (letters in circle), stability control ESP symbol (skidding car), fuel low symbol (fuel pump), brake pad symbol (dotted circle), glow plug symbol (coil spring), washer fluid symbol (windshield with spray). All symbols clearly visible, each in its own cell. Photorealistic, modern dashboard.",
+          "video_url": "",
+          "questions": [
+            {
+              "question_amharic": "ቀይ ምልክት ሲበራ ምን ማድረግ አለብን?",
+              "answers": [
+                {
+                  "text_amharic": "ወዲያውኑ ቆሞ ምን እንደሆነ ማጣራት አለብን",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ምንም ልዩ ነገር አናደርግም — ቀጥ ብለን እንቀጥላለን",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ወደ ቤት ደርሰን ሜካኒክ እናሳያለን",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ሙዚቃ ዝቅ አድርጎ መቀጠል ይቻላል",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "TPMS ቢጫ ምልክት ሲበራ ምን ማለት ነው?",
+              "answers": [
+                {
+                  "text_amharic": "ሞተሩ ሞቃ ነው",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ነዳጅ ዝቅ ብሏል",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የጎማ ግፊት ዝቅ ብሏል",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ቀበቶ አልታሠረም",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "SRS ምልክት ምን ያሳያል?",
+              "answers": [
+                {
+                  "text_amharic": "ነዳጅ ዝቅ ብሏል",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የአየር ከረጢት ስርዓት ችግር አለበት",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ብሬኩ ደህና ነው",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ሞተሩ ቀዝቃዛ ነው",
+                  "is_correct": false
+                }
+              ]
+            }
+          ],
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_vk_l3_s2_narration_1776726505839.mp3",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/vk_l3_s2_image_1776727040494.jpg"
         }
       ]
     },
