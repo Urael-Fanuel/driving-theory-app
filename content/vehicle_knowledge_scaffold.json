@@ -860,7 +860,7 @@
           "image_description": "Car front headlights at night showing three types: low beam headlights illuminating road downward and forward, high beam showing long-range bright white light beam extending far ahead, and fog lights positioned low on bumper emitting wide yellow low-level beam. Dark background, modern car, photorealistic, clearly visible light beams.",
           "video_url": "",
           "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_vk_l4_s1_narration_1777008869142.mp3",
-          "image_url": "",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/vk_l4_s1_image_1777044061209.jpg",
           "questions": [
             {
               "question_amharic": "ረጅም የፊት መብራቶች ሲጠቀሙ ከፊት አሽከርካሪዎች ሲቀርቡ ምን ማድረግ አለበት?",
@@ -936,7 +936,7 @@
           "image_description": "Rear of a modern car showing four types of rear lights: red brake lights illuminated (brake pedal pressed), white reverse light, orange turn signal indicator, and red position identification lights. Dark background, photorealistic, educational illustration, all lights clearly visible and labeled.",
           "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_vk_l4_s2_narration_1777035816186.mp3",
           "video_url": "",
-          "image_url": "",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/vk_l4_s2_image_1777044076643.jpg",
           "questions": [
             {
               "question_amharic": "የኋላ መብራቶች ስንት ዓይነት መብራቶችን ያቀፈ ነው?",
