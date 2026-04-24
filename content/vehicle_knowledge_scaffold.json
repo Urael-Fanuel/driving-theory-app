@@ -930,7 +930,78 @@
         {
           "id": "vk_l4_s2",
           "name_hebrew": "פנסים אחוריים ואורות עצירה",
-          "icon": "🔴"
+          "icon": "🔴",
+          "explanation_amharic": "የመኪና የኋላ መብራት አራት ዓይነት መብራቶችን ያቀፈ ነው። እነዚህም የብሬክ መብራት፣ የመመለሻ መብራት፣ አመልካች መብራቶች እና የመኪና መለያ መብራት ናቸው።\n\nየብሬክ መብራት የሚበራው የብሬክ ፔዳል ሲጫን ነው። ከኋላ ላሉ ተሽከርካሪዎች መኪናው ፍጥነት እንደሚቀንስ ወይም እንደቆመ ያሳውቃል።\n\nየመመለሻ መብራት ነጭ ሲሆን የሚበራው መኪና ወደ ኋላ በሚመለስበት ጊዜ ነው። ከኋላ ላሉ ሰዎችና ተሽከርካሪዎች መኪናው ወደ ኋላ እንደሚሄድ ያሳውቃል።\n\nአመልካች መብራቶች አንድ አሽከርካሪ መስመር ሲቀይር ወይም ወደ ቀኝ እና ወደ ግራ ሲያልፍ ለሌሎች አሽከርካሪዎች ለማሳወቅ ያገለግላሉ።\n\nየመኪና መለያ መብራቶች የሚበሩት በሌሊት ወይም በማይታይበት ጊዜ ነው። ሌሎች ተሽከርካሪዎች መኪናውን በቀላሉ እንዲለዩ ያስችላሉ።\n\nሁሉንም የኋላ መብራቶች መፈተሽ እና የተበላሸ መብራት ወዲያውኑ መተካት አስፈላጊ ነው።",
+          "narration_script": "የመኪና የኋላ መብራት አራት ዓይነት መብራቶችን ያቀፈ ነው። እነዚህም የብሬክ መብራት፣ የመመለሻ መብራት፣ አመልካች መብራቶች እና የመኪና መለያ መብራት ናቸው።\n\nየብሬክ መብራት የሚበራው የብሬክ ፔዳል ሲጫን ነው። ከኋላ ላሉ ተሽከርካሪዎች መኪናው ፍጥነት እንደሚቀንስ ወይም እንደቆመ ያሳውቃል።\n\nየመመለሻ መብራት ነጭ ሲሆን የሚበራው መኪና ወደ ኋላ በሚመለስበት ጊዜ ነው። ከኋላ ላሉ ሰዎችና ተሽከርካሪዎች መኪናው ወደ ኋላ እንደሚሄድ ያሳውቃል።\n\nአመልካች መብራቶች አንድ አሽከርካሪ መስመር ሲቀይር ወይም ወደ ቀኝ እና ወደ ግራ ሲያልፍ ለሌሎች አሽከርካሪዎች ለማሳወቅ ያገለግላሉ።\n\nየመኪና መለያ መብራቶች የሚበሩት በሌሊት ወይም በማይታይበት ጊዜ ነው። ሌሎች ተሽከርካሪዎች መኪናውን በቀላሉ እንዲለዩ ያስችላሉ።\n\nሁሉንም የኋላ መብራቶች መፈተሽ እና የተበላሸ መብራት ወዲያውኑ መተካት አስፈላጊ ነው።",
+          "image_description": "Rear of a modern car showing four types of rear lights: red brake lights illuminated (brake pedal pressed), white reverse light, orange turn signal indicator, and red position identification lights. Dark background, photorealistic, educational illustration, all lights clearly visible and labeled.",
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_vk_l4_s2_narration_1777035816186.mp3",
+          "video_url": "",
+          "image_url": "",
+          "questions": [
+            {
+              "question_amharic": "የኋላ መብራቶች ስንት ዓይነት መብራቶችን ያቀፈ ነው?",
+              "answers": [
+                {
+                  "text_amharic": "ሦስት",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "አራት",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ስድስት",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ሁለት",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "የብሬክ መብራት መቼ ይበራል?",
+              "answers": [
+                {
+                  "text_amharic": "መኪናው ወደ ኋላ ሲመለስ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "አሽከርካሪው መስመር ሲቀይር",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የብሬክ ፔዳል ሲጫን",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "በሌሊት",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "የመኪና መለያ መብራቶች ለምን ያገለግላሉ?",
+              "answers": [
+                {
+                  "text_amharic": "መኪናው ፍጥነት እንደሚቀንስ ለማሳወቅ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "መኪናው ወደ ኋላ እንደሚሄድ ለማሳወቅ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "አሽከርካሪው መስመር እንዲቀይር ለማሳወቅ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ሌሎች ተሽከርካሪዎች መኪናውን በቀላሉ እንዲለዩ",
+                  "is_correct": true
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "vk_l4_s3",
