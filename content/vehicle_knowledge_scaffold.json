@@ -1006,7 +1006,78 @@
         {
           "id": "vk_l4_s3",
           "name_hebrew": "אורות חיווי",
-          "icon": "🟡"
+          "icon": "🟡",
+          "explanation_amharic": "የመኪና አቅጣጫ አመልካች መብራቶች ከሌሎች አሽከርካሪዎች ጋር ለመነጋገር ያገለግላሉ። የአሽከርካሪውን ዓላማ ከመቀየርዎ በፊት ለማሳወቅ ይረዳሉ።\n\nወደ ቀኝ ወይም ግራ ከመታጠፍዎ በፊት፣ መስመር ከመቀየርዎ በፊት፣ ከመቆምዎ በፊት፣ ወይም ከመጀመርዎ በፊት ማብራት አለብዎት።\n\nሌሎች አሽከርካሪዎች ምላሽ እንዲሰጡ በቂ ጊዜ ለመስጠት በቂ ርቀት እና በጊዜ ማብራት አለብዎት።\n\nየአቅጣጫ አመልካች መብራቶች ከፊት እና ከኋላ መብራቶች ጋር አብረው ያበራሉ።\n\nስራውን ከጨረሱ በኋላ ማጥፋት አለብዎት።\n\nየአቅጣጫ አመልካች መብራቶችዎ የማይሰሩ ከሆነ፣ በእጅዎ ምልክት ማድረግ ይችላሉ። ነገር ግን፣ ችግሩን ወዲያውኑ መጠገን አለብዎት።",
+          "narration_script": "የመኪና አቅጣጫ አመልካች መብራቶች ከሌሎች አሽከርካሪዎች ጋር ለመነጋገር ያገለግላሉ። የአሽከርካሪውን ዓላማ ከመቀየርዎ በፊት ለማሳወቅ ይረዳሉ።\n\nወደ ቀኝ ወይም ግራ ከመታጠፍዎ በፊት፣ መስመር ከመቀየርዎ በፊት፣ ከመቆምዎ በፊት፣ ወይም ከመጀመርዎ በፊት ማብራት አለብዎት።\n\nሌሎች አሽከርካሪዎች ምላሽ እንዲሰጡ በቂ ጊዜ ለመስጠት በቂ ርቀት እና በጊዜ ማብራት አለብዎት።\n\nየአቅጣጫ አመልካች መብራቶች ከፊት እና ከኋላ መብራቶች ጋር አብረው ያበራሉ።\n\nስራውን ከጨረሱ በኋላ ማጥፋት አለብዎት።\n\nየአቅጣጫ አመልካች መብራቶችዎ የማይሰሩ ከሆነ፣ በእጅዎ ምልክት ማድረግ ይችላሉ። ነገር ግን፣ ችግሩን ወዲያውኑ መጠገን አለብዎት።",
+          "image_description": "A modern car on a road with orange turn signal indicator lights blinking on the left side, both front and rear simultaneously. Other cars visible in background. Daytime, photorealistic, educational illustration, clearly showing the blinking orange lights.",
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_vk_l4_s3_narration_1777222524671.mp3",
+          "video_url": "",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/vk_l4_s3_image_1777222699255.jpg",
+          "questions": [
+            {
+              "question_amharic": "የአቅጣጫ አመልካች መብራቶች ለምን ያገለግላሉ?",
+              "answers": [
+                {
+                  "text_amharic": "ለመኪናው ውበት",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ከሌሎች አሽከርካሪዎች ጋር ለመነጋገር",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ለሙዚቃ ማጫወቻ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ለሞባይል ስልክ",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "የአቅጣጫ አመልካች መብራቶችን መቼ ማብራት አለብዎት?",
+              "answers": [
+                {
+                  "text_amharic": "በሌሊት ብቻ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ዝናብ በሚዘንብበት ጊዜ ብቻ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "በጭራሽ ማብራት አያስፈልግም",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ከመታጠፍዎ በፊት፣ መስመርዎን ከመቀየርዎ በፊት፣ ከማቆምዎ በፊት ወይም ከመጀመርዎ በፊት",
+                  "is_correct": true
+                }
+              ]
+            },
+            {
+              "question_amharic": "የአቅጣጫ አመልካች መብራቶችዎ የማይሰሩ ከሆነ ምን ማድረግ አለብዎት?",
+              "answers": [
+                {
+                  "text_amharic": "መኪናውን መሸጥ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ችግሩን ወዲያውኑ መጠገን",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ከሌሎች አሽከርካሪዎች ጋር መጮህ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "መኪናውን መንዳት ማቆም",
+                  "is_correct": false
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "vk_l4_s4",
