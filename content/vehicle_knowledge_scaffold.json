@@ -1082,7 +1082,78 @@
         {
           "id": "vk_l4_s4",
           "name_hebrew": "אורות חירום",
-          "icon": "⚠️"
+          "icon": "⚠️",
+          "explanation_amharic": "የአደጋ ጊዜ መብራቶች። የመኪናውን ሁሉንም የትራፊክ ምልክት መብራቶች በአንድ ጊዜ የሚያበሩ ናቸው። የፊትና የኋላ መብራቶች አንድ ላይ ያበራሉ።\n\nእነዚህን መብራቶች የምንጠቀመው መኪናችን ለሌሎች አሽከርካሪዎች አደጋ በሚሆንበት ጊዜ ነው። ለምሳሌ ብሬክ ካልሰራ፣ ጎማ ከተነካ፣ ሞተር በድንገት ከቆመ ወይም በመንገድ ላይ ሞተር ከጠፋ።\n\nዋና ዓላማቸው ሌሎች አሽከርካሪዎች መኪናው በአደጋ ውስጥ መሆኑን እንዲያውቁ ማሳወቅ ነው።\n\nየአደጋ ጊዜ መብራቶችን ካበራን በኋላ፣ የሚያብረቀርቅ ልብስ እንለብሳለን። ከዚያም ከመኪናው እንወጣና የትራፊክ ማስጠንቀቂያ ሶስት ማዕዘን እናስቀምጣለን።\n\nየአደጋ ጊዜ መብራቶች መኪናውን ደህንነቱ በተጠበቀ ሁኔታ ወደ ጎን ለማቆም ምትክ አይደሉም። በተቻለ ፍጥነት ወደ ጎን ማቆም አለብዎት።",
+          "narration_script": "የአደጋ ጊዜ መብራቶች። የመኪናውን ሁሉንም የትራፊክ ምልክት መብራቶች በአንድ ጊዜ የሚያበሩ ናቸው። የፊትና የኋላ መብራቶች አንድ ላይ ያበራሉ።\n\nእነዚህን መብራቶች የምንጠቀመው መኪናችን ለሌሎች አሽከርካሪዎች አደጋ በሚሆንበት ጊዜ ነው። ለምሳሌ ብሬክ ካልሰራ፣ ጎማ ከተነካ፣ ሞተር በድንገት ከቆመ ወይም በመንገድ ላይ ሞተር ከጠፋ።\n\nዋና ዓላማቸው ሌሎች አሽከርካሪዎች መኪናው በአደጋ ውስጥ መሆኑን እንዲያውቁ ማሳወቅ ነው።\n\nየአደጋ ጊዜ መብራቶችን ካበራን በኋላ፣ የሚያብረቀርቅ ልብስ እንለብሳለን። ከዚያም ከመኪናው እንወጣና የትራፊክ ማስጠንቀቂያ ሶስት ማዕዘን እናስቀምጣለን።\n\nየአደጋ ጊዜ መብራቶች መኪናውን ደህንነቱ በተጠበቀ ሁኔታ ወደ ጎን ለማቆም ምትክ አይደሉም። በተቻለ ፍጥነት ወደ ጎን ማቆም አለብዎት።",
+          "image_description": "Photorealistic road scene from the perspective of a driver approaching from BEHIND. Composition: in the NEAR foreground on the road surface, a large red warning triangle is clearly visible and close to the camera. About 50 meters further ahead up the road in the BACKGROUND, a modern silver car is parked on the RIGHT road shoulder, completely stationary. The rear of the parked car is visible in the distance. The scene is at dusk/twilight — dark blue sky — so the orange/amber hazard blinker lights on the car rear corners are GLOWING BRIGHTLY and clearly visible even from 50 meters. The warning triangle is BIG and CLOSE. The car is SMALL and FAR in the background. Camera is looking from BEHIND toward the car. Do NOT show the front of the car.",
+          "video_url": "",
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_vk_l4_s4_narration_1777226951872.mp3",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/vk_l4_s4_image_1777229960460.jpg",
+          "questions": [
+            {
+              "question_amharic": "የአደጋ ጊዜ መብራቶች መቼ ጥቅም ላይ ይውላሉ?",
+              "answers": [
+                {
+                  "text_amharic": "በዝናብ ጊዜ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "በሌሊት በሚነዱበት ጊዜ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "መኪናው ለሌሎች አሽከርካሪዎች አደጋ በሚሆንበት ጊዜ",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "በማለዳ በሚነዱበት ጊዜ",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "የአደጋ ጊዜ መብራቶች ዋና ዓላማ ምንድነው?",
+              "answers": [
+                {
+                  "text_amharic": "መኪናውን ለማስጌጥ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ሌሎች አሽከርካሪዎች መኪናው በአደጋ ውስጥ መሆኑን እንዲያውቁ ለማሳወቅ",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "የመንገዱን ብርሃን ለመጨመር",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የነዳጅ ፍጆታን ለመቀነስ",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "የአደጋ ጊዜ መብራቶችን ካበራን በኋላ ምን ማድረግ አለብን?",
+              "answers": [
+                {
+                  "text_amharic": "ወዲያውኑ መንዳት እንቀጥላለን",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የሚያብረቀርቅ ልብስ እንለብሳለን እና የትራፊክ ማስጠንቀቂያ ሶስት ማዕዘን እናስቀምጣለን",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "መኪናውን እንዘጋለን",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የመኪናውን የሙዚቃ ስርዓት እናበራለን",
+                  "is_correct": false
+                }
+              ]
+            }
+          ]
         }
       ]
     },
