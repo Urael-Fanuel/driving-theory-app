@@ -170,7 +170,77 @@
         {
           "id": "vk_l1_s3",
           "name_hebrew": "אחורי הרכב",
-          "icon": "💡"
+          "icon": "💡",
+          "explanation_amharic": "የመኪናው የኋላ ክፍል የኋላ መብራቶችን የኋላ መስኮትን እና የሻንጣ ማስቀመጫውን ያካትታል። የኋላ መብራቶች የብሬክ መብራትን የተገላቢጦሽ መብራትን እና የአቅጣጫ ጠቋሚ መብራትን ያጠቃልላሉ።\n\nየብሬክ መብራት አሽከርካሪው የብሬክ ፔዳል ሲረግጥ ይበራል። ይህ መብራት ከኋላ ላሉ አሽከርካሪዎች መኪናው ፍጥነቱን እየቀነሰ ወይም እየቆመ መሆኑን ለማስጠንቀቅ ያገለግላል።\n\nየተገላቢጦሽ መብራት ነጭ ቀለም ያለው ሲሆን የኋላ መሄጃ ጊር ሲገባ ይበራል። ይህ መብራት ከኋላ ያለውን መንገድ ወደ 10 ሜትር ያህል ያበራል እንዲሁም መኪናው ወደ ኋላ እየሄደ መሆኑን ለሌሎች ያሳያል።\n\nወደ ኋላ በሚሄዱበት ጊዜ አሽከርካሪው ከቀኝ ትከሻው በላይ ወደ ኋላ ማየት እና ሁሉንም ሶስት መስተዋቶች መጠቀም አለበት። በተጨማሪም ከኋላ ምንም እንቅፋት አለመኖሩን ማረጋገጥ ግዴታ ነው።",
+          "narration_script": "የመኪናው የኋላ ክፍል የኋላ መብራቶችን የኋላ መስኮትን እና የሻንጣ ማስቀመጫውን ያካትታል። የኋላ መብራቶች የብሬክ መብራትን የተገላቢጦሽ መብራትን እና የአቅጣጫ ጠቋሚ መብራትን ያጠቃልላሉ።\n\nየብሬክ መብራት አሽከርካሪው የብሬክ ፔዳል ሲረግጥ ይበራል። ይህ መብራት ከኋላ ላሉ አሽከርካሪዎች መኪናው ፍጥነቱን እየቀነሰ ወይም እየቆመ መሆኑን ለማስጠንቀቅ ያገለግላል።\n\nየተገላቢጦሽ መብራት ነጭ ቀለም ያለው ሲሆን የኋላ መሄጃ ጊር ሲገባ ይበራል። ይህ መብራት ከኋላ ያለውን መንገድ ወደ 10 ሜትር ያህል ያበራል እንዲሁም መኪናው ወደ ኋላ እየሄደ መሆኑን ለሌሎች ያሳያል።\n\nወደ ኋላ በሚሄዱበት ጊዜ አሽከርካሪው ከቀኝ ትከሻው በላይ ወደ ኋላ ማየት እና ሁሉንም ሶስት መስተዋቶች መጠቀም አለበት። በተጨማሪም ከኋላ ምንም እንቅፋት አለመኖሩን ማረጋገጥ ግዴታ ነው።",
+          "image_description": "Rear view of a car at night showing red brake lights lit up, white reverse light on, and orange turn signal indicators.",
+          "questions": [
+            {
+              "question_amharic": "ከመኪናው ኋላ የሚገኘው የብሬክ መብራት ዋና ዓላማ ምንድን ነው?",
+              "answers": [
+                {
+                  "text_amharic": "ከኋላ ያለውን መንገድ ለማብራት",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "መኪናው እየዞረ መሆኑን ለማሳየት",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "መኪናው ፍጥነቱን እየቀነሰ ወይም እየቆመ መሆኑን ከኋላ ላሉ አሽከርካሪዎች ለማስጠንቀቅ",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "መኪናው ቆሞ መሆኑን ለማሳየት",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "ከመኪናው ኋላ የሚገኘው ነጭ መብራት ምን ማለት ነው?",
+              "answers": [
+                {
+                  "text_amharic": "መኪናው ብሬክ እየያዘ ነው",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "መኪናው ወደ ኋላ እየሄደ ነው",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "መኪናው እየዞረ ነው",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "መኪናው ቆሞ ነው",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "አሽከርካሪ ወደ ኋላ ከመሄዱ በፊት ምን ማድረግ አለበት?",
+              "answers": [
+                {
+                  "text_amharic": "የመኪናውን ቀንድ መንፋት",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የፊት መብራቶችን ማብራት",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ከቀኝ ትከሻው በላይ ወደ ኋላ ማየት ሁሉንም ሶስት መስተዋቶች መጠቀም እና ከኋላ ምንም እንቅፋት አለመኖሩን ማረጋገጥ",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "የሻንጣ ማስቀመጫውን መክፈት",
+                  "is_correct": false
+                }
+              ]
+            }
+          ],
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_vk_l1_s3_narration_1778794348246.mp3",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/vk_l1_s3_image_1778794430436.jpg"
         },
         {
           "id": "vk_l1_s4",
