@@ -1168,7 +1168,79 @@
         {
           "id": "vk_l5_s1",
           "name_hebrew": "המנוע",
-          "icon": "⚙️"
+          "name_amharic": "ሞተሩ",
+          "icon": "⚙️",
+          "explanation_amharic": "የመኪና ሞተር ዓላማ የነዳጅ እና የአየር ፍንዳታ ድብልቅን ወደ እንቅስቃሴ መለወጥ ነው። ፍንዳታዎቹ በሞተሩ ውስጥ ባለው ማቃጠያ ክፍል ውስጥ በደህና ይፈጠራሉ።\n\nሞተሩ በሚሰራበት ጊዜ ምን እንደሚፈጠር እንመልከት።\n\nየመግቢያ ምዕራፍ: ነዳጅ በነዳጅ ስርዓቱ ውስጥ አልፎ ወደ ነዳጅ ማስገቢያዎች ይገባል። የመክፈቻና መዝጊያ የአየርና የነዳጅ ድብልቅ ወደ የሞተሩ ክፍተት እንዲገባ ያስችላል።\n\nየመጨመቂያ ምዕራፍ: ሁለቱም መክፈቻና መዝጊያዎች ሲዘጉ፣ ድብልቁ በወደላይና ወደታች የሚንቀሳቀስ ክፍል ይጨመቃል።\n\nየኃይል ምዕራፍ: ወደላይና ወደታች የሚንቀሳቀስ ክፍል ከፍ ሲል፣ እሳት የሚለኩስ ክፍል ድብልቁን በማቀጣጠል ፍንዳታ ይፈጥራል።\n\nየመውጫ ምዕራፍ: የመክፈቻና መዝጊያ የተቃጠለው ነዳጅ እንዲወጣ ያስችላል።\n\nወደላይና ወደታች የሚንቀሳቀሱ ክፍሎች ወደላይና ወደታች ይንቀሳቀሳሉ። ወደ ሽክርክር የሚቀይር ዘንግ ይህንን ቀጥተኛ እንቅስቃሴ ወደ ሽክርክር ይለውጠዋል። ይህ ሽክርክር በኃይሉን ወደ ጎማ የሚያስተላልፍ ክፍል በኩል ያልፋል፣ ይህም በተሰጠው ፍጥነት ትክክለኛው የኃይል መጠን ወደ ጎማዎቹ እንዲደርስ ያደርጋል።\n\nበመኪና ውስጥ ሌሎች ብዙ ስርዓቶች አሉ። ከእነዚህ ውስጥ አንዳንዶቹ ሞተሩን ከመጠን በላይ እንዳይሞቅ የሚከላከል ማቀዝቀዣ፣ ለስላሳ ጉዞን የሚያረጋግጥ እገዳ፣ ተሽከርካሪው በትክክለኛው አቅጣጫ እንዲሄድ የሚያስችል መሪ፣ እና ባትሪውን የሚሞላ እንዲሁም መብራቶችን፣ ኮምፒውተርን እና ሬዲዮን የሚያንቀሳቅስ ኤሌክትሪክ ስርዓት ናቸው።\n\nከ FunStation4kids የተወሰደ",
+          "narration_script": "የመኪና ሞተር ዓላማ የነዳጅ እና የአየር ፍንዳታ ድብልቅን ወደ እንቅስቃሴ መለወጥ ነው። ፍንዳታዎቹ በሞተሩ ውስጥ ባለው ማቃጠያ ክፍል ውስጥ በደህና ይፈጠራሉ።\n\nሞተሩ በሚሰራበት ጊዜ ምን እንደሚፈጠር እንመልከት።\n\nየመግቢያ ምዕራፍ: ነዳጅ በነዳጅ ስርዓቱ ውስጥ አልፎ ወደ ነዳጅ ማስገቢያዎች ይገባል። የመክፈቻና መዝጊያ የአየርና የነዳጅ ድብልቅ ወደ የሞተሩ ክፍተት እንዲገባ ያስችላል።\n\nየመጨመቂያ ምዕራፍ: ሁለቱም መክፈቻና መዝጊያዎች ሲዘጉ፣ ድብልቁ በወደላይና ወደታች የሚንቀሳቀስ ክፍል ይጨመቃል።\n\nየኃይል ምዕራፍ: ወደላይና ወደታች የሚንቀሳቀስ ክፍል ከፍ ሲል፣ እሳት የሚለኩስ ክፍል ድብልቁን በማቀጣጠል ፍንዳታ ይፈጥራል።\n\nየመውጫ ምዕራፍ: የመክፈቻና መዝጊያ የተቃጠለው ነዳጅ እንዲወጣ ያስችላል።\n\nወደላይና ወደታች የሚንቀሳቀሱ ክፍሎች ወደላይና ወደታች ይንቀሳቀሳሉ። ወደ ሽክርክር የሚቀይር ዘንግ ይህንን ቀጥተኛ እንቅስቃሴ ወደ ሽክርክር ይለውጠዋል። ይህ ሽክርክር በኃይሉን ወደ ጎማ የሚያስተላልፍ ክፍል በኩል ያልፋል፣ ይህም በተሰጠው ፍጥነት ትክክለኛው የኃይል መጠን ወደ ጎማዎቹ እንዲደርስ ያደርጋል።\n\nበመኪና ውስጥ ሌሎች ብዙ ስርዓቶች አሉ። ከእነዚህ ውስጥ አንዳንዶቹ ሞተሩን ከመጠን በላይ እንዳይሞቅ የሚከላከል ማቀዝቀዣ፣ ለስላሳ ጉዞን የሚያረጋግጥ እገዳ፣ ተሽከርካሪው በትክክለኛው አቅጣጫ እንዲሄድ የሚያስችል መሪ፣ እና ባትሪውን የሚሞላ እንዲሁም መብራቶችን፣ ኮምፒውተርን እና ሬዲዮን የሚያንቀሳቅስ ኤሌክትሪክ ስርዓት ናቸው።\n\nከ FunStation4kids የተወሰደ",
+          "image_description": "Photorealistic full car engine sitting on a white background. The ENTIRE engine is visible in the frame — nothing is cropped. A complete inline-4 engine block viewed from a slightly elevated 3/4 angle showing the full engine from top to bottom and side to side. All major external components visible: engine block, cylinder head, intake manifold, alternator, belts. Well-lit, no text overlays, no cutaway, no partial views.",
+          "video_url": "",
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_vk_l5_s1_narration_1778658446975.mp3",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/vk_l5_s1_image_1778744421192.jpg",
+          "questions": [
+            {
+              "question_amharic": "የመኪና ሞተር ዋና ዓላማ ምንድነው?",
+              "answers": [
+                {
+                  "text_amharic": "የነዳጅ እና የአየር ፍንዳታ ድብልቅን ወደ እንቅስቃሴ መለወጥ",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ሞተሩን ለማቀዝቀዝ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ውሃን ወደ ነዳጅ መለወጥ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ብሬኩን ለማስሰራ",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "የሞተሩ ዑደት ስንት ምዕራፎች አሉት?",
+              "answers": [
+                {
+                  "text_amharic": "ሁለት ምዕራፎች",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ሶስት ምዕራፎች",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "አራት ምዕራፎች",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "አምስት ምዕራፎች",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "ወደላይና ወደታች የሚንቀሳቀሱ ክፍሎች ቀጥተኛ እንቅስቃሴ ወደ ሽክርክር የሚቀይረው ምን ነው?",
+              "answers": [
+                {
+                  "text_amharic": "እሳት የሚለኩስ ክፍል",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ወደ ሽክርክር የሚቀይር ዘንግ",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ኃይሉን ወደ ጎማ የሚያስተላልፍ ክፍል",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ማቀዝቀዣ ስርዓቱ",
+                  "is_correct": false
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "vk_l5_s2",
