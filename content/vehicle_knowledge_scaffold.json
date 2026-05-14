@@ -1399,7 +1399,77 @@
         {
           "id": "vk_l5_s4",
           "name_hebrew": "הסוללה / מצבר",
-          "icon": "🔋"
+          "icon": "🔋",
+          "explanation_amharic": "መኪና ውስጥ ያለው ባትሪ ሞተሩን ለማስነሳት የሚያስፈልገውን የኤሌክትሪክ ኃይል ይሰጣል፡፡ እንዲሁም የመኪናውን መብራቶች፣ ሬዲዮ እና ሌሎች የኤሌክትሮኒክስ ክፍሎችን ለማስኬድ ያገለግላል፡፡\n\nበዳሽቦርዱ ላይ የሚገኘው የባትሪ መሙላት መለኪያ ባትሪው በትክክል እየተሞላ መሆኑን ያሳያል፡፡ ይህ መለኪያ ማስጠንቀቂያ ሲሰጥ ባትሪው ላይ ችግር እንዳለ ወይም በትክክል እየተሞላ እንዳልሆነ ያመለክታል፡፡ እንዲህ ዓይነት ማስጠንቀቂያ ሲታይ ወዲያውኑ ችግሩን መመርመር ያስፈልጋል፡፡\n\nበየቀኑ ከመንዳትዎ በፊት የባትሪውን ሁኔታ በዓይን መፈተሽ ያስፈልጋል፡፡ የባትሪው የኤሌክትሪክ ማያያዣዎች ዝገት እንዳይኖራቸው፣ ባትሪው ላይ ስንጥቅ ወይም ፍሳሽ አለመኖሩን ማረጋገጥ አስፈላጊ ነው፡፡\n\nሞተሩ ጠፍቶ እያለ መብራቶችን ክፍት አድርጎ መተው፣ በተሳሳተ (ከፍተኛ) ጊር መኪናውን ለማስነሳት መሞከር ወይም ባትሪው ያረጀ መሆን የባትሪውን ኃይል ያዳክማል፡፡",
+          "narration_script": "መኪና ውስጥ ያለው ባትሪ ሞተሩን ለማስነሳት የሚያስፈልገውን የኤሌክትሪክ ኃይል ይሰጣል፡፡ እንዲሁም የመኪናውን መብራቶች፣ ሬዲዮ እና ሌሎች የኤሌክትሮኒክስ ክፍሎችን ለማስኬድ ያገለግላል፡፡ በዳሽቦርዱ ላይ የሚገኘው የባትሪ መሙላት መለኪያ ባትሪው በትክክል እየተሞላ መሆኑን ያሳያል፡፡ ይህ መለኪያ ማስጠንቀቂያ ሲሰጥ ባትሪው ላይ ችግር እንዳለ ወይም በትክክል እየተሞላ እንዳልሆነ ያመለክታል፡፡ እንዲህ ዓይነት ማስጠንቀቂያ ሲታይ ወዲያውኑ ችግሩን መመርመር ያስፈልጋል፡፡ በየቀኑ ከመንዳትዎ በፊት የባትሪውን ሁኔታ በዓይን መፈተሽ ያስፈልጋል፡፡ የባትሪው የኤሌክትሪክ ማያያዣዎች ዝገት እንዳይኖራቸው፣ ባትሪው ላይ ስንጥቅ ወይም ፍሳሽ አለመኖሩን ማረጋገጥ አስፈላጊ ነው፡፡ ሞተሩ ጠፍቶ እያለ መብራቶችን ክፍት አድርጎ መተው፣ በተሳሳተ ጊር መኪናውን ለማስነሳት መሞከር ወይም ባትሪው ያረጀ መሆን የባትሪውን ኃይል ያዳክማል፡፡",
+          "image_description": "Close-up of red and black jumper cables clamped onto a car battery terminals inside an engine bay, bright natural lighting, clear educational photo showing the battery clearly",
+          "questions": [
+            {
+              "question_amharic": "የመኪና ባትሪ ዋና ተግባር ምንድነው?",
+              "answers": [
+                {
+                  "text_amharic": "የመኪናውን ፍጥነት መቆጣጠር",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ሞተሩን ለማስነሳት እና የኤሌክትሪክ ክፍሎችን ለማንቀሳቀስ ኃይል መስጠት",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "የነዳጅ ፍጆታን መቀነስ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የመኪናውን ጎማዎች መፈተሽ",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "በዳሽቦርዱ ላይ የሚገኘው የባትሪ መሙላት መለኪያ ምን ያሳያል?",
+              "answers": [
+                {
+                  "text_amharic": "የመኪናውን የነዳጅ መጠን",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ባትሪው በትክክል እየተሞላ መሆኑን",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "የሞተሩን የሙቀት መጠን",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የመኪናውን ፍጥነት",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "አሽከርካሪ ከመንዳት በፊት በየቀኑ ከባትሪው ጋር በተያያዘ ምን ዓይነት ምርመራ ማድረግ አለበት?",
+              "answers": [
+                {
+                  "text_amharic": "የባትሪውን ክብደት መለካት",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የባትሪውን ቀለም መቀየር",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የባትሪውን ሁኔታ በዓይን መፈተሽ (ዝገት፣ ስንጥቅ ወይም ፍሳሽ አለመኖሩን ማረጋገጥ)",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ባትሪውን በየቀኑ መሙላት",
+                  "is_correct": false
+                }
+              ]
+            }
+          ],
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_vk_l5_s4_narration_1778787684768.mp3",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/vk_l5_s4_image_1778788146864.jpg"
         },
         {
           "id": "vk_l5_s5",
