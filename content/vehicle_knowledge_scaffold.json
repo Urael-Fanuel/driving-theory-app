@@ -1245,7 +1245,79 @@
         {
           "id": "vk_l5_s2",
           "name_hebrew": "שמן מנוע",
-          "icon": "🛢️"
+          "name_amharic": "የሞተር ዘይት",
+          "icon": "🛢️",
+          "explanation_amharic": "የሞተር ዘይት የሞተርን ተንቀሳቃሽ ክፍሎች እንዲቀባ ያደርጋል፣ ይህም ግጭትን በመቀነስ ክፍሎቹ እንዳይበላሹ ይረዳል። በተጨማሪም ዘይቱ የሞተሩን ሙቀት በመቀነስ እና ቆሻሻዎችን በማጽዳት የሞተሩን ዕድሜ ያራዝማል።\n\nየዘይት መጠንን ለመፈተሽ፥ የመኪናውን ሞተር አጥፍተው፥ የዘይት መለኪያውን አውጥተው በንጹህ ጨርቅ ያብሱት። ከዚያም መልሰው ሙሉ በሙሉ አስገብተው እንደገና ያውጡት። የዘይቱ መጠን በመለኪያው ላይ ባሉት ሁለት ምልክቶች መካከል መሆን አለበት።\n\nየዘይቱ መጠን ዝቅተኛ ከሆነ ትክክለኛውን የሞተር ዘይት መጨመር ያስፈልጋል። በሚያሽከረክሩበት ጊዜ የዘይት ግፊት ማስጠንቀቂያ መብራት ከበራ ወዲያውኑ መኪናውን ማቆም አለብዎት። ይህ ከባድ የሞተር ችግርን ሊያመለክት ስለሚችል ጉዞዎን መቀጠል የለብዎትም።",
+          "narration_script": "የሞተር ዘይት የሞተርን ተንቀሳቃሽ ክፍሎች እንዲቀባ ያደርጋል፣ ይህም ግጭትን በመቀነስ ክፍሎቹ እንዳይበላሹ ይረዳል። በተጨማሪም ዘይቱ የሞተሩን ሙቀት በመቀነስ እና ቆሻሻዎችን በማጽዳት የሞተሩን ዕድሜ ያራዝማል።\n\nየዘይት መጠንን ለመፈተሽ፥ የመኪናውን ሞተር አጥፍተው፥ የዘይት መለኪያውን አውጥተው በንጹህ ጨርቅ ያብሱት። ከዚያም መልሰው ሙሉ በሙሉ አስገብተው እንደገና ያውጡት። የዘይቱ መጠን በመለኪያው ላይ ባሉት ሁለት ምልክቶች መካከል መሆን አለበት።\n\nየዘይቱ መጠን ዝቅተኛ ከሆነ ትክክለኛውን የሞተር ዘይት መጨመር ያስፈልጋል። በሚያሽከረክሩበት ጊዜ የዘይት ግፊት ማስጠንቀቂያ መብራት ከበራ ወዲያውኑ መኪናውን ማቆም አለብዎት። ይህ ከባድ የሞተር ችግርን ሊያመለክት ስለሚችል ጉዞዎን መቀጠል የለብዎትም።",
+          "image_description": "Photorealistic close-up of a hand holding an engine oil dipstick just pulled out from a car engine. The entire dipstick is visible and fills the frame. Two clear measurement marks (MIN and MAX) are visible on the dipstick with oil visible between them. The engine bay is slightly blurred in the background. Clean, well-lit, educational photo style, no text overlays.",
+          "video_url": "",
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_vk_l5_s2_narration_1778747913566.mp3",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/vk_l5_s2_image_1778748543045.jpg",
+          "questions": [
+            {
+              "question_amharic": "የሞተር ዘይት ዋና ዓላማ ምንድነው?",
+              "answers": [
+                {
+                  "text_amharic": "የመኪናውን ፍጥነት ለመጨመር",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የሞተርን ክፍሎች ለመቀባት እና ግጭትን ለመቀነስ",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ጎማዎችን ለማጽዳት",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የመብራት ስርዓቱን ለማብራት",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "በሚያሽከረክሩበት ጊዜ የዘይት ግፊት ማስጠንቀቂያ መብራት ከበራ ምን ማድረግ አለብዎት?",
+              "answers": [
+                {
+                  "text_amharic": "ጉዞዎን መቀጠል ይችላሉ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ወዲያውኑ መኪናውን ማቆም አለብዎት",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "የመኪናውን መስኮቶች መክፈት አለብዎት",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ፍጥነትዎን ቀስ በቀስ ይቀንሱና ጉዞ ይቀጥሉ",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "የዘይት መጠንን በዘይት መለኪያ በትክክል እንዴት ይፈትሻሉ?",
+              "answers": [
+                {
+                  "text_amharic": "የዘይት መለኪያውን አንድ ጊዜ ብቻ አውጥቶ ማየት",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ሞተሩን አጥፍቶ፣ የዘይት መለኪያውን አውጥቶ አጽድቶ፣ መልሶ አስገብቶ፣ እንደገና አውጥቶ ደረጃውን ማየት",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "የመኪናውን ሞተር ሳያጠፉ ወዲያውኑ ዘይት መጨመር",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ዘይቱ ቀለም ጥቁር ከሆነ ብቻ ዘይት ይጨምሩ",
+                  "is_correct": false
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "vk_l5_s3",
