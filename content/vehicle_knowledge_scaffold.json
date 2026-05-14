@@ -1474,7 +1474,77 @@
         {
           "id": "vk_l5_s5",
           "name_hebrew": "נוזל בלמים",
-          "icon": "🔵"
+          "icon": "🔵",
+          "explanation_amharic": "የብሬክ ፈሳሽ ከመኪናው የእግር ፔዳል የሚመጣውን ኃይል በቧንቧዎች በኩል ወደ ጎማዎቹ ብሬኮች በማስተላለፍ መኪናው እንዲቆም ያደርጋል። ይህ ፈሳሽ ለብሬክ ሲስተም ትክክለኛ አሠራር ወሳኝ ነው።\n\nየብሬክ ፈሳሽ መጠንን ለመፈተሽ የመኪናውን ክዳን ከፍቶ ግልጽ የሆነውን የፕላስቲክ የብሬክ ፈሳሽ ማጠራቀሚያ መመልከት ያስፈልጋል። የፈሳሹ መጠን በተቀመጠው ዝቅተኛና ከፍተኛ መጠን ምልክቶች መካከል መሆን አለበት። የብሬክ ፈሳሽ መጠንን መፈተሽ ከመንዳት በፊት ከሚደረጉት የዕለት ተዕለት ምርመራዎች አንዱ ነው።\n\nየብሬክ ማስጠንቀቂያ መብራት በዳሽቦርዱ ላይ ሲበራ፣ ወይም መኪናው ብሬክ ሲደረግ ወደ አንድ ጎን ሲሳብ፣ ወይም ብሬኮች ድምጽ ሲያሰሙ፣ ወዲያውኑ ወደ ጋራዥ በመሄድ ብሬኮችን መፈተሽ ያስፈልጋል። የብሬክ ፈሳሽ ማነስ ወይም በሲስተሙ ውስጥ ውሃ መኖር ብሬክ እንዳይሰራ በማድረግ የመኪና መቆጣጠሪያን ማጣት ሊያስከትል ይችላል።",
+          "narration_script": "የብሬክ ፈሳሽ ከመኪናው የእግር ፔዳል የሚመጣውን ኃይል በቧንቧዎች በኩል ወደ ጎማዎቹ ብሬኮች በማስተላለፍ መኪናው እንዲቆም ያደርጋል። ይህ ፈሳሽ ለብሬክ ሲስተም ትክክለኛ አሠራር ወሳኝ ነው። የብሬክ ፈሳሽ መጠንን ለመፈተሽ የመኪናውን ክዳን ከፍቶ ግልጽ የሆነውን የፕላስቲክ የብሬክ ፈሳሽ ማጠራቀሚያ መመልከት ያስፈልጋል። የፈሳሹ መጠን በተቀመጠው ዝቅተኛና ከፍተኛ መጠን ምልክቶች መካከል መሆን አለበት። የብሬክ ፈሳሽ መጠንን መፈተሽ ከመንዳት በፊት ከሚደረጉት የዕለት ተዕለት ምርመራዎች አንዱ ነው። የብሬክ ማስጠንቀቂያ መብራት በዳሽቦርዱ ላይ ሲበራ፣ ወይም መኪናው ብሬክ ሲደረግ ወደ አንድ ጎን ሲሳብ፣ ወይም ብሬኮች ድምጽ ሲያሰሙ፣ ወዲያውኑ ወደ ጋራዥ በመሄድ ብሬኮችን መፈተሽ ያስፈልጋል። የብሬክ ፈሳሽ ማነስ ወይም በሲስተሙ ውስጥ ውሃ መኖር ብሬክ እንዳይሰራ በማድረግ የመኪና መቆጣጠሪያን ማጣት ሊያስከትል ይችላል።",
+          "image_description": "Close-up of a brake fluid reservoir in a car engine bay, showing the transparent plastic container with brake fluid level visible, MIN and MAX marks clearly shown",
+          "questions": [
+            {
+              "question_amharic": "የብሬክ ፈሳሽ ዋና ዓላማ ምንድን ነው?",
+              "answers": [
+                {
+                  "text_amharic": "ሞተሩን ይቀባል",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "መኪናው እንዲቆም የእግር ፔዳል ኃይልን ወደ ብሬኮች ያስተላልፋል",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ሞተሩን ያቀዘቅዛል",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የፊት መስታወትን ያጸዳል",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "አንድ አሽከርካሪ የብሬክ ፈሳሽ መጠንን እንዴት መፈተሽ አለበት?",
+              "answers": [
+                {
+                  "text_amharic": "የመኪናውን ክዳን ከፍቶ ግልጽ በሆነው ማጠራቀሚያ ውስጥ ያለውን ፈሳሽ በዝቅተኛና ከፍተኛ መጠን ምልክቶች መካከል መሆኑን በማየት",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "በመኪናው ዳሽቦርድ ላይ ያለውን መለኪያ ብቻ በመመልከት",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ከመኪናው ስር በመመልከት",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የጎማውን ግፊት በመፈተሽ",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "አንድ አሽከርካሪ እየነዳ እያለ የብሬክ ማስጠንቀቂያ መብራት ሲበራ ምን ማድረግ አለበት?",
+              "answers": [
+                {
+                  "text_amharic": "በጥንቃቄ መንዳት መቀጠል",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ወዲያውኑ ወደ ጋራዥ በመሄድ ብሬኮቹን መፈተሽ",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "በሲስተሙ ውስጥ ውሃ መጨመር",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ችላ ብሎ ማለፍ",
+                  "is_correct": false
+                }
+              ]
+            }
+          ],
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_vk_l5_s5_narration_1778788986537.mp3",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/vk_l5_s5_image_1778789690497.jpg"
         }
       ]
     },
