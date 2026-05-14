@@ -1322,7 +1322,79 @@
         {
           "id": "vk_l5_s3",
           "name_hebrew": "נוזל קירור",
-          "icon": "💧"
+          "name_amharic": "የሞተር ማቀዝቀዣ ፈሳሽ",
+          "icon": "💧",
+          "explanation_amharic": "የሞተር ማቀዝቀዣ ፈሳሽ የሞተርን ሙቀት በመምጠጥ እና በመልቀቅ ሞተሩ ከመጠን በላይ እንዳይሞቅ ይከላከላል። ይህ ፈሳሽ ለሞተሩ ጤናማ አሠራር እጅግ አስፈላጊ ነው።\n\nየማቀዝቀዣውን ፈሳሽ መጠን ለመፈተሽ የፕላስቲክ ማጠራቀሚያውን መመልከት ያስፈልጋል። የፈሳሹ መጠን በዝቅተኛው እና በከፍተኛው ምልክቶች መካከል መሆን አለበት። የማቀዝቀዣውን ክዳን ሳይሆን የፕላስቲክ ማጠራቀሚያውን መፈተሽ አስፈላጊ ነው።\n\nሞተሩ ሲሞቅ የማቀዝቀዣውን ክዳን በፍጹም አይክፈቱ። ይህን ማድረግ ከትኩስ እንፋሎት ከባድ የመቃጠል አደጋ ስላለበት ነው።\n\nእየነዱ ሳሉ የሞተር ሙቀት ማስጠንቀቂያ መብራት ከበራ ወዲያውኑ መኪናውን ማቆም አለብዎት። በዚህ ሁኔታ መንዳትዎን መቀጠል የለብዎትም።",
+          "narration_script": "የሞተር ማቀዝቀዣ ፈሳሽ የሞተርን ሙቀት በመምጠጥ እና በመልቀቅ ሞተሩ ከመጠን በላይ እንዳይሞቅ ይከላከላል። ይህ ፈሳሽ ለሞተሩ ጤናማ አሠራር እጅግ አስፈላጊ ነው።\n\nየማቀዝቀዣውን ፈሳሽ መጠን ለመፈተሽ የፕላስቲክ ማጠራቀሚያውን መመልከት ያስፈልጋል። የፈሳሹ መጠን በዝቅተኛው እና በከፍተኛው ምልክቶች መካከል መሆን አለበት። የማቀዝቀዣውን ክዳን ሳይሆን የፕላስቲክ ማጠራቀሚያውን መፈተሽ አስፈላጊ ነው።\n\nሞተሩ ሲሞቅ የማቀዝቀዣውን ክዳን በፍጹም አይክፈቱ። ይህን ማድረግ ከትኩስ እንፋሎት ከባድ የመቃጠል አደጋ ስላለበት ነው።\n\nእየነዱ ሳሉ የሞተር ሙቀት ማስጠንቀቂያ መብራት ከበራ ወዲያውኑ መኪናውን ማቆም አለብዎት። በዚህ ሁኔታ መንዳትዎን መቀጠል የለብዎትም።",
+          "image_description": "Photorealistic close-up of a car engine coolant expansion tank (white or translucent plastic reservoir) showing the coolant level between MIN and MAX marks. The tank cap is clearly visible and closed. Engine bay background slightly blurred. Clean, well-lit, educational photo style, no text overlays.",
+          "video_url": "",
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_vk_l5_s3_narration_1778760144385.mp3",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/vk_l5_s3_image_1778760255633.jpg",
+          "questions": [
+            {
+              "question_amharic": "የሞተር ማቀዝቀዣ ፈሳሽ ዋና ተግባር ምንድን ነው?",
+              "answers": [
+                {
+                  "text_amharic": "ሞተሩን ማጽዳት",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የሞተር ክፍሎችን መቀባት",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ሞተሩ ከመጠን በላይ እንዳይሞቅ መከላከል",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "መኪናው በፍጥነት እንዲሄድ ማድረግ",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "እየነዱ ሳሉ የሞተር ሙቀት ማስጠንቀቂያ መብራት ከበራ ምን ማድረግ አለብዎት?",
+              "answers": [
+                {
+                  "text_amharic": "ወደ ቅርብ ጋራዥ መንዳትዎን መቀጠል",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ወዲያውኑ ማቆም እና ሞተሩን ማጥፋት",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ሙቀትን ለመልቀቅ የማቀዝቀዣውን ክዳን መክፈት",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ተጨማሪ ነዳጅ መጨመር",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "የማቀዝቀዣውን ክዳን መክፈት አደገኛ የሚሆነው መቼ ነው?",
+              "answers": [
+                {
+                  "text_amharic": "ሞተሩ ሲቀዘቅዝ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "መኪናው ቆሞ ሲሆን",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ሞተሩ ሲሞቅ",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "መኪናው ቀስ ብሎ ሲሄድ",
+                  "is_correct": false
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "vk_l5_s4",
