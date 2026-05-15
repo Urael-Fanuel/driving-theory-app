@@ -168,7 +168,7 @@ export function useExam(): UseExamReturn {
     setPhase(isCorrect ? 'feedback_correct' : 'feedback_wrong');
 
     // Save locally first, then sync to Supabase
-    console.log('[useExam] userId:', userId);
+    if (__DEV__) console.log('[useExam] userId:', userId);
     if (userId) {
       setIsSaving(true);
       enqueue({ userId, questionId: question.id, isCorrect })

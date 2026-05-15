@@ -106,7 +106,7 @@ async function resolveUserId(storedId?: string): Promise<{ id: string; fromSupab
       // Sign in anonymously — creates a new session stored by Supabase
       const { data, error } = await supabase.auth.signInAnonymously();
       if (!error && data?.user?.id) {
-        console.log('[EngineContext] Signed in anonymously:', data.user.id);
+        if (__DEV__) console.log('[EngineContext] Signed in anonymously:', data.user.id);
         return { id: data.user.id, fromSupabase: true };
       }
       console.warn('[EngineContext] Anonymous sign-in failed:', error?.message);
