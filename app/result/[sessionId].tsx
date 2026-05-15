@@ -29,7 +29,7 @@ import * as api from '../../backend/api';
 import { DBSign } from '../../backend/supabaseClient';
 
 // ─── Global result storage (passed from useExam) ──────────────────────────────
-import { ResultData, WrongQuestion, getExamResult } from '../../utils/examResult';
+import { ResultData, WrongQuestion, getExamResult, preloadExamResult } from '../../utils/examResult';
 
 // ─── Audio base URL (Supabase Storage) ────────────────────────────────────────
 const _AUDIO_BASE = (process.env.EXPO_PUBLIC_SUPABASE_URL ?? '') + '/storage/v1/object/public/audio';
@@ -47,7 +47,18 @@ export default function ResultScreen() {
   const { score: sParam, total: tParam, passed: pParam, duration: dParam } =
     useLocalSearchParams<{ sessionId: string; score: string; total: string; passed: string; duration: string }>();
 
-  const result = getExamResult(sessionId);
+  const [resultData, setResultData] = useState<ResultData | undefined>(() => getExamResult(sessionId));
+
+  // Fallback: if memory store is empty (e.g. after OTA reload), load from file
+  useEffect(() => {
+    if (!resultData && sessionId) {
+      preloadExamResult(sessionId).then(data => {
+        if (data) setResultData(data);
+      });
+    }
+  }, [sessionId]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  const result = resultData;
 
   // URL params are the primary source (reliable across navigation).
   // Map store is a fallback (may be empty after hot-reload).
