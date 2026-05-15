@@ -50,3 +50,5 @@ temp_behavioral/
 
 # Source PDFs (data already extracted to JSON files)
 *.pdf
+"vertex-key.json" 
+vertex-key.json
