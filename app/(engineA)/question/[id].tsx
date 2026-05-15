@@ -91,6 +91,10 @@ export default function EngineAQuestionScreen() {
   // so the failure audio can play cleanly without being interrupted.
   const voiceFailedRef = useRef(false);
 
+  // Set to true when the user taps 🔊 on an answer card, so the sequence stops
+  // instead of continuing to the next answer in parallel.
+  const audioSequenceCancelledRef = useRef(false);
+
   // ── Stable callback ref so useVoiceRecognition doesn't re-init on every render
   // handleAnswerSelect is defined below; we wire it up after definition.
   const answerCallbackRef = useRef<(idx: number) => void>(() => {});
@@ -141,10 +145,11 @@ export default function EngineAQuestionScreen() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (!currentQuestion) return;
-    voiceFailedRef.current = false; // Reset for new question
+    voiceFailedRef.current = false;           // Reset for new question
+    audioSequenceCancelledRef.current = false; // Reset when sequence (re)starts
     cancelListening(); // Reset audio mode to playback before starting sequence
     let cancelled = false;
-    const isCancelled = () => cancelled || voiceFailedRef.current;
+    const isCancelled = () => cancelled || voiceFailedRef.current || audioSequenceCancelledRef.current;
 
     async function runSequence() {
       // Stop any audio that was playing before this screen (e.g. sign explanation).
@@ -203,6 +208,12 @@ export default function EngineAQuestionScreen() {
       voiceFailedRef.current = false;        // Reset when leaving failed state
     }
   }, [voiceState]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // ── Answer audio button: stop sequence then play that answer's audio ─────────
+  const handleAnswerAudioPress = useCallback((audioUrl: string) => {
+    audioSequenceCancelledRef.current = true; // tells isCancelled() to stop the loop
+    playAudio(audioUrl).catch(() => {});      // playAudio calls _stop() → stops current sound
+  }, [playAudio]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // ── Answer selection (via tap OR voice) ────────────────────────────────────
   const handleAnswerSelect = useCallback((answerIndex: number) => {
@@ -464,7 +475,7 @@ export default function EngineAQuestionScreen() {
               cardState={answerCardState(index)}
               onPress={() => handleAnswerSelect(index)}
               onAudioPress={answer.audio_url
-                ? () => playAudio(answer.audio_url!).catch(() => {})
+                ? () => handleAnswerAudioPress(answer.audio_url!)
                 : undefined}
               disabled={answeredIndex !== null}
             />
