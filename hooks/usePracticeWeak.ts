@@ -14,7 +14,7 @@
  *   - Session ends when the pool is empty (all answered correctly)
  */
 
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect, useRef } from 'react';
 import { DBQuestion } from '../backend/supabaseClient';
 import * as api from '../backend/api';
 import { useEngine } from '../contexts/EngineContext';
@@ -52,6 +52,9 @@ export function usePracticeWeak(questionIds: string[]): UsePracticeWeakReturn {
   const [lastAnswerCorrect, setLastAnswerCorrect] = useState<boolean | null>(null);
   const [selectedAnswerId,  setSelectedAnswerId]  = useState<string | null>(null);
   const [total,             setTotal]             = useState(0);
+
+  // Ref for synchronous access inside setQueue updater — avoids stale closure
+  const lastAnswerCorrectRef = useRef<boolean | null>(null);
 
   // ── Load questions on mount ────────────────────────────────────────────────
   useEffect(() => {
@@ -92,6 +95,7 @@ export function usePracticeWeak(questionIds: string[]): UsePracticeWeakReturn {
     const correctAnswer = currentQuestion.answers.find(a => a.is_correct);
     const isCorrect     = correctAnswer?.id === answerId;
 
+    lastAnswerCorrectRef.current = isCorrect;
     setLastAnswerCorrect(isCorrect);
     setSelectedAnswerId(answerId);
     setPhase(isCorrect ? 'feedback_correct' : 'feedback_wrong');
@@ -108,7 +112,7 @@ export function usePracticeWeak(questionIds: string[]): UsePracticeWeakReturn {
     setLastAnswerCorrect(null);
 
     setQueue(prevQueue => {
-      if (lastAnswerCorrect) {
+      if (lastAnswerCorrectRef.current) {
         // Answered correctly → remove from queue
         const newQueue = prevQueue.filter((_, i) => i !== currentIndex);
         if (newQueue.length === 0) {
@@ -136,7 +140,7 @@ export function usePracticeWeak(questionIds: string[]): UsePracticeWeakReturn {
         return newQueue;
       }
     });
-  }, [currentIndex, lastAnswerCorrect]);
+  }, [currentIndex]);
 
   return {
     phase,
