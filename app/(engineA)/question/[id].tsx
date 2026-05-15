@@ -95,6 +95,10 @@ export default function EngineAQuestionScreen() {
   // instead of continuing to the next answer in parallel.
   const audioSequenceCancelledRef = useRef(false);
 
+  // After a 🔊 replay finishes, holds the answer index to resume from.
+  // null = normal start (question first); N = skip question, start from answer N.
+  const replayFromAnswerRef = useRef<number | null>(null);
+
   // ── Stable callback ref so useVoiceRecognition doesn't re-init on every render
   // handleAnswerSelect is defined below; we wire it up after definition.
   const answerCallbackRef = useRef<(idx: number) => void>(() => {});
@@ -152,28 +156,32 @@ export default function EngineAQuestionScreen() {
     const isCancelled = () => cancelled || voiceFailedRef.current || audioSequenceCancelledRef.current;
 
     async function runSequence() {
+      // Check if we're resuming after a 🔊 replay (skip question, start from answer N)
+      const resumeFromAnswer = replayFromAnswerRef.current;
+      replayFromAnswerRef.current = null;
+
       // Stop any audio that was playing before this screen (e.g. sign explanation).
-      // This is critical when entering from the sign screen: without an explicit
-      // stopAudio() the old _sound object stays set, and subsequent pause/resume
-      // can silently fail.
       await stopAudio();
       if (isCancelled()) return;
 
-      // Always wait exactly 1 second before starting (consistent delay for all cases).
-      await new Promise(res => setTimeout(res, 1000));
-      skipInitialWaitRef.current = false;
-      if (isCancelled()) return;
-
       const qId = currentQuestion!.id;
-      const qAudioUrl = currentQuestion!.question_audio_url
-        || `${_AUDIO_BASE}/${qId.toLowerCase()}.mp3`;
-      await playAndAwaitAudio(qAudioUrl, isCancelled);
-      if (isCancelled()) return;
 
-      await new Promise(res => setTimeout(res, 300));
-      if (isCancelled() || answeredIndexRef.current !== null) return;
+      if (resumeFromAnswer === null) {
+        // Normal flow: 1s wait → question audio → 300ms pause
+        await new Promise(res => setTimeout(res, 1000));
+        skipInitialWaitRef.current = false;
+        if (isCancelled()) return;
 
-      for (let i = 0; i < currentQuestion!.answers.length && i < 4; i++) {
+        const qAudioUrl = currentQuestion!.question_audio_url
+          || `${_AUDIO_BASE}/${qId.toLowerCase()}.mp3`;
+        await playAndAwaitAudio(qAudioUrl, isCancelled);
+        if (isCancelled()) return;
+
+        await new Promise(res => setTimeout(res, 300));
+        if (isCancelled() || answeredIndexRef.current !== null) return;
+      }
+
+      for (let i = resumeFromAnswer ?? 0; i < currentQuestion!.answers.length && i < 4; i++) {
         if (isCancelled() || answeredIndexRef.current !== null) return;
 
         setPlayingAnswerIndex(i);
@@ -209,11 +217,22 @@ export default function EngineAQuestionScreen() {
     }
   }, [voiceState]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // ── Answer audio button: stop sequence then play that answer's audio ─────────
-  const handleAnswerAudioPress = useCallback((audioUrl: string) => {
-    audioSequenceCancelledRef.current = true; // tells isCancelled() to stop the loop
-    playAudio(audioUrl).catch(() => {});      // playAudio calls _stop() → stops current sound
-  }, [playAudio]); // eslint-disable-line react-hooks/exhaustive-deps
+  // ── Answer audio button: stop sequence, replay answer, then resume from next ──
+  const handleAnswerAudioPress = useCallback(async (audioUrl: string, answerIndex: number) => {
+    audioSequenceCancelledRef.current = true;  // stop the ongoing sequence
+    playAudio(audioUrl).catch(() => {});       // start playing the selected answer
+    await waitForAudioEnd();                   // wait for it to finish
+    if (answeredIndexRef.current !== null) return; // user selected answer while replaying
+    // Resume sequence from the next answer (skip what was already heard)
+    const nextIndex = answerIndex + 1;
+    const answerCount = currentQuestion?.answers.length ?? 0;
+    if (nextIndex < answerCount) {
+      replayFromAnswerRef.current = nextIndex;
+      audioSequenceCancelledRef.current = false;
+      setAudioRestartKey(k => k + 1);
+    }
+    // else: replayed the last answer — sequence is done, stay stopped
+  }, [playAudio, currentQuestion?.answers.length]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // ── Answer selection (via tap OR voice) ────────────────────────────────────
   const handleAnswerSelect = useCallback((answerIndex: number) => {
@@ -475,7 +494,7 @@ export default function EngineAQuestionScreen() {
               cardState={answerCardState(index)}
               onPress={() => handleAnswerSelect(index)}
               onAudioPress={answer.audio_url
-                ? () => handleAnswerAudioPress(answer.audio_url!)
+                ? () => handleAnswerAudioPress(answer.audio_url!, index)
                 : undefined}
               disabled={answeredIndex !== null}
             />
