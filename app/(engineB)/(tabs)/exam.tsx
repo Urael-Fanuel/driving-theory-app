@@ -3,7 +3,7 @@
  * Engine B Exam Screen — 30 questions, text answers, time tracking.
  */
 
-import React, { useEffect, useCallback } from 'react';
+import React, { useEffect, useCallback, useState } from 'react';
 import {
   View,
   Text,
@@ -25,6 +25,8 @@ import { ProgressBar } from '../../../components/shared/ProgressBar';
 import { useExam } from '../../../hooks/useExam';
 import { useAudio } from '../../../hooks/useAudio';
 import { useNetworkStatus } from '../../../hooks/useNetworkStatus';
+import * as api from '../../../backend/api';
+import { DBSign } from '../../../backend/supabaseClient';
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
@@ -44,8 +46,16 @@ export default function EngineBExamScreen() {
   } = useExam();
 
   const [showFeedback, setShowFeedback] = React.useState(false);
+  const [signs, setSigns] = useState<DBSign[]>([]);
   const { stopAudio } = useAudio();
   const isConnected = useNetworkStatus();
+
+  // Load all signs once on mount (for displaying sign image per question)
+  useEffect(() => {
+    api.getAllSigns().then(setSigns).catch(() => {});
+  }, []);
+
+  const currentSign = signs.find(s => s.id === currentQuestion?.sign_id) ?? null;
 
   // Show feedback after answer
   useEffect(() => {
@@ -135,6 +145,17 @@ export default function EngineBExamScreen() {
         showsVerticalScrollIndicator={false}
         scrollEnabled={!showFeedback}
       >
+        {/* Traffic sign image */}
+        {currentSign?.image_url && (
+          <View style={styles.signImageContainer}>
+            <Image
+              source={{ uri: currentSign.image_url }}
+              style={styles.signImage}
+              resizeMode="contain"
+            />
+          </View>
+        )}
+
         {/* Question text */}
         <View style={styles.questionCard}>
           <Text style={styles.questionText}>
@@ -245,5 +266,15 @@ const styles = StyleSheet.create({
   },
   answersContainer: {
     gap: 10,
+  },
+  signImageContainer: {
+    alignItems:      'center',
+    backgroundColor: Colors.card,
+    borderRadius:    16,
+    padding:         12,
+  },
+  signImage: {
+    width:  160,
+    height: 160,
   },
 });
