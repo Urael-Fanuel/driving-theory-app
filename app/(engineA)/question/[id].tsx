@@ -220,8 +220,10 @@ export default function EngineAQuestionScreen() {
   // ── Answer audio button: stop sequence, replay answer, then resume from next ──
   const handleAnswerAudioPress = useCallback(async (audioUrl: string, answerIndex: number) => {
     audioSequenceCancelledRef.current = true;  // stop the ongoing sequence
+    setPlayingAnswerIndex(answerIndex);        // move yellow highlight to the tapped answer
     playAudio(audioUrl).catch(() => {});       // start playing the selected answer
     await waitForAudioEnd();                   // wait for it to finish
+    setPlayingAnswerIndex(null);               // clear highlight before resuming
     if (answeredIndexRef.current !== null) return; // user selected answer while replaying
     // Resume sequence from the next answer (skip what was already heard)
     const nextIndex = answerIndex + 1;
