@@ -131,6 +131,8 @@ export default function BehavioralSubtopicScreenA() {
   const sequenceCancelledRef = useRef(false);  // set true when ⏸ pressed
   const manualRestartRef     = useRef(false);  // set true when ▶️ pressed — skips 1s delay
   const answerCallbackRef    = useRef<(idx: number) => void>(() => {});
+  // After a 🔊 replay, holds the answer index to resume from (skips question).
+  const replayFromAnswerRef  = useRef<number | null>(null);
 
   answeredIndexRef.current = answeredIndex;
 
@@ -193,28 +195,33 @@ export default function BehavioralSubtopicScreenA() {
     const isCancelled = () => cancelled || voiceFailedRef.current || sequenceCancelledRef.current;
 
     async function runSequence() {
+      // Check if resuming after a 🔊 replay (skip question, start from answer N)
+      const resumeFromAnswer = replayFromAnswerRef.current;
+      replayFromAnswerRef.current = null;
+
       await stopTTS();
       if (isCancelled()) return;
 
-      // Skip the 1s delay when the user manually pressed ▶️ to restart
-      const isManualRestart = manualRestartRef.current;
-      manualRestartRef.current = false;
-      if (!isManualRestart) {
-        await new Promise<void>(res => setTimeout(res, 1000));
-        if (isCancelled()) return;
-      }
-
       setAudioPlaying(true);
 
-      // Speak question
-      await speakAndAwait(currentQ!.question_amharic);
-      if (isCancelled()) return;
+      if (resumeFromAnswer === null) {
+        // Normal flow: optional 1s delay → question TTS → 300ms pause
+        const isManualRestart = manualRestartRef.current;
+        manualRestartRef.current = false;
+        if (!isManualRestart) {
+          await new Promise<void>(res => setTimeout(res, 1000));
+          if (isCancelled()) return;
+        }
 
-      await new Promise<void>(res => setTimeout(res, 300));
-      if (isCancelled() || answeredIndexRef.current !== null) return;
+        await speakAndAwait(currentQ!.question_amharic);
+        if (isCancelled()) return;
 
-      // Speak each answer: number announcement + answer text
-      for (let i = 0; i < currentQ!.answers.length && i < 4; i++) {
+        await new Promise<void>(res => setTimeout(res, 300));
+        if (isCancelled() || answeredIndexRef.current !== null) return;
+      }
+
+      // Speak each answer from resumeFromAnswer (or 0 for normal start)
+      for (let i = resumeFromAnswer ?? 0; i < currentQ!.answers.length && i < 4; i++) {
         if (isCancelled() || answeredIndexRef.current !== null) break;
 
         setPlayingAnswerIndex(i);
@@ -319,23 +326,14 @@ export default function BehavioralSubtopicScreenA() {
     }
   };
 
-  // Questions: tap 🔊 on a specific answer card → stop sequence, speak that answer
+  // Questions: tap 🔊 → stop sequence, move highlight, restart sequence from that answer
   const handleAnswerAudioPress = useCallback(async (index: number) => {
-    if (!currentQ) return;
-    sequenceCancelledRef.current = true;
-    await stopTTS();
-    // Keep audioPlaying=true so the main ▶️/⏸ button stays as ⏸ during playback.
-    // If we set it to false here, the user might tap ▶️ and accidentally restart the question.
-    setAudioPlaying(true);
-    setPlayingAnswerIndex(index);
-    try {
-      await playUrlAndAwait(NUMBER_URLS[index]);
-      await speakAndAwait(currentQ.answers[index].text_amharic);
-    } finally {
-      setPlayingAnswerIndex(null);
-      setAudioPlaying(false);
-    }
-  }, [currentQ]); // eslint-disable-line react-hooks/exhaustive-deps
+    setPlayingAnswerIndex(index);          // move yellow highlight immediately
+    sequenceCancelledRef.current = true;   // stop current sequence
+    await stopTTS();                       // stop current audio
+    replayFromAnswerRef.current = index;   // runSequence will start from this answer
+    setAudioRestartKey(k => k + 1);       // trigger runSequence
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Questions: answer selection (tap or voice)
   const handleAnswerSelect = useCallback((answerIndex: number) => {
