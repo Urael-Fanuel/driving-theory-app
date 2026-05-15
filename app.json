@@ -1,20 +1,20 @@
 {
   "expo": {
-    "name": "ሹፌርነት ትምህርት",
+    "name": "መንጃ ፍቃድ",
     "slug": "driving-theory-app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icons/app_icon.png",
+    "icon": "./assets/images/መንጃ ፍቃድ በቀላል መንገድ.png",
     "userInterfaceStyle": "dark",
     "splash": {
-      "image": "./assets/icons/splash.png",
+      "image": "./assets/images/መንጃ ፍቃድ በቀላል መንገድ.png",
       "resizeMode": "contain",
-      "backgroundColor": "#1a1a2e"
+      "backgroundColor": "#FFFFFF"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/icons/adaptive-icon.png",
-        "backgroundColor": "#1a1a2e"
+        "foregroundImage": "./assets/images/መንጃ ፍቃድ በቀላል መንገድ.png",
+        "backgroundColor": "#FFFFFF"
       },
       "allowBackup": false,
       "minSdkVersion": 26,

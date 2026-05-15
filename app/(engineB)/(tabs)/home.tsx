@@ -78,7 +78,7 @@ export default function EngineBHomeScreen() {
     <SafeAreaView style={styles.safeArea}>
       {/* Header */}
       <View style={styles.header}>
-        <Text style={styles.appTitle}>ሹፌርነት ትምህርት</Text>
+        <Text style={styles.appTitle}>መንጃ ፍቃድ</Text>
         <Text style={styles.appSubtitle}>ትምህርት ጀምር</Text>
       </View>
 

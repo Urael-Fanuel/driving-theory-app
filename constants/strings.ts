@@ -13,7 +13,8 @@
 
 export const Strings = {
   // ─── App General ────────────────────────────────────────────────────────────
-  appName:          'ሹፌርነት ትምህርት',
+  appName:          'መንጃ ፍቃድ',
+  appSubtitle:      'በቀላል መንገድ',
   loading:          'እየጫነ ነው...',
   back:             '← ተመለስ',
   next:             'ቀጣይ ›',

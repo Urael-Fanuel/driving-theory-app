@@ -27,6 +27,7 @@ import React, { useCallback, useEffect, useRef, useState } from 'react';
 import {
   View,
   Text,
+  Image,
   TouchableOpacity,
   StyleSheet,
   Animated,
@@ -164,10 +165,13 @@ export default function EngineSelectionScreen() {
       )}
 
       <Animated.View style={[styles.container, { opacity: fadeAnim }]}>
-        {/* App title */}
+        {/* App logo */}
         <Animated.View style={[styles.titleContainer, { opacity: titleAnim }]}>
-          <Text style={styles.flagEmoji}>🇪🇹</Text>
-          <Text style={styles.appTitle}>ሹፌርነት ትምህርት</Text>
+          <Image
+            source={require('../assets/images/መንጃ ፍቃድ በቀላል መንገድ.png')}
+            style={styles.logoImage}
+            resizeMode="contain"
+          />
         </Animated.View>
 
         {/* Engine A Card — NON-READER */}
@@ -260,20 +264,23 @@ const styles = StyleSheet.create({
     alignItems:   'center',
     marginBottom: 12,
   },
-  flagEmoji: {
-    fontSize:     56,
-    marginBottom: 8,
+  logoImage: {
+    width:        160,
+    height:       160,
+    marginBottom: 4,
   },
-  appTitle: {
-    ...Typography.h1,
-    color:     Colors.textPrimary,
-    textAlign: 'center',
+  appSubtitle: {
+    ...Typography.body,
+    color:      Colors.textSecondary,
+    textAlign:  'center',
+    fontWeight: '600',
+    letterSpacing: 1,
   },
 
   // ── Engine cards ──────────────────────────────────────────────
   engineCard: {
     width:           SCREEN_WIDTH - 48,
-    minHeight:       160,
+    height:          170,
     borderRadius:    24,
     flexDirection:   'row',
     alignItems:      'center',
@@ -307,7 +314,11 @@ const styles = StyleSheet.create({
     gap:        8,
   },
   engineIcon: {
-    fontSize: 72,
+    fontSize:   72,
+    width:      80,
+    height:     80,
+    lineHeight: 80,
+    textAlign:  'center',
   },
   engineLabel: {
     ...Typography.h2,
