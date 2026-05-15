@@ -109,6 +109,8 @@ export function useExam(): UseExamReturn {
 
   const startTimeRef = useRef<number>(Date.now());
   const timerRef     = useRef<ReturnType<typeof setInterval> | null>(null);
+  // Ref for synchronous access in nextQuestion — avoids stale closure over answers state
+  const answersRef   = useRef<ExamAnswer[]>([]);
 
   // ── Load questions on mount ──────────────────────────────────────────────────
   useEffect(() => {
@@ -162,7 +164,8 @@ export function useExam(): UseExamReturn {
       topicId:        question.topic_id,
     };
 
-    setAnswers(prev => [...prev, answer]);
+    answersRef.current = [...answersRef.current, answer];
+    setAnswers(answersRef.current);
     setLastAnswerCorrect(isCorrect);
     setSelectedAnswerId(answerId);
     setPhase(isCorrect ? 'feedback_correct' : 'feedback_wrong');
@@ -189,7 +192,7 @@ export function useExam(): UseExamReturn {
 
     if (nextIndex >= questions.length) {
       // Exam complete — compute results
-      await finishExam([...answers]);
+      await finishExam([...answersRef.current]);
     } else {
       setCurrentIndex(nextIndex);
       setPhase('question');
@@ -197,7 +200,7 @@ export function useExam(): UseExamReturn {
       // Prefetch audio for next 3 questions in background
       questions.slice(nextIndex + 1, nextIndex + 4).forEach(q => prefetchQuestionAudio(q));
     }
-  }, [currentIndex, questions.length, answers]);
+  }, [currentIndex, questions.length]);
 
   // ── Finish and save exam ─────────────────────────────────────────────────────
   async function finishExam(finalAnswers: ExamAnswer[]) {
