@@ -324,13 +324,16 @@ export default function BehavioralSubtopicScreenA() {
     if (!currentQ) return;
     sequenceCancelledRef.current = true;
     await stopTTS();
-    setAudioPlaying(false);
+    // Keep audioPlaying=true so the main ▶️/⏸ button stays as ⏸ during playback.
+    // If we set it to false here, the user might tap ▶️ and accidentally restart the question.
+    setAudioPlaying(true);
     setPlayingAnswerIndex(index);
     try {
       await playUrlAndAwait(NUMBER_URLS[index]);
       await speakAndAwait(currentQ.answers[index].text_amharic);
     } finally {
       setPlayingAnswerIndex(null);
+      setAudioPlaying(false);
     }
   }, [currentQ]); // eslint-disable-line react-hooks/exhaustive-deps
 
