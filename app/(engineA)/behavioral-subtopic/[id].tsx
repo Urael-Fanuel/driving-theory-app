@@ -319,6 +319,21 @@ export default function BehavioralSubtopicScreenA() {
     }
   };
 
+  // Questions: tap 🔊 on a specific answer card → stop sequence, speak that answer
+  const handleAnswerAudioPress = useCallback(async (index: number) => {
+    if (!currentQ) return;
+    sequenceCancelledRef.current = true;
+    await stopTTS();
+    setAudioPlaying(false);
+    setPlayingAnswerIndex(index);
+    try {
+      await playUrlAndAwait(NUMBER_URLS[index]);
+      await speakAndAwait(currentQ.answers[index].text_amharic);
+    } finally {
+      setPlayingAnswerIndex(null);
+    }
+  }, [currentQ]); // eslint-disable-line react-hooks/exhaustive-deps
+
   // Questions: answer selection (tap or voice)
   const handleAnswerSelect = useCallback((answerIndex: number) => {
     if (answeredIndex !== null) return;
@@ -558,6 +573,7 @@ export default function BehavioralSubtopicScreenA() {
                 imageUri={undefined}
                 cardState={answerCardState(index)}
                 onPress={() => handleAnswerSelect(index)}
+                onAudioPress={() => handleAnswerAudioPress(index)}
                 disabled={answeredIndex !== null}
               />
             ))}
