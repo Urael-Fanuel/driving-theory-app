@@ -25,6 +25,7 @@
     "expo-router": "~6.0.23",
     "expo-speech": "~14.0.8",
     "expo-status-bar": "~3.0.9",
+    "google-auth-library": "^10.6.2",
     "pdfjs-dist": "^2.16.105",
     "react": "19.1.0",
     "react-native": "0.81.5",

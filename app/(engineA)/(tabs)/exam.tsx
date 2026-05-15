@@ -107,9 +107,10 @@ export default function EngineAExamScreen() {
       // Next button would never appear and the user would be stuck.
       if (phaseRef.current !== 'question') return;
 
-      // Kill sequence synchronously first, then await the actual native stop
-      // before restarting. Without await, short files like "አንድ" (0.3s) can
-      // finish playing before stopAsync() reaches the native layer.
+      // Cancel the sequence immediately (synchronous), then fire stopAudio()
+      // without await — intentional. _stop() increments _soundId synchronously,
+      // which invalidates any in-flight callbacks instantly. We don't need to
+      // wait for the native layer to stop before restarting the sequence.
       sequenceCancelledRef.current = true;
       stopAudio();
       // Prefetch audio for current + next 3 questions

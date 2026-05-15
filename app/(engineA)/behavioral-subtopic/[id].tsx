@@ -308,7 +308,7 @@ export default function BehavioralSubtopicScreenA() {
   // Explanation: start quiz
   const handleStartQuiz = async () => {
     await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
-    await soundRef.current?.stopAsync().catch(() => {});
+    await soundRef.current?.unloadAsync().catch(() => {});
     soundRef.current = null;
     setPhase('questions');
   };
