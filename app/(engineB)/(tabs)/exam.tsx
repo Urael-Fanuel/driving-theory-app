@@ -88,9 +88,9 @@ export default function EngineBExamScreen() {
     return 'default' as const;
   };
 
-  const feedbackText = lastAnswerCorrect
+  const feedbackText = (lastAnswerCorrect
     ? currentQuestion.explanation_correct_amharic
-    : currentQuestion.explanation_wrong_amharic;
+    : currentQuestion.explanation_wrong_amharic) ?? '';
 
   const feedbackAudio = lastAnswerCorrect
     ? currentQuestion.explanation_correct_audio_url

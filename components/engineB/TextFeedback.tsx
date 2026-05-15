@@ -95,9 +95,11 @@ export function TextFeedback({
         </Text>
 
         {/* Explanation text */}
-        <Text style={styles.explanationText}>
-          {explanationText}
-        </Text>
+        {!!explanationText && (
+          <Text style={styles.explanationText}>
+            {explanationText}
+          </Text>
+        )}
 
         {/* Audio button */}
         {explanationAudioUri && (
