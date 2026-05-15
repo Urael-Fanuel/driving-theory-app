@@ -23,6 +23,7 @@ import { TextFeedback } from '../../../components/engineB/TextFeedback';
 import { AudioButton } from '../../../components/shared/AudioButton';
 import { ProgressBar } from '../../../components/shared/ProgressBar';
 import { useExam } from '../../../hooks/useExam';
+import { useAudio } from '../../../hooks/useAudio';
 import { useNetworkStatus } from '../../../hooks/useNetworkStatus';
 
 // ─── Component ────────────────────────────────────────────────────────────────
@@ -43,6 +44,7 @@ export default function EngineBExamScreen() {
   } = useExam();
 
   const [showFeedback, setShowFeedback] = React.useState(false);
+  const { stopAudio } = useAudio();
   const isConnected = useNetworkStatus();
 
   // Show feedback after answer
@@ -74,6 +76,7 @@ export default function EngineBExamScreen() {
   }, [phase, submitAnswer]);
 
   const handleNext = () => {
+    stopAudio();          // stop explanation audio before moving to next question
     setShowFeedback(false);
     nextQuestion();
   };
