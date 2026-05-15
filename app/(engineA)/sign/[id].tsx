@@ -113,7 +113,10 @@ export default function EngineASignScreen() {
     }
 
     playAndWait().catch(() => {});
-    return () => { cancelled = true; };
+    return () => {
+      cancelled = true;
+      stopAudio();
+    };
   }, [sign?.id, replayCount]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // ── Animate quiz button in when audio ends ───────────────────────────────────
@@ -187,8 +190,9 @@ export default function EngineASignScreen() {
     router.push(`/(engineA)/question/${id}_q0`);
   };
 
-  const handleBack = () => {
+  const handleBack = async () => {
     Haptics.selectionAsync();
+    await stopAudio();
     router.back();
   };
 

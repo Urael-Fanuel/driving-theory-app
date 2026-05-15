@@ -117,7 +117,7 @@ export default function EngineBExamScreen() {
     <SafeAreaView style={styles.safeArea}>
       {/* Header with timer */}
       <View style={styles.header}>
-        <TouchableOpacity style={styles.exitButton} onPress={() => { router.navigate('/(engineB)/home'); }}>
+        <TouchableOpacity style={styles.exitButton} onPress={() => { stopAudio(); router.navigate('/(engineB)/home'); }}>
           <Text style={styles.exitIcon}>✕</Text>
         </TouchableOpacity>
         <View style={styles.headerCenter}>

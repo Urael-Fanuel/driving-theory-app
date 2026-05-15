@@ -179,8 +179,9 @@ export default function EngineAExamScreen() {
       return () => {
         setIsTabFocused(false);
         cancelListening();
+        stopAudio();
       };
-    }, [cancelListening])
+    }, [cancelListening, stopAudio])
   );
 
   // ── Answer select (tap OR voice) ───────────────────────────────────────────
@@ -316,6 +317,7 @@ export default function EngineAExamScreen() {
 
   const handleBack = () => {
     cancelListening();
+    stopAudio();
     router.navigate('/(engineA)/home');
   };
 
