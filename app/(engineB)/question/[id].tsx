@@ -40,6 +40,7 @@ import { AudioButton } from '../../../components/shared/AudioButton';
 import { DBSign, DBQuestion } from '../../../backend/supabaseClient';
 import * as api from '../../../backend/api';
 import { useProgress } from '../../../hooks/useProgress';
+import { useAudio } from '../../../hooks/useAudio';
 import { extractSignNumber, shouldShowSignBadge } from '../../../utils/signNumber';
 
 // ─── Component ────────────────────────────────────────────────────────────────
@@ -48,8 +49,14 @@ export default function EngineBQuestionScreen() {
   const { id }   = useLocalSearchParams<{ id: string }>();
   const router   = useRouter();
   const { recordAnswer } = useProgress();
+  const { stopAudio } = useAudio();
 
   const [signId, questionIndex] = parseQuestionId(id);
+
+  // Stop audio when leaving this screen
+  useEffect(() => {
+    return () => { stopAudio(); };
+  }, []);
 
   const [sign,         setSign]         = useState<DBSign | null>(null);
   const [questions,    setQuestions]    = useState<DBQuestion[]>([]);
@@ -112,18 +119,20 @@ export default function EngineBQuestionScreen() {
   const handlePrevQuestion = useCallback(() => {
     if (!canGoPrevQ) return;
     Haptics.selectionAsync();
+    stopAudio();
     setShowFeedback(false);
     setSelectedId(null);
     router.replace(`/(engineB)/question/${signId}_q${questionIndex - 1}`);
-  }, [canGoPrevQ, questionIndex, signId, router]);
+  }, [canGoPrevQ, questionIndex, signId, router, stopAudio]);
 
   const handleNextQuestion = useCallback(() => {
     if (!canGoNextQ) return;
     Haptics.selectionAsync();
+    stopAudio();
     setShowFeedback(false);
     setSelectedId(null);
     router.replace(`/(engineB)/question/${signId}_q${questionIndex + 1}`);
-  }, [canGoNextQ, questionIndex, questions.length, signId, router]);
+  }, [canGoNextQ, questionIndex, questions.length, signId, router, stopAudio]);
 
   // ── Sign navigation ──────────────────────────────────────────────────────────
 
@@ -134,12 +143,14 @@ export default function EngineBQuestionScreen() {
   const handlePrevSign = async () => {
     if (!prevSign) return;
     await Haptics.selectionAsync();
+    stopAudio();
     router.replace(`/(engineB)/question/${prevSign.id}_q0`);
   };
 
   const handleNextSign = async () => {
     if (!nextSign) return;
     await Haptics.selectionAsync();
+    stopAudio();
     router.replace(`/(engineB)/question/${nextSign.id}_q0`);
   };
 
@@ -173,7 +184,7 @@ export default function EngineBQuestionScreen() {
 
         <TouchableOpacity
           style={styles.backButton}
-          onPress={() => router.back()}
+          onPress={() => { stopAudio(); router.back(); }}
           accessibilityLabel="ወደ ምልክቱ ተመለስ"
         >
           <Text style={styles.backIcon}>←</Text>
@@ -308,7 +319,7 @@ export default function EngineBQuestionScreen() {
           {/* Current sign thumbnail */}
           <TouchableOpacity
             style={styles.signThumbBtn}
-            onPress={() => router.back()}
+            onPress={() => { stopAudio(); router.back(); }}
             accessibilityLabel="ወደ ምልክቱ ተመለስ"
           >
             {sign?.image_url && (

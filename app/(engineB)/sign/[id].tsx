@@ -33,6 +33,7 @@ import { SignTextDetail } from '../../../components/engineB/SignTextDetail';
 import { DBSign } from '../../../backend/supabaseClient';
 import * as api from '../../../backend/api';
 import { useProgress } from '../../../hooks/useProgress';
+import { useAudio } from '../../../hooks/useAudio';
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
@@ -40,8 +41,14 @@ export default function EngineBSignScreen() {
   const { id }  = useLocalSearchParams<{ id: string }>();
   const router  = useRouter();
   const { markSignViewed } = useProgress();
+  const { stopAudio } = useAudio();
 
   const [sign,       setSign]       = useState<DBSign | null>(null);
+
+  // Stop audio when leaving this screen
+  useEffect(() => {
+    return () => { stopAudio(); };
+  }, []);
   const [topicSigns, setTopicSigns] = useState<DBSign[]>([]);
   const [loading,    setLoading]    = useState(() => !api.getSignsFromCache());
 
@@ -76,6 +83,7 @@ export default function EngineBSignScreen() {
   const handlePrev = async () => {
     if (!prevSign) return;
     await Haptics.selectionAsync();
+    stopAudio();
     router.replace({
       pathname: '/(engineB)/sign/[id]',
       params: { id: prevSign.id },
@@ -85,6 +93,7 @@ export default function EngineBSignScreen() {
   const handleNext = async () => {
     if (!nextSign) return;
     await Haptics.selectionAsync();
+    stopAudio();
     router.replace({
       pathname: '/(engineB)/sign/[id]',
       params: { id: nextSign.id },
@@ -93,11 +102,13 @@ export default function EngineBSignScreen() {
 
   const handlePractice = async () => {
     await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+    stopAudio();
     router.push(`/(engineB)/question/${id}_q0`);
   };
 
   const handleBack = async () => {
     await Haptics.selectionAsync();
+    stopAudio();
     router.back();
   };
 
