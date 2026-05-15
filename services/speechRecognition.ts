@@ -94,9 +94,9 @@ export async function recognizeAmharicAnswer(
     console.log('[STT] base64Audio length:', base64Audio?.length ?? 'null');
 
     // Call Google STT API
-    const response = await fetch(`${GOOGLE_STT_URL}?key=${API_KEY}`, {
+    const response = await fetch(GOOGLE_STT_URL, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json', 'X-Goog-Api-Key': API_KEY },
       body: JSON.stringify({
         config: {
           encoding,           // matches recording format: LINEAR16 (iOS) or AMR_WB (Android)

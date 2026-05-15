@@ -14,7 +14,7 @@
 import { Audio } from 'expo-av';
 
 const TTS_KEY = process.env.EXPO_PUBLIC_GOOGLE_TTS_KEY ?? '';
-const TTS_URL = `https://texttospeech.googleapis.com/v1/text:synthesize?key=${TTS_KEY}`;
+const TTS_URL = `https://texttospeech.googleapis.com/v1/text:synthesize`;
 
 let currentSound:   Audio.Sound | null = null;
 let pendingResolve: (() => void) | null = null;
@@ -89,7 +89,7 @@ export async function speakAndAwait(text: string): Promise<void> {
 
     const res = await fetch(TTS_URL, {
       method:  'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json', 'X-Goog-Api-Key': TTS_KEY },
       body: JSON.stringify({
         input:       { text },
         voice:       { languageCode: 'am-ET', name: 'am-ET-Standard-A', ssmlGender: 'FEMALE' },
