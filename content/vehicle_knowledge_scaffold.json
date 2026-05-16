@@ -245,7 +245,78 @@
         {
           "id": "vk_l1_s4",
           "name_hebrew": "הגלגלים",
-          "icon": "⚫"
+          "name_amharic": "ጎማዎች",
+          "icon": "⚫",
+          "explanation_amharic": "የመኪናው መረጋጋት የሚወሰነው የመኪናው ጎማዎች ከመንገድ ጋር በሚኖራቸው የመያዣ ኃይል ነው። ይህ የመያዣ ኃይል የመሪ አያያዝን፣ ብሬክ የማድረግን ሂደት እና የመኪናውን በመንገድ ላይ ያለውን አቀማመጥ ይወስናል። የጎማ አየር ግፊት በየሳምንቱ ቢያንስ አንድ ጊዜ መፈተሽ አለበት። ይህ ምርመራ ሁልጊዜ ጎማዎቹ ቀዝቃዛ ሲሆኑ ማለትም ከመንዳት በፊት መደረግ አለበት። ትክክለኛው የአየር ግፊት የመንጃው በር መቃን ላይ ባለው ተለጣፊ ላይ በአምራቹ ተጽፏል። አንድ ጎማ ግማሽ ያህል አየሩን ሊያጣ ይችላል ነገር ግን ይህ በውጫዊ መልኩ ላይታይ ይችላል። አየር የጎደለው ጎማ መኪናው ወደዚያ ጎማ እንዲያዘነብል ያደርጋል። ጎማዎች በሚከተሉት ሁኔታዎች መለወጥ አለባቸው: የጎማው ስር ጥልቀት ከሁለት ሚሊሜትር በታች ሲሆን፣ የጎማው ጎኖች ደረቅ እና የተሰነጣጠቁ ሲሆኑ፣ በጎማው ጎን ላይ እብጠት ሲኖር፣ ወይም ጎማው ሲቀደድ። በጎማው ስር ያሉት ስንጥቆች ዓላማ በጎማው እና በእርጥብ መንገድ መካከል ያለውን ውሃ በብቃት ለማፍሰስ ነው።",
+          "narration_script": "የመኪናው መረጋጋት የሚወሰነው የመኪናው ጎማዎች ከመንገድ ጋር በሚኖራቸው የመያዣ ኃይል ነው። ይህ የመያዣ ኃይል የመሪ አያያዝን፣ ብሬክ የማድረግን ሂደት እና የመኪናውን በመንገድ ላይ ያለውን አቀማመጥ ይወስናል። የጎማ አየር ግፊት በየሳምንቱ ቢያንስ አንድ ጊዜ መፈተሽ አለበት። ይህ ምርመራ ሁልጊዜ ጎማዎቹ ቀዝቃዛ ሲሆኑ ማለትም ከመንዳት በፊት መደረግ አለበት። ትክክለኛው የአየር ግፊት የመንጃው በር መቃን ላይ ባለው ተለጣፊ ላይ በአምራቹ ተጽፏል። አንድ ጎማ ግማሽ ያህል አየሩን ሊያጣ ይችላል ነገር ግን ይህ በውጫዊ መልኩ ላይታይ ይችላል። አየር የጎደለው ጎማ መኪናው ወደዚያ ጎማ እንዲያዘነብል ያደርጋል። ጎማዎች በሚከተሉት ሁኔታዎች መለወጥ አለባቸው: የጎማው ስር ጥልቀት ከሁለት ሚሊሜትር በታች ሲሆን፣ የጎማው ጎኖች ደረቅ እና የተሰነጣጠቁ ሲሆኑ፣ በጎማው ጎን ላይ እብጠት ሲኖር፣ ወይም ጎማው ሲቀደድ። በጎማው ስር ያሉት ስንጥቆች ዓላማ በጎማው እና በእርጥብ መንገድ መካከል ያለውን ውሃ በብቃት ለማፍሰስ ነው።",
+          "questions": [
+            {
+              "question_amharic": "የጎማ አየር ግፊትን መቼ መፈተሽ ይመከራል?",
+              "answers": [
+                {
+                  "text_amharic": "ከረጅም ጉዞ በኋላ ጎማዎቹ ሲሞቁ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ከመንዳት በፊት ጎማዎቹ ቀዝቃዛ ሲሆኑ",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "በየወሩ አንድ ጊዜ ብቻ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "መኪናው ሲቆም በማንኛውም ጊዜ",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "በጎማው ስር ያሉት ስንጥቆች ዋና ዓላማ ምንድን ነው?",
+              "answers": [
+                {
+                  "text_amharic": "የጎማውን ውበት ለመጨመር",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ጎማው እንዳይሞቅ ለመከላከል",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "በጎማው እና በእርጥብ መንገድ መካከል ያለውን ውሃ በብቃት ለማፍሰስ",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "የመኪናውን ፍጥነት ለመጨመር",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "ጎማ መለወጥ ያለበት በየትኛው ጊዜ ነው?",
+              "answers": [
+                {
+                  "text_amharic": "የጎማው ስር ጥልቀት ከሁለት ሚሊሜትር በታች ሲሆን",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ጎማው አዲስ ሲሆን",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የጎማው ቀለም ሲደበዝዝ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "በየሁለት ዓመቱ አንድ ጊዜ",
+                  "is_correct": false
+                }
+              ]
+            }
+          ],
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_vk_l1_s4_narration_1778955702741.mp3",
+          "image_description": "Close-up photorealistic view of a car tire and wheel on a clean surface. The full tire is visible showing the tread pattern with deep grooves clearly visible, the sidewall, and the wheel rim. Well-lit, sharp detail, no text overlays, no people.",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/vk_l1_s4_image_1778956429499.jpg"
         }
       ]
     },
