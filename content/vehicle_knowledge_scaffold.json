@@ -90,7 +90,8 @@
           "video_search_meta": {
             "video_type": "static",
             "pexels_query": "car front exterior parked silver sedan"
-          }
+          },
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/vk_l1_s1_image_1778957426271.jpg"
         },
         {
           "id": "vk_l1_s2",
