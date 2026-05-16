@@ -1771,7 +1771,78 @@
         {
           "id": "vk_l6_s1",
           "name_hebrew": "בדיקת רמת שמן",
-          "icon": "🛢️"
+          "icon": "🛢️",
+          "name_amharic": "የሞተር ዘይት ምርመራ",
+          "explanation_amharic": "የሞተር ዘይት ለሞተር ክፍሎች ቅባት በመስጠት ከሙቀትና ከግጭት የሚመጣ ጉዳትን ይከላከላል። በቂ ዘይት ከሌለ ሞተሩ ከፍተኛ ጉዳት ሊደርስበት ይችላል። የዘይት መጠንን መፈተሽ ከመንዳት በፊት ከሚደረጉ ዕለታዊ ምርመራዎች አንዱ ነው። ይህ የሚደረገው በሞተሩ ውስጥ በሚገኝ የብረት ዘንግ በሆነው የዘይት መለኪያ ዘንግ በመጠቀም ነው። ምርመራው መኪናውን ከማስነሳት በፊት ሞተሩ ቀዝቃዛ ሲሆን እና መኪናው ጠፍጣፋ ቦታ ላይ ቆሞ መሆን አለበት። እየነዱ ሳሉ የዘይት ግፊት ማስጠንቀቂያ መብራት ከበራ ወዲያውኑ መንዳት ማቆም አለብዎት። መንዳትዎን ከቀጠሉ በሞተሩ ላይ ከባድ ጉዳት ሊያስከትል ይችላል። አሽከርካሪው የማቀዝቀዣ ፈሳሽ እና የመስታወት ማጽጃ ፈሳሽ መጠንም በየጊዜው መፈተሽ አለበት።",
+          "narration_script": "የሞተር ዘይት ለሞተር ክፍሎች ቅባት በመስጠት ከሙቀትና ከግጭት የሚመጣ ጉዳትን ይከላከላል። በቂ ዘይት ከሌለ ሞተሩ ከፍተኛ ጉዳት ሊደርስበት ይችላል። የዘይት መጠንን መፈተሽ ከመንዳት በፊት ከሚደረጉ ዕለታዊ ምርመራዎች አንዱ ነው። ይህ የሚደረገው በሞተሩ ውስጥ በሚገኝ የብረት ዘንግ በሆነው የዘይት መለኪያ ዘንግ በመጠቀም ነው። ምርመራው መኪናውን ከማስነሳት በፊት ሞተሩ ቀዝቃዛ ሲሆን እና መኪናው ጠፍጣፋ ቦታ ላይ ቆሞ መሆን አለበት። እየነዱ ሳሉ የዘይት ግፊት ማስጠንቀቂያ መብራት ከበራ ወዲያውኑ መንዳት ማቆም አለብዎት። መንዳትዎን ከቀጠሉ በሞተሩ ላይ ከባድ ጉዳት ሊያስከትል ይችላል። አሽከርካሪው የማቀዝቀዣ ፈሳሽ እና የመስታወት ማጽጃ ፈሳሽ መጠንም በየጊዜው መፈተሽ አለበት።",
+          "questions": [
+            {
+              "question_amharic": "የሞተር ዘይት ዋና ዓላማ ምንድን ነው?",
+              "answers": [
+                {
+                  "text_amharic": "ጎማዎችን ለመንፋት",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የሞተር ክፍሎችን ለመቀባት እና ከጉዳት ለመከላከል",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "መኪናውን ለማቀዝቀዝ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "መብራቶችን ለማብራት",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "አሽከርካሪው የሞተር ዘይት መጠንን መቼ መፈተሽ አለበት?",
+              "answers": [
+                {
+                  "text_amharic": "እየነዱ ሳሉ በማንኛውም ጊዜ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ሞተሩ ሲሞቅ እና መኪናው ቁልቁለት ላይ ሲሆን",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "መኪናውን ከማስነሳት በፊት ሞተሩ ቀዝቃዛ ሲሆን እና መኪናው ጠፍጣፋ ቦታ ላይ ሲሆን",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "በሳምንት አንድ ጊዜ ብቻ",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "እየነዱ ሳሉ የዘይት ግፊት ማስጠንቀቂያ መብራት ከበራ አሽከርካሪው ምን ማድረግ አለበት?",
+              "answers": [
+                {
+                  "text_amharic": "መንዳቱን መቀጠል እና በኋላ መፈተሽ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ወዲያውኑ መንዳት ማቆም",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ፍጥነት መጨመር",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የፊት መብራቶችን ማብራት",
+                  "is_correct": false
+                }
+              ]
+            }
+          ],
+          "image_description": "Close-up view of a car engine bay. The oil filler cap is removed and set aside. A hand holds the oil dipstick slightly in front of the engine, pulled out and being examined to check the oil level. The dipstick has visible oil marks. Realistic automotive photography, bright lighting, no text overlays.",
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_vk_l6_s1_narration_1778962771792.mp3",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/vk_l6_s1_image_1778962937594.jpg"
         },
         {
           "id": "vk_l6_s2",
