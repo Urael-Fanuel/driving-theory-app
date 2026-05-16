@@ -1843,86 +1843,6 @@
           "image_description": "Close-up view of a car engine bay. The oil filler cap is removed and set aside. A hand holds the oil dipstick slightly in front of the engine, pulled out and being examined to check the oil level. The dipstick has visible oil marks. Realistic automotive photography, bright lighting, no text overlays.",
           "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_vk_l6_s1_narration_1778962771792.mp3",
           "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/vk_l6_s1_image_1778962937594.jpg"
-        },
-        {
-          "id": "vk_l6_s2",
-          "name_hebrew": "בדיקת רמת נוזל קירור",
-          "icon": "💧"
-        },
-        {
-          "id": "vk_l6_s3",
-          "name_hebrew": "מצב הסוללה",
-          "icon": "🔋"
-        },
-        {
-          "id": "vk_l6_s4",
-          "name_hebrew": "מה עוד בודקים לפני יציאה",
-          "icon": "✅"
-        }
-      ]
-    },
-    {
-      "id": "vk_l7",
-      "level": 7,
-      "name_hebrew": "לוח השעונים — נורות אזהרה",
-      "name_amharic": "",
-      "icon": "⚠️",
-      "color": "#E65100",
-      "subtopics": [
-        {
-          "id": "vk_l7_s1",
-          "name_hebrew": "נורת שמן",
-          "icon": "🔴"
-        },
-        {
-          "id": "vk_l7_s2",
-          "name_hebrew": "נורת טמפרטורה",
-          "icon": "🌡️"
-        },
-        {
-          "id": "vk_l7_s3",
-          "name_hebrew": "נורת סוללה",
-          "icon": "🔋"
-        },
-        {
-          "id": "vk_l7_s4",
-          "name_hebrew": "נורת בלמים",
-          "icon": "⚠️"
-        },
-        {
-          "id": "vk_l7_s5",
-          "name_hebrew": "נורת ABS",
-          "icon": "🛑"
-        },
-        {
-          "id": "vk_l7_s6",
-          "name_hebrew": "שאר נורות חשובות",
-          "icon": "💡"
-        }
-      ]
-    },
-    {
-      "id": "vk_l8",
-      "level": 8,
-      "name_hebrew": "הצמיגים לעומק",
-      "name_amharic": "",
-      "icon": "⚫",
-      "color": "#C62828",
-      "subtopics": [
-        {
-          "id": "vk_l8_s1",
-          "name_hebrew": "לחץ אוויר בצמיגים",
-          "icon": "🌬️"
-        },
-        {
-          "id": "vk_l8_s2",
-          "name_hebrew": "שחיקת הצמיג",
-          "icon": "📉"
-        },
-        {
-          "id": "vk_l8_s3",
-          "name_hebrew": "תקר — מה עושים",
-          "icon": "🛑"
         }
       ]
     },
@@ -1934,16 +1854,6 @@
       "icon": "🛑",
       "color": "#C62828",
       "subtopics": [
-        {
-          "id": "vk_l9_s1",
-          "name_hebrew": "איך בלמים עובדים",
-          "icon": "⚙️"
-        },
-        {
-          "id": "vk_l9_s2",
-          "name_hebrew": "בלם רגל",
-          "icon": "🦶"
-        },
         {
           "id": "vk_l9_s3",
           "name_hebrew": "בלם יד",
@@ -1968,11 +1878,6 @@
           "id": "vk_l10_s1",
           "name_hebrew": "כריות אוויר",
           "icon": "💨"
-        },
-        {
-          "id": "vk_l10_s2",
-          "name_hebrew": "חגורות בטיחות — לעומק",
-          "icon": "🔒"
         },
         {
           "id": "vk_l10_s3",
