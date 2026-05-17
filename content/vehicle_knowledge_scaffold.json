@@ -1857,7 +1857,77 @@
         {
           "id": "vk_l9_s3",
           "name_hebrew": "בלם יד",
-          "icon": "✋"
+          "icon": "✋",
+          "explanation_amharic": "የእጅ ፍሬን ወይም የመኪና ማቆሚያ ፍሬን በሁለቱ የፊት መቀመጫዎች መካከል ይገኛል፤ በአንዳንድ ተሽከርካሪዎች ደግሞ ከመሪው በስተግራ በኩል ከመሳሪያዎች ሰሌዳ በታች ሆኖ በግራ እግር ይሰራል። ፍሬኑን ለመጠቀም እጀታውን ወደ ላይ መሳብ ያስፈልጋል። ለመልቀቅ ደግሞ በእጀታው ጫፍ ላይ ያለውን ቁልፍ መጫን ይገባል።\n\nይህ ፍሬን ሶስት ዋና ዋና ዓላማዎች አሉት። አንደኛ፣ መኪናው ሲቆም እንዳይንቀሳቀስ ይከላከላል። ሁለተኛ፣ ቁልቁለት ወይም ኮረብታ ላይ መኪና ሲያስነሱ ወደ ኋላ እንዳይመለስ ይረዳል። ሶስተኛ፣ የእግር ፍሬኑ መስራት ሲያቆም እንደ ድንገተኛ የአደጋ ጊዜ ፍሬን ሆኖ ያገለግላል።\n\nየመኪናውን ሞተር ከማስነሳትዎ በፊት የእጅ ፍሬኑ ወደ ላይ መሳቡን ማረጋገጥ የደህንነት ደንብ ነው። መኪናዎን ሲያቆሙም ከመኪናው ከመውጣትዎ በፊት ሁልጊዜ የእጅ ፍሬኑን ወደ ላይ መሳብ አለብዎት። የእጅ ፍሬኑን ሳይስቡ መኪናውን ትቶ መሄድ የተከለከለ ነው።",
+          "narration_script": "የእጅ ፍሬን ወይም የመኪና ማቆሚያ ፍሬን በሁለቱ የፊት መቀመጫዎች መካከል ይገኛል፤ በአንዳንድ ተሽከርካሪዎች ደግሞ ከመሪው በስተግራ በኩል ከመሳሪያዎች ሰሌዳ በታች ሆኖ በግራ እግር ይሰራል። ፍሬኑን ለመጠቀም እጀታውን ወደ ላይ መሳብ ያስፈልጋል። ለመልቀቅ ደግሞ በእጀታው ጫፍ ላይ ያለውን ቁልፍ መጫን ይገባል።\n\nይህ ፍሬን ሶስት ዋና ዋና ዓላማዎች አሉት። አንደኛ፣ መኪናው ሲቆም እንዳይንቀሳቀስ ይከላከላል። ሁለተኛ፣ ቁልቁለት ወይም ኮረብታ ላይ መኪና ሲያስነሱ ወደ ኋላ እንዳይመለስ ይረዳል። ሶስተኛ፣ የእግር ፍሬኑ መስራት ሲያቆም እንደ ድንገተኛ የአደጋ ጊዜ ፍሬን ሆኖ ያገለግላል።\n\nየመኪናውን ሞተር ከማስነሳትዎ በፊት የእጅ ፍሬኑ ወደ ላይ መሳቡን ማረጋገጥ የደህንነት ደንብ ነው። መኪናዎን ሲያቆሙም ከመኪናው ከመውጣትዎ በፊት ሁልጊዜ የእጅ ፍሬኑን ወደ ላይ መሳብ አለብዎት። የእጅ ፍሬኑን ሳይስቡ መኪናውን ትቶ መሄድ የተከለከለ ነው።",
+          "questions": [
+            {
+              "question_amharic": "የእጅ ፍሬን ዋና ዋና ዓላማዎች ምንድን ናቸው?",
+              "answers": [
+                {
+                  "text_amharic": "መኪናው ሲቆም እንዳይንቀሳቀስ መከላከል፣ ቁልቁለት ላይ ሲነሳ ወደ ኋላ እንዳይመለስ መርዳት እና እንደ ድንገተኛ ፍሬን ማገልገል",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "የመኪናውን ፍጥነት መጨመር፣ የነዳጅ ፍጆታን መቀነስ እና ጎማዎችን ማቀዝቀዝ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የፊት መብራቶችን ማብራት፣ የኋላ መመልከቻ መስታወቶችን ማስተካከል እና የሬዲዮ ድምጽን መቆጣጠር",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የመኪናውን ቀለም መጠበቅ፣ የውስጥ ክፍሉን ማጽዳት እና የመቀመጫ ቀበቶዎችን ማሰር",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "የእጅ ፍሬኑን ለመልቀቅ ምን ማድረግ አለብዎት?",
+              "answers": [
+                {
+                  "text_amharic": "እጀታውን ወደ ላይ መሳብ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "በእጀታው ጫፍ ላይ ያለውን ቁልፍ መጫን",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "የመኪናውን ቁልፍ ማዞር",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የእግር ፍሬኑን መርገጥ",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "የእጅ ፍሬኑ መቼ ወደ ላይ መሳብ አለበት?",
+              "answers": [
+                {
+                  "text_amharic": "መኪናው በፍጥነት በሚነዳበት ጊዜ ብቻ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ሞተሩን ከማስነሳት በፊት እና መኪናውን አቁሞ ከመውጣት በፊት",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ጎማ ሲቀየር ብቻ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ሞተሩ ሲጠፋ ብቻ",
+                  "is_correct": false
+                }
+              ]
+            }
+          ],
+          "image_description": "Close-up photo inside a car interior. Camera angle is low, looking slightly upward toward the tip of the handbrake lever. The handbrake lever is pulled up and vertical. The small round release button at the very top tip of the lever faces directly toward the camera and is the sharpest, most prominent element in the frame — fully unobstructed. An Ethiopian man's dark-skinned hand wraps around the lower portion of the handbrake shaft, well below the tip, fingers clearly below the release button. In the far background, heavily out of focus: a gear shift knob of a clearly different rounded shape. Photorealistic, warm car interior lighting, very shallow depth of field.",
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_vk_l9_s3_narration_1778999706393.mp3",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/vk_l9_s3_image_1779002983573.jpg"
         },
         {
           "id": "vk_l9_s4",
