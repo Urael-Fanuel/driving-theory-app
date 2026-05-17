@@ -1932,7 +1932,78 @@
         {
           "id": "vk_l9_s4",
           "name_hebrew": "ABS — מהו",
-          "icon": "🔴"
+          "icon": "🔴",
+          "explanation_amharic": "ኤቢኤስ የብሬክ ስርዓት መኪና በኃይል ብሬክ ሲያዝ ጎሞቹ እንዳይቆለፉ የሚከላከል ሲሆን መሪውን የመቆጣጠር ችሎታን ያስችላል። ኤቢኤስ የለለው መኪና ጎሞቹ ሲቆለፉ መሪውን መቆጣጠር አይቻልም። ይህ ስርዓት ስራ ላይ ሲውል የብሬክ ፔዳሉ ሲንቀጠቀጥ ይሰማዎታል። በዚህ ጊዜ የብሬክ ፔዳሉን መልቀቅ የለብዎትም ይልቁንም መኪናው ሙሉ በሙሉ እስኪቆም ድረስ አጥብቀው መያዝዎን መቀጠል አለብዎት።\n\nየኤቢኤስ የማስጠንቀቂያ መብራት ሞተሩ ሲነሳ ለአጭር ጊዜ ይበራና ይጠፋል። ይህ የተለመደ ነው። ነገር ግን መኪናው እየተነዳ ሳለ የማስጠንቀቂያ መብራቱ በርቶ ከቀረ ይህ በኤቢኤስ ስርዓት ላይ ችግር እንዳለ ያሳያል። አይፍሩ በኤቢኤስ ስርዓት ላይ ችግር ቢኖርም የተለመደው የብሬክ ስርዓት በመደበኛነት ይሰራል።",
+          "narration_script": "ኤቢኤስ የብሬክ ስርዓት መኪና በኃይል ብሬክ ሲያዝ ጎሞቹ እንዳይቆለፉ የሚከላከል ሲሆን መሪውን የመቆጣጠር ችሎታን ያስችላል። ኤቢኤስ የለለው መኪና ጎሞቹ ሲቆለፉ መሪውን መቆጣጠር አይቻልም። ይህ ስርዓት ስራ ላይ ሲውል የብሬክ ፔዳሉ ሲንቀጠቀጥ ይሰማዎታል። በዚህ ጊዜ የብሬክ ፔዳሉን መልቀቅ የለብዎትም ይልቁንም መኪናው ሙሉ በሙሉ እስኪቆም ድረስ አጥብቀው መያዝዎን መቀጠል አለብዎት።\n\nየኤቢኤስ የማስጠንቀቂያ መብራት ሞተሩ ሲነሳ ለአጭር ጊዜ ይበራና ይጠፋል። ይህ የተለመደ ነው። ነገር ግን መኪናው እየተነዳ ሳለ የማስጠንቀቂያ መብራቱ በርቶ ከቀረ ይህ በኤቢኤስ ስርዓት ላይ ችግር እንዳለ ያሳያል። አይፍሩ በኤቢኤስ ስርዓት ላይ ችግር ቢኖርም የተለመደው የብሬክ ስርዓት በመደበኛነት ይሰራል።",
+          "image_description": "Close-up photograph of a modern car instrument cluster dashboard. The ABS warning light is clearly illuminated in bright amber/yellow — the letters ABS inside a circle glowing on the dark dashboard panel. Other dashboard gauges and indicators visible in the background but slightly blurred. Dramatic moody lighting, modern car interior. Photorealistic, high quality.",
+          "video_url": "",
+          "questions": [
+            {
+              "question_amharic": "የኤቢኤስ የብሬክ ስርዓት ዋና ተግባር ምንድን ነው?",
+              "answers": [
+                {
+                  "text_amharic": "መኪናው በፍጥነት እንዲቆም ማድረግ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ጎሞቹ እንዳይቆለፉ መከላከል እና መሪውን መቆጣጠር ማስቻል",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "የብሬክ ፔዳሉ እንዲንቀጠቀጥ ማድረግ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "መኪናው እንዲንሸራተት ማድረግ",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "በኃይል ብሬክ ሲይዙ የብሬክ ፔዳሉ ሲንቀጠቀጥ ሲሰማዎት ምን ማድረግ አለብዎት?",
+              "answers": [
+                {
+                  "text_amharic": "የብሬክ ፔዳሉን ወዲያውኑ መልቀቅ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የብሬክ ፔዳሉን በቀስታ መጫን",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "መኪናው ሙሉ በሙሉ እስኪቆም ድረስ የብሬክ ፔዳሉን አጥብቆ መያዝዎን መቀጠል",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "መኪናውን ማቆም እና እርዳታ መጠየቅ",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "የኤቢኤስ የማስጠንቀቂያ መብራት መኪናው እየተነዳ ሳለ በርቶ ከቀረ ምን ማለት ነው?",
+              "answers": [
+                {
+                  "text_amharic": "የኤቢኤስ ስርዓት በመደበኛነት እየሰራ ነው",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "በኤቢኤስ ስርዓት ላይ ችግር አለ",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "የተለመደው የብሬክ ስርዓት አይሰራም",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "መኪናው ነዳጅ ይፈልጋል",
+                  "is_correct": false
+                }
+              ]
+            }
+          ],
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_vk_l9_s4_narration_1779025180421.mp3",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/vk_l9_s4_image_1779025628710.jpg"
         }
       ]
     },
