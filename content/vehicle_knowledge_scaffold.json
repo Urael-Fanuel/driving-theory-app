@@ -2018,7 +2018,78 @@
         {
           "id": "vk_l10_s1",
           "name_hebrew": "כריות אוויר",
-          "icon": "💨"
+          "icon": "💨",
+          "explanation_amharic": "የአየር ከረጢት (SRS) የመኪና የደህንነት መሳሪያ ሲሆን፣ የመኪናው የፊት ለፊት፣ የጎን ግጭት ወይም መገልበጥ ሲያጋጥመው፣ በተሳፋሪው አካል እና በመኪናው ጠንካራ ክፍሎች መካከል እንደ መከላከያ ሆኖ ያገለግላል። ይህ ከረጢት ግጭት እንደተፈጠረ በሰከንድ ቅጽበት ውስጥ በከፍተኛ ፍጥነት ይነፋል፣ ከዚያም ተሳፋሪዎች ከመኪናው እንዲወጡ ለማስቻል አየሩን ይለቃል።\n\nየአየር ከረጢቶች ለአሽከርካሪው፣ ከፊት ለተቀመጠው ተሳፋሪ፣ ለመስኮቶች እና ከኋላ ለተቀመጡ ተሳፋሪዎች ይገኛሉ። የአየር ከረጢት በተገጠመበት የመኪና ክፍል ሁሉ SRS ወይም AIRBAG የሚል ጽሑፍ ተጽፎበታል።\n\nየአየር ከረጢት ስርዓት ትክክለኛነት በመኪናው ዳሽቦርድ ላይ ባለው የማስጠንቀቂያ መብራት ይታያል። ይህ መብራት መኪናው ሲነሳ ለጥቂት ሰከንዶች ይበራል ይህም የተለመደ ነው። ነገር ግን፣ እየነዱ እያለ መብራቱ ከበራ ወይም መኪናውን ካስነሱ በኋላ ካልጠፋ፣ የስርዓቱ ብልሽት እንዳለ ያሳያል እና ወዲያውኑ ወደ ሜካኒክ መሄድ ያስፈልጋል።\n\nየአየር ከረጢቱ በሚከፈትበት ጊዜ የመቀመጫ ቀበቶ አለማሰር በጣም አደገኛ እና ከፍተኛ ጉዳት ሊያስከትል ይችላል። በተጨማሪም፣ ህፃናትን ንቁ የአየር ከረጢት ፊት ለፊት ባለው የህፃናት መቀመጫ ማስቀመጥ ፈጽሞ የተከለከለ ነው። ለህፃናት በጣም አስተማማኝው ቦታ የኋላ መቀመጫ ነው።",
+          "narration_script": "የአየር ከረጢት (SRS) የመኪና የደህንነት መሳሪያ ሲሆን፣ የመኪናው የፊት ለፊት፣ የጎን ግጭት ወይም መገልበጥ ሲያጋጥመው፣ በተሳፋሪው አካል እና በመኪናው ጠንካራ ክፍሎች መካከል እንደ መከላከያ ሆኖ ያገለግላል። ይህ ከረጢት ግጭት እንደተፈጠረ በሰከንድ ቅጽበት ውስጥ በከፍተኛ ፍጥነት ይነፋል፣ ከዚያም ተሳፋሪዎች ከመኪናው እንዲወጡ ለማስቻል አየሩን ይለቃል።\n\nየአየር ከረጢቶች ለአሽከርካሪው፣ ከፊት ለተቀመጠው ተሳፋሪ፣ ለመስኮቶች እና ከኋላ ለተቀመጡ ተሳፋሪዎች ይገኛሉ። የአየር ከረጢት በተገጠመበት የመኪና ክፍል ሁሉ SRS ወይም AIRBAG የሚል ጽሑፍ ተጽፎበታል።\n\nየአየር ከረጢት ስርዓት ትክክለኛነት በመኪናው ዳሽቦርድ ላይ ባለው የማስጠንቀቂያ መብራት ይታያል። ይህ መብራት መኪናው ሲነሳ ለጥቂት ሰከንዶች ይበራል ይህም የተለመደ ነው። ነገር ግን፣ እየነዱ እያለ መብራቱ ከበራ ወይም መኪናውን ካስነሱ በኋላ ካልጠፋ፣ የስርዓቱ ብልሽት እንዳለ ያሳያል እና ወዲያውኑ ወደ ሜካኒክ መሄድ ያስፈልጋል።\n\nየአየር ከረጢቱ በሚከፈትበት ጊዜ የመቀመጫ ቀበቶ አለማሰር በጣም አደገኛ እና ከፍተኛ ጉዳት ሊያስከትል ይችላል። በተጨማሪም፣ ህፃናትን ንቁ የአየር ከረጢት ፊት ለፊት ባለው የህፃናት መቀመጫ ማስቀመጥ ፈጽሞ የተከለከለ ነው። ለህፃናት በጣም አስተማማኝው ቦታ የኋላ መቀመጫ ነው።",
+          "image_description": "Car interior after a crash, photo from back seat looking forward. Left side: a round black steering wheel with a large white inflated airbag balloon bursting OUT from the CENTER of the steering wheel hub — the white bag is round and full, clearly exploding out from the middle of the steering wheel ring. Right side: the dashboard panel has a white airbag bag popping out of a rectangular slot in the dashboard surface. Both airbags are white and round. ONE steering wheel only, on the left. No people. Photorealistic.",
+          "video_url": "",
+          "questions": [
+            {
+              "question_amharic": "የአየር ከረጢት (SRS) ዋና ዓላማ ምንድነው?",
+              "answers": [
+                {
+                  "text_amharic": "የመኪናውን ፍጥነት ለመቀነስ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ተሳፋሪዎችን ከጠንካራ የመኪና ክፍሎች ለመጠበቅ እና ጉዳትን ለመቀነስ",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "የመኪናውን ሞተር ለማቀዝቀዝ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የነዳጅ ፍጆታን ለመቀነስ",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "የአየር ከረጢት (SRS) የማስጠንቀቂያ መብራት እየነዱ እያለ ከበራ ወይም መኪናውን ካስነሱ በኋላ ካልጠፋ ምን ማለት ነው?",
+              "answers": [
+                {
+                  "text_amharic": "የመኪናው ጎማዎች አየር እንደሌላቸው ያሳያል",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የአየር ከረጢት ስርዓት ብልሽት እንዳለ ያሳያል",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "የመኪናው የፊት መብራቶች እንደበሩ ያሳያል",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የነዳጅ ማጠራቀሚያው ባዶ መሆኑን ያሳያል",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "ህፃናትን በመኪና ውስጥ ለማስቀመጥ በጣም አስተማማኝ ቦታ የትኛው ነው?",
+              "answers": [
+                {
+                  "text_amharic": "ከአሽከርካሪው አጠገብ ባለው የፊት መቀመጫ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ንቁ የአየር ከረጢት ፊት ለፊት ባለው የህፃናት መቀመጫ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የኋላ መቀመጫ",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "በመኪናው ግንድ ውስጥ",
+                  "is_correct": false
+                }
+              ]
+            }
+          ],
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_vk_l10_s1_narration_1779031653209.mp3",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/vk_l10_s1_image_1779042172833.jpg"
         },
         {
           "id": "vk_l10_s3",
