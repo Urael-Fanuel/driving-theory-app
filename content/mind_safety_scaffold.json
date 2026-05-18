@@ -1,0 +1,144 @@
+{
+  "topicId": "mind_safety",
+  "name_amharic": "",
+  "name_hebrew": "בטיחות נפשית",
+  "icon": "🧠",
+  "color": "#1A237E",
+  "levels": [
+    {
+      "id": "ms_l1",
+      "level": 1,
+      "name_hebrew": "עייפות בנהיגה",
+      "name_amharic": "",
+      "icon": "😴",
+      "color": "#1565C0",
+      "subtopics": [
+        {
+          "id": "ms_l1_s1",
+          "name_hebrew": "עייפות והשפעתה על הנהיגה",
+          "icon": "😴",
+          "explanation_amharic": "መኪና በሚያሽከረክሩበት ጊዜ ድካም እጅግ አደገኛ ከሆኑ ነገሮች አንዱ ነው። ድካም የምላሽ ጊዜን ያዘገያል፣ ንቃትንና ትኩረትን ይቀንሳል። የአሽከርካሪው የአካልና የአእምሮ ሁኔታ የምላሽ ርቀትን በቀጥታ ይነካል። የደከመ አሽከርካሪ መኪናውን ለማቆም ብዙ ርቀት ያስፈልገዋል። አሽከርካሪው ሲደክመው፣ ትኩረቱ ሲበታተን ወይም ያልተረጋጋ ሲሆን፣ ከፊት ለፊቱ ካለው ተሽከርካሪ ያለው ርቀት መጨመር አለበት። ለመንዳት በጣም እንደደከመው የመወሰን ኃላፊነት የአሽከርካሪው ራሱ ነው። ድካም ሲሰማዎት መኪናውን አስተማማኝ በሆነ ቦታ ማቆም፣ ማረፍ፣ አስፈላጊ ከሆነም አጭር እንቅልፍ መውሰድ፣ ውሃ መጠጣት እና የእረፍት ጊዜ መውሰድ ያስፈልጋል። ከዚያ በኋላ ጉዞዎን መቀጠል ይችላሉ።",
+          "narration_script": "መኪና በሚያሽከረክሩበት ጊዜ ድካም እጅግ አደገኛ ከሆኑ ነገሮች አንዱ ነው። ድካም የምላሽ ጊዜን ያዘገያል፣ ንቃትንና ትኩረትን ይቀንሳል። የአሽከርካሪው የአካልና የአእምሮ ሁኔታ የምላሽ ርቀትን በቀጥታ ይነካል። የደከመ አሽከርካሪ መኪናውን ለማቆም ብዙ ርቀት ያስፈልገዋል። አሽከርካሪው ሲደክመው፣ ትኩረቱ ሲበታተን ወይም ያልተረጋጋ ሲሆን፣ ከፊት ለፊቱ ካለው ተሽከርካሪ ያለው ርቀት መጨመር አለበት። ለመንዳት በጣም እንደደከመው የመወሰን ኃላፊነት የአሽከርካሪው ራሱ ነው። ድካም ሲሰማዎት መኪናውን አስተማማኝ በሆነ ቦታ ማቆም፣ ማረፍ፣ አስፈላጊ ከሆነም አጭር እንቅልፍ መውሰድ፣ ውሃ መጠጣት እና የእረፍት ጊዜ መውሰድ ያስፈልጋል። ከዚያ በኋላ ጉዞዎን መቀጠል ይችላሉ።",
+          "image_description": "Medium shot of an Ethiopian man with dark skin, short curly black hair, and Ethiopian facial features sitting in the driver's seat of a car at night. The frame shows his face and upper body, the steering wheel he is loosely gripping, and the dashboard in front of him with soft warm instrument panel glow. His eyelids are HEAVY and DROOPING — open only about one-quarter, his irises barely visible beneath the lowered lids. He is clearly fighting to keep his eyes open. Dark heavy bags under his eyes. His face is slack and expressionless from exhaustion. His head tilts slightly forward as if about to nod off. His grip on the steering wheel is loose. The windshield and dark road ahead are faintly visible in the background. The only light source is the warm amber glow from the dashboard instrument panel illuminating his face softly from below. Photorealistic, cinematic, documentary style.",
+          "questions": [
+            {
+              "question_amharic": "በድካም ላይ መኪና መንዳት ምን ተጽዕኖ ያሳድራል?",
+              "answers": [
+                {
+                  "text_amharic": "የምላሽ ጊዜን ያፋጥናል እና ንቃትን ይጨምራል",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የምላሽ ጊዜን ያዘገያል እና ንቃትን ይቀንሳል",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "የነዳጅ ፍጆታን ይጨምራል",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የመኪናውን ፍጥነት ይጨምራል",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "አሽከርካሪው በሚያሽከረክርበት ጊዜ በጣም ድካም ሲሰማው ምን ማድረግ አለበት?",
+              "answers": [
+                {
+                  "text_amharic": "መስኮቶችን ከፍቶ አየር ማስገባት",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ጮክ ያለ ሙዚቃ ማዳመጥ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "መኪናውን አስተማማኝ በሆነ ቦታ አቁሞ ማረፍ ወይም አጭር እንቅልፍ መውሰድ",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ፍጥነቱን ጨምሮ በፍጥነት ወደ መድረሻው መሄድ",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "ለመንዳት በጣም እንደደከመው የመወሰን ኃላፊነት የማን ነው?",
+              "answers": [
+                {
+                  "text_amharic": "የመንገድ ፖሊስ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የመንጃ ፈቃድ ሰጪው አካል",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የአሽከርካሪው ራሱ",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "የተሳፋሪዎች",
+                  "is_correct": false
+                }
+              ]
+            }
+          ],
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_ms_l1_s1_narration_1779098470416.mp3",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/ms_l1_s1_image_1779099024986.jpg"
+        }
+      ]
+    },
+    {
+      "id": "ms_l2",
+      "level": 2,
+      "name_hebrew": "נהיגת לילה",
+      "name_amharic": "",
+      "icon": "🌙",
+      "color": "#0D47A1",
+      "subtopics": [
+        {
+          "id": "ms_l2_s1",
+          "name_hebrew": "סכנות ייחודיות בנהיגת לילה",
+          "icon": "🌙"
+        }
+      ]
+    },
+    {
+      "id": "ms_l3",
+      "level": 3,
+      "name_hebrew": "אלכוהול וסמים",
+      "name_amharic": "",
+      "icon": "🚫",
+      "color": "#B71C1C",
+      "subtopics": [
+        {
+          "id": "ms_l3_s1",
+          "name_hebrew": "אלכוהול בנהיגה",
+          "icon": "🍺"
+        },
+        {
+          "id": "ms_l3_s2",
+          "name_hebrew": "תרופות וסמים בנהיגה",
+          "icon": "💊"
+        }
+      ]
+    },
+    {
+      "id": "ms_l4",
+      "level": 4,
+      "name_hebrew": "מצב נפשי ורגשי",
+      "name_amharic": "",
+      "icon": "😤",
+      "color": "#6A1B9A",
+      "subtopics": [
+        {
+          "id": "ms_l4_s1",
+          "name_hebrew": "רגשות, כעס ולחץ בנהיגה",
+          "icon": "😤"
+        }
+      ]
+    }
+  ]
+}

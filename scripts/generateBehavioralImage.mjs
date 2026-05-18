@@ -17,10 +17,9 @@ import https from 'https';
 import { createClient } from '@supabase/supabase-js';
 import { GoogleAuth } from 'google-auth-library';
 
-const __dirname     = dirname(fileURLToPath(import.meta.url));
-const ROOT          = join(__dirname, '..');
-const SCAFFOLD_PATH = join(ROOT, 'content', 'vehicle_knowledge_scaffold.json');
-const TEMP_DIR      = join(ROOT, 'temp_behavioral');
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const ROOT      = join(__dirname, '..');
+const TEMP_DIR  = join(ROOT, 'temp_behavioral');
 
 if (!existsSync(TEMP_DIR)) mkdirSync(TEMP_DIR, { recursive: true });
 
@@ -36,6 +35,15 @@ if (!SUBTOPIC_ID) {
   console.error('❌ Usage: node generateBehavioralImage.mjs --subtopic <id> [--field image_url_2]');
   process.exit(1);
 }
+
+// ─── Detect scaffold by ID prefix ─────────────────────────────────────────────
+const SCAFFOLD_MAP_FILES = {
+  vk_: 'vehicle_knowledge_scaffold.json',
+  ms_: 'mind_safety_scaffold.json',
+};
+const scaffoldFile  = Object.entries(SCAFFOLD_MAP_FILES).find(([prefix]) => SUBTOPIC_ID.startsWith(prefix))?.[1]
+  ?? 'vehicle_knowledge_scaffold.json';
+const SCAFFOLD_PATH = join(ROOT, 'content', scaffoldFile);
 
 const SUPABASE_URL  = process.env.EXPO_PUBLIC_SUPABASE_URL;
 const SERVICE_KEY   = process.env.SUPABASE_SERVICE_ROLE_KEY;

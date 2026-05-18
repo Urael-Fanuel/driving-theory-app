@@ -46,6 +46,7 @@ import { AudioButton } from '../../../components/shared/AudioButton';
 import { speakAmharic, speakAndAwait, stopTTS } from '../../../utils/googleTTS';
 import { useAudio } from '../../../hooks/useAudio';
 import vehicleKnowledgeData from '../../../content/vehicle_knowledge_scaffold.json';
+import mindSafetyData       from '../../../content/mind_safety_scaffold.json';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 interface Answer   { text_amharic: string; is_correct: boolean; }
@@ -63,6 +64,7 @@ interface Scaffold { topicId: string; levels: Level[]; }
 
 const SCAFFOLD_MAP: Record<string, Scaffold> = {
   vehicle_knowledge: vehicleKnowledgeData as Scaffold,
+  mind_safety:       mindSafetyData       as Scaffold,
 };
 
 type Phase = 'explanation' | 'questions' | 'complete';

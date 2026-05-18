@@ -15,16 +15,24 @@ import { fileURLToPath } from 'url';
 import https from 'https';
 import { createClient } from '@supabase/supabase-js';
 
-const __dirname     = dirname(fileURLToPath(import.meta.url));
-const ROOT          = join(__dirname, '..');
-const SCAFFOLD_PATH = join(ROOT, 'content', 'vehicle_knowledge_scaffold.json');
-const TEMP_DIR      = join(ROOT, 'temp_behavioral');
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const ROOT      = join(__dirname, '..');
+const TEMP_DIR  = join(ROOT, 'temp_behavioral');
 
 if (!existsSync(TEMP_DIR)) mkdirSync(TEMP_DIR, { recursive: true });
 
 const subtopicArg = process.argv.indexOf('--subtopic');
 const SUBTOPIC_ID = subtopicArg >= 0 ? process.argv[subtopicArg + 1] : null;
 if (!SUBTOPIC_ID) { console.error('❌ נדרש: --subtopic <id>'); process.exit(1); }
+
+// ─── Detect scaffold by ID prefix ─────────────────────────────────────────────
+const SCAFFOLD_MAP = {
+  vk_:  'vehicle_knowledge_scaffold.json',
+  ms_:  'mind_safety_scaffold.json',
+};
+const scaffoldFile = Object.entries(SCAFFOLD_MAP).find(([prefix]) => SUBTOPIC_ID.startsWith(prefix))?.[1]
+  ?? 'vehicle_knowledge_scaffold.json';
+const SCAFFOLD_PATH = join(ROOT, 'content', scaffoldFile);
 
 const TTS_KEY      = process.env.EXPO_PUBLIC_GOOGLE_TTS_KEY;
 const SUPABASE_URL = process.env.EXPO_PUBLIC_SUPABASE_URL;
