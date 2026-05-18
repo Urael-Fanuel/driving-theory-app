@@ -101,7 +101,77 @@
         {
           "id": "ms_l2_s1",
           "name_hebrew": "סכנות ייחודיות בנהיגת לילה",
-          "icon": "🌙"
+          "icon": "🌙",
+          "explanation_amharic": "በሌሊት በሚያሽከረክሩበት ጊዜ ልዩ አደጋዎች ያጋጥማሉ። የማየት ችሎታ ውስን ይሆናል፤ የመኪናው መብራቶች የመንገዱን ክፍል ብቻ ስለሚያበሩ እንቅፋቶችን፣ እግረኞችን እና እንስሳትን ለመለየት አስቸጋሪ ይሆናል። የብሬክ ማቆሚያ ርቀት ተመሳሳይ ቢሆንም የማየት ርቀት ግን ያጥራል። ስለዚህ ፍጥነትዎን ከመኪናው መብራት የማብራት አቅም ጋር ማስተካከል አለብዎት። ከፊት ለፊት ከሚመጡ ተሽከርካሪዎች መብራት የሚመጣው ብርሃን ዓይንዎን ሲያሳውር፣ እይታዎን ወደ መንገዱ ቀኝ ዳርቻ በማዞር ፍጥነትዎን መቀነስ ይገባል። በሰውነት ባዮሎጂያዊ ሰዓት ምክንያት በሌሊት ድካም ይከማቻል እና እንቅልፍ የመውሰድ ዝንባሌ ይኖራል። በዚህ ጊዜ ተሽከርካሪውን ደህንነቱ በተጠበቀ ቦታ አቁመው፣ እራስዎን ማደስ ወይም አጭር እንቅልፍ መውሰድ ያስፈልጋል።",
+          "narration_script": "በሌሊት በሚያሽከረክሩበት ጊዜ ልዩ አደጋዎች ያጋጥማሉ። የማየት ችሎታ ውስን ይሆናል፤ የመኪናው መብራቶች የመንገዱን ክፍል ብቻ ስለሚያበሩ እንቅፋቶችን፣ እግረኞችን እና እንስሳትን ለመለየት አስቸጋሪ ይሆናል። የብሬክ ማቆሚያ ርቀት ተመሳሳይ ቢሆንም የማየት ርቀት ግን ያጥራል። ስለዚህ ፍጥነትዎን ከመኪናው መብራት የማብራት አቅም ጋር ማስተካከል አለብዎት። ከፊት ለፊት ከሚመጡ ተሽከርካሪዎች መብራት የሚመጣው ብርሃን ዓይንዎን ሲያሳውር፣ እይታዎን ወደ መንገዱ ቀኝ ዳርቻ በማዞር ፍጥነትዎን መቀነስ ይገባል። በሰውነት ባዮሎጂያዊ ሰዓት ምክንያት በሌሊት ድካም ይከማቻል እና እንቅልፍ የመውሰድ ዝንባሌ ይኖራል። በዚህ ጊዜ ተሽከርካሪውን ደህንነቱ በተጠበቀ ቦታ አቁመው፣ እራስዎን ማደስ ወይም አጭር እንቅልፍ መውሰድ ያስፈልጋል።",
+          "image_description": "Night driving scene viewed from inside a car. An Ethiopian man with dark skin, short curly hair, and Ethiopian facial features is driving on a dark unlit road at night. He squints slightly from the bright glare of oncoming headlights visible through the windshield. His face is lit by the warm amber glow of the dashboard. The road ahead is dark beyond the reach of his own headlights. The windshield reflects a faint glow. His hands grip the steering wheel firmly. The car interior — dashboard, steering wheel, and driver — are clearly visible. Photorealistic, cinematic, tense atmosphere.",
+          "questions": [
+            {
+              "question_amharic": "በሌሊት በሚያሽከረክሩበት ጊዜ ከሚያጋጥሙ ልዩ አደጋዎች ዋናው ምንድን ነው?",
+              "answers": [
+                {
+                  "text_amharic": "የመንገድ ምልክቶች በግልጽ አለመታየት",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የማየት ችሎታ ውስን መሆን እና የመኪናው መብራቶች የመንገዱን ክፍል ብቻ ማብራት",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "የነዳጅ ፍጆታ መጨመር",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የትራፊክ መጨናነቅ",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "ከፊት ለፊት ከሚመጡ ተሽከርካሪዎች መብራት በሚመጣው ብርሃን ዓይንዎ ሲታወር ምን ማድረግ አለብዎት?",
+              "answers": [
+                {
+                  "text_amharic": "የመኪናዎን መብራት ከፍ ማድረግ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "እይታዎን ወደ መንገዱ ቀኝ ዳርቻ በማዞር ፍጥነትዎን መቀነስ",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "የመኪናውን ፍጥነት መጨመር",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ዓይኖችዎን ሙሉ በሙሉ መዝጋት",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "በሌሊት በሚያሽከረክሩበት ጊዜ ፍጥነትዎን እንዴት ማስተካከል አለብዎት?",
+              "answers": [
+                {
+                  "text_amharic": "ፍጥነትዎን ሳይቀይሩ ማሽከርከር",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ፍጥነትዎን ከመኪናው መብራት የማብራት አቅም ጋር ማስተካከል",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ሁልጊዜ ከፍተኛ ፍጥነት መጠቀም",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የሌሎች ተሽከርካሪዎችን ፍጥነት መከተል",
+                  "is_correct": false
+                }
+              ]
+            }
+          ],
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_ms_l2_s1_narration_1779111627543.mp3",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/ms_l2_s1_image_1779111763864.jpg"
         }
       ]
     },
