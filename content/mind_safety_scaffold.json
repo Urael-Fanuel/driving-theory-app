@@ -186,7 +186,78 @@
         {
           "id": "ms_l3_s1",
           "name_hebrew": "אלכוהול בנהיגה",
-          "icon": "🍺"
+          "name_amharic": "አልኮልና ማሽከርከር",
+          "icon": "🍺",
+          "explanation_amharic": "አልኮል መጠጣት የአሽከርካሪውን ባህሪ ይለውጣል፣ ጥንቃቄን ይቀንሳል፣ እንዲሁም የማሰብ እና የመንቀሳቀስ ችሎታዎችን ይጎዳል። አልኮል የምላሽ ጊዜን ያረዝማል። ይህ ማለት አደጋ ሲቃረብ አሽከርካሪው በጊዜ ፍሬን መርገጥ ወይም አቅጣጫ መቀየር አይችልም። በዚህ ምክንያት ሌላ ተሽከርካሪ፣ እግረኛ ወይም በመንገድ ላይ የሚገኝ ማንኛውም ነገር ላይ ሊጋጭ ይችላል። በዚህም ምክንያት አሽከርካሪው በትኩረት የመከታተል እና ትክክለኛ ውሳኔ የመስጠት ችሎታው በእጅጉ ይዳከማል። ትንሽ የአልኮል መጠን እንኳን የማሽከርከር ችሎታን ለመጉዳት በቂ ነው። አሽከርካሪው ራሱን ደህና እንደሆነ ቢሰማውም፣ ችሎታዎቹ ግን ተጎድተው ሊሆን ይችላል። ወደመኪናው ከመግባትዎ በፊት ምንም አይነት አልኮል አለመጠጣት በጣም አስተማማኝ ምርጫ ነው።\n\nእያንዳንዱ አገር በአሽከርካሪዎች ደም ውስጥ ምን ያህል መቶኛ እንደሚፈቀድ የራሱ ህጎች አሉት። እነዚህ በጣም አናሳ መቶኛዎች ናቸው፣ እና ይህንን ማወቅ የአሽከርካሪው ኃላፊነት ነው። መኪና እንደሚነዱ ካወቁ ዋናው ቅድሚያ የሚሰጠው አልኮል አለመጠጣት ነው፣ ከጠጡም አለመንዳት፣ ምክንያቱም ይህ በጣም ከባድ መዘዝ ያስከትላል።\n\nለሕዝብ ማመላለሻ አሽከርካሪዎች እና ለጭነት መኪና አሽከርካሪዎች በደም ውስጥ ምንም ዓይነት አልኮል መኖር የለበትም። ቅጣቶቹ ከባድ ናቸው፤ የመንጃ ፈቃድ መሰረዝ፣ ቅጣት መክፈል እና እስራት ይገኙበታል።",
+          "narration_script": "አልኮል መጠጣት የአሽከርካሪውን ባህሪ ይለውጣል፣ ጥንቃቄን ይቀንሳል፣ እንዲሁም የማሰብ እና የመንቀሳቀስ ችሎታዎችን ይጎዳል። አልኮል የምላሽ ጊዜን ያረዝማል። ይህ ማለት አደጋ ሲቃረብ አሽከርካሪው በጊዜ ፍሬን መርገጥ ወይም አቅጣጫ መቀየር አይችልም። በዚህ ምክንያት ሌላ ተሽከርካሪ፣ እግረኛ ወይም በመንገድ ላይ የሚገኝ ማንኛውም ነገር ላይ ሊጋጭ ይችላል። በዚህም ምክንያት አሽከርካሪው በትኩረት የመከታተል እና ትክክለኛ ውሳኔ የመስጠት ችሎታው በእጅጉ ይዳከማል። ትንሽ የአልኮል መጠን እንኳን የማሽከርከር ችሎታን ለመጉዳት በቂ ነው። አሽከርካሪው ራሱን ደህና እንደሆነ ቢሰማውም፣ ችሎታዎቹ ግን ተጎድተው ሊሆን ይችላል። ወደመኪናው ከመግባትዎ በፊት ምንም አይነት አልኮል አለመጠጣት በጣም አስተማማኝ ምርጫ ነው። እያንዳንዱ አገር በአሽከርካሪዎች ደም ውስጥ ምን ያህል መቶኛ እንደሚፈቀድ የራሱ ህጎች አሉት። እነዚህ በጣም አናሳ መቶኛዎች ናቸው፣ እና ይህንን ማወቅ የአሽከርካሪው ኃላፊነት ነው። ወደ ተሽከርካሪ ከመግባትዎ በፊት ዋናው ቅድሚያ የሚሰጠው አልኮል አለመጠጣት ነው። አልኮልና ማሽከርከር አብሮ ሊሄዱ አይችሉም፣ ምክንያቱም ይህ በጣም ከባድ መዘዝ ያስከትላል። አልኮል ሰውነትዎ ውስጥ ካለ፣ ራስዎ አያሽከርክሩ። የሕዝብ ማመላለሻ ይጠቀሙ ወይም ሌላ ሰው ያሽከርክርልዎት። ይህ ለራስዎ እና ለሌሎች ሰዎች ሕይወት የሚወስዱት ኃላፊነት ነው። ለሕዝብ ማመላለሻ አሽከርካሪዎች እና ለጭነት መኪና አሽከርካሪዎች በደም ውስጥ ምንም ዓይነት አልኮል መኖር የለበትም። ቅጣቶቹ ከባድ ናቸው፤ የመንጃ ፈቃድ መሰረዝ፣ ቅጣት መክፈል እና እስራት ይገኙበታል።",
+          "image_description": "Realistic photo-style image: an Ethiopian man with dark skin and short curly black hair sitting at a bar or restaurant table. On the table in clear focus in the foreground: a half-empty glass of beer and a car key placed beside it. The man is slightly blurred in the background, looking at the glass. Dim warm bar lighting. The composition emphasizes the contrast between the drink and the car key — conveying the danger of drinking and driving. Photorealistic, cinematic, no text.",
+          "questions": [
+            {
+              "question_amharic": "አልኮል የማሽከርከር ችሎታን እንዴት ይጎዳል?",
+              "answers": [
+                {
+                  "text_amharic": "በፍጥነት እንዲያሽከረክሩ ያደርጋል",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የማሰብ ችሎታን፣ ትኩረትን፣ እንቅስቃሴዎችን የማስተባበር ችሎታን እና ምላሽ የመስጠት ጊዜን ይጎዳል",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "የበለጠ ንቁ ያደርጋል",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የማየት ችሎታን ያሻሽላል",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "ከማሽከርከርዎ በፊት ለአሽከርካሪ አስተማማኝ የሆነ የአልኮል መጠን ምን ያህል ነው?",
+              "answers": [
+                {
+                  "text_amharic": "አነስተኛ መጠን ብቻ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "አንድ ብርጭቆ ብቻ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "በሰውነት ክብደት ይወሰናል",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ምንም ዓይነት አልኮል አይጠጣ — ዜሮ",
+                  "is_correct": true
+                }
+              ]
+            },
+            {
+              "question_amharic": "ለአዲስ አሽከርካሪዎች እና ለሙያዊ አሽከርካሪዎች ምን ያህል አልኮል ይፈቀዳል?",
+              "answers": [
+                {
+                  "text_amharic": "0.01%",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "0.02%",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "0.05%",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ምንም ዓይነት አልኮል መኖር የለበትም — ዜሮ",
+                  "is_correct": true
+                }
+              ]
+            }
+          ],
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_ms_l3_s1_narration_1779179286498.mp3",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/ms_l3_s1_image_1779179489151.jpg"
         },
         {
           "id": "ms_l3_s2",
