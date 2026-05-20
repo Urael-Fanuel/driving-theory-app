@@ -24,6 +24,7 @@ import * as Haptics from 'expo-haptics';
 import { Colors } from '../../../constants/colors';
 import { Typography } from '../../../constants/typography';
 import { TopicCard } from '../../../components/shared/TopicCard';
+import { FloatingCard } from '../../../components/shared/FloatingCard';
 import { LoadingScreen } from '../../../components/shared/LoadingScreen';
 import { DBTopic } from '../../../backend/supabaseClient';
 import * as api from '../../../backend/api';
@@ -89,14 +90,16 @@ export default function EngineBHomeScreen() {
         data={topics}
         keyExtractor={t => t.id}
         renderItem={({ item, index }) => (
-          <TopicCard
-            topic={item}
-            showText
-            onPress={handleTopicPress}
-            progressPercent={getTopicProgress(item.id)}
-            style={styles.topicCard}
-            accentColor={BORDER_COLORS[Math.floor(index / 2) % 3]}
-          />
+          <FloatingCard index={index}>
+            <TopicCard
+              topic={item}
+              showText
+              onPress={handleTopicPress}
+              progressPercent={getTopicProgress(item.id)}
+              style={styles.topicCard}
+              accentColor={BORDER_COLORS[Math.floor(index / 2) % 3]}
+            />
+          </FloatingCard>
         )}
         contentContainerStyle={styles.list}
         showsVerticalScrollIndicator={false}

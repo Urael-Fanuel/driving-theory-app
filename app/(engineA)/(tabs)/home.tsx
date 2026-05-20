@@ -16,7 +16,7 @@
  * └─────────────────────────────────┘
  */
 
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 
 // ─── Audio base URL (Supabase Storage) ────────────────────────────────────────
 const _AUDIO_BASE = (process.env.EXPO_PUBLIC_SUPABASE_URL ?? '') + '/storage/v1/object/public/audio';
@@ -28,12 +28,11 @@ import {
   FlatList,
   SafeAreaView,
   Dimensions,
-  Animated,
-  Easing,
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import * as Haptics from 'expo-haptics';
 import { TrafficSignIcon, TOPIC_ICON_COLOR, TOPIC_SUBTOPIC_COUNT } from '../../../components/shared/TrafficSignIcon';
+import { FloatingCard } from '../../../components/shared/FloatingCard';
 import { Colors } from '../../../constants/colors';
 import { Typography } from '../../../constants/typography';
 import { LoadingScreen } from '../../../components/shared/LoadingScreen';
@@ -44,66 +43,6 @@ import { useProgress } from '../../../hooks/useProgress';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 const CARD_SIZE = (SCREEN_WIDTH - 48 - 12) / 2; // 2 columns with gap
-
-// ─── FloatingCard ─────────────────────────────────────────────────────────────
-
-function FloatingCard({
-  index,
-  style,
-  onPress,
-  accessibilityLabel,
-  children,
-}: {
-  index: number;
-  style?: object;
-  onPress: () => void;
-  accessibilityLabel?: string;
-  children: React.ReactNode;
-}) {
-  const floatAnim = useRef(new Animated.Value(0)).current;
-  const animRef   = useRef<Animated.CompositeAnimation | null>(null);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      animRef.current = Animated.loop(
-        Animated.sequence([
-          Animated.timing(floatAnim, {
-            toValue:         -5,
-            duration:         950,
-            easing:           Easing.inOut(Easing.sin),
-            useNativeDriver:  true,
-          }),
-          Animated.timing(floatAnim, {
-            toValue:         0,
-            duration:         950,
-            easing:           Easing.inOut(Easing.sin),
-            useNativeDriver:  true,
-          }),
-        ])
-      );
-      animRef.current.start();
-    }, (index % 4) * 270); // stagger per card
-
-    return () => {
-      clearTimeout(timer);
-      animRef.current?.stop();
-    };
-  }, []);
-
-  return (
-    <Animated.View style={{ transform: [{ translateY: floatAnim }] }}>
-      <TouchableOpacity
-        style={style}
-        onPress={onPress}
-        activeOpacity={0.8}
-        accessibilityLabel={accessibilityLabel}
-        accessibilityRole="button"
-      >
-        {children}
-      </TouchableOpacity>
-    </Animated.View>
-  );
-}
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
@@ -154,25 +93,28 @@ export default function EngineAHomeScreen() {
   if (loading) return <LoadingScreen />;
 
   const renderTopic = ({ item, index }: { item: DBTopic; index: number }) => (
-    <FloatingCard
-      index={index}
-      style={styles.topicCard}
-      onPress={() => handleTopicPress(item)}
-      accessibilityLabel={item.name_amharic}
-    >
-      <TrafficSignIcon topicId={item.id} size={62} />
+    <FloatingCard index={index}>
+      <TouchableOpacity
+        style={styles.topicCard}
+        onPress={() => handleTopicPress(item)}
+        activeOpacity={0.8}
+        accessibilityLabel={item.name_amharic}
+        accessibilityRole="button"
+      >
+        <TrafficSignIcon topicId={item.id} size={62} />
 
-      {/* Count badge — sign count or subtopic count */}
-      {(() => {
-        const count = item.sign_count > 0 ? item.sign_count : (TOPIC_SUBTOPIC_COUNT[item.id] ?? 0);
-        return count > 0 ? (
-          <View style={styles.countBadge}>
-            <Text style={[styles.countText, { color: TOPIC_ICON_COLOR[item.id] ?? '#555' }]}>
-              {count}
-            </Text>
-          </View>
-        ) : null;
-      })()}
+        {/* Count badge — sign count or subtopic count */}
+        {(() => {
+          const count = item.sign_count > 0 ? item.sign_count : (TOPIC_SUBTOPIC_COUNT[item.id] ?? 0);
+          return count > 0 ? (
+            <View style={styles.countBadge}>
+              <Text style={[styles.countText, { color: TOPIC_ICON_COLOR[item.id] ?? '#555' }]}>
+                {count}
+              </Text>
+            </View>
+          ) : null;
+        })()}
+      </TouchableOpacity>
     </FloatingCard>
   );
 
