@@ -71,6 +71,8 @@ export default function EngineBHomeScreen() {
 
   if (loading) return <LoadingScreen message="ርዕሰ ጉዳዮችን እየጫነ..." />;
 
+  const BORDER_COLORS = ['#2e7d32', '#f1c048', '#c62828'];
+
   const getTopicProgress = (topicId: string) =>
     topicsProgress.find(p => p.topicId === topicId)?.masteryPercent ?? 0;
 
@@ -86,13 +88,14 @@ export default function EngineBHomeScreen() {
       <FlatList
         data={topics}
         keyExtractor={t => t.id}
-        renderItem={({ item }) => (
+        renderItem={({ item, index }) => (
           <TopicCard
             topic={item}
             showText
             onPress={handleTopicPress}
             progressPercent={getTopicProgress(item.id)}
             style={styles.topicCard}
+            accentColor={BORDER_COLORS[Math.floor(index / 2) % 3]}
           />
         )}
         contentContainerStyle={styles.list}
@@ -113,13 +116,13 @@ export default function EngineBHomeScreen() {
         </TouchableOpacity>
 
         <TouchableOpacity
-          style={[styles.quickBtn, { backgroundColor: Colors.card }]}
+          style={[styles.quickBtn, { backgroundColor: '#ffffff', borderWidth: 1.5, borderColor: '#dde3ea' }]}
           onPress={() => router.push('/(engineB)/progress')}
           activeOpacity={0.85}
           accessibilityLabel="እድገቴ"
         >
           <Text style={styles.quickBtnIcon}>📊</Text>
-          <Text style={styles.quickBtnText}>እድገት</Text>
+          <Text style={[styles.quickBtnText, { color: '#191c1e' }]}>እድገት</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>
@@ -131,7 +134,7 @@ export default function EngineBHomeScreen() {
 const styles = StyleSheet.create({
   safeArea: {
     flex:            1,
-    backgroundColor: Colors.background,
+    backgroundColor: '#f7f9fb',
   },
   header: {
     paddingHorizontal: 20,
@@ -140,11 +143,11 @@ const styles = StyleSheet.create({
   },
   appTitle: {
     ...Typography.h1,
-    color: Colors.textPrimary,
+    color: '#191c1e',
   },
   appSubtitle: {
     ...Typography.body,
-    color:     Colors.textSecondary,
+    color:     '#404943',
     marginTop: 4,
   },
   list: {

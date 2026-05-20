@@ -16,7 +16,7 @@
  * └─────────────────────────────────┘
  */
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 
 // ─── Audio base URL (Supabase Storage) ────────────────────────────────────────
 const _AUDIO_BASE = (process.env.EXPO_PUBLIC_SUPABASE_URL ?? '') + '/storage/v1/object/public/audio';
@@ -28,9 +28,12 @@ import {
   FlatList,
   SafeAreaView,
   Dimensions,
+  Animated,
+  Easing,
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import * as Haptics from 'expo-haptics';
+import { TrafficSignIcon } from '../../../components/shared/TrafficSignIcon';
 import { Colors } from '../../../constants/colors';
 import { Typography } from '../../../constants/typography';
 import { LoadingScreen } from '../../../components/shared/LoadingScreen';
@@ -41,6 +44,66 @@ import { useProgress } from '../../../hooks/useProgress';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 const CARD_SIZE = (SCREEN_WIDTH - 48 - 12) / 2; // 2 columns with gap
+
+// ─── FloatingCard ─────────────────────────────────────────────────────────────
+
+function FloatingCard({
+  index,
+  style,
+  onPress,
+  accessibilityLabel,
+  children,
+}: {
+  index: number;
+  style?: object;
+  onPress: () => void;
+  accessibilityLabel?: string;
+  children: React.ReactNode;
+}) {
+  const floatAnim = useRef(new Animated.Value(0)).current;
+  const animRef   = useRef<Animated.CompositeAnimation | null>(null);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      animRef.current = Animated.loop(
+        Animated.sequence([
+          Animated.timing(floatAnim, {
+            toValue:         -5,
+            duration:         950,
+            easing:           Easing.inOut(Easing.sin),
+            useNativeDriver:  true,
+          }),
+          Animated.timing(floatAnim, {
+            toValue:         0,
+            duration:         950,
+            easing:           Easing.inOut(Easing.sin),
+            useNativeDriver:  true,
+          }),
+        ])
+      );
+      animRef.current.start();
+    }, (index % 4) * 270); // stagger per card
+
+    return () => {
+      clearTimeout(timer);
+      animRef.current?.stop();
+    };
+  }, []);
+
+  return (
+    <Animated.View style={{ transform: [{ translateY: floatAnim }] }}>
+      <TouchableOpacity
+        style={style}
+        onPress={onPress}
+        activeOpacity={0.8}
+        accessibilityLabel={accessibilityLabel}
+        accessibilityRole="button"
+      >
+        {children}
+      </TouchableOpacity>
+    </Animated.View>
+  );
+}
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
@@ -90,25 +153,22 @@ export default function EngineAHomeScreen() {
 
   if (loading) return <LoadingScreen />;
 
-  const renderTopic = ({ item }: { item: DBTopic }) => (
-    <TouchableOpacity
-      style={[
-        styles.topicCard,
-        { borderTopColor: item.color ?? Colors.primary, borderTopWidth: 6 },
-      ]}
+  const renderTopic = ({ item, index }: { item: DBTopic; index: number }) => (
+    <FloatingCard
+      index={index}
+      style={styles.topicCard}
       onPress={() => handleTopicPress(item)}
-      activeOpacity={0.8}
       accessibilityLabel={item.name_amharic}
-      accessibilityRole="button"
     >
-      {/* Large topic icon */}
-      <Text style={styles.topicIcon}>{item.icon ?? '📋'}</Text>
+      <TrafficSignIcon topicId={item.id} size={62} />
 
-      {/* Sign count indicator */}
-      <View style={[styles.countBadge, { backgroundColor: item.color ?? Colors.primary }]}>
-        <Text style={styles.countText}>{item.sign_count}</Text>
-      </View>
-    </TouchableOpacity>
+      {/* Sign count badge */}
+      {item.sign_count > 0 && (
+        <View style={styles.countBadge}>
+          <Text style={[styles.countText, { color: item.color ?? '#555' }]}>{item.sign_count}</Text>
+        </View>
+      )}
+    </FloatingCard>
   );
 
   return (
@@ -148,7 +208,7 @@ export default function EngineAHomeScreen() {
           </TouchableOpacity>
 
           <TouchableOpacity
-            style={[styles.actionButton, { backgroundColor: Colors.card }]}
+            style={[styles.actionButton, { backgroundColor: '#ffffff', borderWidth: 1.5, borderColor: '#dde3ea' }]}
             onPress={() => router.push('/(engineA)/progress')}
             activeOpacity={0.8}
             accessibilityLabel="እድገቴ"
@@ -166,7 +226,7 @@ export default function EngineAHomeScreen() {
 const styles = StyleSheet.create({
   safeArea: {
     flex:            1,
-    backgroundColor: Colors.background,
+    backgroundColor: '#f7f9fb',
   },
   container: {
     flex: 1,
@@ -181,9 +241,11 @@ const styles = StyleSheet.create({
     width:           48,
     height:          48,
     borderRadius:    24,
-    backgroundColor: Colors.card,
+    backgroundColor: '#eeeeee',
     justifyContent:  'center',
     alignItems:      'center',
+    borderWidth:     1,
+    borderColor:     '#dde3ea',
   },
   replayIcon: {
     fontSize: 22,
@@ -199,14 +261,14 @@ const styles = StyleSheet.create({
   topicCard: {
     width:           CARD_SIZE,
     height:          CARD_SIZE,
-    backgroundColor: Colors.card,
+    backgroundColor: '#ffffff',
     borderRadius:    20,
     justifyContent:  'center',
     alignItems:      'center',
     shadowColor:     '#000',
     shadowOffset:    { width: 0, height: 4 },
-    shadowOpacity:   0.3,
-    shadowRadius:    8,
+    shadowOpacity:   0.14,
+    shadowRadius:    10,
     elevation:       6,
     position:        'relative',
   },
@@ -217,16 +279,21 @@ const styles = StyleSheet.create({
     position:        'absolute',
     top:             8,
     right:           8,
-    width:           28,
-    height:          28,
-    borderRadius:    14,
+    minWidth:        26,
+    height:          26,
+    borderRadius:    13,
     justifyContent:  'center',
     alignItems:      'center',
+    backgroundColor: '#ffffff',
+    shadowColor:     '#000',
+    shadowOffset:    { width: 0, height: 1 },
+    shadowOpacity:   0.12,
+    shadowRadius:    3,
+    elevation:       2,
+    paddingHorizontal: 4,
   },
   countText: {
-    ...Typography.caption,
-    color:      Colors.textPrimary,
-    fontWeight: '700',
+    fontWeight: '800',
     fontSize:   13,
     lineHeight: 16,
   },

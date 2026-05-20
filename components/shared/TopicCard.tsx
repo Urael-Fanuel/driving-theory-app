@@ -19,6 +19,7 @@ import { Colors } from '../../constants/colors';
 import { Typography } from '../../constants/typography';
 import { DBTopic } from '../../backend/supabaseClient';
 import { AudioButton } from './AudioButton';
+import { TrafficSignIcon } from './TrafficSignIcon';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -34,6 +35,8 @@ interface TopicCardProps {
   progressPercent?: number;
   /** Style override */
   style?: ViewStyle;
+  /** Override border/accent color */
+  accentColor?: string;
 }
 
 // ─── Component ────────────────────────────────────────────────────────────────
@@ -45,6 +48,7 @@ export function TopicCard({
   isVisited = false,
   progressPercent = 0,
   style,
+  accentColor,
 }: TopicCardProps) {
   const scaleAnim = React.useRef(new Animated.Value(1)).current;
 
@@ -56,7 +60,7 @@ export function TopicCard({
     Animated.spring(scaleAnim, { toValue: 1.0, useNativeDriver: true, speed: 20 }).start();
   };
 
-  const topicColor = topic.color ?? Colors.primary;
+  const topicColor = accentColor ?? topic.color ?? Colors.primary;
 
   return (
     <Animated.View style={{ transform: [{ scale: scaleAnim }] }}>
@@ -69,18 +73,13 @@ export function TopicCard({
         activeOpacity={1}
         style={[
           styles.card,
-          {
-            backgroundColor: Colors.card,
-            borderLeftWidth: 5,
-            borderLeftColor: topicColor,
-          },
           isVisited && styles.cardVisited,
           style,
         ]}
       >
-        {/* Icon */}
-        <View style={[styles.iconContainer, { backgroundColor: topicColor + '22' }]}>
-          <Text style={styles.icon}>{topic.icon ?? '📋'}</Text>
+        {/* Traffic sign icon */}
+        <View style={[styles.iconContainer, { backgroundColor: topicColor + '15' }]}>
+          <TrafficSignIcon topicId={topic.id} size={44} />
         </View>
 
         {/* Text (Engine B only) */}
@@ -125,18 +124,18 @@ export function TopicCard({
 
 const styles = StyleSheet.create({
   card: {
-    flexDirection:  'row',
-    alignItems:     'center',
-    borderRadius:   16,
-    padding:        16,
-    marginBottom:   12,
-    minHeight:      80,
-    shadowColor:    '#000',
-    shadowOffset:   { width: 0, height: 4 },
-    shadowOpacity:  0.2,
-    shadowRadius:   8,
-    elevation:      4,
-    overflow:       'hidden',
+    flexDirection:   'row',
+    alignItems:      'center',
+    borderRadius:    16,
+    padding:         16,
+    marginBottom:    12,
+    minHeight:       80,
+    backgroundColor: '#ffffff',
+    shadowColor:     '#000',
+    shadowOffset:    { width: 0, height: 4 },
+    shadowOpacity:   0.12,
+    shadowRadius:    10,
+    elevation:       5,
   },
   cardVisited: {
     opacity: 0.9,
@@ -158,12 +157,12 @@ const styles = StyleSheet.create({
   },
   title: {
     ...Typography.topicTitle,
-    color: Colors.textPrimary,
+    color: '#191c1e',
     marginBottom: 4,
   },
   subtitle: {
     ...Typography.bodySmall,
-    color: Colors.textSecondary,
+    color: '#404943',
   },
   audioBtn: {
     marginLeft: 'auto',
