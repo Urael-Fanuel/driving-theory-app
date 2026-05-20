@@ -19,7 +19,7 @@ import { Colors } from '../../constants/colors';
 import { Typography } from '../../constants/typography';
 import { DBTopic } from '../../backend/supabaseClient';
 import { AudioButton } from './AudioButton';
-import { TrafficSignIcon } from './TrafficSignIcon';
+import { TrafficSignIcon, TOPIC_SUBTOPIC_COUNT } from './TrafficSignIcon';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -89,7 +89,9 @@ export function TopicCard({
               {topic.name_amharic}
             </Text>
             <Text style={styles.subtitle}>
-              {topic.sign_count} ምልክቶች
+              {topic.sign_count > 0
+                ? `${topic.sign_count} ምልክቶች`
+                : `${TOPIC_SUBTOPIC_COUNT[topic.id] ?? 0} ደረጃዎች`}
             </Text>
           </View>
         )}
