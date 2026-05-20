@@ -108,6 +108,7 @@
     "description_amharic": "ትኩረት ማጣት፣ ምላሽ ጊዜ፣ ድካም እና አደጋ ለማወቅ።",
     "audio_intro": "topic_mind_safety_intro.mp3",
     "sign_count": 0,
+    "subtopic_count": 4,
     "display_order": 10
   },
   {
@@ -119,6 +120,7 @@
     "description_amharic": "የሹፌሮች ሃላፊነት፣ ማህበራዊ ግፊት፣ አልኮልና ሹፌርነት።",
     "audio_intro": "topic_society_law_intro.mp3",
     "sign_count": 0,
+    "subtopic_count": 2,
     "display_order": 11
   },
   {

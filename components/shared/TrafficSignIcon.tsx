@@ -8,6 +8,33 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 
+// ── Subtopic count for behavioral topics (no sign_count in DB) ────────────────
+export const TOPIC_SUBTOPIC_COUNT: Record<string, number> = {
+  vehicle_knowledge: 8,
+  mind_safety:       4,
+  society_law:       2,
+};
+
+// ── Primary color of each topic's icon (used for count badge) ─────────────────
+export const TOPIC_ICON_COLOR: Record<string, string> = {
+  regulatory:            '#1565C0',
+  warning:               '#C62828',
+  right_of_way:          '#C62828',
+  prohibitions:          '#C62828',
+  information_guidance:  '#555555',
+  public_transport:      '#555555',
+  traffic_lights:        '#555555',
+  road_markings:         '#555555',
+  work_site:             '#555555',
+  vehicle_knowledge:     '#555555',
+  mind_safety:           '#555555',
+  society_law:           '#555555',
+  the_road:              '#555555',
+  my_vehicle:            '#555555',
+  two_wheelers:          '#555555',
+  basics_license:        '#555555',
+};
+
 // ── Vector icon map for non-sign topics ───────────────────────────────────────
 export const TOPIC_ICON_MAP: Record<string, string> = {
   regulatory:            'shield-check',

@@ -27,6 +27,7 @@ export interface DBTopic {
   description_amharic?: string;
   audio_intro_url?: string;
   sign_count: number;
+  subtopic_count?: number;
   display_order: number;
 }
 

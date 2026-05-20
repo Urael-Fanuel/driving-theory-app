@@ -33,7 +33,7 @@ import {
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import * as Haptics from 'expo-haptics';
-import { TrafficSignIcon } from '../../../components/shared/TrafficSignIcon';
+import { TrafficSignIcon, TOPIC_ICON_COLOR, TOPIC_SUBTOPIC_COUNT } from '../../../components/shared/TrafficSignIcon';
 import { Colors } from '../../../constants/colors';
 import { Typography } from '../../../constants/typography';
 import { LoadingScreen } from '../../../components/shared/LoadingScreen';
@@ -162,12 +162,17 @@ export default function EngineAHomeScreen() {
     >
       <TrafficSignIcon topicId={item.id} size={62} />
 
-      {/* Sign count badge */}
-      {item.sign_count > 0 && (
-        <View style={styles.countBadge}>
-          <Text style={[styles.countText, { color: item.color ?? '#555' }]}>{item.sign_count}</Text>
-        </View>
-      )}
+      {/* Count badge — sign count or subtopic count */}
+      {(() => {
+        const count = item.sign_count > 0 ? item.sign_count : (TOPIC_SUBTOPIC_COUNT[item.id] ?? 0);
+        return count > 0 ? (
+          <View style={styles.countBadge}>
+            <Text style={[styles.countText, { color: TOPIC_ICON_COLOR[item.id] ?? '#555' }]}>
+              {count}
+            </Text>
+          </View>
+        ) : null;
+      })()}
     </FloatingCard>
   );
 
