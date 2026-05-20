@@ -101,7 +101,7 @@ export function ImageAnswerCard({
         shadowRadius:  10,
         elevation:     10,
       };
-      default:          return { borderColor: Colors.border, borderWidth: 1 };
+      default:          return {};
     }
   };
 
@@ -109,57 +109,72 @@ export function ImageAnswerCard({
 
   return (
     <Animated.View style={[{ transform: [{ scale: bounceAnim }] }, style]}>
-      <TouchableOpacity
-        onPress={handlePress}
-        activeOpacity={disabled ? 1 : 0.8}
-        style={[styles.card, getStateStyle()]}
-        accessibilityLabel={`${number}`}
-        accessibilityRole="button"
-      >
-        {/* Answer image */}
-        <View style={styles.imageContainer}>
-          {imageUri ? (
-            <Image
-              source={{ uri: imageUri }}
-              style={styles.image}
-              resizeMode="contain"
-            />
-          ) : (
-            // Placeholder if no image
-            <View style={styles.imagePlaceholder} />
-          )}
-        </View>
+      {/* Outer wrapper — carries the shadow and lets the audio badge overflow */}
+      <View style={styles.cardWrapper}>
 
-        {/* Result overlay */}
-        {(cardState === 'correct' || cardState === 'wrong') && (
-          <View style={styles.overlay}>
-            <Text style={styles.overlayIcon}>
-              {cardState === 'correct' ? '✅' : '❌'}
+        {/* Card — overflow:hidden clips the image to border radius */}
+        <TouchableOpacity
+          onPress={handlePress}
+          activeOpacity={disabled ? 1 : 0.8}
+          style={[styles.card, getStateStyle()]}
+          accessibilityLabel={`${number}`}
+          accessibilityRole="button"
+        >
+          {/* Answer image */}
+          <View style={styles.imageContainer}>
+            {imageUri ? (
+              <Image
+                source={{ uri: imageUri }}
+                style={styles.image}
+                resizeMode="contain"
+              />
+            ) : (
+              <View style={styles.imagePlaceholder} />
+            )}
+          </View>
+
+          {/* Result overlay */}
+          {(cardState === 'correct' || cardState === 'wrong') && (
+            <View style={styles.overlay}>
+              <Text style={styles.overlayIcon}>
+                {cardState === 'correct' ? '✅' : '❌'}
+              </Text>
+            </View>
+          )}
+
+          {/* Number badge — bottom-left */}
+          <View style={[
+            styles.numberBadge,
+            cardState === 'correct' && { backgroundColor: Colors.correct },
+            cardState === 'wrong'   && { backgroundColor: Colors.wrong },
+          ]}>
+            <Text style={[
+              styles.numberText,
+              (cardState === 'correct' || cardState === 'wrong') && { color: '#ffffff' },
+            ]}>
+              {number}
             </Text>
           </View>
-        )}
+        </TouchableOpacity>
 
-        {/* Number badge */}
-        <View style={[
-          styles.numberBadge,
-          cardState === 'correct' && { backgroundColor: Colors.correct },
-          cardState === 'wrong' && { backgroundColor: Colors.wrong },
-        ]}>
-          <Text style={styles.numberText}>{number}</Text>
-        </View>
-
-        {/* Audio button — top-right corner; plays answer audio without selecting */}
+        {/* 🔊 audio badge — floats from the top-right corner of the card.
+            Clearly separate from the card tap area → no confusion. */}
         {onAudioPress && (
           <TouchableOpacity
-            style={styles.audioButton}
+            style={[
+              styles.audioBadge,
+              cardState === 'reading' && styles.audioBadgeActive,
+            ]}
             onPress={onAudioPress}
+            activeOpacity={0.7}
             accessibilityLabel="ድምጽ አዳምጥ"
-            hitSlop={{ top: 8, right: 8, bottom: 8, left: 8 }}
+            hitSlop={{ top: 6, right: 6, bottom: 6, left: 6 }}
           >
-            <Text style={styles.audioIcon}>🔊</Text>
+            <Text style={styles.audioBadgeIcon}>🔊</Text>
           </TouchableOpacity>
         )}
-      </TouchableOpacity>
+
+      </View>
     </Animated.View>
   );
 }
@@ -167,11 +182,22 @@ export function ImageAnswerCard({
 // ─── Styles ───────────────────────────────────────────────────────────────────
 
 const styles = StyleSheet.create({
+  cardWrapper: {
+    position:      'relative',
+    width:         100,
+    height:        100,
+    borderRadius:  16,
+    shadowColor:   '#000',
+    shadowOffset:  { width: 0, height: 3 },
+    shadowOpacity: 0.12,
+    shadowRadius:  6,
+    elevation:     4,
+  },
   card: {
     width:           100,
     height:          100,
     borderRadius:    16,
-    backgroundColor: Colors.card,
+    backgroundColor: '#ffffff',
     overflow:        'hidden',
     position:        'relative',
   },
@@ -209,28 +235,38 @@ const styles = StyleSheet.create({
     width:           28,
     height:          28,
     borderRadius:    14,
-    backgroundColor: Colors.background,
+    backgroundColor: 'rgba(255,255,255,0.82)',
     justifyContent:  'center',
     alignItems:      'center',
   },
   numberText: {
     ...Typography.numberSmall,
-    color:    Colors.textPrimary,
-    fontSize: 16,
+    color:      '#757575',
+    fontSize:   16,
     lineHeight: 20,
+    fontWeight: '700',
   },
-  audioButton: {
+  audioBadge: {
     position:        'absolute',
-    top:             4,
-    right:           4,
-    width:           26,
-    height:          26,
-    borderRadius:    13,
-    backgroundColor: 'rgba(0,0,0,0.55)',
+    top:             6,
+    right:           6,
+    width:           40,
+    height:          40,
+    borderRadius:    20,
+    backgroundColor: '#ffffff',
     justifyContent:  'center',
     alignItems:      'center',
+    shadowColor:     '#000',
+    shadowOffset:    { width: 0, height: 2 },
+    shadowOpacity:   0.22,
+    shadowRadius:    4,
+    elevation:       16,
+    zIndex:          20,
   },
-  audioIcon: {
-    fontSize: 12,
+  audioBadgeActive: {
+    backgroundColor: '#FDD835',
+  },
+  audioBadgeIcon: {
+    fontSize: 20,
   },
 });

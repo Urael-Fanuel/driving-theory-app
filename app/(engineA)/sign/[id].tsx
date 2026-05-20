@@ -260,7 +260,7 @@ export default function EngineASignScreen() {
             disabled={!prevSign}
             accessibilityLabel="ወደ ቀዳሚ ምልክት"
           >
-            <Text style={[styles.navBtnIcon, !prevSign && styles.navBtnIconDisabled]}>⬅️</Text>
+            <Text style={[styles.navBtnIcon, !prevSign && styles.navBtnIconDisabled]}>‹</Text>
           </TouchableOpacity>
 
           {/* ⏸/▶️ Play / Pause / Resume */}
@@ -279,7 +279,7 @@ export default function EngineASignScreen() {
             disabled={!nextSign}
             accessibilityLabel="ወደ ቀጣይ ምልክት"
           >
-            <Text style={[styles.navBtnIcon, !nextSign && styles.navBtnIconDisabled]}>➡️</Text>
+            <Text style={[styles.navBtnIcon, !nextSign && styles.navBtnIconDisabled]}>›</Text>
           </TouchableOpacity>
 
         </View>
@@ -315,7 +315,7 @@ export default function EngineASignScreen() {
 const styles = StyleSheet.create({
   safeArea: {
     flex:            1,
-    backgroundColor: Colors.background,
+    backgroundColor: '#f7f9fb',
   },
   scrollContent: {
     padding:    16,
@@ -323,40 +323,50 @@ const styles = StyleSheet.create({
     gap:        24,
   },
   backButton: {
-    width:           52,
-    height:          52,
-    borderRadius:    26,
-    backgroundColor: Colors.card,
+    width:           48,
+    height:          48,
+    borderRadius:    24,
+    backgroundColor: '#ffffff',
     justifyContent:  'center',
     alignItems:      'center',
     alignSelf:       'flex-start',
+    shadowColor:     '#000',
+    shadowOffset:    { width: 0, height: 2 },
+    shadowOpacity:   0.10,
+    shadowRadius:    6,
+    elevation:       3,
   },
   backIcon: {
-    fontSize: 24,
-    color:    Colors.textPrimary,
+    fontSize: 22,
+    color:    '#191c1e',
   },
   imageContainer: {
     width:           '100%',
     aspectRatio:     1,
-    borderRadius:    16,
+    borderRadius:    20,
     overflow:        'hidden',
-    backgroundColor: '#FFFFFF',
+    backgroundColor: '#ffffff',
     position:        'relative',
+    shadowColor:     '#000',
+    shadowOffset:    { width: 0, height: 4 },
+    shadowOpacity:   0.10,
+    shadowRadius:    12,
+    elevation:       5,
   },
   signNumberBadge: {
-    position:        'absolute',
-    top:             10,
-    left:            10,
-    backgroundColor: 'rgba(0,0,0,0.55)',
-    borderRadius:    5,
+    position:          'absolute',
+    top:               10,
+    left:              10,
+    backgroundColor:   'rgba(255,255,255,0.92)',
+    borderRadius:      5,
     paddingHorizontal: 8,
-    paddingVertical: 4,
-    zIndex:          1,
+    paddingVertical:   4,
+    zIndex:            1,
   },
   signNumberText: {
-    color:      '#FFFFFF',
+    color:      '#404943',
     fontSize:   14,
-    fontWeight: 'bold',
+    fontWeight: '700',
   },
   signImage: {
     width:  '100%',
@@ -366,7 +376,7 @@ const styles = StyleSheet.create({
     flex:            1,
     justifyContent:  'center',
     alignItems:      'center',
-    backgroundColor: Colors.surface,
+    backgroundColor: '#f0f4f8',
   },
   placeholderIcon: {
     fontSize: 64,
@@ -375,14 +385,19 @@ const styles = StyleSheet.create({
     width:           72,
     height:          72,
     borderRadius:    36,
-    backgroundColor: '#1A1A2E',
+    backgroundColor: '#ffffff',
     justifyContent:  'center',
     alignItems:      'center',
     borderWidth:     1,
-    borderColor:     '#3A3A5E',
+    borderColor:     '#dde3ea',
+    shadowColor:     '#000',
+    shadowOffset:    { width: 0, height: 2 },
+    shadowOpacity:   0.10,
+    shadowRadius:    6,
+    elevation:       3,
   },
   videoBtnIcon: {
-    color:    '#FFFFFF',
+    color:    '#191c1e',
     fontSize: 28,
   },
   controlRow: {
@@ -395,15 +410,23 @@ const styles = StyleSheet.create({
     width:           72,
     height:          72,
     borderRadius:    36,
-    backgroundColor: Colors.card,
+    backgroundColor: '#ffffff',
     justifyContent:  'center',
     alignItems:      'center',
+    shadowColor:     '#000',
+    shadowOffset:    { width: 0, height: 2 },
+    shadowOpacity:   0.10,
+    shadowRadius:    6,
+    elevation:       3,
   },
   navBtnDisabled: {
     opacity: 0.3,
   },
   navBtnIcon: {
-    fontSize: 28,
+    fontSize:   34,
+    color:      '#1565C0',
+    fontWeight: '300',
+    lineHeight: 40,
   },
   navBtnIconDisabled: {
     opacity: 0.4,
@@ -412,12 +435,12 @@ const styles = StyleSheet.create({
     width:           88,
     height:          88,
     borderRadius:    44,
-    backgroundColor: Colors.secondary,
+    backgroundColor: '#FDD835',
     justifyContent:  'center',
     alignItems:      'center',
-    shadowColor:     Colors.secondary,
+    shadowColor:     '#FDD835',
     shadowOffset:    { width: 0, height: 4 },
-    shadowOpacity:   0.4,
+    shadowOpacity:   0.5,
     shadowRadius:    10,
     elevation:       6,
   },
@@ -436,7 +459,7 @@ const styles = StyleSheet.create({
     alignItems:      'center',
     shadowColor:     '#27AE60',
     shadowOffset:    { width: 0, height: 8 },
-    shadowOpacity:   0.6,
+    shadowOpacity:   0.5,
     shadowRadius:    20,
     elevation:       12,
   },

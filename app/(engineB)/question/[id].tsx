@@ -361,7 +361,7 @@ function parseQuestionId(id: string): [string, number] {
 const styles = StyleSheet.create({
   safeArea: {
     flex:            1,
-    backgroundColor: Colors.background,
+    backgroundColor: '#f7f9fb',
   },
 
   // ── Header ──────────────────────────────────────────────────────────────────
@@ -371,20 +371,25 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingVertical:   12,
     borderBottomWidth: 1,
-    borderBottomColor: Colors.border,
+    borderBottomColor: '#eee',
     gap:               8,
   },
   backButton: {
     width:           44,
     height:          44,
     borderRadius:    22,
-    backgroundColor: Colors.card,
+    backgroundColor: '#ffffff',
     justifyContent:  'center',
     alignItems:      'center',
+    shadowColor:     '#000',
+    shadowOffset:    { width: 0, height: 2 },
+    shadowOpacity:   0.10,
+    shadowRadius:    6,
+    elevation:       3,
   },
   backIcon: {
     fontSize: 22,
-    color:    Colors.textPrimary,
+    color:    '#191c1e',
   },
   dotsRow: {
     flex:           1,
@@ -397,17 +402,17 @@ const styles = StyleSheet.create({
     width:           10,
     height:          10,
     borderRadius:    5,
-    backgroundColor: Colors.border,
+    backgroundColor: '#e0e0e0',
   },
   dotActive: {
-    backgroundColor: Colors.primary,
+    backgroundColor: '#2E7D32',
     width:           14,
     height:          14,
     borderRadius:    7,
   },
   counter: {
     ...Typography.body,
-    color:      Colors.textSecondary,
+    color:      '#404943',
     fontWeight: '600',
     minWidth:   36,
     textAlign:  'right',
@@ -415,48 +420,52 @@ const styles = StyleSheet.create({
 
   // ── Content ──────────────────────────────────────────────────────────────────
   content: {
-    padding:    16,
-    gap:        16,
-    alignItems: 'center',
-    // Extra bottom padding so last answer isn't hidden behind nav
+    padding:       16,
+    gap:           16,
+    alignItems:    'center',
     paddingBottom: 24,
   },
   signImageWrapper: {
-    position:        'relative',
-    width:           110,
-    height:          110,
+    position: 'relative',
+    width:    110,
+    height:   110,
   },
   signImage: {
     width:           110,
     height:          110,
     borderRadius:    16,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: '#ffffff',
   },
   signNumberBadge: {
-    position:        'absolute',
-    top:             6,
-    left:            6,
-    backgroundColor: 'rgba(0,0,0,0.55)',
-    borderRadius:    4,
+    position:          'absolute',
+    top:               6,
+    left:              6,
+    backgroundColor:   'rgba(255,255,255,0.92)',
+    borderRadius:      4,
     paddingHorizontal: 6,
-    paddingVertical: 2,
-    zIndex:          1,
+    paddingVertical:   2,
+    zIndex:            1,
   },
   signNumberText: {
-    color:      '#FFFFFF',
+    color:      '#404943',
     fontSize:   11,
     fontWeight: 'bold',
   },
   questionContainer: {
     alignSelf:       'stretch',
-    backgroundColor: Colors.card,
+    backgroundColor: '#ffffff',
     borderRadius:    16,
     padding:         16,
     gap:             10,
+    shadowColor:     '#000',
+    shadowOffset:    { width: 0, height: 2 },
+    shadowOpacity:   0.08,
+    shadowRadius:    6,
+    elevation:       3,
   },
   questionText: {
     ...Typography.question,
-    color:     Colors.textPrimary,
+    color:     '#191c1e',
     textAlign: 'left',
   },
   questionAudio: {
@@ -469,16 +478,15 @@ const styles = StyleSheet.create({
 
   // ── Bottom navigation container ──────────────────────────────────────────────
   bottomNav: {
-    borderTopWidth:    1,
-    borderTopColor:    Colors.border,
-    backgroundColor:   Colors.background,
-    // Extra bottom padding to clear Android system nav bar
-    paddingBottom:     Platform.OS === 'android' ? 16 : 8,
+    borderTopWidth:  1,
+    borderTopColor:  '#eee',
+    backgroundColor: '#f7f9fb',
+    paddingBottom:   Platform.OS === 'android' ? 16 : 8,
   },
 
   navDivider: {
-    height:          1,
-    backgroundColor: Colors.border,
+    height:           1,
+    backgroundColor:  '#eee',
     marginHorizontal: 20,
   },
 
@@ -494,19 +502,19 @@ const styles = StyleSheet.create({
     width:           52,
     height:          52,
     borderRadius:    26,
-    backgroundColor: Colors.primary,   // green — stands out from dark bg
+    backgroundColor: '#2E7D32',
     justifyContent:  'center',
     alignItems:      'center',
     shadowColor:     '#000',
     shadowOffset:    { width: 0, height: 2 },
-    shadowOpacity:   0.4,
+    shadowOpacity:   0.3,
     shadowRadius:    4,
     elevation:       4,
   },
   qNavArrow: {
     fontSize:   28,
-    color:      Colors.textPrimary,
-    fontWeight: '700',                 // bold — clearly visible
+    color:      '#ffffff',
+    fontWeight: '700',
     lineHeight: 34,
   },
   qNavLabels: {
@@ -517,7 +525,7 @@ const styles = StyleSheet.create({
   },
   qNavLabel: {
     ...Typography.bodySmall,
-    color:      Colors.textPrimary,    // white — full contrast
+    color:      '#191c1e',
     fontWeight: '700',
   },
   qNavLabelRight: {
@@ -539,32 +547,37 @@ const styles = StyleSheet.create({
     width:           52,
     height:          52,
     borderRadius:    26,
-    backgroundColor: Colors.cardActive,
+    backgroundColor: '#ffffff',
     borderWidth:     1,
-    borderColor:     Colors.border,
+    borderColor:     '#dde3ea',
     justifyContent:  'center',
     alignItems:      'center',
+    shadowColor:     '#000',
+    shadowOffset:    { width: 0, height: 1 },
+    shadowOpacity:   0.08,
+    shadowRadius:    4,
+    elevation:       2,
   },
   signNavArrow: {
     fontSize:   30,
-    color:      Colors.textPrimary,
+    color:      '#1565C0',
     fontWeight: '300',
     lineHeight: 36,
   },
   signThumbBtn: {
-    flex:        1,
-    alignItems:  'center',
-    gap:         4,
+    flex:       1,
+    alignItems: 'center',
+    gap:        4,
   },
   signThumb: {
     width:           52,
     height:          52,
     borderRadius:    12,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: '#ffffff',
   },
   signThumbLabel: {
     ...Typography.caption,
-    color:    Colors.textSecondary,
+    color:    '#404943',
     fontSize: 11,
   },
 
@@ -573,6 +586,6 @@ const styles = StyleSheet.create({
     opacity: 0.25,
   },
   navArrowDisabled: {
-    color: Colors.textSecondary,
+    color: '#9e9e9e',
   },
 });

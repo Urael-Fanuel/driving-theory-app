@@ -81,37 +81,35 @@ export function TextAnswerCard({
     switch (cardState) {
       case 'correct':
         return {
-          backgroundColor: Colors.correctDark,
-          borderColor:     Colors.correct,
+          backgroundColor: '#E8F5E9',
+          borderColor:     '#2E7D32',
           borderWidth:     2,
         };
       case 'wrong':
         return {
-          backgroundColor: Colors.wrongDark,
-          borderColor:     Colors.wrong,
+          backgroundColor: '#FFEBEE',
+          borderColor:     '#C62828',
           borderWidth:     2,
         };
       case 'selected':
         return {
-          backgroundColor: Colors.cardActive,
-          borderColor:     Colors.secondary,
+          backgroundColor: '#E3F2FD',
+          borderColor:     '#1565C0',
           borderWidth:     2,
         };
       default:
         return {
-          backgroundColor: Colors.card,
-          borderColor:     Colors.border,
-          borderWidth:     1,
+          backgroundColor: '#ffffff',
         };
     }
   };
 
   const getLabelColor = (): string => {
     switch (cardState) {
-      case 'correct': return Colors.correct;
-      case 'wrong':   return Colors.wrong;
-      case 'selected': return Colors.secondary;
-      default:        return Colors.textSecondary;
+      case 'correct':  return '#2E7D32';
+      case 'wrong':    return '#C62828';
+      case 'selected': return '#1565C0';
+      default:         return '#404943';
     }
   };
 
@@ -170,6 +168,11 @@ const styles = StyleSheet.create({
     padding:        16,
     minHeight:      72,
     gap:            12,
+    shadowColor:    '#000',
+    shadowOffset:   { width: 0, height: 2 },
+    shadowOpacity:  0.08,
+    shadowRadius:   6,
+    elevation:      3,
   },
   labelContainer: {
     width:          36,
@@ -194,7 +197,7 @@ const styles = StyleSheet.create({
   },
   answerText: {
     ...Typography.answer,
-    color:    Colors.textPrimary,
+    color:    '#191c1e',
     flex:     1,
     flexWrap: 'wrap',
   },

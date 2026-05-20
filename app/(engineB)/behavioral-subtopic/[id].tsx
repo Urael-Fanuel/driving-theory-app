@@ -476,15 +476,17 @@ export default function BehavioralSubtopicScreenB() {
 
 // ─── Styles ───────────────────────────────────────────────────────────────────
 const styles = StyleSheet.create({
-  safeArea: { flex: 1, backgroundColor: Colors.background },
+  safeArea: { flex: 1, backgroundColor: '#f7f9fb' },
   center:   { flex: 1, justifyContent: 'center', alignItems: 'center', gap: 24 },
 
   backBtn: {
-    width: 44, height: 44, borderRadius: 22,
-    backgroundColor: Colors.card,
+    width: 48, height: 48, borderRadius: 24,
+    backgroundColor: '#ffffff',
     justifyContent: 'center', alignItems: 'center',
+    shadowColor: '#000', shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.10, shadowRadius: 6, elevation: 3,
   },
-  backIcon: { fontSize: 22, color: Colors.textPrimary },
+  backIcon: { fontSize: 22, color: '#191c1e' },
 
   // ── Explanation phase ────────────────────────────────────────────────────────
   explainContent: {
@@ -492,39 +494,37 @@ const styles = StyleSheet.create({
   },
   explainImageWrap: {
     width: '100%', aspectRatio: 1,
-    borderRadius: 16, overflow: 'hidden',
-    backgroundColor: '#FFFFFF',
+    borderRadius: 20, overflow: 'hidden',
+    backgroundColor: '#ffffff',
+    shadowColor: '#000', shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.10, shadowRadius: 12, elevation: 5,
   },
-  explainImage:       { width: '100%', height: '100%' },
+  explainImage:            { width: '100%', height: '100%' },
   explainImagePlaceholder: {
     flex: 1, justifyContent: 'center', alignItems: 'center',
-    backgroundColor: Colors.surface,
+    backgroundColor: '#f0f4f8',
   },
   // ── Dual image layout (when image_url_2 exists) ─────────────────────────────
-  dualImageRow: {
-    flex: 1, flexDirection: 'row',
-  },
-  dualImageCell: {
-    flex: 1, flexDirection: 'column', alignItems: 'center',
-  },
-  dualImage: {
-    flex: 1, width: '100%',
-  },
+  dualImageRow:  { flex: 1, flexDirection: 'row' },
+  dualImageCell: { flex: 1, flexDirection: 'column', alignItems: 'center' },
+  dualImage:     { flex: 1, width: '100%' },
   dualImageLabel: {
-    fontSize: 12, color: Colors.textSecondary,
+    fontSize: 12, color: '#404943',
     textAlign: 'center', paddingBottom: 6, fontWeight: '600',
   },
 
   explainBox: {
     alignSelf: 'stretch',
-    backgroundColor: Colors.card,
+    backgroundColor: '#ffffff',
     borderRadius: 14,
     padding: 16,
     borderLeftWidth: 4,
+    shadowColor: '#000', shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.08, shadowRadius: 6, elevation: 3,
   },
   explainText: {
     ...Typography.body,
-    color: Colors.textPrimary,
+    color: '#191c1e',
     lineHeight: 30,
   },
   explainAudioRow: { alignItems: 'center' },
@@ -549,24 +549,18 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: 'row', alignItems: 'center',
     paddingHorizontal: 16, paddingVertical: 12,
-    borderBottomWidth: 1, borderBottomColor: Colors.border,
+    borderBottomWidth: 1, borderBottomColor: '#eee',
     gap: 8,
   },
   dotsRow: {
     flex: 1, flexDirection: 'row',
     alignItems: 'center', justifyContent: 'center', gap: 10,
   },
-  dot: {
-    width: 10, height: 10, borderRadius: 5,
-    backgroundColor: Colors.border,
-  },
-  dotActive: {
-    backgroundColor: Colors.primary,
-    width: 14, height: 14, borderRadius: 7,
-  },
+  dot:      { width: 10, height: 10, borderRadius: 5, backgroundColor: '#e0e0e0' },
+  dotActive: { backgroundColor: '#2E7D32', width: 14, height: 14, borderRadius: 7 },
   counter: {
     ...Typography.body,
-    color: Colors.textSecondary,
+    color: '#404943',
     fontWeight: '600',
     minWidth: 36,
     textAlign: 'right',
@@ -580,25 +574,27 @@ const styles = StyleSheet.create({
   thumbWrap: {
     width: 110, height: 110,
     borderRadius: 16, overflow: 'hidden',
-    backgroundColor: '#FFFFFF',
+    backgroundColor: '#ffffff',
   },
   thumbPlaceholder: {
     justifyContent: 'center', alignItems: 'center',
-    backgroundColor: Colors.card,
+    backgroundColor: '#f0f4f8',
   },
-  thumbImage: { width: 110, height: 110, backgroundColor: '#FFFFFF' },
+  thumbImage: { width: 110, height: 110, backgroundColor: '#ffffff' },
 
   questionBox: {
     alignSelf: 'stretch',
-    backgroundColor: Colors.card,
+    backgroundColor: '#ffffff',
     borderRadius: 16, padding: 16,
     flexDirection: 'row',
     alignItems: 'flex-start',
     gap: 10,
+    shadowColor: '#000', shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.08, shadowRadius: 6, elevation: 3,
   },
   questionText: {
     ...Typography.question,
-    color: Colors.textPrimary,
+    color: '#191c1e',
     flex: 1,
   },
   ttsBtn: {
@@ -607,7 +603,7 @@ const styles = StyleSheet.create({
   },
   ttsPlayBtn: {
     width: 44, height: 44, borderRadius: 22,
-    backgroundColor: Colors.secondary,
+    backgroundColor: '#FDD835',
     justifyContent: 'center', alignItems: 'center',
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 4 },
@@ -615,24 +611,17 @@ const styles = StyleSheet.create({
     shadowRadius: 8,
     elevation: 6,
   },
-  ttsPlayIcon: {
-    fontSize: 20,
-    textAlign: 'center',
-  },
+  ttsPlayIcon: { fontSize: 20, textAlign: 'center' },
   answersContainer: { alignSelf: 'stretch', gap: 10 },
 
   // ── Bottom navigation ────────────────────────────────────────────────────────
   bottomNav: {
     borderTopWidth: 1,
-    borderTopColor: Colors.border,
-    backgroundColor: Colors.background,
+    borderTopColor: '#eee',
+    backgroundColor: '#f7f9fb',
     paddingBottom: Platform.OS === 'android' ? 16 : 8,
   },
-  navDivider: {
-    height: 1,
-    backgroundColor: Colors.border,
-    marginHorizontal: 20,
-  },
+  navDivider: { height: 1, backgroundColor: '#eee', marginHorizontal: 20 },
 
   // Row 1 — Question nav
   questionNavRow: {
@@ -641,24 +630,21 @@ const styles = StyleSheet.create({
   },
   qNavBtn: {
     width: 52, height: 52, borderRadius: 26,
-    backgroundColor: Colors.primary,
+    backgroundColor: '#2E7D32',
     justifyContent: 'center', alignItems: 'center',
     shadowColor: '#000', shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.4, shadowRadius: 4, elevation: 4,
+    shadowOpacity: 0.3, shadowRadius: 4, elevation: 4,
   },
   qNavArrow: {
-    fontSize: 28, color: Colors.textPrimary,
+    fontSize: 28, color: '#ffffff',
     fontWeight: '700', lineHeight: 34,
   },
   qNavLabels: {
     flex: 1, flexDirection: 'row',
     justifyContent: 'space-between', paddingHorizontal: 4,
   },
-  qNavLabel: {
-    ...Typography.bodySmall,
-    color: Colors.textPrimary, fontWeight: '700',
-  },
-  qNavLabelRight: { textAlign: 'right' },
+  qNavLabel:        { ...Typography.bodySmall, color: '#191c1e', fontWeight: '700' },
+  qNavLabelRight:   { textAlign: 'right' },
   qNavLabelDisabled: { opacity: 0.3 },
 
   // Row 2 — Subtopic nav
@@ -668,27 +654,24 @@ const styles = StyleSheet.create({
   },
   signNavBtn: {
     width: 52, height: 52, borderRadius: 26,
-    backgroundColor: Colors.cardActive,
-    borderWidth: 1, borderColor: Colors.border,
+    backgroundColor: '#ffffff',
+    borderWidth: 1, borderColor: '#dde3ea',
     justifyContent: 'center', alignItems: 'center',
+    shadowColor: '#000', shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.08, shadowRadius: 4, elevation: 2,
   },
   signNavArrow: {
-    fontSize: 30, color: Colors.textPrimary,
+    fontSize: 30, color: '#1565C0',
     fontWeight: '300', lineHeight: 36,
   },
-  signThumbBtn: {
-    flex: 1, alignItems: 'center', gap: 4,
-  },
+  signThumbBtn:  { flex: 1, alignItems: 'center', gap: 4 },
   signThumb: {
     width: 52, height: 52, borderRadius: 12,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: '#ffffff',
   },
-  signThumbLabel: {
-    ...Typography.caption,
-    color: Colors.textSecondary, fontSize: 11,
-  },
+  signThumbLabel: { ...Typography.caption, color: '#404943', fontSize: 11 },
 
   // Shared disabled
-  navBtnDisabled:    { opacity: 0.25 },
-  navArrowDisabled:  { color: Colors.textSecondary },
+  navBtnDisabled:   { opacity: 0.25 },
+  navArrowDisabled: { color: '#9e9e9e' },
 });

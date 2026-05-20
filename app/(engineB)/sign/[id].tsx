@@ -182,7 +182,7 @@ export default function EngineBSignScreen() {
 const styles = StyleSheet.create({
   safeArea: {
     flex:            1,
-    backgroundColor: Colors.background,
+    backgroundColor: '#f7f9fb',
   },
 
   // ── Header ──────────────────────────────────────────────────────────────────
@@ -192,23 +192,28 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingVertical:   12,
     borderBottomWidth: 1,
-    borderBottomColor: Colors.border,
+    borderBottomColor: '#eee',
   },
   backButton: {
-    width:           44,
-    height:          44,
-    borderRadius:    22,
-    backgroundColor: Colors.card,
+    width:           48,
+    height:          48,
+    borderRadius:    24,
+    backgroundColor: '#ffffff',
     justifyContent:  'center',
     alignItems:      'center',
+    shadowColor:     '#000',
+    shadowOffset:    { width: 0, height: 2 },
+    shadowOpacity:   0.10,
+    shadowRadius:    6,
+    elevation:       3,
   },
   backIcon: {
     fontSize: 22,
-    color:    Colors.textPrimary,
+    color:    '#191c1e',
   },
   positionLabel: {
     ...Typography.body,
-    color:      Colors.textSecondary,
+    color:      '#404943',
     flex:       1,
     textAlign:  'center',
     fontWeight: '600',
@@ -224,7 +229,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical:   14,
     borderTopWidth:    1,
-    borderTopColor:    Colors.border,
+    borderTopColor:    '#eee',
     gap:               12,
   },
   navRow: {
@@ -236,23 +241,26 @@ const styles = StyleSheet.create({
     width:           64,
     height:          64,
     borderRadius:    32,
-    backgroundColor: Colors.cardActive,
+    backgroundColor: '#ffffff',
     justifyContent:  'center',
     alignItems:      'center',
-    borderWidth:     1,
-    borderColor:     Colors.border,
+    shadowColor:     '#000',
+    shadowOffset:    { width: 0, height: 2 },
+    shadowOpacity:   0.10,
+    shadowRadius:    6,
+    elevation:       3,
   },
   navBtnDisabled: {
     opacity: 0.25,
   },
   navBtnIcon: {
     fontSize:   34,
-    color:      Colors.textPrimary,
+    color:      '#1565C0',
     fontWeight: '300',
     lineHeight: 40,
   },
   navBtnIconDisabled: {
-    color: Colors.textSecondary,
+    color: '#9e9e9e',
   },
   navSpacer: {
     flex: 1,
@@ -263,7 +271,7 @@ const styles = StyleSheet.create({
     justifyContent:  'center',
     borderRadius:    16,
     paddingVertical: 16,
-    backgroundColor: Colors.primary,
+    backgroundColor: '#2E7D32',
     gap:             12,
   },
   practiceIcon: {
@@ -271,7 +279,7 @@ const styles = StyleSheet.create({
   },
   practiceText: {
     ...Typography.answer,
-    color:      Colors.textPrimary,
+    color:      '#ffffff',
     fontWeight: '700',
   },
 });

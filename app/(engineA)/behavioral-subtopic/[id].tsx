@@ -468,7 +468,7 @@ export default function BehavioralSubtopicScreenA() {
               onPress={() => navToSubtopic(prevSubtopic)}
               disabled={!prevSubtopic}
             >
-              <Text style={[styles.navBtnIcon, !prevSubtopic && styles.navBtnIconDisabled]}>⬅️</Text>
+              <Text style={[styles.navBtnIcon, !prevSubtopic && styles.navBtnIconDisabled]}>‹</Text>
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.audioBtn} onPress={handleNarBtn}>
@@ -480,7 +480,7 @@ export default function BehavioralSubtopicScreenA() {
               onPress={() => navToSubtopic(nextSubtopic)}
               disabled={!nextSubtopic}
             >
-              <Text style={[styles.navBtnIcon, !nextSubtopic && styles.navBtnIconDisabled]}>➡️</Text>
+              <Text style={[styles.navBtnIcon, !nextSubtopic && styles.navBtnIconDisabled]}>›</Text>
             </TouchableOpacity>
           </View>
 
@@ -521,7 +521,7 @@ export default function BehavioralSubtopicScreenA() {
               onPress={() => navigateToQuestion(qIndex - 1)}
               disabled={qIndex === 0}
             >
-              <Text style={[styles.navBtnIcon, qIndex === 0 && styles.navBtnIconDisabled]}>⬅️</Text>
+              <Text style={[styles.navBtnIcon, qIndex === 0 && styles.navBtnIconDisabled]}>‹</Text>
             </TouchableOpacity>
 
             <View style={styles.progressRow}>
@@ -542,7 +542,7 @@ export default function BehavioralSubtopicScreenA() {
               onPress={() => navigateToQuestion(qIndex + 1)}
               disabled={qIndex === questions.length - 1}
             >
-              <Text style={[styles.navBtnIcon, qIndex === questions.length - 1 && styles.navBtnIconDisabled]}>➡️</Text>
+              <Text style={[styles.navBtnIcon, qIndex === questions.length - 1 && styles.navBtnIconDisabled]}>›</Text>
             </TouchableOpacity>
           </View>
 
@@ -553,7 +553,7 @@ export default function BehavioralSubtopicScreenA() {
               onPress={() => navToSubtopic(prevSubtopic)}
               disabled={!prevSubtopic}
             >
-              <Text style={[styles.navBtnIcon, !prevSubtopic && styles.navBtnIconDisabled]}>⬅️</Text>
+              <Text style={[styles.navBtnIcon, !prevSubtopic && styles.navBtnIconDisabled]}>‹</Text>
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.audioBtn} onPress={handleAudioBtn}>
@@ -565,7 +565,7 @@ export default function BehavioralSubtopicScreenA() {
               onPress={() => navToSubtopic(nextSubtopic)}
               disabled={!nextSubtopic}
             >
-              <Text style={[styles.navBtnIcon, !nextSubtopic && styles.navBtnIconDisabled]}>➡️</Text>
+              <Text style={[styles.navBtnIcon, !nextSubtopic && styles.navBtnIconDisabled]}>›</Text>
             </TouchableOpacity>
           </View>
 
@@ -625,43 +625,40 @@ export default function BehavioralSubtopicScreenA() {
 
 // ─── Styles ───────────────────────────────────────────────────────────────────
 const styles = StyleSheet.create({
-  safeArea:      { flex: 1, backgroundColor: Colors.background },
+  safeArea:       { flex: 1, backgroundColor: '#f7f9fb' },
   scrollContent:  { padding: 16, alignItems: 'center', gap: 24 },
-  // Questions phase needs extra bottom padding so the mic button isn't clipped
   scrollContentQ: { padding: 16, paddingBottom: 140, alignItems: 'center', gap: 24 },
-  center:        { flex: 1, justifyContent: 'center', alignItems: 'center', gap: 24 },
+  center:         { flex: 1, justifyContent: 'center', alignItems: 'center', gap: 24 },
 
   backButton: {
-    width: 52, height: 52, borderRadius: 26,
-    backgroundColor: Colors.card,
+    width: 48, height: 48, borderRadius: 24,
+    backgroundColor: '#ffffff',
     justifyContent: 'center', alignItems: 'center', alignSelf: 'flex-start',
+    shadowColor: '#000', shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.10, shadowRadius: 6, elevation: 3,
   },
-  backIcon: { fontSize: 24, color: Colors.textPrimary },
+  backIcon: { fontSize: 22, color: '#191c1e' },
 
   // ── Explanation phase ────────────────────────────────────────────────────────
   imageContainer: {
     width: '100%', aspectRatio: 1,
-    borderRadius: 16, overflow: 'hidden',
-    backgroundColor: '#FFFFFF',
+    borderRadius: 20, overflow: 'hidden',
+    backgroundColor: '#ffffff',
+    shadowColor: '#000', shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.10, shadowRadius: 12, elevation: 5,
   },
   fullImage:       { width: '100%', height: '100%' },
   imagePlaceholder: {
     flex: 1, justifyContent: 'center', alignItems: 'center',
-    backgroundColor: Colors.surface,
+    backgroundColor: '#f0f4f8',
   },
 
   // ── Dual image layout (when image_url_2 exists) ─────────────────────────────
-  dualImageRow: {
-    flex: 1, flexDirection: 'row',
-  },
-  dualImageCell: {
-    flex: 1, flexDirection: 'column', alignItems: 'center',
-  },
-  dualImage: {
-    flex: 1, width: '100%',
-  },
+  dualImageRow:  { flex: 1, flexDirection: 'row' },
+  dualImageCell: { flex: 1, flexDirection: 'column', alignItems: 'center' },
+  dualImage:     { flex: 1, width: '100%' },
   dualImageLabel: {
-    fontSize: 12, color: Colors.textSecondary,
+    fontSize: 12, color: '#404943',
     textAlign: 'center', paddingBottom: 6, fontWeight: '600',
   },
 
@@ -670,7 +667,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#27AE60',
     justifyContent: 'center', alignItems: 'center',
     shadowColor: '#27AE60', shadowOffset: { width: 0, height: 8 },
-    shadowOpacity: 0.6, shadowRadius: 20, elevation: 12,
+    shadowOpacity: 0.5, shadowRadius: 20, elevation: 12,
   },
   startQuizIcon: { fontSize: 56 },
 
@@ -681,18 +678,25 @@ const styles = StyleSheet.create({
   },
   navBtn: {
     width: 72, height: 72, borderRadius: 36,
-    backgroundColor: Colors.card,
+    backgroundColor: '#ffffff',
     justifyContent: 'center', alignItems: 'center',
+    shadowColor: '#000', shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.10, shadowRadius: 6, elevation: 3,
   },
-  navBtnDisabled:    { opacity: 0.3 },
-  navBtnIcon:        { fontSize: 28 },
+  navBtnDisabled:     { opacity: 0.3 },
+  navBtnIcon: {
+    fontSize:   34,
+    color:      '#1565C0',
+    fontWeight: '300',
+    lineHeight: 40,
+  },
   navBtnIconDisabled: { opacity: 0.4 },
   audioBtn: {
     width: 88, height: 88, borderRadius: 44,
-    backgroundColor: Colors.secondary,
+    backgroundColor: '#FDD835',
     justifyContent: 'center', alignItems: 'center',
-    shadowColor: Colors.secondary, shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.4, shadowRadius: 10, elevation: 6,
+    shadowColor: '#FDD835', shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.5, shadowRadius: 10, elevation: 6,
   },
   audioBtnIcon: { fontSize: 36 },
 
@@ -700,32 +704,31 @@ const styles = StyleSheet.create({
   signImageContainer: {
     width: 200, height: 200,
     borderRadius: 20, overflow: 'hidden',
-    backgroundColor: '#FFFFFF',
+    backgroundColor: '#ffffff',
+    shadowColor: '#000', shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.10, shadowRadius: 8, elevation: 4,
   },
   signImagePlaceholder: {
     justifyContent: 'center', alignItems: 'center',
-    backgroundColor: Colors.card,
+    backgroundColor: '#f0f4f8',
   },
-  signImage: { width: '100%', height: '100%', backgroundColor: '#FFFFFF' },
+  signImage: { width: '100%', height: '100%', backgroundColor: '#ffffff' },
 
   progressRowWithNav: {
     flexDirection: 'row', alignItems: 'center',
     justifyContent: 'center', gap: 16,
   },
-  progressRow: {
-    flexDirection: 'row', gap: 12, alignItems: 'center',
-  },
+  progressRow: { flexDirection: 'row', gap: 12, alignItems: 'center' },
   qNavBtn: {
     width: 48, height: 48, borderRadius: 24,
-    backgroundColor: Colors.card,
+    backgroundColor: '#ffffff',
     justifyContent: 'center', alignItems: 'center',
+    shadowColor: '#000', shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.10, shadowRadius: 6, elevation: 3,
   },
-  progressDot: {
-    width: 12, height: 12, borderRadius: 6,
-    backgroundColor: Colors.progressTrack,
-  },
-  progressDotDone:   { backgroundColor: Colors.primary },
-  progressDotActive: { backgroundColor: Colors.secondary, width: 20 },
+  progressDot:       { width: 12, height: 12, borderRadius: 6, backgroundColor: '#e0e0e0' },
+  progressDotDone:   { backgroundColor: '#2E7D32' },
+  progressDotActive: { backgroundColor: '#FDD835', width: 20 },
 
   answersRow: {
     flexDirection: 'row', flexWrap: 'wrap',
