@@ -104,12 +104,76 @@
           "name_hebrew": "רכב ביטחון — זיהוי ומה לעשות",
           "name_amharic": "የድንገተኛ ጊዜ ተሽከርካሪ",
           "icon": "🚨",
-          "explanation_amharic": "",
-          "narration_script": "",
-          "image_description": "",
-          "questions": [],
-          "narration_audio_url": "",
-          "image_url": ""
+          "explanation_amharic": "የድንገተኛ አደጋ አካላት ተሽከርካሪዎች፣ ማለት፣ አምቡላንስ፣ የእሳት አደጋ መኪና እና የፖሊስ መኪናዎች በሚያብረቀርቅ መብራትና በሳይረን ድምጽ የሚታወቁ ናቸው። እነዚህ ተሽከርካሪዎች በድንገተኛ ሁኔታ ውስጥ ሲሆኑ፣ ሌሎች የመንገድ ተጠቃሚዎች ልዩ ትኩረት መስጠት አለባቸው።\n\nየድንገተኛ አደጋ አካላት ተሽከርካሪ ሲቃረብ አሽከርካሪዎች ወዲያውኑ ተሽከርካሪያቸውን ወደ መንገዱ ቀኝ ዳርቻ አስጠግተው መገናኛ መንገዶችን ሳይዘጉ ማቆም አለባቸው። የድንገተኛ ጊዜ የድንገተኛ አደጋ አካላት ተሽከርካሪ እስኪያልፍ ድረስ በዚያው ቦታ መጠበቅ ያስፈልጋል። ከዚያ በኋላ ብቻ ጉዞ መቀጠል ይቻላል። የድንገተኛ አደጋ አካላት ተሽከርካሪ ኋላ መከተል ወይም መንገዱን ተጠቅሞ ለመሄድ መሞከር በፍጹም አይፈቀድም። እግረኞችም ቢሆኑ የድንገተኛ ጊዜ ተሽከርካሪዎች ሲቃረቡ ወዲያውኑ መንገዱን መልቀቅ አለባቸው።",
+          "narration_script": "የድንገተኛ አደጋ አካላት ተሽከርካሪዎች፣ ማለት፣ አምቡላንስ፣ የእሳት አደጋ መኪና እና የፖሊስ መኪናዎች በሚያብረቀርቅ መብራትና በሳይረን ድምጽ የሚታወቁ ናቸው። እነዚህ ተሽከርካሪዎች በድንገተኛ ሁኔታ ውስጥ ሲሆኑ፣ ሌሎች የመንገድ ተጠቃሚዎች ልዩ ትኩረት መስጠት አለባቸው። የድንገተኛ አደጋ አካላት ተሽከርካሪ ሲቃረብ አሽከርካሪዎች ወዲያውኑ ተሽከርካሪያቸውን ወደ መንገዱ ቀኝ ዳርቻ አስጠግተው መገናኛ መንገዶችን ሳይዘጉ ማቆም አለባቸው። የድንገተኛ ጊዜ የድንገተኛ አደጋ አካላት ተሽከርካሪ እስኪያልፍ ድረስ በዚያው ቦታ መጠበቅ ያስፈልጋል። ከዚያ በኋላ ብቻ ጉዞ መቀጠል ይቻላል። የድንገተኛ አደጋ አካላት ተሽከርካሪ ኋላ መከተል ወይም መንገዱን ተጠቅሞ ለመሄድ መሞከር በፍጹም አይፈቀድም። እግረኞችም ቢሆኑ የድንገተኛ ጊዜ ተሽከርካሪዎች ሲቃረቡ ወዲያውኑ መንገዱን መልቀቅ አለባቸው።",
+          "image_description": "Daytime city street scene. Several cars are pulled over to the right side of the road, stopped and waiting. In the center lane, a red ambulance with flashing blue and red lights is driving past at speed. The cars are clearly giving way. One car driver visible through the window has a respectful, attentive expression. Urban road with clear markings. Photorealistic, cinematic, safety-conscious atmosphere.",
+          "questions": [
+            {
+              "question_amharic": "የድንገተኛ ጊዜ የድንገተኛ አደጋ አካላት ተሽከርካሪዎች እንዴት መለየት ይቻላል?",
+              "answers": [
+                {
+                  "text_amharic": "በቀለሙ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "በሚያብረቀርቅ መብራቱና በሳይረን ድምጹ",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "በፍጥነቱ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "በአሽከርካሪው ዩኒፎርም",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "የድንገተኛ ጊዜ የድንገተኛ አደጋ አካላት ተሽከርካሪ ከኋላ ሲቃረብ አሽከርካሪ ምን ማድረግ አለበት?",
+              "answers": [
+                {
+                  "text_amharic": "ፍጥነቱን ጨምሮ መሄድ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ወዲያውኑ ወደ መንገዱ ቀኝ ዳርቻ አስጠግቶ እስኪያልፍ ድረስ ማቆም",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ወደ ግራ አስጠግቶ ማቆም",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "እንደተለመደው መንዳት መቀጠል",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "የድንገተኛ ጊዜ የድንገተኛ አደጋ አካላት ተሽከርካሪዎችን ተከትሎ መንገዱን ተጠቅሞ መሄድ ይፈቀዳል?",
+              "answers": [
+                {
+                  "text_amharic": "አዎ፣ ደህንነቱ የተጠበቀ ከሆነ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "አዎ፣ ሌሎች መኪናዎች ከሌሉ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "አይፈቀድም፣ በፍጹም የተከለከለ ነው",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "አዎ፣ ይፈቀዳል",
+                  "is_correct": false
+                }
+              ]
+            }
+          ],
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_sl_l2_s1_narration_1779296106655.mp3",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/sl_l2_s1_image_1779296233232.jpg"
         }
       ]
     }
