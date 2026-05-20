@@ -33,6 +33,25 @@ import { ResultData, WrongQuestion, getExamResult, preloadExamResult } from '../
 
 // ─── Audio base URL (Supabase Storage) ────────────────────────────────────────
 const _AUDIO_BASE = (process.env.EXPO_PUBLIC_SUPABASE_URL ?? '') + '/storage/v1/object/public/audio';
+
+// ─── Topic ID → Amharic name mapping ─────────────────────────────────────────
+const TOPIC_NAMES: Record<string, string> = {
+  regulatory:           'አስገዳጅ ምልክቶች',
+  warning:              'የማስጠንቀቂያ ምልክቶች',
+  right_of_way:         'የቅድሚያ መብት',
+  prohibitions:         'የክልከላ ምልክቶች',
+  information_guidance: 'የመረጃ ምልክቶች',
+  public_transport:     'የህዝብ ማመላለሻ',
+  traffic_lights:       'የትራፊክ መብራቶች',
+  road_markings:        'የመንገድ ምልክቶች',
+  work_site:            'የሥራ ቦታ ምልክቶች',
+  mind_safety:          'አዕምሮ እና ደህንነት',
+  society_law:          'ማህበረሰብ እና ህግ',
+  the_road:             'የመንገድ ሁኔታዎች',
+  my_vehicle:           'ትክክለኛ አነዳድ',
+  two_wheelers:         'ሁለት ጎማ ተሽከርካሪ',
+  basics_license:       'መሠረቶች እና ፍቃድ',
+};
 export type { ResultData };
 export { storeExamResult } from '../../utils/examResult';
 
@@ -135,6 +154,15 @@ export default function ResultScreen() {
     }
   };
 
+  const handleSignPress = async (signId: string) => {
+    await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    if (isEngineA) {
+      router.push(`/(engineA)/sign/${signId}` as any);
+    } else {
+      router.push(`/(engineB)/sign/${signId}` as any);
+    }
+  };
+
   const handlePracticeWeak = async () => {
     await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
     // Pass wrong question IDs as a comma-separated URL param
@@ -149,11 +177,11 @@ export default function ResultScreen() {
   const minutes = Math.floor(duration / 60);
   const seconds = duration % 60;
 
-  const bgColor    = passed ? Colors.correctDark : Colors.wrongDark;
-  const accentColor = passed ? Colors.correct : Colors.wrong;
+  const bgColor    = passed ? '#E8F5E9' : '#FFEBEE';
+  const accentColor = passed ? '#2E7D32' : '#C62828';
 
   return (
-    <SafeAreaView style={[styles.safeArea, { backgroundColor: Colors.background }]}>
+    <SafeAreaView style={[styles.safeArea, { backgroundColor: '#f7f9fb' }]}>
       <ScrollView contentContainerStyle={styles.content}>
 
         {/* Result icon + score */}
@@ -181,7 +209,7 @@ export default function ResultScreen() {
               { color: accentColor, opacity: fadeAnim },
             ]}
           >
-            {passed ? 'ፈተናው ተሳክቷል! ✅' : 'ዳግም ሞክር 📖'}
+            {passed ? 'ፈተናው ተሳክቷል!' : 'ዳግም ሞክር'}
           </Animated.Text>
         )}
 
@@ -197,21 +225,27 @@ export default function ResultScreen() {
         >
           {/* Score stat */}
           <View style={styles.statCard}>
-            <Text style={styles.statIcon}>✅</Text>
+            <View style={[styles.statIconDot, { backgroundColor: '#E8F5E9' }]}>
+              <Text style={[styles.statIconSymbol, { color: '#2E7D32' }]}>✓</Text>
+            </View>
             <Text style={styles.statValue}>{score}</Text>
             {!isEngineA && <Text style={styles.statLabel}>ትክክል</Text>}
           </View>
 
           {/* Wrong stat */}
           <View style={styles.statCard}>
-            <Text style={styles.statIcon}>❌</Text>
+            <View style={[styles.statIconDot, { backgroundColor: '#FFEBEE' }]}>
+              <Text style={[styles.statIconSymbol, { color: '#C62828' }]}>✕</Text>
+            </View>
             <Text style={styles.statValue}>{total - score}</Text>
             {!isEngineA && <Text style={styles.statLabel}>ስህተት</Text>}
           </View>
 
           {/* Time stat */}
           <View style={styles.statCard}>
-            <Text style={styles.statIcon}>⏱</Text>
+            <View style={[styles.statIconDot, { backgroundColor: '#E3F2FD' }]}>
+              <Text style={[styles.statIconSymbol, { color: '#1565C0' }]}>⏱</Text>
+            </View>
             <Text style={styles.statValue}>
               {minutes}:{seconds.toString().padStart(2, '0')}
             </Text>
@@ -225,13 +259,17 @@ export default function ResultScreen() {
             <Text style={styles.breakdownTitle}>በርዕስ ጉዳይ</Text>
             {Object.entries(result.topicBreakdown).map(([topicId, stats]) => (
               <View key={topicId} style={styles.breakdownRow}>
-                <Text style={styles.breakdownTopic}>{topicId}</Text>
-                <Text style={[
-                  styles.breakdownScore,
-                  { color: (stats.correct / stats.total) >= 0.8 ? Colors.correct : Colors.wrong }
-                ]}>
-                  {stats.correct}/{stats.total}
-                </Text>
+                <Text style={styles.breakdownTopic}>{TOPIC_NAMES[topicId] ?? topicId}</Text>
+                <View style={styles.breakdownScoreRow}>
+                  <Text style={[styles.breakdownScore, { color: '#2E7D32' }]}>
+                    {stats.correct}
+                  </Text>
+                  <Text style={[styles.breakdownScore, {
+                    color: stats.correct < stats.total ? '#C62828' : '#2E7D32',
+                  }]}>
+                    /{stats.total}
+                  </Text>
+                </View>
               </View>
             ))}
           </Animated.View>
@@ -243,15 +281,25 @@ export default function ResultScreen() {
             {/* Header */}
             <View style={styles.weakHeader}>
               <Text style={styles.weakIcon}>⚠️</Text>
-              {!isEngineA && (
-                <Text style={styles.weakTitle}>የተሳሳቱ ምልክቶች</Text>
-              )}
+              <View style={{ flex: 1 }}>
+                {!isEngineA && (
+                  <Text style={styles.weakTitle}>የተሳሳቱ ምልክቶች</Text>
+                )}
+                {!isEngineA && (
+                  <Text style={styles.weakHint}>ምልክቱን ይጫኑ ለመማር</Text>
+                )}
+              </View>
             </View>
 
-            {/* Sign thumbnails grid */}
+            {/* Sign thumbnails grid — each card is tappable → navigates to sign detail */}
             <View style={styles.weakGrid}>
               {weakSigns.map(sign => (
-                <View key={sign.id} style={styles.weakSignCard}>
+                <TouchableOpacity
+                  key={sign.id}
+                  style={styles.weakSignCard}
+                  onPress={() => handleSignPress(sign.id)}
+                  activeOpacity={0.75}
+                >
                   {sign.image_url ? (
                     <Image
                       source={{ uri: sign.image_url }}
@@ -268,7 +316,7 @@ export default function ResultScreen() {
                       {sign.name_amharic}
                     </Text>
                   )}
-                </View>
+                </TouchableOpacity>
               ))}
             </View>
 
@@ -295,7 +343,7 @@ export default function ResultScreen() {
           >
             <Text style={styles.actionIcon}>🔄</Text>
             {!isEngineA && (
-              <Text style={styles.actionText}>ዳግም ሞክር</Text>
+              <Text style={styles.retryActionText}>ዳግም ሞክር</Text>
             )}
           </TouchableOpacity>
 
@@ -348,7 +396,7 @@ const styles = StyleSheet.create({
   },
   percentText: {
     ...Typography.h3,
-    color: Colors.textSecondary,
+    color: '#404943',
   },
   resultLabel: {
     ...Typography.h2,
@@ -362,34 +410,52 @@ const styles = StyleSheet.create({
   },
   statCard: {
     flex:            1,
-    backgroundColor: Colors.card,
+    backgroundColor: '#ffffff',
     borderRadius:    16,
     padding:         16,
     alignItems:      'center',
     gap:             6,
     maxWidth:        100,
+    shadowColor:     '#000',
+    shadowOffset:    { width: 0, height: 2 },
+    shadowOpacity:   0.08,
+    shadowRadius:    6,
+    elevation:       3,
   },
-  statIcon: {
-    fontSize: 28,
+  statIconDot: {
+    width:          44,
+    height:         44,
+    borderRadius:   22,
+    justifyContent: 'center',
+    alignItems:     'center',
+  },
+  statIconSymbol: {
+    fontSize:   22,
+    fontWeight: '700',
   },
   statValue: {
     ...Typography.h3,
-    color: Colors.textPrimary,
+    color: '#191c1e',
   },
   statLabel: {
     ...Typography.caption,
-    color: Colors.textSecondary,
+    color: '#404943',
   },
   breakdownContainer: {
     alignSelf:       'stretch',
-    backgroundColor: Colors.card,
+    backgroundColor: '#ffffff',
     borderRadius:    16,
     padding:         16,
     gap:             10,
+    shadowColor:     '#000',
+    shadowOffset:    { width: 0, height: 2 },
+    shadowOpacity:   0.08,
+    shadowRadius:    6,
+    elevation:       3,
   },
   breakdownTitle: {
     ...Typography.body,
-    color:        Colors.textPrimary,
+    color:        '#191c1e',
     fontWeight:   '700',
     marginBottom: 4,
   },
@@ -400,8 +466,13 @@ const styles = StyleSheet.create({
   },
   breakdownTopic: {
     ...Typography.bodySmall,
-    color: Colors.textSecondary,
+    color: '#404943',
     flex:  1,
+  },
+  breakdownScoreRow: {
+    flexDirection: 'row',
+    alignItems:    'center',
+    flexShrink:    0,
   },
   breakdownScore: {
     ...Typography.body,
@@ -411,12 +482,17 @@ const styles = StyleSheet.create({
   // ── Weak signs section ─────────────────────────────────────────────────────
   weakContainer: {
     alignSelf:       'stretch',
-    backgroundColor: Colors.card,
+    backgroundColor: '#ffffff',
     borderRadius:    20,
     padding:         16,
     gap:             14,
     borderWidth:     1,
-    borderColor:     Colors.wrong + '55',
+    borderColor:     '#FFCDD2',
+    shadowColor:     '#000',
+    shadowOffset:    { width: 0, height: 2 },
+    shadowOpacity:   0.08,
+    shadowRadius:    6,
+    elevation:       3,
   },
   weakHeader: {
     flexDirection: 'row',
@@ -428,7 +504,7 @@ const styles = StyleSheet.create({
   },
   weakTitle: {
     ...Typography.body,
-    color:      Colors.textPrimary,
+    color:      '#191c1e',
     fontWeight: '700',
   },
   weakGrid: {
@@ -438,15 +514,26 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
   },
   weakSignCard: {
-    alignItems: 'center',
-    gap:        6,
-    width:      72,
+    alignItems:      'center',
+    gap:             4,
+    padding:         6,
+    backgroundColor: '#ffffff',
+    borderRadius:    14,
+    shadowColor:     '#000',
+    shadowOffset:    { width: 0, height: 4 },
+    shadowOpacity:   0.14,
+    shadowRadius:    8,
+    elevation:       5,
+  },
+  weakHint: {
+    fontSize:  11,
+    color:     '#9e9e9e',
+    marginTop: 2,
   },
   weakSignImage: {
-    width:           72,
-    height:          72,
-    borderRadius:    12,
-    backgroundColor: '#FFFFFF',
+    width:        90,
+    height:       90,
+    borderRadius: 12,
   },
   weakSignPlaceholder: {
     justifyContent: 'center',
@@ -456,9 +543,11 @@ const styles = StyleSheet.create({
     fontSize: 32,
   },
   weakSignName: {
-    ...Typography.caption,
-    color:     Colors.textSecondary,
-    textAlign: 'center',
+    fontSize:   15,
+    lineHeight: 22,
+    color:      '#404943',
+    textAlign:  'center',
+    maxWidth:   102,
   },
   practiceBtn: {
     flexDirection:   'row',
@@ -495,9 +584,14 @@ const styles = StyleSheet.create({
     gap:             10,
   },
   retryBtn: {
-    backgroundColor: Colors.card,
+    backgroundColor: '#ffffff',
     borderWidth:     1,
-    borderColor:     Colors.border,
+    borderColor:     '#dde3ea',
+    shadowColor:     '#000',
+    shadowOffset:    { width: 0, height: 2 },
+    shadowOpacity:   0.08,
+    shadowRadius:    4,
+    elevation:       2,
   },
   homeBtn: {
     backgroundColor: Colors.primary,
@@ -507,7 +601,12 @@ const styles = StyleSheet.create({
   },
   actionText: {
     ...Typography.answer,
-    color:      Colors.textPrimary,
+    color:      '#ffffff',
+    fontWeight: '700',
+  },
+  retryActionText: {
+    ...Typography.answer,
+    color:      '#191c1e',
     fontWeight: '700',
   },
 });

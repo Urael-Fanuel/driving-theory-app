@@ -391,6 +391,7 @@ export default function EngineAExamScreen() {
           current={progress.current}
           total={progress.total}
           fillColor={Colors.secondary}
+          trackColor='#e0e0e0'
           height={6}
         />
         <Text style={styles.timerIcon}>⏱</Text>
@@ -436,7 +437,7 @@ export default function EngineAExamScreen() {
             disabled={!canGoPrev}
             accessibilityLabel="ወደ ቀዳሚ ጥያቄ"
           >
-            <Text style={styles.navBtnIcon}>⬅️</Text>
+            <Text style={styles.navBtnIcon}>‹</Text>
           </TouchableOpacity>
 
           <TouchableOpacity
@@ -457,7 +458,7 @@ export default function EngineAExamScreen() {
             disabled={!canGoNext}
             accessibilityLabel="ወደ ቀጣይ ጥያቄ"
           >
-            <Text style={styles.navBtnIcon}>➡️</Text>
+            <Text style={styles.navBtnIcon}>›</Text>
           </TouchableOpacity>
         </View>
 
@@ -506,7 +507,7 @@ export default function EngineAExamScreen() {
 const styles = StyleSheet.create({
   safeArea: {
     flex:            1,
-    backgroundColor: Colors.background,
+    backgroundColor: '#f7f9fb',
   },
 
   // Fixed top bar — always visible, never scrolls away
@@ -514,7 +515,7 @@ const styles = StyleSheet.create({
     flexDirection:     'row',
     alignItems:        'center',
     paddingHorizontal: 12,
-    paddingTop:        16,   // extra space so ✕ isn't at the very edge
+    paddingTop:        16,
     paddingBottom:     8,
     gap:               10,
   },
@@ -522,14 +523,19 @@ const styles = StyleSheet.create({
     width:           40,
     height:          40,
     borderRadius:    20,
-    backgroundColor: Colors.card,
+    backgroundColor: '#ffffff',
     justifyContent:  'center',
     alignItems:      'center',
     flexShrink:      0,
+    shadowColor:     '#000',
+    shadowOffset:    { width: 0, height: 2 },
+    shadowOpacity:   0.10,
+    shadowRadius:    4,
+    elevation:       3,
   },
   backIcon: {
     fontSize: 18,
-    color:    Colors.textSecondary,
+    color:    '#404943',
   },
   timerIcon: {
     fontSize:   20,
@@ -550,15 +556,19 @@ const styles = StyleSheet.create({
     width:           160,
     height:          160,
     borderRadius:    20,
-    overflow:        'hidden',
-    backgroundColor: '#FFFFFF',
+    backgroundColor: '#ffffff',
+    shadowColor:     '#000',
+    shadowOffset:    { width: 0, height: 3 },
+    shadowOpacity:   0.10,
+    shadowRadius:    6,
+    elevation:       3,
   },
   signImage: {
     width:  '100%',
     height: '100%',
   },
 
-  // Combined navigation + audio control row: ⬅️ | ⏸/▶️ | 1/21 | ➡️
+  // Combined navigation + audio control row: ‹ | ⏸/▶️ | 1/21 | ›
   navControlRow: {
     flexDirection:  'row',
     alignItems:     'center',
@@ -569,23 +579,36 @@ const styles = StyleSheet.create({
     width:           48,
     height:          48,
     borderRadius:    24,
-    backgroundColor: Colors.card,
+    backgroundColor: '#ffffff',
     justifyContent:  'center',
     alignItems:      'center',
+    shadowColor:     '#000',
+    shadowOffset:    { width: 0, height: 2 },
+    shadowOpacity:   0.10,
+    shadowRadius:    4,
+    elevation:       3,
   },
   qNavBtnDisabled: {
     opacity: 0.35,
   },
   navBtnIcon: {
-    fontSize: 22,
+    fontSize:   34,
+    color:      '#1565C0',
+    fontWeight: '300',
+    lineHeight: 40,
   },
   audioBtn: {
     width:           56,
     height:          56,
     borderRadius:    28,
-    backgroundColor: Colors.secondary,
+    backgroundColor: '#FDD835',
     justifyContent:  'center',
     alignItems:      'center',
+    shadowColor:     '#000',
+    shadowOffset:    { width: 0, height: 2 },
+    shadowOpacity:   0.15,
+    shadowRadius:    4,
+    elevation:       4,
   },
   audioBtnIcon: {
     fontSize: 26,
@@ -593,7 +616,7 @@ const styles = StyleSheet.create({
   questionCounter: {
     fontSize:   17,
     fontWeight: '700',
-    color:      Colors.textPrimary,
+    color:      '#191c1e',
     minWidth:   52,
     textAlign:  'center',
   },

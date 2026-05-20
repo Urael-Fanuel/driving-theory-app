@@ -15,7 +15,6 @@ import {
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import { storeExamResult } from '../../../utils/examResult';
-import { Colors } from '../../../constants/colors';
 import { Typography } from '../../../constants/typography';
 import { LoadingScreen } from '../../../components/shared/LoadingScreen';
 import { TextAnswerCard } from '../../../components/engineB/TextAnswerCard';
@@ -125,6 +124,7 @@ export default function EngineBExamScreen() {
             current={progress.current}
             total={progress.total}
             height={6}
+            trackColor='#e0e0e0'
             style={styles.progressBar}
           />
           <Text style={styles.progressText}>{progress.current} / {progress.total}</Text>
@@ -206,7 +206,7 @@ export default function EngineBExamScreen() {
 const styles = StyleSheet.create({
   safeArea: {
     flex:            1,
-    backgroundColor: Colors.background,
+    backgroundColor: '#f7f9fb',
   },
   header: {
     flexDirection:     'row',
@@ -219,14 +219,19 @@ const styles = StyleSheet.create({
     width:           40,
     height:          40,
     borderRadius:    20,
-    backgroundColor: Colors.card,
+    backgroundColor: '#ffffff',
     justifyContent:  'center',
     alignItems:      'center',
     flexShrink:      0,
+    shadowColor:     '#000',
+    shadowOffset:    { width: 0, height: 2 },
+    shadowOpacity:   0.10,
+    shadowRadius:    4,
+    elevation:       3,
   },
   exitIcon: {
     fontSize: 18,
-    color:    Colors.textSecondary,
+    color:    '#404943',
   },
   headerCenter: {
     flex: 1,
@@ -237,12 +242,12 @@ const styles = StyleSheet.create({
   },
   progressText: {
     ...Typography.caption,
-    color:     Colors.textSecondary,
+    color:     '#404943',
     textAlign: 'center',
   },
   timer: {
     ...Typography.body,
-    color:      Colors.secondary,
+    color:      '#1565C0',
     fontWeight: '700',
     flexShrink: 0,
   },
@@ -251,14 +256,19 @@ const styles = StyleSheet.create({
     gap:     16,
   },
   questionCard: {
-    backgroundColor: Colors.card,
+    backgroundColor: '#ffffff',
     borderRadius:    16,
     padding:         20,
     gap:             12,
+    shadowColor:     '#000',
+    shadowOffset:    { width: 0, height: 2 },
+    shadowOpacity:   0.08,
+    shadowRadius:    6,
+    elevation:       3,
   },
   questionText: {
     ...Typography.question,
-    color:     Colors.textPrimary,
+    color:     '#191c1e',
     textAlign: 'left',
   },
   questionAudio: {
@@ -269,9 +279,14 @@ const styles = StyleSheet.create({
   },
   signImageContainer: {
     alignItems:      'center',
-    backgroundColor: Colors.card,
+    backgroundColor: '#ffffff',
     borderRadius:    16,
     padding:         12,
+    shadowColor:     '#000',
+    shadowOffset:    { width: 0, height: 2 },
+    shadowOpacity:   0.08,
+    shadowRadius:    6,
+    elevation:       3,
   },
   signImage: {
     width:  160,

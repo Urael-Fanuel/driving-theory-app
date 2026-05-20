@@ -19,6 +19,8 @@ interface ProgressBarProps {
   showLabel?: boolean;
   /** Color of the fill bar */
   fillColor?: string;
+  /** Color of the track (background) */
+  trackColor?: string;
   /** Height of the bar */
   height?: number;
   /** Style override */
@@ -32,6 +34,7 @@ export function ProgressBar({
   total,
   showLabel = false,
   fillColor = Colors.progressFill,
+  trackColor = Colors.progressTrack,
   height = 8,
   style,
 }: ProgressBarProps) {
@@ -60,7 +63,7 @@ export function ProgressBar({
           {current} / {total}
         </Text>
       )}
-      <View style={[styles.track, { height }]}>
+      <View style={[styles.track, { height, backgroundColor: trackColor }]}>
         <Animated.View
           style={[
             styles.fill,
@@ -90,7 +93,6 @@ const styles = StyleSheet.create({
   },
   track: {
     width:        '100%',
-    backgroundColor: Colors.progressTrack,
     borderRadius: 8,
     overflow:     'hidden',
   },
