@@ -11,6 +11,10 @@
       "resizeMode": "contain",
       "backgroundColor": "#FFFFFF"
     },
+    "androidNavigationBar": {
+      "barStyle":        "dark-content",
+      "backgroundColor": "#aaaaaa"
+    },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/መንጃ ፍቃድ በቀላል መንገድ.png",
