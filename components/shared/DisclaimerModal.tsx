@@ -14,46 +14,75 @@ import {
   StyleSheet,
   SafeAreaView,
   Platform,
+  Image,
 } from 'react-native';
-import { Colors }     from '../../constants/colors';
-import { Typography } from '../../constants/typography';
-import { useAudio }   from '../../hooks/useAudio';
+import { useAudio } from '../../hooks/useAudio';
+
+// ─── Colors ───────────────────────────────────────────────────────────────────
+const C = {
+  green:      '#0f5238',
+  greenLight: '#2d6a4f',
+  yellow:     '#f1c048',
+  yellowBg:   'rgba(241,192,72,0.12)',
+  yellowBdr:  'rgba(241,192,72,0.35)',
+  red:        '#ba1a1a',
+  redBg:      'rgba(186,26,26,0.06)',
+  greenBg:    'rgba(15,82,56,0.06)',
+  white:      '#ffffff',
+  bg:         '#f7f9fb',
+  surface:    '#ffffff',
+  surfaceAlt: '#eceef0',
+  textPri:    '#191c1e',
+  textSec:    '#404943',
+};
 
 interface Props {
   visible: boolean;
   onAccept: () => void;
 }
 
-const SECTIONS = [
+const SECTIONS: { num: string; title: string; body: string; color: string; titleColor: string }[] = [
   {
-    num: '1',
-    title: 'የአፕሊኬሽኑ ዓላማ',
-    body:  'ይህ አፕሊኬሽን ተጠቃሚዎች የንድፈ ሃሳብ ፈተናዎችን እንዲዘጋጁ ለመርዳት የተዘጋጀ ነው። ይዘቱ በእስራኤል የትራፊክ ደንቦች እና በቪየና ዓለም አቀፍ ስምምነት ላይ የተመሰረተ ነው። ይህ አፕሊኬሽን በአገርዎ ውስጥ ላለው ኦፊሴላዊ የፍቃድ ባለሥልጣን ቁሳቁስ ምትክ አይደለም።',
+    num:        '1',
+    title:      'የአፕሊኬሽኑ ዓላማ',
+    body:       'ይህ አፕሊኬሽን ተጠቃሚዎች የንድፈ ሃሳብ ፈተናዎችን እንዲዘጋጁ ለመርዳት የተዘጋጀ ነው። ይዘቱ በእስራኤል የትራፊክ ደንቦች እና በቪየና ዓለም አቀፍ ስምምነት ላይ የተመሰረተ ነው። ይህ አፕሊኬሽን በአገርዎ ውስጥ ላለው ኦፊሴላዊ የፍቃድ ባለሥልጣን ቁሳቁስ ምትክ አይደለም።',
+    color:      C.green,
+    titleColor: C.green,
   },
   {
-    num: '2',
-    title: 'የተጠያቂነት ገደብ',
-    body:  'ገንቢው ይህን አፕሊኬሽን ብቻ ተመርኩዞ ፈተናው ያልተሳካ ከሆነ ተጠያቂ አይሆንም። በእስራኤል የትራፊክ ደንቦች እና በሌሎች አገሮች ደንቦች መካከል ልዩነቶች ሊኖሩ ይችላሉ። አፕሊኬሽኑን መጠቀም ሙሉ በሙሉ የተጠቃሚው ኃላፊነት ነው።',
+    num:        '2',
+    title:      'የተጠያቂነት ገደብ',
+    body:       'ገንቢው ይህን አፕሊኬሽን ብቻ ተመርኩዞ ፈተናው ያልተሳካ ከሆነ ተጠያቂ አይሆንም። በእስራኤል የትራፊክ ደንቦች እና በሌሎች አገሮች ደንቦች መካከል ልዩነቶች ሊኖሩ ይችላሉ። አፕሊኬሽኑን መጠቀም ሙሉ በሙሉ የተጠቃሚው ኃላፊነት ነው።',
+    color:      C.yellow,
+    titleColor: '#7a5800',
   },
   {
-    num: '3',
-    title: 'ክፍያ እና መሰረዝ',
-    body:  'ክፍያ ለተመረጠው የምዝገባ ጊዜ አስቀድሞ ይፈጸማል። ምዝገባ ከተካሄደ በኋላ ገንዘብ አይመለስም። በአፕሊኬሽኑ በኩል የተረጋገጠ ቴክኒካዊ ብልሽት ከተከሰተ ገንቢው እያንዳንዱን ጉዳይ በተናጠል ይገመግማል።',
+    num:        '3',
+    title:      'ክፍያ እና መሰረዝ',
+    body:       'ክፍያ ለተመረጠው የምዝገባ ጊዜ አስቀድሞ ይፈጸማል። ምዝገባ ከተካሄደ በኋላ ገንዘብ አይመለስም። በአፕሊኬሽኑ በኩል የተረጋገጠ ቴክኒካዊ ብልሽት ከተከሰተ ገንቢው እያንዳንዱን ጉዳይ በተናጠል ይገምግማል።',
+    color:      C.red,
+    titleColor: C.red,
   },
   {
-    num: '4',
-    title: 'የፍቃድ አጠቃቀም',
-    body:  'ይህ አፕሊኬሽን ለግል አጠቃቀም ብቻ የታሰበ ነው። ከገንቢው የጽሁፍ ፈቃድ ሳይኖር የአፕሊኬሽኑን ይዘት መቅዳት፣ ማሰራጨት፣ መሸጥ ወይም ማሻሻያ ማድረግ ጥብቅ ክልከላ ነው። ይህን ውል መጣስ ህጋዊ ሂደቶችን ሊያስከትል ይችላል።',
+    num:        '4',
+    title:      'የፍቃድ አጠቃቀም',
+    body:       'ይህ አፕሊኬሽን ለግል አጠቃቀም ብቻ የታሰበ ነው። ከገንቢው የጽሁፍ ፈቃድ ሳይኖር የአፕሊኬሽኑን ይዘት መቅዳት፣ ማሰራጨት፣ መሸጥ ወይም ማሻሻያ ማድረግ ጥብቅ ክልከላ ነው። ይህን ውል መጣስ ህጋዊ ሂደቶችን ሊያስከትል ይችላል።',
+    color:      C.green,
+    titleColor: C.green,
   },
   {
-    num: '5',
-    title: 'ግላዊነት',
-    body:  'አፕሊኬሽኑ አገልግሎቱን ለማሻሻል ማንነት የለሽ የአጠቃቀም ውሂብ ሊሰበስብ ይችላል። የተጠቃሚ ስምምነት ሳይኖር ግለሰቡን የሚያሳይ ምንም ዓይነት መረጃ አይሰበሰብም። ገንቢው የተጠቃሚ ውሂብ ለሶስተኛ ወገኖች አለመሸጥ ያረጋግጣል።',
+    num:        '5',
+    title:      'ግላዊነት',
+    body:       'አፕሊኬሽኑ አገልግሎቱን ለማሻሻል ማንነት የለሽ የአጠቃቀም ውሂብ ሊሰበስብ ይችላል። የተጠቃሚ ስምምነት ሳይኖር ግለሰቡን የሚያሳይ ምንም ዓይነት መረጃ አይሰበሰብም። ገንቢው የተጠቃሚ ውሂብ ለሶስተኛ ወገኖች አለመሸጥ ያረጋግጣል።',
+    color:      C.yellow,
+    titleColor: '#7a5800',
   },
   {
-    num: '6',
-    title: 'ለውሎቹ ለውጦች',
-    body:  'ገንቢው እነዚህን ውሎች በማንኛውም ጊዜ የማሻሻል መብቱ የተጠበቀ ነው። ዋና ዋና ለውጦች በአፕሊኬሽኑ ውስጥ ይታተማሉ። ለውጦቹ ከታተሙ በኋላ አፕሊኬሽኑን መጠቀሙን መቀጠል አዲሶቹ ውሎችን መቀበልን ያሳያል።',
+    num:        '6',
+    title:      'ለውሎቹ ለውጦች',
+    body:       'ገንቢው እነዚህን ውሎች በማንኛውም ጊዜ የማሻሻል መብቱ የተጠበቀ ነው። ዋና ዋና ለውጦች በአፕሊኬሽኑ ውስጥ ይታተማሉ። ለውጦቹ ከታተሙ በኋላ አፕሊኬሽኑን መጠቀሙን መቀጠል አዲሶቹ ውሎችን መቀበልን ያሳያል።',
+    color:      C.red,
+    titleColor: C.red,
   },
 ];
 
@@ -77,58 +106,74 @@ export default function DisclaimerModal({ visible, onAccept }: Props) {
     } else if (audioState === 'paused') {
       resumeAudio().catch(() => {});
     } else {
-      // finished / idle / error → replay from beginning
       playAudio('assets/audio/disclaimer.mp3').catch(() => {});
     }
   };
 
-  const speakerIcon =
-    audioState === 'playing' ? '⏸' : '▶️';
+  const speakerIcon = audioState === 'playing' ? '⏸' : '▶️';
 
   return (
     <Modal visible={visible} animationType="slide" statusBarTranslucent>
       <SafeAreaView style={styles.safeArea}>
-        {/* Header */}
+
+        {/* ── Header ─────────────────────────────────────────────────────── */}
         <View style={styles.header}>
           <TouchableOpacity style={styles.speakerBtn} onPress={handleAudioToggle}>
             <Text style={styles.speakerIcon}>{speakerIcon}</Text>
           </TouchableOpacity>
-          <Text style={styles.title}>የአጠቃቀም ውሎች</Text>
-          <View style={{ width: 44 }} />
+          <Text style={styles.headerTitle}>የአጠቃቀም ውሎች</Text>
+          <View style={styles.disclaimerChip}>
+            <Text style={styles.disclaimerChipText}>DISCLAIMER</Text>
+          </View>
         </View>
 
-        {/* Ethiopian flag stripe */}
+        {/* ── Ethiopian flag stripe ───────────────────────────────────────── */}
         <View style={styles.flagBar}>
           <View style={[styles.flagStripe, { backgroundColor: '#078930' }]} />
           <View style={[styles.flagStripe, { backgroundColor: '#FCDD09' }]} />
           <View style={[styles.flagStripe, { backgroundColor: '#DA121A' }]} />
         </View>
 
-        {/* Intro */}
-        <ScrollView style={styles.scroll} contentContainerStyle={styles.scrollContent}>
-
-          {/* DISCLAIMER chip */}
-          <View style={styles.chipRow}>
-            <View style={styles.chip}>
-              <Text style={styles.chipText}>DISCLAIMER</Text>
+        {/* ── Scrollable content ─────────────────────────────────────────── */}
+        <ScrollView
+          style={styles.scroll}
+          contentContainerStyle={styles.scrollContent}
+          showsVerticalScrollIndicator={false}
+        >
+          {/* Hero — logo only */}
+          <View style={styles.hero}>
+            <View style={styles.heroLogoWrapper}>
+              <Image
+                source={require('../../assets/images/NEW LOGO.png')}
+                style={styles.heroLogo}
+                resizeMode="contain"
+              />
             </View>
           </View>
 
-          <Text style={styles.intro}>
-            ወደ አማርኛ የንድፈ ሃሳብ ፈተና ዝግጅት አፕሊኬሽን እንኳን ደህና መጡ። ይህን አፕሊኬሽን
-            በመጠቀምዎ የሚከተሉትን ውሎች ይስማሙ።
+          {/* Hero subtitle — below the logo box */}
+          <Text style={styles.heroText}>
+            ወደ አማርኛ የንድፈ ሃሳብ ፈተና ዝግጅት እንኳን ደህና መጡ
           </Text>
 
-          {/* Sections */}
-          {SECTIONS.map(sec => (
-            <View key={sec.num} style={styles.section}>
-              <View style={styles.sectionHeader}>
-                <View style={styles.badge}>
+          {/* Intro */}
+          <Text style={styles.intro}>
+            ይህን አፕሊኬሽን በመጠቀምዎ የሚከተሉትን ውሎች ይስማሙ።
+          </Text>
+
+          {/* Section cards */}
+          {SECTIONS.map((sec) => (
+            <View
+              key={sec.num}
+              style={[styles.card, { borderLeftColor: sec.color, backgroundColor: C.white }]}
+            >
+              <View style={styles.cardHeader}>
+                <View style={[styles.badge, { backgroundColor: sec.color }]}>
                   <Text style={styles.badgeText}>{sec.num}</Text>
                 </View>
-                <Text style={styles.sectionTitle}>{sec.title}</Text>
+                <Text style={[styles.cardTitle, { color: sec.titleColor }]}>{sec.title}</Text>
               </View>
-              <Text style={styles.sectionBody}>{sec.body}</Text>
+              <Text style={styles.cardBody}>{sec.body}</Text>
             </View>
           ))}
 
@@ -141,24 +186,27 @@ export default function DisclaimerModal({ visible, onAccept }: Props) {
             </Text>
           </View>
 
-          <View style={styles.bottomPad} />
+          <View style={{ height: 24 }} />
         </ScrollView>
 
-        {/* Accept button */}
+        {/* ── Accept button ──────────────────────────────────────────────── */}
         <View style={styles.footer}>
-          <TouchableOpacity style={styles.acceptBtn} onPress={onAccept} activeOpacity={0.85}>
-            <Text style={styles.acceptText}>ገባኝ</Text>
+          <TouchableOpacity style={styles.acceptBtn} onPress={onAccept} activeOpacity={0.88}>
+            <Text style={styles.acceptText}>ገባኝ ✓</Text>
           </TouchableOpacity>
         </View>
+
       </SafeAreaView>
     </Modal>
   );
 }
 
+// ─── Styles ───────────────────────────────────────────────────────────────────
+
 const styles = StyleSheet.create({
   safeArea: {
     flex:            1,
-    backgroundColor: Colors.background,
+    backgroundColor: C.bg,
   },
 
   // ── Header ──────────────────────────────────────────────────────────────────
@@ -168,27 +216,40 @@ const styles = StyleSheet.create({
     justifyContent:    'space-between',
     paddingHorizontal: 16,
     paddingVertical:   14,
-    backgroundColor:   Colors.surface,
+    backgroundColor:   C.green,
   },
-  title: {
-    ...Typography.h2,
-    color:     Colors.textPrimary,
-    flex:      1,
-    textAlign: 'center',
+  headerTitle: {
+    flex:       1,
+    textAlign:  'center',
+    fontSize:   20,
+    fontWeight: '700',
+    color:      C.white,
   },
   speakerBtn: {
-    width:           44,
-    height:          44,
-    borderRadius:    10,
-    backgroundColor: '#E67E22',
+    width:           40,
+    height:          40,
+    borderRadius:    20,
+    backgroundColor: 'rgba(255,255,255,0.15)',
     justifyContent:  'center',
     alignItems:      'center',
   },
   speakerIcon: {
-    fontSize: 20,
+    fontSize: 18,
+  },
+  disclaimerChip: {
+    backgroundColor:   C.yellow,
+    borderRadius:      20,
+    paddingHorizontal: 12,
+    paddingVertical:   5,
+  },
+  disclaimerChipText: {
+    fontSize:      10,
+    fontWeight:    '700',
+    color:         '#251a00',
+    letterSpacing: 1,
   },
 
-  // ── Ethiopian flag bar ───────────────────────────────────────────────────────
+  // ── Flag bar ─────────────────────────────────────────────────────────────────
   flagBar: {
     flexDirection: 'row',
     height:        4,
@@ -206,120 +267,143 @@ const styles = StyleSheet.create({
     paddingTop:        16,
   },
 
-  // ── DISCLAIMER chip ──────────────────────────────────────────────────────────
-  chipRow: {
-    alignItems:   'flex-end',
-    marginBottom: 12,
+  // ── Hero ─────────────────────────────────────────────────────────────────────
+  hero: {
+    borderRadius:      14,
+    backgroundColor:   C.white,
+    marginBottom:      16,
+    alignItems:        'center',
+    justifyContent:    'center',
+    paddingVertical:   6,
+    paddingHorizontal: 6,
+    shadowColor:       '#000',
+    shadowOffset:      { width: 0, height: 3 },
+    shadowOpacity:     0.1,
+    shadowRadius:      8,
+    elevation:         3,
   },
-  chip: {
-    borderWidth:   1,
-    borderColor:   Colors.secondary,
-    borderRadius:  20,
-    paddingHorizontal: 12,
-    paddingVertical:    4,
+  heroLogoWrapper: {
+    width:           220,
+    height:          220,
+    borderRadius:    24,
+    overflow:        'hidden',
+    backgroundColor: '#ffffff',
   },
-  chipText: {
-    fontSize:    11,
-    fontWeight:  '700',
-    color:       Colors.secondary,
-    letterSpacing: 1,
+  heroLogo: {
+    width:  220,
+    height: 220,
+  },
+  heroText: {
+    color:         C.green,
+    fontSize:      19,
+    fontWeight:    '700',
+    lineHeight:    28,
+    textAlign:     'center',
+    marginTop:     12,
+    marginBottom:  16,
+    paddingHorizontal: 8,
   },
 
-  // ── Intro ────────────────────────────────────────────────────────────────────
+  // ── Intro ─────────────────────────────────────────────────────────────────────
   intro: {
-    ...Typography.body,
-    color:        Colors.textSecondary,
-    marginBottom: 20,
-    lineHeight:   26,
+    fontSize:     18,
+    color:        C.textSec,
     textAlign:    'center',
+    marginBottom: 16,
+    lineHeight:   26,
+    paddingHorizontal: 8,
   },
 
-  // ── Sections ─────────────────────────────────────────────────────────────────
-  section: {
-    marginBottom:    16,
-    backgroundColor: Colors.surface,
+  // ── Section cards ─────────────────────────────────────────────────────────────
+  card: {
     borderRadius:    14,
     padding:         16,
-    borderLeftWidth: 3,
-    borderLeftColor: Colors.secondary,
+    borderLeftWidth: 4,
+    marginBottom:    12,
+    shadowColor:     '#000',
+    shadowOffset:    { width: 0, height: 1 },
+    shadowOpacity:   0.08,
+    shadowRadius:    4,
+    elevation:       2,
   },
-  sectionHeader: {
+  cardHeader: {
     flexDirection: 'row',
     alignItems:    'center',
     marginBottom:  10,
+    gap:           10,
   },
   badge: {
-    width:           28,
-    height:          28,
-    borderRadius:    14,
-    backgroundColor: '#2E7D32',
-    justifyContent:  'center',
-    alignItems:      'center',
-    marginRight:     10,
+    width:          32,
+    height:         32,
+    borderRadius:   16,
+    justifyContent: 'center',
+    alignItems:     'center',
   },
   badgeText: {
-    color:      '#fff',
+    color:      C.white,
     fontWeight: '700',
-    fontSize:   14,
+    fontSize:   15,
   },
-  sectionTitle: {
-    ...Typography.h3,
-    color: Colors.secondary,
-    flex:  1,
+  cardTitle: {
+    fontSize:   20,
+    fontWeight: '700',
+    flex:       1,
   },
-  sectionBody: {
-    ...Typography.body,
-    color:      Colors.textSecondary,
-    lineHeight: 24,
-    textAlign:  'center',
+  cardBody: {
+    fontSize:   17,
+    color:      C.textPri,
+    lineHeight: 26,
   },
 
-  // ── Closing ──────────────────────────────────────────────────────────────────
+  // ── Closing ───────────────────────────────────────────────────────────────────
   closingBox: {
-    marginTop:         8,
-    marginBottom:      16,
-    backgroundColor:   Colors.surface,
-    borderRadius:      12,
-    padding:           16,
-    borderLeftWidth:   3,
-    borderLeftColor:   Colors.primary,
+    backgroundColor: C.surface,
+    borderRadius:    12,
+    padding:         16,
+    borderLeftWidth: 3,
+    borderLeftColor: C.green,
+    shadowColor:     '#000',
+    shadowOffset:    { width: 0, height: 1 },
+    shadowOpacity:   0.06,
+    shadowRadius:    3,
+    elevation:       1,
   },
   closingText: {
-    ...Typography.body,
-    color:      Colors.textPrimary,
-    lineHeight: 26,
+    fontSize:   20,
+    color:      C.textPri,
+    lineHeight: 30,
     textAlign:  'center',
   },
   closingHighlight: {
-    color:      Colors.primary,
+    color:      C.green,
     fontWeight: 'bold',
   },
-  bottomPad: {
-    height: 16,
-  },
 
-  // ── Footer ───────────────────────────────────────────────────────────────────
+  // ── Footer ────────────────────────────────────────────────────────────────────
   footer: {
     paddingHorizontal: 20,
-    paddingTop:        16,
-    paddingBottom:     Platform.OS === 'android' ? 24 : 16,
-    backgroundColor:   Colors.surface,
-    borderTopWidth:    1,
-    borderTopColor:    Colors.border,
+    paddingTop:        14,
+    paddingBottom:     Platform.OS === 'android' ? 24 : 14,
+    backgroundColor:   C.surface,
+    borderTopWidth:    2,
+    borderTopColor:    'rgba(241,192,72,0.25)',
   },
   acceptBtn: {
-    backgroundColor: Colors.primary,
-    borderRadius:    16,
-    paddingVertical: 18,
-    alignItems:      'center',
-    shadowColor:     '#000',
-    shadowOffset:    { width: 0, height: 4 },
-    shadowOpacity:   0.3,
-    shadowRadius:    8,
-    elevation:       6,
+    backgroundColor:  C.green,
+    borderRadius:     14,
+    paddingVertical:  18,
+    alignItems:       'center',
+    shadowColor:      '#000',
+    shadowOffset:     { width: 0, height: 4 },
+    shadowOpacity:    0.25,
+    shadowRadius:     8,
+    elevation:        6,
+    borderBottomWidth: 4,
+    borderBottomColor: 'rgba(0,0,0,0.2)',
   },
   acceptText: {
-    ...Typography.h2,
-    color: Colors.textOnPrimary,
+    fontSize:   23,
+    fontWeight: '700',
+    color:      C.white,
   },
 });
