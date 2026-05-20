@@ -21,6 +21,8 @@ import { useLocalSearchParams, useRouter } from 'expo-router';
 import * as Haptics from 'expo-haptics';
 import { Colors } from '../../../constants/colors';
 import { Typography } from '../../../constants/typography';
+import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
+import { BEHAVIORAL_LEVEL_ICON_MAP } from '../../../components/shared/TrafficSignIcon';
 
 // ─── Scaffold data ────────────────────────────────────────────────────────────
 import vehicleKnowledgeData from '../../../content/vehicle_knowledge_scaffold.json';
@@ -130,7 +132,12 @@ export default function BehavioralTopicScreenB() {
           </View>
 
           {/* Icon */}
-          <Text style={styles.levelIcon}>{item.icon}</Text>
+          <MaterialCommunityIcons
+            name={(BEHAVIORAL_LEVEL_ICON_MAP[item.id] ?? 'circle-outline') as any}
+            size={30}
+            color={item.color}
+            style={{ flexShrink: 0 }}
+          />
 
           {/* Text */}
           <View style={styles.levelTextContainer}>

@@ -8,6 +8,27 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 
+// ── Modern vector icons for behavioral topic levels ───────────────────────────
+export const BEHAVIORAL_LEVEL_ICON_MAP: Record<string, string> = {
+  // vehicle_knowledge
+  vk_l1: 'car-outline',
+  vk_l2: 'car-door',
+  vk_l3: 'speedometer',
+  vk_l4: 'car-light-high',
+  vk_l5: 'engine-outline',
+  vk_l6: 'clipboard-check-outline',
+  vk_l7: 'car-brake-hold',
+  vk_l8: 'shield-car',
+  // mind_safety
+  ms_l1: 'sleep',
+  ms_l2: 'weather-night',
+  ms_l3: 'glass-wine',
+  ms_l4: 'head-heart-outline',
+  // society_law
+  sl_l1: 'walk',
+  sl_l2: 'police-badge-outline',
+};
+
 // ── Subtopic count for behavioral topics (no sign_count in DB) ────────────────
 export const TOPIC_SUBTOPIC_COUNT: Record<string, number> = {
   vehicle_knowledge: 8,
