@@ -1,6 +1,6 @@
 {
   "topicId": "mind_safety",
-  "name_amharic": "",
+  "name_amharic": "ሥነ ልቦናዊ ደህንነት",
   "name_hebrew": "בטיחות נפשית",
   "icon": "🧠",
   "color": "#1A237E",
@@ -9,13 +9,14 @@
       "id": "ms_l1",
       "level": 1,
       "name_hebrew": "עייפות בנהיגה",
-      "name_amharic": "",
+      "name_amharic": "ድካምና ማሽከርከር",
       "icon": "😴",
       "color": "#1565C0",
       "subtopics": [
         {
           "id": "ms_l1_s1",
           "name_hebrew": "עייפות והשפעתה על הנהיגה",
+          "name_amharic": "ድካምና ተጽዕኖው",
           "icon": "😴",
           "explanation_amharic": "መኪና በሚያሽከረክሩበት ጊዜ ድካም እጅግ አደገኛ ከሆኑ ነገሮች አንዱ ነው። ድካም የምላሽ ጊዜን ያዘገያል፣ ንቃትንና ትኩረትን ይቀንሳል። የአሽከርካሪው የአካልና የአእምሮ ሁኔታ የምላሽ ርቀትን በቀጥታ ይነካል። የደከመ አሽከርካሪ መኪናውን ለማቆም ብዙ ርቀት ያስፈልገዋል። አሽከርካሪው ሲደክመው፣ ትኩረቱ ሲበታተን ወይም ያልተረጋጋ ሲሆን፣ ከፊት ለፊቱ ካለው ተሽከርካሪ ያለው ርቀት መጨመር አለበት። ለመንዳት በጣም እንደደከመው የመወሰን ኃላፊነት የአሽከርካሪው ራሱ ነው። ድካም ሲሰማዎት መኪናውን አስተማማኝ በሆነ ቦታ ማቆም፣ ማረፍ፣ አስፈላጊ ከሆነም አጭር እንቅልፍ መውሰድ፣ ውሃ መጠጣት እና የእረፍት ጊዜ መውሰድ ያስፈልጋል። ከዚያ በኋላ ጉዞዎን መቀጠል ይችላሉ።",
           "narration_script": "መኪና በሚያሽከረክሩበት ጊዜ ድካም እጅግ አደገኛ ከሆኑ ነገሮች አንዱ ነው። ድካም የምላሽ ጊዜን ያዘገያል፣ ንቃትንና ትኩረትን ይቀንሳል። የአሽከርካሪው የአካልና የአእምሮ ሁኔታ የምላሽ ርቀትን በቀጥታ ይነካል። የደከመ አሽከርካሪ መኪናውን ለማቆም ብዙ ርቀት ያስፈልገዋል። አሽከርካሪው ሲደክመው፣ ትኩረቱ ሲበታተን ወይም ያልተረጋጋ ሲሆን፣ ከፊት ለፊቱ ካለው ተሽከርካሪ ያለው ርቀት መጨመር አለበት። ለመንዳት በጣም እንደደከመው የመወሰን ኃላፊነት የአሽከርካሪው ራሱ ነው። ድካም ሲሰማዎት መኪናውን አስተማማኝ በሆነ ቦታ ማቆም፣ ማረፍ፣ አስፈላጊ ከሆነም አጭር እንቅልፍ መውሰድ፣ ውሃ መጠጣት እና የእረፍት ጊዜ መውሰድ ያስፈልጋል። ከዚያ በኋላ ጉዞዎን መቀጠል ይችላሉ።",
@@ -94,13 +95,14 @@
       "id": "ms_l2",
       "level": 2,
       "name_hebrew": "נהיגת לילה",
-      "name_amharic": "",
+      "name_amharic": "የሌሊት ማሽከርከር",
       "icon": "🌙",
       "color": "#0D47A1",
       "subtopics": [
         {
           "id": "ms_l2_s1",
           "name_hebrew": "סכנות ייחודיות בנהיגת לילה",
+          "name_amharic": "የሌሊት ልዩ አደጋዎች",
           "icon": "🌙",
           "explanation_amharic": "በሌሊት በሚያሽከረክሩበት ጊዜ ልዩ አደጋዎች ያጋጥማሉ። የማየት ችሎታ ውስን ይሆናል፤ የመኪናው መብራቶች የመንገዱን ክፍል ብቻ ስለሚያበሩ እንቅፋቶችን፣ እግረኞችን እና እንስሳትን ለመለየት አስቸጋሪ ይሆናል። የብሬክ ማቆሚያ ርቀት ተመሳሳይ ቢሆንም የማየት ርቀት ግን ያጥራል። ስለዚህ ፍጥነትዎን ከመኪናው መብራት የማብራት አቅም ጋር ማስተካከል አለብዎት። ከፊት ለፊት ከሚመጡ ተሽከርካሪዎች መብራት የሚመጣው ብርሃን ዓይንዎን ሲያሳውር፣ እይታዎን ወደ መንገዱ ቀኝ ዳርቻ በማዞር ፍጥነትዎን መቀነስ ይገባል። በሰውነት ባዮሎጂያዊ ሰዓት ምክንያት በሌሊት ድካም ይከማቻል እና እንቅልፍ የመውሰድ ዝንባሌ ይኖራል። በዚህ ጊዜ ተሽከርካሪውን ደህንነቱ በተጠበቀ ቦታ አቁመው፣ እራስዎን ማደስ ወይም አጭር እንቅልፍ መውሰድ ያስፈልጋል።",
           "narration_script": "በሌሊት በሚያሽከረክሩበት ጊዜ ልዩ አደጋዎች ያጋጥማሉ። የማየት ችሎታ ውስን ይሆናል፤ የመኪናው መብራቶች የመንገዱን ክፍል ብቻ ስለሚያበሩ እንቅፋቶችን፣ እግረኞችን እና እንስሳትን ለመለየት አስቸጋሪ ይሆናል። የብሬክ ማቆሚያ ርቀት ተመሳሳይ ቢሆንም የማየት ርቀት ግን ያጥራል። ስለዚህ ፍጥነትዎን ከመኪናው መብራት የማብራት አቅም ጋር ማስተካከል አለብዎት። ከፊት ለፊት ከሚመጡ ተሽከርካሪዎች መብራት የሚመጣው ብርሃን ዓይንዎን ሲያሳውር፣ እይታዎን ወደ መንገዱ ቀኝ ዳርቻ በማዞር ፍጥነትዎን መቀነስ ይገባል። በሰውነት ባዮሎጂያዊ ሰዓት ምክንያት በሌሊት ድካም ይከማቻል እና እንቅልፍ የመውሰድ ዝንባሌ ይኖራል። በዚህ ጊዜ ተሽከርካሪውን ደህንነቱ በተጠበቀ ቦታ አቁመው፣ እራስዎን ማደስ ወይም አጭር እንቅልፍ መውሰድ ያስፈልጋል።",
@@ -179,7 +181,7 @@
       "id": "ms_l3",
       "level": 3,
       "name_hebrew": "אלכוהול וסמים",
-      "name_amharic": "",
+      "name_amharic": "አልኮልና መድሃኒቶች",
       "icon": "🚫",
       "color": "#B71C1C",
       "subtopics": [
@@ -262,7 +264,78 @@
         {
           "id": "ms_l3_s2",
           "name_hebrew": "תרופות וסמים בנהיגה",
-          "icon": "💊"
+          "name_amharic": "መድሃኒቶችና ማሽከርከር",
+          "icon": "💊",
+          "explanation_amharic": "ከአልኮል በተጨማሪ አንዳንድ መድሃኒቶች የመንዳት ችሎታን የሚነኩ እንደ አደንዛዥ እጽ ይቆጠራሉ። እነዚህ መድሃኒቶች እንቅልፍ ማጣት፣ የምላሽ ፍጥነት መቀነስ፣ ትኩረትን እና ፍርድን ማዛባት ሊያስከትሉ ይችላሉ። ልክ እንደ አልኮል ሁሉ የመንዳት ብቃትን በእጅጉ ይጎዳሉ። ማንኛውንም መድሃኒት ከወሰዱ በኋላ ለመንዳት ከማሰብዎ በፊት ከሐኪምዎ ጋር መማከር ግዴታ ነው። መድሃኒቱ ለመንዳት ደህንነቱ የተጠበቀ መሆኑን እና ለምን ያህል ጊዜ በሰውነት ላይ ተጽዕኖ እንደሚያሳድር ማወቅ አለብዎት። በሐኪም የታዘዘም ይሁን ያለ ማዘዣ የተገዛ ማንኛውም መድሃኒት የጥቅል ወረቀቱን ማንበብ እና በመንዳት ላይ ተጽዕኖ ያሳድር እንደሆነ ማረጋገጥ አስፈላጊ ነው። ይህ የአሽከርካሪው የግል ኃላፊነት እንጂ የሐኪም ወይም የመድሃኒት ቤቱ ኃላፊነት አይደለም።",
+          "narration_script": "ከአልኮል በተጨማሪ አንዳንድ መድሃኒቶች የመንዳት ችሎታን የሚነኩ እንደ አደንዛዥ እጽ ይቆጠራሉ። እነዚህ መድሃኒቶች እንቅልፍ ማጣት፣ የምላሽ ፍጥነት መቀነስ፣ ትኩረትን እና ፍርድን ማዛባት ሊያስከትሉ ይችላሉ። ልክ እንደ አልኮል ሁሉ የመንዳት ብቃትን በእጅጉ ይጎዳሉ። ማንኛውንም መድሃኒት ከወሰዱ በኋላ ለመንዳት ከማሰብዎ በፊት ከሐኪምዎ ጋር መማከር ግዴታ ነው። መድሃኒቱ ለመንዳት ደህንነቱ የተጠበቀ መሆኑን እና ለምን ያህል ጊዜ በሰውነት ላይ ተጽዕኖ እንደሚያሳድር ማወቅ አለብዎት። በሐኪም የታዘዘም ይሁን ያለ ማዘዣ የተገዛ ማንኛውም መድሃኒት የጥቅል ወረቀቱን ማንበብ እና በመንዳት ላይ ተጽዕኖ ያሳድር እንደሆነ ማረጋገጥ አስፈላጊ ነው። ይህ የአሽከርካሪው የግል ኃላፊነት እንጂ የሐኪም ወይም የመድሃኒት ቤቱ ኃላፊነት አይደለም።",
+          "image_description": "Close-up shot inside a parked car during daytime. An Ethiopian man with dark skin, short curly black hair, and Ethiopian facial features sits in the driver's seat. His open palm is extended toward the camera, holding 4-5 large round white and red pharmaceutical tablets/pills — clearly identifiable as medicine pills. The pills are sharp, large, and front-and-center in the frame. His expression is uncertain and worried. The steering wheel is visible in the soft background. Warm natural daylight. Photorealistic, cinematic, documentary style.",
+          "questions": [
+            {
+              "question_amharic": "አንዳንድ መድሃኒቶች የመንዳት ችሎታን እንዴት ሊነኩ ይችላሉ?",
+              "answers": [
+                {
+                  "text_amharic": "እንቅልፍ ማጣት፣ የምላሽ ፍጥነት መቀነስ እና ትኩረትን ማዛባት ሊያስከትሉ ይችላሉ",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "የመኪናውን ፍጥነት ብቻ ይጨምራሉ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የመንዳት ችሎታ ላይ ምንም ተጽዕኖ የላቸውም",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የመንዳት ችሎታን ያሻሽላሉ",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "አሽከርካሪው መድሃኒት ከወሰደ በኋላ ከመንዳቱ በፊት ምን ማድረግ አለበት?",
+              "answers": [
+                {
+                  "text_amharic": "ከሐኪሙ ጋር መማከር እና የመድሃኒቱን የጥቅል ወረቀት ማንበብ አለበት",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "የጓደኞቹን አስተያየት መጠየቅ አለበት",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ምንም ማድረግ አያስፈልገውም",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ወዲያውኑ መንዳት መጀመር ይችላል",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "መድሃኒቶችን ከመንዳት በፊት የማጣራት ህግ በሐኪም የታዘዙ መድሃኒቶችን ብቻ ይመለከታል?",
+              "answers": [
+                {
+                  "text_amharic": "አዎ፣ በሐኪም የታዘዙትን ብቻ ይመለከታል",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "አይ፣ በሐኪም የታዘዙትንም ሆነ ያለ ማዘዣ የተገዙትን ሁሉ ይመለከታል",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ይህ ህግ ለመድሃኒቶች አይተገበርም",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ህጉ የሚመለከተው ለአልኮል ብቻ ነው",
+                  "is_correct": false
+                }
+              ]
+            }
+          ],
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_ms_l3_s2_narration_1779195303513.mp3",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/ms_l3_s2_image_1779196032354.jpg"
         }
       ]
     },
@@ -270,14 +343,85 @@
       "id": "ms_l4",
       "level": 4,
       "name_hebrew": "מצב נפשי ורגשי",
-      "name_amharic": "",
+      "name_amharic": "ስሜታዊ ሁኔታ",
       "icon": "😤",
       "color": "#6A1B9A",
       "subtopics": [
         {
           "id": "ms_l4_s1",
           "name_hebrew": "רגשות, כעס ולחץ בנהיגה",
-          "icon": "😤"
+          "name_amharic": "ስሜቶች፣ ቁጣና ጭንቀት",
+          "icon": "😤",
+          "explanation_amharic": "አንድ አሽከርካሪ ለመንዳት ከመሪው ጀርባ ከመቀመጡ በፊት፣ በአካልም ሆነ በአእምሮ ሙሉ ዝግጁነት ላይ መሆን አለበት። ሙሉ ንቃት እና ለተለያዩ ማነቃቂያዎች ትክክለኛና ፈጣን ምላሽ መስጠት ወሳኝ ነው።\n\nጠንካራ ስሜቶች እንደ ቁጣ፣ ጭንቀት፣ ሀዘን ወይም ከመጠን ያለፈ ደስታ የማሽከርከር ችሎታን በቀጥታ ያበላሻሉ። እነዚህ ስሜቶች ትኩረትን ይቀንሳሉ፣ ድንገተኛ እና ያልታሰቡ ምላሾችን ያስከትላሉ፣ የአስተሳሰብ ፍጥነትን ያዘገያሉ፣ እንዲሁም አላስፈላጊ አደጋዎችን ለመውሰድ ያነሳሳሉ።\n\nየተናደደ ወይም የተጨነቀ አሽከርካሪ በኃይል የማሽከርከር፣ ተሽከርካሪዎችን የመከተል፣ ፍጥነት የመጨመር እና ድንገተኛ እንቅስቃሴዎችን የማድረግ ዝንባሌ አለው። እነዚህ ሁሉ አደገኛ ድርጊቶች ናቸው።\n\nከመጠን በላይ ተበሳጭቶ ወይም ተናዶ ከመንዳት በፊት መጠበቅ ግዴታ ነው፣ በጥልቀት መተንፈስ እና መረጋጋት ያስፈልጋል። በስሜታዊ ቀውስ ውስጥ እያሉ መኪና ኣያሽከርክሩ።\n\nበመንገድ ላይ እያሉ ጠንካራ ስሜቶች ከተሰማዎት፣ በአስተማማኝ ቦታ ላይ አቁመው ለአጭር ጊዜ እረፍት ይውሰዱ። ሙሉ ጸጥታ ሲሰማዎት ብቻ ማሽከርከርዎን ይቀጥሉ።",
+          "narration_script": "አንድ አሽከርካሪ ለመንዳት ከመሪው ጀርባ ከመቀመጡ በፊት፣ በአካልም ሆነ በአእምሮ ሙሉ ዝግጁነት ላይ መሆን አለበት። ሙሉ ንቃት እና ለተለያዩ ማነቃቂያዎች ትክክለኛና ፈጣን ምላሽ መስጠት ወሳኝ ነው። ጠንካራ ስሜቶች እንደ ቁጣ፣ ጭንቀት፣ ሀዘን ወይም ከመጠን ያለፈ ደስታ የማሽከርከር ችሎታን በቀጥታ ያበላሻሉ። እነዚህ ስሜቶች ትኩረትን ይቀንሳሉ፣ ድንገተኛ እና ያልታሰቡ ምላሾችን ያስከትላሉ፣ የአስተሳሰብ ፍጥነትን ያዘገያሉ፣ እንዲሁም አላስፈላጊ አደጋዎችን ለመውሰድ ያነሳሳሉ። የተናደደ ወይም የተጨነቀ አሽከርካሪ በኃይል የማሽከርከር፣ ተሽከርካሪዎችን የመከተል፣ ፍጥነት የመጨመር እና ድንገተኛ እንቅስቃሴዎችን የማድረግ ዝንባሌ አለው። እነዚህ ሁሉ አደገኛ ድርጊቶች ናቸው። ከመጠን በላይ ተበሳጭቶ ወይም ተናዶ ከመንዳት በፊት መጠበቅ ግዴታ ነው፣ በጥልቀት መተንፈስ እና መረጋጋት ያስፈልጋል። በስሜታዊ ቀውስ ውስጥ እያሉ መኪና ኣያሽከርክሩ። በመንገድ ላይ እያሉ ጠንካራ ስሜቶች ከተሰማዎት፣ በአስተማማኝ ቦታ ላይ አቁመው ለአጭር ጊዜ እረፍት ይውሰዱ። ሙሉ ጸጥታ ሲሰማዎት ብቻ ማሽከርከርዎን ይቀጥሉ።",
+          "image_description": "Close-up shot inside a car stuck in traffic during daytime. An Ethiopian woman with dark skin, natural black hair, and Ethiopian facial features sits in the driver's seat. Her jaw is tightly clenched, her brow deeply furrowed in intense fury. Her knuckles are white as she grips the steering wheel very tightly with both hands. Through the windshield, a long line of cars is visible in heavy traffic ahead. Her expression shows extreme anger — eyes narrowed and blazing, lips pressed tightly together, face tense with rage. The dashboard is visible. Natural daylight fills the interior. Photorealistic, cinematic, tense emotional atmosphere.",
+          "questions": [
+            {
+              "question_amharic": "ጠንካራ ስሜቶች እንደ ቁጣ ወይም ጭንቀት ማሽከርከርን እንዴት ይጎዳሉ?",
+              "answers": [
+                {
+                  "text_amharic": "ትኩረትን ይቀንሳሉ፣ ድንገተኛ ምላሾችን ያስከትላሉ፣ እና የአደጋ ስጋትን ይጨምራሉ",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "የማሽከርከር ችሎታን ያሻሽላሉ እና ፍጥነትን ይጨምራሉ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ምንም አይነት ተጽዕኖ የላቸውም",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "አሽከርካሪው የበለጠ ጥንቃቄ እንዲያደርግ ያደርጋሉ",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "አንድ አሽከርካሪ ከመኪናው ከመግባቱ በፊት በጣም ከተናደደ ምን ማድረግ አለበት?",
+              "answers": [
+                {
+                  "text_amharic": "ወዲያውኑ መንዳት ይጀምራል",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "እስኪረጋጋ ድረስ ይጠብቃል፣ በስሜታዊ ቀውስ ውስጥ እያለ አይነዳም",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ቁጣውን ለመርሳት ሙዚቃ ይሰማል",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "በፍጥነት በመንዳት ቁጣውን ይገልጻል",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "አንድ አሽከርካሪ በመንገድ ላይ እያለ በጠንካራ ስሜቶች ከተዋጠ ምን ማድረግ አለበት?",
+              "answers": [
+                {
+                  "text_amharic": "ፍጥነቱን ጨምሮ መንዳት ይቀጥላል",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "በአስተማማኝ ቦታ ላይ አቁሞ ለአጭር ጊዜ እረፍት ይወስዳል፣ ሙሉ በሙሉ ሲረጋጋ ብቻ ማሽከርከር ይቀጥላል",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ስሜቱን ችላ ብሎ መንዳት ይቀጥላል",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ከሌሎች አሽከርካሪዎች ጋር ይከራከራል",
+                  "is_correct": false
+                }
+              ]
+            }
+          ],
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_ms_l4_s1_narration_1779291124491.mp3",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/ms_l4_s1_image_1779291254474.jpg"
         }
       ]
     }
