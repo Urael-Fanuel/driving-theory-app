@@ -1,0 +1,117 @@
+{
+  "topicId": "society_law",
+  "name_amharic": "ማህበረሰብና ሕግ",
+  "name_hebrew": "חברה וחוק",
+  "icon": "⚖️",
+  "color": "#1B5E20",
+  "levels": [
+    {
+      "id": "sl_l1",
+      "level": 1,
+      "name_hebrew": "הולכי רגל",
+      "name_amharic": "እግረኞችና ሹፌሩ",
+      "icon": "🚶",
+      "color": "#2E7D32",
+      "subtopics": [
+        {
+          "id": "sl_l1_s1",
+          "name_hebrew": "הולכי רגל ומעברי חצייה",
+          "name_amharic": "እግረኞችና የምንባብ ቦታዎች",
+          "icon": "🚶",
+          "explanation_amharic": "አሽከርካሪዎች፣ ልብ በሉ። እግረኞች መንገዱን በደህና እንዲያቋርጡ፣ ሁልጊዜ አሽከርካሪዎች ፍጥነታቸውን መቀነስ ወይም ማቆም አለባቸው። ይህ በተለይ በእግረኛ ማቋረጫዎች እና መስቀለኛ መንገዶች ላይ ወሳኝ እና ግዴታ ነው። አሽከርካሪዎች እግረኞች ወደ መንገድ ከመውረዳቸው በፊት ቀድመው ማስተዋል አለባቸው። ለህፃናት እና ለአረጋውያን ልዩ ትኩረት መስጠት ያስፈልጋል።\n\nዋናው መርህ እግረኛውን ጥንቃቄ ያደርጋል ብሎ አለመተማመን ነው። አሽከርካሪው ሙሉ ሃላፊነትን መውሰድ አለበት። አሽከርካሪዎች ከፍተኛ ጥንቃቄ ማድረግ ያለባቸው ቦታዎች የአውቶቡስ ማቆሚያዎች አጠገብ፣ ትምህርት ቤቶች፣ የልጆች መጫወቻ ስፍራዎች፣ የገበያ ማዕከላት አካባቢ እንዲሁም ለማየት ሲቸግር ናቸው።",
+          "narration_script": "አሽከርካሪዎች፣ ልብ በሉ። እግረኞች መንገዱን በደህና እንዲያቋርጡ፣ ሁልጊዜ አሽከርካሪዎች ፍጥነታቸውን መቀነስ ወይም ማቆም አለባቸው። ይህ በተለይ በእግረኛ ማቋረጫዎች እና መስቀለኛ መንገዶች ላይ ወሳኝ እና ግዴታ ነው። አሽከርካሪዎች እግረኞች ወደ መንገድ ከመውረዳቸው በፊት ቀድመው ማስተዋል አለባቸው። ለህፃናት እና ለአረጋውያን ልዩ ትኩረት መስጠት ያስፈልጋል። ዋናው መርህ እግረኛውን ጥንቃቄ ያደርጋል ብሎ አለመተማመን ነው። አሽከርካሪው ሙሉ ሃላፊነትን መውሰድ አለበት። አሽከርካሪዎች ከፍተኛ ጥንቃቄ ማድረግ ያለባቸው ቦታዎች የአውቶቡስ ማቆሚያዎች አጠገብ፣ ትምህርት ቤቶች፣ የልጆች መጫወቻ ስፍራዎች፣ የገበያ ማዕከላት አካባቢ እንዲሁም ለማየት ሲቸግር ናቸው።",
+          "image_description": "Daytime street scene in a city. An Ethiopian woman with dark skin and natural black hair is driving a car. Through the windshield, a crosswalk is visible ahead with an Ethiopian elderly man beginning to cross the road. The driver's expression is alert and attentive, her foot hovering near the brake. The car is clearly slowing down. Pedestrian crossing road markings are clearly visible on the road. Natural daylight. Photorealistic, cinematic, safety-conscious atmosphere.",
+          "questions": [
+            {
+              "question_amharic": "እግረኞች ማቋረጫ ላይ መንገዱን ሲያቋርጡ አሽከርካሪ ምን ማድረግ አለበት?",
+              "answers": [
+                {
+                  "text_amharic": "ፍጥነቱን ጨምሮ ማለፍ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "አሽከርካሪዎች መኪናውን ሙሉ በሙሉ በማቆም፣ እግረኞች መንገዱን አቋርጠው ማዶው የእግረኛ መንገድ ላይ እስኪደርሱ ድረስ መጠበቅ ግዴታቸው ነው",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "መለከት በመንፋት እንዲጣደፉ ማድረግ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ምንም ሳያደርግ ማለፍ",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "በመንገድ ላይ የእግረኞችን ደህንነት በተመለከተ ሃላፊነት የሚወስደው ማነው?",
+              "answers": [
+                {
+                  "text_amharic": "እግረኞች ራሳቸው",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "አሽከርካሪው ሙሉ ሃላፊነትን ይወስዳል እንጂ በእግረኞች ጥንቃቄ ላይ መተማመን የለበትም",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "የትራፊክ ፖሊስ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "አሽከርካሪውና እግረኛው እኩል ሃላፊነት ይወስዳሉ",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "አሽከርካሪው ለእግረኞች በተለይ ንቁ መሆን ያለበት የትኞቹ ቦታዎች ላይ ነው?",
+              "answers": [
+                {
+                  "text_amharic": "ክፍት በሆኑ አውራ ጎዳናዎች ላይ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ትምህርት ቤቶች፣ የአውቶቡስ ማቆሚያዎች፣ የልጆች መጫወቻ ስፍራዎች አጠገብ እና ለማየት ሲቸግር",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "የኢንዱስትሪ ዞኖች ውስጥ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ባዶ የመኪና ማቆሚያ ቦታዎች ላይ",
+                  "is_correct": false
+                }
+              ]
+            }
+          ],
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_sl_l1_s1_narration_1779293843428.mp3",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/sl_l1_s1_image_1779293956706.jpg"
+        }
+      ]
+    },
+    {
+      "id": "sl_l2",
+      "level": 2,
+      "name_hebrew": "רכב ביטחון",
+      "name_amharic": "የድንገተኛ ጊዜ ተሽከርካሪዎች",
+      "icon": "🚨",
+      "color": "#1565C0",
+      "subtopics": [
+        {
+          "id": "sl_l2_s1",
+          "name_hebrew": "רכב ביטחון — זיהוי ומה לעשות",
+          "name_amharic": "የድንገተኛ ጊዜ ተሽከርካሪ",
+          "icon": "🚨",
+          "explanation_amharic": "",
+          "narration_script": "",
+          "image_description": "",
+          "questions": [],
+          "narration_audio_url": "",
+          "image_url": ""
+        }
+      ]
+    }
+  ]
+}

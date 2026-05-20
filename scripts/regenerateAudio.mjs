@@ -29,6 +29,11 @@ if (!SUBTOPIC_ID) { console.error('❌ נדרש: --subtopic <id>'); process.exit
 const SCAFFOLD_MAP = {
   vk_:  'vehicle_knowledge_scaffold.json',
   ms_:  'mind_safety_scaffold.json',
+  sl_:  'society_law_scaffold.json',
+  tr_:  'the_road_scaffold.json',
+  mv_:  'my_vehicle_scaffold.json',
+  tw_:  'two_wheelers_scaffold.json',
+  bl_:  'basics_license_scaffold.json',
 };
 const scaffoldFile = Object.entries(SCAFFOLD_MAP).find(([prefix]) => SUBTOPIC_ID.startsWith(prefix))?.[1]
   ?? 'vehicle_knowledge_scaffold.json';

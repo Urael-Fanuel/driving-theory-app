@@ -26,6 +26,7 @@ import { Typography } from '../../../constants/typography';
 // ─── Scaffold data ────────────────────────────────────────────────────────────
 import vehicleKnowledgeData from '../../../content/vehicle_knowledge_scaffold.json';
 import mindSafetyData       from '../../../content/mind_safety_scaffold.json';
+import societyLawData       from '../../../content/society_law_scaffold.json';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -59,6 +60,7 @@ interface ScaffoldData {
 const SCAFFOLD_MAP: Record<string, ScaffoldData> = {
   vehicle_knowledge: vehicleKnowledgeData as ScaffoldData,
   mind_safety:       mindSafetyData       as ScaffoldData,
+  society_law:       societyLawData       as ScaffoldData,
 };
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');

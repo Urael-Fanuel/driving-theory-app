@@ -49,6 +49,7 @@ import {
 } from '../../../utils/googleTTS';
 import vehicleKnowledgeData from '../../../content/vehicle_knowledge_scaffold.json';
 import mindSafetyData       from '../../../content/mind_safety_scaffold.json';
+import societyLawData       from '../../../content/society_law_scaffold.json';
 
 // ─── Number announcement URLs ──────────────────────────────────────────────────
 const _AUDIO_BASE = (process.env.EXPO_PUBLIC_SUPABASE_URL ?? '') + '/storage/v1/object/public/audio';
@@ -92,6 +93,7 @@ interface Scaffold { topicId: string; levels: Level[]; }
 const SCAFFOLD_MAP: Record<string, Scaffold> = {
   vehicle_knowledge: vehicleKnowledgeData as Scaffold,
   mind_safety:       mindSafetyData       as Scaffold,
+  society_law:       societyLawData       as Scaffold,
 };
 
 type Phase       = 'explanation' | 'questions' | 'complete';
