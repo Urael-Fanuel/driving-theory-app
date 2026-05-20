@@ -79,7 +79,7 @@ export function TopicCard({
       >
         {/* Traffic sign icon */}
         <View style={[styles.iconContainer, { backgroundColor: topicColor + '15' }]}>
-          <TrafficSignIcon topicId={topic.id} size={44} />
+          <TrafficSignIcon topicId={topic.id} size={52} />
         </View>
 
         {/* Text (Engine B only) */}

@@ -101,7 +101,7 @@ export default function EngineAHomeScreen() {
         accessibilityLabel={item.name_amharic}
         accessibilityRole="button"
       >
-        <TrafficSignIcon topicId={item.id} size={62} />
+        <TrafficSignIcon topicId={item.id} size={76} />
 
         {/* Count badge — sign count or subtopic count */}
         {(() => {
