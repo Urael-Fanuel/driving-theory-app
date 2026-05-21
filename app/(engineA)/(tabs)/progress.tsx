@@ -66,7 +66,7 @@ export default function EngineAProgressScreen() {
         {/* Start exam button */}
         <TouchableOpacity
           style={styles.examButton}
-          onPress={() => router.push('/(engineA)/exam')}
+          onPress={() => router.push('/(engineA)/exam' as any)}
           activeOpacity={0.8}
         >
           <Text style={styles.examIcon}>📝</Text>

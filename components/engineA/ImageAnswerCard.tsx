@@ -141,21 +141,23 @@ export function ImageAnswerCard({
               </Text>
             </View>
           )}
-
-          {/* Number badge — bottom-left */}
-          <View style={[
-            styles.numberBadge,
-            cardState === 'correct' && { backgroundColor: Colors.correct },
-            cardState === 'wrong'   && { backgroundColor: Colors.wrong },
-          ]}>
-            <Text style={[
-              styles.numberText,
-              (cardState === 'correct' || cardState === 'wrong') && { color: '#ffffff' },
-            ]}>
-              {number}
-            </Text>
-          </View>
         </TouchableOpacity>
+
+        {/* Number badge — outside overflow:hidden so it is never clipped
+            by the card's border-radius clip or the reading-state scale animation.
+            Positioned relative to cardWrapper (same visual position as before). */}
+        <View style={[
+          styles.numberBadge,
+          cardState === 'correct' && { backgroundColor: Colors.correct },
+          cardState === 'wrong'   && { backgroundColor: Colors.wrong },
+        ]}>
+          <Text style={[
+            styles.numberText,
+            (cardState === 'correct' || cardState === 'wrong') && { color: '#ffffff' },
+          ]}>
+            {number}
+          </Text>
+        </View>
 
         {/* 🔊 audio badge — floats from the top-right corner of the card.
             Clearly separate from the card tap area → no confusion. */}
@@ -238,6 +240,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(255,255,255,0.82)',
     justifyContent:  'center',
     alignItems:      'center',
+    zIndex:          12,  // above card content (reading state uses zIndex 10), below audio badge (20)
+    elevation:       12,  // Android z-order — above card's reading elevation (10)
   },
   numberText: {
     ...Typography.numberSmall,

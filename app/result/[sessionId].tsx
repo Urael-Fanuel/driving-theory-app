@@ -30,6 +30,7 @@ import { DBSign } from '../../backend/supabaseClient';
 
 // ─── Global result storage (passed from useExam) ──────────────────────────────
 import { ResultData, WrongQuestion, getExamResult, preloadExamResult } from '../../utils/examResult';
+import { AdCard } from '../../components/shared/AdCard';
 
 // ─── Audio base URL (Supabase Storage) ────────────────────────────────────────
 const _AUDIO_BASE = (process.env.EXPO_PUBLIC_SUPABASE_URL ?? '') + '/storage/v1/object/public/audio';
@@ -45,6 +46,7 @@ const TOPIC_NAMES: Record<string, string> = {
   traffic_lights:       'የትራፊክ መብራቶች',
   road_markings:        'የመንገድ ምልክቶች',
   work_site:            'የሥራ ቦታ ምልክቶች',
+  vehicle_knowledge:    'መኪናን ማወቅ',
   mind_safety:          'አዕምሮ እና ደህንነት',
   society_law:          'ማህበረሰብ እና ህግ',
   the_road:             'የመንገድ ሁኔታዎች',
@@ -139,18 +141,18 @@ export default function ResultScreen() {
   const handleGoHome = async () => {
     await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
     if (isEngineA) {
-      router.replace('/(engineA)/home');
+      router.replace('/(engineA)/home' as any);
     } else {
-      router.replace('/(engineB)/home');
+      router.replace('/(engineB)/home' as any);
     }
   };
 
   const handleRetry = async () => {
     await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
     if (isEngineA) {
-      router.replace('/(engineA)/exam');
+      router.replace('/(engineA)/exam' as any);
     } else {
-      router.replace('/(engineB)/exam');
+      router.replace('/(engineB)/exam' as any);
     }
   };
 
@@ -333,6 +335,24 @@ export default function ResultScreen() {
             </TouchableOpacity>
           </Animated.View>
         )}
+
+        {/* ── Ad mockups — DEMO ONLY, replace with real data ── */}
+        <Animated.View style={[styles.adsContainer, { opacity: fadeAnim }]}>
+          <AdCard
+            variant="instructor"
+            name="יוסי לוי"
+            tagline="ታማኝ፣ ታጋሽ እና ባለሙያ"
+            location="ቴል አቪቭ"
+            phone="0501234567"
+          />
+          <AdCard
+            variant="business"
+            businessName="מנורה ביטוח רכב"
+            description="በአንድ ደቂቃ ዋጋ ያግኙ — ለአዲስ ፈቃድ ልዩ ዋጋ"
+            ctaLabel="ዝርዝሮች"
+            ctaUrl="https://www.menora.co.il"
+          />
+        </Animated.View>
 
         {/* Action buttons */}
         <Animated.View style={[styles.actions, { opacity: fadeAnim }]}>
@@ -565,6 +585,12 @@ const styles = StyleSheet.create({
     ...Typography.body,
     color:      '#FFFFFF',
     fontWeight: '700',
+  },
+
+  // ── Ads ────────────────────────────────────────────────────────────────────
+  adsContainer: {
+    alignSelf: 'stretch',
+    gap:       12,
   },
 
   // ── Action buttons ─────────────────────────────────────────────────────────

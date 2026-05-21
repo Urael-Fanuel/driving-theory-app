@@ -5,7 +5,7 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/መንጃ ፍቃድ በቀላል መንገድ.png",
-    "userInterfaceStyle": "dark",
+    "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/images/መንጃ ፍቃድ በቀላል መንገድ.png",
       "resizeMode": "contain",
@@ -13,7 +13,7 @@
     },
     "androidNavigationBar": {
       "barStyle":        "dark-content",
-      "backgroundColor": "#aaaaaa"
+      "backgroundColor": "#f7f9fb"
     },
     "android": {
       "adaptiveIcon": {
@@ -22,6 +22,8 @@
       },
       "allowBackup": false,
       "minSdkVersion": 26,
+      "targetSdkVersion": 34,
+      "compileSdkVersion": 34,
       "package": "com.drivingtheory.ethiopian",
       "permissions": [
         "android.permission.RECORD_AUDIO",
@@ -45,7 +47,7 @@
       [
         "expo-av",
         {
-          "microphonePermission": "ለድምጽ መልስ ማይክሮፎን ያስፈልጋል"
+          "microphonePermission": "ለድምጽ መልስ ለመናገር ማይክሮፎን ያስፈልጋል። ቁጥሩን ለመናገር ብቻ ይጠቅማል።"
         }
       ]
     ],

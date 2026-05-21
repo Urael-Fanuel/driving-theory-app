@@ -15,8 +15,13 @@ import {
   SafeAreaView,
   Platform,
   Image,
+  Linking,
 } from 'react-native';
 import { useAudio } from '../../hooks/useAudio';
+
+// ⚠️ UPDATE THIS URL before submitting to Google Play —
+// must be a live, publicly accessible Privacy Policy page.
+const PRIVACY_POLICY_URL = 'https://sites.google.com/view/driving-theory-amharic/privacy';
 
 // ─── Colors ───────────────────────────────────────────────────────────────────
 const C = {
@@ -185,6 +190,18 @@ export default function DisclaimerModal({ visible, onAccept }: Props) {
               {' '}ቁልፍ ላይ ይጫኑ።
             </Text>
           </View>
+
+          {/* Privacy Policy link — required by Google Play */}
+          <TouchableOpacity
+            style={styles.privacyLink}
+            onPress={() => Linking.openURL(PRIVACY_POLICY_URL).catch(() => {})}
+            accessibilityRole="link"
+            accessibilityLabel="Privacy Policy"
+          >
+            <Text style={styles.privacyLinkText}>
+              🔒 Privacy Policy / የግላዊነት ፖሊሲ
+            </Text>
+          </TouchableOpacity>
 
           <View style={{ height: 24 }} />
         </ScrollView>
@@ -377,6 +394,20 @@ const styles = StyleSheet.create({
   closingHighlight: {
     color:      C.green,
     fontWeight: 'bold',
+  },
+
+  // ── Privacy Policy link ───────────────────────────────────────────────────────
+  privacyLink: {
+    alignItems:  'center',
+    marginTop:   10,
+    marginBottom: 4,
+    paddingVertical: 10,
+  },
+  privacyLinkText: {
+    fontSize:     13,
+    color:        '#1565C0',
+    textDecorationLine: 'underline',
+    textAlign:    'center',
   },
 
   // ── Footer ────────────────────────────────────────────────────────────────────

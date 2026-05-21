@@ -13,7 +13,9 @@
  */
 
 import { useState, useCallback, useRef, useEffect } from 'react';
-import { Audio, RecordingStatus } from 'expo-av';
+import { Audio } from 'expo-av';
+// RecordingStatus is not exported from expo-av's public API — use an inline shape instead.
+type RecordingStatus = { isRecording: boolean; metering?: number; [key: string]: unknown };
 import { Platform } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import {
@@ -91,9 +93,13 @@ export function useVoiceRecognition(
   // callback which is created inside startListening (can't close over fresh state).
   const stopListeningRef = useRef<() => Promise<void>>(async () => {});
 
-  // ── Request mic permission on mount ─────────────────────────────────────────
+  // ── Check mic permission status on mount (without requesting) ───────────────
+  // Google Play policy: permissions must only be requested in response to a user
+  // action (tapping the mic button), not eagerly on screen mount.
+  // getPermissionsAsync() checks status silently — the actual Dialog prompt happens
+  // only in startListening() when the user explicitly taps the mic.
   useEffect(() => {
-    Audio.requestPermissionsAsync()
+    Audio.getPermissionsAsync()
       .then(({ granted }) => setHasPermission(granted))
       .catch(() => setHasPermission(false));
 

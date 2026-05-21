@@ -43,7 +43,7 @@ import { VoiceAnswerButton } from '../../../components/engineA/VoiceAnswerButton
 import { AudioFeedback } from '../../../components/engineA/AudioFeedback';
 import { DBSign, DBQuestion } from '../../../backend/supabaseClient';
 import * as api from '../../../backend/api';
-import { useAudio, waitForAudioEnd, playAndAwaitAudio } from '../../../hooks/useAudio';
+import { useAudio, playAndAwaitAudio } from '../../../hooks/useAudio';
 import { useProgress } from '../../../hooks/useProgress';
 import { extractSignNumber, shouldShowSignBadge } from '../../../utils/signNumber';
 import { useVoiceRecognition } from '../../../hooks/useVoiceRecognition';
@@ -221,8 +221,12 @@ export default function EngineAQuestionScreen() {
   const handleAnswerAudioPress = useCallback(async (audioUrl: string, answerIndex: number) => {
     audioSequenceCancelledRef.current = true;  // stop the ongoing sequence
     setPlayingAnswerIndex(answerIndex);        // move yellow highlight to the tapped answer
-    playAudio(audioUrl).catch(() => {});       // start playing the selected answer
-    await waitForAudioEnd();                   // wait for it to finish
+    // playAndAwaitAudio stops the current audio, plays the requested answer,
+    // and resolves ONLY when THIS specific audio finishes — eliminates the race
+    // condition where fire-and-forget playAudio() + waitForAudioEnd() could
+    // resolve prematurely (before playAudio changed the audio state) and restart
+    // the sequence while the replay was still playing.
+    await playAndAwaitAudio(audioUrl, () => answeredIndexRef.current !== null);
     setPlayingAnswerIndex(null);               // clear highlight before resuming
     if (answeredIndexRef.current !== null) return; // user selected answer while replaying
     // Resume sequence from the next answer (skip what was already heard)
@@ -234,7 +238,7 @@ export default function EngineAQuestionScreen() {
       setAudioRestartKey(k => k + 1);
     }
     // else: replayed the last answer — sequence is done, stay stopped
-  }, [playAudio, currentQuestion?.answers.length]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [currentQuestion?.answers.length]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // ── Answer selection (via tap OR voice) ────────────────────────────────────
   const handleAnswerSelect = useCallback((answerIndex: number) => {

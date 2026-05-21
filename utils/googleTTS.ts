@@ -47,14 +47,27 @@ export async function resumeTTS(): Promise<void> {
 /**
  * Attach a playback-finish listener and return a promise that resolves when:
  *   (a) the sound finishes naturally (didJustFinish), OR
- *   (b) stopTTS() is called externally (pendingResolve is resolved from outside)
+ *   (b) stopTTS() is called externally (pendingResolve is resolved from outside),
+ *   (c) safety timeout fires (maxMs) — prevents ANR if didJustFinish never fires
+ *       on certain Android devices (known expo-av edge case).
  */
-function awaitSound(sound: Audio.Sound): Promise<void> {
+function awaitSound(sound: Audio.Sound, maxMs = 30_000): Promise<void> {
   return new Promise<void>((resolve) => {
     pendingResolve = resolve;
+
+    // Safety: always resolve after maxMs — prevents permanent hang → ANR
+    const safetyTimer = setTimeout(() => {
+      const r = pendingResolve;
+      pendingResolve = null;
+      sound.unloadAsync().catch(() => {});
+      currentSound = null;
+      r?.();
+    }, maxMs);
+
     sound.setOnPlaybackStatusUpdate((s) => {
       if (!s.isLoaded) return;
       if (s.didJustFinish) {
+        clearTimeout(safetyTimer);
         const r = pendingResolve;
         pendingResolve = null;
         sound.unloadAsync().catch(() => {});
@@ -67,8 +80,9 @@ function awaitSound(sound: Audio.Sound): Promise<void> {
 
 // ─── Public playback functions ────────────────────────────────────────────────
 
-/** Play a pre-recorded audio URL and await completion. */
-export async function playUrlAndAwait(url: string): Promise<void> {
+/** Play a pre-recorded audio URL and await completion.
+ *  Returns true if audio played successfully, false if it failed. */
+export async function playUrlAndAwait(url: string): Promise<boolean> {
   await stopTTS();
   try {
     await Audio.setAudioModeAsync({ playsInSilentModeIOS: true });
@@ -76,37 +90,56 @@ export async function playUrlAndAwait(url: string): Promise<void> {
     currentSound = sound;
     await sound.playAsync();
     await awaitSound(sound);
+    return true;
   } catch (e) {
     console.warn('[googleTTS] playUrlAndAwait error:', e);
+    return false;
   }
 }
 
-/** Call Google TTS API and await completion. */
-export async function speakAndAwait(text: string): Promise<void> {
+/** Call Google TTS API and await completion.
+ *  Returns true if the text was spoken successfully, false if it failed
+ *  (network timeout, API error, no audio content).
+ *  Callers MUST check the return value — if false, the user heard nothing
+ *  and the sequence should stop rather than continue to the next step. */
+export async function speakAndAwait(text: string): Promise<boolean> {
   await stopTTS();
   try {
     await Audio.setAudioModeAsync({ playsInSilentModeIOS: true });
 
-    const res = await fetch(TTS_URL, {
-      method:  'POST',
-      headers: { 'Content-Type': 'application/json', 'X-Goog-Api-Key': TTS_KEY },
-      body: JSON.stringify({
-        input:       { text },
-        voice:       { languageCode: 'am-ET', name: 'am-ET-Standard-A', ssmlGender: 'FEMALE' },
-        audioConfig: { audioEncoding: 'MP3', speakingRate: 0.85 },
-      }),
-    });
+    // Abort the TTS request after 8 seconds — prevents ANR if Google API hangs
+    const controller = new AbortController();
+    const fetchTimeout = setTimeout(() => controller.abort(), 7_000);
+
+    let res: Response;
+    try {
+      res = await fetch(TTS_URL, {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json', 'X-Goog-Api-Key': TTS_KEY },
+        body: JSON.stringify({
+          input:       { text },
+          voice:       { languageCode: 'am-ET', name: 'am-ET-Standard-A', ssmlGender: 'FEMALE' },
+          audioConfig: { audioEncoding: 'MP3', speakingRate: 0.85 },
+        }),
+        signal: controller.signal,
+      });
+    } finally {
+      clearTimeout(fetchTimeout);
+    }
 
     const json = await res.json();
-    if (!json.audioContent) return;
+    // No audio content = API returned error or empty response
+    if (!json.audioContent) return false;
 
     const uri = `data:audio/mp3;base64,${json.audioContent}`;
     const { sound } = await Audio.Sound.createAsync({ uri });
     currentSound = sound;
     await sound.playAsync();
     await awaitSound(sound);
+    return true;
   } catch (e) {
     console.warn('[googleTTS] speakAndAwait error:', e);
+    return false;
   }
 }
 

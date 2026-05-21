@@ -30,6 +30,7 @@ import { useExam } from '../../../hooks/useExam';
 import { useNetworkStatus } from '../../../hooks/useNetworkStatus';
 import { isQuestionAudioReady, prefetchQuestionAudio, preCacheAudioBatch } from '../../../services/audioCache';
 import { useAudio, playAndAwaitAudio } from '../../../hooks/useAudio';
+import { speakAndAwait, stopTTS } from '../../../utils/googleTTS';
 import { useVoiceRecognition } from '../../../hooks/useVoiceRecognition';
 import * as api from '../../../backend/api';
 import { DBSign } from '../../../backend/supabaseClient';
@@ -71,11 +72,22 @@ export default function EngineAExamScreen() {
   const prevConnectedRef  = useRef(true);
   const isConnectedRef    = useRef(isConnected);
   const [playingAnswerIndex,       setPlayingAnswerIndex]       = useState<number | null>(null);
+  const playingAnswerIndexRef  = useRef<number | null>(null); // mirror for async callbacks
+  // true once the answer's own audio clip has STARTED playing (after the number announcement).
+  // false while only the number is being announced.
+  const answerAudioStartedRef  = useRef(false);
+  // true after the answer's AUDIO (not just the number announcement) has fully played.
+  // Used by handleAnswerAudioPress to decide whether to resume from i or i+1.
+  const answerFullyReadRef     = useRef(false);
   const [signs,                    setSigns]                    = useState<DBSign[]>([]);
   const [isTabFocused,             setIsTabFocused]             = useState(false);
 
   // Keep isConnectedRef in sync — lets runSequence read connectivity synchronously
   useEffect(() => { isConnectedRef.current = isConnected; }, [isConnected]);
+
+  // Keep playingAnswerIndexRef in sync — lets handleAnswerAudioPress capture the
+  // answer index the sequence was on at the moment the user tapped 🔊.
+  useEffect(() => { playingAnswerIndexRef.current = playingAnswerIndex; }, [playingAnswerIndex]);
 
   // Load all signs once on mount (for displaying the sign image per question)
   useEffect(() => {
@@ -113,6 +125,7 @@ export default function EngineAExamScreen() {
       // wait for the native layer to stop before restarting the sequence.
       sequenceCancelledRef.current = true;
       stopAudio();
+      stopTTS().catch(() => {}); // Stop TTS if a behavioral question was playing
       // Prefetch audio for current + next 3 questions
       questions.slice(currentIndex, currentIndex + 4).forEach(q => prefetchQuestionAudio(q));
       // Pre-warm image cache for current question's sign + answer images
@@ -156,6 +169,17 @@ export default function EngineAExamScreen() {
   // so the running sequence stops immediately without waiting for a re-render cycle.
   const sequenceCancelledRef = useRef(false);
 
+  // When the user taps 🔊 on an answer card, holds the answer index to resume from.
+  // null = normal start (question first); N = skip question, start from answer N.
+  const replayFromAnswerRef = useRef<number | null>(null);
+
+  // TTS failure tracking — counts consecutive TTS failures on the SAME question.
+  // Resets automatically when the question changes (tracked by question ID).
+  // 1st failure → play "connection problem, press ▶️ to retry"
+  // 2nd+ failure → play "still failing, move to next question or topic"
+  const ttsFailCountRef      = useRef(0);
+  const ttsFailQuestionIdRef = useRef('');
+
   // Stable callback ref so useVoiceRecognition doesn't re-init on re-renders
   const answerCallbackRef = useRef<(idx: number) => void>(() => {});
 
@@ -181,6 +205,7 @@ export default function EngineAExamScreen() {
         setIsTabFocused(false);
         cancelListening();
         stopAudio();
+        stopTTS().catch(() => {});
       };
     }, [cancelListening, stopAudio])
   );
@@ -195,6 +220,7 @@ export default function EngineAExamScreen() {
     cancelListening(); // Stop any ongoing recording
     sequenceCancelledRef.current = true; // Stop runSequence immediately before stopAudio resolves
     stopAudio();
+    stopTTS().catch(() => {}); // Also stop TTS if a behavioral question was playing
     setPlayingAnswerIndex(null);
     submitAnswer(answer.id);
   }, [currentQuestion, phase, submitAnswer, stopAudio, cancelListening]);
@@ -225,25 +251,74 @@ export default function EngineAExamScreen() {
 
     async function runSequence() {
       await stopAudio();
+      await stopTTS();
       if (isCancelled()) return;
 
       const qId = currentQuestion!.id;
-      const qAudioUrl = currentQuestion!.question_audio_url
-        || `${_AUDIO_BASE}/${qId.toLowerCase()}.mp3`;
-      await playAndAwaitAudio(qAudioUrl, isCancelled);
-      if (isCancelled()) return;
+      // Behavioral question = no sign_id. Use TTS for question + answer audio.
+      const isBehavioral = !currentQuestion!.sign_id;
+
+      // Check if we're resuming after a 🔊 replay (skip question, start from answer N).
+      const resumeFromAnswer = replayFromAnswerRef.current;
+      replayFromAnswerRef.current = null;
+
+      if (resumeFromAnswer === null) {
+      if (isBehavioral) {
+        // Reset TTS fail counter when we reach a new question
+        const qIdForFail = currentQuestion!.id;
+        if (ttsFailQuestionIdRef.current !== qIdForFail) {
+          ttsFailCountRef.current      = 0;
+          ttsFailQuestionIdRef.current = qIdForFail;
+        }
+
+        // TTS reads the question aloud.
+        // If TTS fails (network error / timeout) → stop the sequence here and play
+        // an informative error message so the user knows what to do.
+        // The ▶️ button remains on screen for retry.
+        const questionSpoken = await speakAndAwait(currentQuestion!.question_amharic ?? '');
+        if (!questionSpoken) {
+          if (!isCancelled()) {
+            // Count this failure and choose the right error message:
+            // 1st failure → "connection problem, press ▶️ to retry"
+            // 2nd+ failure → "still failing, move to next question/topic"
+            ttsFailCountRef.current += 1;
+            const errorFile = ttsFailCountRef.current > 1
+              ? 'tts_error_retry.mp3'
+              : 'tts_error_first.mp3';
+            playAudio(`${_AUDIO_BASE}/${errorFile}`).catch(() => {});
+          }
+          return;
+        }
+        if (isCancelled()) return;
+      } else {
+        const qAudioUrl = currentQuestion!.question_audio_url
+          || `${_AUDIO_BASE}/${qId.toLowerCase()}.mp3`;
+        await playAndAwaitAudio(qAudioUrl, isCancelled);
+        if (isCancelled()) return;
+      }
 
       await new Promise(res => setTimeout(res, 1000));
       if (isCancelled()) return;
 
-      // If offline at this point — stop here. The reconnect handler will restart
-      // the sequence from scratch, so "አንድ" can never play before question audio.
-      if (!isConnectedRef.current) return;
+      // If offline at this point:
+      //   - Behavioral questions: stop (answers need live TTS — can't be cached).
+      //   - Sign questions: stop only if answer audio is NOT cached locally.
+      //     If everything was pre-cached, the full sequence can play offline.
+      if (!isConnectedRef.current && !isBehavioral) {
+        const answersReady = await isQuestionAudioReady(currentQuestion!);
+        if (!answersReady) return;
+      } else if (!isConnectedRef.current && isBehavioral) {
+        return;
+      }
+      } // end if (resumeFromAnswer === null)
 
-      for (let i = 0; i < currentQuestion!.answers.length && i < 4; i++) {
+      for (let i = resumeFromAnswer ?? 0; i < currentQuestion!.answers.length && i < 4; i++) {
         if (isCancelled()) return;
 
         setPlayingAnswerIndex(i);
+        // Reset both flags: answer audio not started, not fully read yet.
+        answerAudioStartedRef.current = false;
+        answerFullyReadRef.current    = false;
 
         await playAndAwaitAudio(NUMBER_URLS[i], isCancelled);
         if (isCancelled()) return;
@@ -253,11 +328,36 @@ export default function EngineAExamScreen() {
         await new Promise<void>(r => setTimeout(r, 0));
         if (isCancelled()) return;
 
+        // Answer audio is about to start — from this point the user "chose to skip"
+        // if they tap 🔊 on another answer (they heard the number, decided to jump).
+        answerAudioStartedRef.current = true;
+
         const answer = currentQuestion!.answers[i];
-        const answerUrl = answer?.audio_url
-          || `${_AUDIO_BASE}/answer_${qId}_${answer?.id}.mp3`;
-        await playAndAwaitAudio(answerUrl, isCancelled);
-        if (isCancelled()) return;
+        if (isBehavioral) {
+          // TTS reads the answer text.
+          // If TTS fails here — play error audio and stop. The user heard the
+          // question but not all answers; continuing would leave them confused.
+          const answerSpoken = await speakAndAwait(answer?.text_amharic ?? '');
+          if (!answerSpoken) {
+            if (!isCancelled()) {
+              ttsFailCountRef.current += 1;
+              const errorFile = ttsFailCountRef.current > 1
+                ? 'tts_error_retry.mp3'
+                : 'tts_error_first.mp3';
+              playAudio(`${_AUDIO_BASE}/${errorFile}`).catch(() => {});
+            }
+            return;
+          }
+          if (isCancelled()) return;
+        } else {
+          const answerUrl = answer?.audio_url
+            || `${_AUDIO_BASE}/answer_${qId}_${answer?.id}.mp3`;
+          await playAndAwaitAudio(answerUrl, isCancelled);
+          if (isCancelled()) return;
+        }
+
+        // Answer audio finished completely — mark as fully read.
+        answerFullyReadRef.current = true;
 
         // Yield again before the next number announcement.
         await new Promise<void>(r => setTimeout(r, 0));
@@ -319,7 +419,8 @@ export default function EngineAExamScreen() {
   const handleBack = () => {
     cancelListening();
     stopAudio();
-    router.navigate('/(engineA)/home');
+    stopTTS().catch(() => {});
+    router.navigate('/(engineA)/home' as any);
   };
 
   // ── Question navigation (prev / next) ───────────────────────────────────────
@@ -329,6 +430,7 @@ export default function EngineAExamScreen() {
   const handleNavPrev = () => {
     if (!canGoPrev) return;
     stopAudio();
+    stopTTS().catch(() => {});
     cancelListening();
     setShowFeedback(false);
     goToQuestion(currentIndex - 1);
@@ -337,6 +439,7 @@ export default function EngineAExamScreen() {
   const handleNavNext = () => {
     if (!canGoNext) return;
     stopAudio();
+    stopTTS().catch(() => {});
     cancelListening();
     setShowFeedback(false);
     goToQuestion(currentIndex + 1);
@@ -349,11 +452,53 @@ export default function EngineAExamScreen() {
     if (audioState === 'playing' || audioState === 'loading') {
       sequenceCancelledRef.current = true;
       stopAudio();
+      stopTTS().catch(() => {}); // Also stop TTS if a behavioral question was playing
     } else {
       // idle / paused / finished / error → restart full sequence
       setAudioRestartKey(k => k + 1);
     }
   };
+
+  // ── 🔊 Answer audio button: cancel sequence, highlight card, replay, then resume ──
+  const handleAnswerAudioPress = useCallback(async (audioUrl: string, answerIndex: number) => {
+    if (phaseRef.current !== 'question') return;
+    // Capture where the sequence was BEFORE cancelling it.
+    // Example: sequence is reading answer 3 (index 2), user taps 🔊 on answer 1 (index 0)
+    // → after replay we must continue from answer 4 (index 3), not answer 2.
+    const playingAtTime = playingAnswerIndexRef.current;
+    sequenceCancelledRef.current = true;
+    await stopTTS();   // stop TTS if a behavioral question was mid-read
+    setPlayingAnswerIndex(answerIndex); // yellow border on the tapped card
+    // playAndAwaitAudio stops the current audio, plays this answer, resolves only
+    // when it finishes — no race condition with the sequence.
+    await playAndAwaitAudio(audioUrl, () => phaseRef.current !== 'question');
+    setPlayingAnswerIndex(null);
+    if (phaseRef.current !== 'question') return;
+    // If the sequence had already finished (playingAtTime === null), just replay —
+    // don't restart the cycle (user is reviewing, not in the middle of listening).
+    if (playingAtTime === null) return;
+    // Three-way resume logic:
+    //
+    //  A) Answer was FULLY read (number + audio both done)
+    //     → resume from playingAtTime + 1  (that answer is complete, move on)
+    //
+    //  B) Answer audio had STARTED but not finished (user jumped mid-playback)
+    //     → the user intentionally skipped it; resume from answerIndex + 1
+    //       (continue from the answer they just replayed, then move forward)
+    //
+    //  C) Only the NUMBER was announced, audio hadn't started yet
+    //     → the answer was never heard; resume from playingAtTime so it gets re-read
+    const resumeFrom = answerFullyReadRef.current
+      ? playingAtTime + 1       // A: fully done
+      : answerAudioStartedRef.current
+        ? answerIndex + 1       // B: mid-audio skip — continue after the replayed answer
+        : playingAtTime;        // C: number-only — re-read the interrupted answer
+    if (resumeFrom < 4) {
+      replayFromAnswerRef.current = resumeFrom;
+      sequenceCancelledRef.current = false;
+      setAudioRestartKey(k => k + 1);
+    }
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const audioButtonIcon = audioState === 'playing' ? '⏸' : '▶️';
 
@@ -404,7 +549,7 @@ export default function EngineAExamScreen() {
           <Text style={{ color: '#fff', fontSize: 48, marginBottom: 16 }}>📵</Text>
           <Text style={{ color: '#fff', fontSize: 18, textAlign: 'center', marginBottom: 8 }}>{'ኢንተርኔት የለም'}</Text>
           <Text style={{ color: '#ccc', fontSize: 14, textAlign: 'center', marginBottom: 32 }}>{'ድምፅ ማጫወት አይቻልም። እባክዎ ኢንተርኔት ሲኖር ይመለሱ።'}</Text>
-          <TouchableOpacity onPress={() => { router.navigate('/(engineA)/home'); }}
+          <TouchableOpacity onPress={() => { router.navigate('/(engineA)/home' as any); }}
             style={{ backgroundColor: '#e67e22', paddingHorizontal: 32, paddingVertical: 12, borderRadius: 24 }}>
             <Text style={{ color: '#fff', fontSize: 16 }}>{'ወደ ቤት ተመለስ'}</Text>
           </TouchableOpacity>
@@ -472,7 +617,7 @@ export default function EngineAExamScreen() {
               cardState={answerCardState(index)}
               onPress={() => handleAnswerSelect(index)}
               onAudioPress={answer.audio_url
-                ? () => playAudio(answer.audio_url!).catch(() => {})
+                ? () => handleAnswerAudioPress(answer.audio_url!, index)
                 : undefined}
               disabled={phase !== 'question'}
             />

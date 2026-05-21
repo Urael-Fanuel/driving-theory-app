@@ -223,6 +223,12 @@ export async function preCacheSystemAudio(
     'not_heard_tap_number.mp3',
     'exam_passed.mp3',
     'exam_failed.mp3',
+    // Number announcements — must always be cached so answer sequence
+    // can play fully offline when question/answer audio is pre-cached.
+    'number_1.mp3',
+    'number_2.mp3',
+    'number_3.mp3',
+    'number_4.mp3',
   ];
 
   const urls = systemFiles.map(f => `${baseUrl}/audio/${f}`);
@@ -234,9 +240,9 @@ export async function preCacheSystemAudio(
  */
 export async function getCacheSize(): Promise<number> {
   try {
-    const info = await FileSystem.getInfoAsync(AUDIO_CACHE_DIR, { size: true });
-    if (info.exists && 'size' in info) {
-      return (info.size ?? 0) / (1024 * 1024);
+    const info = await FileSystem.getInfoAsync(AUDIO_CACHE_DIR) as any;
+    if (info.exists && typeof info.size === 'number') {
+      return info.size / (1024 * 1024);
     }
     return 0;
   } catch {

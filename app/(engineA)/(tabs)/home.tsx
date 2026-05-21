@@ -40,6 +40,7 @@ import { DBTopic } from '../../../backend/supabaseClient';
 import * as api from '../../../backend/api';
 import { useAudio } from '../../../hooks/useAudio';
 import { useProgress } from '../../../hooks/useProgress';
+import { AdCard } from '../../../components/shared/AdCard';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 const CARD_SIZE = (SCREEN_WIDTH - 48 - 12) / 2; // 2 columns with gap
@@ -141,13 +142,24 @@ export default function EngineAHomeScreen() {
           contentContainerStyle={styles.grid}
           columnWrapperStyle={styles.row}
           showsVerticalScrollIndicator={false}
+          ListFooterComponent={
+            <View style={styles.adFooter}>
+              <AdCard
+                variant="instructor"
+                name="יוסי לוי"
+                tagline="ታማኝ፣ ታጋሽ እና ባለሙያ"
+                location="ቴል አቪቭ"
+                phone="0501234567"
+              />
+            </View>
+          }
         />
 
         {/* Bottom action buttons — Exam and Progress */}
         <View style={styles.bottomActions}>
           <TouchableOpacity
             style={[styles.actionButton, { backgroundColor: Colors.accent }]}
-            onPress={() => router.push('/(engineA)/exam')}
+            onPress={() => router.push('/(engineA)/exam' as any)}
             activeOpacity={0.8}
             accessibilityLabel="ፈተና ጀምር"
           >
@@ -156,7 +168,7 @@ export default function EngineAHomeScreen() {
 
           <TouchableOpacity
             style={[styles.actionButton, { backgroundColor: '#ffffff', borderWidth: 1.5, borderColor: '#dde3ea' }]}
-            onPress={() => router.push('/(engineA)/progress')}
+            onPress={() => router.push('/(engineA)/progress' as any)}
             activeOpacity={0.8}
             accessibilityLabel="እድገቴ"
           >
@@ -243,6 +255,10 @@ const styles = StyleSheet.create({
     fontWeight: '800',
     fontSize:   13,
     lineHeight: 16,
+  },
+  adFooter: {
+    paddingTop:    12,
+    paddingBottom: 8,
   },
   bottomActions: {
     flexDirection:     'row',

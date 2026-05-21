@@ -84,12 +84,12 @@ export default function EngineBProgressScreen() {
                 <View style={styles.topicInfo}>
                   <Text style={styles.topicId}>{t.topicId}</Text>
                   <Text style={styles.topicStat}>
-                    {t.mastered}/{t.total}
+                    {t.questionsCorrect}/{t.totalQuestions}
                   </Text>
                 </View>
                 <ProgressBar
-                  current={t.mastered}
-                  total={t.total}
+                  current={t.questionsCorrect}
+                  total={t.totalQuestions}
                   height={8}
                   fillColor={t.masteryPercent >= 80 ? Colors.correct : Colors.primary}
                   style={styles.topicBar}
@@ -113,7 +113,7 @@ export default function EngineBProgressScreen() {
         {/* Start exam CTA */}
         <TouchableOpacity
           style={styles.examButton}
-          onPress={() => router.push('/(engineB)/exam')}
+          onPress={() => router.push('/(engineB)/exam' as any)}
           activeOpacity={0.85}
         >
           <Text style={styles.examButtonIcon}>📝</Text>

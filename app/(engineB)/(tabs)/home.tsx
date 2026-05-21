@@ -30,6 +30,7 @@ import { DBTopic } from '../../../backend/supabaseClient';
 import * as api from '../../../backend/api';
 import { useAudio } from '../../../hooks/useAudio';
 import { useProgress } from '../../../hooks/useProgress';
+import { AdCard } from '../../../components/shared/AdCard';
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
@@ -103,14 +104,31 @@ export default function EngineBHomeScreen() {
         )}
         contentContainerStyle={styles.list}
         showsVerticalScrollIndicator={false}
-        ListFooterComponent={<View style={{ height: 20 }} />}
+        ListFooterComponent={
+          <View style={styles.adFooter}>
+            <AdCard
+              variant="instructor"
+              name="יוסי לוי"
+              tagline="ታማኝ፣ ታጋሽ እና ባለሙያ"
+              location="ቴል አቪቭ"
+              phone="0501234567"
+            />
+            <AdCard
+              variant="business"
+              businessName="מנורה ביטוח רכב"
+              description="በአንድ ደቂቃ ዋጋ ያግኙ — ለአዲስ ፈቃድ ልዩ ዋጋ"
+              ctaLabel="ዝርዝሮች"
+              ctaUrl="https://www.menora.co.il"
+            />
+          </View>
+        }
       />
 
       {/* Quick access buttons */}
       <View style={styles.quickAccess}>
         <TouchableOpacity
           style={[styles.quickBtn, { backgroundColor: Colors.accent }]}
-          onPress={() => router.push('/(engineB)/exam')}
+          onPress={() => router.push('/(engineB)/exam' as any)}
           activeOpacity={0.85}
           accessibilityLabel="ፈተና ጀምር"
         >
@@ -120,7 +138,7 @@ export default function EngineBHomeScreen() {
 
         <TouchableOpacity
           style={[styles.quickBtn, { backgroundColor: '#ffffff', borderWidth: 1.5, borderColor: '#dde3ea' }]}
-          onPress={() => router.push('/(engineB)/progress')}
+          onPress={() => router.push('/(engineB)/progress' as any)}
           activeOpacity={0.85}
           accessibilityLabel="እድገቴ"
         >
@@ -156,6 +174,11 @@ const styles = StyleSheet.create({
   list: {
     paddingHorizontal: 20,
     paddingTop:        8,
+  },
+  adFooter: {
+    gap:           12,
+    paddingTop:    12,
+    paddingBottom: 12,
   },
   topicCard: {
     marginBottom: 12,

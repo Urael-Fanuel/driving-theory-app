@@ -119,10 +119,10 @@ export default function EngineSelectionScreen() {
     setEngineType(engine);
 
     if (engine === 'A') {
-      router.replace('/(engineA)/home');
+      router.replace('/(engineA)/home' as any);
       playAudio('assets/audio/selected_mode_a.mp3').catch(() => {});
     } else {
-      router.replace('/(engineB)/home');
+      router.replace('/(engineB)/home' as any);
       playAudio('assets/audio/selected_mode_b.mp3').catch(() => {});
     }
   };

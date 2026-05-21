@@ -12,6 +12,11 @@
 import { supabase, DBTopic, DBSign, DBQuestion, DBExamSession, DBUserProgress, DBSignView } from './supabaseClient';
 import * as mockData from './mockData';
 
+// ─── Behavioral scaffold data (local JSON — no Supabase needed) ───────────────
+import vehicleKnowledgeScaffold from '../content/vehicle_knowledge_scaffold.json';
+import mindSafetyScaffold       from '../content/mind_safety_scaffold.json';
+import societyLawScaffold       from '../content/society_law_scaffold.json';
+
 // ─── Config ───────────────────────────────────────────────────────────────────
 
 /** True when no Supabase URL is configured → use mock data */
@@ -126,14 +131,14 @@ export async function getSignWithQuestions(signId: string): Promise<SignWithQues
     const [signResult, questionsResult] = await Promise.all([
       supabase.from('signs').select('*').eq('id', signId).single(),
       supabase.from('questions').select('*').eq('sign_id', signId).order('id'),
-    ]);
+    ]) as any[];
 
     if (signResult.error) throw signResult.error;
     if (!signResult.data) return null;
 
     return {
-      ...signResult.data,
-      questions: (questionsResult.data ?? []).map(normalizeQuestion),
+      ...(signResult.data as unknown as DBSign),
+      questions: ((questionsResult.data as unknown as DBQuestion[]) ?? []).map(normalizeQuestion),
     };
   } catch (err) {
     console.error('[api] getSignWithQuestions:', err);
@@ -205,52 +210,119 @@ function normalizeQuestion(q: DBQuestion): DBQuestion {
   };
 }
 
+// ─── Behavioral exam questions (local JSON → DBQuestion format) ───────────────
+
+/** How many behavioral questions to include in each 30-question exam session */
+const BEHAVIORAL_EXAM_COUNT = 8;
+
+/**
+ * Load behavioral questions from local scaffold JSON files and convert them to
+ * the DBQuestion shape so the exam hooks can consume them without changes.
+ *
+ * Covered topics: vehicle_knowledge, mind_safety, society_law.
+ * Questions have no sign_id (empty string) and no pre-recorded audio URLs —
+ * Engine A's exam screen uses TTS for these, Engine B shows text only.
+ */
+function loadBehavioralExamQuestions(): DBQuestion[] {
+  const ANSWER_IDS = ['A', 'B', 'C', 'D'] as const;
+  const scaffolds = [
+    { topicId: 'vehicle_knowledge', data: vehicleKnowledgeScaffold as any },
+    { topicId: 'mind_safety',       data: mindSafetyScaffold       as any },
+    { topicId: 'society_law',       data: societyLawScaffold       as any },
+  ];
+
+  const questions: DBQuestion[] = [];
+
+  for (const { topicId, data } of scaffolds) {
+    (data.levels ?? []).forEach((level: any, li: number) => {
+      (level.subtopics ?? []).forEach((sub: any, si: number) => {
+        (sub.questions ?? []).forEach((q: any, qi: number) => {
+          const qId = `beh_${topicId}_${li}_${si}_${qi}`;
+          questions.push({
+            id:                            qId,
+            sign_id:                       '',   // no sign — behavioral topic
+            topic_id:                      topicId,
+            question_amharic:              q.question_amharic ?? '',
+            question_audio_url:            undefined,
+            explanation_correct_amharic:   '',
+            explanation_wrong_amharic:     '',
+            explanation_correct_audio_url: undefined,
+            explanation_wrong_audio_url:   undefined,
+            difficulty:                    1,
+            answers: (q.answers ?? []).map((a: any, ai: number) => ({
+              id:           ANSWER_IDS[ai] ?? 'A',
+              text_amharic: a.text_amharic ?? '',
+              is_correct:   a.is_correct   ?? false,
+              image_url:    undefined,
+              audio_url:    undefined,
+            })),
+          });
+        });
+      });
+    });
+  }
+
+  return questions;
+}
+
 /**
  * Fetch a random set of exam questions, proportionally distributed across topics.
  * Uses the get_random_questions stored procedure.
+ *
+ * Always includes ~8 behavioral questions (vehicle_knowledge, mind_safety,
+ * society_law) drawn from local JSON files, so every topic in the app is
+ * represented regardless of Supabase content.
  */
 export async function getRandomExamQuestions(count: number = 30): Promise<DBQuestion[]> {
   // Only return questions with exactly 4 answers (3-answer questions are outdated)
   const onlyNew = (qs: DBQuestion[]) => qs.filter(q => q.answers.length >= 4);
 
+  // ── Behavioral questions (always from local JSON) ────────────────────────────
+  const numBehavioral = Math.min(BEHAVIORAL_EXAM_COUNT, count);
+  const behavioralQs  = loadBehavioralExamQuestions()
+    .sort(() => Math.random() - 0.5)
+    .slice(0, numBehavioral);
+
+  const numSign = count - behavioralQs.length; // how many sign-based Qs to fetch
+
+  // ── Sign-based questions (from Supabase / mock) ──────────────────────────────
+  let signQs: DBQuestion[] = [];
+
   if (USE_MOCK) {
-    // Shuffle all mock questions and take `count`
-    return onlyNew(
-      [...mockData.questions]
-        .map(normalizeQuestion)
+    signQs = onlyNew(
+      [...mockData.questions].map(normalizeQuestion).sort(() => Math.random() - 0.5)
+    ).slice(0, numSign);
+  } else {
+    // Try the stored procedure first (fastest, balanced distribution)
+    try {
+      const { data, error } = await supabase.rpc('get_random_questions', {
+        question_count: numSign,
+      } as any);
+      if (error) throw error;
+      signQs = onlyNew(((data as DBQuestion[]) ?? []).map(normalizeQuestion))
         .sort(() => Math.random() - 0.5)
-    ).slice(0, count);
+        .slice(0, numSign);
+    } catch (err) {
+      console.warn('[api] getRandomExamQuestions RPC failed, trying direct query:', err);
+
+      // Fallback: direct table query
+      try {
+        const { data, error } = await supabase.from('questions').select('*');
+        if (error) throw error;
+        signQs = onlyNew(((data as DBQuestion[]) ?? []).map(normalizeQuestion))
+          .sort(() => Math.random() - 0.5)
+          .slice(0, numSign);
+      } catch (err2) {
+        console.error('[api] getRandomExamQuestions direct query also failed:', err2);
+        signQs = onlyNew([...mockData.questions].map(normalizeQuestion))
+          .sort(() => Math.random() - 0.5)
+          .slice(0, numSign);
+      }
+    }
   }
 
-  // Try the stored procedure first (fastest, balanced distribution)
-  try {
-    const { data, error } = await supabase.rpc('get_random_questions', {
-      question_count: count,
-    });
-
-    if (error) throw error;
-    const all = onlyNew(((data as DBQuestion[]) ?? []).map(normalizeQuestion));
-    // RPC may return fewer than `count` after filtering — shuffle and top up if needed
-    return all.sort(() => Math.random() - 0.5).slice(0, count);
-  } catch (err) {
-    console.warn('[api] getRandomExamQuestions RPC failed, trying direct query:', err);
-  }
-
-  // Fallback: direct table query — works without a stored procedure
-  try {
-    const { data, error } = await supabase.from('questions').select('*');
-    if (error) throw error;
-    return onlyNew(
-      ((data as DBQuestion[]) ?? []).map(normalizeQuestion)
-    )
-      .sort(() => Math.random() - 0.5)
-      .slice(0, count);
-  } catch (err) {
-    console.error('[api] getRandomExamQuestions direct query also failed:', err);
-    return onlyNew(
-      [...mockData.questions].map(normalizeQuestion)
-    ).sort(() => Math.random() - 0.5).slice(0, count);
-  }
+  // ── Combine sign + behavioral, shuffle, return ───────────────────────────────
+  return [...signQs, ...behavioralQs].sort(() => Math.random() - 0.5);
 }
 
 /**
@@ -261,8 +333,8 @@ const QUESTIONS_CACHE_LIMIT = 100;
 
 function setCachedQuestions(signId: string, questions: DBQuestion[]): void {
   if (_questionsCache.size >= QUESTIONS_CACHE_LIMIT) {
-    const oldestKey = _questionsCache.keys().next().value;
-    _questionsCache.delete(oldestKey);
+    const oldestKey = _questionsCache.keys().next().value as string | undefined;
+    if (oldestKey !== undefined) _questionsCache.delete(oldestKey);
   }
   _questionsCache.set(signId, questions);
 }
@@ -336,11 +408,11 @@ export async function upsertUser(
   try {
     const { error } = await supabase.from('users').upsert(
       {
-        id: userId as unknown as never,
-        engine_type: engineType,
+        id:           userId,
+        engine_type:  engineType,
         display_name: displayName,
-        last_seen: new Date().toISOString(),
-      },
+        last_seen:    new Date().toISOString(),
+      } as any,
       { onConflict: 'id' }
     );
     if (error) throw error;
@@ -369,7 +441,7 @@ export async function saveAnswer(
         p_user_id:     userId,
         p_question_id: questionId,
         p_is_correct:  isCorrect,
-      });
+      } as any);
       if (error) throw error;
       return; // success
     } catch (err) {
@@ -396,7 +468,7 @@ export async function recordSignView(
       p_user_id:         userId,
       p_sign_id:         signId,
       p_video_completed: videoCompleted,
-    });
+    } as any);
     if (error) throw error;
   } catch (err) {
     console.warn('[api] recordSignView:', err);
@@ -504,25 +576,25 @@ export async function saveExamSession(
   }
 
   try {
-    const { data, error } = await supabase
+    const { data, error } = await (supabase
       .from('exam_sessions')
       .insert({
-        user_id:          userId as never,
+        user_id:          userId,
         engine_type:      engineType,
         score,
         total_questions:  total,
         passed,
         pass_threshold:   24,
         duration_seconds: durationSeconds,
-        topic_breakdown:  topicBreakdown as never,
-      })
+        topic_breakdown:  topicBreakdown,
+      } as any)
       .select('id')
-      .single();
+      .single() as any);
 
     if (error) throw error;
 
     return {
-      sessionId:      data?.id ?? 'unknown',
+      sessionId:      (data as any)?.id ?? 'unknown',
       score,
       total,
       passed,

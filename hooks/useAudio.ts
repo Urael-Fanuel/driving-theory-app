@@ -126,36 +126,51 @@ export async function playAndAwaitAudio(
   const thisSoundId = _soundId; // Captured after _stop() — uniquely identifies THIS sound
 
   return new Promise<void>((resolve) => {
+    let resolved = false;
+    const safeResolve = () => { if (!resolved) { resolved = true; resolve(); } };
+
+    // Safety: resolve after 150 s even if didJustFinish never fires.
+    // Prevents permanent hang (ANR) on Xiaomi / Samsung Android devices
+    // where expo-av's didJustFinish callback is occasionally silently dropped.
+    // 150 s = 2.5 minutes — safely above the longest known audio file (~2 min explanation).
+    const safetyTimer = setTimeout(() => {
+      _emit('finished');
+      safeResolve();
+    }, 150_000);
+
     Audio.Sound.createAsync(
       { uri },
       { shouldPlay: true, progressUpdateIntervalMillis: 200 },
       (status: AVPlaybackStatus) => {
         // Guard: another audio started or sequence was cancelled
         if (thisSoundId !== _soundId || isCancelled()) {
-          resolve();
+          clearTimeout(safetyTimer);
+          safeResolve();
           return;
         }
         if (!status.isLoaded) {
-          if (status.error) { _emit('error'); resolve(); }
+          if (status.error) { clearTimeout(safetyTimer); _emit('error'); safeResolve(); }
           return;
         }
         if (status.isPlaying)     _emit('playing');
-        if (status.didJustFinish) { _emit('finished'); resolve(); }
+        if (status.didJustFinish) { clearTimeout(safetyTimer); _emit('finished'); safeResolve(); }
       }
     )
     .then(({ sound }) => {
       if (thisSoundId !== _soundId || isCancelled()) {
+        clearTimeout(safetyTimer);
         sound.unloadAsync().catch(() => {});
-        resolve();
+        safeResolve();
         return;
       }
       _sound = sound;
       if (_currentState === 'loading') _emit('playing');
     })
     .catch((error) => {
+      clearTimeout(safetyTimer);
       console.warn('[useAudio] playAndAwaitAudio failed:', uri, error);
       _emit('error');
-      resolve(); // Resolve on error — never hang the sequence
+      safeResolve(); // Resolve on error — never hang the sequence
     });
   });
 }
