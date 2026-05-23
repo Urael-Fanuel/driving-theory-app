@@ -165,6 +165,20 @@ export default function BehavioralTopicScreenA() {
                 <View style={[styles.subtopicDot, { backgroundColor: item.color }]} />
               </TouchableOpacity>
             ))}
+
+            {/* Level quiz button — only shown when there are 2+ subtopics */}
+            {item.subtopics.length >= 2 && (
+              <TouchableOpacity
+                style={[styles.levelQuizBtn, { backgroundColor: item.color }]}
+                onPress={() => router.push({
+                  pathname: '/(engineA)/topic-quiz/[topicId]',
+                  params: { topicId: data.topicId, levelId: item.id },
+                } as any)}
+                activeOpacity={0.85}
+              >
+                <Text style={styles.levelQuizIcon}>📝</Text>
+              </TouchableOpacity>
+            )}
           </View>
         )}
       </View>
@@ -189,7 +203,19 @@ export default function BehavioralTopicScreenA() {
         renderItem={renderLevel}
         contentContainerStyle={styles.list}
         showsVerticalScrollIndicator={false}
-        ListFooterComponent={<View style={{ height: 24 }} />}
+        ListFooterComponent={
+          <View style={styles.footerWrapper}>
+            <TouchableOpacity
+              style={styles.quizButton}
+              onPress={() => router.push(`/(engineA)/topic-quiz/${data.topicId}` as any)}
+              activeOpacity={0.85}
+              accessibilityLabel="מבחן נושא"
+            >
+              <Text style={styles.quizButtonIcon}>📝</Text>
+            </TouchableOpacity>
+            <View style={{ height: 16 }} />
+          </View>
+        }
       />
     </SafeAreaView>
   );
@@ -319,6 +345,43 @@ const styles = StyleSheet.create({
     width:        8,
     height:       8,
     borderRadius: 4,
+  },
+  levelQuizBtn: {
+    width:           SUBTOPIC_CARD,
+    height:          SUBTOPIC_CARD,
+    borderRadius:    14,
+    justifyContent:  'center',
+    alignItems:      'center',
+    shadowColor:     '#000',
+    shadowOffset:    { width: 0, height: 2 },
+    shadowOpacity:   0.15,
+    shadowRadius:    6,
+    elevation:       4,
+  },
+  levelQuizIcon: {
+    fontSize: 30,
+  },
+
+  // ── Quiz button ─────────────────────────────────────────────────────────────
+  footerWrapper: {
+    alignItems: 'center',
+    paddingTop: 20,
+  },
+  quizButton: {
+    width:           80,
+    height:          80,
+    borderRadius:    40,
+    backgroundColor: Colors.accent,
+    justifyContent:  'center',
+    alignItems:      'center',
+    shadowColor:     '#000',
+    shadowOffset:    { width: 0, height: 4 },
+    shadowOpacity:   0.18,
+    shadowRadius:    8,
+    elevation:       6,
+  },
+  quizButtonIcon: {
+    fontSize: 36,
   },
 
   // ── Coming soon ─────────────────────────────────────────────────────────────

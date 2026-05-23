@@ -41,6 +41,7 @@ import { Colors } from '../../../constants/colors';
 import { ImageAnswerCard } from '../../../components/engineA/ImageAnswerCard';
 import { VoiceAnswerButton } from '../../../components/engineA/VoiceAnswerButton';
 import { AudioFeedback } from '../../../components/engineA/AudioFeedback';
+import { AdCard } from '../../../components/shared/AdCard';
 import { useVoiceRecognition } from '../../../hooks/useVoiceRecognition';
 import {
   speakAndAwait,
@@ -484,6 +485,35 @@ export default function BehavioralSubtopicScreenA() {
             </TouchableOpacity>
           </View>
 
+          {/* Ad — topic-relevant */}
+          <View style={styles.adWrapper}>
+            {topicId === 'vehicle_knowledge' ? (
+              <AdCard
+                variant="business"
+                businessName="מוסך ביתא"
+                description="🔧 የመኪና ጥገና — ፈጣን እና ታማኝ"
+                ctaLabel="ደውሉ"
+                ctaUrl="tel:0501234567"
+              />
+            ) : topicId === 'society_law' ? (
+              <AdCard
+                variant="business"
+                businessName="ביטוח ישיר"
+                description="🛡️ ርካሽ የመኪና ኢንሹራንስ ለኢትዮጵያውያን"
+                ctaLabel="ዋጋ ይጠይቁ"
+                ctaUrl="tel:0501234568"
+              />
+            ) : (
+              <AdCard
+                variant="instructor"
+                name="יוסי לוי"
+                tagline="ታማኝ፣ ታጋሽ እና ባለሙያ"
+                location="ቴል አቪቭ"
+                phone="0501234567"
+              />
+            )}
+          </View>
+
           {/* Quiz button */}
           <TouchableOpacity style={styles.startQuizBtn} onPress={handleStartQuiz} activeOpacity={0.85}>
             <Text style={styles.startQuizIcon}>📝</Text>
@@ -662,6 +692,11 @@ const styles = StyleSheet.create({
     textAlign: 'center', paddingBottom: 6, fontWeight: '600',
   },
 
+  adWrapper: {
+    width: '100%',
+    paddingHorizontal: 8,
+    marginBottom: 16,
+  },
   startQuizBtn: {
     width: 120, height: 120, borderRadius: 60,
     backgroundColor: '#27AE60',

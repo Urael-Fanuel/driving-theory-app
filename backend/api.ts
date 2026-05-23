@@ -265,6 +265,62 @@ function loadBehavioralExamQuestions(): DBQuestion[] {
   return questions;
 }
 
+/** Behavioral topic IDs — questions live in local JSON, not Supabase. */
+const BEHAVIORAL_TOPIC_IDS = ['vehicle_knowledge', 'mind_safety', 'society_law'];
+
+const BEHAVIORAL_SCAFFOLD_MAP: Record<string, any> = {
+  vehicle_knowledge: vehicleKnowledgeScaffold,
+  mind_safety:       mindSafetyScaffold,
+  society_law:       societyLawScaffold,
+};
+
+/**
+ * Load questions for a behavioral topic (per-topic or per-level quiz).
+ * @param topicId  — The behavioral topic ID (vehicle_knowledge, mind_safety, society_law)
+ * @param levelId  — Optional: if provided, only returns questions from that level
+ */
+function loadBehavioralTopicQuestions(topicId: string, levelId?: string): DBQuestion[] {
+  const ANSWER_IDS = ['A', 'B', 'C', 'D'] as const;
+  const data = BEHAVIORAL_SCAFFOLD_MAP[topicId];
+  if (!data) return [];
+
+  const questions: DBQuestion[] = [];
+
+  (data.levels ?? []).forEach((level: any, li: number) => {
+    // If a specific level is requested, skip all others
+    if (levelId && level.id !== levelId) return;
+
+    (level.subtopics ?? []).forEach((sub: any, si: number) => {
+      (sub.questions ?? []).forEach((q: any, qi: number) => {
+        const qId = `beh_${topicId}_${li}_${si}_${qi}`;
+        questions.push({
+          id:                            qId,
+          sign_id:                       '',   // empty → isBehavioral in Engine A/B screens
+          topic_id:                      topicId,
+          question_amharic:              q.question_amharic ?? '',
+          question_audio_url:            undefined,
+          question_image_url:            sub.image_url ?? undefined,   // real subtopic image
+          explanation_correct_amharic:   '',
+          explanation_wrong_amharic:     '',
+          explanation_correct_audio_url: undefined,
+          explanation_wrong_audio_url:   undefined,
+          difficulty:                    1,
+          answers: (q.answers ?? []).map((a: any, ai: number) => ({
+            id:           ANSWER_IDS[ai] ?? 'A',
+            text_amharic: a.text_amharic ?? '',
+            is_correct:   a.is_correct   ?? false,
+            image_url:    undefined,
+            audio_url:    undefined,
+          })),
+        });
+      });
+    });
+  });
+
+  // Shuffle so each quiz session has a different question order
+  return questions.sort(() => Math.random() - 0.5);
+}
+
 /**
  * Fetch a random set of exam questions, proportionally distributed across topics.
  * Uses the get_random_questions stored procedure.
@@ -389,6 +445,67 @@ export async function getQuestionsByIds(ids: string[]): Promise<DBQuestion[]> {
   } catch (err) {
     console.error('[api] getQuestionsByIds:', err);
     return mockData.questions.filter(q => ids.includes(q.id));
+  }
+}
+
+/**
+ * Fetch ALL questions for a specific topic (sign-based only), shuffled.
+ * Used for the per-topic quiz — covers every sign in the topic.
+ * Questions are filtered to those with 4 answers (the new format).
+ */
+export async function getQuestionsByTopic(topicId: string, levelId?: string): Promise<DBQuestion[]> {
+  // Behavioral topics live in local JSON — no Supabase needed
+  if (BEHAVIORAL_TOPIC_IDS.includes(topicId)) {
+    return loadBehavioralTopicQuestions(topicId, levelId);
+  }
+
+  const onlyNew = (qs: DBQuestion[]) => qs.filter(q => q.answers.length >= 4);
+
+  // Mock: filter mockData by topic
+  if (USE_MOCK) {
+    const signIds = mockData.signs
+      .filter(s => s.topic_id === topicId)
+      .map(s => s.id);
+    return onlyNew(
+      mockData.questions
+        .filter(q => signIds.includes(q.sign_id ?? ''))
+        .map(normalizeQuestion)
+        .sort(() => Math.random() - 0.5),
+    );
+  }
+
+  // Production: get all sign IDs for this topic, then all their questions.
+  try {
+    const { data: signs, error: signErr } = await supabase
+      .from('signs')
+      .select('id')
+      .eq('topic_id', topicId);
+
+    if (signErr) throw signErr;
+    const signIds = (signs ?? []).map((s: { id: string }) => s.id);
+    if (!signIds.length) return [];
+
+    const { data, error } = await supabase
+      .from('questions')
+      .select('*')
+      .in('sign_id', signIds);
+
+    if (error) throw error;
+    // Shuffle so consecutive questions on the same sign aren't always grouped
+    return onlyNew(
+      ((data ?? []) as DBQuestion[]).map(normalizeQuestion).sort(() => Math.random() - 0.5),
+    );
+  } catch (err) {
+    console.error('[api] getQuestionsByTopic:', err);
+    const signIds = mockData.signs
+      .filter(s => s.topic_id === topicId)
+      .map(s => s.id);
+    return onlyNew(
+      mockData.questions
+        .filter(q => signIds.includes(q.sign_id ?? ''))
+        .map(normalizeQuestion)
+        .sort(() => Math.random() - 0.5),
+    );
   }
 }
 

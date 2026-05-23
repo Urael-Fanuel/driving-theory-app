@@ -59,6 +59,8 @@ export interface DBQuestion {
   topic_id: string;
   question_amharic: string;
   question_audio_url?: string;
+  /** Image to show above the question (behavioral subtopic image, or undefined for sign questions). */
+  question_image_url?: string;
   answers: DBAnswer[];
   explanation_correct_amharic: string;
   explanation_wrong_amharic: string;

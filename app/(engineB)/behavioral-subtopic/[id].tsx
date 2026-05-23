@@ -43,6 +43,7 @@ import { Typography } from '../../../constants/typography';
 import { TextAnswerCard } from '../../../components/engineB/TextAnswerCard';
 import { TextFeedback } from '../../../components/engineB/TextFeedback';
 import { AudioButton } from '../../../components/shared/AudioButton';
+import { AdCard } from '../../../components/shared/AdCard';
 import { speakAmharic, speakAndAwait, stopTTS } from '../../../utils/googleTTS';
 import { useAudio } from '../../../hooks/useAudio';
 import vehicleKnowledgeData from '../../../content/vehicle_knowledge_scaffold.json';
@@ -278,6 +279,35 @@ export default function BehavioralSubtopicScreenB() {
               />
             </View>
           ) : null}
+
+          {/* Ad — topic-relevant */}
+          <View style={styles.adWrapper}>
+            {topicId === 'vehicle_knowledge' ? (
+              <AdCard
+                variant="business"
+                businessName="מוסך ביתא"
+                description="🔧 የመኪና ጥገና — ፈጣን እና ታማኝ"
+                ctaLabel="ደውሉ"
+                ctaUrl="tel:0501234567"
+              />
+            ) : topicId === 'society_law' ? (
+              <AdCard
+                variant="business"
+                businessName="ביטוח ישיר"
+                description="🛡️ ርካሽ የመኪና ኢንሹራንስ ለኢትዮጵያውያን"
+                ctaLabel="ዋጋ ይጠይቁ"
+                ctaUrl="tel:0501234568"
+              />
+            ) : (
+              <AdCard
+                variant="instructor"
+                name="יוסי לוי"
+                tagline="ታማኝ፣ ታጋሽ እና ባለሙያ"
+                location="ቴል አቪቭ"
+                phone="0501234567"
+              />
+            )}
+          </View>
 
           {/* Go to quiz */}
           <TouchableOpacity
@@ -528,6 +558,10 @@ const styles = StyleSheet.create({
     lineHeight: 30,
   },
   explainAudioRow: { alignItems: 'center' },
+  adWrapper: {
+    width: '100%',
+    marginBottom: 12,
+  },
   continueBtn: {
     alignSelf: 'stretch',
     borderRadius: 16,

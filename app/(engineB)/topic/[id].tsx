@@ -139,7 +139,20 @@ export default function EngineBTopicScreen() {
         renderItem={renderSign}
         contentContainerStyle={styles.list}
         showsVerticalScrollIndicator={false}
-        ListFooterComponent={<View style={{ height: 20 }} />}
+        ListFooterComponent={
+          signs.length > 0 ? (
+            <TouchableOpacity
+              style={styles.quizButton}
+              onPress={() => router.push(`/(engineB)/topic-quiz/${id}` as any)}
+              activeOpacity={0.85}
+            >
+              <Text style={styles.quizButtonIcon}>📝</Text>
+              <Text style={styles.quizButtonText}>የርዕሰ ጉዳዩ ፈተና</Text>
+            </TouchableOpacity>
+          ) : (
+            <View style={{ height: 20 }} />
+          )
+        }
       />
     </SafeAreaView>
   );
@@ -265,5 +278,30 @@ const styles = StyleSheet.create({
   arrow: {
     fontSize: 24,
     color:    '#9e9e9e',
+  },
+  quizButton: {
+    flexDirection:   'row',
+    alignItems:      'center',
+    justifyContent:  'center',
+    gap:             10,
+    marginTop:       16,
+    marginBottom:    16,
+    marginHorizontal: 16,
+    paddingVertical: 18,
+    borderRadius:    20,
+    backgroundColor: Colors.accent,
+    shadowColor:     '#000',
+    shadowOffset:    { width: 0, height: 4 },
+    shadowOpacity:   0.15,
+    shadowRadius:    8,
+    elevation:       5,
+  },
+  quizButtonIcon: {
+    fontSize: 28,
+  },
+  quizButtonText: {
+    fontSize:   18,
+    fontWeight: '700',
+    color:      '#ffffff',
   },
 });

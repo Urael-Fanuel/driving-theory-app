@@ -18,9 +18,9 @@ import {
   Text,
   Dimensions,
 } from 'react-native';
+import { Colors } from '../../../constants/colors';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import * as Haptics from 'expo-haptics';
-import { Colors } from '../../../constants/colors';
 import { LoadingScreen } from '../../../components/shared/LoadingScreen';
 import { DBSign } from '../../../backend/supabaseClient';
 import * as api from '../../../backend/api';
@@ -119,6 +119,18 @@ export default function EngineATopicScreen() {
         contentContainerStyle={styles.grid}
         columnWrapperStyle={styles.row}
         showsVerticalScrollIndicator={false}
+        ListFooterComponent={
+          signs.length > 0 ? (
+            <TouchableOpacity
+              style={styles.quizButton}
+              onPress={() => router.push(`/(engineA)/topic-quiz/${id}` as any)}
+              activeOpacity={0.85}
+              accessibilityLabel="የርዕሰ ጉዳዩ ፈተና"
+            >
+              <Text style={styles.quizButtonIcon}>📝</Text>
+            </TouchableOpacity>
+          ) : null
+        }
       />
     </SafeAreaView>
   );
@@ -216,5 +228,24 @@ const styles = StyleSheet.create({
     fontSize:   11,
     color:      '#ffffff',
     fontWeight: '700',
+  },
+  quizButton: {
+    alignSelf:       'center',
+    marginTop:       20,
+    marginBottom:    8,
+    width:           80,
+    height:          80,
+    borderRadius:    40,
+    backgroundColor: Colors.accent,
+    justifyContent:  'center',
+    alignItems:      'center',
+    shadowColor:     '#000',
+    shadowOffset:    { width: 0, height: 4 },
+    shadowOpacity:   0.18,
+    shadowRadius:    8,
+    elevation:       6,
+  },
+  quizButtonIcon: {
+    fontSize: 36,
   },
 });
