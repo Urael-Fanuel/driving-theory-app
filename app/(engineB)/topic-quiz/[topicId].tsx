@@ -28,11 +28,15 @@ import { AudioButton } from '../../../components/shared/AudioButton';
 import { ProgressBar } from '../../../components/shared/ProgressBar';
 import { AdCard } from '../../../components/shared/AdCard';
 import { useTopicQuiz } from '../../../hooks/useTopicQuiz';
-import { useAudio } from '../../../hooks/useAudio';
+import { useAudio, playAndAwaitAudio } from '../../../hooks/useAudio';
 import { speakAndAwait, stopTTS } from '../../../utils/googleTTS';
+import ConfettiCannon from 'react-native-confetti-cannon';
 import * as api from '../../../backend/api';
 import { DBSign } from '../../../backend/supabaseClient';
 
+
+// ─── Audio base URL ────────────────────────────────────────────────────────────
+const _AUDIO_BASE = (process.env.EXPO_PUBLIC_SUPABASE_URL ?? '') + '/storage/v1/object/public/audio';
 
 // ─── Amharic number prefixes for answer reading (same as behavioral-subtopic) ──
 const AMHARIC_NUMBERS = ['አንድ', 'ሁለት', 'ሶስት', 'አራት'];
@@ -62,7 +66,8 @@ export default function EngineBTopicQuizScreen() {
   const [signs,        setSigns]        = useState<DBSign[]>([]);
   const [ttsSpeaking,  setTtsSpeaking]  = useState(false);
   const ttsSpeakingRef = useRef(false);
-  const { stopAudio }  = useAudio();
+  const confettiRef    = useRef<any>(null);
+  const { stopAudio } = useAudio();
 
   // Load all signs once (for displaying the sign image per question)
   useEffect(() => {
@@ -85,6 +90,16 @@ export default function EngineBTopicQuizScreen() {
       setTimeout(() => setShowFeedback(true), 200);
     }
   }, [phase]);
+
+  // ── Confetti + crowd cheer when quiz is passed ────────────────────────────
+  useEffect(() => {
+    if (phase === 'result' && result?.passed) {
+      setTimeout(() => confettiRef.current?.start(), 300);
+      playAndAwaitAudio(`${_AUDIO_BASE}/crowd_cheer.mp3`, () => false)
+        .then(() => speakAndAwait('ብራቮ!'))
+        .catch(() => {});
+    }
+  }, [phase, result?.passed]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleNext = () => {
     setShowFeedback(false);
@@ -142,6 +157,18 @@ export default function EngineBTopicQuizScreen() {
 
     return (
       <SafeAreaView style={styles.safeArea}>
+        {passed && (
+          <ConfettiCannon
+            ref={confettiRef}
+            count={250}
+            origin={{ x: -10, y: 0 }}
+            autoStart={false}
+            fadeOut
+            explosionSpeed={350}
+            fallSpeed={3000}
+            colors={['#FDD835', '#2E7D32', '#1976D2', '#C62828', '#FF6F00', '#6A1B9A']}
+          />
+        )}
         <ScrollView contentContainerStyle={styles.resultContent}>
           {/* Score circle */}
           <View style={[styles.resultCircle, { borderColor: statusColor }]}>

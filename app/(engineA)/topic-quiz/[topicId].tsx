@@ -32,6 +32,7 @@ import { useTopicQuiz } from '../../../hooks/useTopicQuiz';
 import { useAudio, playAndAwaitAudio } from '../../../hooks/useAudio';
 import { useVoiceRecognition } from '../../../hooks/useVoiceRecognition';
 import { speakAndAwait, stopTTS } from '../../../utils/googleTTS';
+import ConfettiCannon from 'react-native-confetti-cannon';
 import { isQuestionAudioReady } from '../../../services/audioCache';
 import * as api from '../../../backend/api';
 import { DBSign } from '../../../backend/supabaseClient';
@@ -86,6 +87,7 @@ export default function EngineATopicQuizScreen() {
   const phaseRef               = useRef(phase);
   phaseRef.current             = phase;
   const sequenceCancelledRef   = useRef(false);
+  const confettiRef            = useRef<any>(null);
   const replayFromAnswerRef    = useRef<number | null>(null);
   const playingAnswerIndexRef  = useRef<number | null>(null);
   const answerAudioStartedRef  = useRef(false);
@@ -258,6 +260,16 @@ export default function EngineATopicQuizScreen() {
     }
   }, [phase]);
 
+  // ── Confetti + crowd cheer when quiz is passed ────────────────────────────
+  useEffect(() => {
+    if (phase === 'result' && result?.passed) {
+      setTimeout(() => confettiRef.current?.start(), 300);
+      playAndAwaitAudio(`${_AUDIO_BASE}/crowd_cheer.mp3`, () => false)
+        .then(() => speakAndAwait('ብራቮ!'))
+        .catch(() => {});
+    }
+  }, [phase, result?.passed]); // eslint-disable-line react-hooks/exhaustive-deps
+
   // ── Audio button ─────────────────────────────────────────────────────────────
   const handleAudioButton = () => {
     if (audioState === 'playing' || audioState === 'loading') {
@@ -381,6 +393,18 @@ export default function EngineATopicQuizScreen() {
 
     return (
       <SafeAreaView style={styles.safeArea}>
+        {passed && (
+          <ConfettiCannon
+            ref={confettiRef}
+            count={250}
+            origin={{ x: -10, y: 0 }}
+            autoStart={false}
+            fadeOut
+            explosionSpeed={350}
+            fallSpeed={3000}
+            colors={['#FDD835', '#2E7D32', '#1976D2', '#C62828', '#FF6F00', '#6A1B9A']}
+          />
+        )}
         <ScrollView contentContainerStyle={styles.resultContent}>
           {/* Score circle */}
           <View style={[styles.resultCircle, { borderColor: passed ? Colors.correct : Colors.wrong }]}>

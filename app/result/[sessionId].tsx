@@ -33,6 +33,8 @@ import { DBSign } from '../../backend/supabaseClient';
 import { ResultData, WrongQuestion, getExamResult, preloadExamResult } from '../../utils/examResult';
 import { AdCard } from '../../components/shared/AdCard';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
+import { speakAndAwait } from '../../utils/googleTTS';
+import ConfettiCannon from 'react-native-confetti-cannon';
 
 // ─── Audio base URL (Supabase Storage) ────────────────────────────────────────
 const _AUDIO_BASE = (process.env.EXPO_PUBLIC_SUPABASE_URL ?? '') + '/storage/v1/object/public/audio';
@@ -113,9 +115,10 @@ export default function ResultScreen() {
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   // ── Animations ─────────────────────────────────────────────────────────────
-  const scaleAnim  = useRef(new Animated.Value(0)).current;
-  const fadeAnim   = useRef(new Animated.Value(0)).current;
-  const slideAnim  = useRef(new Animated.Value(40)).current;
+  const scaleAnim   = useRef(new Animated.Value(0)).current;
+  const fadeAnim    = useRef(new Animated.Value(0)).current;
+  const slideAnim   = useRef(new Animated.Value(40)).current;
+  const confettiRef = useRef<any>(null);
 
   useEffect(() => {
     // Haptic + audio feedback
@@ -125,9 +128,14 @@ export default function ResultScreen() {
         : Haptics.NotificationFeedbackType.Error
     );
 
-    // Play result audio
+    // Play result audio + confetti on pass
     if (passed) {
-      playAudio(`${_AUDIO_BASE}/exam_passed.mp3`).catch(() => {});
+      // Trigger confetti after short delay (let entrance animations start first)
+      setTimeout(() => confettiRef.current?.start(), 400);
+      // Play crowd cheer, then TTS bravo
+      playAudio(`${_AUDIO_BASE}/crowd_cheer.mp3`)
+        .then(() => speakAndAwait('ብራቮ!'))
+        .catch(() => {});
     } else {
       playAudio(`${_AUDIO_BASE}/exam_failed.mp3`).catch(() => {});
     }
@@ -143,7 +151,7 @@ export default function ResultScreen() {
   const handleShare = async () => {
     await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
     await Share.share({
-      message: 'ይህንን ቀን በጉጉት እጠብቀው ነበር! በሰላም አለፍኩት፣! 🎉\nበዓለም ላይ ምርጥ በሆነው መተግበሪያ👌',
+      message: 'መንጃ ፍቃድ - በቀላል መንገድ 🚗\nለመንዳት ዝግጁ ነኝ!',
     });
   };
 
@@ -193,6 +201,19 @@ export default function ResultScreen() {
 
   return (
     <SafeAreaView style={[styles.safeArea, { backgroundColor: '#f7f9fb' }]}>
+      {/* Confetti — renders over everything, triggered on pass */}
+      {passed && (
+        <ConfettiCannon
+          ref={confettiRef}
+          count={250}
+          origin={{ x: -10, y: 0 }}
+          autoStart={false}
+          fadeOut
+          explosionSpeed={350}
+          fallSpeed={3000}
+          colors={['#FDD835', '#2E7D32', '#1976D2', '#C62828', '#FF6F00', '#6A1B9A']}
+        />
+      )}
       <ScrollView contentContainerStyle={styles.content}>
 
         {/* Result icon + score */}
