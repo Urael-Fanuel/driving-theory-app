@@ -18,10 +18,12 @@ const TTS_URL = `https://texttospeech.googleapis.com/v1/text:synthesize`;
 
 let currentSound:   Audio.Sound | null = null;
 let pendingResolve: (() => void) | null = null;
+let _ttsGeneration = 0;   // Incremented by stopTTS — lets speakAndAwait/playUrlAndAwait detect mid-fetch cancellation
 
 // ─── Core controls ────────────────────────────────────────────────────────────
 
 export async function stopTTS(): Promise<void> {
+  _ttsGeneration++;   // Invalidate any in-flight speakAndAwait / playUrlAndAwait
   // Resolve any pending speakAndAwait / playUrlAndAwait so the sequence exits
   const res = pendingResolve;
   pendingResolve = null;
@@ -84,9 +86,11 @@ function awaitSound(sound: Audio.Sound, maxMs = 30_000): Promise<void> {
  *  Returns true if audio played successfully, false if it failed. */
 export async function playUrlAndAwait(url: string): Promise<boolean> {
   await stopTTS();
+  const myGeneration = _ttsGeneration;  // Capture AFTER stopTTS increments it
   try {
     await Audio.setAudioModeAsync({ playsInSilentModeIOS: true });
     const { sound } = await Audio.Sound.createAsync({ uri: url });
+    if (_ttsGeneration !== myGeneration) { sound.unloadAsync().catch(() => {}); return false; }
     currentSound = sound;
     await sound.playAsync();
     await awaitSound(sound);
@@ -104,6 +108,7 @@ export async function playUrlAndAwait(url: string): Promise<boolean> {
  *  and the sequence should stop rather than continue to the next step. */
 export async function speakAndAwait(text: string): Promise<boolean> {
   await stopTTS();
+  const myGeneration = _ttsGeneration;  // Capture AFTER stopTTS increments it
   try {
     await Audio.setAudioModeAsync({ playsInSilentModeIOS: true });
 
@@ -130,9 +135,12 @@ export async function speakAndAwait(text: string): Promise<boolean> {
     const json = await res.json();
     // No audio content = API returned error or empty response
     if (!json.audioContent) return false;
+    // Cancelled during fetch — another stopTTS() was called while we were waiting
+    if (_ttsGeneration !== myGeneration) return false;
 
     const uri = `data:audio/mp3;base64,${json.audioContent}`;
     const { sound } = await Audio.Sound.createAsync({ uri });
+    if (_ttsGeneration !== myGeneration) { sound.unloadAsync().catch(() => {}); return false; }
     currentSound = sound;
     await sound.playAsync();
     await awaitSound(sound);

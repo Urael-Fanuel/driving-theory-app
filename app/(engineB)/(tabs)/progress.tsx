@@ -11,15 +11,23 @@ import {
   SafeAreaView,
   ScrollView,
   TouchableOpacity,
+  Share,
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import { Colors } from '../../../constants/colors';
 import { Typography } from '../../../constants/typography';
 import { ProgressBar } from '../../../components/shared/ProgressBar';
 import { useProgress } from '../../../hooks/useProgress';
+import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 
 export default function EngineBProgressScreen() {
   const router = useRouter();
+
+  const handleShare = async () => {
+    await Share.share({
+      message: 'አብረን በደስታ እንማር 🚗',
+    });
+  };
   const { totalAttempted, totalCorrect, topicsProgress } = useProgress();
 
   const overallPercent = totalAttempted > 0
@@ -109,6 +117,16 @@ export default function EngineBProgressScreen() {
             </Text>
           </View>
         )}
+
+        {/* Share button */}
+        <TouchableOpacity
+          style={styles.shareButton}
+          onPress={handleShare}
+          activeOpacity={0.85}
+        >
+          <MaterialCommunityIcons name="share-variant" size={22} color="#ffffff" />
+          <Text style={styles.shareButtonText}>שתף את האפליקציה</Text>
+        </TouchableOpacity>
 
         {/* Start exam CTA */}
         <TouchableOpacity
@@ -222,6 +240,20 @@ const styles = StyleSheet.create({
     ...Typography.body,
     color:     Colors.textSecondary,
     textAlign: 'center',
+  },
+  shareButton: {
+    flexDirection:   'row',
+    alignItems:      'center',
+    justifyContent:  'center',
+    backgroundColor: '#1976D2',
+    borderRadius:    16,
+    paddingVertical: 16,
+    gap:             10,
+  },
+  shareButtonText: {
+    ...Typography.answer,
+    color:      '#ffffff',
+    fontWeight: '700',
   },
   examButton: {
     flexDirection:   'row',

@@ -28,6 +28,7 @@ import {
   FlatList,
   SafeAreaView,
   Dimensions,
+  Share,
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import * as Haptics from 'expo-haptics';
@@ -41,6 +42,8 @@ import * as api from '../../../backend/api';
 import { useAudio } from '../../../hooks/useAudio';
 import { useProgress } from '../../../hooks/useProgress';
 import { AdCard } from '../../../components/shared/AdCard';
+import { speakAndAwait } from '../../../utils/googleTTS';
+import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 const CARD_SIZE = (SCREEN_WIDTH - 48 - 12) / 2; // 2 columns with gap
@@ -91,6 +94,12 @@ export default function EngineAHomeScreen() {
     }
   };
 
+  const handleShare = async () => {
+    await Share.share({
+      message: 'አብረን በደስታ እንማር 🚗',
+    });
+  };
+
   if (loading) return <LoadingScreen />;
 
   const renderTopic = ({ item, index }: { item: DBTopic; index: number }) => (
@@ -122,8 +131,15 @@ export default function EngineAHomeScreen() {
   return (
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.container}>
-        {/* Header with replay button */}
+        {/* Header with replay + share buttons */}
         <View style={styles.header}>
+          <TouchableOpacity
+            onPress={handleShare}
+            style={styles.replayButton}
+            accessibilityLabel="שתף"
+          >
+            <MaterialCommunityIcons name="share-variant" size={22} color="#555555" />
+          </TouchableOpacity>
           <TouchableOpacity
             onPress={() => playAudio(`${_AUDIO_BASE}/home_welcome_a.mp3`).catch(() => {})}
             style={styles.replayButton}
@@ -155,8 +171,20 @@ export default function EngineAHomeScreen() {
           }
         />
 
-        {/* Bottom action buttons — Exam and Progress */}
+        {/* Bottom action buttons — Daily Challenge + Exam + Progress */}
         <View style={styles.bottomActions}>
+          <TouchableOpacity
+            style={[styles.actionButton, { backgroundColor: '#FDD835' }]}
+            onPress={async () => {
+              await speakAndAwait('ጥያቄዎች ለዛሬ');
+              router.push('/(engineA)/topic-quiz/daily' as any);
+            }}
+            activeOpacity={0.8}
+            accessibilityLabel="ጥያቄዎች ለዛሬ"
+          >
+            <Text style={styles.actionIcon}>⭐</Text>
+          </TouchableOpacity>
+
           <TouchableOpacity
             style={[styles.actionButton, { backgroundColor: Colors.accent }]}
             onPress={() => router.push('/(engineA)/exam' as any)}
@@ -193,6 +221,8 @@ const styles = StyleSheet.create({
   header: {
     flexDirection:   'row',
     justifyContent:  'flex-end',
+    alignItems:      'center',
+    gap:             10,
     paddingHorizontal: 16,
     paddingVertical:   12,
   },

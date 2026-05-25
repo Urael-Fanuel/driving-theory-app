@@ -18,6 +18,7 @@ import {
   ScrollView,
   Animated,
   Image,
+  Share,
 } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import * as Haptics from 'expo-haptics';
@@ -31,6 +32,7 @@ import { DBSign } from '../../backend/supabaseClient';
 // ─── Global result storage (passed from useExam) ──────────────────────────────
 import { ResultData, WrongQuestion, getExamResult, preloadExamResult } from '../../utils/examResult';
 import { AdCard } from '../../components/shared/AdCard';
+import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 
 // ─── Audio base URL (Supabase Storage) ────────────────────────────────────────
 const _AUDIO_BASE = (process.env.EXPO_PUBLIC_SUPABASE_URL ?? '') + '/storage/v1/object/public/audio';
@@ -137,6 +139,13 @@ export default function ResultScreen() {
       Animated.spring(slideAnim, { toValue: 0, useNativeDriver: true, speed: 12 }),
     ]).start();
   }, []);
+
+  const handleShare = async () => {
+    await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    await Share.share({
+      message: 'ይህንን ቀን በጉጉት እጠብቀው ነበር! በሰላም አለፍኩት፣! 🎉\nበዓለም ላይ ምርጥ በሆነው መተግበሪያ👌',
+    });
+  };
 
   const handleGoHome = async () => {
     await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
@@ -353,6 +362,22 @@ export default function ResultScreen() {
             ctaUrl="https://www.menora.co.il"
           />
         </Animated.View>
+
+        {/* Share button — only on pass */}
+        {passed && (
+          <Animated.View style={[{ alignSelf: 'stretch' }, { opacity: fadeAnim }]}>
+            <TouchableOpacity
+              style={styles.shareBtn}
+              onPress={handleShare}
+              activeOpacity={0.85}
+            >
+              <MaterialCommunityIcons name="share-variant" size={24} color="#ffffff" />
+              {!isEngineA && (
+                <Text style={styles.shareBtnText}>שתף את ההצלחה שלך!</Text>
+              )}
+            </TouchableOpacity>
+          </Animated.View>
+        )}
 
         {/* Action buttons */}
         <Animated.View style={[styles.actions, { opacity: fadeAnim }]}>
@@ -591,6 +616,22 @@ const styles = StyleSheet.create({
   adsContainer: {
     alignSelf: 'stretch',
     gap:       12,
+  },
+
+  // ── Share button ───────────────────────────────────────────────────────────
+  shareBtn: {
+    flexDirection:   'row',
+    alignItems:      'center',
+    justifyContent:  'center',
+    backgroundColor: '#1976D2',
+    borderRadius:    16,
+    paddingVertical: 16,
+    gap:             10,
+  },
+  shareBtnText: {
+    ...Typography.answer,
+    color:      '#ffffff',
+    fontWeight: '700',
   },
 
   // ── Action buttons ─────────────────────────────────────────────────────────

@@ -8,7 +8,7 @@
  * Pass threshold: 7/10 (70%)
  */
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import {
   View,
   Text,
@@ -29,9 +29,13 @@ import { ProgressBar } from '../../../components/shared/ProgressBar';
 import { AdCard } from '../../../components/shared/AdCard';
 import { useTopicQuiz } from '../../../hooks/useTopicQuiz';
 import { useAudio } from '../../../hooks/useAudio';
+import { speakAndAwait, stopTTS } from '../../../utils/googleTTS';
 import * as api from '../../../backend/api';
 import { DBSign } from '../../../backend/supabaseClient';
 
+
+// ─── Amharic number prefixes for answer reading (same as behavioral-subtopic) ──
+const AMHARIC_NUMBERS = ['አንድ', 'ሁለት', 'ሶስት', 'አራት'];
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
@@ -56,6 +60,8 @@ export default function EngineBTopicQuizScreen() {
 
   const [showFeedback, setShowFeedback] = useState(false);
   const [signs,        setSigns]        = useState<DBSign[]>([]);
+  const [ttsSpeaking,  setTtsSpeaking]  = useState(false);
+  const ttsSpeakingRef = useRef(false);
   const { stopAudio }  = useAudio();
 
   // Load all signs once (for displaying the sign image per question)
@@ -65,6 +71,13 @@ export default function EngineBTopicQuizScreen() {
 
   const currentSign  = signs.find(s => s.id === currentQuestion?.sign_id) ?? null;
   const isBehavioral = Boolean(currentQuestion && !currentQuestion.sign_id);
+
+  // Reset TTS state when question changes (same as behavioral-subtopic)
+  useEffect(() => {
+    ttsSpeakingRef.current = false;
+    stopTTS().catch(() => {});
+    setTtsSpeaking(false);
+  }, [currentIndex]);
 
   // Show feedback after answer
   useEffect(() => {
@@ -268,20 +281,45 @@ export default function EngineBTopicQuizScreen() {
           </View>
         ) : null}
 
-        {/* Question text */}
+        {/* Question text + play button (AudioButton for sign, TTS for behavioral) */}
         <View style={styles.questionCard}>
           <Text style={styles.questionText}>{currentQuestion.question_amharic}</Text>
-          {currentQuestion.question_audio_url && (
+          {currentQuestion.question_audio_url ? (
             <AudioButton audioUri={currentQuestion.question_audio_url} size={36} />
+          ) : (
+            /* Behavioral question — TTS button (same as behavioral-subtopic) */
+            <TouchableOpacity
+              style={styles.ttsPlayBtn}
+              onPress={async () => {
+                if (ttsSpeakingRef.current) {
+                  ttsSpeakingRef.current = false;
+                  setTtsSpeaking(false);
+                  await stopTTS();
+                } else {
+                  ttsSpeakingRef.current = true;
+                  setTtsSpeaking(true);
+                  await speakAndAwait(currentQuestion.question_amharic);
+                  for (let i = 0; i < currentQuestion.answers.length; i++) {
+                    if (!ttsSpeakingRef.current) break;
+                    await speakAndAwait(`${AMHARIC_NUMBERS[i]}። ${currentQuestion.answers[i].text_amharic ?? ''}`);
+                  }
+                  ttsSpeakingRef.current = false;
+                  setTtsSpeaking(false);
+                }
+              }}
+              accessibilityLabel="ጥያቄ ድምጽ"
+            >
+              <Text style={styles.ttsPlayIcon}>{ttsSpeaking ? '⏸' : '▶️'}</Text>
+            </TouchableOpacity>
           )}
         </View>
 
         {/* Answer cards */}
         <View style={styles.answersContainer}>
-          {currentQuestion.answers.map((answer) => (
+          {currentQuestion.answers.map((answer, index) => (
             <TextAnswerCard
               key={answer.id}
-              answerId={answer.id}
+              answerId={String(index + 1)}
               text={answer.text_amharic ?? ''}
               imageUri={answer.image_url}
               audioUri={answer.audio_url}
@@ -425,6 +463,20 @@ const styles = StyleSheet.create({
   answersContainer: {
     gap: 10,
   },
+  ttsPlayBtn: {
+    width:           44,
+    height:          44,
+    borderRadius:    22,
+    backgroundColor: '#FDD835',
+    justifyContent:  'center',
+    alignItems:      'center',
+    shadowColor:     '#000',
+    shadowOffset:    { width: 0, height: 4 },
+    shadowOpacity:   0.3,
+    shadowRadius:    8,
+    elevation:       6,
+  },
+  ttsPlayIcon: { fontSize: 20, textAlign: 'center' as const },
 
   // ── Result screen ────────────────────────────────────────────────────────
   resultContent: {

@@ -334,6 +334,7 @@ export default function EngineATopicQuizScreen() {
 
   const handleNavPrev = () => {
     if (!canGoPrev) return;
+    sequenceCancelledRef.current = true;  // cancel running sequence immediately
     stopAudio();
     stopTTS().catch(() => {});
     cancelListening();
@@ -343,6 +344,7 @@ export default function EngineATopicQuizScreen() {
 
   const handleNavNext = () => {
     if (!canGoNext) return;
+    sequenceCancelledRef.current = true;  // cancel running sequence immediately
     stopAudio();
     stopTTS().catch(() => {});
     cancelListening();
@@ -527,9 +529,10 @@ export default function EngineATopicQuizScreen() {
               onPress={() => handleAnswerSelect(index)}
               onAudioPress={isBehavioral
                 ? () => handleBehavioralAnswerAudioPress(answer.text_amharic ?? '', index)
-                : answer.audio_url
-                  ? () => handleAnswerAudioPress(answer.audio_url!, index)
-                  : undefined}
+                : () => handleAnswerAudioPress(
+                    answer.audio_url ?? `${_AUDIO_BASE}/answer_${currentQuestion.id}_${answer.id}.mp3`,
+                    index
+                  )}
               disabled={phase !== 'question'}
             />
           ))}

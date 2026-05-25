@@ -14,14 +14,22 @@ import {
   SafeAreaView,
   ScrollView,
   TouchableOpacity,
+  Share,
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import { Colors } from '../../../constants/colors';
 import { ProgressBar } from '../../../components/shared/ProgressBar';
 import { useProgress } from '../../../hooks/useProgress';
+import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 
 export default function EngineAProgressScreen() {
   const router = useRouter();
+
+  const handleShare = async () => {
+    await Share.share({
+      message: 'አብረን በደስታ እንማር 🚗',
+    });
+  };
   const { totalAttempted, totalCorrect } = useProgress();
 
   const overallPercent = totalAttempted > 0
@@ -62,6 +70,15 @@ export default function EngineAProgressScreen() {
           height={12}
           style={styles.progressBar}
         />
+
+        {/* Share button */}
+        <TouchableOpacity
+          style={styles.shareButton}
+          onPress={handleShare}
+          activeOpacity={0.8}
+        >
+          <MaterialCommunityIcons name="share-variant" size={36} color="#ffffff" />
+        </TouchableOpacity>
 
         {/* Start exam button */}
         <TouchableOpacity
@@ -124,6 +141,19 @@ const styles = StyleSheet.create({
   },
   progressBar: {
     alignSelf: 'stretch',
+  },
+  shareButton: {
+    width:           80,
+    height:          80,
+    borderRadius:    40,
+    backgroundColor: '#1976D2',
+    justifyContent:  'center',
+    alignItems:      'center',
+    shadowColor:     '#1976D2',
+    shadowOffset:    { width: 0, height: 4 },
+    shadowOpacity:   0.4,
+    shadowRadius:    10,
+    elevation:       6,
   },
   examButton: {
     width:           100,

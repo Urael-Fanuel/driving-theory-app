@@ -244,6 +244,7 @@ function loadBehavioralExamQuestions(): DBQuestion[] {
             topic_id:                      topicId,
             question_amharic:              q.question_amharic ?? '',
             question_audio_url:            undefined,
+            question_image_url:            sub.image_url ?? undefined,
             explanation_correct_amharic:   '',
             explanation_wrong_amharic:     '',
             explanation_correct_audio_url: undefined,
@@ -454,6 +455,11 @@ export async function getQuestionsByIds(ids: string[]): Promise<DBQuestion[]> {
  * Questions are filtered to those with 4 answers (the new format).
  */
 export async function getQuestionsByTopic(topicId: string, levelId?: string): Promise<DBQuestion[]> {
+  // Daily challenge — 10 random questions from all topics (sign + behavioral)
+  if (topicId === 'daily') {
+    return getRandomExamQuestions(10);
+  }
+
   // Behavioral topics live in local JSON — no Supabase needed
   if (BEHAVIORAL_TOPIC_IDS.includes(topicId)) {
     return loadBehavioralTopicQuestions(topicId, levelId);

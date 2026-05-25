@@ -18,6 +18,7 @@ import {
   FlatList,
   SafeAreaView,
   TouchableOpacity,
+  Share,
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import * as Haptics from 'expo-haptics';
@@ -31,6 +32,7 @@ import * as api from '../../../backend/api';
 import { useAudio } from '../../../hooks/useAudio';
 import { useProgress } from '../../../hooks/useProgress';
 import { AdCard } from '../../../components/shared/AdCard';
+import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
@@ -71,6 +73,12 @@ export default function EngineBHomeScreen() {
     }
   };
 
+  const handleShare = async () => {
+    await Share.share({
+      message: 'አብረን በደስታ እንማር 🚗',
+    });
+  };
+
   if (loading) return <LoadingScreen message="ርዕሰ ጉዳዮችን እየጫነ..." />;
 
   const BORDER_COLORS = ['#2e7d32', '#f1c048', '#c62828'];
@@ -82,8 +90,17 @@ export default function EngineBHomeScreen() {
     <SafeAreaView style={styles.safeArea}>
       {/* Header */}
       <View style={styles.header}>
-        <Text style={styles.appTitle}>መንጃ ፍቃድ</Text>
-        <Text style={styles.appSubtitle}>ትምህርት ጀምር</Text>
+        <View style={styles.headerText}>
+          <Text style={styles.appTitle}>መንጃ ፍቃድ</Text>
+          <Text style={styles.appSubtitle}>ትምህርት ጀምር</Text>
+        </View>
+        <TouchableOpacity
+          onPress={handleShare}
+          style={styles.shareButton}
+          accessibilityLabel="שתף"
+        >
+          <MaterialCommunityIcons name="share-variant" size={20} color="#555555" />
+        </TouchableOpacity>
       </View>
 
       {/* Topics list */}
@@ -127,6 +144,16 @@ export default function EngineBHomeScreen() {
       {/* Quick access buttons */}
       <View style={styles.quickAccess}>
         <TouchableOpacity
+          style={[styles.quickBtn, { backgroundColor: '#FDD835' }]}
+          onPress={() => router.push('/(engineB)/topic-quiz/daily' as any)}
+          activeOpacity={0.85}
+          accessibilityLabel="ጥያቄዎች ለዛሬ"
+        >
+          <Text style={styles.quickBtnIcon}>⭐</Text>
+          <Text style={[styles.quickBtnText, { color: '#191c1e' }]}>ጥያቄዎች ለዛሬ</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
           style={[styles.quickBtn, { backgroundColor: Colors.accent }]}
           onPress={() => router.push('/(engineB)/exam' as any)}
           activeOpacity={0.85}
@@ -158,9 +185,15 @@ const styles = StyleSheet.create({
     backgroundColor: '#f7f9fb',
   },
   header: {
+    flexDirection:     'row',
+    alignItems:        'center',
+    justifyContent:    'space-between',
     paddingHorizontal: 20,
     paddingTop:        20,
     paddingBottom:     12,
+  },
+  headerText: {
+    flex: 1,
   },
   appTitle: {
     ...Typography.h1,
@@ -170,6 +203,16 @@ const styles = StyleSheet.create({
     ...Typography.body,
     color:     '#404943',
     marginTop: 4,
+  },
+  shareButton: {
+    width:           44,
+    height:          44,
+    borderRadius:    22,
+    backgroundColor: '#eeeeee',
+    justifyContent:  'center',
+    alignItems:      'center',
+    borderWidth:     1,
+    borderColor:     '#dde3ea',
   },
   list: {
     paddingHorizontal: 20,
