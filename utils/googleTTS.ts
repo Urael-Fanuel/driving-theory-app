@@ -29,10 +29,8 @@ export async function stopTTS(): Promise<void> {
   pendingResolve = null;
   res?.();
 
-  try {
-    await currentSound?.stopAsync();
-    await currentSound?.unloadAsync();
-  } catch {}
+  try { await currentSound?.stopAsync(); } catch {}
+  try { await currentSound?.unloadAsync(); } catch {}
   currentSound = null;
 }
 

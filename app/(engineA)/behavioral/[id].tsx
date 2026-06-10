@@ -29,6 +29,10 @@ import { BEHAVIORAL_LEVEL_ICON_MAP } from '../../../components/shared/TrafficSig
 import vehicleKnowledgeData from '../../../content/vehicle_knowledge_scaffold.json';
 import mindSafetyData       from '../../../content/mind_safety_scaffold.json';
 import societyLawData       from '../../../content/society_law_scaffold.json';
+import theRoadData          from '../../../content/the_road_scaffold.json';
+import myVehicleData        from '../../../content/my_vehicle_scaffold.json';
+import twoWheelersData      from '../../../content/two_wheelers_scaffold.json';
+import basicsLicenseData    from '../../../content/basics_license_scaffold.json';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -63,6 +67,10 @@ const SCAFFOLD_MAP: Record<string, ScaffoldData> = {
   vehicle_knowledge: vehicleKnowledgeData as ScaffoldData,
   mind_safety:       mindSafetyData       as ScaffoldData,
   society_law:       societyLawData       as ScaffoldData,
+  the_road:          theRoadData          as ScaffoldData,
+  my_vehicle:        myVehicleData        as ScaffoldData,
+  two_wheelers:      twoWheelersData      as ScaffoldData,
+  basics_license:    basicsLicenseData    as ScaffoldData,
 };
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');

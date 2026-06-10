@@ -1,0 +1,165 @@
+{
+  "topicId": "the_road",
+  "name_amharic": "የመንገድ ሁኔታዎች",
+  "name_hebrew": "תנאי הדרך",
+  "icon": "🏙️",
+  "color": "#2E7D32",
+  "levels": [
+    {
+      "id": "tr_l1",
+      "level": 1,
+      "name_hebrew": "נהיגה בעיר",
+      "name_amharic": "በከተማ ውስጥ ማሽከርከር",
+      "icon": "🏙️",
+      "color": "#2E7D32",
+      "subtopics": [
+        {
+          "id": "tr_l1_s1",
+          "name_hebrew": "צמתים וסדרי עדיפויות",
+          "name_amharic": "የመንገድ መጋጠሚያ እና ቅድሚያ",
+          "icon": "🔄",
+          "explanation_amharic": "መገናኛ በመንገድ ላይ በጣም አደገኛ ቦታ ነው። ምክንያቱም ተሽከርካሪዎች ከሁሉም አቅጣጫዎች በአንድ ጊዜ ስለሚመጡ ነው። ወደ መገናኛ ሲደርሱ ፍጥነትዎን መቀነስ እና ወደ ሁሉም አቅጣጫዎች በጥንቃቄ ማየት አለብዎት።\n\nመገናኛውን ሙሉ በሙሉ ማለፍ እንደሚችሉ እርግጠኛ ካልሆኑ ወደ ውስጥ አይግቡ። የትራፊክ መብራቱ አረንጓዴ ቢሆንም እንኳ መገናኛውን ዘግተው መቆም የለብዎትም።\n\nወደ ቀኝ ለመታጠፍ ሲፈልጉ፣ ከመንገዱ ቀኝ ዳርቻ በተቻለ መጠን ተጠግተው ይሂዱ እና በደንብ ወደ ቀኝ ይታጠፉ።\n\nወደ ግራ ለመታጠፍ ሲፈልጉ፣ ከመንገዱ መሃል በተቻለ መጠን ተጠግተው ይሂዱ። ከፊት ለፊት ከሚመጡ ተሽከርካሪዎች ይጠንቀቁ እና በመገናኛው ውስጥ በተቻለ መጠን አጭር ጊዜ ያሳልፉ።\n\nወደ ክብ መንገድ ሲገቡ፣ በክብ መንገዱ ውስጥ አስቀድመው ለሚሄዱ ተሽከርካሪዎች ቅድሚያ መስጠት አለብዎት።",
+          "narration_script": "መገናኛ በመንገድ ላይ በጣም አደገኛ ቦታ ነው። ምክንያቱም ተሽከርካሪዎች ከሁሉም አቅጣጫዎች በአንድ ጊዜ ስለሚመጡ ነው። ወደ መገናኛ ሲደርሱ ፍጥነትዎን መቀነስ እና ወደ ሁሉም አቅጣጫዎች በጥንቃቄ ማየት አለብዎት።\n\nመገናኛውን ሙሉ በሙሉ ማለፍ እንደሚችሉ እርግጠኛ ካልሆኑ ወደ ውስጥ አይግቡ። የትራፊክ መብራቱ አረንጓዴ ቢሆንም እንኳ መገናኛውን ዘግተው መቆም የለብዎትም።\n\nወደ ቀኝ ለመታጠፍ ሲፈልጉ፣ ከመንገዱ ቀኝ ዳርቻ በተቻለ መጠን ተጠግተው ይሂዱ እና በደንብ ወደ ቀኝ ይታጠፉ።\n\nወደ ግራ ለመታጠፍ ሲፈልጉ፣ ከመንገዱ መሃል በተቻለ መጠን ተጠግተው ይሂዱ። ከፊት ለፊት ከሚመጡ ተሽከርካሪዎች ይጠንቀቁ እና በመገናኛው ውስጥ በተቻለ መጠን አጭር ጊዜ ያሳልፉ።\n\nወደ ክብ መንገድ ሲገቡ፣ በክብ መንገዱ ውስጥ አስቀድመው ለሚሄዱ ተሽከርካሪዎች ቅድሚያ መስጠት አለብዎት።",
+          "image_description": "Top-down aerial photograph of a real four-way urban road intersection, clear lane markings and white stop lines visible on asphalt, traffic lights on poles at corners, multiple cars in lanes approaching from all four directions, some stopped at red light, realistic road scene, bright daylight, photorealistic",
+          "questions": [
+            {
+              "question_amharic": "መገናኛ በመንገድ ላይ በጣም አደገኛ ቦታ የሆነው ለምንድን ነው?",
+              "answers": [
+                {
+                  "text_amharic": "መንገዱ ጠባብ ስለሆነ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ተሽከርካሪዎች ከብዙ አቅጣጫዎች በአንድ ጊዜ ስለሚመጡ",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ብዙ ሰዎች ስለሚሻገሩበት",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ፍጥነትን መቀነስ ስለሚያስፈልግ",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "አንድ ሹፌር ወደ መገናኛ እንዲገባ የሚፈቀድለት መቼ ነው?",
+              "answers": [
+                {
+                  "text_amharic": "የትራፊክ መብራቱ አረንጓዴ ሲሆን",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ሌሎች ተሽከርካሪዎች ከሌሉ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "መገናኛውን ሙሉ በሙሉ ሳያግድ ማለፍ ሲችል ብቻ",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "በፍጥነት ማለፍ ከቻለ",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "አንድ ሹፌር በመገናኛ ላይ ወደ ግራ እንዴት መታጠፍ አለበት?",
+              "answers": [
+                {
+                  "text_amharic": "ከመንገዱ ቀኝ ዳርቻ ተጠግቶ በፍጥነት መታጠፍ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ከመንገዱ መሃል ተጠግቶ፣ ከፊት ለፊት ከሚመጡ ተሽከርካሪዎች ተጠንቅቆ እና በመገናኛው ውስጥ አጭር ጊዜ በማሳለፍ",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "የትራፊክ መብራቱ አረንጓዴ እስኪሆን መጠበቅ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ሌሎች ተሽከርካሪዎች እስኪያልፉ መጠበቅ",
+                  "is_correct": false
+                }
+              ]
+            }
+          ],
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_tr_l1_s1_narration_1781091901150.mp3",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/tr_l1_s1_image_1781092431532.jpg"
+        },
+        {
+          "id": "tr_l1_s2",
+          "name_hebrew": "מהירות מותרת",
+          "name_amharic": "የፍጥነት ገደብ",
+          "icon": "🚦",
+          "explanation_amharic": "",
+          "narration_script": "",
+          "image_description": "",
+          "questions": []
+        }
+      ]
+    },
+    {
+      "id": "tr_l2",
+      "level": 2,
+      "name_hebrew": "נהיגה בין-עירונית",
+      "name_amharic": "ከተማ ወደ ከተማ ማሽከርከር",
+      "icon": "🛣️",
+      "color": "#1565C0",
+      "subtopics": [
+        {
+          "id": "tr_l2_s1",
+          "name_hebrew": "כביש מהיר",
+          "name_amharic": "ፈጣን መንገድ",
+          "icon": "🛣️",
+          "explanation_amharic": "",
+          "narration_script": "",
+          "image_description": "",
+          "questions": []
+        },
+        {
+          "id": "tr_l2_s2",
+          "name_hebrew": "עקיפה בטוחה",
+          "name_amharic": "ደህንነቱ የተጠበቀ ማለፍ",
+          "icon": "↗️",
+          "explanation_amharic": "",
+          "narration_script": "",
+          "image_description": "",
+          "questions": []
+        }
+      ]
+    },
+    {
+      "id": "tr_l3",
+      "level": 3,
+      "name_hebrew": "תנאי נהיגה קשים",
+      "name_amharic": "ከባድ የሹፌርነት ሁኔታዎች",
+      "icon": "🌧️",
+      "color": "#37474F",
+      "subtopics": [
+        {
+          "id": "tr_l3_s1",
+          "name_hebrew": "נהיגה בלילה",
+          "name_amharic": "ማታ ማሽከርከር",
+          "icon": "🌙",
+          "explanation_amharic": "",
+          "narration_script": "",
+          "image_description": "",
+          "questions": []
+        },
+        {
+          "id": "tr_l3_s2",
+          "name_hebrew": "גשם וערפל",
+          "name_amharic": "ዝናብ እና ጭጋግ",
+          "icon": "🌧️",
+          "explanation_amharic": "",
+          "narration_script": "",
+          "image_description": "",
+          "questions": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "topicId": "basics_license",
+  "name_amharic": "መሠረቶች እና ፍቃድ",
+  "name_hebrew": "יסודות ורישיון",
+  "icon": "📋",
+  "color": "#00695C",
+  "levels": [
+    {
+      "id": "bl_l1",
+      "level": 1,
+      "name_hebrew": "רישיון נהיגה",
+      "name_amharic": "የሹፌር ፍቃድ",
+      "icon": "📋",
+      "color": "#00695C",
+      "subtopics": [
+        {
+          "id": "bl_l1_s1",
+          "name_hebrew": "קבלת רישיון נהיגה",
+          "name_amharic": "የሹፌር ፍቃድ ማግኘት",
+          "icon": "🪪",
+          "explanation_amharic": "",
+          "narration_script": "",
+          "image_description": "",
+          "questions": []
+        },
+        {
+          "id": "bl_l1_s2",
+          "name_hebrew": "אחריות הנהג",
+          "name_amharic": "የሹፌሩ ሃላፊነት",
+          "icon": "⚖️",
+          "explanation_amharic": "",
+          "narration_script": "",
+          "image_description": "",
+          "questions": []
+        }
+      ]
+    },
+    {
+      "id": "bl_l2",
+      "level": 2,
+      "name_hebrew": "חוקים ועזרה",
+      "name_amharic": "ህጎች እና እርዳታ",
+      "icon": "🩺",
+      "color": "#B71C1C",
+      "subtopics": [
+        {
+          "id": "bl_l2_s1",
+          "name_hebrew": "עזרה ראשונה לנפגעי תאונה",
+          "name_amharic": "ለአደጋ ተጎጂዎች የመጀመሪያ እርዳታ",
+          "icon": "🩺",
+          "explanation_amharic": "",
+          "narration_script": "",
+          "image_description": "",
+          "questions": []
+        },
+        {
+          "id": "bl_l2_s2",
+          "name_hebrew": "ביטוח חובה",
+          "name_amharic": "የግዴታ ኢንሹራንስ",
+          "icon": "📝",
+          "explanation_amharic": "",
+          "narration_script": "",
+          "image_description": "",
+          "questions": []
+        }
+      ]
+    }
+  ]
+}

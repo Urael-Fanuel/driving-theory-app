@@ -121,7 +121,7 @@ async function seedAll(client: ReturnType<typeof createClient>, urlMap: Map<stri
   }
   for (let i = 0; i < qRows.length; i += CHUNK) {
     const chunk = qRows.slice(i, i + CHUNK);
-    const { error: qe } = await client.from('questions').upsert(chunk, { onConflict: 'id' });
+    const { error: qe } = await (client as any).from('questions').upsert(chunk, { onConflict: 'id' });
     if (qe) console.log(`  ❌ q${i+1}-${i+chunk.length}: ${qe.message}`);
     else     console.log(`  ✅ questions ${i+1}–${i+chunk.length}`);
   }
@@ -135,7 +135,7 @@ async function main() {
   if (!seedOnly) {
     console.log(`\n📤 Uploading ${PART1_FILES.length} Part 1 images...\n`);
     for (const fname of PART1_FILES) {
-      const url = await uploadImage(client, fname);
+      const url = await uploadImage(client as any, fname);
       if (url) urlMap.set(fname, url);
     }
     console.log(`\nUploaded: ${urlMap.size}/${PART1_FILES.length} images`);
@@ -149,7 +149,7 @@ async function main() {
     }
   }
 
-  await seedAll(client, urlMap);
+  await seedAll(client as any, urlMap);
   console.log('\n🎉 Part 1 seed complete');
 }
 

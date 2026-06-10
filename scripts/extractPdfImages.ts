@@ -1,3 +1,4 @@
+// @ts-nocheck — development utility script, pdfjs-dist type definitions are incompatible
 /**
  * scripts/extractPdfImages.ts
  *

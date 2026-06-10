@@ -12,7 +12,7 @@
       "backgroundColor": "#FFFFFF"
     },
     "androidNavigationBar": {
-      "barStyle":        "dark-content",
+      "barStyle": "dark-content",
       "backgroundColor": "#f7f9fb"
     },
     "android": {
@@ -28,7 +28,8 @@
       "permissions": [
         "android.permission.RECORD_AUDIO",
         "android.permission.INTERNET",
-        "android.permission.ACCESS_NETWORK_STATE"
+        "android.permission.ACCESS_NETWORK_STATE",
+        "android.permission.MODIFY_AUDIO_SETTINGS"
       ]
     },
     "ios": {
@@ -58,6 +59,9 @@
     "extra": {
       "router": {
         "origin": false
+      },
+      "eas": {
+        "projectId": "4d5606eb-766a-4aa6-9615-d6943d567037"
       }
     }
   }

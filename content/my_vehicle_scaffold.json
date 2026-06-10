@@ -1,0 +1,79 @@
+{
+  "topicId": "my_vehicle",
+  "name_amharic": "ትክክለኛ አነዳድ",
+  "name_hebrew": "נהיגה נכונה",
+  "icon": "🚘",
+  "color": "#37474F",
+  "levels": [
+    {
+      "id": "mv_l1",
+      "level": 1,
+      "name_hebrew": "מרחקים ובלימה",
+      "name_amharic": "ርቀት እና ቁጥጥር",
+      "icon": "📏",
+      "color": "#37474F",
+      "subtopics": [
+        {
+          "id": "mv_l1_s1",
+          "name_hebrew": "מרחק בטיחותי",
+          "name_amharic": "የደህንነት ርቀት",
+          "icon": "↔️",
+          "explanation_amharic": "",
+          "narration_script": "",
+          "image_description": "",
+          "questions": []
+        },
+        {
+          "id": "mv_l1_s2",
+          "name_hebrew": "בלימת חירום",
+          "name_amharic": "የድንገተኛ ጊዜ ብሬክ",
+          "icon": "🛑",
+          "explanation_amharic": "",
+          "narration_script": "",
+          "image_description": "",
+          "questions": []
+        }
+      ]
+    },
+    {
+      "id": "mv_l2",
+      "level": 2,
+      "name_hebrew": "חנייה נכונה",
+      "name_amharic": "ትክክለኛ ማቆሚያ",
+      "icon": "🅿️",
+      "color": "#1565C0",
+      "subtopics": [
+        {
+          "id": "mv_l2_s1",
+          "name_hebrew": "כללי חנייה",
+          "name_amharic": "የማቆሚያ ደንቦች",
+          "icon": "🅿️",
+          "explanation_amharic": "",
+          "narration_script": "",
+          "image_description": "",
+          "questions": []
+        }
+      ]
+    },
+    {
+      "id": "mv_l3",
+      "level": 3,
+      "name_hebrew": "נוסעים ומטען",
+      "name_amharic": "ተሳፋሪዎች እና ጭነት",
+      "icon": "👥",
+      "color": "#4527A0",
+      "subtopics": [
+        {
+          "id": "mv_l3_s1",
+          "name_hebrew": "הסעת נוסעים בבטחה",
+          "name_amharic": "ተሳፋሪዎችን በደህና ማጓጓዝ",
+          "icon": "👥",
+          "explanation_amharic": "",
+          "narration_script": "",
+          "image_description": "",
+          "questions": []
+        }
+      ]
+    }
+  ]
+}

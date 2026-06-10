@@ -1,0 +1,49 @@
+{
+  "topicId": "two_wheelers",
+  "name_amharic": "ሁለት ጎማ ተሽከርካሪዎች",
+  "name_hebrew": "דו-גלגלי",
+  "icon": "🏍️",
+  "color": "#E65100",
+  "levels": [
+    {
+      "id": "tw_l1",
+      "level": 1,
+      "name_hebrew": "אופנועים",
+      "name_amharic": "ሞተርሳይክሎች",
+      "icon": "🏍️",
+      "color": "#E65100",
+      "subtopics": [
+        {
+          "id": "tw_l1_s1",
+          "name_hebrew": "בטיחות רוכבי אופנוע",
+          "name_amharic": "የሞተርሳይክል ደህንነት",
+          "icon": "⛑️",
+          "explanation_amharic": "",
+          "narration_script": "",
+          "image_description": "",
+          "questions": []
+        }
+      ]
+    },
+    {
+      "id": "tw_l2",
+      "level": 2,
+      "name_hebrew": "דו-גלגלי חשמלי",
+      "name_amharic": "ኤሌክትሪካዊ ሁለት ጎማ",
+      "icon": "⚡",
+      "color": "#2E7D32",
+      "subtopics": [
+        {
+          "id": "tw_l2_s1",
+          "name_hebrew": "קורקינטים ואופניים חשמליים",
+          "name_amharic": "ኤሌክትሪካዊ ስኩተር እና ብስክሌት",
+          "icon": "🛴",
+          "explanation_amharic": "",
+          "narration_script": "",
+          "image_description": "",
+          "questions": []
+        }
+      ]
+    }
+  ]
+}
