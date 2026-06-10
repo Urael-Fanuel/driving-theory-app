@@ -94,10 +94,76 @@
           "name_hebrew": "מהירות מותרת",
           "name_amharic": "የፍጥነት ገደብ",
           "icon": "🚦",
-          "explanation_amharic": "",
-          "narration_script": "",
-          "image_description": "",
-          "questions": []
+          "explanation_amharic": "እያንዳንዱ መንገድ መሄድ የሚፈቀድበት ከፍተኛ ፍጥነት አለው። ይህን ከፍተኛ ፍጥነት ማለፍ አይፈቀድም። ይሁን እንጂ ምክንያታዊ ፍጥነት የሚባለው ሁልጊዜ ከከፍተኛው ፍጥነት ያነሰ ነው። ይህ ፍጥነት የመንገዱን ሁኔታ፣ የአየር ሁኔታን፣ የትራፊክ መጨናነቅን እና የአሽከርካሪውን ሁኔታ ግምት ውስጥ ያስገባ ነው። አሽከርካሪው በማንኛውም ጊዜ በመኪናው ላይ ሙሉ ቁጥጥር ሊኖረው ይገባል።\n\nበተለይ በሚከተሉት ሁኔታዎች ፍጥነትዎን መቀነስ ግዴታ ነው። መንገዱ ክፍት በማይሆንበት ጊዜ። ሹል ኩርባዎች ሲደርሱ። የልጆች ቡድኖች ወይም እግረኞች አጠገብ። የእግረኛ መሻገሪያ ሲደርሱ። ቁልቁለት ሲወርዱ። ጠባብ ድልድዮች አጠገብ። እንስሳት በመንገድ ላይ ሲሆኑ። አውቶቡስ ማቆሚያ ላይ ቆሞ ሲያልፉ።\n\nፍጥነትዎን መቀነስ የሚያስፈልግባቸው ምክንያቶች አሉ። እነዚህም መጥፎ የአየር ሁኔታ (እንደ ዝናብ፣ ጭጋግ፣ ጨለማ ወይም ብርሃን የሚያንጸባርቅ)፣ መንገዱ የሚያዳልጥ ከሆነ (እንደ ዝናብ፣ ጭቃ ወይም በረዶ)፣ ከባድ የትራፊክ መጨናነቅ፣ ተራራማ ወይም ጠመዝማዛ መንገዶች፣ እንዲሁም አሽከርካሪው የደከመ ወይም ትኩረቱ የተከፋፈለ ከሆነ ናቸው።",
+          "narration_script": "እያንዳንዱ መንገድ መሄድ የሚፈቀድበት ከፍተኛ ፍጥነት አለው። ይህን ከፍተኛ ፍጥነት ማለፍ አይፈቀድም። ይሁን እንጂ ምክንያታዊ ፍጥነት የሚባለው ሁልጊዜ ከከፍተኛው ፍጥነት ያነሰ ነው። ይህ ፍጥነት የመንገዱን ሁኔታ፣ የአየር ሁኔታን፣ የትራፊክ መጨናነቅን እና የአሽከርካሪውን ሁኔታ ግምት ውስጥ ያስገባ ነው። አሽከርካሪው በማንኛውም ጊዜ በመኪናው ላይ ሙሉ ቁጥጥር ሊኖረው ይገባል።\n\nበተለይ በሚከተሉት ሁኔታዎች ፍጥነትዎን መቀነስ ግዴታ ነው። መንገዱ ክፍት በማይሆንበት ጊዜ። ሹል ኩርባዎች ሲደርሱ። የልጆች ቡድኖች ወይም እግረኞች አጠገብ። የእግረኛ መሻገሪያ ሲደርሱ። ቁልቁለት ሲወርዱ። ጠባብ ድልድዮች አጠገብ። እንስሳት በመንገድ ላይ ሲሆኑ። አውቶቡስ ማቆሚያ ላይ ቆሞ ሲያልፉ።\n\nፍጥነትዎን መቀነስ የሚያስፈልግባቸው ምክንያቶች አሉ። እነዚህም መጥፎ የአየር ሁኔታ (እንደ ዝናብ፣ ጭጋግ፣ ጨለማ ወይም ብርሃን የሚያንጸባርቅ)፣ መንገዱ የሚያዳልጥ ከሆነ (እንደ ዝናብ፣ ጭቃ ወይም በረዶ)፣ ከባድ የትራፊክ መጨናነቅ፣ ተራራማ ወይም ጠመዝማዛ መንገዶች፣ እንዲሁም አሽከርካሪው የደከመ ወይም ትኩረቱ የተከፋፈለ ከሆነ ናቸው።",
+          "image_description": "Driver's perspective from inside a car approaching a sharp curve on a winding two-lane road, light rain falling with wet glistening asphalt, reduced visibility from overcast sky, trees on both sides, road warning sign visible ahead, realistic photographic style",
+          "questions": [
+            {
+              "question_amharic": "ምክንያታዊ ፍጥነት ምንድነው?",
+              "answers": [
+                {
+                  "text_amharic": "በመንገድ ላይ የተፈቀደው ከፍተኛው ፍጥነት።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የመንገዱን፣ የአየር ሁኔታን፣ የትራፊክን እና የአሽከርካሪውን ሁኔታ ግምት ውስጥ የሚያስገባ እና ሁልጊዜም ከከፍተኛው ፍጥነት ያነሰ ፍጥነት።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "አሽከርካሪው በፍጥነት ለመድረስ የሚጠቀምበት ፍጥነት።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ሌሎች መኪናዎች የሚሄዱበት ፍጥነት።",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "አሽከርካሪው ፍጥነት መቀነስ ያለበት በየትኛው ሁኔታ ነው?",
+              "answers": [
+                {
+                  "text_amharic": "መንገዱ ክፍት ሲሆን እና ምንም መኪና ሳይኖር።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ሹል ኩርባዎች ሲደርሱ፣ የማየት ችሎታ ሲገደብ ወይም መንገዱ ክፍት በማይሆንበት ጊዜ።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ቀጥተኛ እና ሰፊ መንገድ ላይ ሲነዱ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "አሽከርካሪው በፍጥነት መሄድ ሲፈልግ።",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "አሽከርካሪው መንዳት ያለበትን ፍጥነት የሚወስኑት የትኞቹ ምክንያቶች ናቸው?",
+              "answers": [
+                {
+                  "text_amharic": "የመንገዱ ሁኔታ ብቻ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የአየር ሁኔታ እና የትራፊክ መጨናነቅ ብቻ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የአሽከርካሪው ሁኔታ ብቻ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የመንገዱ ሁኔታ፣ የአየር ሁኔታ፣ የትራፊክ መጨናነቅ እና የአሽከርካሪው ሁኔታ።",
+                  "is_correct": true
+                }
+              ]
+            }
+          ],
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_tr_l1_s2_narration_1781111465492.mp3",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/tr_l1_s2_image_1781111621266.jpg"
         }
       ]
     },
