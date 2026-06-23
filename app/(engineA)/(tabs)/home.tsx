@@ -43,6 +43,11 @@ import { useAudio } from '../../../hooks/useAudio';
 import { useProgress } from '../../../hooks/useProgress';
 import { AdCard } from '../../../components/shared/AdCard';
 import { speakAndAwait } from '../../../utils/googleTTS';
+import { BannerAd, BannerAdSize, TestIds } from 'react-native-google-mobile-ads';
+
+const BANNER_AD_UNIT_ID = __DEV__
+  ? TestIds.ADAPTIVE_BANNER
+  : 'ca-app-pub-XXXXXXXXXXXXXXXX/XXXXXXXXXX'; // החלף ב-ID האמיתי שלך מ-AdMob
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
@@ -171,6 +176,15 @@ export default function EngineAHomeScreen() {
           }
         />
 
+        {/* AdMob Banner */}
+        <View style={styles.bannerContainer}>
+          <BannerAd
+            unitId={BANNER_AD_UNIT_ID}
+            size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
+            requestOptions={{ requestNonPersonalizedAdsOnly: false }}
+          />
+        </View>
+
         {/* Bottom action buttons — Daily Challenge + Exam + Progress */}
         <View style={styles.bottomActions}>
           <TouchableOpacity
@@ -289,6 +303,10 @@ const styles = StyleSheet.create({
   adFooter: {
     paddingTop:    12,
     paddingBottom: 8,
+  },
+  bannerContainer: {
+    alignItems:   'center',
+    paddingBottom: 4,
   },
   bottomActions: {
     flexDirection:     'row',

@@ -35,6 +35,15 @@ import { AdCard } from '../../components/shared/AdCard';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import { speakAndAwait } from '../../utils/googleTTS';
 import ConfettiCannon from 'react-native-confetti-cannon';
+import { InterstitialAd, AdEventType, TestIds } from 'react-native-google-mobile-ads';
+
+const INTERSTITIAL_AD_UNIT_ID = __DEV__
+  ? TestIds.INTERSTITIAL
+  : 'ca-app-pub-XXXXXXXXXXXXXXXX/XXXXXXXXXX'; // החלף ב-ID האמיתי שלך מ-AdMob
+
+const interstitial = InterstitialAd.createForAdRequest(INTERSTITIAL_AD_UNIT_ID, {
+  requestNonPersonalizedAdsOnly: false,
+});
 
 // ─── Audio base URL (Supabase Storage) ────────────────────────────────────────
 const _AUDIO_BASE = (process.env.EXPO_PUBLIC_SUPABASE_URL ?? '') + '/storage/v1/object/public/audio';
@@ -73,6 +82,23 @@ export default function ResultScreen() {
     useLocalSearchParams<{ sessionId: string; score: string; total: string; passed: string; duration: string }>();
 
   const [resultData, setResultData] = useState<ResultData | undefined>(() => getExamResult(sessionId));
+  const [adLoaded, setAdLoaded] = useState(false);
+
+  // Load and show interstitial ad when screen mounts
+  useEffect(() => {
+    const unsubLoaded = interstitial.addAdEventListener(AdEventType.LOADED, () => {
+      setAdLoaded(true);
+      interstitial.show();
+    });
+    const unsubClosed = interstitial.addAdEventListener(AdEventType.CLOSED, () => {
+      setAdLoaded(false);
+    });
+    interstitial.load();
+    return () => {
+      unsubLoaded();
+      unsubClosed();
+    };
+  }, []);
 
   // Fallback: if memory store is empty (e.g. after OTA reload), load from file
   useEffect(() => {

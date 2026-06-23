@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — መንጃ ፍቃድ በቀላል መንገድ</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f7f9fb;
+      color: #1a1a1a;
+      line-height: 1.7;
+    }
+    .hero {
+      background: linear-gradient(135deg, #1565C0, #0D47A1);
+      color: #fff;
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+    .hero h1 { font-size: 2rem; margin-bottom: 8px; }
+    .hero .app-name { font-size: 1.25rem; opacity: 0.85; margin-bottom: 16px; }
+    .hero .updated { font-size: 0.85rem; opacity: 0.7; }
+    .lang-toggle {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 20px;
+    }
+    .lang-toggle button {
+      padding: 8px 24px;
+      border: 2px solid rgba(255,255,255,0.6);
+      background: transparent;
+      color: #fff;
+      border-radius: 24px;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: all 0.2s;
+    }
+    .lang-toggle button.active,
+    .lang-toggle button:hover {
+      background: #fff;
+      color: #1565C0;
+      border-color: #fff;
+    }
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+    .section {
+      background: #fff;
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .section h2 {
+      font-size: 1.15rem;
+      color: #1565C0;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section h2 .icon { font-size: 1.3rem; }
+    .section p { margin-bottom: 10px; color: #333; }
+    .section ul {
+      padding-left: 20px;
+      color: #333;
+    }
+    .section ul li { margin-bottom: 6px; }
+    .badge {
+      display: inline-block;
+      background: #E3F2FD;
+      color: #1565C0;
+      border-radius: 8px;
+      padding: 3px 10px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .highlight {
+      background: #E8F5E9;
+      border-left: 4px solid #2E7D32;
+      padding: 14px 18px;
+      border-radius: 0 10px 10px 0;
+      margin-bottom: 12px;
+      color: #1b5e20;
+      font-weight: 500;
+    }
+    .contact-card {
+      background: #1565C0;
+      color: #fff;
+      border-radius: 16px;
+      padding: 28px 32px;
+      text-align: center;
+    }
+    .contact-card a { color: #90CAF9; }
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 0.82rem;
+      color: #999;
+    }
+    /* RTL for Amharic */
+    [lang="am"] { direction: ltr; }
+    .content-en, .content-am { display: none; }
+    .content-en.active, .content-am.active { display: block; }
+  </style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="app-name">መንጃ ፍቃድ በቀላል መንገድ</div>
+  <h1>Privacy Policy / የግላዊነት ፖሊሲ</h1>
+  <p class="updated">Last updated: June 2026 &nbsp;|&nbsp; ጁን 2026</p>
+  <div class="lang-toggle">
+    <button class="active" onclick="setLang('en')">English</button>
+    <button onclick="setLang('am')">አማርኛ</button>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- ═══════════════════════════════ ENGLISH ═══════════════════════════════ -->
+  <div class="content-en active">
+
+    <div class="section">
+      <div class="highlight">
+        🔒 This app does <strong>not</strong> require registration or login. We do not collect your name, email, phone number, or any personally identifiable information.
+      </div>
+      <h2><span class="icon">📋</span> Overview</h2>
+      <p>
+        <strong>መንጃ ፍቃድ በቀላል መንገድ</strong> ("Driving Theory in Simple Steps") is a free educational app that helps Ethiopians worldwide learn driving theory in Amharic. This Privacy Policy explains what data we collect, why, and how we use it.
+      </p>
+      <p>By using this app, you agree to the practices described in this policy.</p>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">📦</span> Data We Collect</h2>
+      <div class="badge">Minimal Data Collection</div>
+      <p>We collect only the minimum data necessary for the app to function:</p>
+      <ul>
+        <li><strong>Anonymous User ID</strong> — a random identifier generated on your device (not linked to your identity). Used to save your learning progress locally.</li>
+        <li><strong>Learning Progress</strong> — which signs and topics you have studied, quiz scores, and exam results. Stored locally on your device and optionally synced to our backend (Supabase) using only your anonymous ID.</li>
+        <li><strong>Device Information</strong> — device type, operating system version, and app version. Used for crash reporting and compatibility checks only.</li>
+        <li><strong>Microphone</strong> — used only when you tap the microphone button to answer questions by voice. Audio is processed by Google Speech-to-Text and is <strong>not stored</strong> by us.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">📢</span> Advertising (Google AdMob)</h2>
+      <p>
+        This app uses <strong>Google AdMob</strong> to display advertisements. AdMob may collect and use data to serve personalized ads based on your interests.
+      </p>
+      <p>AdMob may collect:</p>
+      <ul>
+        <li>Advertising ID (resettable in your device settings)</li>
+        <li>Approximate location (IP-based, not GPS)</li>
+        <li>App usage data and interaction with ads</li>
+      </ul>
+      <p>
+        Google's Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a><br/>
+        You can opt out of personalized ads via your device settings: <em>Settings → Google → Ads → Opt out of Ads Personalization</em>.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">🎙️</span> Microphone Permission</h2>
+      <p>
+        The app requests microphone access <strong>only</strong> for the voice-answer feature in Engine A (the audio-based learning engine). Voice audio is sent to <strong>Google Cloud Speech-to-Text</strong> for recognition and is not stored or logged by us.
+      </p>
+      <p>You can deny microphone permission and still use the full app — voice answering will simply be unavailable.</p>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">🌐</span> Internet Access</h2>
+      <p>
+        Internet access is used for:
+      </p>
+      <ul>
+        <li>Loading audio files and images for signs and topics (from Supabase Storage)</li>
+        <li>Syncing your learning progress to the cloud (anonymous, no login required)</li>
+        <li>Text-to-Speech (Google Cloud TTS) for Amharic voice explanations</li>
+        <li>Loading advertisements (Google AdMob)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">🤝</span> Third-Party Services</h2>
+      <p>We use the following third-party services:</p>
+      <ul>
+        <li><strong>Supabase</strong> — anonymous data storage and backend (<a href="https://supabase.com/privacy" target="_blank">Privacy Policy</a>)</li>
+        <li><strong>Google AdMob</strong> — advertising (<a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a>)</li>
+        <li><strong>Google Cloud Speech-to-Text</strong> — voice recognition (not stored)</li>
+        <li><strong>Google Cloud Text-to-Speech</strong> — Amharic audio generation</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">👶</span> Children's Privacy</h2>
+      <p>
+        This app is intended for users aged <strong>16 and above</strong> (minimum age for driving theory study in most countries). We do not knowingly collect data from children under 13. If you believe a child has provided us with personal data, please contact us.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">🔐</span> Data Security</h2>
+      <p>
+        All data transmitted between the app and our servers is encrypted using HTTPS/TLS. Anonymous user IDs are randomly generated and cannot be traced back to a real person.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">🗑️</span> Your Rights</h2>
+      <ul>
+        <li><strong>Delete your data</strong> — Uninstalling the app removes all locally stored progress data. To request deletion of any server-side anonymous data, contact us.</li>
+        <li><strong>Opt out of personalized ads</strong> — Via your device's ad settings.</li>
+        <li><strong>Deny microphone access</strong> — In your device settings at any time.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">🔄</span> Changes to This Policy</h2>
+      <p>
+        We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated date. Continued use of the app after changes constitutes acceptance.
+      </p>
+    </div>
+
+    <div class="contact-card">
+      <h2 style="color:#fff; margin-bottom:10px;">📬 Contact Us</h2>
+      <p>If you have questions about this Privacy Policy:</p>
+      <p style="margin-top:10px; font-size:1.1rem;">
+        📧 <a href="mailto:moti.marva@gmail.com">moti.marva@gmail.com</a>
+      </p>
+      <p style="margin-top:6px; font-size:0.9rem; opacity:0.8;">App: መንጃ ፍቃድ በቀላል መንገድ &nbsp;|&nbsp; Package: com.drivingtheory.ethiopian</p>
+    </div>
+
+  </div><!-- /content-en -->
+
+
+  <!-- ═══════════════════════════════ AMHARIC ═══════════════════════════════ -->
+  <div class="content-am">
+
+    <div class="section">
+      <div class="highlight">
+        🔒 ይህ መተግበሪያ ምዝገባ ወይም መግቢያ አያስፈልጋቸውም። ስምዎን፣ ኢሜልዎን፣ ስልክ ቁጥርዎን ወይም ማንነትዎን የሚገልጥ ምንም መረጃ አንሰበስብም።
+      </div>
+      <h2><span class="icon">📋</span> አጠቃላይ ማብራሪያ</h2>
+      <p>
+        <strong>መንጃ ፍቃድ በቀላል መንገድ</strong> — ይህ ነጻ የትምህርት መተግበሪያ ለዓለም ዙሪያ ያሉ ኢትዮጵያውያን ምልክቶችን እና የትራፊክ ህጎችን በአማርኛ ለመማር ያገለግላል። ይህ ፖሊሲ ምን መረጃ እንደምንሰበስብ እና ለምን እንደምናደርጋቸው ይገልፃል።
+      </p>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">📦</span> የምንሰበስበው መረጃ</h2>
+      <div class="badge">ትንሽ መረጃ ብቻ</div>
+      <ul>
+        <li><strong>ስም-አልባ መለያ (Anonymous ID)</strong> — ማንነትዎን የማይገልጥ የዘፈቀደ ቁጥር። የትምህርት እድገትዎን ለማስቀመጥ ያገለግላል።</li>
+        <li><strong>የትምህርት እድገት</strong> — የተማሩዋቸው ምልክቶች፣ ውጤቶች። በመሳሪያዎ ላይ ይቀመጣሉ።</li>
+        <li><strong>የመሳሪያ መረጃ</strong> — ዓይነት፣ ስርዓተ ክወና። ለጥቃቅን ስህተቶች ምርመራ ብቻ።</li>
+        <li><strong>ማይክሮፎን</strong> — የድምጽ ምላሽ ሲሰጡ ብቻ ይሠራል። ድምጽ በGoogle Speech-to-Text ይሠራዋል፣ አናስቀምጥም።</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">📢</span> ማስታወቂያ (Google AdMob)</h2>
+      <p>
+        ይህ መተግበሪያ <strong>Google AdMob</strong> ን ለማስታወቂያ ያውቃሉ። AdMob ለግል ማስታወቂያዎች ምርጫዎ ላይ ተመርኩዞ መረጃ ሊሰበስብ ይችላል።
+      </p>
+      <ul>
+        <li>የማስታወቂያ መለያ (በሞባይል ቅንብሮች ሊቀይሩ ይችላሉ)</li>
+        <li>ግምታዊ ቦታ (IP ላይ ተመርኩዞ — GPS አይደለም)</li>
+        <li>ከማስታወቂያዎ ጋር ያለ ግንኙነት</li>
+      </ul>
+      <p>
+        ከGoogle ፖሊሲ ለመውጣት: <em>ቅንብሮች → Google → ማስታወቂያ → ከማስታወቂያ ግላዊነት ውጡ</em>
+      </p>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">🎙️</span> የማይክሮፎን ፈቃድ</h2>
+      <p>
+        ማይክሮፎን ለሚጠቀሙ ተጠቃሚዎች (ሞተር A) የድምጽ ምላሽ ሲሰጡ ብቻ ጥቅም ላይ ይውላል። ፈቃዱን ሳይሰጡ ሙሉ መተግበሪያውን መጠቀም ይቻላል — የድምጽ ምላሽ ብቻ አይሠራም።
+      </p>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">🌐</span> ኢንተርኔት</h2>
+      <ul>
+        <li>የምልክቶች ምስሎችና ድምጾችን ከ Supabase Storage መጫን</li>
+        <li>ስም-አልባ እድገትዎን ወደ ደመና ማስቀመጥ</li>
+        <li>Google Cloud TTS — አማርኛ ቃላቶችን ማሰማት</li>
+        <li>Google AdMob — ማስታወቂያዎች</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">🤝</span> ሦስተኛ ወገን አገልግሎቶች</h2>
+      <ul>
+        <li><strong>Supabase</strong> — ስም-አልባ ማከማቻ</li>
+        <li><strong>Google AdMob</strong> — ማስታወቂያ</li>
+        <li><strong>Google Cloud Speech-to-Text</strong> — ድምጽ ማወቂያ</li>
+        <li><strong>Google Cloud Text-to-Speech</strong> — ድምጽ ማመንጨት</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">👶</span> የህፃናት ግላዊነት</h2>
+      <p>
+        ይህ መተግበሪያ ከ<strong>16 ዓመት</strong> በላይ ላሉ ሰዎች ነው። ከ13 ዓመት በታች ህፃናትን የሚመለከቱ መረጃዎች ሆን ብለን አንሰበስብም።
+      </p>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">🗑️</span> መብቶችዎ</h2>
+      <ul>
+        <li><strong>መረጃዎን ሰርዙ</strong> — መተግበሪያውን ሲሰርዙ ሁሉም ስፍራዊ እድገት ይሰረዛሉ።</li>
+        <li><strong>ከማስታወቂያ ወጡ</strong> — በሞባይል ቅንብሮች።</li>
+        <li><strong>ማይክሮፎን ፈቃድ ሰርዙ</strong> — በቅንብሮች በማናቸውም ጊዜ።</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">🔄</span> ለውጦች</h2>
+      <p>
+        ይህ ፖሊሲ ሊዘምን ይችላል። ለውጦች በዚህ ገጽ ላይ ቀን ጋር ይለጣፋሉ።
+      </p>
+    </div>
+
+    <div class="contact-card">
+      <h2 style="color:#fff; margin-bottom:10px;">📬 ያናግሩን</h2>
+      <p>ስለ ፖሊሲው ጥያቄዎች ካሉዎ:</p>
+      <p style="margin-top:10px; font-size:1.1rem;">
+        📧 <a href="mailto:moti.marva@gmail.com">moti.marva@gmail.com</a>
+      </p>
+      <p style="margin-top:6px; font-size:0.9rem; opacity:0.8;">መተግበሪያ: መንጃ ፍቃድ በቀላል መንገድ</p>
+    </div>
+
+  </div><!-- /content-am -->
+
+</div><!-- /container -->
+
+<footer>
+  © 2026 መንጃ ፍቃድ በቀላል መንገድ &nbsp;|&nbsp; com.drivingtheory.ethiopian &nbsp;|&nbsp;
+  <a href="mailto:moti.marva@gmail.com">moti.marva@gmail.com</a>
+</footer>
+
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('.lang-toggle button').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.content-en, .content-am').forEach(el => el.classList.remove('active'));
+    document.querySelector('.content-' + lang).classList.add('active');
+    event.target.classList.add('active');
+  }
+</script>
+</body>
+</html>

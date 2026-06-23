@@ -33,6 +33,11 @@ import { useAudio } from '../../../hooks/useAudio';
 import { useProgress } from '../../../hooks/useProgress';
 import { AdCard } from '../../../components/shared/AdCard';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
+import { BannerAd, BannerAdSize, TestIds } from 'react-native-google-mobile-ads';
+
+const BANNER_AD_UNIT_ID = __DEV__
+  ? TestIds.ADAPTIVE_BANNER
+  : 'ca-app-pub-XXXXXXXXXXXXXXXX/XXXXXXXXXX'; // החלף ב-ID האמיתי שלך מ-AdMob
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
@@ -141,6 +146,15 @@ export default function EngineBHomeScreen() {
         }
       />
 
+      {/* AdMob Banner */}
+      <View style={styles.bannerContainer}>
+        <BannerAd
+          unitId={BANNER_AD_UNIT_ID}
+          size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
+          requestOptions={{ requestNonPersonalizedAdsOnly: false }}
+        />
+      </View>
+
       {/* Quick access buttons */}
       <View style={styles.quickAccess}>
         <TouchableOpacity
@@ -225,6 +239,10 @@ const styles = StyleSheet.create({
   },
   topicCard: {
     marginBottom: 12,
+  },
+  bannerContainer: {
+    alignItems:    'center',
+    paddingBottom: 4,
   },
   quickAccess: {
     flexDirection:     'row',

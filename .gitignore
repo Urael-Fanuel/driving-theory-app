@@ -55,3 +55,5 @@ temp_behavioral/
 *.pdf
 "vertex-key.json" 
 vertex-key.json
+
+.vercel

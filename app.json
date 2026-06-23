@@ -25,6 +25,7 @@
       "targetSdkVersion": 34,
       "compileSdkVersion": 34,
       "package": "com.drivingtheory.ethiopian",
+      "versionCode": 1,
       "permissions": [
         "android.permission.RECORD_AUDIO",
         "android.permission.INTERNET",
@@ -49,6 +50,13 @@
         "expo-av",
         {
           "microphonePermission": "ለድምጽ መልስ ለመናገር ማይክሮፎን ያስፈልጋል። ቁጥሩን ለመናገር ብቻ ይጠቅማል።"
+        }
+      ],
+      [
+        "react-native-google-mobile-ads",
+        {
+          "androidAppId": "ca-app-pub-3940256099942544~3347511713",
+          "iosAppId": "ca-app-pub-3940256099942544~1458002511"
         }
       ]
     ],
