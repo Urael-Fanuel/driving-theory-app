@@ -180,10 +180,76 @@
           "name_hebrew": "כביש מהיר",
           "name_amharic": "ፈጣን መንገድ",
           "icon": "🛣️",
-          "explanation_amharic": "",
-          "narration_script": "",
-          "image_description": "",
-          "questions": []
+          "explanation_amharic": "ፈጣን መንገድ ለፈጣን ተሽከርካሪዎች ብቻ የተሰራ መንገድ ነው። በዚህ መንገድ እግረኞች፣ ብስክሌቶች፣ እንስሳት ወይም የእርሻ ማሽኖች መሄድ አይፈቀድላቸውም። በመንገድ ምልክት የሚታይ ዝቅተኛ ፍጥነት አለ፤ ከዚህ በታች መንዳት አይፈቀድም።\n\nበመንገድ ላይ ሁልጊዜ በቀኝ መስመር መንዳት አለብዎት። በግራ መስመር መሄድ የሚፈቀደው ሌላ ተሽከርካሪ ለመቅደም ብቻ ነው። ከቀደሙ በኋላ ወዲያውኑ ወደ ቀኝ መስመር መመለስ አለብዎት። የአደጋ ጊዜ መስመር ላይ መንዳት የሚፈቀደው መኪናዎ ሲበላሽ ብቻ ነው።\n\nመኪናዎ በፈጣን መንገድ ላይ ከተበላሸ፣ ወዲያውኑ የአደጋ መብራቶችን ያብሩ። ከመኪናው ኋላ የማስጠንቀቂያ ትሪያንግል ያስቀምጡ። ከትራፊክ ርቆ በሚገኘው በር በኩል ከመኪናው ይውጡ። ለደህንነትዎ ሲባል ከአጥር ጀርባ ይቁሙ።\n\nወደ ፈጣን መንገድ ሲገቡ፣ በፍጥነት መግቢያ መስመር ላይ ፍጥነት ይጨምሩ። ወደ ትራፊክ ከመቀላቀልዎ በፊት ተስማሚ ክፍተት ይጠብቁ። ከፈጣን መንገድ ሲወጡ፣ በጊዜ ወደ ቀኝ መስመር ይሂዱ። ፍጥነት መቀነስ ያለብዎት በፍጥነት መውጫ መስመር ላይ እንጂ በመደበኛው የመንዳት መስመር ላይ አይደለም።\n\nበፈጣን መንገድ ላይ በከፍተኛ ፍጥነት ስለሚያሽከረክሩ፣ ከወትሮው የበለጠ የደህንነት ርቀት መጠበቅ ያስፈልጋል። ፍጥነትዎ በጨመረ ቁጥር የሚጠብቁት ርቀትም መጨመር አለበት።",
+          "narration_script": "ፈጣን መንገድ ለፈጣን ተሽከርካሪዎች ብቻ የተሰራ መንገድ ነው። በዚህ መንገድ እግረኞች፣ ብስክሌቶች፣ እንስሳት ወይም የእርሻ ማሽኖች መሄድ አይፈቀድላቸውም። በመንገድ ምልክት የሚታይ ዝቅተኛ ፍጥነት አለ፤ ከዚህ በታች መንዳት አይፈቀድም።\n\nበመንገድ ላይ ሁልጊዜ በቀኝ መስመር መንዳት አለብዎት። በግራ መስመር መሄድ የሚፈቀደው ሌላ ተሽከርካሪ ለመቅደም ብቻ ነው። ከቀደሙ በኋላ ወዲያውኑ ወደ ቀኝ መስመር መመለስ አለብዎት። የአደጋ ጊዜ መስመር ላይ መንዳት የሚፈቀደው መኪናዎ ሲበላሽ ብቻ ነው።\n\nመኪናዎ በፈጣን መንገድ ላይ ከተበላሸ፣ ወዲያውኑ የአደጋ መብራቶችን ያብሩ። ከመኪናው ኋላ የማስጠንቀቂያ ትሪያንግል ያስቀምጡ። ከትራፊክ ርቆ በሚገኘው በር በኩል ከመኪናው ይውጡ። ለደህንነትዎ ሲባል ከአጥር ጀርባ ይቁሙ።\n\nወደ ፈጣን መንገድ ሲገቡ፣ በፍጥነት መግቢያ መስመር ላይ ፍጥነት ይጨምሩ። ወደ ትራፊክ ከመቀላቀልዎ በፊት ተስማሚ ክፍተት ይጠብቁ። ከፈጣን መንገድ ሲወጡ፣ በጊዜ ወደ ቀኝ መስመር ይሂዱ። ፍጥነት መቀነስ ያለብዎት በፍጥነት መውጫ መስመር ላይ እንጂ በመደበኛው የመንዳት መስመር ላይ አይደለም።\n\nበፈጣን መንገድ ላይ በከፍተኛ ፍጥነት ስለሚያሽከረክሩ፣ ከወትሮው የበለጠ የደህንነት ርቀት መጠበቅ ያስፈልጋል። ፍጥነትዎ በጨመረ ቁጥር የሚጠብቁት ርቀትም መጨመር አለበት።",
+          "image_description": "Aerial view of a wide multi-lane highway interchange, multiple lanes clearly visible with white lane markings, emergency hard shoulder on the right side, cars driving on the highway, entry and exit ramps visible, highway signs overhead, bright daylight, photorealistic",
+          "questions": [
+            {
+              "question_amharic": "በፈጣን መንገድ ላይ የመስመሮች ህግ ምንድነው?",
+              "answers": [
+                {
+                  "text_amharic": "ሁልጊዜ በግራ መስመር መንዳት",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "በማንኛውም መስመር መንዳት ይፈቀዳል",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ሁልጊዜ በቀኝ መስመር መንዳት፣ ለመቅደም ብቻ ግራ መጠቀም፣ ከዚያ ወደ ቀኝ መመለስ",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "የአደጋ ጊዜ መስመር ላይ ሁልጊዜ መንዳት",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "መኪናዎ በፈጣን መንገድ ላይ ከተበላሸ ምን ማድረግ አለብዎት?",
+              "answers": [
+                {
+                  "text_amharic": "ከመኪናው ውስጥ ተቀምጦ እርዳታ መጠበቅ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የአደጋ መብራቶችን ማብራት፣ የማስጠንቀቂያ ትሪያንግል ማስቀመጥ፣ ከትራፊክ ርቆ መውጣት፣ ከአጥር ጀርባ መቆም",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "መኪናውን ትቶ መሄድ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "በግራ መስመር ላይ ቆሞ እርዳታ መጠየቅ",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "ወደ ፈጣን መንገድ ሲገቡ አሽከርካሪው ምን ማድረግ አለበት?",
+              "answers": [
+                {
+                  "text_amharic": "ወዲያውኑ ወደ ትራፊክ መቀላቀል",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "በፍጥነት መግቢያ መስመር ላይ ፍጥነት መቀነስ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "በፍጥነት መግቢያ መስመር ላይ ፍጥነት መጨመር እና ወደ ትራፊክ ከመቀላቀልዎ በፊት ተስማሚ ክፍተት መጠበቅ",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ከግራ መስመር ወደ ፈጣን መንገድ መግባት",
+                  "is_correct": false
+                }
+              ]
+            }
+          ],
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_tr_l2_s1_narration_1782243814164.mp3",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/tr_l2_s1_image_1782243965478.jpg"
         },
         {
           "id": "tr_l2_s2",
