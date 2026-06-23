@@ -21,7 +21,7 @@ import { useAudio } from '../../hooks/useAudio';
 
 // ⚠️ UPDATE THIS URL before submitting to Google Play —
 // must be a live, publicly accessible Privacy Policy page.
-const PRIVACY_POLICY_URL = 'https://sites.google.com/view/driving-theory-amharic/privacy';
+const PRIVACY_POLICY_URL = 'https://driving-theory-docs.vercel.app/privacy-policy.html';
 
 // ─── Colors ───────────────────────────────────────────────────────────────────
 const C = {
