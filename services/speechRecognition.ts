@@ -14,20 +14,14 @@
 
 // expo-file-system v17+ deprecated the top-level API; use /legacy for readAsStringAsync
 import * as FileSystem from 'expo-file-system/legacy';
+import { supabase } from '../backend/supabaseClient';
 
 // ─── Config ───────────────────────────────────────────────────────────────────
 
-const GOOGLE_STT_URL = 'https://speech.googleapis.com/v1/speech:recognize';
-const API_KEY        = process.env.EXPO_PUBLIC_GOOGLE_STT_KEY ?? '';
-
-// Phrase hints — ONLY words we need to recognize
-// Boost = 20 means strong preference for these phrases
-const PHRASE_HINTS = [
-  'አንድ', 'ሁለት', 'ሶስት',   // Amharic: one, two, three
-  'ሀ',   'ለ',   'ሐ',      // Amharic letters A, B, C
-  '1',   '2',   '3',       // Digits (in case user speaks in English)
-  'one', 'two', 'three',    // English fallback
-];
+// STT requests go through a Supabase Edge Function (supabase/functions/stt) —
+// the Google API key lives server-side only and is never shipped in the app.
+// A mock is still used automatically if Supabase isn't configured (dev mode).
+const USE_MOCK = !process.env.EXPO_PUBLIC_SUPABASE_URL;
 
 // Confidence threshold — below this, don't trust the result
 const MIN_CONFIDENCE = 0.65;
@@ -79,8 +73,8 @@ export async function recognizeAmharicAnswer(
   encoding: 'LINEAR16' | 'AMR_WB' = 'LINEAR16',
   sampleRateHertz: number = 16000,
 ): Promise<STTResult> {
-  if (!API_KEY) {
-    console.warn('[STT] No API key configured — STT disabled');
+  if (USE_MOCK) {
+    console.warn('[STT] Supabase not configured — STT disabled');
     return { answer: null, confidence: 0, transcript: '', isRecognized: false };
   }
 
@@ -93,37 +87,16 @@ export async function recognizeAmharicAnswer(
     });
     console.log('[STT] base64Audio length:', base64Audio?.length ?? 'null');
 
-    // Call Google STT API
-    const response = await fetch(GOOGLE_STT_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'X-Goog-Api-Key': API_KEY },
-      body: JSON.stringify({
-        config: {
-          encoding,           // matches recording format: LINEAR16 (iOS) or AMR_WB (Android)
-          sampleRateHertz,    // 16000 Hz — optimal for speech recognition
-          languageCode:       'am-ET',      // Amharic (Ethiopia)
-          speechContexts: [{
-            phrases: PHRASE_HINTS,
-            boost:   20,                   // Strong preference for our words
-          }],
-          maxAlternatives:    1,
-          enableAutomaticPunctuation: false,
-          model:              'default',    // No short-command model for Amharic yet
-          useEnhanced:        false,
-        },
-        audio: {
-          content: base64Audio,
-        },
-      }),
+    // Call the Edge Function proxy (not Google directly) — the API key
+    // stays server-side.
+    const { data, error } = await supabase.functions.invoke('stt', {
+      body: { audioBase64: base64Audio, encoding, sampleRateHertz },
     });
 
-    if (!response.ok) {
-      const err = await response.text();
-      console.error('[STT] API error:', response.status, err);
+    if (error) {
+      console.error('[STT] Edge Function error:', error);
       return { answer: null, confidence: 0, transcript: '', isRecognized: false };
     }
-
-    const data = await response.json();
 
     // No results
     if (!data.results || data.results.length === 0) {
@@ -168,7 +141,7 @@ export async function recognizeAmharicAnswer(
 
 /**
  * Mock STT that randomly returns an answer (for testing without API key).
- * Only used in development when EXPO_PUBLIC_GOOGLE_STT_KEY is not set.
+ * Only used in development when EXPO_PUBLIC_SUPABASE_URL is not set.
  */
 export async function mockRecognizeAmharicAnswer(): Promise<STTResult> {
   await new Promise(r => setTimeout(r, 1500)); // Simulate API delay

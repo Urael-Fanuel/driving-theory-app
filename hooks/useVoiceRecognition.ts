@@ -33,7 +33,7 @@ const SILENCE_DURATION_MS     = 600;  // ms of silence after speech → auto-sto
 const MIN_RECORDING_MS        = 400;  // minimum recording before silence detection fires
 const STATUS_INTERVAL_MS      = 80;   // metering poll interval (ms)
 
-const USE_MOCK_STT = !process.env.EXPO_PUBLIC_GOOGLE_STT_KEY;
+const USE_MOCK_STT = !process.env.EXPO_PUBLIC_SUPABASE_URL;
 
 // Platform-appropriate encoding for Google STT
 const STT_ENCODING:    'LINEAR16' | 'AMR_WB' = Platform.OS === 'android' ? 'AMR_WB' : 'LINEAR16';

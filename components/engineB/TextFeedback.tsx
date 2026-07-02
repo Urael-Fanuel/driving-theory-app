@@ -19,6 +19,7 @@ import {
   ScrollView,
 } from 'react-native';
 import * as Haptics from 'expo-haptics';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Colors } from '../../constants/colors';
 import { Typography } from '../../constants/typography';
 import { AudioButton } from '../shared/AudioButton';
@@ -46,6 +47,7 @@ export function TextFeedback({
 }: TextFeedbackProps) {
   const slideAnim = useRef(new Animated.Value(100)).current;
   const fadeAnim  = useRef(new Animated.Value(0)).current;
+  const insets    = useSafeAreaInsets();
 
   useEffect(() => {
     // Haptic
@@ -88,7 +90,10 @@ export function TextFeedback({
         },
       ]}
     >
-      <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.content}>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={[styles.content, { paddingBottom: Math.max(24, insets.bottom + 16) }]}
+      >
         {/* Result title */}
         <Text style={[styles.resultTitle, { color: titleColor }]}>
           {resultTitle}

@@ -46,6 +46,7 @@ export default function EngineBExamScreen() {
 
   const [showFeedback, setShowFeedback] = React.useState(false);
   const [signs, setSigns] = useState<DBSign[]>([]);
+  const scrollRef = React.useRef<any>(null);
   const { stopAudio } = useAudio();
   const isConnected = useNetworkStatus();
 
@@ -55,6 +56,13 @@ export default function EngineBExamScreen() {
   }, []);
 
   const currentSign = signs.find(s => s.id === currentQuestion?.sign_id) ?? null;
+
+  // Reset scroll to top on new question
+  useEffect(() => {
+    if (phase === 'question') {
+      scrollRef.current?.scrollTo({ y: 0, animated: false });
+    }
+  }, [currentQuestion?.id]);
 
   // Show feedback after answer
   useEffect(() => {
@@ -141,15 +149,16 @@ export default function EngineBExamScreen() {
       )}
 
       <ScrollView
+        ref={scrollRef}
         contentContainerStyle={styles.content}
         showsVerticalScrollIndicator={false}
         scrollEnabled={!showFeedback}
       >
-        {/* Traffic sign image */}
-        {currentSign?.image_url && (
+        {/* Sign or behavioral question image */}
+        {(currentSign?.image_url || currentQuestion.question_image_url) && (
           <View style={styles.signImageContainer}>
             <Image
-              source={{ uri: currentSign.image_url }}
+              source={{ uri: currentSign?.image_url ?? currentQuestion.question_image_url! }}
               style={styles.signImage}
               resizeMode="contain"
             />
@@ -174,10 +183,11 @@ export default function EngineBExamScreen() {
 
         {/* Answer choices */}
         <View style={styles.answersContainer}>
-          {currentQuestion.answers.map(answer => (
+          {currentQuestion.answers.map((answer, index) => (
             <TextAnswerCard
               key={answer.id}
               answerId={answer.id}
+              label={String(index + 1)}
               text={answer.text_amharic}
               imageUri={answer.image_url}
               cardState={getCardState(answer.id)}

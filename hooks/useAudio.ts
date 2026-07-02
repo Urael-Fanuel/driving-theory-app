@@ -241,10 +241,11 @@ export function useAudio(): UseAudioReturn {
   useEffect(() => {
     // Configure audio session once
     Audio.setAudioModeAsync({
-      allowsRecordingIOS:    false,
-      playsInSilentModeIOS:  true,
-      staysActiveInBackground: false,
-      shouldDuckAndroid:     true,
+      allowsRecordingIOS:       false,
+      playsInSilentModeIOS:     true,
+      staysActiveInBackground:  false,
+      shouldDuckAndroid:        true,
+      playThroughEarpieceAndroid: false,
     }).catch(() => {});
 
     // Subscribe to global audio events

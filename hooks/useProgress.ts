@@ -9,7 +9,7 @@
  *      content maps (signs.json → topic lookup, topics.json → totals).
  */
 
-import { useState, useCallback, useRef } from 'react';
+import { useState, useCallback, useRef, useEffect } from 'react';
 import { useEngine } from '../contexts/EngineContext';
 import * as api from '../backend/api';
 import topicsRaw  from '../content/topics.json';
@@ -21,6 +21,12 @@ import signsRaw   from '../content/signs.json';
 const SIGN_TOPIC_MAP = new Map<string, string>(
   (signsRaw as Array<{ id: string; topic_id: string }>).map(s => [s.id, s.topic_id])
 );
+
+/** questionId → topicId (built from signs.json at module load) */
+const QUESTION_TOPIC_MAP = new Map<string, string>();
+(signsRaw as Array<{ topic_id: string; questions?: Array<{ id: string }> }>).forEach(sign => {
+  sign.questions?.forEach(q => QUESTION_TOPIC_MAP.set(q.id, sign.topic_id));
+});
 
 /** topicId → sign_count */
 const TOPIC_SIGN_COUNT = new Map<string, number>(
@@ -90,6 +96,34 @@ export function useProgress(): UseProgressReturn {
   const questionTopicRef = useRef(new Map<string, string>());
 
   const refresh = useCallback(() => forceUpdate(n => n + 1), []);
+
+  // ── Load historical data from Supabase on mount ──────────────────────────────
+  useEffect(() => {
+    if (!userId) return;
+    Promise.all([
+      api.getUserProgress(userId),
+      api.getUserSignViews(userId),
+    ]).then(([progressRows, signViewRows]) => {
+      // Populate questionMap from historical answers
+      for (const row of progressRows) {
+        questionMap.set(row.question_id, {
+          attemptCount: row.attempt_count,
+          correctCount: row.correct_count,
+        });
+        // Populate topic map so topicsProgress can aggregate correctly
+        const topicId = QUESTION_TOPIC_MAP.get(row.question_id);
+        if (topicId) questionTopicRef.current.set(row.question_id, topicId);
+      }
+      // Populate signViews from historical views
+      for (const row of signViewRows) {
+        signViews.set(row.sign_id, {
+          videoCompleted: row.video_completed,
+          viewCount:      row.view_count,
+        });
+      }
+      refresh();
+    }).catch(() => {});
+  }, [userId]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // ── Mark sign as viewed ──────────────────────────────────────────────────────
   const markSignViewed = useCallback((signId: string, videoCompleted = false) => {

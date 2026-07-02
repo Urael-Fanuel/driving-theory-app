@@ -12,13 +12,9 @@
  */
 
 import * as FileSystem from 'expo-file-system/legacy';
+import type { WrongQuestion } from '../hooks/useExam';
 
-/** One question the user answered incorrectly during the exam */
-export interface WrongQuestion {
-  questionId: string;
-  signId:     string;
-  topicId:    string;
-}
+export type { WrongQuestion };
 
 export interface ResultData {
   score:           number;

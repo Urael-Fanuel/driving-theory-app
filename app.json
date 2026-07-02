@@ -21,6 +21,7 @@
         "backgroundColor": "#FFFFFF"
       },
       "allowBackup": false,
+      "supportsRtl": false,
       "minSdkVersion": 26,
       "targetSdkVersion": 34,
       "compileSdkVersion": 34,

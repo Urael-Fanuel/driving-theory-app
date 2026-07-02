@@ -8,9 +8,15 @@ import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, I18nManager } from 'react-native';
 import { EngineProvider } from '../contexts/EngineContext';
 import { Colors } from '../constants/colors';
+
+// Force LTR layout — Amharic is written left-to-right
+if (I18nManager.isRTL) {
+  I18nManager.forceRTL(false);
+  I18nManager.allowRTL(false);
+}
 
 export default function RootLayout() {
   return (

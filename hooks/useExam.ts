@@ -49,9 +49,10 @@ export interface ExamResult {
 }
 
 export interface WrongQuestion {
-  questionId: string;
-  signId:     string;
-  topicId:    string;
+  questionId:         string;
+  signId:             string;
+  topicId:            string;
+  questionImageUrl?:  string;
 }
 
 export interface UseExamReturn {
@@ -228,7 +229,7 @@ export function useExam(): UseExamReturn {
       .filter(a => !a.isCorrect)
       .map(a => {
         const q = questions.find(q => q.id === a.questionId);
-        return { questionId: a.questionId, signId: q?.sign_id ?? '', topicId: a.topicId };
+        return { questionId: a.questionId, signId: q?.sign_id ?? '', topicId: a.topicId, questionImageUrl: q?.question_image_url };
       });
 
     // Save to Supabase

@@ -43,11 +43,15 @@ import { useAudio } from '../../../hooks/useAudio';
 import { useProgress } from '../../../hooks/useProgress';
 import { AdCard } from '../../../components/shared/AdCard';
 import { speakAndAwait } from '../../../utils/googleTTS';
-import { BannerAd, BannerAdSize, TestIds } from 'react-native-google-mobile-ads';
+import { SafeBannerAd, IS_EXPO_GO } from '../../../components/shared/SafeBannerAd';
 
-const BANNER_AD_UNIT_ID = __DEV__
-  ? TestIds.ADAPTIVE_BANNER
-  : 'ca-app-pub-XXXXXXXXXXXXXXXX/XXXXXXXXXX'; // החלף ב-ID האמיתי שלך מ-AdMob
+// react-native-google-mobile-ads has no native module in Expo Go — avoid
+// even importing it there (a static import alone can crash on load).
+const BANNER_AD_UNIT_ID = IS_EXPO_GO
+  ? ''
+  : __DEV__
+    ? require('react-native-google-mobile-ads').TestIds.ADAPTIVE_BANNER
+    : 'ca-app-pub-XXXXXXXXXXXXXXXX/XXXXXXXXXX'; // החלף ב-ID האמיתי שלך מ-AdMob
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
@@ -101,7 +105,7 @@ export default function EngineAHomeScreen() {
 
   const handleShare = async () => {
     await Share.share({
-      message: 'አብረን በደስታ እንማር 🚗',
+      message: 'አብረን በደስታ እንማር! 🚗\n\nhttps://play.google.com/store/apps/details?id=com.drivingtheory.ethiopian',
     });
   };
 
@@ -178,11 +182,7 @@ export default function EngineAHomeScreen() {
 
         {/* AdMob Banner */}
         <View style={styles.bannerContainer}>
-          <BannerAd
-            unitId={BANNER_AD_UNIT_ID}
-            size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
-            requestOptions={{ requestNonPersonalizedAdsOnly: false }}
-          />
+          <SafeBannerAd unitId={BANNER_AD_UNIT_ID} />
         </View>
 
         {/* Bottom action buttons — Daily Challenge + Exam + Progress */}

@@ -12,18 +12,40 @@
  */
 
 import { Audio } from 'expo-av';
+import { supabase } from '../backend/supabaseClient';
 
-const TTS_KEY = process.env.EXPO_PUBLIC_GOOGLE_TTS_KEY ?? '';
-const TTS_URL = `https://texttospeech.googleapis.com/v1/text:synthesize`;
+// TTS requests go through a Supabase Edge Function (supabase/functions/tts) —
+// the Google API key lives server-side only and is never shipped in the app.
 
 let currentSound:   Audio.Sound | null = null;
 let pendingResolve: (() => void) | null = null;
 let _ttsGeneration = 0;   // Incremented by stopTTS — lets speakAndAwait/playUrlAndAwait detect mid-fetch cancellation
 
+// ─── TTS speaking state ───────────────────────────────────────────────────────
+let _isTTSSpeaking = false;
+const _speakingListeners = new Set<(speaking: boolean) => void>();
+
+function _emitSpeaking(speaking: boolean) {
+  _isTTSSpeaking = speaking;
+  _speakingListeners.forEach(fn => fn(speaking));
+}
+
+/** Subscribe to TTS speaking state changes. Returns an unsubscribe function. */
+export function onTTSSpeakingChange(fn: (speaking: boolean) => void): () => void {
+  _speakingListeners.add(fn);
+  return () => _speakingListeners.delete(fn);
+}
+
+/** Get the current TTS speaking state without subscribing. */
+export function getIsTTSSpeaking(): boolean {
+  return _isTTSSpeaking;
+}
+
 // ─── Core controls ────────────────────────────────────────────────────────────
 
 export async function stopTTS(): Promise<void> {
   _ttsGeneration++;   // Invalidate any in-flight speakAndAwait / playUrlAndAwait
+  _emitSpeaking(false);
   // Resolve any pending speakAndAwait / playUrlAndAwait so the sequence exits
   const res = pendingResolve;
   pendingResolve = null;
@@ -86,15 +108,18 @@ export async function playUrlAndAwait(url: string): Promise<boolean> {
   await stopTTS();
   const myGeneration = _ttsGeneration;  // Capture AFTER stopTTS increments it
   try {
-    await Audio.setAudioModeAsync({ playsInSilentModeIOS: true });
+    _emitSpeaking(true);
+    await Audio.setAudioModeAsync({ playsInSilentModeIOS: true, playThroughEarpieceAndroid: false });
     const { sound } = await Audio.Sound.createAsync({ uri: url });
-    if (_ttsGeneration !== myGeneration) { sound.unloadAsync().catch(() => {}); return false; }
+    if (_ttsGeneration !== myGeneration) { sound.unloadAsync().catch(() => {}); _emitSpeaking(false); return false; }
     currentSound = sound;
     await sound.playAsync();
     await awaitSound(sound);
+    _emitSpeaking(false);
     return true;
   } catch (e) {
     console.warn('[googleTTS] playUrlAndAwait error:', e);
+    _emitSpeaking(false);
     return false;
   }
 }
@@ -108,43 +133,37 @@ export async function speakAndAwait(text: string): Promise<boolean> {
   await stopTTS();
   const myGeneration = _ttsGeneration;  // Capture AFTER stopTTS increments it
   try {
-    await Audio.setAudioModeAsync({ playsInSilentModeIOS: true });
+    _emitSpeaking(true);
+    await Audio.setAudioModeAsync({ playsInSilentModeIOS: true, playThroughEarpieceAndroid: false });
 
-    // Abort the TTS request after 8 seconds — prevents ANR if Google API hangs
-    const controller = new AbortController();
-    const fetchTimeout = setTimeout(() => controller.abort(), 7_000);
+    // Call the Edge Function proxy (not Google directly) — the API key
+    // stays server-side. Race against a timeout to prevent ANR if the
+    // function ever hangs (mirrors the old 7s Google fetch timeout).
+    const invokePromise = supabase.functions.invoke('tts', { body: { text } });
+    const timeoutPromise = new Promise<{ data: null; error: Error }>((resolve) =>
+      setTimeout(() => resolve({ data: null, error: new Error('tts timeout') }), 8_000)
+    );
+    const { data, error } = await Promise.race([invokePromise, timeoutPromise]);
 
-    let res: Response;
-    try {
-      res = await fetch(TTS_URL, {
-        method:  'POST',
-        headers: { 'Content-Type': 'application/json', 'X-Goog-Api-Key': TTS_KEY },
-        body: JSON.stringify({
-          input:       { text },
-          voice:       { languageCode: 'am-ET', name: 'am-ET-Standard-A', ssmlGender: 'FEMALE' },
-          audioConfig: { audioEncoding: 'MP3', speakingRate: 0.85 },
-        }),
-        signal: controller.signal,
-      });
-    } finally {
-      clearTimeout(fetchTimeout);
+    if (error || !data?.audioContent) {
+      if (error) console.warn('[googleTTS] tts function error:', error);
+      _emitSpeaking(false);
+      return false;
     }
-
-    const json = await res.json();
-    // No audio content = API returned error or empty response
-    if (!json.audioContent) return false;
     // Cancelled during fetch — another stopTTS() was called while we were waiting
-    if (_ttsGeneration !== myGeneration) return false;
+    if (_ttsGeneration !== myGeneration) { _emitSpeaking(false); return false; }
 
-    const uri = `data:audio/mp3;base64,${json.audioContent}`;
+    const uri = `data:audio/mp3;base64,${data.audioContent}`;
     const { sound } = await Audio.Sound.createAsync({ uri });
-    if (_ttsGeneration !== myGeneration) { sound.unloadAsync().catch(() => {}); return false; }
+    if (_ttsGeneration !== myGeneration) { sound.unloadAsync().catch(() => {}); _emitSpeaking(false); return false; }
     currentSound = sound;
     await sound.playAsync();
     await awaitSound(sound);
+    _emitSpeaking(false);
     return true;
   } catch (e) {
     console.warn('[googleTTS] speakAndAwait error:', e);
+    _emitSpeaking(false);
     return false;
   }
 }

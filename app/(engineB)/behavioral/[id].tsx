@@ -197,7 +197,7 @@ export default function BehavioralTopicScreenB() {
               >
                 <Text style={styles.levelQuizIcon}>📝</Text>
                 <Text style={[styles.levelQuizText, { color: item.color }]}>
-                  מבחן מסכם — {item.name_amharic || item.name_hebrew}
+                  የማጠቃለያ ፈተና — {item.name_amharic || item.name_hebrew}
                 </Text>
                 <Text style={styles.levelQuizArrow}>›</Text>
               </TouchableOpacity>

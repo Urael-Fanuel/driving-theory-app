@@ -28,6 +28,8 @@ import { Typography } from '../../constants/typography';
 type CardState = 'default' | 'selected' | 'correct' | 'wrong';
 
 interface TextAnswerCardProps {
+  /** Display label (1, 2, 3, 4) — overrides answerId for display */
+  label?: string;
   /** Answer ID: 'A', 'B', or 'C' */
   answerId: string;
   /** Amharic text for this answer */
@@ -49,6 +51,7 @@ interface TextAnswerCardProps {
 // ─── Component ────────────────────────────────────────────────────────────────
 
 export function TextAnswerCard({
+  label,
   answerId,
   text,
   imageUri,
@@ -128,10 +131,10 @@ export function TextAnswerCard({
         accessibilityLabel={text}
         accessibilityRole="button"
       >
-        {/* Answer ID label (A, B, C) */}
+        {/* Answer label (1, 2, 3, 4) */}
         <View style={[styles.labelContainer, { borderColor: getLabelColor() }]}>
           <Text style={[styles.label, { color: getLabelColor() }]}>
-            {answerId}
+            {label ?? answerId}
           </Text>
         </View>
 
@@ -145,7 +148,7 @@ export function TextAnswerCard({
         )}
 
         {/* Answer text */}
-        <Text style={styles.answerText} numberOfLines={3}>
+        <Text style={styles.answerText}>
           {text}
         </Text>
 
@@ -168,11 +171,12 @@ const styles = StyleSheet.create({
     padding:        16,
     minHeight:      72,
     gap:            12,
+    direction:      'ltr',
     shadowColor:    '#000',
     shadowOffset:   { width: 0, height: 2 },
     shadowOpacity:  0.08,
     shadowRadius:   6,
-    elevation:      3,
+    elevation:       3,
   },
   labelContainer: {
     width:          36,

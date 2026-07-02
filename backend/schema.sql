@@ -203,8 +203,15 @@ CREATE OR REPLACE FUNCTION upsert_user_progress(
 RETURNS void
 LANGUAGE plpgsql
 SECURITY DEFINER
+SET search_path = public
 AS $$
 BEGIN
+  -- Security: SECURITY DEFINER bypasses RLS, so the caller identity must be
+  -- verified here — otherwise anyone with the anon key can write as any user.
+  IF auth.uid() IS NULL OR auth.uid() <> p_user_id THEN
+    RAISE EXCEPTION 'not authorized';
+  END IF;
+
   -- Ensure user row exists (defensive: in case client-side upsertUser failed)
   INSERT INTO users (id) VALUES (p_user_id) ON CONFLICT (id) DO NOTHING;
 
@@ -234,8 +241,15 @@ CREATE OR REPLACE FUNCTION upsert_sign_view(
 RETURNS void
 LANGUAGE plpgsql
 SECURITY DEFINER
+SET search_path = public
 AS $$
 BEGIN
+  -- Security: SECURITY DEFINER bypasses RLS, so the caller identity must be
+  -- verified here — otherwise anyone with the anon key can write as any user.
+  IF auth.uid() IS NULL OR auth.uid() <> p_user_id THEN
+    RAISE EXCEPTION 'not authorized';
+  END IF;
+
   -- Ensure user row exists (defensive: in case client-side upsertUser failed)
   INSERT INTO users (id) VALUES (p_user_id) ON CONFLICT (id) DO NOTHING;
 
@@ -252,7 +266,10 @@ $$;
 -- VIEWS: user_topic_progress
 -- Aggregated progress per user per topic (for progress screen)
 -- ────────────────────────────────────────────────────────────
-CREATE OR REPLACE VIEW user_topic_progress AS
+-- security_invoker: the view must respect the querying user's RLS —
+-- otherwise it exposes every user's progress to anyone with the anon key.
+CREATE OR REPLACE VIEW user_topic_progress
+WITH (security_invoker = true) AS
 SELECT
   up.user_id,
   q.topic_id,

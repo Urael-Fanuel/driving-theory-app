@@ -19,7 +19,10 @@ import {
   Animated,
   Image,
   Share,
+  Dimensions,
 } from 'react-native';
+
+const SCREEN_WIDTH = Dimensions.get('window').width;
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import * as Haptics from 'expo-haptics';
 import { Colors } from '../../constants/colors';
@@ -35,15 +38,22 @@ import { AdCard } from '../../components/shared/AdCard';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import { speakAndAwait } from '../../utils/googleTTS';
 import ConfettiCannon from 'react-native-confetti-cannon';
-import { InterstitialAd, AdEventType, TestIds } from 'react-native-google-mobile-ads';
+import { IS_EXPO_GO } from '../../components/shared/SafeBannerAd';
 
-const INTERSTITIAL_AD_UNIT_ID = __DEV__
-  ? TestIds.INTERSTITIAL
-  : 'ca-app-pub-XXXXXXXXXXXXXXXX/XXXXXXXXXX'; // החלף ב-ID האמיתי שלך מ-AdMob
-
-const interstitial = InterstitialAd.createForAdRequest(INTERSTITIAL_AD_UNIT_ID, {
-  requestNonPersonalizedAdsOnly: false,
-});
+// react-native-google-mobile-ads has no native module in Expo Go — avoid even
+// importing it there (InterstitialAd.createForAdRequest crashes on module load).
+let AdEventType: any = null;
+let interstitial: any = null;
+if (!IS_EXPO_GO) {
+  const ads = require('react-native-google-mobile-ads');
+  AdEventType = ads.AdEventType;
+  const INTERSTITIAL_AD_UNIT_ID = __DEV__
+    ? ads.TestIds.INTERSTITIAL
+    : 'ca-app-pub-XXXXXXXXXXXXXXXX/XXXXXXXXXX'; // החלף ב-ID האמיתי שלך מ-AdMob
+  interstitial = ads.InterstitialAd.createForAdRequest(INTERSTITIAL_AD_UNIT_ID, {
+    requestNonPersonalizedAdsOnly: false,
+  });
+}
 
 // ─── Audio base URL (Supabase Storage) ────────────────────────────────────────
 const _AUDIO_BASE = (process.env.EXPO_PUBLIC_SUPABASE_URL ?? '') + '/storage/v1/object/public/audio';
@@ -86,6 +96,7 @@ export default function ResultScreen() {
 
   // Load and show interstitial ad when screen mounts
   useEffect(() => {
+    if (IS_EXPO_GO || !interstitial) return;
     const unsubLoaded = interstitial.addAdEventListener(AdEventType.LOADED, () => {
       setAdLoaded(true);
       interstitial.show();
@@ -126,12 +137,15 @@ export default function ResultScreen() {
   // ── Load sign images for wrong questions ───────────────────────────────────
   const [weakSigns, setWeakSigns] = useState<DBSign[]>([]);
 
+  // Wrong questions split by type
+  const signWrongQuestions       = wrongQuestions.filter(q => q.signId);
+  const behavioralWrongQuestions = wrongQuestions.filter(q => !q.signId);
+
   useEffect(() => {
-    if (!wrongQuestions.length) return;
+    if (!signWrongQuestions.length) return;
     api.getAllSigns()
       .then(allSigns => {
-        // Get unique signs that appear in wrong questions, preserve order
-        const signIds = [...new Set(wrongQuestions.map(q => q.signId))];
+        const signIds = [...new Set(signWrongQuestions.map(q => q.signId))];
         const found   = signIds
           .map(id => allSigns.find(s => s.id === id))
           .filter(Boolean) as DBSign[];
@@ -141,10 +155,13 @@ export default function ResultScreen() {
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   // ── Animations ─────────────────────────────────────────────────────────────
-  const scaleAnim   = useRef(new Animated.Value(0)).current;
-  const fadeAnim    = useRef(new Animated.Value(0)).current;
-  const slideAnim   = useRef(new Animated.Value(40)).current;
-  const confettiRef = useRef<any>(null);
+  const scaleAnim    = useRef(new Animated.Value(0)).current;
+  const fadeAnim     = useRef(new Animated.Value(0)).current;
+  const slideAnim    = useRef(new Animated.Value(40)).current;
+  const confettiRef  = useRef<any>(null);
+  const firework1Ref = useRef<any>(null);
+  const firework2Ref = useRef<any>(null);
+  const firework3Ref = useRef<any>(null);
 
   useEffect(() => {
     // Haptic + audio feedback
@@ -154,10 +171,14 @@ export default function ResultScreen() {
         : Haptics.NotificationFeedbackType.Error
     );
 
-    // Play result audio + confetti on pass
+    // Play result audio + confetti + fireworks on pass
     if (passed) {
-      // Trigger confetti after short delay (let entrance animations start first)
+      // Main confetti burst
       setTimeout(() => confettiRef.current?.start(), 400);
+      // Fireworks: 3 bursts from different positions
+      setTimeout(() => firework1Ref.current?.start(), 1800);
+      setTimeout(() => firework2Ref.current?.start(), 2800);
+      setTimeout(() => firework3Ref.current?.start(), 3800);
       // Play crowd cheer, then TTS bravo
       playAudio(`${_AUDIO_BASE}/crowd_cheer.mp3`)
         .then(() => speakAndAwait('ብራቮ!'))
@@ -227,18 +248,50 @@ export default function ResultScreen() {
 
   return (
     <SafeAreaView style={[styles.safeArea, { backgroundColor: '#f7f9fb' }]}>
-      {/* Confetti — renders over everything, triggered on pass */}
+      {/* Confetti + fireworks — renders over everything, triggered on pass */}
       {passed && (
-        <ConfettiCannon
-          ref={confettiRef}
-          count={250}
-          origin={{ x: -10, y: 0 }}
-          autoStart={false}
-          fadeOut
-          explosionSpeed={350}
-          fallSpeed={3000}
-          colors={['#FDD835', '#2E7D32', '#1976D2', '#C62828', '#FF6F00', '#6A1B9A']}
-        />
+        <View style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, direction: 'ltr' }} pointerEvents="none">
+          <ConfettiCannon
+            ref={confettiRef}
+            count={200}
+            origin={{ x: SCREEN_WIDTH / 2, y: 0 }}
+            autoStart={false}
+            fadeOut
+            explosionSpeed={400}
+            fallSpeed={3000}
+            colors={['#FDD835', '#2E7D32', '#1976D2', '#C62828', '#FF6F00', '#6A1B9A']}
+          />
+          <ConfettiCannon
+            ref={firework1Ref}
+            count={80}
+            origin={{ x: SCREEN_WIDTH * 0.15, y: SCREEN_WIDTH * 0.3 }}
+            autoStart={false}
+            fadeOut
+            explosionSpeed={500}
+            fallSpeed={2500}
+            colors={['#FDD835', '#FF6F00', '#C62828']}
+          />
+          <ConfettiCannon
+            ref={firework2Ref}
+            count={80}
+            origin={{ x: SCREEN_WIDTH * 0.85, y: SCREEN_WIDTH * 0.3 }}
+            autoStart={false}
+            fadeOut
+            explosionSpeed={500}
+            fallSpeed={2500}
+            colors={['#1976D2', '#6A1B9A', '#2E7D32']}
+          />
+          <ConfettiCannon
+            ref={firework3Ref}
+            count={120}
+            origin={{ x: SCREEN_WIDTH / 2, y: SCREEN_WIDTH * 0.2 }}
+            autoStart={false}
+            fadeOut
+            explosionSpeed={600}
+            fallSpeed={2800}
+            colors={['#FDD835', '#2E7D32', '#1976D2', '#C62828', '#FF6F00', '#6A1B9A']}
+          />
+        </View>
       )}
       <ScrollView contentContainerStyle={styles.content}>
 
@@ -334,7 +387,7 @@ export default function ResultScreen() {
         )}
 
         {/* ── Weak signs section — shown when user got questions wrong ── */}
-        {weakSigns.length > 0 && (
+        {(weakSigns.length > 0 || behavioralWrongQuestions.length > 0) && (
           <Animated.View style={[styles.weakContainer, { opacity: fadeAnim }]}>
             {/* Header */}
             <View style={styles.weakHeader}>
@@ -375,6 +428,27 @@ export default function ResultScreen() {
                     </Text>
                   )}
                 </TouchableOpacity>
+              ))}
+              {/* Behavioral wrong questions — shown with question image or topic name */}
+              {behavioralWrongQuestions.map(q => (
+                <View key={q.questionId} style={styles.weakSignCard}>
+                  {q.questionImageUrl ? (
+                    <Image
+                      source={{ uri: q.questionImageUrl }}
+                      style={styles.weakSignImage}
+                      resizeMode="contain"
+                    />
+                  ) : (
+                    <View style={[styles.weakSignImage, styles.weakSignPlaceholder]}>
+                      <Text style={styles.weakSignPlaceholderText}>📖</Text>
+                    </View>
+                  )}
+                  {!isEngineA && (
+                    <Text style={styles.weakSignName} numberOfLines={2}>
+                      {TOPIC_NAMES[q.topicId] ?? q.topicId}
+                    </Text>
+                  )}
+                </View>
               ))}
             </View>
 

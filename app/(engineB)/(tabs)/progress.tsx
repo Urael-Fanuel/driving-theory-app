@@ -25,7 +25,7 @@ export default function EngineBProgressScreen() {
 
   const handleShare = async () => {
     await Share.share({
-      message: 'አብረን በደስታ እንማር 🚗',
+      message: 'አብረን በደስታ እንማር! 🚗\n\nhttps://play.google.com/store/apps/details?id=com.drivingtheory.ethiopian',
     });
   };
   const { totalAttempted, totalCorrect, topicsProgress } = useProgress();
@@ -72,6 +72,7 @@ export default function EngineBProgressScreen() {
             current={totalCorrect}
             total={Math.max(totalAttempted, 1)}
             fillColor={passed ? Colors.correct : Colors.primary}
+            trackColor="#e8eaed"
             height={10}
             style={styles.overallBar}
           />
@@ -100,6 +101,7 @@ export default function EngineBProgressScreen() {
                   total={t.totalQuestions}
                   height={8}
                   fillColor={t.masteryPercent >= 80 ? Colors.correct : Colors.primary}
+                  trackColor="#e8eaed"
                   style={styles.topicBar}
                 />
                 <Text style={styles.topicPercent}>{t.masteryPercent}%</Text>
@@ -145,7 +147,7 @@ export default function EngineBProgressScreen() {
 const styles = StyleSheet.create({
   safeArea: {
     flex:            1,
-    backgroundColor: Colors.background,
+    backgroundColor: '#f7f9fb',
   },
   content: {
     padding:    20,
@@ -153,13 +155,20 @@ const styles = StyleSheet.create({
   },
   title: {
     ...Typography.h1,
-    color: Colors.textPrimary,
+    color: '#191c1e',
   },
   statsCard: {
-    backgroundColor: Colors.card,
+    backgroundColor: '#ffffff',
     borderRadius:    20,
     padding:         20,
     gap:             16,
+    borderWidth:     1,
+    borderColor:     '#dde3ea',
+    shadowColor:     '#000',
+    shadowOffset:    { width: 0, height: 2 },
+    shadowOpacity:   0.06,
+    shadowRadius:    8,
+    elevation:       2,
   },
   statsRow: {
     flexDirection: 'row',
@@ -171,17 +180,17 @@ const styles = StyleSheet.create({
   },
   statNumber: {
     ...Typography.h1,
-    color: Colors.textPrimary,
+    color: '#191c1e',
   },
   statLabel: {
     ...Typography.caption,
-    color:     Colors.textSecondary,
+    color:     '#666666',
     marginTop: 4,
   },
   statDivider: {
     width:           1,
     height:          40,
-    backgroundColor: Colors.border,
+    backgroundColor: '#dde3ea',
   },
   overallBar: {
     alignSelf: 'stretch',
@@ -195,7 +204,7 @@ const styles = StyleSheet.create({
   },
   sectionTitle: {
     ...Typography.h3,
-    color: Colors.textPrimary,
+    color: '#191c1e',
   },
   topicRow: {
     flexDirection: 'row',
@@ -208,20 +217,20 @@ const styles = StyleSheet.create({
   },
   topicId: {
     ...Typography.caption,
-    color:      Colors.textPrimary,
+    color:      '#191c1e',
     fontWeight: '600',
     fontSize:   13,
   },
   topicStat: {
     ...Typography.caption,
-    color: Colors.textMuted,
+    color: '#888888',
   },
   topicBar: {
     flex: 1,
   },
   topicPercent: {
     ...Typography.caption,
-    color:      Colors.textSecondary,
+    color:      '#666666',
     width:      40,
     textAlign:  'right',
     flexShrink: 0,
@@ -229,16 +238,18 @@ const styles = StyleSheet.create({
   emptyState: {
     alignItems:        'center',
     padding:           24,
-    backgroundColor:   Colors.card,
+    backgroundColor:   '#ffffff',
     borderRadius:      16,
     gap:               12,
+    borderWidth:       1,
+    borderColor:       '#dde3ea',
   },
   emptyIcon: {
     fontSize: 52,
   },
   emptyText: {
     ...Typography.body,
-    color:     Colors.textSecondary,
+    color:     '#666666',
     textAlign: 'center',
   },
   shareButton: {

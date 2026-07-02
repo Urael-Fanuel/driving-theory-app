@@ -147,17 +147,27 @@ export default function EngineSelectionScreen() {
 
   // ── Render ─────────────────────────────────────────────────────────────────
 
+  // While resolving persisted prefs (incl. whether the disclaimer was already
+  // accepted), render a blank matching-background screen instead of the
+  // engine cards — prevents a flash of the selection screen before the
+  // disclaimer modal appears on first launch.
+  if (isLoading) {
+    return (
+      <SafeAreaView style={styles.safeArea}>
+        <StatusBar barStyle="dark-content" backgroundColor={C.bg} />
+      </SafeAreaView>
+    );
+  }
+
   return (
     <SafeAreaView style={styles.safeArea}>
       <StatusBar barStyle="dark-content" backgroundColor={C.bg} />
 
       {/* Disclaimer — shown once on first launch */}
-      {!isLoading && (
-        <DisclaimerModal
-          visible={!hasSeenDisclaimer}
-          onAccept={acceptDisclaimer}
-        />
-      )}
+      <DisclaimerModal
+        visible={!hasSeenDisclaimer}
+        onAccept={acceptDisclaimer}
+      />
 
       <Animated.View style={[styles.container, { opacity: fadeAnim }]}>
 

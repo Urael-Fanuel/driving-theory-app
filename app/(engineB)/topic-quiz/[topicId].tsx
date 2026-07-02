@@ -17,7 +17,10 @@ import {
   StyleSheet,
   SafeAreaView,
   ScrollView,
+  Dimensions,
 } from 'react-native';
+
+const SCREEN_WIDTH = Dimensions.get('window').width;
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { Colors } from '../../../constants/colors';
 import { Typography } from '../../../constants/typography';
@@ -67,6 +70,7 @@ export default function EngineBTopicQuizScreen() {
   const [ttsSpeaking,  setTtsSpeaking]  = useState(false);
   const ttsSpeakingRef = useRef(false);
   const confettiRef    = useRef<any>(null);
+  const scrollRef      = useRef<any>(null);
   const { stopAudio } = useAudio();
 
   // Load all signs once (for displaying the sign image per question)
@@ -103,6 +107,7 @@ export default function EngineBTopicQuizScreen() {
 
   const handleNext = () => {
     setShowFeedback(false);
+    scrollRef.current?.scrollTo({ y: 0, animated: false });
     nextQuestion();
   };
 
@@ -158,16 +163,18 @@ export default function EngineBTopicQuizScreen() {
     return (
       <SafeAreaView style={styles.safeArea}>
         {passed && (
-          <ConfettiCannon
-            ref={confettiRef}
-            count={250}
-            origin={{ x: -10, y: 0 }}
-            autoStart={false}
-            fadeOut
-            explosionSpeed={350}
-            fallSpeed={3000}
-            colors={['#FDD835', '#2E7D32', '#1976D2', '#C62828', '#FF6F00', '#6A1B9A']}
-          />
+          <View style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, direction: 'ltr' }} pointerEvents="none">
+            <ConfettiCannon
+              ref={confettiRef}
+              count={250}
+              origin={{ x: SCREEN_WIDTH / 2, y: 0 }}
+              autoStart={false}
+              fadeOut
+              explosionSpeed={400}
+              fallSpeed={3000}
+              colors={['#FDD835', '#2E7D32', '#1976D2', '#C62828', '#FF6F00', '#6A1B9A']}
+            />
+          </View>
         )}
         <ScrollView contentContainerStyle={styles.resultContent}>
           {/* Score circle */}
@@ -286,6 +293,7 @@ export default function EngineBTopicQuizScreen() {
       </View>
 
       <ScrollView
+        ref={scrollRef}
         contentContainerStyle={styles.content}
         showsVerticalScrollIndicator={false}
       >

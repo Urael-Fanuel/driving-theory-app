@@ -142,8 +142,7 @@ export function EngineProvider({ children }: { children: ReactNode }) {
         const prefs = await readPrefs();
 
         if (prefs.engineType) setEngineTypeState(prefs.engineType);
-        // hasSeenDisclaimer is intentionally NOT loaded from storage —
-        // the disclaimer must appear on every fresh app session.
+        if (prefs.hasSeenDisclaimer) setHasSeenDisclaimer(true);
 
         // Resolve userId via anonymous auth (or fallback UUID)
         const { id: resolvedId, fromSupabase } = await resolveUserId(prefs.userId);
@@ -220,7 +219,7 @@ export function EngineProvider({ children }: { children: ReactNode }) {
 
   const acceptDisclaimer = useCallback(() => {
     setHasSeenDisclaimer(true);
-    // Not persisted — disclaimer shows again on next app session.
+    readPrefs().then(prefs => writePrefs({ ...prefs, hasSeenDisclaimer: true })).catch(() => {});
   }, []) as () => void;
 
   const value: EngineContextValue = {

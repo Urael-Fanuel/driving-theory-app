@@ -19,7 +19,10 @@ import {
   ScrollView,
   Image,
   Animated,
+  Dimensions,
 } from 'react-native';
+
+const SCREEN_WIDTH = Dimensions.get('window').width;
 import { useLocalSearchParams, useRouter, useFocusEffect } from 'expo-router';
 import { Colors } from '../../../constants/colors';
 import { LoadingScreen } from '../../../components/shared/LoadingScreen';
@@ -31,7 +34,7 @@ import { AdCard } from '../../../components/shared/AdCard';
 import { useTopicQuiz } from '../../../hooks/useTopicQuiz';
 import { useAudio, playAndAwaitAudio } from '../../../hooks/useAudio';
 import { useVoiceRecognition } from '../../../hooks/useVoiceRecognition';
-import { speakAndAwait, stopTTS } from '../../../utils/googleTTS';
+import { speakAndAwait, stopTTS, onTTSSpeakingChange, getIsTTSSpeaking } from '../../../utils/googleTTS';
 import ConfettiCannon from 'react-native-confetti-cannon';
 import { isQuestionAudioReady } from '../../../services/audioCache';
 import * as api from '../../../backend/api';
@@ -76,6 +79,7 @@ export default function EngineATopicQuizScreen() {
   } = useTopicQuiz(topicId ?? '', levelId);
 
   const { playAudio, stopAudio, audioState } = useAudio();
+  const [isTTSPlaying,       setIsTTSPlaying]       = useState(getIsTTSSpeaking);
   const [showFeedback,       setShowFeedback]       = useState(false);
   const [playingAnswerIndex, setPlayingAnswerIndex] = useState<number | null>(null);
   const [signs,              setSigns]              = useState<DBSign[]>([]);
@@ -88,6 +92,7 @@ export default function EngineATopicQuizScreen() {
   phaseRef.current             = phase;
   const sequenceCancelledRef   = useRef(false);
   const confettiRef            = useRef<any>(null);
+  const scrollRef              = useRef<any>(null);
   const replayFromAnswerRef    = useRef<number | null>(null);
   const playingAnswerIndexRef  = useRef<number | null>(null);
   const answerAudioStartedRef  = useRef(false);
@@ -97,6 +102,7 @@ export default function EngineATopicQuizScreen() {
 
   // Keep playingAnswerIndexRef in sync
   useEffect(() => { playingAnswerIndexRef.current = playingAnswerIndex; }, [playingAnswerIndex]);
+  useEffect(() => onTTSSpeakingChange(setIsTTSPlaying), []);
 
   // Load all signs (for displaying sign image per question)
   useEffect(() => {
@@ -272,7 +278,7 @@ export default function EngineATopicQuizScreen() {
 
   // ── Audio button ─────────────────────────────────────────────────────────────
   const handleAudioButton = () => {
-    if (audioState === 'playing' || audioState === 'loading') {
+    if (audioState === 'playing' || audioState === 'loading' || isTTSPlaying) {
       sequenceCancelledRef.current = true;
       stopAudio();
       stopTTS().catch(() => {});
@@ -331,6 +337,7 @@ export default function EngineATopicQuizScreen() {
   const handleNext = () => {
     setShowFeedback(false);
     cancelListening();
+    scrollRef.current?.scrollTo({ y: 0, animated: false });
     nextQuestion();
   };
 
@@ -383,7 +390,7 @@ export default function EngineATopicQuizScreen() {
     ? (currentQuestion?.explanation_correct_audio_url ?? '')
     : (currentQuestion?.explanation_wrong_audio_url ?? '');
 
-  const audioButtonIcon = audioState === 'playing' ? '⏸' : '▶️';
+  const audioButtonIcon = (audioState === 'playing' || isTTSPlaying) ? '⏸' : '▶️';
 
   // ── Result screen (inline) ───────────────────────────────────────────────────
   if (phase === 'result' && result) {
@@ -394,16 +401,18 @@ export default function EngineATopicQuizScreen() {
     return (
       <SafeAreaView style={styles.safeArea}>
         {passed && (
-          <ConfettiCannon
-            ref={confettiRef}
-            count={250}
-            origin={{ x: -10, y: 0 }}
-            autoStart={false}
-            fadeOut
-            explosionSpeed={350}
-            fallSpeed={3000}
-            colors={['#FDD835', '#2E7D32', '#1976D2', '#C62828', '#FF6F00', '#6A1B9A']}
-          />
+          <View style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, direction: 'ltr' }} pointerEvents="none">
+            <ConfettiCannon
+              ref={confettiRef}
+              count={250}
+              origin={{ x: SCREEN_WIDTH / 2, y: 0 }}
+              autoStart={false}
+              fadeOut
+              explosionSpeed={400}
+              fallSpeed={3000}
+              colors={['#FDD835', '#2E7D32', '#1976D2', '#C62828', '#FF6F00', '#6A1B9A']}
+            />
+          </View>
         )}
         <ScrollView contentContainerStyle={styles.resultContent}>
           {/* Score circle */}
@@ -493,6 +502,7 @@ export default function EngineATopicQuizScreen() {
       </View>
 
       <ScrollView
+        ref={scrollRef}
         contentContainerStyle={styles.content}
         showsVerticalScrollIndicator={false}
         scrollEnabled={!showFeedback}

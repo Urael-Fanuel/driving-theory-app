@@ -30,7 +30,7 @@ import { useExam } from '../../../hooks/useExam';
 import { useNetworkStatus } from '../../../hooks/useNetworkStatus';
 import { isQuestionAudioReady, prefetchQuestionAudio, preCacheAudioBatch } from '../../../services/audioCache';
 import { useAudio, playAndAwaitAudio } from '../../../hooks/useAudio';
-import { speakAndAwait, stopTTS } from '../../../utils/googleTTS';
+import { speakAndAwait, stopTTS, onTTSSpeakingChange, getIsTTSSpeaking } from '../../../utils/googleTTS';
 import { useVoiceRecognition } from '../../../hooks/useVoiceRecognition';
 import * as api from '../../../backend/api';
 import { DBSign } from '../../../backend/supabaseClient';
@@ -65,7 +65,9 @@ export default function EngineAExamScreen() {
   } = useExam();
 
   const { playAudio, stopAudio, audioState } = useAudio();
+  const [isTTSPlaying,             setIsTTSPlaying]             = useState(getIsTTSSpeaking);
   const [showFeedback,             setShowFeedback]             = useState(false);
+  const scrollRef = useRef<any>(null);
   const isConnected = useNetworkStatus();
   const [currentQuestionAudioReady, setCurrentQuestionAudioReady] = useState(true);
   const [audioRestartKey,          setAudioRestartKey]          = useState(0);
@@ -88,6 +90,7 @@ export default function EngineAExamScreen() {
   // Keep playingAnswerIndexRef in sync — lets handleAnswerAudioPress capture the
   // answer index the sequence was on at the moment the user tapped 🔊.
   useEffect(() => { playingAnswerIndexRef.current = playingAnswerIndex; }, [playingAnswerIndex]);
+  useEffect(() => onTTSSpeakingChange(setIsTTSPlaying), []);
 
   // Load all signs once on mount (for displaying the sign image per question)
   useEffect(() => {
@@ -385,6 +388,13 @@ export default function EngineAExamScreen() {
     }
   }, [voiceState]); // eslint-disable-line react-hooks/exhaustive-deps
 
+  // Reset scroll to top on new question
+  useEffect(() => {
+    if (phase === 'question') {
+      scrollRef.current?.scrollTo({ y: 0, animated: false });
+    }
+  }, [currentQuestion?.id]);
+
   // Show feedback overlay when answer submitted
   useEffect(() => {
     if (phase === 'feedback_correct' || phase === 'feedback_wrong') {
@@ -449,7 +459,7 @@ export default function EngineAExamScreen() {
   // ⏸ → cancel the running sequence and stop audio immediately.
   // ▶️ → restart the full sequence from scratch (question → answers).
   const handleAudioButton = () => {
-    if (audioState === 'playing' || audioState === 'loading') {
+    if (audioState === 'playing' || audioState === 'loading' || isTTSPlaying) {
       sequenceCancelledRef.current = true;
       stopAudio();
       stopTTS().catch(() => {}); // Also stop TTS if a behavioral question was playing
@@ -500,7 +510,7 @@ export default function EngineAExamScreen() {
     }
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const audioButtonIcon = audioState === 'playing' ? '⏸' : '▶️';
+  const audioButtonIcon = (audioState === 'playing' || isTTSPlaying) ? '⏸' : '▶️';
 
   // ── States ─────────────────────────────────────────────────────────────────
   if (phase === 'loading') return <LoadingScreen />;
@@ -557,16 +567,17 @@ export default function EngineAExamScreen() {
       )}
 
       <ScrollView
+        ref={scrollRef}
         contentContainerStyle={styles.content}
         showsVerticalScrollIndicator={false}
         scrollEnabled={!showFeedback}
       >
-        {/* Traffic sign image */}
-        {currentSign?.image_url && (
+        {/* Sign or behavioral question image */}
+        {(currentSign?.image_url || currentQuestion.question_image_url) && (
           <View style={styles.signImageContainer}>
             <Image
               key={audioRestartKey}
-              source={{ uri: currentSign.image_url }}
+              source={{ uri: currentSign?.image_url ?? currentQuestion.question_image_url! }}
               style={styles.signImage}
               resizeMode="contain"
             />

@@ -27,7 +27,7 @@ export default function EngineAProgressScreen() {
 
   const handleShare = async () => {
     await Share.share({
-      message: 'አብረን በደስታ እንማር 🚗',
+      message: 'አብረን በደስታ እንማር! 🚗\n\nhttps://play.google.com/store/apps/details?id=com.drivingtheory.ethiopian',
     });
   };
   const { totalAttempted, totalCorrect } = useProgress();
@@ -67,6 +67,7 @@ export default function EngineAProgressScreen() {
           current={totalCorrect}
           total={Math.max(totalAttempted, 1)}
           fillColor={Colors.primary}
+          trackColor="#e8eaed"
           height={12}
           style={styles.progressBar}
         />
@@ -96,7 +97,7 @@ export default function EngineAProgressScreen() {
 const styles = StyleSheet.create({
   safeArea: {
     flex:            1,
-    backgroundColor: Colors.background,
+    backgroundColor: '#f7f9fb',
   },
   content: {
     padding:    24,
@@ -113,12 +114,17 @@ const styles = StyleSheet.create({
     borderWidth:     8,
     justifyContent:  'center',
     alignItems:      'center',
-    backgroundColor: Colors.card,
+    backgroundColor: '#ffffff',
+    shadowColor:     '#000',
+    shadowOffset:    { width: 0, height: 4 },
+    shadowOpacity:   0.10,
+    shadowRadius:    10,
+    elevation:       4,
   },
   circlePercent: {
     fontSize:   48,
     fontWeight: '900',
-    color:      Colors.textPrimary,
+    color:      '#191c1e',
   },
   passIcon: {
     fontSize: 32,
@@ -137,7 +143,7 @@ const styles = StyleSheet.create({
   statNumber: {
     fontSize:   28,
     fontWeight: '700',
-    color:      Colors.textPrimary,
+    color:      '#191c1e',
   },
   progressBar: {
     alignSelf: 'stretch',
