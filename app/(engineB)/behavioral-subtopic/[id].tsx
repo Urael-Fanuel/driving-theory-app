@@ -422,6 +422,11 @@ export default function BehavioralSubtopicScreenB() {
               isCorrect={isCorrect}
               explanationText={feedbackText}
               ttsText={feedbackText}
+              ragQuery={!isCorrect && currentQ && selectedAnswer !== null ? {
+                question:      currentQ.question_amharic,
+                wrongAnswer:   currentQ.answers[selectedAnswer]?.text_amharic ?? '',
+                correctAnswer: currentQ.answers.find((a: any) => a.is_correct)?.text_amharic ?? '',
+              } : undefined}
               onNext={handleNext}
             />
           )}

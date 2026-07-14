@@ -28,7 +28,8 @@ import {
 import * as Haptics from 'expo-haptics';
 import { Colors } from '../../constants/colors';
 import { useAudio } from '../../hooks/useAudio';
-import { speakAndAwait } from '../../utils/googleTTS';
+import { speakAndAwait, stopTTS } from '../../utils/googleTTS';
+import { fetchWrongAnswerExplanation, RagQuery } from '../../utils/ragExplain';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -38,6 +39,9 @@ interface AudioFeedbackProps {
   explanationAudioUri: string;
   /** Amharic text to speak via Google TTS (used by behavioral subtopics). */
   ttsText?: string;
+  /** When provided on a wrong answer — shows a "ለምን?" button that fetches a
+   *  RAG-grounded explanation and SPEAKS it (Engine A users cannot read). */
+  ragQuery?: RagQuery;
   /** Called when user taps Next */
   onNext: () => void;
   /** Auto-show next button after N ms (skips audio wait) */
@@ -50,6 +54,7 @@ export function AudioFeedback({
   isCorrect,
   explanationAudioUri,
   ttsText,
+  ragQuery,
   onNext,
   autoAdvanceMs,
 }: AudioFeedbackProps) {
@@ -57,8 +62,48 @@ export function AudioFeedback({
   const [showNext,    setShowNext]    = useState(false);
   const [ttsPlaying,  setTtsPlaying]  = useState(false);
 
+  // ── "ለምን?" (why?) RAG explanation state — audio-only for Engine A ────────
+  const [ragLoading,  setRagLoading]  = useState(false);
+  const [ragSpeaking, setRagSpeaking] = useState(false);
+  const ragTextRef     = useRef<string | null>(null);
+  const ragSpeakingRef = useRef(false);
+  const mountedRef     = useRef(true);
+
   const iconScale = useRef(new Animated.Value(0)).current;
   const fadeIn    = useRef(new Animated.Value(0)).current;
+
+  useEffect(() => {
+    return () => {
+      mountedRef.current = false;
+      if (ragSpeakingRef.current) stopTTS().catch(() => {});
+    };
+  }, []);
+
+  const handleExplainWhy = async () => {
+    if (!ragQuery || ragLoading) return;
+    // Second tap while speaking — stop
+    if (ragSpeakingRef.current) {
+      ragSpeakingRef.current = false;
+      setRagSpeaking(false);
+      await stopTTS();
+      return;
+    }
+    // Fetch once, then reuse the cached text on replays
+    let text = ragTextRef.current;
+    if (!text) {
+      setRagLoading(true);
+      text = await fetchWrongAnswerExplanation(ragQuery);
+      if (!mountedRef.current) return;
+      setRagLoading(false);
+      if (!text) return;
+      ragTextRef.current = text;
+    }
+    ragSpeakingRef.current = true;
+    setRagSpeaking(true);
+    await speakAndAwait(text.slice(0, 950));
+    ragSpeakingRef.current = false;
+    if (mountedRef.current) setRagSpeaking(false);
+  };
 
   // ── Mount: haptic + entrance animation + audio ────────────────────────────
   useEffect(() => {
@@ -120,21 +165,39 @@ export function AudioFeedback({
         </Animated.Text>
 
         {/* Audio playing indicator */}
-        {showSpeaker && (
+        {(showSpeaker || ragSpeaking) && (
           <Text style={styles.audioIndicator}>🔊</Text>
         )}
 
-        {/* Next button — appears after audio ends */}
+        {/* Buttons row — appears after audio ends */}
         {showNext && (
-          <TouchableOpacity
-            style={styles.nextButton}
-            onPress={onNext}
-            activeOpacity={0.8}
-            accessibilityLabel="ቀጣይ"
-            accessibilityRole="button"
-          >
-            <Text style={styles.nextIcon}>▶</Text>
-          </TouchableOpacity>
+          <View style={styles.buttonsRow}>
+            {/* "ለምን?" — RAG explanation, spoken aloud (wrong answers only) */}
+            {!isCorrect && ragQuery && (
+              <TouchableOpacity
+                style={[styles.whyButton, ragLoading && styles.whyButtonLoading]}
+                onPress={handleExplainWhy}
+                disabled={ragLoading}
+                activeOpacity={0.8}
+                accessibilityLabel="ለምን እንደተሳሳትኩ በድምጽ አስረዳኝ"
+                accessibilityRole="button"
+              >
+                <Text style={styles.whyIcon}>
+                  {ragLoading ? '⏳' : ragSpeaking ? '⏸' : '🤔'}
+                </Text>
+              </TouchableOpacity>
+            )}
+
+            <TouchableOpacity
+              style={styles.nextButton}
+              onPress={onNext}
+              activeOpacity={0.8}
+              accessibilityLabel="ቀጣይ"
+              accessibilityRole="button"
+            >
+              <Text style={styles.nextIcon}>▶</Text>
+            </TouchableOpacity>
+          </View>
         )}
 
       </View>
@@ -161,6 +224,30 @@ const styles = StyleSheet.create({
   audioIndicator: {
     fontSize: 48,
     opacity:  0.8,
+  },
+  buttonsRow: {
+    flexDirection: 'row',
+    alignItems:    'center',
+    gap:           24,
+  },
+  whyButton: {
+    width:           80,
+    height:          80,
+    borderRadius:    40,
+    backgroundColor: '#FDD835',
+    justifyContent:  'center',
+    alignItems:      'center',
+    shadowColor:     '#000',
+    shadowOffset:    { width: 0, height: 4 },
+    shadowOpacity:   0.3,
+    shadowRadius:    8,
+    elevation:       6,
+  },
+  whyButtonLoading: {
+    opacity: 0.6,
+  },
+  whyIcon: {
+    fontSize: 36,
   },
   nextButton: {
     width:           80,

@@ -589,6 +589,11 @@ export default function EngineATopicQuizScreen() {
           isCorrect={!!lastAnswerCorrect}
           explanationAudioUri={feedbackAudioUri}
           ttsText={isBehavioral && feedbackTTSText ? feedbackTTSText : undefined}
+          ragQuery={!lastAnswerCorrect && currentQuestion && selectedAnswerId ? {
+            question:      currentQuestion.question_amharic,
+            wrongAnswer:   currentQuestion.answers.find(a => a.id === selectedAnswerId)?.text_amharic ?? '',
+            correctAnswer: currentQuestion.answers.find(a => a.is_correct)?.text_amharic ?? '',
+          } : undefined}
           onNext={handleNext}
           autoAdvanceMs={!isBehavioral && !feedbackAudioUri ? 1500 : undefined}
         />

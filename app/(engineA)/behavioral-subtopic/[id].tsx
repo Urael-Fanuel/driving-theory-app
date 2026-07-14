@@ -654,6 +654,11 @@ export default function BehavioralSubtopicScreenA() {
           isCorrect={!!(answeredIndex !== null && currentQ.answers[answeredIndex]?.is_correct)}
           explanationAudioUri=""
           ttsText={feedbackTTSText}
+          ragQuery={answeredIndex !== null && !currentQ.answers[answeredIndex]?.is_correct ? {
+            question:      currentQ.question_amharic,
+            wrongAnswer:   currentQ.answers[answeredIndex]?.text_amharic ?? '',
+            correctAnswer: currentQ.answers.find((a: any) => a.is_correct)?.text_amharic ?? '',
+          } : undefined}
           onNext={handleNext}
         />
       )}

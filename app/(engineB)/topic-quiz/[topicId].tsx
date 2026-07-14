@@ -371,6 +371,11 @@ export default function EngineBTopicQuizScreen() {
         <TextFeedback
           isCorrect={!!lastAnswerCorrect}
           explanationAudioUri={feedbackAudioUri}
+          ragQuery={!lastAnswerCorrect && currentQuestion && selectedAnswerId ? {
+            question:      currentQuestion.question_amharic,
+            wrongAnswer:   currentQuestion.answers.find(a => a.id === selectedAnswerId)?.text_amharic ?? '',
+            correctAnswer: currentQuestion.answers.find(a => a.is_correct)?.text_amharic ?? '',
+          } : undefined}
           explanationText={
             isBehavioral
               ? (lastAnswerCorrect

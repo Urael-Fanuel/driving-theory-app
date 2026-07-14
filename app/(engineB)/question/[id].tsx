@@ -265,6 +265,11 @@ export default function EngineBQuestionScreen() {
           isCorrect={!!isCorrect}
           explanationText={feedbackText}
           explanationAudioUri={feedbackAudio}
+          ragQuery={!isCorrect && selectedId ? {
+            question:      currentQuestion.question_amharic,
+            wrongAnswer:   currentQuestion.answers.find(a => a.id === selectedId)?.text_amharic ?? '',
+            correctAnswer: currentQuestion.answers.find(a => a.is_correct)?.text_amharic ?? '',
+          } : undefined}
           onNext={handleNextQuestion}
         />
       )}

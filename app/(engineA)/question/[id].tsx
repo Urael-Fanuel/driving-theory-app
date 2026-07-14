@@ -524,6 +524,11 @@ export default function EngineAQuestionScreen() {
         <AudioFeedback
           isCorrect={!!isCorrect}
           explanationAudioUri={feedbackAudioUri}
+          ragQuery={!isCorrect && answeredIndex !== null ? {
+            question:      currentQuestion.question_amharic,
+            wrongAnswer:   currentQuestion.answers[answeredIndex]?.text_amharic ?? '',
+            correctAnswer: currentQuestion.answers.find(a => a.is_correct)?.text_amharic ?? '',
+          } : undefined}
           onNext={handleNext}
         />
       )}

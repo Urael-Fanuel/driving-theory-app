@@ -171,6 +171,11 @@ export default function EngineBPracticeScreen() {
           isCorrect={!!lastAnswerCorrect}
           explanationText={feedbackText}
           explanationAudioUri={feedbackAudio}
+          ragQuery={!lastAnswerCorrect && currentQuestion && selectedAnswerId ? {
+            question:      currentQuestion.question_amharic,
+            wrongAnswer:   currentQuestion.answers.find(a => a.id === selectedAnswerId)?.text_amharic ?? '',
+            correctAnswer: currentQuestion.answers.find(a => a.is_correct)?.text_amharic ?? '',
+          } : undefined}
           onNext={handleNext}
         />
       )}
