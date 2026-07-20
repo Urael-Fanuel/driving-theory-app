@@ -81,6 +81,17 @@
   footer{text-align:center;padding:26px 20px;font-size:0.8rem;color:#94a0ab;background:#f7f9fb;}
   footer a{color:#1565C0;}
 
+  .lang-switch{
+    position:absolute;top:16px;left:16px;
+    width:40px;height:40px;border-radius:50%;
+    background:rgba(255,255,255,0.16);border:1px solid rgba(255,255,255,0.35);
+    display:flex;align-items:center;justify-content:center;
+    font-size:1.2rem;text-decoration:none;
+    transition:background 0.2s;
+  }
+  .lang-switch:hover{background:rgba(255,255,255,0.3);}
+  .hero{position:relative;}
+
   @media (max-width:480px){
     h2{font-size:1.3rem;}
     .hero h1{font-size:1.4rem;}
@@ -90,6 +101,7 @@
 <body>
 
   <div class="hero">
+    <a class="lang-switch" href="/donors-en.html" title="Switch to English">🌐</a>
     <div class="wrap">
       <img src="/logo.png" alt="מנג'ה ፍቃድ በቀላል መንገድ" class="logo" />
       <h1>אפליקציה אחת יכולה לפתוח דלת שהיתה נעולה בפני אלפי אנשים —<br>רישיון נהיגה, בשפה שהם באמת מבינים.</h1>
@@ -171,10 +183,10 @@
           💬 שלחו הודעת WhatsApp
         </a>
         <a class="cta-btn cta-secondary" href="tel:+972528742884">
-          📞 +972-52-874-2884
+          📞 <span dir="ltr">+972-52-874-2884</span>
         </a>
         <a class="cta-btn cta-tertiary" href="mailto:moti.marva@gmail.com?subject=%D7%AA%D7%A8%D7%95%D7%9E%D7%94%20%D7%9C%D7%A4%D7%A8%D7%95%D7%99%D7%99%D7%A7%D7%98%20%D7%94%D7%AA%D7%99%D7%90%D7%95%D7%A8%D7%99%D7%94">
-          📧 moti.marva@gmail.com
+          📧 <span dir="ltr">moti.marva@gmail.com</span>
         </a>
       </div>
       <p class="cta-note">כל שיחה מתקבלת בשמחה — גם אם רק בשביל לשמוע עוד על הפרויקט.</p>
@@ -182,7 +194,7 @@
   </div>
 
   <footer>
-    מנג'ה ፍቃድ በቀላል መንገድ · com.drivingtheory.ethiopian<br>
+    מנג'ה ፍቃድ በቀላል መንገድ · <span dir="ltr">com.drivingtheory.ethiopian</span><br>
     <a href="/privacy-policy.html">מדיניות פרטיות</a>
   </footer>
 

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>መንጃ ፍቃድ በቀላል መንገድ — An Invitation to Partner</title>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:'Heebo',Arial,sans-serif;
+    background:#f7f9fb;
+    color:#1a1a1a;
+    line-height:1.75;
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:0 20px;}
+
+  /* HERO */
+  .hero{background:linear-gradient(160deg,#0d3b73,#1565C0);color:#fff;padding:48px 0 56px;position:relative;}
+  .hero .wrap{display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px;}
+  .hero img.logo{width:84px;height:84px;border-radius:20px;object-fit:contain;background:#fff;padding:6px;}
+  .hero h1{font-size:1.7rem;font-weight:800;line-height:1.4;}
+  .hero .sub{font-size:1.05rem;color:#d8e8fb;max-width:520px;}
+
+  video{
+    width:100%;
+    max-width:300px;
+    border-radius:20px;
+    box-shadow:0 12px 40px rgba(0,0,0,0.35);
+    display:block;
+    margin:10px auto 0;
+    background:#000;
+  }
+
+  /* SECTIONS */
+  section{padding:44px 0;border-bottom:1px solid #e7ebef;}
+  section:last-of-type{border-bottom:none;}
+  .eyebrow{font-size:0.78rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#1565C0;margin-bottom:10px;display:block;}
+  h2{font-size:1.5rem;font-weight:800;margin-bottom:18px;color:#0d3b73;}
+  p{margin-bottom:14px;color:#333;font-size:1.02rem;}
+  strong{color:#0d3b73;}
+
+  .engines{display:flex;gap:16px;flex-wrap:wrap;margin-top:20px;}
+  .engine{flex:1;min-width:230px;background:#fff;border:2px solid #e3f2fd;border-radius:18px;padding:20px 22px;}
+  .engine.b{border-color:#e8f5e9;}
+  .engine h3{font-size:1.05rem;font-weight:800;margin-bottom:8px;color:#1565C0;}
+  .engine.b h3{color:#2E7D32;}
+  .engine p{font-size:0.95rem;margin-bottom:0;color:#444;}
+
+  .impact-grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:18px;}
+  .impact-card{background:#fff;border-radius:16px;padding:18px 20px;border-left:4px solid #1565C0;box-shadow:0 4px 16px rgba(0,0,0,0.04);}
+  .impact-card h4{font-size:1.02rem;font-weight:800;margin-bottom:6px;color:#0d3b73;}
+  .impact-card p{font-size:0.95rem;margin-bottom:0;color:#444;}
+
+  .urgency{background:#fff8e1;border:1px solid #ffe082;border-radius:18px;padding:22px 24px;margin-top:10px;}
+  .urgency p{color:#5d4200;}
+  .urgency strong{color:#8a5a00;}
+
+  /* CTA */
+  .cta-section{background:#0d3b73;color:#fff;padding:52px 0;text-align:center;border-bottom:none;}
+  .cta-section h2{color:#fff;}
+  .cta-section p{color:#cfe0f5;}
+  .cta-buttons{display:flex;flex-direction:column;gap:14px;max-width:360px;margin:26px auto 0;}
+  .cta-btn{
+    display:flex;align-items:center;justify-content:center;gap:10px;
+    padding:16px 20px;border-radius:16px;text-decoration:none;font-weight:700;font-size:1.05rem;
+    transition:transform 0.2s, opacity 0.2s;
+  }
+  .cta-btn:hover{transform:translateY(-2px);opacity:0.92;}
+  .cta-primary{background:#25D366;color:#fff;}
+  .cta-secondary{background:#fff;color:#1565C0;}
+  .cta-tertiary{background:rgba(255,255,255,0.12);color:#fff;border:1px solid rgba(255,255,255,0.35);}
+  .cta-note{font-size:0.85rem;color:#9fbde0;margin-top:20px;}
+
+  footer{text-align:center;padding:26px 20px;font-size:0.8rem;color:#94a0ab;background:#f7f9fb;}
+  footer a{color:#1565C0;}
+
+  .lang-switch{
+    position:absolute;top:16px;left:16px;
+    width:40px;height:40px;border-radius:50%;
+    background:rgba(255,255,255,0.16);border:1px solid rgba(255,255,255,0.35);
+    display:flex;align-items:center;justify-content:center;
+    font-size:1.2rem;text-decoration:none;
+    transition:background 0.2s;
+  }
+  .lang-switch:hover{background:rgba(255,255,255,0.3);}
+
+  @media (max-width:480px){
+    h2{font-size:1.3rem;}
+    .hero h1{font-size:1.4rem;}
+  }
+</style>
+</head>
+<body>
+
+  <div class="hero">
+    <a class="lang-switch" href="/donors.html" title="עבור לעברית">🌐</a>
+    <div class="wrap">
+      <img src="/logo.png" alt="መንጃ ፍቃድ በቀላል መንገድ" class="logo" />
+      <h1>One app can open a door that has been closed to thousands of people —<br>a driver's license, in a language they truly understand.</h1>
+      <p class="sub">An independent project teaching driving theory in Amharic — including for people who cannot read at all. A short video (1:15) about the project:</p>
+      <video controls preload="metadata" playsinline poster="/logo.png">
+        <source src="/brief.mp4" type="video/mp4">
+        Your browser doesn't support video playback. You can download the video directly: <a href="/brief.mp4" style="color:#fff;">brief.mp4</a>
+      </video>
+    </div>
+  </div>
+
+  <div class="wrap">
+
+    <section>
+      <span class="eyebrow">The problem nobody talks about</span>
+      <h2>A theory exam in a language they can't read</h2>
+      <p>When Ethiopian immigrants arrived in Israel, many of them never had the opportunity to learn to read and write — not in Hebrew, and sometimes not even in Amharic, their mother tongue. This isn't a matter of ability or willingness. It's simply the result of life circumstances that never afforded them that most basic opportunity.</p>
+      <p>For people in this situation, a theory exam built entirely around reading text and marking answers isn't a small technical hurdle — it's an <strong>impassable wall</strong>. Not because they don't understand driving. Because the exam tests literacy, not road safety.</p>
+      <p>The real cost goes far beyond a license not granted. Research on immigrant populations consistently shows that the ability to drive and hold a license is directly linked to higher employment rates, more work hours, and faster integration into society. Without a license, there's no employment independence — only constant dependence on others, and one more obstacle on the road to real inclusion.</p>
+    </section>
+
+    <section>
+      <span class="eyebrow">A solution that already exists and works</span>
+      <h2>An app with two learning engines — not one</h2>
+      <p>I built a free app that teaches the entire driving theory curriculum in Amharic — traffic signs, road rules, and a full exam under real conditions (30 questions, timed, exactly like the real test). The content is based on the international Vienna Convention (used by 70+ countries) together with material from the Israeli and Ethiopian Ministries of Transportation — so the learning stays relevant whether the exam is in Israel, Ethiopia, or anywhere else.</p>
+      <div class="engines">
+        <div class="engine">
+          <h3>🔊 Engine A — Voice</h3>
+          <p>Can't read at all? No problem. Every question, every explanation, every sign — read aloud. Answers are given by speaking too. Zero reading required.</p>
+        </div>
+        <div class="engine b">
+          <h3>📖 Engine B — Text</h3>
+          <p>For those who read Amharic — full written explanations, detailed answer breakdowns, and detailed progress tracking by topic.</p>
+        </div>
+      </div>
+      <p style="margin-top:18px;">The app is completely free, requires no registration or personal details, and works offline for most features — because the population it's built to serve is largely the population that can least afford additional obstacles.</p>
+    </section>
+
+    <section>
+      <span class="eyebrow">Why this matters — beyond the individual</span>
+      <h2>When one person gets a license, the whole society benefits</h2>
+      <div class="impact-grid">
+        <div class="impact-card">
+          <h4>👤 Personal independence and dignity</h4>
+          <p>A driver's license isn't just a piece of paper — it's the ability to get to work, take a child to the doctor, and stop depending on rides from others. It's the feeling of being in control of your life.</p>
+        </div>
+        <div class="impact-card">
+          <h4>🏠 Impact on the family</h4>
+          <p>A parent who gets licensed and finds a better job changes the economic trajectory of the whole family — and shows their children that obstacles can be overcome.</p>
+        </div>
+        <div class="impact-card">
+          <h4>🌉 Bridging a social gap</h4>
+          <p>Literacy is not a measure of safe driving ability — but it does determine who gets a license and who doesn't. This app corrects that distortion: it gives everyone an equal opportunity, regardless of their reading ability.</p>
+        </div>
+        <div class="impact-card">
+          <h4>🛣️ Road safety for everyone</h4>
+          <p>A driver who truly understood the material — not one who just memorized answers someone read aloud to them — is a safer driver. That's good for them, and good for everyone who shares the road with them.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <span class="eyebrow">Where things stand today</span>
+      <h2>A living project, in progress, with no institutional backing</h2>
+      <p>The app is built and active — including over 1,200 audio files and dozens of instructional videos in Amharic — and is currently in the approval process for an official launch on Google Play. But it's being built by one person, with no company or organization funding it.</p>
+      <div class="urgency">
+        <p><strong>This is the point where a donation makes a real difference, not a symbolic one:</strong> continued development — adding content, servers and storage for the audio and video files, and ongoing maintenance — currently depends entirely on self-funding. Your contribution doesn't "add to" an existing budget — it effectively is the budget. Without it, progress will slow down significantly; with it, the app can reach thousands more people, much faster.</p>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="cta-section">
+    <div class="wrap">
+      <h2>Want to be part of this story?</h2>
+      <p>Reach out directly — I'd love to tell you more about the project and how you can contribute.</p>
+      <div class="cta-buttons">
+        <a class="cta-btn cta-primary" href="https://wa.me/972528742884?text=Hi%2C%20I%20saw%20the%20page%20about%20the%20Amharic%20driving%20theory%20app%2C%20and%20I%27d%20love%20to%20hear%20more%20about%20how%20to%20contribute.">
+          💬 Send a WhatsApp message
+        </a>
+        <a class="cta-btn cta-secondary" href="tel:+972528742884">
+          📞 <span dir="ltr">+972-52-874-2884</span>
+        </a>
+        <a class="cta-btn cta-tertiary" href="mailto:moti.marva@gmail.com?subject=Donation%20for%20the%20driving%20theory%20project">
+          📧 <span dir="ltr">moti.marva@gmail.com</span>
+        </a>
+      </div>
+      <p class="cta-note">Every conversation is welcome — even just to hear more about the project.</p>
+    </div>
+  </div>
+
+  <footer>
+    መንጃ ፍቃድ በቀላል መንገድ · <span dir="ltr">com.drivingtheory.ethiopian</span><br>
+    <a href="/privacy-policy.html">Privacy Policy</a>
+  </footer>
+
+</body>
+</html>
