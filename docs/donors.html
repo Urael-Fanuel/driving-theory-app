@@ -81,15 +81,33 @@
   footer{text-align:center;padding:26px 20px;font-size:0.8rem;color:#94a0ab;background:#f7f9fb;}
   footer a{color:#1565C0;}
 
-  .lang-switch{
-    position:absolute;top:16px;left:16px;
+  .lang-switch{position:absolute;top:16px;left:16px;}
+  .lang-switch-btn{
     width:40px;height:40px;border-radius:50%;
     background:rgba(255,255,255,0.16);border:1px solid rgba(255,255,255,0.35);
     display:flex;align-items:center;justify-content:center;
-    font-size:1.2rem;text-decoration:none;
+    font-size:1.2rem;color:#fff;cursor:pointer;
     transition:background 0.2s;
   }
-  .lang-switch:hover{background:rgba(255,255,255,0.3);}
+  .lang-switch-btn:hover{background:rgba(255,255,255,0.3);}
+  .lang-dropdown{
+    position:absolute;top:48px;left:0;min-width:130px;
+    background:#fff;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,0.25);
+    overflow:hidden;z-index:20;
+    opacity:0;visibility:hidden;transform:translateY(-6px);
+    transition:opacity 0.18s, transform 0.18s, visibility 0.18s;
+  }
+  .lang-switch:hover .lang-dropdown,
+  .lang-switch.open .lang-dropdown{
+    opacity:1;visibility:visible;transform:translateY(0);
+  }
+  .lang-option{
+    display:block;padding:11px 16px;color:#333;text-decoration:none;
+    font-size:0.92rem;font-weight:600;text-align:right;
+    transition:background 0.15s;
+  }
+  .lang-option:hover{background:#f2f6fb;}
+  .lang-option.current{color:#1565C0;background:#eef4fc;cursor:default;pointer-events:none;}
   .hero{position:relative;}
 
   @media (max-width:480px){
@@ -101,7 +119,13 @@
 <body>
 
   <div class="hero">
-    <a class="lang-switch" href="/donors-en.html" title="Switch to English">🌐</a>
+    <div class="lang-switch">
+      <button type="button" class="lang-switch-btn" aria-label="בחר שפה" aria-haspopup="true">🌐</button>
+      <div class="lang-dropdown">
+        <a href="/donors.html" class="lang-option current">✓ עברית</a>
+        <a href="/donors-en.html" class="lang-option">English</a>
+      </div>
+    </div>
     <div class="wrap">
       <img src="/logo.png" alt="מנג'ה ፍቃድ በቀላል መንገድ" class="logo" />
       <h1>אפליקציה אחת יכולה לפתוח דלת שהיתה נעולה בפני אלפי אנשים —<br>רישיון נהיגה, בשפה שהם באמת מבינים.</h1>
@@ -198,5 +222,17 @@
     <a href="/privacy-policy.html">מדיניות פרטיות</a>
   </footer>
 
+  <script>
+    document.addEventListener('click', function(e){
+      var wrap = document.querySelector('.lang-switch');
+      var btn = document.querySelector('.lang-switch-btn');
+      if (btn.contains(e.target)) {
+        e.stopPropagation();
+        wrap.classList.toggle('open');
+      } else if (!wrap.contains(e.target)) {
+        wrap.classList.remove('open');
+      }
+    });
+  </script>
 </body>
 </html>
