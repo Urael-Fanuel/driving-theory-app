@@ -337,6 +337,10 @@ export default function EngineAExamScreen() {
 
         const answer = currentQuestion!.answers[i];
         if (isBehavioral) {
+          // Unload the number sound (useAudio engine) before the TTS answer
+          // (googleTTS engine) plays. The two engines are independent and do not
+          // stop each other, so a lingering number would bleed into the answer.
+          await stopAudio();
           // TTS reads the answer text.
           // If TTS fails here — play error audio and stop. The user heard the
           // question but not all answers; continuing would leave them confused.

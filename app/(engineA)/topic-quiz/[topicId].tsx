@@ -226,6 +226,10 @@ export default function EngineATopicQuizScreen() {
 
         const answer = currentQuestion!.answers[i];
         if (isBehavioral) {
+          // Unload the number sound (useAudio engine) before the TTS answer
+          // (googleTTS engine) plays. The two engines are independent and do not
+          // stop each other, so a lingering number would bleed into the answer.
+          await stopAudio();
           const ok = await speakAndAwait(answer?.text_amharic ?? '');
           if (!ok || isCancelled()) return;
         } else {
