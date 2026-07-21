@@ -704,5 +704,8 @@ const styles = StyleSheet.create({
     gap:            16,
     justifyContent: 'center',
     paddingHorizontal: 16,
+    // Force exactly 2 cards per row (2×2) on every device size (fixed 100px cards).
+    maxWidth:       260,
+    alignSelf:      'center',
   },
 });

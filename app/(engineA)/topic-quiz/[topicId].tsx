@@ -717,6 +717,11 @@ const styles = StyleSheet.create({
     gap:               14,
     justifyContent:    'center',
     paddingHorizontal: 8,
+    // Force exactly 2 cards per row (2×2) on every device size. Cards are a
+    // fixed 100px wide, so capping the row width keeps the layout static
+    // instead of reflowing to 3+1 on wide screens or 1-per-row on narrow ones.
+    maxWidth:          240,
+    alignSelf:         'center',
   },
 
   // ── Result screen ──────────────────────────────────────────────────────────
