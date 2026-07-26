@@ -11352,113 +11352,113 @@
     "image_filename": "403.png",
     "video_filename": null,
     "name_hebrew": "403",
-    "name_amharic": "ይህ ምልክት መንገዱ ሙሉ በሙሉ ዝግ መሆኑን ወይም መግባት እንደማይቻል ያመለክታል።",
-    "explanation_amharic": "ይህ ምልክት መንገዱ ሙሉ በሙሉ ዝግ መሆኑን ወይም ወደፊት መሄድ እንደማይቻል ያመለክታል። አሽከርካሪው ይህንን ምልክት ሲያይ ወዲያውኑ ማቆም እና ወደፊት ላለመሄድ ጥንቃቄ ማድረግ አለበት። ይህንን ምልክት ችላ ማለት ከባድ አደጋ፣ የትራፊክ ቅጣት ወይም የህግ ተጠያቂነት ሊያስከትል ይችላል።",
+    "name_amharic": "ይህ ምልክት ከፊት ያለው መንገድ ሙሉ በሙሉ ዝግ ወይም የተዘጋ መሆኑን ያመለክታል።",
+    "explanation_amharic": "ይህ ምልክት ከፊት ያለው መንገድ ሙሉ በሙሉ ዝግ ወይም የተዘጋ መሆኑን ያመለክታል። አሽከርካሪው ይህንን ምልክት ሲያይ ወደፊት መሄድ ፈጽሞ አይፈቀድለትም። ከዚህ ምልክት ጋር አብሮ ሌላ አቅጣጫ የሚያሳይ ምልክት ካለ፣ አሽከርካሪው በተጠቀሰው አቅጣጫ ብቻ መሄድ አለበት። ይህንን ምልክት ችላ ማለት አደጋ ሊያስከትል ወይም የትራፊክ ደንብ ጥሰት ቅጣት ሊያስከትል ይችላል።",
     "audio_name_filename": "403_name.mp3",
     "audio_explanation_filename": "403_explanation.mp3",
     "questions": [
       {
         "id": "403_q1",
-        "question_amharic": "ምልክት 403 ምን ያዝዛል?",
+        "question_amharic": "ይህ ቀይ እና ነጭ ሰንጠረዥ ያለው ምልክት ምን ያሳያል?",
         "question_audio": "403_q1_question.mp3",
-        "explanation_correct_amharic": "ትክክል! ምልክት 403 መንገዱ ሙሉ በሙሉ ዝግ መሆኑን ወይም ወደፊት መሄድ እንደማይቻል ያዝዛል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ምልክት 403 መንገዱ ሙሉ በሙሉ ዝግ መሆኑን ወይም መግባት እንደማይቻል ያመለክታል።",
+        "explanation_correct_amharic": "እሰይ። አቤት እውቀት! ይህ ምልክት ከፊት ያለው መንገድ ሙሉ በሙሉ ዝግ መሆኑን በግልጽ ያሳያል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተዘጋ መንገድ ምልክትን ችላ ማለት አደጋ ውስጥ ሊከት ወይም የትራፊክ ደንብ ጥሰት ቅጣት ሊያስከትል ይችላል።",
         "explanation_correct_audio": "403_q1_correct.mp3",
         "explanation_wrong_audio": "403_q1_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "መንገዱ ሙሉ በሙሉ ዝግ መሆኑን ወይም መግባት እንደማይቻል ያመለክታል።",
-            "is_correct": true,
+            "text_amharic": "መንገዱ ለጊዜው ለጥገና ክፍት መሆኑን ያሳያል።",
+            "is_correct": false,
             "audio_filename": "answer_403_q1_A.mp3"
           },
           {
-            "id": "B",
-            "text_amharic": "ከፊትህ ቅድሚያ መስጠት ያለብህ መስቀለኛ መንገድ አለ።",
-            "is_correct": false,
-            "audio_filename": "answer_403_q1_B.mp3"
-          },
-          {
             "id": "C",
-            "text_amharic": "ለሁሉም የመኪና አይነቶች መግባት የተከለከለ ነው።",
+            "text_amharic": "በመንገዱ ላይ አደገኛ መታጠፊያ እንዳለ ያስጠነቅቃል።",
             "is_correct": false,
             "audio_filename": "answer_403_q1_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "ከፊትህ የመንገድ ሥራ አለ።",
+            "text_amharic": "በመንገዱ ላይ የፍጥነት ገደብ እንደሌለ ያሳያል።",
             "is_correct": false,
             "audio_filename": "answer_403_q1_D.mp3"
+          },
+          {
+            "id": "B",
+            "text_amharic": "ከፊት ያለው መንገድ ሙሉ በሙሉ ዝግ ወይም የተዘጋ መሆኑን ያመለክታል።",
+            "is_correct": true,
+            "audio_filename": "answer_403_q1_B.mp3"
           }
         ]
       },
       {
         "id": "403_q2",
-        "question_amharic": "አሽከርካሪ ምልክት 403ን ሲያይ እንዴት መንዳት አለበት?",
+        "question_amharic": "ይህን ምልክት ሲያዩ አሽከርካሪው ምን ማድረግ አለበት?",
         "question_audio": "403_q2_question.mp3",
-        "explanation_correct_amharic": "አዎ! ምልክት 403ን ሲያዩ ወዲያውኑ ማቆም እና ወደፊት ላለመሄድ ጥንቃቄ ማድረግ አለብዎት።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ምልክት 403ን ሲያዩ ወዲያውኑ ማቆም እና ወደፊት ላለመሄድ ጥንቃቄ ማድረግ አለብዎት።",
+        "explanation_correct_amharic": "እሰይ። አቤት እውቀት! መንገዱ ዝግ ስለሆነ አሽከርካሪው ወደፊት መሄድ የለበትም፤ ወዲያውኑ ማቆም ወይም አማራጭ መንገድ መፈለግ አለበት።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተዘጋ መንገድ ላይ ወደፊት ለመሄድ መሞከር አደጋን ሊያስከትል ወይም ህገወጥ ተግባር ሊሆን ይችላል።",
         "explanation_correct_audio": "403_q2_correct.mp3",
         "explanation_wrong_audio": "403_q2_wrong.mp3",
         "answers": [
           {
-            "id": "A",
-            "text_amharic": "ፍጥነት መቀነስ እና በጥንቃቄ መቀጠል አለበት።",
+            "id": "D",
+            "text_amharic": "ሌሎች ተሽከርካሪዎች እስኪመጡ መጠበቅ አለበት።",
             "is_correct": false,
-            "audio_filename": "answer_403_q2_A.mp3"
-          },
-          {
-            "id": "B",
-            "text_amharic": "ወዲያውኑ ማቆም እና ወደፊት ላለመሄድ ጥንቃቄ ማድረግ አለበት።",
-            "is_correct": true,
-            "audio_filename": "answer_403_q2_B.mp3"
+            "audio_filename": "answer_403_q2_D.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "ከተቻለ ወደ ቀኝ ወይም ወደ ግራ መታጠፍ አለበት።",
+            "text_amharic": "በቀስታ በመሄድ መንገዱ የተዘጋበትን ምክንያት ማጣራት አለበት።",
             "is_correct": false,
             "audio_filename": "answer_403_q2_C.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "ሌሎች ተሽከርካሪዎች ከሌሉ ብቻ መቀጠል ይችላል።",
+            "id": "B",
+            "text_amharic": "ወደፊት መሄድ ስለማይፈቀድ ወዲያውኑ ማቆም ወይም አቅጣጫ መቀየር አለበት።",
+            "is_correct": true,
+            "audio_filename": "answer_403_q2_B.mp3"
+          },
+          {
+            "id": "A",
+            "text_amharic": "ፍጥነቱን ጨምሮ በፍጥነት ማለፍ አለበት።",
             "is_correct": false,
-            "audio_filename": "answer_403_q2_D.mp3"
+            "audio_filename": "answer_403_q2_A.mp3"
           }
         ]
       },
       {
         "id": "403_q3",
-        "question_amharic": "ምልክት 403ን ችላ ማለት ሊያስከትል የሚችለው ምንድን ነው?",
+        "question_amharic": "ይህ ዝግ መንገድ ምልክት (403) ከሌላ አቅጣጫ የሚያሳይ ምልክት ጋር አብሮ ከተቀመጠ፣ አሽከርካሪው ምን ማድረግ አለበት?",
         "question_audio": "403_q3_question.mp3",
-        "explanation_correct_amharic": "ትክክል! ምልክት 403ን ችላ ማለት ከባድ አደጋ፣ የትራፊክ ቅጣት ወይም የህግ ተጠያቂነት ሊያስከትል ይችላል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ምልክት 403ን ችላ ማለት ከባድ አደጋ፣ የትራፊክ ቅጣት ወይም የህግ ተጠያቂነት ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። ሌላ አቅጣጫ የሚያሳይ ምልክት ካለ፣ አሽከርካሪው በህግ በተጠቀሰው አቅጣጫ ብቻ እንዲሄድ ይጠበቅበታል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የአቅጣጫ ምልክትን አለመከተል የትራፊክ ፍሰትን ሊያስተጓጉል እና የትራፊክ ደንብ ጥሰት ቅጣት ሊያስከትል ይችላል።",
         "explanation_correct_audio": "403_q3_correct.mp3",
         "explanation_wrong_audio": "403_q3_wrong.mp3",
         "answers": [
           {
-            "id": "A",
-            "text_amharic": "ፖሊስ ከሌለ ምንም ችግር የለውም።",
-            "is_correct": false,
-            "audio_filename": "answer_403_q3_A.mp3"
-          },
-          {
             "id": "B",
-            "text_amharic": "ትንሽ መዘግየት ብቻ ያስከትላል።",
-            "is_correct": false,
+            "text_amharic": "በአቅጣጫ ምልክቱ ላይ በተጠቀሰው አቅጣጫ ብቻ መሄድ አለበት።",
+            "is_correct": true,
             "audio_filename": "answer_403_q3_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "ከባድ አደጋ፣ የትራፊክ ቅጣት ወይም የህግ ተጠያቂነት ሊያስከትል ይችላል።",
-            "is_correct": true,
+            "text_amharic": "የአቅጣጫ ምልክቱ ለትላልቅ ተሽከርካሪዎች ብቻ ስለሆነ ለራሱ አይመለከተውም።",
+            "is_correct": false,
             "audio_filename": "answer_403_q3_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "ከሌሎች አሽከርካሪዎች ማስጠንቀቂያ ብቻ ያስከትላል።",
+            "text_amharic": "መንገዱ ሙሉ በሙሉ ዝግ ስለሆነ ወደየትኛውም አቅጣጫ መሄድ አይችልም።",
             "is_correct": false,
             "audio_filename": "answer_403_q3_D.mp3"
+          },
+          {
+            "id": "A",
+            "text_amharic": "የአቅጣጫ ምልክቱን ችላ ብሎ ወደፈለገበት መሄድ ይችላል።",
+            "is_correct": false,
+            "audio_filename": "answer_403_q3_A.mp3"
           }
         ]
       }

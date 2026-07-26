@@ -39,6 +39,20 @@ const SIGN_NUMBER_ARG = process.argv.find(a => a.startsWith('--sign-number=') ||
 const SIGN_NUMBER = SIGN_NUMBER_ARG
   ? parseInt(SIGN_NUMBER_ARG.includes('=') ? SIGN_NUMBER_ARG.split('=')[1] : process.argv[process.argv.indexOf('--sign-number') + 1], 10)
   : null;
+
+// Verified facts (confirmed from an authoritative source) that ground Gemini's
+// reading of specific signs — supplements the image, never replaces "look at
+// the image" as the primary identification step. Edit this map per sign
+// instead of passing long strings on the command line (keeps terminal
+// commands short — see feedback_content_review_before_audio.md).
+const SIGN_NOTES = {
+  403: `Sign 403 (מחסום, shown with diagonal red-white stripes) itself means: the road ahead is closed/blocked. Separately, there is sometimes an ADDITIONAL directional sign posted alongside sign 403 pointing a mandatory detour direction. Per Wikipedia's Israeli road signs article, verbatim: 'מחסום: הדרך חסומה. הוצב תמרור המורה על כוון, מותר להתקדם רק בכוון המצוין בתמרור' — meaning: sign 403 alone means the road is closed; IF an additional direction sign is also posted with it, the driver is legally required to proceed only in that indicated direction. Do not claim the diagonal stripes on sign 403 itself are the direction indicator — the direction comes from a separate accompanying sign when present.`,
+  404: `Sign 404 (מחסום) is specifically a railway level-crossing barrier (מחסום לפני מפגש מסילת ברזל) — NOT a generic road closure like sign 403. Per verified sources: the barrier can be lowered (horizontal), rising, or raised; the driver must stop and not proceed for as long as the barrier is in the lowered/horizontal or moving (rising/lowering) position. This is about a railway crossing gate, not a general road blockage — the explanation and questions must mention the railway/train crossing context explicitly.`,
+};
+const EXTRA_CONTEXT_ARG = process.argv.find(a => a.startsWith('--extra-context='));
+const EXTRA_CONTEXT = EXTRA_CONTEXT_ARG
+  ? EXTRA_CONTEXT_ARG.split('=').slice(1).join('=')
+  : (SIGN_NOTES[SIGN_NUMBER] ?? null);
 const API_KEY = process.env.GEMINI_API_KEY;
 const MODEL   = 'gemini-2.5-flash';
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${API_KEY}`;
@@ -89,9 +103,12 @@ function buildPrompt(sign) {
   const isNumeric = signNum && /^\d+$/.test(signNum);
 
   if (isNumeric) {
+    const factLine = EXTRA_CONTEXT
+      ? `\n\nMANDATORY FACT — verified from an authoritative source about this specific sign. This is not background color: it is REQUIRED that explanation_amharic explicitly covers this fact, and that AT LEAST ONE of the 3 questions specifically tests understanding of it. Do not contradict it, do not omit it, do not water it down to a generic statement: ${EXTRA_CONTEXT}`
+      : '';
     return `This is Israeli traffic sign number ${signNum} (from the Israeli Highway Code).
 
-Look at the image and use your knowledge of Israeli traffic laws (תקנות התעבורה) to write complete educational Amharic content for Ethiopian immigrants learning to drive in Israel.
+Look at the image and use your knowledge of Israeli traffic laws (תקנות התעבורה) to write complete educational Amharic content for Ethiopian immigrants learning to drive in Israel.${factLine}
 
 Return JSON with this exact structure:
 {
@@ -241,6 +258,34 @@ function formatDiff(field, oldVal, newVal) {
   return `    ${field}:\n      − ${oldVal}\n      + ${newVal}\n`;
 }
 
+// Same readable format as scripts/printSignContent.mjs and temp_behavioral/geminiTranslate.mjs
+// output — [NAME]/[EXPLANATION]/[QUESTIONS], ge'ez answer letters, (✓) mark.
+// Printed automatically for single-sign runs so the user reviews content in
+// the SAME command that generated it — no separate print step needed.
+const GEEZ_LETTERS = ['ሀ', 'ለ', 'ሐ', 'መ'];
+function printReadableSign(sign, result) {
+  console.log(`\n=== תמרור ${sign.name_hebrew} (${sign.id}) ===\n`);
+  console.log('[NAME]');
+  console.log(result.name_amharic || sign.name_amharic || '(ריק)');
+  console.log('');
+  console.log('[EXPLANATION]');
+  console.log(result.explanation_amharic || sign.explanation_amharic || '(ריק)');
+  const questions = result.questions || sign.questions;
+  if (questions?.length) {
+    console.log('');
+    console.log('[QUESTIONS]');
+    questions.forEach((q, i) => {
+      console.log('');
+      console.log(`${i + 1}. ${q.question_amharic || '(ריק)'}`);
+      (q.answers || []).forEach((a, ai) => {
+        const mark = a.is_correct ? ' (✓)' : '';
+        console.log(`${GEEZ_LETTERS[ai] || ai + 1}. ${a.text_amharic}${mark}`);
+      });
+    });
+  }
+  console.log('');
+}
+
 // ─── Main ─────────────────────────────────────────────────────────────────────
 
 async function main() {
@@ -363,6 +408,10 @@ async function main() {
         }
       }
     }
+
+    // Single-sign run — print the full readable content right here, in this
+    // same command, so the user can review and approve without a second step.
+    if (signsToProcess.length === 1) printReadableSign(sign, result);
 
     // Incremental save after every sign (live mode only)
     if (!DRY_RUN) {

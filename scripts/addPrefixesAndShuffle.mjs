@@ -41,22 +41,45 @@ function shuffleToPosition(answers, targetPos) {
   return arr;
 }
 
-// Even distribution: each of 4 positions gets equal share
-function getTargetPos(signIdx, qIdx) { return (signIdx * 3 + qIdx) % 4; }
+// Genuinely unpredictable per-sign position assignment — NOT a fixed formula
+// tied to sign/question index (that produced a deterministic 1,2,3... pattern
+// when only one sign is processed, see feedback_shuffle_must_be_random.md).
+// Builds a shuffled [0,1,2,3] per sign and assigns one slot per question,
+// cycling the shuffle if a sign has more than 4 questions.
+const _signShuffles = new Map();
+function getTargetPos(signId, qIdx) {
+  if (!_signShuffles.has(signId) || qIdx % 4 === 0) {
+    const positions = [0, 1, 2, 3];
+    for (let i = positions.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [positions[i], positions[j]] = [positions[j], positions[i]];
+    }
+    _signShuffles.set(signId, positions);
+  }
+  return _signShuffles.get(signId)[qIdx % 4];
+}
 
 const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
 
-// Process warning only for signs 125+126 fix
-const TOPICS_TO_PROCESS = ['traffic_lights'];
+// Edit ONE of these before running — never both non-empty at once.
+// SIGN_IDS_TO_PROCESS: specific sign(s) only (single-sign content fixes).
+// TOPICS_TO_PROCESS: whole topic (new-topic creation workflow only).
+const SIGN_IDS_TO_PROCESS = ['PROHIBITION_403'];
+const TOPICS_TO_PROCESS   = [];
+
+const matchesTarget = (sign) =>
+  SIGN_IDS_TO_PROCESS.length > 0
+    ? SIGN_IDS_TO_PROCESS.includes(sign.id)
+    : TOPICS_TO_PROCESS.includes(sign.topic_id);
 
 let signIdx = 0;
 const updated = data.map(sign => {
-  if (!TOPICS_TO_PROCESS.includes(sign.topic_id)) return sign;
+  if (!matchesTarget(sign)) return sign;
   const si = signIdx++;
   return {
     ...sign,
     questions: sign.questions.map((q, qi) => {
-      const prefixIdx = (si * 3 + qi) % CORRECT_PREFIXES.length;
+      const prefixIdx = Math.floor(Math.random() * CORRECT_PREFIXES.length);
       const prefix    = CORRECT_PREFIXES[prefixIdx];
 
       // Smart: avoid "ይህ ምልክት ይህ ምልክት" duplication
@@ -73,7 +96,7 @@ const updated = data.map(sign => {
         ...q,
         explanation_correct_amharic: newCorrect,
         explanation_wrong_amharic:   newWrong,
-        answers: shuffleToPosition(q.answers, getTargetPos(si, qi)),
+        answers: shuffleToPosition(q.answers, getTargetPos(sign.id, qi)),
       };
     }),
   };
@@ -83,7 +106,7 @@ fs.writeFileSync(filePath, JSON.stringify(updated, null, 2), 'utf8');
 
 // Verify
 const verify  = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-const rowSigns = verify.filter(s => TOPICS_TO_PROCESS.includes(s.topic_id));
+const rowSigns = verify.filter(matchesTarget);
 const dist = {card1:0,card2:0,card3:0,card4:0};
 rowSigns.forEach(s => s.questions.forEach(q => {
   dist[`card${q.answers.findIndex(a=>a.is_correct)+1}`]++;

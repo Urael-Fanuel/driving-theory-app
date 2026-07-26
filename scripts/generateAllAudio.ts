@@ -107,8 +107,14 @@ const SYSTEM_AUDIO: Record<string, string> = {
  */
 function callTTS(text: string): Promise<Buffer> {
   return new Promise((resolve, reject) => {
+    // Google Cloud TTS + MP3 encoding can clip the very first syllable of
+    // plain-text input (documented Google TTS behavior). A short leading
+    // pause via SSML gives the encoder a silent lead-in so real speech is
+    // never the first frame — fixes words like "ትክክል!" losing their last
+    // letter when played from position 0.
+    const escaped = text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
     const bodyObj = {
-      input: { text },
+      input: { ssml: `<speak><break time="150ms"/>${escaped}</speak>` },
       voice: {
         languageCode: 'am-ET',
         name:         'am-ET-Standard-A',
@@ -212,11 +218,11 @@ async function generateAll(): Promise<void> {
     await generateAudio(text, filename);
   }
 
-  // ── 2. Topic intros ───────────────────────────────────────────────────────
-  console.log(`\n\n📁 Topic audio (${topics.length * 2} files)...`);
+  // ── 2. Topic name audio (topic_intro/description audio is unused in the
+  // app UI today — not generated, see feedback_no_name_audio.md pattern) ────
+  console.log(`\n\n📁 Topic audio (${topics.length} files)...`);
   for (const topic of topics) {
     await generateAudio(topic.name_amharic,        `topic_${topic.id}_name.mp3`);
-    await generateAudio(topic.description_amharic,  topic.audio_intro);
   }
 
   // ── 3. Signs + questions ──────────────────────────────────────────────────
@@ -227,8 +233,7 @@ async function generateAll(): Promise<void> {
   for (const sign of signs) {
     process.stdout.write(`\n  ${sign.id}: `);
 
-    // Sign name + explanation
-    await generateAudio(sign.name_amharic,        sign.audio_name_filename);
+    // Sign explanation only — name audio is redundant (explanation restates it) and was dropped per user decision
     await generateAudio(sign.explanation_amharic,  sign.audio_explanation_filename);
 
     // Questions
