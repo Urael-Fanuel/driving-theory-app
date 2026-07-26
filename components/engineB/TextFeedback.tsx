@@ -37,6 +37,10 @@ interface TextFeedbackProps {
   /** When provided on a wrong answer — shows a "ለምን?" button that fetches a
    *  RAG-grounded explanation of why the chosen answer is wrong. */
   ragQuery?: RagQuery;
+  /** Height (px) of a fixed bottom nav bar on the screen behind this overlay,
+   *  if any — lifts the panel to sit above it instead of being covered by it.
+   *  Default 0 preserves existing behavior on screens without such a bar. */
+  bottomOffset?: number;
   onNext: () => void;
 }
 
@@ -48,6 +52,7 @@ export function TextFeedback({
   explanationAudioUri,
   ttsText,
   ragQuery,
+  bottomOffset = 0,
   onNext,
 }: TextFeedbackProps) {
   const slideAnim = useRef(new Animated.Value(100)).current;
@@ -121,7 +126,7 @@ export function TextFeedback({
 
   const bgColor       = isCorrect ? Colors.correctDark  : Colors.wrongDark;
   const borderColor   = isCorrect ? Colors.correct       : Colors.wrong;
-  const resultTitle   = isCorrect ? 'ትክክል ነው! ✅'      : 'ትክክል አይደለም ❌';
+  const resultTitle   = isCorrect ? '✅' : '❌'; // icon only — explanation text below already has its own praise word
   const titleColor    = isCorrect ? Colors.correct        : Colors.wrong;
 
   return (
@@ -131,6 +136,7 @@ export function TextFeedback({
         {
           backgroundColor: bgColor,
           borderTopColor:  borderColor,
+          bottom:          bottomOffset,
           transform:       [{ translateY: slideAnim }],
           opacity:         fadeAnim,
         },
@@ -219,7 +225,7 @@ const styles = StyleSheet.create({
     bottom:        0,
     left:          0,
     right:         0,
-    maxHeight:     '60%',
+    maxHeight:     '68%', // raised from 60% — gives the audio button near the top more room, was getting clipped
     borderTopWidth: 3,
     borderRadius:  24,
     shadowColor:   '#000',
@@ -235,6 +241,7 @@ const styles = StyleSheet.create({
   },
   resultTitle: {
     ...Typography.h2,
+    fontSize:  44, // icon only now — larger than the old text+icon title
     textAlign: 'center',
   },
   explanationText: {

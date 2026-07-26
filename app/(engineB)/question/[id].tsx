@@ -64,6 +64,7 @@ export default function EngineBQuestionScreen() {
   const [loading,      setLoading]      = useState(() => !api.getSignsFromCache() || !api.getQuestionsFromCache(signId));
   const [selectedId,   setSelectedId]   = useState<string | null>(null);
   const [showFeedback, setShowFeedback] = useState(false);
+  const [bottomNavHeight, setBottomNavHeight] = useState(0);
 
   const currentQuestion = questions[questionIndex] ?? null;
 
@@ -270,12 +271,16 @@ export default function EngineBQuestionScreen() {
             wrongAnswer:   currentQuestion.answers.find(a => a.id === selectedId)?.text_amharic ?? '',
             correctAnswer: currentQuestion.answers.find(a => a.is_correct)?.text_amharic ?? '',
           } : undefined}
+          bottomOffset={bottomNavHeight}
           onNext={handleNextQuestion}
         />
       )}
 
       {/* ── Bottom navigation ── */}
-      <View style={styles.bottomNav}>
+      <View
+        style={styles.bottomNav}
+        onLayout={(e) => setBottomNavHeight(e.nativeEvent.layout.height)}
+      >
 
         {/* Row 1 — Question navigation */}
         <View style={styles.questionNavRow}>
