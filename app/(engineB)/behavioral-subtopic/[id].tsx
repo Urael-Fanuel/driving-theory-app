@@ -125,6 +125,7 @@ export default function BehavioralSubtopicScreenB() {
   const [qIndex,         setQIndex]         = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [showFeedback,   setShowFeedback]   = useState(false);
+  const [bottomNavHeight, setBottomNavHeight] = useState(0);
   const [feedbackText,   setFeedbackText]   = useState('');
   const [ttsSpeaking,    setTtsSpeaking]    = useState(false);
   const ttsSpeakingRef = useRef(false); // sync ref for use inside async handlers
@@ -427,12 +428,16 @@ export default function BehavioralSubtopicScreenB() {
                 wrongAnswer:   currentQ.answers[selectedAnswer]?.text_amharic ?? '',
                 correctAnswer: currentQ.answers.find((a: any) => a.is_correct)?.text_amharic ?? '',
               } : undefined}
+              bottomOffset={bottomNavHeight}
               onNext={handleNext}
             />
           )}
 
           {/* ── Bottom navigation ── */}
-          <View style={styles.bottomNav}>
+          <View
+            style={styles.bottomNav}
+            onLayout={(e) => setBottomNavHeight(e.nativeEvent.layout.height)}
+          >
 
             {/* Row 1 — Question navigation */}
             <View style={styles.questionNavRow}>
