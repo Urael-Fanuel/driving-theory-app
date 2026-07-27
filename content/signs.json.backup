@@ -11471,76 +11471,76 @@
     "image_filename": "404.png",
     "video_filename": null,
     "name_hebrew": "404",
-    "name_amharic": "ይህ ምልክት መንገዱ ዝግ መሆኑን ወይም ወደፊት ማለፍ እንደማይቻል ያመለክታል።",
-    "explanation_amharic": "ይህ ምልክት መንገዱ ለትራፊክ ዝግ መሆኑን ወይም አደገኛ ሁኔታ በመኖሩ ማለፍ እንደማይቻል ያመለክታል። አሽከርካሪው ይህንን ምልክት ሲያይ ወዲያውኑ ማቆም እና ወደፊት ላለመሄድ ጥንቃቄ ማድረግ አለበት። ይህንን ምልክት ችላ ማለት ከባድ አደጋ ሊያስከትል ወይም የትራፊክ ህግን በመጣስ ቅጣት ሊያስወጣ ይችላል።",
+    "name_amharic": "የባቡር መስመር መዝጊያ",
+    "explanation_amharic": "ይህ ምልክት የባቡር መስመር መሻገሪያ ላይ የሚገኝ መዝጊያ (ባሪየር) መኖሩን ያሳያል። አሽከርካሪው ባሪየሩ ዝቅ ብሎ ወይም እየተንቀሳቀሰ ከሆነ ሙሉ በሙሉ መቆም አለበት። ባሪየሩ ሙሉ በሙሉ እስኪከፈት እና ባቡር እንደሌለ እስኪረጋገጥ ድረስ ማለፍ የለበትም፤ ይህንን አለማክበር ለከባድ አደጋ እና ለሞት ሊዳርግ ይችላል።",
     "audio_name_filename": "404_name.mp3",
     "audio_explanation_filename": "404_explanation.mp3",
     "questions": [
       {
         "id": "404_q1",
-        "question_amharic": "ምልክት 404 ምን ያዝዛል?",
+        "question_amharic": "ይህ ምልክት ምን ያሳያል?",
         "question_audio": "404_q1_question.mp3",
-        "explanation_correct_amharic": "ትክክል! ምልክት 404 መንገዱ ለትራፊክ ዝግ መሆኑን ወይም ወደፊት ማለፍ እንደማይቻል ያመለክታል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ምልክት 404 መንገዱ ለትራፊክ ዝግ መሆኑን ወይም ወደፊት ማለፍ እንደማይቻል ያመለክታል።",
+        "explanation_correct_amharic": "ዋውው በጣም ጥሩ። ይህ ምልክት የባቡር መስመር መሻገሪያ ላይ የሚገኝ መዝጊያ መኖሩን በግልጽ ያመለክታል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ መምረጥ አሽከርካሪው የባቡር መስመር መሻገሪያ ላይ ያለውን አደጋ እንዳይረዳ ያደርገዋል፣ ይህም ለከባድ አደጋ ሊያጋልጥ ይችላል።",
         "explanation_correct_audio": "404_q1_correct.mp3",
         "explanation_wrong_audio": "404_q1_wrong.mp3",
         "answers": [
           {
-            "id": "A",
-            "text_amharic": "ለመንገደኞች ማመላለሻ ተሽከርካሪዎች ብቻ መግባት እንደሚፈቀድ።",
-            "is_correct": false,
-            "audio_filename": "answer_404_q1_A.mp3"
-          },
-          {
-            "id": "B",
-            "text_amharic": "ከፊት ለሚመጣ ተሽከርካሪ ቅድሚያ መስጠት እንዳለበት።",
-            "is_correct": false,
-            "audio_filename": "answer_404_q1_B.mp3"
-          },
-          {
             "id": "C",
-            "text_amharic": "ፍጥነት መቀነስ እና በመንገድ ላይ ከሚሰሩ ስራዎች መጠንቀቅ እንዳለበት።",
+            "text_amharic": "የጥገና ሥራ እየተካሄደበት ያለ መንገድ መሆኑን ያሳያል።",
             "is_correct": false,
             "audio_filename": "answer_404_q1_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "መንገዱ ለትራፊክ ዝግ መሆኑን ወይም ወደፊት ማለፍ እንደማይቻል ያመለክታል።",
-            "is_correct": true,
+            "text_amharic": "ወደ ወታደራዊ ክልል መግቢያ መሆኑን ያሳያል።",
+            "is_correct": false,
             "audio_filename": "answer_404_q1_D.mp3"
+          },
+          {
+            "id": "A",
+            "text_amharic": "መንገዱ ለጊዜው ዝግ መሆኑን ያሳያል።",
+            "is_correct": false,
+            "audio_filename": "answer_404_q1_A.mp3"
+          },
+          {
+            "id": "B",
+            "text_amharic": "የባቡር መስመር መሻገሪያ ላይ መዝጊያ መኖሩን ያሳያል።",
+            "is_correct": true,
+            "audio_filename": "answer_404_q1_B.mp3"
           }
         ]
       },
       {
         "id": "404_q2",
-        "question_amharic": "ምልክት 404ን የሚያይ አሽከርካሪ እንዴት መምራት አለበት?",
+        "question_amharic": "የባቡር መስመር መዝጊያው ዝቅ ብሎ ወይም እየተንቀሳቀሰ ሲሆን አሽከርካሪው ምን ማድረግ አለበት?",
         "question_audio": "404_q2_question.mp3",
-        "explanation_correct_amharic": "አዎ! ምልክት 404ን ሲያዩ ወዲያውኑ ማቆም እና ወደፊት ላለመሄድ ጥንቃቄ ማድረግ አለብዎት።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ምልክት 404ን የሚያይ አሽከርካሪ ወዲያውኑ ማቆም እና ወደፊት ላለመሄድ ጥንቃቄ ማድረግ አለበት።",
+        "explanation_correct_amharic": "ዋውው በጣም ጥሩ። ባሪየሩ ዝቅ ብሎ ወይም እየተንቀሳቀሰ ከሆነ ባቡር እየመጣ መሆኑን ስለሚያመለክት ሙሉ በሙሉ መቆም ግዴታ ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ባሪየሩ ዝቅ ብሎ ወይም እየተንቀሳቀሰ እያለ ለማለፍ መሞከር ከባቡር ጋር ለሚፈጠር ገዳይ አደጋ ያጋልጣል።",
         "explanation_correct_audio": "404_q2_correct.mp3",
         "explanation_wrong_audio": "404_q2_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "ወዲያውኑ ማቆም እና ወደፊት ላለመሄድ ጥንቃቄ ማድረግ አለበት።",
-            "is_correct": true,
+            "text_amharic": "ባሪየሩን አልፎ በፍጥነት ማለፍ አለበት።",
+            "is_correct": false,
             "audio_filename": "answer_404_q2_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "በተለየ ጥንቃቄ መንዳት መቀጠል አለበት።",
-            "is_correct": false,
+            "text_amharic": "ባሪየሩ ሙሉ በሙሉ እስኪከፈት ድረስ መቆም እና መጠበቅ አለበት።",
+            "is_correct": true,
             "audio_filename": "answer_404_q2_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "በመንገዱ አቅጣጫ መሰረት ወደ ቀኝ ወይም ወደ ግራ መታጠፍ አለበት።",
+            "text_amharic": "ባሪየሩን ከጎን በኩል በማለፍ ጉዞውን መቀጠል ይችላል።",
             "is_correct": false,
             "audio_filename": "answer_404_q2_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "ቀንዱን በመጠቀም መኖሩን ማሳወቅ አለበት።",
+            "text_amharic": "ባሪየሩን በእጁ ከፍቶ ማለፍ ይችላል።",
             "is_correct": false,
             "audio_filename": "answer_404_q2_D.mp3"
           }
@@ -11548,34 +11548,34 @@
       },
       {
         "id": "404_q3",
-        "question_amharic": "ምልክት 404ን ችላ የማለት ውጤት ምን ሊሆን ይችላል?",
+        "question_amharic": "የባቡር መስመር መዝጊያ ምልክትን ችላ ማለት ምን ዓይነት አደጋ ሊያስከትል ይችላል?",
         "question_audio": "404_q3_question.mp3",
-        "explanation_correct_amharic": "ትክክል! ምልክት 404ን ችላ ማለት ከባድ አደጋ ሊያስከትል ወይም የትራፊክ ህግን በመጣስ ቅጣት ሊያስወጣ ይችላል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ምልክት 404ን ችላ ማለት ከባድ አደጋ ሊያስከትል ወይም የትራፊክ ህግን በመጣስ ቅጣት ሊያስወጣ ይችላል።",
+        "explanation_correct_amharic": "ጎሽሽ። የባቡር መስመር መዝጊያን ችላ ማለት ከባቡር ጋር ለሚፈጠር ገዳይ አደጋ እና ለሞት ሊዳርግ የሚችል ከባድ ጥሰት ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የባቡር መስመር መዝጊያን ችላ ማለት የሚያስከትለውን ከባድ አደጋ አለመረዳት ለሕይወት አስጊ የሆኑ ውሳኔዎችን እንድንወስን ያደርገናል።",
         "explanation_correct_audio": "404_q3_correct.mp3",
         "explanation_wrong_audio": "404_q3_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "በጊዜ ሰሌዳው ላይ ትንሽ መዘግየት።",
+            "text_amharic": "የትራፊክ መጨናነቅ ብቻ ሊያስከትል ይችላል።",
             "is_correct": false,
             "audio_filename": "answer_404_q3_A.mp3"
           },
           {
-            "id": "B",
-            "text_amharic": "ከባድ አደጋ ሊያስከትል ወይም የትራፊክ ህግን በመጣስ ቅጣት ሊያስወጣ ይችላል።",
-            "is_correct": true,
-            "audio_filename": "answer_404_q3_B.mp3"
-          },
-          {
             "id": "C",
-            "text_amharic": "መንገዱን እንደገና የመመለስ አስፈላጊነት።",
+            "text_amharic": "የፍጥነት ቅጣት ብቻ ያስከትላል።",
             "is_correct": false,
             "audio_filename": "answer_404_q3_C.mp3"
           },
           {
+            "id": "B",
+            "text_amharic": "ከባቡር ጋር ለሚፈጠር ከባድ ግጭት እና ለሞት ሊዳርግ ይችላል።",
+            "is_correct": true,
+            "audio_filename": "answer_404_q3_B.mp3"
+          },
+          {
             "id": "D",
-            "text_amharic": "በተዘዋዋሪ መንገድ ወደ መድረሻው መድረስ።",
+            "text_amharic": "የመኪና ጎማ ሊበላሽ ይችላል።",
             "is_correct": false,
             "audio_filename": "answer_404_q3_D.mp3"
           }

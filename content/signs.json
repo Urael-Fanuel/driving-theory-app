@@ -14803,76 +14803,76 @@
     "image_filename": "432.png",
     "video_filename": null,
     "name_hebrew": "432",
-    "name_amharic": "ይህ ምልክት ተሽከርካሪ ማቆም በፍጹም የተከለከለ መሆኑን ያመለክታል።",
-    "explanation_amharic": "ይህ ምልክት ተሽከርካሪዎን በዚህ ቦታ ማቆም በፍጹም የተከለከለ መሆኑን ያመለክታል። ይህ ማለት ለተሳፋሪ ማውረድ ወይም መጫን፣ ዕቃ ማውረድ ወይም መጫን እንኳን ማቆም አይፈቀድም፤ አሽከርካሪው የትራፊክ መጨናነቅ ካልሆነ ወይም የትራፊክ ህግ ካላስገደደው በስተቀር ማቆም የለበትም። ይህንን ምልክት ችላ ማለት የትራፊክ ፍሰትን ሊያስተጓጉል፣ አደጋ ሊያስከትል እና ከፍተኛ የገንዘብ ቅጣት ወይም ተሽከርካሪው እንዲነሳ ሊያደርግ ይችላል።",
+    "name_amharic": "መኪና ማቆም የተከለከለ ነው",
+    "explanation_amharic": "ይህ ምልክት በመንገዱ ዳር መኪና ማቆም ክልክል መሆኑን ያሳያል። ይሁን እንጂ ተሳፋሪዎችን ለማውረድ ወይም ለመጫን እንዲሁም ዕቃዎችን ለማውረድ ወይም ለመጫን ለአጭር ጊዜ ብቻ ማቆም ይፈቀዳል። ይህ ክልከላ ከምልክቱ ጀምሮ እስከሚቀጥለው መስቀለኛ መንገድ ወይም ክልከላውን የሚሽር ምልክት ድረስ ይሠራል። ይህን ምልክት ችላ ማለት ቅጣት ያስከትላል እንዲሁም ተሽከርካሪው ሊነሳ ይችላል።",
     "audio_name_filename": "432_name.mp3",
     "audio_explanation_filename": "432_explanation.mp3",
     "questions": [
       {
         "id": "432_q1",
-        "question_amharic": "በምልክቱ መሰረት እንዴት እርምጃ ይወስዳሉ?",
+        "question_amharic": "ይህ ምልክት (ቁጥር 432) ምን ማድረግ እንደሚፈቀድ ያሳያል?",
         "question_audio": "432_q1_question.mp3",
-        "explanation_correct_amharic": "በጣም አሪፍ። ይህ ምልክት ተሽከርካሪ ማቆም በፍጹም የተከለከለ መሆኑን ያመለክታል። ይህ ማለት ለተሳፋሪ ማውረድ ወይም መጫን፣ ዕቃ ማውረድ ወይም መጫን እንኳን ማቆም አይፈቀድም።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህ ምልክት ተሽከርካሪ ማቆም በፍጹም የተከለከለ መሆኑን ያመለክታል። ተሳፋሪዎችን ለማውረድ ወይም ዕቃ ለማውረድ/ለመጫን እንኳን ማቆም አይፈቀድም።",
+        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። ይህ ምልክት መኪና ማቆም ክልክል ቢሆንም፣ ተሳፋሪዎችን ወይም ዕቃዎችን ለማውረድና ለመጫን ለአጭር ጊዜ ማቆም ይፈቀዳል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተከለከለ ቦታ ላይ መኪና ማቆም የትራፊክ ደንቦችን መጣስ ሲሆን ቅጣትና ተሽከርካሪ ማንሳት ያስከትላል።",
         "explanation_correct_audio": "432_q1_correct.mp3",
         "explanation_wrong_audio": "432_q1_wrong.mp3",
         "answers": [
           {
-            "id": "A",
-            "text_amharic": "ለአጭር ጊዜ፣ እስከ 3 ደቂቃ ድረስ ማቆም ይፈቀዳል።",
+            "id": "D",
+            "text_amharic": "ጓደኛን ለመጠበቅ ለጥቂት ደቂቃዎች ማቆም ይፈቀዳል።",
             "is_correct": false,
-            "audio_filename": "answer_432_q1_A.mp3"
-          },
-          {
-            "id": "B",
-            "text_amharic": "ተሳፋሪዎችን ለማውረድ ብቻ ማቆም ይፈቀዳል።",
-            "is_correct": false,
-            "audio_filename": "answer_432_q1_B.mp3"
+            "audio_filename": "answer_432_q1_D.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "ዕቃ ለማውረድ እና ለመጫን ብቻ ማቆም ይፈቀዳል።",
+            "text_amharic": "ማንኛውንም ዓይነት ማቆም ፈጽሞ የተከለከለ ነው።",
             "is_correct": false,
             "audio_filename": "answer_432_q1_C.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "ተሳፋሪዎችን ለማውረድ ወይም ዕቃ ለማውረድ/ለመጫን እንኳን ተሽከርካሪውን በምንም መንገድ ማቆም የተከለከለ ነው።",
+            "id": "B",
+            "text_amharic": "ተሳፋሪ ለማውረድ ወይም ለመጫን ለአጭር ጊዜ ማቆም ይፈቀዳል።",
             "is_correct": true,
-            "audio_filename": "answer_432_q1_D.mp3"
+            "audio_filename": "answer_432_q1_B.mp3"
+          },
+          {
+            "id": "A",
+            "text_amharic": "ተሽከርካሪውን ለረጅም ጊዜ አቁሞ መሄድ ይፈቀዳል።",
+            "is_correct": false,
+            "audio_filename": "answer_432_q1_A.mp3"
           }
         ]
       },
       {
         "id": "432_q2",
-        "question_amharic": "ምልክቱ ምን ያዝዛል?",
+        "question_amharic": "ይህ የመኪና ማቆም ክልከላ ምልክት እስከ የት ድረስ ተግባራዊ ይሆናል?",
         "question_audio": "432_q2_question.mp3",
-        "explanation_correct_amharic": "ትክክል። ይህ ምልክት የተሽከርካሪውን ፍጹም ማቆም ይከለክላል፣ አሽከርካሪው የትራፊክ መጨናነቅ ካልሆነ ወይም የትራፊክ ህግ ካላስገደደው በስተቀር።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ምልክቱ የተሽከርካሪውን ፍጹም ማቆም ይከለክላል፣ የትራፊክ መጨናነቅ ወይም የትራፊክ ህግ ካላስገደደው በስተቀር።",
+        "explanation_correct_amharic": "ጎቨዝ። የመኪና ማቆም ክልከላ ምልክቶች ከምልክቱ ጀምሮ እስከሚቀጥለው መስቀለኛ መንገድ ወይም ክልከላውን የሚሽር ምልክት ድረስ ተግባራዊ ይሆናሉ።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የክልከላውን ትክክለኛ ወሰን አለማወቅ አሽከርካሪው ባለማወቅ ደንብ እንዲጥስና ቅጣት እንዲጣልበት ሊያደርግ ይችላል።",
         "explanation_correct_audio": "432_q2_correct.mp3",
         "explanation_wrong_audio": "432_q2_wrong.mp3",
         "answers": [
           {
-            "id": "A",
-            "text_amharic": "ምልክቱ የተሽከርካሪውን ፍጹም ማቆም ይከለክላል፣ የትራፊክ መጨናነቅ ወይም የትራፊክ ህግ ካላስገደደው በስተቀር።",
-            "is_correct": true,
-            "audio_filename": "answer_432_q2_A.mp3"
-          },
-          {
             "id": "B",
-            "text_amharic": "ምልክቱ ማቆምን ብቻ ይከለክላል፣ ነገር ግን ማቆም ይፈቀዳል።",
-            "is_correct": false,
+            "text_amharic": "ከምልክቱ ጀምሮ እስከሚቀጥለው መስቀለኛ መንገድ ወይም ክልከላውን የሚሽር ምልክት ድረስ ነው።",
+            "is_correct": true,
             "audio_filename": "answer_432_q2_B.mp3"
           },
           {
+            "id": "A",
+            "text_amharic": "ከምልክቱ ጀምሮ ለጥቂት ሜትሮች ብቻ ነው።",
+            "is_correct": false,
+            "audio_filename": "answer_432_q2_A.mp3"
+          },
+          {
             "id": "C",
-            "text_amharic": "ምልክቱ ተሳፋሪዎችን ለማውረድ ለአጭር ጊዜ ማቆምን ይፈቅዳል።",
+            "text_amharic": "በዚያ መንገድ ላይ በሙሉ መኪና ማቆም ክልክል ነው።",
             "is_correct": false,
             "audio_filename": "answer_432_q2_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "ምልክቱ ከመቆሚያ መስመር በፊት ፍጹም ማቆምን ያስገድዳል።",
+            "text_amharic": "እስከሚቀጥለው የአውቶቡስ ማቆሚያ ድረስ ብቻ ነው።",
             "is_correct": false,
             "audio_filename": "answer_432_q2_D.mp3"
           }
@@ -14880,36 +14880,36 @@
       },
       {
         "id": "432_q3",
-        "question_amharic": "ይህ ምልክት በተለጠፈበት ቦታ ማቆም የሚፈቀደው በየትኞቹ ሁኔታዎች ነው?",
+        "question_amharic": "በዚህ ምልክት (ቁጥር 432) መሠረት ፈጽሞ የተከለከለው ድርጊት የትኛው ነው?",
         "question_audio": "432_q3_question.mp3",
-        "explanation_correct_amharic": "እሰይ የኔ ጎቨዝ። ምልክቱ ማቆምን የሚከለክል ቢሆንም፣ የትራፊክ መጨናነቅ ሲኖር ወይም የትራፊክ ህግ ሲያስገድድ ማቆም ይፈቀዳል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህ ምልክት በተለጠፈበት ቦታ ማቆም የሚፈቀደው የትራፊክ መጨናነቅ ሲኖር ወይም የትራፊክ ህግ ሲያስገድድ ብቻ ነው።",
+        "explanation_correct_amharic": "ጎሽሽ። ይህ ምልክት ተሽከርካሪውን ትቶ ለረጅም ጊዜ መሄድን ወይም ያለአሽከርካሪ ማቆምን በግልጽ ይከለክላል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የመኪና ማቆም ክልከላን ችላ በማለት ተሽከርካሪውን ትቶ መሄድ ቅጣትና ተሽከርካሪ ማንሳት የሚያስከትል ከባድ ጥሰት ነው።",
         "explanation_correct_audio": "432_q3_correct.mp3",
         "explanation_wrong_audio": "432_q3_wrong.mp3",
         "answers": [
           {
-            "id": "A",
-            "text_amharic": "በተሽከርካሪው ውስጥ ከቆዩ ሁልጊዜ ማቆም ይፈቀዳል።",
+            "id": "D",
+            "text_amharic": "የትራፊክ መጨናነቅ ምክንያት መኪናውን ማቆም።",
             "is_correct": false,
+            "audio_filename": "answer_432_q3_D.mp3"
+          },
+          {
+            "id": "A",
+            "text_amharic": "ተሽከርካሪውን ትቶ ለረጅም ጊዜ መሄድ።",
+            "is_correct": true,
             "audio_filename": "answer_432_q3_A.mp3"
           },
           {
-            "id": "B",
-            "text_amharic": "የትራፊክ መጨናነቅ ሲኖር ወይም የትራፊክ ህግ ሲያስገድድ ብቻ።",
-            "is_correct": true,
-            "audio_filename": "answer_432_q3_B.mp3"
-          },
-          {
             "id": "C",
-            "text_amharic": "ከባድ ዕቃዎችን ለማውረድ እና ለመጫን ማቆም ይፈቀዳል።",
+            "text_amharic": "ዕቃዎችን ለማውረድ ወይም ለመጫን ለአጭር ጊዜ ማቆም።",
             "is_correct": false,
             "audio_filename": "answer_432_q3_C.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "ማቆሙ የትራፊክ ፍሰትን የማያስተጓጉል ከሆነ ማቆም ይፈቀዳል።",
+            "id": "B",
+            "text_amharic": "ተሳፋሪዎችን ለማውረድ ወይም ለመጫን ለአጭር ጊዜ ማቆም።",
             "is_correct": false,
-            "audio_filename": "answer_432_q3_D.mp3"
+            "audio_filename": "answer_432_q3_B.mp3"
           }
         ]
       }
