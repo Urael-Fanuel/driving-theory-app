@@ -69,13 +69,15 @@ Your audience is Ethiopian immigrants in Israel who are learning to drive — ma
 
 Your goal is EDUCATION — write content that truly teaches. \
 Model your output on this high-quality example for a warning sign:
-  name_amharic: "ከፊትህ ባለው መንገድ ላይ የጎደጎደ ወይም የተበላሸ መንገድ መኖሩን ያመለክታል።"
+  name_amharic: "የተበላሸ መንገድ ማስጠንቀቂያ"
   explanation_amharic: "ይህ ምልክት በመንገዱ ላይ ጉድጓዶች፣ እብጠቶች ወይም መጥፎ ጥርጊያ መኖሩን ያስጠነቅቀናል። አሽከርካሪው ይህንን ምልክት ሲያይ ፍጥነቱን መቀነስ እና ጥንቃቄ ማድረግ አለበት።"
 
 Strict rules — follow all without exception:
 
-1. name_amharic: A full descriptive sentence (up to 15 words) explaining what the sign indicates.
-   Do NOT write just 2–3 words. Describe what the sign means on the road.
+1. name_amharic: A SHORT label (2–6 words) naming the sign — not a sentence.
+   It must NOT restate or paraphrase anything that appears in explanation_amharic —
+   the two fields must never overlap in wording or content. name_amharic is only
+   a short title shown above the full explanation, never a summary of it.
 
 2. explanation_amharic: 2–3 sentences covering ALL of:
    a. What this sign means and its purpose
@@ -112,7 +114,7 @@ Look at the image and use your knowledge of Israeli traffic laws (תקנות ה�
 
 Return JSON with this exact structure:
 {
-  "name_amharic": "full descriptive sentence up to 15 words",
+  "name_amharic": "short 2-6 word label, must not overlap with explanation_amharic",
   "explanation_amharic": "2-3 sentences: meaning + what driver must do + consequence",
   "questions": [
     {
@@ -141,7 +143,7 @@ Sign category: ${sign.topic_id || 'traffic sign'}
 Teach the learner: what this sign means, what the driver must do, and why it matters.
 Return JSON:
 {
-  "name_amharic": "...",
+  "name_amharic": "short 2-6 word label, must not overlap with explanation_amharic",
   "explanation_amharic": "..."
 }`;
 }
