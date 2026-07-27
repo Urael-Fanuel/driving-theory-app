@@ -28012,113 +28012,113 @@
     "image_filename": "817.png",
     "video_filename": null,
     "name_hebrew": "817",
-    "name_amharic": "የመንገድ ዳር ምልክት",
-    "explanation_amharic": "ይህ ምልክት የመንገዱን ዳርቻ የሚያሳይ ሲሆን በተለይ በመታጠፊያዎች፣ በመንገድ መጋጠሚያዎች ወይም አደገኛ ቦታዎች ላይ ይገኛል። አሽከርካሪዎች የመንገዱን አቅጣጫ ለመረዳት እና ከመንገድ ዳር ላለመውጣት ይህንን ምልክት ማክበር አለባቸው። ምልክቱን ችላ ማለት ከመንገድ ወጥቶ አደጋ ውስጥ መግባት ወይም ሌላ ተሽከርካሪ መምታት ሊያስከትል ይችላል።",
+    "name_amharic": "ሰማያዊና ነጭ የመኪና ማቆሚያ",
+    "explanation_amharic": "ይህ የመንገድ ምልክት ሰማያዊና ነጭ ቀለም የተቀቡ የመንገድ ዳር ድንጋዮችን ያሳያል፤ በዚህ ቦታ መኪና ማቆም እንደሚፈቀድ ያመለክታል። አሽከርካሪዎች በዚህ ምልክት አጠገብ መኪና ማቆም ይችላሉ፤ ነገር ግን የመኪና ማቆሚያ ክፍያ ወይም የጊዜ ገደብ የሚያመለክት ተጨማሪ ምልክት 439 በአቅራቢያው መኖሩን ማረጋገጥ አለባቸው። ምልክት 439 ከሌለ፣ መኪና ማቆም ከክፍያ ነፃ ሲሆን፣ ካለ ደግሞ ደንቦቹን ካልተከተሉ ቅጣት ሊያስከትል ይችላል።",
     "audio_name_filename": "817_name.mp3",
     "audio_explanation_filename": "817_explanation.mp3",
     "questions": [
       {
         "id": "817_q1",
-        "question_amharic": "ይህ የመንገድ ምልክት ምን ያሳያል?",
+        "question_amharic": "ሰማያዊና ነጭ ቀለም የተቀቡ የመንገድ ዳር ድንጋዮች (ምልክት 817) ምን ማለት ነው?",
         "question_audio": "817_q1_question.mp3",
-        "explanation_correct_amharic": "ይህ ምልክት የመንገዱን ዳርቻ በመጠቆም አሽከርካሪዎች የመንገዱን አቅጣጫ እንዲረዱ ይረዳል።",
-        "explanation_wrong_amharic": "የመንገዱን ዳርቻ የሚያመለክት ምልክት ስለሆነ፣ ሌሎች ትርጉሞችን መምረጥ አሽከርካሪው የመንገዱን ትክክለኛ አቅጣጫ እንዳይረዳ ያደርጋል።",
+        "explanation_correct_amharic": "በጣም ጥሩ። ሰማያዊና ነጭ ቀለም የተቀቡ የመንገድ ዳር ድንጋዮች መኪና ማቆም እንደሚፈቀድ ያመለክታሉ፣ ነገር ግን የክፍያ ወይም የጊዜ ገደብ ሁኔታዎችን ለማወቅ ሌሎች ምልክቶችን መመልከት ያስፈልጋል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህንን ምልክት ችላ ብሎ መኪና ማቆም የተከለከለ ነው ብሎ ማሰብ ትክክለኛ የመኪና ማቆሚያ ቦታን ማጣት ያስከትላል።",
         "explanation_correct_audio": "817_q1_correct.mp3",
         "explanation_wrong_audio": "817_q1_wrong.mp3",
         "answers": [
           {
+            "id": "D",
+            "text_amharic": "ይህ ምልክት ለአውቶቡሶች ብቻ የተፈቀደ ማቆሚያ ነው።",
+            "is_correct": false,
+            "audio_filename": "answer_817_q1_D.mp3"
+          },
+          {
+            "id": "C",
+            "text_amharic": "ይህ ምልክት አደገኛ የመንገድ ዳርቻን ያመለክታል።",
+            "is_correct": false,
+            "audio_filename": "answer_817_q1_C.mp3"
+          },
+          {
             "id": "A",
-            "text_amharic": "መኪና ማቆም የሚፈቀድበት ቦታ መሆኑን ያመለክታል።",
+            "text_amharic": "በዚህ ቦታ መኪና ማቆም በፍጹም የተከለከለ ነው።",
             "is_correct": false,
             "audio_filename": "answer_817_q1_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "የመንገዱን ዳርቻ ወይም ጠርዝ የሚያሳይ ምልክት ነው።",
+            "text_amharic": "በዚህ ቦታ መኪና ማቆም ይፈቀዳል፣ ነገር ግን ተጨማሪ ምልክቶችን ማየት ያስፈልጋል።",
             "is_correct": true,
             "audio_filename": "answer_817_q1_B.mp3"
-          },
-          {
-            "id": "C",
-            "text_amharic": "የእግረኛ ማቋረጫ ቦታ መሆኑን ያሳያል።",
-            "is_correct": false,
-            "audio_filename": "answer_817_q1_C.mp3"
-          },
-          {
-            "id": "D",
-            "text_amharic": "ከፍተኛ ፍጥነት ገደብ ያለበት ቦታ መሆኑን ያመለክታል።",
-            "is_correct": false,
-            "audio_filename": "answer_817_q1_D.mp3"
           }
         ]
       },
       {
         "id": "817_q2",
-        "question_amharic": "ይህንን ምልክት ሲያዩ አሽከርካሪ ምን ማድረግ አለበት?",
+        "question_amharic": "ሰማያዊና ነጭ የመንገድ ዳር ድንጋዮች (ምልክት 817) ባሉበት ቦታ የመኪና ማቆሚያ ክፍያ ወይም የጊዜ ገደብ የሚወስነው የትኛው ምልክት ነው?",
         "question_audio": "817_q2_question.mp3",
-        "explanation_correct_amharic": "አሽከርካሪው የመንገዱን ዳርቻ በማክበር ከመንገድ ወጥቶ አደጋ ውስጥ እንዳይገባ ጥንቃቄ ማድረግ አለበት።",
-        "explanation_wrong_amharic": "ምልክቱን ችላ ማለት ወይም ተገቢ ያልሆነ እርምጃ መውሰድ ከመንገድ ወጥቶ አደጋ ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት ምልክት 439 ከሰማያዊና ነጭ የመንገድ ዳር ድንጋዮች ጋር ሲሆን የመኪና ማቆሚያ ክፍያ፣ የጊዜ ገደብ እና ሌሎች ገደቦችን ይወስናል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የምልክት 439ን ሚና አለማወቅ አሽከርካሪው ክፍያ ሳይፈጽም ወይም የጊዜ ገደቡን አልፎ በማቆም ቅጣት እንዲጣልበት ሊያደርግ ይችላል።",
         "explanation_correct_audio": "817_q2_correct.mp3",
         "explanation_wrong_audio": "817_q2_wrong.mp3",
         "answers": [
           {
-            "id": "A",
-            "text_amharic": "ፍጥነቱን ጨምሮ በፍጥነት ማሽከርከር አለበት።",
-            "is_correct": false,
-            "audio_filename": "answer_817_q2_A.mp3"
-          },
-          {
-            "id": "B",
-            "text_amharic": "ከመንገድ ዳር ላለመውጣት ጥንቃቄ ማድረግ እና የመንገዱን አቅጣጫ መከተል አለበት።",
-            "is_correct": true,
-            "audio_filename": "answer_817_q2_B.mp3"
-          },
-          {
             "id": "C",
-            "text_amharic": "ምልክቱን ችላ ብሎ እንደተለመደው ማሽከርከር አለበት።",
+            "text_amharic": "የመንገድ ዳር ድንጋዮቹ ቀለም ብቻውን ሁሉንም ነገር ይወስናል።",
             "is_correct": false,
             "audio_filename": "answer_817_q2_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "ወዲያውኑ መስመር መቀየር አለበት።",
+            "text_amharic": "ምንም ተጨማሪ ምልክት አያስፈልግም፣ ሁልጊዜ ነፃ ነው።",
             "is_correct": false,
             "audio_filename": "answer_817_q2_D.mp3"
+          },
+          {
+            "id": "B",
+            "text_amharic": "ምልክት 439 የመኪና ማቆሚያ ክፍያ እና የጊዜ ገደብ ሁኔታዎችን ይገልጻል።",
+            "is_correct": true,
+            "audio_filename": "answer_817_q2_B.mp3"
+          },
+          {
+            "id": "A",
+            "text_amharic": "ምልክት 817 ራሱ ሁሉንም ሁኔታዎች ይወስናል።",
+            "is_correct": false,
+            "audio_filename": "answer_817_q2_A.mp3"
           }
         ]
       },
       {
         "id": "817_q3",
-        "question_amharic": "ይህንን የመንገድ ዳር ምልክት ችላ ማለት ምን አደጋ ሊያስከትል ይችላል?",
+        "question_amharic": "ሰማያዊና ነጭ የመንገድ ዳር ድንጋዮች (ምልክት 817) ባሉበት ቦታ፣ በአቅራቢያው ምልክት 439 ከሌለ የመኪና ማቆሚያ ሁኔታ ምን ይሆናል?",
         "question_audio": "817_q3_question.mp3",
-        "explanation_correct_amharic": "ይህ ምልክት የመንገዱን ዳርቻ ስለሚያሳይ፣ ችላ ማለት ከመንገድ ወጥቶ ከባድ አደጋ ሊያስከትል ይችላል።",
-        "explanation_wrong_amharic": "ይህ ምልክት ለደህንነት ወሳኝ ስለሆነ፣ ችላ ማለት ከገንዘብ ቅጣት ወይም ከጎማ ጉዳት በላይ ከባድ አደጋዎችን ያስከትላል።",
+        "explanation_correct_amharic": "እሰይ። አቤት እውቀት! ምልክት 439 ከሌለ፣ ሰማያዊና ነጭ የመንገድ ዳር ድንጋዮች ባሉበት ቦታ መኪና ማቆም ነፃ ሲሆን፣ በአካባቢው ያሉትን አጠቃላይ የመኪና ማቆሚያ ደንቦች መከተል ያስፈልጋል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ምልክት 439 በሌለበት ቦታ በስህተት ክፍያ መፈጸም ወይም የመኪና ማቆሚያ ቦታውን አለመጠቀም አላስፈላጊ ወጪ ወይም ምቹ የመኪና ማቆሚያ ቦታ ማጣት ያስከትላል።",
         "explanation_correct_audio": "817_q3_correct.mp3",
         "explanation_wrong_audio": "817_q3_wrong.mp3",
         "answers": [
           {
-            "id": "A",
-            "text_amharic": "ምንም አይነት አደጋ አያስከትልም፣ ማስጠንቀቂያ ብቻ ነው።",
-            "is_correct": false,
-            "audio_filename": "answer_817_q3_A.mp3"
-          },
-          {
-            "id": "B",
-            "text_amharic": "ከመንገድ ወጥቶ አደጋ ውስጥ መግባት ወይም ሌላ ተሽከርካሪ መምታት ሊያስከትል ይችላል።",
-            "is_correct": true,
-            "audio_filename": "answer_817_q3_B.mp3"
-          },
-          {
             "id": "C",
-            "text_amharic": "ትንሽ የገንዘብ ቅጣት ብቻ ያስከትላል።",
-            "is_correct": false,
+            "text_amharic": "መኪና ማቆም ከክፍያ ነፃ ሲሆን፣ ለአካባቢው አጠቃላይ የመኪና ማቆሚያ ደንቦች ተገዢ ነው።",
+            "is_correct": true,
             "audio_filename": "answer_817_q3_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "የመኪናውን ጎማ ብቻ ሊጎዳ ይችላል።",
+            "text_amharic": "መኪና ማቆም የሚፈቀደው ለ30 ደቂቃዎች ብቻ ነው።",
             "is_correct": false,
             "audio_filename": "answer_817_q3_D.mp3"
+          },
+          {
+            "id": "B",
+            "text_amharic": "መኪና ማቆም የሚፈቀደው ለተወሰኑ የትራንስፖርት አይነቶች ብቻ ነው።",
+            "is_correct": false,
+            "audio_filename": "answer_817_q3_B.mp3"
+          },
+          {
+            "id": "A",
+            "text_amharic": "መኪና ማቆም በፍጹም የተከለከለ ይሆናል።",
+            "is_correct": false,
+            "audio_filename": "answer_817_q3_A.mp3"
           }
         ]
       }
