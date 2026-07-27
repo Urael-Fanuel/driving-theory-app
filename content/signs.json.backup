@@ -28131,76 +28131,76 @@
     "image_filename": "818.png",
     "video_filename": null,
     "name_hebrew": "818",
-    "name_amharic": "ይህ ምልክት መንገድ ወይም የመንገድ ክፍል መዘጋቱን የሚያሳይ የመከላከያ አጥር ነው።",
-    "explanation_amharic": "ይህ ምልክት መንገድ ሙሉ በሙሉ ወይም በከፊል መዘጋቱን የሚያሳይ የመከላከያ አጥር ነው። አሽከርካሪዎች ይህንን ምልክት ሲያዩ ወዲያውኑ ማቆም እና ወደፊት መሄድ የለባቸውም። ይህንን ምልክት ችላ ማለት አደጋን፣ የትራፊክ ጥሰትን እና ቅጣትን ያስከትላል።",
+    "name_amharic": "ቀይና ነጭ የመንገድ ዳር ምልክት",
+    "explanation_amharic": "ይህ ቀይና ነጭ ቀለም የተቀባ የመንገድ ዳር ድንጋይ ምልክት ተሽከርካሪን ለረጅም ጊዜ ማቆምም ሆነ ለአጭር ጊዜ መቆም ፈጽሞ የተከለከለ መሆኑን ያመለክታል። ይህ ምልክት እንደ አካላዊ መዝጊያ ሳይሆን የመንገድ ዳር ምልክት ነው። አሽከርካሪዎች ህግን ለማክበር (ለምሳሌ የፖሊስ ትዕዛዝ ወይም ሌላ ምልክት) ወይም ታክሲዎች ተሳፋሪዎችን ለማንሳት ወይም ለማውረድ ለአጭር ጊዜ ማቆም ይችላሉ። ይህንን ህግ መጣስ የገንዘብ ቅጣት እና የትራፊክ መጨናነቅ ሊያስከትል ይችላል።",
     "audio_name_filename": "818_name.mp3",
     "audio_explanation_filename": "818_explanation.mp3",
     "questions": [
       {
         "id": "818_q1",
-        "question_amharic": "ይህ ቀይ እና ነጭ አጥር ምልክት ምን ያመለክታል?",
+        "question_amharic": "ቀይና ነጭ ቀለም የተቀባ የመንገድ ዳር ድንጋይ ምልክት ምን ማለት ነው?",
         "question_audio": "818_q1_question.mp3",
-        "explanation_correct_amharic": "ዋው በጣም ጥሩ። ይህ ምልክት መንገዱ ሙሉ በሙሉ ወይም በከፊል ዝግ መሆኑን እና አሽከርካሪዎች ማለፍ እንደሌለባቸው በግልፅ ያሳያል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተዘጋውን መንገድ ችላ ማለት ወደ አደጋ ሊያመራ ወይም የትራፊክ ጥሰት ቅጣት ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "ትክክል! ጥሩ ነው። ቀይና ነጭ የመንገድ ዳር ምልክት ተሽከርካሪን ለረጅም ጊዜም ሆነ ለአጭር ጊዜም ማቆም ፈጽሞ እንደማይፈቀድ ያሳያል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተከለከለ ቦታ ላይ ማቆም ወይም ማቆም የትራፊክ ህግን መጣስ ሲሆን ቅጣት ያስከትላል።",
         "explanation_correct_audio": "818_q1_correct.mp3",
         "explanation_wrong_audio": "818_q1_wrong.mp3",
         "answers": [
           {
-            "id": "D",
-            "text_amharic": "ይህ ለአደጋ ጊዜ ተሽከርካሪዎች ጊዜያዊ ማቆሚያ ቦታ ነው።",
-            "is_correct": false,
-            "audio_filename": "answer_818_q1_D.mp3"
-          },
-          {
             "id": "C",
-            "text_amharic": "ፍጥነትዎን መቀነስ እና ወደ ሌላ መስመር ለመቀየር መዘጋጀት አለብዎት።",
+            "text_amharic": "ለጭነት መኪናዎች ብቻ ማቆም የተፈቀደበት ቦታ ነው።",
             "is_correct": false,
             "audio_filename": "answer_818_q1_C.mp3"
           },
           {
+            "id": "B",
+            "text_amharic": "ተሽከርካሪ ለረጅም ጊዜ ማቆምም ሆነ ለአጭር ጊዜ መቆም ፈጽሞ የተከለከለ ነው።",
+            "is_correct": true,
+            "audio_filename": "answer_818_q1_B.mp3"
+          },
+          {
             "id": "A",
-            "text_amharic": "ከፊት ለፊት የግንባታ ቦታ እንዳለ እና በጥንቃቄ ማለፍ እንዳለብን ያሳያል።",
+            "text_amharic": "ተሽከርካሪ ማቆም የሚፈቀድበት ቦታ ነው።",
             "is_correct": false,
             "audio_filename": "answer_818_q1_A.mp3"
           },
           {
-            "id": "B",
-            "text_amharic": "መንገዱ ወይም የመንገዱ ክፍል ዝግ መሆኑን እና መግባት የተከለከለ መሆኑን ያመለክታል።",
-            "is_correct": true,
-            "audio_filename": "answer_818_q1_B.mp3"
+            "id": "D",
+            "text_amharic": "እዚህ ቦታ ላይ ለጥቂት ደቂቃዎች ብቻ ማቆም ይፈቀዳል።",
+            "is_correct": false,
+            "audio_filename": "answer_818_q1_D.mp3"
           }
         ]
       },
       {
         "id": "818_q2",
-        "question_amharic": "አሽከርካሪ ይህንን ምልክት ሲያይ ምን ማድረግ አለበት?",
+        "question_amharic": "ቀይና ነጭ የመንገድ ዳር ምልክት ባለበት ቦታ ላይ አሽከርካሪ ምን ማድረግ አለበት?",
         "question_audio": "818_q2_question.mp3",
-        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። ይህ ምልክት መንገዱ ዝግ መሆኑን ስለሚያሳይ፣ አሽከርካሪው ወዲያውኑ ማቆም እና ወደፊት አለመሄድ ግዴታ አለበት።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተዘጋውን መንገድ ለማለፍ መሞከር አደገኛ ሲሆን ከባድ የትራፊክ ጥሰት ነው።",
+        "explanation_correct_amharic": "ጎበዝ። ይህ ምልክት ለረጅም ጊዜም ሆነ ለአጭር ጊዜም ማቆም ፈጽሞ የተከለከለ መሆኑን የሚያመለክት ሲሆን ህጋዊ ምክንያቶች ሲኖሩ ብቻ ማቆም ይፈቀዳል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ያለ ህጋዊ ምክንያት ማቆም ወይም ማቆም የትራፊክ ፍሰትን ሊያስተጓጉል እና አደጋ ሊያስከትል ይችላል።",
         "explanation_correct_audio": "818_q2_correct.mp3",
         "explanation_wrong_audio": "818_q2_wrong.mp3",
         "answers": [
           {
-            "id": "B",
-            "text_amharic": "ወዲያውኑ ማቆም እና ከአጥሩ ባሻገር ወደፊት መሄድ የለበትም።",
-            "is_correct": true,
-            "audio_filename": "answer_818_q2_B.mp3"
-          },
-          {
             "id": "C",
-            "text_amharic": "ሰራተኞችን ለማስጠንቀቅ መለከት መምታት እና ከዚያ ቀስ ብሎ መቀጠል አለበት።",
+            "text_amharic": "ተሽከርካሪውን አቁሞ በውስጡ መቀመጥ ይችላል።",
             "is_correct": false,
             "audio_filename": "answer_818_q2_C.mp3"
           },
           {
             "id": "A",
-            "text_amharic": "በቂ ቦታ ካለ ከአጥሩ ዞሮ ማለፍ አለበት።",
+            "text_amharic": "ተሽከርካሪውን አቁሞ ለጥቂት ጊዜ መውረድ ይችላል።",
             "is_correct": false,
             "audio_filename": "answer_818_q2_A.mp3"
           },
           {
+            "id": "B",
+            "text_amharic": "ህግን ለማክበር ወይም ታክሲ ከሆነ ተሳፋሪ ለማንሳትና ለማውረድ ካልሆነ በስተቀር ለረጅም ጊዜ ማቆምም ሆነ ለአጭር ጊዜ መቆም የለበትም።",
+            "is_correct": true,
+            "audio_filename": "answer_818_q2_B.mp3"
+          },
+          {
             "id": "D",
-            "text_amharic": "ለማለፍ ፈቃድ ለማግኘት የትራፊክ ተቆጣጣሪ መፈለግ አለበት።",
+            "text_amharic": "በምሽት ሰዓት ብቻ ማቆም ይችላል።",
             "is_correct": false,
             "audio_filename": "answer_818_q2_D.mp3"
           }
@@ -28208,36 +28208,36 @@
       },
       {
         "id": "818_q3",
-        "question_amharic": "ይህንን የመከላከያ አጥር ምልክት ችላ ማለት የሚያስከትለው መዘዝ ምንድን ነው?",
+        "question_amharic": "ቀይና ነጭ የመንገድ ዳር ምልክት ከሰማያዊና ነጭ የመንገድ ዳር ምልክት የሚለየው እንዴት ነው?",
         "question_audio": "818_q3_question.mp3",
-        "explanation_correct_amharic": "እሰይ። አቤት እውቀት! የተዘጋውን መንገድ በኃይል ማለፍ አደጋን ሊያስከትል፣ የትራፊክ ህግን መጣስ እና ከባድ ቅጣት ሊያስከትል ይችላል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የመንገድ መዘጋት ምልክቶችን ችላ ማለት የራስዎን እና የሌሎችን ደህንነት አደጋ ላይ ይጥላል።",
+        "explanation_correct_amharic": "ጎሽ! ቀይና ነጭ ምልክት ለረጅም ጊዜም ሆነ ለአጭር ጊዜም ማቆም ፈጽሞ የተከለከለ መሆኑን ሲያመለክት፣ ሰማያዊና ነጭ ምልክት ደግሞ ማቆም የሚፈቀድበት ቦታ መሆኑን ያሳያል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ምልክቶቹን በትክክል አለመለየት የተከለከለ ቦታ ላይ ማቆም ወይም ማቆም በማድረግ ቅጣትና አደጋ ሊያስከትል ይችላል።",
         "explanation_correct_audio": "818_q3_correct.mp3",
         "explanation_wrong_audio": "818_q3_wrong.mp3",
         "answers": [
           {
-            "id": "A",
-            "text_amharic": "ከፖሊስ መኮንን ማስጠንቀቂያ ሊደርስዎት ይችላል።",
-            "is_correct": false,
-            "audio_filename": "answer_818_q3_A.mp3"
-          },
-          {
             "id": "B",
-            "text_amharic": "አደጋ ሊያስከትሉ ወይም ከፍተኛ ቅጣት ሊጣልብዎ ይችላል።",
+            "text_amharic": "ቀይና ነጭ ምልክት ለረጅም ጊዜ ማቆምም ሆነ ለአጭር ጊዜ መቆም ፈጽሞ ሲከለክል፣ ሰማያዊና ነጭ ምልክት ማቆምን ይፈቅዳል።",
             "is_correct": true,
             "audio_filename": "answer_818_q3_B.mp3"
           },
           {
+            "id": "C",
+            "text_amharic": "ሁለቱም ምልክቶች ማቆምን ይፈቅዳሉ ነገር ግን በተለያየ ሰዓት።",
+            "is_correct": false,
+            "audio_filename": "answer_818_q3_C.mp3"
+          },
+          {
             "id": "D",
-            "text_amharic": "አጥሩ ለአጭር ጊዜ ከጠበቁ በኋላ በራስ-ሰር ይከፈታል።",
+            "text_amharic": "ቀይና ነጭ ምልክት ለአጭር ጊዜ ማቆምን ሲፈቅድ ሰማያዊና ነጭ ምልክት ለረጅም ጊዜ ማቆምን ይፈቅዳል።",
             "is_correct": false,
             "audio_filename": "answer_818_q3_D.mp3"
           },
           {
-            "id": "C",
-            "text_amharic": "ያለ ቅጣት ወደ ሌላ መንገድ ይመራሉ ።",
+            "id": "A",
+            "text_amharic": "ሰማያዊና ነጭ ምልክት ማቆምን ሲከለክል ቀይና ነጭ ምልክት ማቆምን ይፈቅዳል።",
             "is_correct": false,
-            "audio_filename": "answer_818_q3_C.mp3"
+            "audio_filename": "answer_818_q3_A.mp3"
           }
         ]
       }
