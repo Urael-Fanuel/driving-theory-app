@@ -29320,113 +29320,113 @@
     "image_filename": "907.png",
     "video_filename": null,
     "name_hebrew": "907",
-    "name_amharic": "ይህ ምልክት በቀኝ በኩል ያለው የመንገድ መስመር እየጠበበ ወይም ሙሉ በሙሉ እንደሚያልቅ ያሳያል።",
-    "explanation_amharic": "ይህ ምልክት በቀኝ በኩል ያለው የመንገድ መስመር እየጠበበ ወይም ሙሉ በሙሉ እንደሚያልቅ ያመለክታል። አሽከርካሪዎች ወደ ግራ መስመር እንዲቀየሩ ያስጠነቅቃል። ይህንን ምልክት ሲያዩ ፍጥነቶን መቀነስ፣ ወደ ግራ መስመር ለመቀየር ዝግጁ መሆን እና ከሌሎች አሽከርካሪዎች ጋር በመተባበር በሰላም መስመር መቀየር አለብዎት። ይህን አለማድረግ የትራፊክ መጨናነቅን፣ አደጋን ወይም ቅጣትን ሊያስከትል ይችላል።",
+    "name_amharic": "የግራ መስመር መጥበብ ማስጠንቀቂያ",
+    "explanation_amharic": "ይህ ምልክት መንገዱ ከግራ በኩል እየጠበበ ወይም አንድ መስመር እየተዘጋ መሆኑን ያስጠነቅቃል። አሽከርካሪዎች ፍጥነታቸውን መቀነስ፣ ጥንቃቄ ማድረግ እና ወደ ቀኝ መስመር ለመቀላቀል መዘጋጀት አለባቸው። ይህንን ምልክት ችላ ማለት የትራፊክ መጨናነቅን ወይም አደጋን ሊያስከትል ይችላል።",
     "audio_name_filename": "907_name.mp3",
     "audio_explanation_filename": "907_explanation.mp3",
     "questions": [
       {
         "id": "907_q1",
-        "question_amharic": "ይህ የመንገድ ምልክት ምን ያመለክታል?",
+        "question_amharic": "ይህ ምልክት ምን ማለት ነው?",
         "question_audio": "907_q1_question.mp3",
-        "explanation_correct_amharic": "ትክክል! ይህ ምልክት ምልክቱ በቀኝ በኩል ያለው የመንገድ መስመር እንደሚያልቅ ወይም እንደሚጠብ ያሳያል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ መምረጥ አሽከርካሪው ትክክለኛውን የመንገድ ሁኔታ እንዳይረዳ እና አደጋ ውስጥ እንዲገባ ያደርገዋል።",
+        "explanation_correct_amharic": "አሪፍ! ምልክቱ ይህ ምልክት መንገዱ ከግራ በኩል እየጠበበ መሆኑን ያሳያል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: መንገዱ ከቀኝ በኩል ይጠባል ብሎ ማሰብ አሽከርካሪውን ወደተሳሳተ አቅጣጫ እንዲሄድ በማድረግ አደጋ ሊያስከትል ይችላል።",
         "explanation_correct_audio": "907_q1_correct.mp3",
         "explanation_wrong_audio": "907_q1_wrong.mp3",
         "answers": [
           {
-            "id": "C",
-            "text_amharic": "ወደ ቀኝ መታጠፍ የተከለከለ መሆኑን ያመለክታል።",
+            "id": "A",
+            "text_amharic": "መንገዱ ከቀኝ በኩል ይጠባል።",
             "is_correct": false,
-            "audio_filename": "answer_907_q1_C.mp3"
+            "audio_filename": "answer_907_q1_A.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "በቀኝ በኩል አዲስ የመንገድ መስመር እንደሚጀምር ያመለክታል።",
+            "text_amharic": "ወደ ግራ መስመር መግባት አይቻልም።",
             "is_correct": false,
             "audio_filename": "answer_907_q1_D.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "በቀኝ በኩል ያለው የመንገድ መስመር እየጠበበ ወይም ሙሉ በሙሉ እንደሚያልቅ ያመለክታል።",
+            "text_amharic": "መንገዱ ከግራ በኩል ይጠባል።",
             "is_correct": true,
             "audio_filename": "answer_907_q1_B.mp3"
           },
           {
-            "id": "A",
-            "text_amharic": "በግራ በኩል ያለው የመንገድ መስመር እየጠበበ ወይም ሙሉ በሙሉ እንደሚያልቅ ያመለክታል።",
+            "id": "C",
+            "text_amharic": "ወደ ግራ መታጠፍ የተከለከለ ነው።",
             "is_correct": false,
-            "audio_filename": "answer_907_q1_A.mp3"
+            "audio_filename": "answer_907_q1_C.mp3"
           }
         ]
       },
       {
         "id": "907_q2",
-        "question_amharic": "ይህንን ምልክት ሲያዩ አሽከርካሪው ምን ማድረግ አለበት?",
+        "question_amharic": "ይህንን ምልክት ሲያዩ አሽከርካሪ ምን ማድረግ አለበት?",
         "question_audio": "907_q2_question.mp3",
-        "explanation_correct_amharic": "ትክክል! ጥሩ ነው። አሽከርካሪው ፍጥነቱን በመቀነስ እና ከሌሎች አሽከርካሪዎች ጋር በመተባበር በሰላም ወደ ግራ መስመር መቀየር አለበት።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ትክክለኛውን እርምጃ አለመውሰድ የትራፊክ መጨናነቅን፣ አደጋን ወይም ቅጣትን ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። መንገዱ ስለሚጠብ አሽከርካሪው ፍጥነቱን ቀንሶ ወደ ቀኝ መስመር በሰላም ለመቀላቀል መዘጋጀት አለበት።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ፍጥነትን አለመቀነስ ወይም ወደ ትክክለኛው መስመር አለመቀላቀል አደጋን ወይም የትራፊክ መጨናነቅን ሊያስከትል ይችላል።",
         "explanation_correct_audio": "907_q2_correct.mp3",
         "explanation_wrong_audio": "907_q2_wrong.mp3",
         "answers": [
           {
-            "id": "C",
-            "text_amharic": "በቀኝ መስመር ላይ መንዳት መቀጠል እና ሌሎች አሽከርካሪዎች እንዲያልፉ መጠበቅ አለበት።",
-            "is_correct": false,
-            "audio_filename": "answer_907_q2_C.mp3"
-          },
-          {
             "id": "D",
-            "text_amharic": "መኪናውን አቁሞ የመንገድ ጥገና ቡድን እስኪመጣ መጠበቅ አለበት።",
+            "text_amharic": "ምንም ለውጥ ሳያደርግ መንዳት መቀጠል አለበት።",
             "is_correct": false,
             "audio_filename": "answer_907_q2_D.mp3"
           },
           {
+            "id": "B",
+            "text_amharic": "ፍጥነቱን ቀንሶ ወደ ቀኝ መስመር ለመቀላቀል መዘጋጀት አለበት።",
+            "is_correct": true,
+            "audio_filename": "answer_907_q2_B.mp3"
+          },
+          {
             "id": "A",
-            "text_amharic": "ፍጥነቱን ጨምሮ በፍጥነት ወደ ግራ መስመር መቀየር አለበት።",
+            "text_amharic": "ፍጥነቱን ጨምሮ በፍጥነት ወደ ግራ መስመር መግባት አለበት።",
             "is_correct": false,
             "audio_filename": "answer_907_q2_A.mp3"
           },
           {
-            "id": "B",
-            "text_amharic": "ፍጥነቱን ቀንሶ በጥንቃቄ ወደ ግራ መስመር መቀየር አለበት።",
-            "is_correct": true,
-            "audio_filename": "answer_907_q2_B.mp3"
+            "id": "C",
+            "text_amharic": "ወዲያውኑ ብሬክ ይዞ መቆም አለበት።",
+            "is_correct": false,
+            "audio_filename": "answer_907_q2_C.mp3"
           }
         ]
       },
       {
         "id": "907_q3",
-        "question_amharic": "ይህን ምልክት ችላ ማለት ምን ሊያስከትል ይችላል?",
+        "question_amharic": "መንገዱ ከግራ በኩል በሚጠብበት ጊዜ ወደ ቀኝ መስመር ሲቀላቀሉ ለማን ቅድሚያ መስጠት አለብዎት?",
         "question_audio": "907_q3_question.mp3",
-        "explanation_correct_amharic": "አሪፍ! ምልክቱ ምልክቱን ችላ ማለት አሽከርካሪው አደጋ ውስጥ እንዲገባ ወይም የትራፊክ ህግን እንዲጥስ ያደርገዋል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የመንገድ ምልክቶችን አለማክበር ለራስ እና ለሌሎች አሽከርካሪዎች አደጋን ይፈጥራል።",
+        "explanation_correct_amharic": "አሪፍ! ምልክቱ ወደሚቀላቀሉት መስመር ቀድሞ ለገቡ ተሽከርካሪዎች ቅድሚያ መስጠት የትራፊክ ደንብ ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ቅድሚያ አለመስጠት ወይም ለተሳሳቱ ተሽከርካሪዎች ቅድሚያ መስጠት አደጋን ሊያስከትል ይችላል።",
         "explanation_correct_audio": "907_q3_correct.mp3",
         "explanation_wrong_audio": "907_q3_wrong.mp3",
         "answers": [
           {
-            "id": "B",
-            "text_amharic": "የትራፊክ መጨናነቅ፣ አደጋ ወይም የገንዘብ ቅጣት ሊያስከትል ይችላል።",
-            "is_correct": true,
-            "audio_filename": "answer_907_q3_B.mp3"
+            "id": "A",
+            "text_amharic": "ወደ ቀኝ መስመር ለሚቀላቀሉ ሌሎች ተሽከርካሪዎች።",
+            "is_correct": false,
+            "audio_filename": "answer_907_q3_A.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "የመንገድ ጥገና ስራ እየተካሄደ መሆኑን ስለሚያሳይ ወደ ሌላ መንገድ መቀየር ያስፈልጋል።",
+            "text_amharic": "ለማንም ቅድሚያ መስጠት አያስፈልግም።",
             "is_correct": false,
             "audio_filename": "answer_907_q3_D.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "መንገዱ በቅርቡ እንደሚሰፋ የሚያሳይ ምልክት ስለሆነ ምንም ማድረግ አያስፈልግም።",
+            "text_amharic": "ከኋላ ለሚመጡ ተሽከርካሪዎች።",
             "is_correct": false,
             "audio_filename": "answer_907_q3_C.mp3"
           },
           {
-            "id": "A",
-            "text_amharic": "ምንም አይነት አደጋ ስለሌለ በሰላም ጉዞውን መቀጠል ይችላል።",
-            "is_correct": false,
-            "audio_filename": "answer_907_q3_A.mp3"
+            "id": "B",
+            "text_amharic": "ቀድሞውንም በቀኝ መስመር ውስጥ ላሉ ተሽከርካሪዎች።",
+            "is_correct": true,
+            "audio_filename": "answer_907_q3_B.mp3"
           }
         ]
       }
