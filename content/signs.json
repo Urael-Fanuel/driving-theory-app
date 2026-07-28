@@ -28487,41 +28487,41 @@
     "image_filename": "821.png",
     "video_filename": null,
     "name_hebrew": "821",
-    "name_amharic": "ይህ ምልክት ከፊትህ ጠባብ ባለ ሁለት አቅጣጫ መንገድ መኖሩን የሚያስጠነቅቅ ምልክት ነው።",
-    "explanation_amharic": "ይህ ምልክት ከፊት ለፊትህ ጠባብ ባለ ሁለት አቅጣጫ መንገድ መኖሩን ያስጠነቅቃል። በዚህ መንገድ ላይ ሁለት ተሽከርካሪዎች በአንድ ጊዜ ለማለፍ በቂ ቦታ ላይኖር ስለሚችል አሽከርካሪዎች ፍጥነታቸውን መቀነስ እና ከፍተኛ ጥንቃቄ ማድረግ አለባቸው። ይህንን ምልክት ችላ ማለት አደጋን ወይም በትራፊክ መጨናነቅ ውስጥ መግባት ያስከትላል።",
+    "name_amharic": "የፍጥነት መቀነሻ ቦታ ምልክት",
+    "explanation_amharic": "ይህ የመንገድ ላይ ምልክት በመንገዱ ላይ የፍጥነት መቀነሻ ያለበትን ትክክለኛ ቦታ ያሳያል። አሽከርካሪዎች ይህንን ምልክት ሲያዩ ወዲያውኑ ፍጥነታቸውን መቀነስ አለባቸው። ፍጥነት ሳይቀንሱ ካለፉ ተሽከርካሪው ሊጎዳ ወይም አደጋ ሊከሰት ይችላል።",
     "audio_name_filename": "821_name.mp3",
     "audio_explanation_filename": "821_explanation.mp3",
     "questions": [
       {
         "id": "821_q1",
-        "question_amharic": "ይህ ምልክት ምን ያመለክታል?",
+        "question_amharic": "ይህ የመንገድ ላይ ምልክት (ቁጥር 821) ምን ያሳያል?",
         "question_audio": "821_q1_question.mp3",
-        "explanation_correct_amharic": "ዋው በጣም ጥሩ። ምልክቱ ጠባብ በሆነ መንገድ ላይ ተሽከርካሪዎች ከሁለቱም አቅጣጫ እንደሚመጡ ያሳያል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ መምረጥ አሽከርካሪው ለመጪው ትራፊክ ዝግጁ እንዳይሆን በማድረግ ለአደጋ ያጋልጠዋል።",
+        "explanation_correct_amharic": "በጣም ጥሩ። ይህ ምልክት አሽከርካሪዎች ፍጥነታቸውን እንዲቀንሱ የሚያስገድድ የፍጥነት መቀነሻ የት እንዳለ በትክክል ያሳያል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ ከመረጡ፣ የፍጥነት መቀነሻውን ሳያስተውሉ በፍጥነት በማለፍ ተሽከርካሪዎን ሊጎዱ ወይም አደጋ ሊያስከትሉ ይችላሉ።",
         "explanation_correct_audio": "821_q1_correct.mp3",
         "explanation_wrong_audio": "821_q1_wrong.mp3",
         "answers": [
           {
+            "id": "C",
+            "text_amharic": "ሁለት አቅጣጫ ያለው መንገድ መሆኑን እና ማለፍ እንደማይፈቀድ ያሳያል።",
+            "is_correct": false,
+            "audio_filename": "answer_821_q1_C.mp3"
+          },
+          {
             "id": "B",
-            "text_amharic": "ከፊትህ ጠባብ ባለ ሁለት አቅጣጫ መንገድ አለ።",
+            "text_amharic": "በመንገዱ ላይ የፍጥነት መቀነሻ ያለበትን ትክክለኛ ቦታ ያመለክታል።",
             "is_correct": true,
             "audio_filename": "answer_821_q1_B.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "ከፊትህ የመኪና ማቆሚያ ቦታ አለ።",
+            "text_amharic": "እግረኞች የሚሻገሩበት ቦታ መሆኑን ያሳያል።",
             "is_correct": false,
             "audio_filename": "answer_821_q1_D.mp3"
           },
           {
-            "id": "C",
-            "text_amharic": "ከፊትህ ሰፊ ባለ ሁለት አቅጣጫ መንገድ አለ።",
-            "is_correct": false,
-            "audio_filename": "answer_821_q1_C.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "ከፊትህ አንድ አቅጣጫ ብቻ ያለው ጠባብ መንገድ አለ።",
+            "text_amharic": "ወደፊት ጠባብ መንገድ እንዳለ ያሳያል።",
             "is_correct": false,
             "audio_filename": "answer_821_q1_A.mp3"
           }
@@ -28529,69 +28529,69 @@
       },
       {
         "id": "821_q2",
-        "question_amharic": "ይህንን ምልክት ሲያዩ ምን ማድረግ አለብዎት?",
+        "question_amharic": "ይህንን ምልክት ሲያዩ አሽከርካሪው ወዲያውኑ ምን ማድረግ አለበት?",
         "question_audio": "821_q2_question.mp3",
-        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። ጠባብ መንገድ ላይ አደጋን ለመከላከል ፍጥነትን መቀነስ እና ለሌሎች ተሽከርካሪዎች ትኩረት መስጠት ወሳኝ ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ፍጥነትን መጨመር ወይም ትኩረት አለመስጠት በጠባብ መንገድ ላይ ከባድ አደጋ ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "ዋው በጣም ጥሩ። የፍጥነት መቀነሻውን በደህና ለማለፍ እና ተሽከርካሪን ከጉዳት ለመጠበቅ ፍጥነትን መቀነስ ወሳኝ ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ፍጥነት ሳይቀንሱ ካለፉ ተሽከርካሪው ሊጎዳ፣ ጎማ ሊፈነዳ ወይም አደጋ ሊከሰት ይችላል።",
         "explanation_correct_audio": "821_q2_correct.mp3",
         "explanation_wrong_audio": "821_q2_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "ፍጥነትዎን መጨመር እና በፍጥነት ማለፍ አለብዎት።",
+            "text_amharic": "የአሁኑን ፍጥነት ጠብቆ ማሽከርከር መቀጠል አለበት።",
             "is_correct": false,
             "audio_filename": "answer_821_q2_A.mp3"
           },
           {
-            "id": "B",
-            "text_amharic": "ፍጥነትዎን መቀነስ እና ለመጪው ትራፊክ ትኩረት መስጠት አለብዎት።",
-            "is_correct": true,
-            "audio_filename": "answer_821_q2_B.mp3"
-          },
-          {
             "id": "C",
-            "text_amharic": "መንገድ የመስጠት ግዴታ ስለሌለብዎት መብትዎን ማስከበር አለብዎት።",
+            "text_amharic": "ተሽከርካሪውን ሙሉ በሙሉ አቁሞ መጠበቅ አለበት።",
             "is_correct": false,
             "audio_filename": "answer_821_q2_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "ተሽከርካሪዎን አቁመው ሌላ መንገድ መፈለግ አለብዎት።",
+            "text_amharic": "እንቅፋቱን በፍጥነት ለማለፍ ፍጥነቱን መጨመር አለበት።",
             "is_correct": false,
             "audio_filename": "answer_821_q2_D.mp3"
+          },
+          {
+            "id": "B",
+            "text_amharic": "የፍጥነት መቀነሻውን በደህና ለማለፍ ወዲያውኑ ፍጥነቱን መቀነስ አለበት።",
+            "is_correct": true,
+            "audio_filename": "answer_821_q2_B.mp3"
           }
         ]
       },
       {
         "id": "821_q3",
-        "question_amharic": "ይህንን ምልክት ችላ ካሉ ምን ሊከሰት ይችላል?",
+        "question_amharic": "ይህንን ምልክት ችላ ብሎ ፍጥነት አለመቀነስ ዋነኛው አደጋ ምንድነው?",
         "question_audio": "821_q3_question.mp3",
-        "explanation_correct_amharic": "እሰይ። አቤት እውቀት! ምልክቱን ችላ ማለት በጠባብ መንገድ ላይ አደጋን ወይም የመንገድ መጨናነቅን የመፍጠር እድልን ይጨምራል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህንን ምልክት ችላ ማለት ለራስዎ እና ለሌሎች አሽከርካሪዎች አደጋን ይፈጥራል እንዲሁም የትራፊክ ህግን መጣስ ነው።",
+        "explanation_correct_amharic": "አሪፍ! ምልክቱ የፍጥነት መቀነሻውን በፍጥነት ማለፍ የተሽከርካሪን እገዳ፣ ጎማ እና የታችኛውን ክፍል ሊጎዳ ይችላል፣ እንዲሁም የመቆጣጠር ችግርን ይፈጥራል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የፍጥነት መቀነሻውን ችላ ማለት ለተሽከርካሪዎ ከባድ ጉዳት እና ለተሳፋሪዎችዎ ደህንነት አደጋ ሊያስከትል ይችላል።",
         "explanation_correct_audio": "821_q3_correct.mp3",
         "explanation_wrong_audio": "821_q3_wrong.mp3",
         "answers": [
           {
-            "id": "D",
-            "text_amharic": "ነዳጅዎ ሊያልቅብዎ ይችላል።",
-            "is_correct": false,
-            "audio_filename": "answer_821_q3_D.mp3"
-          },
-          {
-            "id": "A",
-            "text_amharic": "ምንም አይነት አደጋ አይደርስብዎትም ምክንያቱም መንገዱ ሁልጊዜ ሰፊ ነው።",
-            "is_correct": false,
-            "audio_filename": "answer_821_q3_A.mp3"
-          },
-          {
             "id": "B",
-            "text_amharic": "ከሌላ ተሽከርካሪ ጋር ሊጋጩ ወይም በትራፊክ መጨናነቅ ውስጥ ሊገቡ ይችላሉ።",
+            "text_amharic": "ተሽከርካሪዎ ሊጎዳ ወይም አደጋ ሊያስከትሉ ይችላሉ።",
             "is_correct": true,
             "audio_filename": "answer_821_q3_B.mp3"
           },
           {
+            "id": "A",
+            "text_amharic": "በጣም በዝግታ በማሽከርከር ማስጠንቀቂያ ሊደርስብዎ ይችላል።",
+            "is_correct": false,
+            "audio_filename": "answer_821_q3_A.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "አንድ አስፈላጊ መታጠፊያ ሊያመልጥዎ ይችላል።",
+            "is_correct": false,
+            "audio_filename": "answer_821_q3_D.mp3"
+          },
+          {
             "id": "C",
-            "text_amharic": "የትራፊክ ፖሊስ ያመሰግንዎታል ምክንያቱም በፍጥነት ስለነዱ።",
+            "text_amharic": "ሌሎች አሽከርካሪዎች በእርስዎ ላይ ሊናደዱ ይችላሉ።",
             "is_correct": false,
             "audio_filename": "answer_821_q3_C.mp3"
           }
