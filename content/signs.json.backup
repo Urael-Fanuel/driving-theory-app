@@ -29677,113 +29677,113 @@
     "image_filename": "910.png",
     "video_filename": null,
     "name_hebrew": "910",
-    "name_amharic": "ይህ ምልክት ከፊትህ ያሉት ሁለት የመንገድ መስመሮች ወደ አንድ መስመር እንደሚቀላቀሉ ያሳያል።",
-    "explanation_amharic": "ይህ ምልክት ሁለት የመንገድ መስመሮች ወደ አንድ መስመር የሚቀላቀሉበትን ቦታ ያመለክታል። ዓላማውም አሽከርካሪዎች ለመጪው የመንገድ ለውጥ አስቀድመው እንዲዘጋጁ ማስጠንቀቅ ነው። አሽከርካሪዎች ይህንን ምልክት ሲያዩ ፍጥነታቸውን መቀነስ፣ ጥንቃቄ ማድረግ እና ከሌሎች ተሽከርካሪዎች ጋር በመተባበር በአስተማማኝ ሁኔታ ወደ አንድ መስመር መቀላቀል አለባቸው። ይህን ምልክት ችላ ማለት የትራፊክ መጨናነቅን፣ አደጋን ወይም የሌሎች አሽከርካሪዎችን ንዴት ሊያስከትል ይችላል።",
+    "name_amharic": "ተጨማሪ መስመር ከቀኝ",
+    "explanation_amharic": "ይህ ምልክት ከመንገዱ በስተቀኝ በኩል አዲስ የመንዳት መስመር እየተጨመረ መሆኑን ያሳያል። የብርቱካናማው ቀለም ዳራ ይህ ምልክት በጊዜያዊ የስራ ቦታ ላይ መሆኑን ያመለክታል። አሽከርካሪዎች ይህንን ምልክት ሲያዩ በመንገድ ላይ ለሚደረጉ ለውጦች ዝግጁ መሆን፣ ፍጥነታቸውን ማስተካከል እና በጥንቃቄ መንዳት አለባቸው። ይህንን ምልክት ችላ ማለት ግራ መጋባት፣ ድንገተኛ የመስመር ለውጦች እና አደጋ ሊያስከትል ይችላል።",
     "audio_name_filename": "910_name.mp3",
     "audio_explanation_filename": "910_explanation.mp3",
     "questions": [
       {
         "id": "910_q1",
-        "question_amharic": "ይህ የመንገድ ምልክት ምን ማለት ነው?",
+        "question_amharic": "ይህ የትራፊክ ምልክት ምን ያመለክታል?",
         "question_audio": "910_q1_question.mp3",
-        "explanation_correct_amharic": "ትክክل! ይህ ምልክት ሁለት መስመሮች ወደ አንድ መስመር የሚቀላቀሉበትን ቦታ አስቀድሞ በማስጠንቀቅ አሽከርካሪዎች እንዲዘጋጁ ያደርጋል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የምልክቱን ትርጉም አለማወቅ አሽከርካሪው ለመጪው የመንገድ ለውጥ ዝግጁ እንዳይሆን በማድረግ አደጋ ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "በጣም ጥሩ። ይህ ምልክት ከመንገዱ በስተቀኝ በኩል አዲስ የመንዳት መስመር እየተጨመረ መሆኑን በግልጽ ያሳያል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ መምረጥ የመንገድ ለውጦችን አለመረዳት እና አደጋ ሊያስከትል ይችላል።",
         "explanation_correct_audio": "910_q1_correct.mp3",
         "explanation_wrong_audio": "910_q1_wrong.mp3",
         "answers": [
           {
-            "id": "A",
-            "text_amharic": "መንገዱ ወደ ሁለት አቅጣጫዎች እንደሚከፈል ያሳያል።",
-            "is_correct": false,
-            "audio_filename": "answer_910_q1_A.mp3"
-          },
-          {
             "id": "C",
-            "text_amharic": "በዚህ መንገድ ላይ መንዳት የተከለከለ መሆኑን ያሳያል።",
+            "text_amharic": "መንገዱ ወደ ሁለት የተለያዩ አቅጣጫዎች ይከፈላል።",
             "is_correct": false,
             "audio_filename": "answer_910_q1_C.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "አዲስ የመንገድ መስመር እየተጨመረ መሆኑን ያመለክታል።",
-            "is_correct": false,
-            "audio_filename": "answer_910_q1_D.mp3"
-          },
-          {
             "id": "B",
-            "text_amharic": "ከፊትህ ያሉት ሁለት የመንገድ መስመሮች ወደ አንድ መስመር እንደሚቀላቀሉ ያመለክታል።",
+            "text_amharic": "ከመንገዱ በስተቀኝ በኩል አዲስ የመንዳት መስመር እየተጨመረ ነው።",
             "is_correct": true,
             "audio_filename": "answer_910_q1_B.mp3"
+          },
+          {
+            "id": "A",
+            "text_amharic": "ሁለት መስመሮች ወደ አንድ መስመር እየተቀላቀሉ ነው።",
+            "is_correct": false,
+            "audio_filename": "answer_910_q1_A.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "የትራፊክ ፍሰት ወደ ግራ መስመር እንዲቀየር ይጠበቃል።",
+            "is_correct": false,
+            "audio_filename": "answer_910_q1_D.mp3"
           }
         ]
       },
       {
         "id": "910_q2",
-        "question_amharic": "ይህን ምልክት ሲያዩ አሽከርካሪ ምን ማድረግ አለበት?",
+        "question_amharic": "ይህንን ምልክት ሲያዩ አሽከርካሪ ምን ማድረግ አለበት?",
         "question_audio": "910_q2_question.mp3",
-        "explanation_correct_amharic": "ትክክል! ጥሩ ነው። አሽከርካሪው ፍጥነቱን በመቀነስ እና ከሌሎች ጋር በመተባበር ብቻ በአስተማማኝ ሁኔታ ወደ አንድ መስመር መቀላቀል ይችላል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ትክክለኛውን እርምጃ አለመውሰድ የትራፊክ ፍሰትን ሊያስተጓጉል እና የመጋጨት አደጋን ሊጨምር ይችላል።",
+        "explanation_correct_amharic": "አሪፍ! ምልክቱ አሽከርካሪው በመንገድ ላይ ለሚደረጉ ለውጦች ዝግጁ ሆኖ በጥንቃቄ መንዳት አለበት።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ጥንቃቄ አለማድረግ እና ለውጦችን ችላ ማለት አደጋ ሊያስከትል ይችላል።",
         "explanation_correct_audio": "910_q2_correct.mp3",
         "explanation_wrong_audio": "910_q2_wrong.mp3",
         "answers": [
           {
             "id": "B",
-            "text_amharic": "ፍጥነቱን በመቀነስ፣ ጥንቃቄ በማድረግ እና ከሌሎች ተሽከርካሪዎች ጋር በመተባበር ወደ አንድ መስመር መቀላቀል አለበት።",
+            "text_amharic": "በመንገድ ላይ ለሚደረጉ ለውጦች ዝግጁ መሆን እና በጥንቃቄ መንዳት አለበት።",
             "is_correct": true,
             "audio_filename": "answer_910_q2_B.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "የመንገድ መስመሩን ሳይቀይር በቀጥታ መንዳት አለበት።",
+            "text_amharic": "ምንም አይነት ለውጥ ስለሌለ እንደተለመደው ማሽከርከር አለበት።",
             "is_correct": false,
             "audio_filename": "answer_910_q2_D.mp3"
           },
           {
-            "id": "A",
-            "text_amharic": "ፍጥነቱን ጨምሮ በፍጥነት ወደፊት መሄድ አለበት።",
-            "is_correct": false,
-            "audio_filename": "answer_910_q2_A.mp3"
-          },
-          {
             "id": "C",
-            "text_amharic": "በድንገት ብሬክ በመያዝ መንገዱን መዝጋት አለበት።",
+            "text_amharic": "ወዲያውኑ ወደ ግራ መስመር መቀየር አለበት።",
             "is_correct": false,
             "audio_filename": "answer_910_q2_C.mp3"
+          },
+          {
+            "id": "A",
+            "text_amharic": "ፍጥነቱን ጨምሮ ወደ አዲሱ መስመር በፍጥነት መግባት አለበት።",
+            "is_correct": false,
+            "audio_filename": "answer_910_q2_A.mp3"
           }
         ]
       },
       {
         "id": "910_q3",
-        "question_amharic": "ይህን የመንገድ ምልክት ችላ ማለት ምን አደጋ ሊያስከትል ይችላል?",
+        "question_amharic": "የዚህ ምልክት የብርቱካናማ ቀለም ዳራ ምን ያመለክታል?",
         "question_audio": "910_q3_question.mp3",
-        "explanation_correct_amharic": "አሪፍ! ምልክቱ ምልክቱን ችላ ማለት አሽከርካሪዎች ሳይዘጋጁ እንዲቀላቀሉ በማድረግ ግጭት እና የትራፊክ መቆምን ያስከትላል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የምልክቱን ማስጠንቀቂያ አለመቀበል ከባድ የትራፊክ አደጋዎችን እና የህግ ቅጣቶችን ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። የብርቱካናማው ቀለም ዳራ ምልክቱ በጊዜያዊ የስራ ቦታ ላይ መሆኑን እና የመንገድ ለውጦች ጊዜያዊ መሆናቸውን ያሳያል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የብርቱካናማውን ዳራ ትርጉም አለመረዳት በስራ ቦታዎች ላይ ለሚፈጠሩ አደጋዎች ሊያጋልጥ ይችላል።",
         "explanation_correct_audio": "910_q3_correct.mp3",
         "explanation_wrong_audio": "910_q3_wrong.mp3",
         "answers": [
           {
+            "id": "C",
+            "text_amharic": "አሽከርካሪዎች ወደ ቀኝ እንዲታጠፉ ያበረታታል።",
+            "is_correct": false,
+            "audio_filename": "answer_910_q3_C.mp3"
+          },
+          {
             "id": "D",
-            "text_amharic": "ፖሊስ ቅጣት ሊጥልብህ ይችላል ነገር ግን አደጋ አይደርስም።",
+            "text_amharic": "መንገዱ በጣም አደገኛ መሆኑን እና መግባት እንደሌለበት ያሳያል።",
             "is_correct": false,
             "audio_filename": "answer_910_q3_D.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "የትራፊክ መጨናነቅ፣ አደጋዎች ወይም የሌሎች አሽከርካሪዎች ንዴት ሊያስከትል ይችላል።",
+            "text_amharic": "ይህ ምልክት በጊዜያዊ የስራ ቦታ ላይ መሆኑን ያመለክታል።",
             "is_correct": true,
             "audio_filename": "answer_910_q3_B.mp3"
           },
           {
             "id": "A",
-            "text_amharic": "ምንም አይነት አደጋ አያስከትልም፣ መንገዱ በራሱ ይስተካከላል።",
+            "text_amharic": "መንገዱ ለረጅም ጊዜ እንደሚዘጋ ያሳያል።",
             "is_correct": false,
             "audio_filename": "answer_910_q3_A.mp3"
-          },
-          {
-            "id": "C",
-            "text_amharic": "የነዳጅ ፍጆታን ብቻ ይጨምራል።",
-            "is_correct": false,
-            "audio_filename": "answer_910_q3_C.mp3"
           }
         ]
       }
