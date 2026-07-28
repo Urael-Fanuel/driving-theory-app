@@ -430,10 +430,10 @@ export default function EngineAExamScreen() {
     nextQuestion();
   };
 
-  const handleBack = () => {
+  const handleBack = async () => {
     cancelListening();
-    stopAudio();
-    stopTTS().catch(() => {});
+    await stopAudio();
+    await stopTTS().catch(() => {});
     router.navigate('/(engineA)/home' as any);
   };
 
@@ -441,19 +441,19 @@ export default function EngineAExamScreen() {
   const canGoPrev = currentIndex > 0;
   const canGoNext = currentIndex < (questions.length || 30) - 1;
 
-  const handleNavPrev = () => {
+  const handleNavPrev = async () => {
     if (!canGoPrev) return;
-    stopAudio();
-    stopTTS().catch(() => {});
+    await stopAudio();
+    await stopTTS().catch(() => {});
     cancelListening();
     setShowFeedback(false);
     goToQuestion(currentIndex - 1);
   };
 
-  const handleNavNext = () => {
+  const handleNavNext = async () => {
     if (!canGoNext) return;
-    stopAudio();
-    stopTTS().catch(() => {});
+    await stopAudio();
+    await stopTTS().catch(() => {});
     cancelListening();
     setShowFeedback(false);
     goToQuestion(currentIndex + 1);

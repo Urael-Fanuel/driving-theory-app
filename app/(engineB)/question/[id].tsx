@@ -117,19 +117,19 @@ export default function EngineBQuestionScreen() {
   const canGoPrevQ = questionIndex > 0;
   const canGoNextQ = selectedId !== null && questionIndex < questions.length - 1;
 
-  const handlePrevQuestion = useCallback(() => {
+  const handlePrevQuestion = useCallback(async () => {
     if (!canGoPrevQ) return;
     Haptics.selectionAsync();
-    stopAudio();
+    await stopAudio();
     setShowFeedback(false);
     setSelectedId(null);
     router.replace(`/(engineB)/question/${signId}_q${questionIndex - 1}`);
   }, [canGoPrevQ, questionIndex, signId, router, stopAudio]);
 
-  const handleNextQuestion = useCallback(() => {
+  const handleNextQuestion = useCallback(async () => {
     if (!canGoNextQ) return;
     Haptics.selectionAsync();
-    stopAudio();
+    await stopAudio();
     setShowFeedback(false);
     setSelectedId(null);
     router.replace(`/(engineB)/question/${signId}_q${questionIndex + 1}`);
@@ -144,14 +144,14 @@ export default function EngineBQuestionScreen() {
   const handlePrevSign = async () => {
     if (!prevSign) return;
     await Haptics.selectionAsync();
-    stopAudio();
+    await stopAudio();
     router.replace(`/(engineB)/question/${prevSign.id}_q0`);
   };
 
   const handleNextSign = async () => {
     if (!nextSign) return;
     await Haptics.selectionAsync();
-    stopAudio();
+    await stopAudio();
     router.replace(`/(engineB)/question/${nextSign.id}_q0`);
   };
 

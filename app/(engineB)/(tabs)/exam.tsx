@@ -92,8 +92,8 @@ export default function EngineBExamScreen() {
     submitAnswer(answerId);
   }, [phase, submitAnswer]);
 
-  const handleNext = () => {
-    stopAudio();          // stop explanation audio before moving to next question
+  const handleNext = async () => {
+    await stopAudio();          // stop explanation audio before moving to next question
     setShowFeedback(false);
     nextQuestion();
   };

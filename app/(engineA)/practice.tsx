@@ -190,9 +190,9 @@ export default function EngineAPracticeScreen() {
     nextQuestion();
   };
 
-  const handleBack = () => {
+  const handleBack = async () => {
     cancelListening();
-    stopAudio();
+    await stopAudio();
     router.back();
   };
 

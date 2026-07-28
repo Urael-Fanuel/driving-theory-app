@@ -107,7 +107,6 @@ export function SignTextDetail({ sign, style }: SignTextDetailProps) {
 
       {/* Explanation card */}
       <View style={styles.explanationContainer}>
-        <Text style={styles.explanationText}>{sign.explanation_amharic}</Text>
         {sign.audio_explanation_url && (
           <AudioButton
             audioUri={sign.audio_explanation_url}
@@ -116,6 +115,7 @@ export function SignTextDetail({ sign, style }: SignTextDetailProps) {
             style={styles.explanationAudioBtn}
           />
         )}
+        <Text style={styles.explanationText}>{sign.explanation_amharic}</Text>
       </View>
     </ScrollView>
   );

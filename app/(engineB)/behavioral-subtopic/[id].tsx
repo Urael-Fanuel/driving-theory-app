@@ -162,7 +162,7 @@ export default function BehavioralSubtopicScreenB() {
 
   const handleStartQuiz = async () => {
     await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
-    stopAudio();  // stop narration audio before entering questions
+    await stopAudio();  // stop narration audio before entering questions
     if (questions.length > 0) setPhase('questions');
     else setPhase('complete');
   };

@@ -345,31 +345,31 @@ export default function EngineATopicQuizScreen() {
     nextQuestion();
   };
 
-  const handleBack = () => {
+  const handleBack = async () => {
     cancelListening();
-    stopAudio();
-    stopTTS().catch(() => {});
+    await stopAudio();
+    await stopTTS().catch(() => {});
     router.back();
   };
 
   const canGoPrev = currentIndex > 0;
   const canGoNext = currentIndex < questions.length - 1;
 
-  const handleNavPrev = () => {
+  const handleNavPrev = async () => {
     if (!canGoPrev) return;
     sequenceCancelledRef.current = true;  // cancel running sequence immediately
-    stopAudio();
-    stopTTS().catch(() => {});
+    await stopAudio();
+    await stopTTS().catch(() => {});
     cancelListening();
     setShowFeedback(false);
     goToQuestion(currentIndex - 1);
   };
 
-  const handleNavNext = () => {
+  const handleNavNext = async () => {
     if (!canGoNext) return;
     sequenceCancelledRef.current = true;  // cancel running sequence immediately
-    stopAudio();
-    stopTTS().catch(() => {});
+    await stopAudio();
+    await stopTTS().catch(() => {});
     cancelListening();
     setShowFeedback(false);
     goToQuestion(currentIndex + 1);

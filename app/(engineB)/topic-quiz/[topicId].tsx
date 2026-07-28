@@ -111,24 +111,24 @@ export default function EngineBTopicQuizScreen() {
     nextQuestion();
   };
 
-  const handleBack = () => {
-    stopAudio();
+  const handleBack = async () => {
+    await stopAudio();
     router.back();
   };
 
   const canGoPrev = currentIndex > 0;
   const canGoNext = currentIndex < questions.length - 1;
 
-  const handleNavPrev = () => {
+  const handleNavPrev = async () => {
     if (!canGoPrev) return;
-    stopAudio();
+    await stopAudio();
     setShowFeedback(false);
     goToQuestion(currentIndex - 1);
   };
 
-  const handleNavNext = () => {
+  const handleNavNext = async () => {
     if (!canGoNext) return;
-    stopAudio();
+    await stopAudio();
     setShowFeedback(false);
     goToQuestion(currentIndex + 1);
   };

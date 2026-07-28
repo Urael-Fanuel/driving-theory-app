@@ -83,7 +83,7 @@ export default function EngineBSignScreen() {
   const handlePrev = async () => {
     if (!prevSign) return;
     await Haptics.selectionAsync();
-    stopAudio();
+    await stopAudio();
     router.replace({
       pathname: '/(engineB)/sign/[id]',
       params: { id: prevSign.id },
@@ -93,7 +93,7 @@ export default function EngineBSignScreen() {
   const handleNext = async () => {
     if (!nextSign) return;
     await Haptics.selectionAsync();
-    stopAudio();
+    await stopAudio();
     router.replace({
       pathname: '/(engineB)/sign/[id]',
       params: { id: nextSign.id },
@@ -102,13 +102,13 @@ export default function EngineBSignScreen() {
 
   const handlePractice = async () => {
     await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
-    stopAudio();
+    await stopAudio();
     router.push(`/(engineB)/question/${id}_q0`);
   };
 
   const handleBack = async () => {
     await Haptics.selectionAsync();
-    stopAudio();
+    await stopAudio();
     router.back();
   };
 

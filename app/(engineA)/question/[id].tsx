@@ -328,9 +328,9 @@ export default function EngineAQuestionScreen() {
   const audioButtonIcon = audioState === 'playing' ? '⏸' : '▶️';
 
   // ── Navigate between questions within the same sign ────────────────────────
-  const navigateToQuestion = useCallback((newIndex: number) => {
+  const navigateToQuestion = useCallback(async (newIndex: number) => {
     if (newIndex < 0 || newIndex >= questions.length) return;
-    stopAudio();
+    await stopAudio();
     cancelListening();
     setAnsweredIndex(null);
     setShowFeedback(false);
@@ -343,8 +343,8 @@ export default function EngineAQuestionScreen() {
   // ── Back — always go to the CURRENT sign's explanation screen ───────────────
   // Using router.back() is wrong: if user navigated prev/next sign, back would
   // return to the original sign (the one they entered from), not the current one.
-  const handleBack = useCallback(() => {
-    stopAudio();
+  const handleBack = useCallback(async () => {
+    await stopAudio();
     cancelListening();
     router.replace(`/(engineA)/sign/${signId}` as any);
   }, [signId, router, stopAudio, cancelListening]);
