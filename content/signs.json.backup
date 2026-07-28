@@ -26822,111 +26822,111 @@
     "image_filename": "807.png",
     "video_filename": null,
     "name_hebrew": "807",
-    "name_amharic": "ይህ ምልክት በመንገድ ዳር ቢጫ መስመሮች ባሉበት ቦታ ማቆም ወይም መቆም ክልክል መሆኑን ያመለክታል።",
-    "explanation_amharic": "ይህ ምልክት በመንገድ ዳር ላይ የሚገኙ ቢጫ መስመሮችን ያሳያል፤ እነዚህ መስመሮች ተሽከርካሪ ማቆም፣ መቆም ወይም ማቆም በፍጹም የተከለከለ መሆኑን ያመለክታሉ። አሽከርካሪዎች በዚህ ምልክት በተከለከለበት ቦታ መኪናቸውን ማቆም የለባቸውም። ይህንን ህግ መጣስ የገንዘብ ቅጣት፣ ተሽከርካሪው መጎተት ወይም የትራፊክ ፍሰትን ማስተጓጎል ሊያስከትል ይችላል።",
+    "name_amharic": "የመንገድ ዳር ቢጫ መስመር",
+    "explanation_amharic": "ይህ ጠንካራ ቢጫ መስመር የመንገዱን ቀኝ ዳርቻ የሚያመለክት ሲሆን የመንገድ ዳር ድንጋይ (curbstone) በሌለባቸው ቦታዎች የመንገዱን ወሰን ይወስናል። አሽከርካሪዎች ሁልጊዜ ከዚህ መስመር በግራ በኩል መንዳት አለባቸው እንጂ መስመሩን መሻገር ወይም በቀኝ በኩል መንዳት የለባቸውም። መስመሩን መሻገር የሚፈቀደው አደጋን ለማስወገድ፣ ትራፊክን የሚያግድ በጣም ቀርፋፋ ተሽከርካሪን ለማለፍ ወይም በህግ ሲጠየቅ ብቻ ነው። ይህንን ህግ አለማክበር የትራፊክ ጥሰት ሲሆን አደጋ ሊያስከትል ይችላል።",
     "audio_name_filename": "807_name.mp3",
     "audio_explanation_filename": "807_explanation.mp3",
     "questions": [
       {
         "id": "807_q1",
-        "question_amharic": "በመንገድ ዳር ላይ የሚገኙት ቢጫ መስመሮች ምን ያመለክታሉ?",
+        "question_amharic": "በመንገዱ ቀኝ ዳርቻ ላይ ያለው ጠንካራ ቢጫ መስመር ምን ያመለክታል?",
         "question_audio": "807_q1_question.mp3",
-        "explanation_correct_amharic": "ትክክል! ይህ ምልክት ቢጫ መስመሮች በመንገድ ዳር ላይ ማቆም፣ መቆም ወይም ማቆም የተከለከለ መሆኑን በግልጽ ያመለክታሉ።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በተከለከለ ቦታ ማቆም የትራፊክ ህግን መጣስ ሲሆን ቅጣት እና ተሽከርካሪ መጎተት ያስከትላል።",
+        "explanation_correct_amharic": "ጎሽ! ይህ ቢጫ መስመር የመንገዱን ቀኝ ዳርቻ የሚወስን ሲሆን አሽከርካሪዎች ሁልጊዜ ከዚህ መስመር በግራ በኩል መንዳት አለባቸው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ ከመረጡ የመንገዱን ወሰን በመጣስ የትራፊክ ህግን ይጥሳሉ እንዲሁም አደጋ ሊያስከትሉ ይችላሉ።",
         "explanation_correct_audio": "807_q1_correct.mp3",
         "explanation_wrong_audio": "807_q1_wrong.mp3",
         "answers": [
           {
             "id": "D",
-            "text_amharic": "ተሳፋሪዎችን ለማውረድ ወይም ለመጫን ማቆም ይፈቀዳል።",
+            "text_amharic": "ከፊት ለፊት የእግረኛ መሻገሪያ እንዳለ ያመለክታል።",
             "is_correct": false,
             "audio_filename": "answer_807_q1_D.mp3"
           },
           {
-            "id": "A",
-            "text_amharic": "ለአጭር ጊዜ መኪና ማቆም ይፈቀዳል ማለት ነው።",
-            "is_correct": false,
-            "audio_filename": "answer_807_q1_A.mp3"
-          },
-          {
             "id": "B",
-            "text_amharic": "በዚህ ቦታ መኪና ማቆም፣ መቆም ወይም ማቆም በፍጹም የተከለከለ ነው።",
+            "text_amharic": "የመንገዱን ቀኝ ወሰን የሚያሳይ ሲሆን አሽከርካሪዎች ከዚህ መስመር በግራ በኩል መንዳት አለባቸው።",
             "is_correct": true,
             "audio_filename": "answer_807_q1_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "ይህ የአውቶቡስ ማቆሚያ ቦታ ነው።",
+            "text_amharic": "ከመስመሩ በሁለቱም በኩል መንዳት እንደሚቻል ያሳያል።",
             "is_correct": false,
             "audio_filename": "answer_807_q1_C.mp3"
+          },
+          {
+            "id": "A",
+            "text_amharic": "ይህ ለመኪና ማቆሚያ የተፈቀደ ቦታ መሆኑን ያመለክታል።",
+            "is_correct": false,
+            "audio_filename": "answer_807_q1_A.mp3"
           }
         ]
       },
       {
         "id": "807_q2",
-        "question_amharic": "አሽከርካሪዎች ይህንን ምልክት ሲያዩ ምን ማድረግ አለባቸው?",
+        "question_amharic": "አሽከርካሪ በመንገዱ ቀኝ ዳርቻ ላይ ያለውን ጠንካራ ቢጫ መስመር እንዲያልፍ የሚፈቀደው በምን ሁኔታዎች ነው?",
         "question_audio": "807_q2_question.mp3",
-        "explanation_correct_amharic": "ትክክል! ጥሩ ነው። የቢጫ መስመሮች ምልክት ማቆም ክልክል መሆኑን ስለሚያመለክት አሽከርካሪዎች ማቆም የለባቸውም።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በተከለከለ ቦታ ማቆም የትራፊክ ፍሰትን ሊያስተጓጉል ወይም አደጋ ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "እሰይ። አቤት እውቀት! መስመሩን መሻገር የሚፈቀደው አደጋን ለማስወገድ፣ ትራፊክን የሚያግድ በጣም ቀርፋፋ ተሽከርካሪን ለማለፍ ወይም በህግ ሲጠየቅ ብቻ ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ከእነዚህ የተፈቀዱ ሁኔታዎች ውጪ መስመሩን መሻገር የትራፊክ ህግን መጣስ ሲሆን ለቅጣት እና ለአደጋ ያጋልጣል።",
         "explanation_correct_audio": "807_q2_correct.mp3",
         "explanation_wrong_audio": "807_q2_wrong.mp3",
         "answers": [
           {
-            "id": "C",
-            "text_amharic": "አቅጣጫ ለመጠየቅ መኪናቸውን ማቆም ይችላሉ።",
-            "is_correct": false,
-            "audio_filename": "answer_807_q2_C.mp3"
-          },
-          {
-            "id": "D",
-            "text_amharic": "ሌላ ቦታ ከሌለ መኪናቸውን ማቆም ይችላሉ።",
-            "is_correct": false,
-            "audio_filename": "answer_807_q2_D.mp3"
+            "id": "B",
+            "text_amharic": "አደጋን ለማስወገድ፣ ትራፊክን የሚያግድ በጣም ቀርፋፋ ተሽከርካሪን ለማለፍ ወይም በህግ ሲጠየቁ ብቻ ነው።",
+            "is_correct": true,
+            "audio_filename": "answer_807_q2_B.mp3"
           },
           {
             "id": "A",
-            "text_amharic": "በፍጥነት መኪናቸውን አቁመው መሄድ አለባቸው።",
+            "text_amharic": "ለአጭር ጊዜ ለማቆም ሲፈልጉ ብቻ ነው።",
             "is_correct": false,
             "audio_filename": "answer_807_q2_A.mp3"
           },
           {
-            "id": "B",
-            "text_amharic": "በተከለከለው ቦታ ሳያቆሙ ማሽከርከር መቀጠል አለባቸው።",
-            "is_correct": true,
-            "audio_filename": "answer_807_q2_B.mp3"
+            "id": "D",
+            "text_amharic": "ተሳፋሪዎችን በፍጥነት ለማንሳት ወይም ለማውረድ ሲፈልጉ ብቻ ነው።",
+            "is_correct": false,
+            "audio_filename": "answer_807_q2_D.mp3"
+          },
+          {
+            "id": "C",
+            "text_amharic": "በመንገድ ላይ ሌላ ትራፊክ ከሌለ ብቻ ነው።",
+            "is_correct": false,
+            "audio_filename": "answer_807_q2_C.mp3"
           }
         ]
       },
       {
         "id": "807_q3",
-        "question_amharic": "ይህንን ምልክት ችላ በማለት በተከለከለ ቦታ ማቆም ምን የሚያስከትል መዘዝ አለው?",
+        "question_amharic": "የመንገዱ ቀኝ ዳርቻ ላይ ያለው ጠንካራ ቢጫ መስመር፣ በተለይም የመንገድ ዳር ድንጋይ በሌለበት ቦታ፣ ዋና ዓላማው ምንድን ነው?",
         "question_audio": "807_q3_question.mp3",
-        "explanation_correct_amharic": "አሪፍ! ምልክቱ የትራፊክ ህግን መጣስ ሁልጊዜ የገንዘብ ቅጣት፣ ተሽከርካሪ መጎተት ወይም ሌሎች ህጋዊ እርምጃዎችን ያስከትላል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የአደጋ መብራቶችን ማብራት ወይም ለአጭር ጊዜ ማቆም ክልከላውን አያነሳም እና አሁንም ቅጣት ያስከትላል።",
+        "explanation_correct_amharic": "በጣም ጥሩ። ይህ ቢጫ መስመር የመንገዱን ቀኝ ወሰን የሚወስን ሲሆን ለመንዳት የተፈቀደውን የመንገድ ክፍል ከሌሎች አካባቢዎች ይለያል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ ከመረጡ የመንገዱን ትክክለኛ ወሰን ባለመረዳት አደጋ ሊያስከትሉ ወይም የትራፊክ ፍሰትን ሊያስተጓጉሉ ይችላሉ።",
         "explanation_correct_audio": "807_q3_correct.mp3",
         "explanation_wrong_audio": "807_q3_wrong.mp3",
         "answers": [
           {
-            "id": "B",
-            "text_amharic": "የገንዘብ ቅጣት ሊጣልብዎ ወይም መኪናዎ ሊጎተት ይችላል።",
-            "is_correct": true,
-            "audio_filename": "answer_807_q3_B.mp3"
-          },
-          {
-            "id": "A",
-            "text_amharic": "ለአንድ ደቂቃ ብቻ ከሆነ ምንም ችግር የለውም።",
-            "is_correct": false,
-            "audio_filename": "answer_807_q3_A.mp3"
-          },
-          {
             "id": "C",
-            "text_amharic": "ማስጠንቀቂያ ብቻ ይሰጥዎታል።",
+            "text_amharic": "የአውቶቡስ ማቆሚያ ቦታን ለማመልከት ነው።",
             "is_correct": false,
             "audio_filename": "answer_807_q3_C.mp3"
           },
           {
+            "id": "A",
+            "text_amharic": "ብስክሌቶች የት መንዳት እንዳለባቸው ለማሳየት ነው።",
+            "is_correct": false,
+            "audio_filename": "answer_807_q3_A.mp3"
+          },
+          {
+            "id": "B",
+            "text_amharic": "ለመንዳት የተፈቀደውን የመንገድ ክፍል ለመወሰን እና ከጎን መንገድ ወይም ከመንገድ ዳር ለመለየት ነው።",
+            "is_correct": true,
+            "audio_filename": "answer_807_q3_B.mp3"
+          },
+          {
             "id": "D",
-            "text_amharic": "የአደጋ መብራቶችን ካበሩ ማቆም ይችላሉ።",
+            "text_amharic": "ለአደጋ ጊዜ ተሽከርካሪዎች ልዩ መስመር ለማመልከት ነው።",
             "is_correct": false,
             "audio_filename": "answer_807_q3_D.mp3"
           }
@@ -27893,41 +27893,41 @@
     "image_filename": "816.png",
     "video_filename": null,
     "name_hebrew": "816",
-    "name_amharic": "ይህ ምልክት በመንገድ ዳር ተሽከርካሪን ማቆም በፍጹም የተከለከለ መሆኑን ያመለክታል።",
-    "explanation_amharic": "ይህ ምልክት ተሽከርካሪን በመንገድ ዳር ማቆም፣ ሰዎችን ማውረድ ወይም መጫን፣ ወይም ለአጭር ጊዜም ቢሆን መቆም የተከለከለ መሆኑን ያስረዳል። አሽከርካሪው ይህንን ምልክት ሲያይ ተሽከርካሪውን በዚህ ቦታ ማቆም የለበትም፣ የትራፊክ መጨናነቅ ካልሆነ በስተቀር። ይህንን ህግ መጣስ የገንዘብ ቅጣት ያስከትላል እንዲሁም የትራፊክ ፍሰትን ያደናቅፋል።",
+    "name_amharic": "ጥቁር ነጭ የመንገድ ዳር ምልክት",
+    "explanation_amharic": "ይህ ጥቁርና ነጭ ቀለም ያለው ምልክት በመንገድ ዳር፣ በመንገድ መለያዎች ወይም በትራፊክ ደሴቶች ላይ የሚገኝ ሲሆን በተለይ በምሽት ታይነትን ለማሻሻል እነዚህን ቦታዎች ለማጉላት ያገለግላል። አሽከርካሪዎች በእነዚህ ምልክት በተደረገባቸው ቦታዎች ላይ መንዳት፣ ለአጭርም ሆነ ለረጅም ጊዜ መቆም ወይም ማቆም ፈጽሞ የተከለከለ ነው። የዚህ ምክንያት ደግሞ ምልክቱ ራሱ ማቆምን ባይከለክልም፣ እነዚህ ቦታዎች (እንደ የእግረኛ መንገድ ዳር ወይም የትራፊክ ደሴት) በመሠረቱ ለመንዳትና ለማቆም የተከለከሉ በመሆናቸው ነው።",
     "audio_name_filename": "816_name.mp3",
     "audio_explanation_filename": "816_explanation.mp3",
     "questions": [
       {
         "id": "816_q1",
-        "question_amharic": "ይህ በመንገድ ዳር የሚታይ ምልክት ምን ማለት ነው?",
+        "question_amharic": "ጥቁርና ነጭ ቀለም የተቀባ የመንገድ ዳር ምልክት ሲያዩ ምን ማድረግ የለብዎትም?",
         "question_audio": "816_q1_question.mp3",
-        "explanation_correct_amharic": "ትክክل! ይህ ምልክት ተሽከርካሪን በምንም ምክንያት፣ ለአጭር ጊዜም ቢሆን፣ ማቆም የተከለከለ መሆኑን በግልጽ ያሳያል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በተከለከለ ቦታ ማቆም ወይም መቆም የትራፊክ ፍሰትን የሚያደናቅፍ ሲሆን የገንዘብ ቅጣትም ያስከትላል።",
+        "explanation_correct_amharic": "ጥቁርና ነጭ ምልክት ያለባቸው የመንገድ ዳር፣ መለያዎችና የትራፊክ ደሴቶች ለመንዳት፣ ለመቆም ወይም ለማቆም የተከለከሉ ቦታዎች ናቸው።",
+        "explanation_wrong_amharic": "በእነዚህ ቦታዎች ላይ መንዳት ወይም ማቆም አደጋ ሊያስከትልና የትራፊክ ደንቦችን በመጣስ ቅጣት ያስከትላል።",
         "explanation_correct_audio": "816_q1_correct.mp3",
         "explanation_wrong_audio": "816_q1_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "በዚህ ቦታ ተሽከርካሪ ማቆም እና ለረጅም ጊዜ መቆየት ይፈቀዳል ማለት ነው።",
+            "text_amharic": "በመንገድ ዳር ላይ ለአጭር ጊዜ መቆም ወይም ማቆም አይፈቀድም።",
             "is_correct": false,
             "audio_filename": "answer_816_q1_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "በዚህ የመንገድ ክፍል ውስጥ ተሽከርካሪን በምንም ምክንያት ማቆም በፍጹም የተከለከለ ነው።",
+            "text_amharic": "በእነዚህ ምልክት በተደረገባቸው ቦታዎች ላይ መንዳት፣ ለአጭርም ሆነ ለረጅም ጊዜ መቆም ወይም ማቆም ፈጽሞ የተከለከለ ነው።",
             "is_correct": true,
             "audio_filename": "answer_816_q1_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "ሰዎችን ለማውረድ ወይም ለመጫን ለአጭር ጊዜ ማቆም ይፈቀዳል ማለት ነው።",
+            "text_amharic": "በእነዚህ ቦታዎች ላይ መንዳት የሚፈቀደው ሌላ መንገድ ከሌለ ብቻ ነው።",
             "is_correct": false,
             "audio_filename": "answer_816_q1_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "በዚህ ቦታ ተሽከርካሪ ማቆም ይፈቀዳል ነገር ግን አሽከርካሪው ከመኪናው መውረድ የለበትም።",
+            "text_amharic": "ምልክቱ የመኪና ማቆሚያ ቦታ መሆኑን ያመለክታል።",
             "is_correct": false,
             "audio_filename": "answer_816_q1_D.mp3"
           }
@@ -27935,71 +27935,71 @@
       },
       {
         "id": "816_q2",
-        "question_amharic": "አሽከርካሪ ይህንን ምልክት ሲያይ ምን ማድረግ አለበት?",
+        "question_amharic": "ጥቁርና ነጭ የመንገድ ዳር ምልክት ዋና ዓላማ ምንድነው?",
         "question_audio": "816_q2_question.mp3",
-        "explanation_correct_amharic": "ትክክል! ጥሩ ነው። ይህ ምልክት ባለበት ቦታ ማቆም የተከለከለ ስለሆነ አሽከርካሪው ማሽከርከር መቀጠል አለበት።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በተከለከለ ቦታ ማቆም የትራፊክ ህግን መጣስ ሲሆን አደጋ ሊያስከትል ወይም ቅጣት ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "የጥቁርና ነጭ ቀለም ዋና ተግባር የመንገድ ዳር አካላትን ታይነት ማሻሻል ሲሆን፣ እዚያ መንዳት ወይም ማቆም የተከለከለው ደግሞ የቦታው ባህሪ ምክንያት ነው።",
+        "explanation_wrong_amharic": "የዚህ ምልክት ዋና ዓላማ ታይነትን ማሻሻል እንጂ በቀጥታ ማቆምን መከልከል አይደለም፤ ማቆም የተከለከለው ቦታው የእግረኛ መንገድ ዳር ወይም የትራፊክ ደሴት ስለሆነ ነው።",
         "explanation_correct_audio": "816_q2_correct.mp3",
         "explanation_wrong_audio": "816_q2_wrong.mp3",
         "answers": [
           {
-            "id": "D",
-            "text_amharic": "የትራፊክ ፖሊስ ከሌለ ለአጭር ጊዜ ማቆም ይችላል።",
-            "is_correct": false,
-            "audio_filename": "answer_816_q2_D.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "ፍጥነቱን ቀንስ እና ሰዎችን ለማውረድ ወይም ለመጫን ተዘጋጅ።",
+            "text_amharic": "አሽከርካሪዎች እዚያ እንዳያቆሙ ለማስጠንቀቅ ነው።",
             "is_correct": false,
             "audio_filename": "answer_816_q2_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "በዚህ የመንገድ ክፍል ውስጥ ተሽከርካሪውን ሳያቆም ማሽከርከር መቀጠል አለበት።",
+            "text_amharic": "የመንገድ ዳርን፣ መለያዎችንና የትራፊክ ደሴቶችን በተለይ በምሽት በግልጽ እንዲታዩ ለማድረግ ነው።",
             "is_correct": true,
             "audio_filename": "answer_816_q2_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "በአቅራቢያው የመኪና ማቆሚያ ቦታ መፈለግ አለበት።",
+            "text_amharic": "ይህ ቦታ ለአውቶቡሶች ማቆሚያ መሆኑን ለማመልከት ነው።",
             "is_correct": false,
             "audio_filename": "answer_816_q2_C.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "አሽከርካሪዎች ፍጥነታቸውን እንዲቀንሱ ለማስገደድ ነው።",
+            "is_correct": false,
+            "audio_filename": "answer_816_q2_D.mp3"
           }
         ]
       },
       {
         "id": "816_q3",
-        "question_amharic": "ይህንን 'ማቆም የተከለከለ' ምልክት ችላ በማለት ተሽከርካሪን ካቆሙ ምን ሊከሰት ይችላል?",
+        "question_amharic": "ጥቁርና ነጭ ምልክት ያለበት የትራፊክ ደሴት ሲያዩ ምን ማድረግ አለብዎት?",
         "question_audio": "816_q3_question.mp3",
-        "explanation_correct_amharic": "አሪፍ! ምልክቱ ይህንን ምልክት ችላ ማለት የትራፊክ ደንቦችን መጣስ ሲሆን ይህም ቅጣት እና የትራፊክ መጨናነቅን ያስከትላል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በተከለከለ ቦታ ማቆም የትራፊክ ፍሰትን ከማደናቀፉም በላይ አደጋ ሊያስከትል የሚችል አደገኛ ተግባር ነው።",
+        "explanation_correct_amharic": "የትራፊክ ደሴቶች ለመንዳት፣ ለመቆም ወይም ለማቆም የተከለከሉ በመሆናቸው ሁልጊዜ በጥንቃቄ መዞር አለባቸው።",
+        "explanation_wrong_amharic": "የትራፊክ ደሴት ላይ መንዳት ወይም ማቆም አደገኛ ሲሆን የትራፊክ ፍሰትን ሊያስተጓጉልና አደጋ ሊያስከትል ይችላል።",
         "explanation_correct_audio": "816_q3_correct.mp3",
         "explanation_wrong_audio": "816_q3_wrong.mp3",
         "answers": [
           {
-            "id": "D",
-            "text_amharic": "ሌሎች አሽከርካሪዎች እንዲያልፉ ቦታ ከሰጡ ምንም ችግር የለውም።",
-            "is_correct": false,
-            "audio_filename": "answer_816_q3_D.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "ምንም አይነት ችግር አይፈጠርም ምክንያቱም ለአጭር ጊዜ ማቆም ይፈቀዳል።",
-            "is_correct": false,
+            "text_amharic": "የትራፊክ ደሴቱን በጥንቃቄ መዞር አለብዎት ምክንያቱም በእሱ ላይ መንዳት የተከለከለ ነው።",
+            "is_correct": true,
             "audio_filename": "answer_816_q3_A.mp3"
           },
           {
+            "id": "B",
+            "text_amharic": "የትራፊክ ደሴቱ ላይ ለአጭር ጊዜ ቆሞ ሰዎችን ማውረድ ወይም ማንሳት ይፈቀዳል።",
+            "is_correct": false,
+            "audio_filename": "answer_816_q3_B.mp3"
+          },
+          {
             "id": "C",
-            "text_amharic": "ፖሊስ መጥቶ እንዲሄዱ ብቻ ያስጠነቅቀዎታል እንጂ ቅጣት አይጥልም።",
+            "text_amharic": "ትራፊክ ከሌለበት የትራፊክ ደሴት ላይ መንዳት ይፈቀዳል።",
             "is_correct": false,
             "audio_filename": "answer_816_q3_C.mp3"
           },
           {
-            "id": "B",
-            "text_amharic": "የትራፊክ ፍሰት ሊደናቀፍ እና የገንዘብ ቅጣት ሊጣልብዎት ይችላል።",
-            "is_correct": true,
-            "audio_filename": "answer_816_q3_B.mp3"
+            "id": "D",
+            "text_amharic": "የትራፊክ ደሴቱ ላይ መኪናዎን ማቆም ይችላሉ።",
+            "is_correct": false,
+            "audio_filename": "answer_816_q3_D.mp3"
           }
         ]
       }
