@@ -68,6 +68,17 @@ For explanation_amharic, follow this exact logical structure:
 (English gloss for your understanding only, do not output English: "This black-and-white color itself creates no restriction — its purpose is only to highlight. But the reason stopping/parking here, whether briefly or for a long time, is forbidden is NOT the color — it's because this place is itself a sidewalk or traffic island.")
 
 CRITICAL: the template above uses ONLY the single verb "ማቆም" together with the time-qualifier "ለአጭርም ሆነ ለረጅም ጊዜ" (whether briefly or for a long time) to cover BOTH short stopping and long-term parking. Do NOT use the pair "መቆም ወይም ማቆም" anywhere in explanation_amharic OR in any question/answer — these two words look/sound nearly identical and confuse audio-only listeners who cannot read. Wherever a draft would use "መንዳት፣ መቆም ወይም ማቆም", replace it with "መንዳት ወይም ለአጭርም ሆነ ለረጅም ጊዜ ማቆም" (driving, or stopping whether briefly or for a long time) — always ONE stopping/parking verb ("ማቆም") plus the time-qualifier, never two similar verbs side by side.`,
+  820: `תמרור 820, הידוע גם כ"מעטפה", הוא סימון לבן על הכביש בצורת מלבן עם קווים אלכסוניים חוצים (X). מטרתו היא לאסור חניה לחלוטין בתוך השטח המסומן כדי לאפשר כניסה ויציאה חופשית לחניות פרטיות, מבנים או דרכי חירום.
+משמעות וכללים
+* איסור מוחלט: אסור להחנות רכב בתוך השטח המסומן, אפילו אם חלק קטן מהרכב בולט פנימה או אם מדובר ברכב של בעל החניה.
+* מטרה מרכזית: שומר על מרווח תמרון לכלי רכב בכניסה לחניונים ומפנה גישה לרכבי הצלה.
+* קנס כספי: חניה בשטח זה אסורה על פי תקנות התעבורה וגוררת קנס
+מאומת ממקורות חיצוניים (למד שלי, דוחות תנועה). חשוב: זה סימון שונה לגמרי ממעבר רכבת/מסילת ברזל — אסור בשום אופן לתאר את זה כקשור לרכבת, לתחנת רכבת, או למחסום מסילת ברזל. אסור גם לתאר את זה כתמרור אזהרה (warning) — זהו סימון על הכביש (road marking) בלבד.
+
+⚠️ MANDATORY EXACT PHRASING for explanation_amharic — follow this full template closely (previous drafts were too narrow, sounding like this sign only exists at parking-lot entrances, and separately used the misleading phrase "የግል መኪና ማቆሚያ ቦታዎች" which can be misread as saying parking IS permitted here):
+"ይህ ነጭ የመንገድ ላይ ምልክት 'መጠቅለያ' (እንግሊዝኛ: envelope) ተብሎም ይታወቃል፣ አራት ማዕዘን ቅርጽ ያለው እና በመሃሉ ላይ 'X' ምልክት ያለው ነው። በዚህ ምልክት በተከበበው ቦታ ላይ መኪና ማቆም ፈጽሞ የተከለከለ ነው፤ ይህም ወደ የግል ማቆሚያ፣ ህንፃ መግቢያ ወይም የአደጋ ጊዜ መውጫ የሚወስደውን መንገድ ሁልጊዜ ክፍት ለማድረግ ነው። የዚህ ምልክት ዋና ዓላማ ለተሽከርካሪዎች ወደ ማቆሚያ ቦታ ለመግባትና ለመውጣት የመንቀሳቀሻ ቦታ መስጠት እና ለነፍስ አድን ተሽከርካሪዎች (እንደ አምቡላንስ) መንገድ ክፍት ማድረግ ነው።"
+(English gloss for your understanding only, do not output English: "This white road marking is also known as an 'envelope' — a rectangle with an X in the middle. Parking is absolutely forbidden within the area it encloses, in order to always keep clear the path leading to a private parking area, a building entrance, or an emergency exit. The sign's main purpose is to give vehicles maneuvering space to enter/exit a parking area, and to keep the road clear for rescue vehicles such as ambulances.")
+Note this covers THREE distinct things the marking protects access to — private parking, building entrances, AND emergency exits/routes — not just parking-lot entrances. Use "ነፍስ አድን ተሽከርካሪዎች" (rescue vehicles) — NOT "አደጋ ጊዜ ተሽከርካሪዎች" (a vague/ambiguous phrase that reads as "danger-time vehicles"). These are the ONLY verified purposes — do not invent or add any other.`,
 };
 const EXTRA_CONTEXT_ARG = process.argv.find(a => a.startsWith('--extra-context='));
 const EXTRA_CONTEXT = EXTRA_CONTEXT_ARG

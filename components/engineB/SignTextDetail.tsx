@@ -209,7 +209,7 @@ const styles = StyleSheet.create({
     fontSize:   20,
     fontWeight: '700',
     lineHeight: 32,
-    color:      Colors.textPrimary,
+    color:      '#191c1e',
     textAlign:  'center',
   },
   nameAudioBtn: {

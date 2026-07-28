@@ -28368,41 +28368,41 @@
     "image_filename": "820.png",
     "video_filename": null,
     "name_hebrew": "820",
-    "name_amharic": "ይህ ምልክት ከፊት ለፊትህ የባቡር መስመር መሻገሪያ ያለ መከላከያ መኖሩን ያመለክታል።",
-    "explanation_amharic": "ይህ ምልክት ከፊት ለፊትህ የባቡር መስመር መሻገሪያ (level crossing) ያለ መከላከያ ወይም የጥበቃ ሰራተኛ መኖሩን ያስጠነቅቃል። አሽከርካሪው ይህንን ምልክት ሲያይ ፍጥነቱን መቀነስ፣ በሁለቱም አቅጣጫ ባቡር መኖሩን ማየትና መስማት፣ እንዲሁም ባቡር ከሌለ ብቻ በጥንቃቄ ማለፍ አለበት። ይህንን ምልክት ችላ ማለት ከባቡር ጋር ግጭት በመፍጠር ለከፋ አደጋ ሊዳርግ ይችላል።",
+    "name_amharic": "የመኪና ማቆሚያ ክልከላ ምልክት",
+    "explanation_amharic": "ይህ ነጭ የመንገድ ላይ ምልክት 'መጠቅለያ' (እንግሊዝኛ: envelope) ተብሎም ይታወቃል፣ አራት ማዕዘን ቅርጽ ያለው እና በመሃሉ ላይ 'X' ምልክት ያለው ነው። በዚህ ምልክት በተከበበው ቦታ ላይ መኪና ማቆም ፈጽሞ የተከለከለ ነው፤ ይህም ወደ የግል ማቆሚያ፣ ህንፃ መግቢያ ወይም የአደጋ ጊዜ መውጫ የሚወስደውን መንገድ ሁልጊዜ ክፍት ለማድረግ ነው። የዚህ ምልክት ዋና ዓላማ ለተሽከርካሪዎች ወደ ማቆሚያ ቦታ ለመግባትና ለመውጣት የመንቀሳቀሻ ቦታ መስጠት እና ለነፍስ አድን ተሽከርካሪዎች (እንደ አምቡላንስ) መንገድ ክፍት ማድረግ ነው። ይህንን ህግ መተላለፍ የገንዘብ ቅጣት ያስከትላል።",
     "audio_name_filename": "820_name.mp3",
     "audio_explanation_filename": "820_explanation.mp3",
     "questions": [
       {
         "id": "820_q1",
-        "question_amharic": "ይህ የመንገድ ምልክት ምን ማለት ነው?",
+        "question_amharic": "ይህ የመንገድ ላይ ምልክት ዋነኛ ዓላማ ምንድነው?",
         "question_audio": "820_q1_question.mp3",
-        "explanation_correct_amharic": "ጎበዝ። ይህ ምልክት አሽከርካሪዎች ከፊት ለፊት የባቡር መስመር መሻገሪያ ያለ መከላከያ መኖሩን እንዲያውቁ ያስጠነቅቃል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ መምረጥ አሽከርካሪው ለባቡር አደጋ እንዲጋለጥ ያደርጋል።",
+        "explanation_correct_amharic": "በጣም ጥሩ። ይህ ምልክት ወደ ግል ማቆሚያ፣ ህንፃ መግቢያ ወይም የአደጋ ጊዜ መውጫ የሚወስደውን መንገድ ሁልጊዜ ክፍት ለማድረግ ያለመ ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ መምረጥ የመንገድ ደህንነትን አደጋ ላይ ይጥላል እና አስፈላጊ መግቢያዎችን ሊዘጋ ይችላል።",
         "explanation_correct_audio": "820_q1_correct.mp3",
         "explanation_wrong_audio": "820_q1_wrong.mp3",
         "answers": [
           {
+            "id": "A",
+            "text_amharic": "ባቡር የሚያቋርጥበትን ቦታ ለማመልከት ነው።",
+            "is_correct": false,
+            "audio_filename": "answer_820_q1_A.mp3"
+          },
+          {
             "id": "D",
-            "text_amharic": "ከፊት ለፊት የግንባታ ቦታ አለ።",
+            "text_amharic": "ዕቃዎችን ለመጫንና ለማውረድ የተፈቀደ ቦታን ለማሳየት ነው።",
             "is_correct": false,
             "audio_filename": "answer_820_q1_D.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "ከፊት ለፊት የባቡር መስመር መሻገሪያ ያለ መከላከያ አለ።",
+            "text_amharic": "ወደ ግል ማቆሚያ ቦታዎች፣ የህንፃ መግቢያዎች እና የአደጋ ጊዜ መውጫዎች ሁልጊዜ ክፍት መሆናቸውን ለማረጋገጥ ነው።",
             "is_correct": true,
             "audio_filename": "answer_820_q1_B.mp3"
           },
           {
-            "id": "A",
-            "text_amharic": "ከፊት ለፊት የአውቶቡስ ማቆሚያ አለ።",
-            "is_correct": false,
-            "audio_filename": "answer_820_q1_A.mp3"
-          },
-          {
             "id": "C",
-            "text_amharic": "ከፊት ለፊት የእግረኛ መሻገሪያ አለ።",
+            "text_amharic": "ጊዜያዊ የግንባታ ቦታን ለመጠቆም ነው።",
             "is_correct": false,
             "audio_filename": "answer_820_q1_C.mp3"
           }
@@ -28410,71 +28410,71 @@
       },
       {
         "id": "820_q2",
-        "question_amharic": "ይህንን ምልክት ሲያዩ አሽከርካሪ ምን ማድረግ አለበት?",
+        "question_amharic": "አሽከርካሪ ይህንን ምልክት በመንገድ ላይ ሲያይ ምን ማድረግ አለበት?",
         "question_audio": "820_q2_question.mp3",
-        "explanation_correct_amharic": "በጣም ጥሩ። በዚህ ምልክት ላይ አሽከርካሪዎች ጥንቃቄ ማድረግ እና ባቡር መኖሩን ማረጋገጥ አለባቸው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ትክክለኛውን እርምጃ አለመውሰድ ከባቡር ጋር ለሚፈጠር ግጭት ሊዳርግ ይችላል።",
+        "explanation_correct_amharic": "ጎሽ! ምልክቱ በተከበበው ቦታ ላይ መኪና ማቆም ፈጽሞ የተከለከለ መሆኑን ያመለክታል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በዚህ ምልክት በተከለከለ ቦታ ማቆም የትራፊክ ፍሰትን ያደናቅፋል እና የገንዘብ ቅጣት ያስከትላል።",
         "explanation_correct_audio": "820_q2_correct.mp3",
         "explanation_wrong_audio": "820_q2_wrong.mp3",
         "answers": [
           {
-            "id": "A",
-            "text_amharic": "በፍጥነት ማሽከርከር እና መሻገሪያውን በፍጥነት ማለፍ አለበት።",
+            "id": "D",
+            "text_amharic": "ፍጥነቱን ቀንሶ ለእግረኞች ለመቆም መዘጋጀት አለበት።",
             "is_correct": false,
-            "audio_filename": "answer_820_q2_A.mp3"
+            "audio_filename": "answer_820_q2_D.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "ሙሉ በሙሉ ማቆም እና አረንጓዴ መብራት መጠበቅ አለበት።",
-            "is_correct": false,
+            "text_amharic": "በተከለከለው ቦታ ውስጥ ተሽከርካሪውን በምንም መልኩ ማቆም የለበትም።",
+            "is_correct": true,
             "audio_filename": "answer_820_q2_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "ፍጥነቱን መቀነስ፣ ባቡር መኖሩን ማየትና መስማት፣ እንዲሁም ደህንነቱ የተጠበቀ ሲሆን ብቻ ማለፍ አለበት።",
-            "is_correct": true,
+            "text_amharic": "ቦታው የእሱ የግል ማቆሚያ ቦታ ከሆነ ማቆም ይችላል።",
+            "is_correct": false,
             "audio_filename": "answer_820_q2_C.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "ጮክ ብሎ መለከት መምታት እና ሳያቆም ማለፍ አለበት።",
+            "id": "A",
+            "text_amharic": "በመኪናው ውስጥ እስካለ ድረስ ለአጭር ጊዜ ማቆም ይችላል።",
             "is_correct": false,
-            "audio_filename": "answer_820_q2_D.mp3"
+            "audio_filename": "answer_820_q2_A.mp3"
           }
         ]
       },
       {
         "id": "820_q3",
-        "question_amharic": "ይህንን ምልክት ችላ የማለት ዋናው አደጋ ምንድነው?",
+        "question_amharic": "በዚህ ምልክት በተከለከለ ቦታ ላይ መኪና ማቆም የሚያስከትለው ውጤት ምንድነው?",
         "question_audio": "820_q3_question.mp3",
-        "explanation_correct_amharic": "ጎሽ! ይህ ምልክት የባቡር መስመር መሻገሪያ መሆኑን ስለሚያመለክት፣ ችላ ማለት ከባቡር ጋር ለከፋ አደጋ ይዳርጋል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የዚህን ምልክት አደጋ አለመረዳት ህይወትን አደጋ ላይ ይጥላል።",
+        "explanation_correct_amharic": "አሪፍ! ምልክቱ ይህንን ህግ መተላለፍ በህጉ መሰረት የገንዘብ ቅጣት ያስከትላል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ መምረጥ አሽከርካሪው የገንዘብ ቅጣት እንዲከፍል ያደርገዋል እና የትራፊክ ደንቦችን መጣስ ነው።",
         "explanation_correct_audio": "820_q3_correct.mp3",
         "explanation_wrong_audio": "820_q3_wrong.mp3",
         "answers": [
           {
-            "id": "D",
-            "text_amharic": "ነዳጅ ማለቅ ነው።",
-            "is_correct": false,
-            "audio_filename": "answer_820_q3_D.mp3"
+            "id": "B",
+            "text_amharic": "አሽከርካሪው የገንዘብ ቅጣት ይጣልበታል።",
+            "is_correct": true,
+            "audio_filename": "answer_820_q3_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "በመንገድ ላይ መጥፋት ነው።",
+            "text_amharic": "ተሽከርካሪው ያለ ቅጣት ወዲያውኑ ይነሳል።",
             "is_correct": false,
             "audio_filename": "answer_820_q3_C.mp3"
           },
           {
-            "id": "A",
-            "text_amharic": "የመኪና ማቆሚያ ቅጣት ማግኘት ነው።",
+            "id": "D",
+            "text_amharic": "አሽከርካሪው በመንጃ ፈቃዱ ላይ ነጥቦችን ያጣል ነገር ግን ቅጣት አይጣልበትም።",
             "is_correct": false,
-            "audio_filename": "answer_820_q3_A.mp3"
+            "audio_filename": "answer_820_q3_D.mp3"
           },
           {
-            "id": "B",
-            "text_amharic": "ከባቡር ጋር በመጋጨት ለከባድ ጉዳት ወይም ለሞት መዳረግ ነው።",
-            "is_correct": true,
-            "audio_filename": "answer_820_q3_B.mp3"
+            "id": "A",
+            "text_amharic": "ምንም የተለየ ውጤት የለውም፣ ማስጠንቀቂያ ብቻ ነው።",
+            "is_correct": false,
+            "audio_filename": "answer_820_q3_A.mp3"
           }
         ]
       }
