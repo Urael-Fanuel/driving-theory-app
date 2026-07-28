@@ -216,7 +216,6 @@ for (let i = 0; i < numberedSigns.length; i += BATCH) {
         name_hebrew:           sign.name_hebrew,
         name_amharic:          sign.name_amharic,
         explanation_amharic:   sign.explanation_amharic,
-        audio_name_url:        audioUrl(sign.audio_name_filename),
         audio_explanation_url: audioUrl(sign.audio_explanation_filename),
         image_url:             `${process.env.EXPO_PUBLIC_SUPABASE_URL}/storage/v1/object/public/images/v4/${signNum}.png`,
         display_order:         signNum,
