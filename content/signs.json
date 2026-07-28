@@ -30153,41 +30153,41 @@
     "image_filename": "914.png",
     "video_filename": null,
     "name_hebrew": "914",
-    "name_amharic": "ይህ ምልክት ከፊትህ ባለው መንገድ ላይ የሌይን አቀማመጥ ወይም ብዛት ለውጥ መኖሩን ያመለክታል።",
-    "explanation_amharic": "ይህ ምልክት በመንገዱ ላይ የሌይን አቀማመጥ ወይም ብዛት ለውጥ እንዳለ ያስጠነቅቀናል። አሽከርካሪው ይህንን ምልክት ሲያይ ፍጥነቱን መቀነስ፣ ከፍተኛ ጥንቃቄ ማድረግ እና አዲሱን የሌይን ምልክቶች መከተል አለበት። ይህንን ምልክት ችላ ማለት የትራፊክ አደጋ ወይም ግጭት ሊያስከትል ይችላል።",
+    "name_amharic": "የመንገድ መስመር ማዞሪያ",
+    "explanation_amharic": "ይህ ምልክት የሚያሳየው በመንገድ ላይ የሥራ ቦታ በመኖሩ ምክንያት የመንገድ መስመሮች እንደሚቀየሩ ወይም መዞሪያ እንዳለ ነው። አሽከርካሪዎች ፍጥነታቸውን መቀነስ፣ ምልክቶቹን በጥንቃቄ መከተል እና የመንገድ መስመሩን ለውጥ በሰላም ማለፍ አለባቸው። ይህንን ምልክት ችላ ማለት አደጋ ሊያስከትል ወይም የትራፊክ ፍሰቱን ሊያስተጓጉል ይችላል።",
     "audio_name_filename": "914_name.mp3",
     "audio_explanation_filename": "914_explanation.mp3",
     "questions": [
       {
         "id": "914_q1",
-        "question_amharic": "ይህ ምልክት ምን ያመለክታል?",
+        "question_amharic": "ይህ ብርቱካናማ ምልክት በመንገድ ላይ ምን ማለት ነው?",
         "question_audio": "914_q1_question.mp3",
-        "explanation_correct_amharic": "ጎበዝ። ይህ ምልክት በመንገዱ ላይ የሌይን አቀማመጥ ወይም ብዛት ለውጥ መኖሩን የሚያስጠነቅቅ ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የምልክቱን ትርጉም አለማወቅ አሽከርካሪው ለትራፊክ አደጋ እንዲጋለጥ ያደርገዋል።",
+        "explanation_correct_amharic": "ጎበዝ። ይህ ምልክት የመንገድ መስመሮች በሥራ ቦታ ምክንያት እንደሚዞሩ ወይም እንደሚቀየሩ ያስጠነቅቃል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ መምረጥ የመንገድ መስመር ለውጡን ባለማወቅ አደጋ ውስጥ ሊያስገባ ይችላል።",
         "explanation_correct_audio": "914_q1_correct.mp3",
         "explanation_wrong_audio": "914_q1_wrong.mp3",
         "answers": [
           {
-            "id": "C",
-            "text_amharic": "ወዲያውኑ ማቆም እንዳለብህ ያመለክታል።",
-            "is_correct": false,
-            "audio_filename": "answer_914_q1_C.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "መንገዱ ከፊት ለፊት ተዘግቷል ማለት ነው።",
+            "text_amharic": "በመንገድ ላይ የፍጥነት ገደብ እንደተለወጠ ያሳያል።",
             "is_correct": false,
             "audio_filename": "answer_914_q1_A.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "እንደተለመደው ማሽከርከር ትችላለህ ማለት ነው።",
+            "text_amharic": "መንገዱ ሙሉ በሙሉ እንደተዘጋ ያሳያል።",
             "is_correct": false,
             "audio_filename": "answer_914_q1_D.mp3"
           },
           {
+            "id": "C",
+            "text_amharic": "አሽከርካሪዎች በዚህ አካባቢ እንዲያቆሙ ይፈቀድላቸዋል።",
+            "is_correct": false,
+            "audio_filename": "answer_914_q1_C.mp3"
+          },
+          {
             "id": "B",
-            "text_amharic": "ከፊትህ ባለው መንገድ ላይ የሌይን ብዛት ወይም አቅጣጫ ለውጥ እንዳለ ያመለክታል።",
+            "text_amharic": "በመንገድ ላይ የሥራ ቦታ በመኖሩ ምክንያት የመንገድ መስመሮች መዞሪያ እንዳለ ያመለክታል።",
             "is_correct": true,
             "audio_filename": "answer_914_q1_B.mp3"
           }
@@ -30195,69 +30195,69 @@
       },
       {
         "id": "914_q2",
-        "question_amharic": "ይህን ምልክት ሲያዩ አሽከርካሪው ምን ማድረግ አለበት?",
+        "question_amharic": "ይህንን የመንገድ መስመር ማዞሪያ ምልክት ሲያዩ ምን ዓይነት እርምጃ መውሰድ አለብዎት?",
         "question_audio": "914_q2_question.mp3",
-        "explanation_correct_amharic": "በጣም ጥሩ። በሌይን ለውጥ ምክንያት የሚፈጠሩ አደጋዎችን ለመከላከል ፍጥነት መቀነስ እና ጥንቃቄ ማድረግ ወሳኝ ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ፍጥነት መጨመር ወይም ጥንቃቄ አለማድረግ ከሌሎች ተሽከርካሪዎች ጋር ግጭት ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "ዋው በጣም ጥሩ። ፍጥነትን መቀነስ እና የመንገድ መስመሩን ለውጥ በጥንቃቄ መከተል አደጋን ለመከላከል ወሳኝ ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ እርምጃ መውሰድ አደጋ ሊያስከትል ወይም በመንገድ ላይ ያሉ ሰራተኞችን አደጋ ላይ ሊጥል ይችላል።",
         "explanation_correct_audio": "914_q2_correct.mp3",
         "explanation_wrong_audio": "914_q2_wrong.mp3",
         "answers": [
           {
+            "id": "D",
+            "text_amharic": "ወዲያውኑ መኪናዎን አቁመው እርዳታ መጠበቅ አለብዎት።",
+            "is_correct": false,
+            "audio_filename": "answer_914_q2_D.mp3"
+          },
+          {
+            "id": "A",
+            "text_amharic": "ፍጥነትዎን ጨምረው በፍጥነት ማለፍ አለብዎት።",
+            "is_correct": false,
+            "audio_filename": "answer_914_q2_A.mp3"
+          },
+          {
             "id": "B",
-            "text_amharic": "ፍጥነቱን መቀነስ፣ ጥንቃቄ ማድረግ እና አዲሱን የሌይን ምልክቶች መከተል አለበት።",
+            "text_amharic": "ፍጥነትዎን በመቀነስ የመንገድ መስመሩን ለውጥ በጥንቃቄ መከተል አለብዎት።",
             "is_correct": true,
             "audio_filename": "answer_914_q2_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "ምልክት ሳይሰጥ ሌይን መቀየር አለበት።",
+            "text_amharic": "ምንም ለውጥ ሳያደርጉ እንደተለመደው ማሽከርከርዎን መቀጠል ይችላሉ።",
             "is_correct": false,
             "audio_filename": "answer_914_q2_C.mp3"
-          },
-          {
-            "id": "A",
-            "text_amharic": "ክፍሉን በፍጥነት ለማለፍ ፍጥነቱን መጨመር አለበት።",
-            "is_correct": false,
-            "audio_filename": "answer_914_q2_A.mp3"
-          },
-          {
-            "id": "D",
-            "text_amharic": "ምልክቱ ጊዜያዊ ስለሆነ ችላ ማለት አለበት።",
-            "is_correct": false,
-            "audio_filename": "answer_914_q2_D.mp3"
           }
         ]
       },
       {
         "id": "914_q3",
-        "question_amharic": "ይህንን ምልክት ችላ በማለት ሊከሰት የሚችለው አደጋ ምንድን ነው?",
+        "question_amharic": "ይህ ብርቱካናማ የመንገድ መስመር ማዞሪያ ምልክት በተለይ ከየትኛው የመንገድ ሁኔታ ጋር ይያያዛል?",
         "question_audio": "914_q3_question.mp3",
-        "explanation_correct_amharic": "ጎሽ! የሌይን ለውጥ ማስጠንቀቂያዎችን ችላ ማለት የመንገድ ተጠቃሚዎችን ደህንነት አደጋ ላይ ይጥላል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የምልክቱን ማስጠንቀቂያ አለመቀበል ለራስ እና ለሌሎች አሽከርካሪዎች አደጋን ይፈጥራል።",
+        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። ይህ ምልክት ሁልጊዜ ማለት ይቻላል በመንገድ ላይ የሥራ ቦታ ባለበት ጊዜ የሚደረግን ጊዜያዊ የመንገድ መስመር ለውጥ ወይም ማዞሪያ ያመለክታል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የዚህን ምልክት ትክክለኛ አውድ አለማወቅ አሽከርካሪው ለሥራ ቦታ አደጋዎች ተገቢውን ጥንቃቄ እንዳያደርግ ያደርገዋል።",
         "explanation_correct_audio": "914_q3_correct.mp3",
         "explanation_wrong_audio": "914_q3_wrong.mp3",
         "answers": [
           {
-            "id": "A",
-            "text_amharic": "ወደ መድረሻዎ በፍጥነት ሊደርሱ ይችላሉ።",
-            "is_correct": false,
-            "audio_filename": "answer_914_q3_A.mp3"
-          },
-          {
             "id": "B",
-            "text_amharic": "የትራፊክ አደጋ ወይም ግጭት ሊያስከትሉ ይችላሉ።",
+            "text_amharic": "በመንገድ ላይ የሥራ ቦታ በመኖሩ ምክንያት ከሚደረግ ጊዜያዊ የመንገድ መስመር ማዞሪያ ወይም ማለፊያ ጋር።",
             "is_correct": true,
             "audio_filename": "answer_914_q3_B.mp3"
           },
           {
+            "id": "A",
+            "text_amharic": "በቋሚነት ከተለወጡ የመንገድ መስመሮች ጋር።",
+            "is_correct": false,
+            "audio_filename": "answer_914_q3_A.mp3"
+          },
+          {
             "id": "D",
-            "text_amharic": "ለውጦቹ ቀላል ስለሆኑ ምንም ነገር አይከሰትም።",
+            "text_amharic": "በትምህርት ቤቶች አቅራቢያ ከሚገኙ የትራፊክ ቅነሳ ዞኖች ጋር።",
             "is_correct": false,
             "audio_filename": "answer_914_q3_D.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "በፍጥነት ለማሽከርከር ሽልማት ያገኛሉ።",
+            "text_amharic": "በመኖሪያ አካባቢዎች ውስጥ ከሚገኙ ጠባብ መንገዶች ጋር።",
             "is_correct": false,
             "audio_filename": "answer_914_q3_C.mp3"
           }
