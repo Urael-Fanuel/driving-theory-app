@@ -88,6 +88,17 @@ export default function EngineBTopicQuizScreen() {
     setTtsSpeaking(false);
   }, [currentIndex]);
 
+  // Leaving the screen must cancel the read-aloud SEQUENCE, not just silence the
+  // current clip. stopTTS() resolves the pending speakAndAwait, which the loop
+  // reads as "clip finished" — without clearing this flag it would advance to the
+  // next answer and start speaking again after the screen is gone.
+  useEffect(() => {
+    return () => {
+      ttsSpeakingRef.current = false;
+      stopTTS().catch(() => {});
+    };
+  }, []);
+
   // Show feedback after answer
   useEffect(() => {
     if (phase === 'feedback_correct' || phase === 'feedback_wrong') {
@@ -112,7 +123,10 @@ export default function EngineBTopicQuizScreen() {
   };
 
   const handleBack = async () => {
+    ttsSpeakingRef.current = false;   // cancel the read-aloud sequence, not just the current clip
+    setTtsSpeaking(false);
     await stopAudio();
+    await stopTTS().catch(() => {});
     router.back();
   };
 
@@ -122,6 +136,7 @@ export default function EngineBTopicQuizScreen() {
   const handleNavPrev = async () => {
     if (!canGoPrev) return;
     await stopAudio();
+    await stopTTS().catch(() => {});
     setShowFeedback(false);
     goToQuestion(currentIndex - 1);
   };
@@ -129,6 +144,7 @@ export default function EngineBTopicQuizScreen() {
   const handleNavNext = async () => {
     if (!canGoNext) return;
     await stopAudio();
+    await stopTTS().catch(() => {});
     setShowFeedback(false);
     goToQuestion(currentIndex + 1);
   };
@@ -241,7 +257,13 @@ export default function EngineBTopicQuizScreen() {
 
           <TouchableOpacity
             style={styles.fullExamBtn}
-            onPress={() => router.push('/(engineB)/exam' as any)}
+            onPress={async () => {
+              ttsSpeakingRef.current = false;   // cancel the read-aloud sequence, not just the current clip
+              setTtsSpeaking(false);
+              await stopAudio();
+              await stopTTS().catch(() => {});
+              router.push('/(engineB)/exam' as any);
+            }}
             activeOpacity={0.85}
           >
             <Text style={styles.fullExamText}>📝  ወደ ሙሉ ፈተና</Text>
@@ -316,9 +338,8 @@ export default function EngineBTopicQuizScreen() {
           </View>
         ) : null}
 
-        {/* Question text + play button (AudioButton for sign, TTS for behavioral) */}
+        {/* Question play button + text (AudioButton for sign, TTS for behavioral) — button first, reachable without scrolling */}
         <View style={styles.questionCard}>
-          <Text style={styles.questionText}>{currentQuestion.question_amharic}</Text>
           {currentQuestion.question_audio_url ? (
             <AudioButton audioUri={currentQuestion.question_audio_url} size={36} />
           ) : (
@@ -347,6 +368,7 @@ export default function EngineBTopicQuizScreen() {
               <Text style={styles.ttsPlayIcon}>{ttsSpeaking ? '⏸' : '▶️'}</Text>
             </TouchableOpacity>
           )}
+          <Text style={styles.questionText}>{currentQuestion.question_amharic}</Text>
         </View>
 
         {/* Answer cards */}

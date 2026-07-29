@@ -38,6 +38,21 @@ export interface UseAudioReturn {
 // ─── Module-level singleton ───────────────────────────────────────────────────
 // Only one Audio.Sound exists at a time across all useAudio instances.
 // All hooks share this state so any screen can detect when audio finishes.
+//
+// ⚠️ OVERLAP-SAFETY INVARIANT — every playback path in this file MUST:
+//   1. `await _stop()` BEFORE creating its sound. _stop() increments _soundId
+//      synchronously on entry, which invalidates every older sound immediately
+//      (even when callers fire stopAudio() without awaiting it).
+//   2. Re-check `thisSoundId === _soundId` AFTER any `await` that loads the
+//      sound, and unload it if stale. A sound created with shouldPlay:true
+//      starts playing the moment loading finishes — without this check, a
+//      play request that was superseded mid-load keeps playing as an orphan
+//      that no stopAudio() can ever reach, and overwrites _sound so the
+//      NEWER audio becomes the unstoppable one.
+// Because the engine enforces both rules, call sites do NOT need to await
+// stopAudio() for overlap-correctness — awaiting it before navigation is
+// only for immediate silence (UX). If you add a new playback path, it must
+// follow both rules.
 
 let _sound: Audio.Sound | null = null;
 let _currentState: AudioState  = 'idle';
@@ -134,7 +149,9 @@ export async function playAndAwaitAudio(
     // where expo-av's didJustFinish callback is occasionally silently dropped.
     // 150 s = 2.5 minutes — safely above the longest known audio file (~2 min explanation).
     const safetyTimer = setTimeout(() => {
-      _emit('finished');
+      // Emit only if this sound is still current — if it was long since
+      // replaced, a late 'finished' would stomp the newer sound's state.
+      if (thisSoundId === _soundId) _emit('finished');
       safeResolve();
     }, 150_000);
 
@@ -169,7 +186,9 @@ export async function playAndAwaitAudio(
     .catch((error) => {
       clearTimeout(safetyTimer);
       console.warn('[useAudio] playAndAwaitAudio failed:', uri, error);
-      _emit('error');
+      // Emit only if still current — a stale failure must not stomp the
+      // state of a newer sound that is already playing.
+      if (thisSoundId === _soundId) _emit('error');
       safeResolve(); // Resolve on error — never hang the sequence
     });
   });
@@ -225,7 +244,12 @@ export async function playPreloadedAudio(
       if (status.isPlaying)     _emit('playing');
       if (status.didJustFinish) { _emit('finished'); resolve(); }
     });
-    sound.playAsync().catch(() => { _emit('error'); resolve(); });
+    sound.playAsync().catch(() => {
+      // Emit only if still current — if a newer sound already replaced this
+      // one (unloading it mid-play), its state must not be stomped to 'error'.
+      if (thisSoundId === _soundId) _emit('error');
+      resolve();
+    });
   });
 }
 
@@ -277,12 +301,12 @@ export function useAudio(): UseAudioReturn {
     // Use locally cached file if available (offline support)
     uri = await getLocalAudioUri(uri).catch(() => uri);
 
+    _emit('loading');
+    await _stop();
+
+    const thisSoundId = _soundId;  // Capture AFTER _stop() — uniquely identifies THIS sound
+
     try {
-      _emit('loading');
-      await _stop();
-
-      const thisSoundId = _soundId;  // Capture AFTER _stop() — uniquely identifies THIS sound
-
       const { sound } = await Audio.Sound.createAsync(
         { uri },
         { shouldPlay: true, progressUpdateIntervalMillis: 200 },
@@ -302,13 +326,24 @@ export function useAudio(): UseAudioReturn {
         }
       );
 
+      // Guard: stopAudio() or a newer play started while this sound was loading.
+      // shouldPlay:true means it already began playing on load — unload it NOW,
+      // and never assign it to _sound (that would orphan the newer sound and
+      // make it unstoppable). Mirrors the identical guard in playAndAwaitAudio.
+      if (thisSoundId !== _soundId) {
+        sound.unloadAsync().catch(() => {});
+        return;
+      }
+
       _sound = sound;
       // In case the status callback fires before we reach here
       if (_currentState === 'loading') _emit('playing');
 
     } catch (error) {
       console.warn('[useAudio] Failed to play audio:', uri, error);
-      _emit('error');
+      // Emit only if this sound is still current — a stale failure must not
+      // stomp the state of a newer sound that is already playing.
+      if (thisSoundId === _soundId) _emit('error');
     }
   }, []);
 

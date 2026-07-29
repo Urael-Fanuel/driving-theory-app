@@ -195,7 +195,7 @@ export default function BehavioralSubtopicScreenA() {
       soundRef.current?.unloadAsync().catch(() => {});
       soundRef.current = null;
     };
-  }, [replayCount, phase]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [replayCount, phase, subtopic?.id]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // ── Question audio sequence ───────────────────────────────────────────────────
   useEffect(() => {
@@ -288,9 +288,9 @@ export default function BehavioralSubtopicScreenA() {
 
   // ── Handlers ──────────────────────────────────────────────────────────────────
 
-  const handleBack = useCallback(() => {
-    stopTTS().catch(() => {});
-    soundRef.current?.stopAsync().catch(() => {});
+  const handleBack = useCallback(async () => {
+    await stopTTS().catch(() => {});
+    await soundRef.current?.stopAsync().catch(() => {});
     soundRef.current = null;
     cancelListening();
     router.back();

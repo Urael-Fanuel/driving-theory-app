@@ -144,6 +144,17 @@ export default function BehavioralSubtopicScreenB() {
     setTtsSpeaking(false);
   }, [qIndex]);
 
+  // Leaving the screen must cancel the read-aloud SEQUENCE, not just silence the
+  // current clip. stopTTS() resolves the pending speakAndAwait, which the loop
+  // reads as "clip finished" — without clearing this flag it would advance to the
+  // next answer and start speaking again after the screen is gone.
+  useEffect(() => {
+    return () => {
+      ttsSpeakingRef.current = false;
+      stopTTS().catch(() => {});
+    };
+  }, []);
+
   // ── 404 fallback ──────────────────────────────────────────────────────────────
   if (!subtopic || !level) {
     return (
@@ -159,6 +170,14 @@ export default function BehavioralSubtopicScreenB() {
   }
 
   // ── Handlers ──────────────────────────────────────────────────────────────────
+
+  const handleBack = async () => {
+    ttsSpeakingRef.current = false;   // cancel the read-aloud sequence, not just the current clip
+    setTtsSpeaking(false);
+    await stopAudio();
+    await stopTTS().catch(() => {});
+    router.back();
+  };
 
   const handleStartQuiz = async () => {
     await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
@@ -216,9 +235,13 @@ export default function BehavioralSubtopicScreenB() {
   }, [canGoNextQ]);
 
   // Subtopic navigation
-  const navToSubtopic = (sub: typeof prevSubtopic) => {
+  const navToSubtopic = async (sub: typeof prevSubtopic) => {
     if (!sub) return;
     Haptics.selectionAsync();
+    ttsSpeakingRef.current = false;   // cancel the read-aloud sequence, not just the current clip
+    setTtsSpeaking(false);
+    await stopAudio();
+    await stopTTS().catch(() => {});
     router.replace(
       `/(engineB)/behavioral-subtopic/${sub.id}?topicId=${topicId}&levelId=${levelId}` as any
     );
@@ -245,7 +268,7 @@ export default function BehavioralSubtopicScreenB() {
           contentContainerStyle={styles.explainContent}
           showsVerticalScrollIndicator={false}
         >
-          <TouchableOpacity style={styles.backBtn} onPress={() => router.back()}>
+          <TouchableOpacity style={styles.backBtn} onPress={handleBack}>
             <Text style={styles.backIcon}>←</Text>
           </TouchableOpacity>
 
@@ -271,14 +294,7 @@ export default function BehavioralSubtopicScreenB() {
             )}
           </View>
 
-          {/* Explanation text */}
-          {subtopic.explanation_amharic ? (
-            <View style={[styles.explainBox, { borderLeftColor: levelColor }]}>
-              <Text style={styles.explainText}>{subtopic.explanation_amharic}</Text>
-            </View>
-          ) : null}
-
-          {/* Narration audio button */}
+          {/* Narration audio button — above the text so it's reachable without scrolling */}
           {subtopic.narration_audio_url ? (
             <View style={styles.explainAudioRow}>
               <AudioButton
@@ -286,6 +302,13 @@ export default function BehavioralSubtopicScreenB() {
                 size={64}
                 label="ማብራሪያ ድምጽ"
               />
+            </View>
+          ) : null}
+
+          {/* Explanation text */}
+          {subtopic.explanation_amharic ? (
+            <View style={[styles.explainBox, { borderLeftColor: levelColor }]}>
+              <Text style={styles.explainText}>{subtopic.explanation_amharic}</Text>
             </View>
           ) : null}
 
@@ -334,7 +357,7 @@ export default function BehavioralSubtopicScreenB() {
         <>
           {/* ── Header: ← | ● ● ● | N/total ── */}
           <View style={styles.header}>
-            <TouchableOpacity style={styles.backBtn} onPress={() => router.back()}>
+            <TouchableOpacity style={styles.backBtn} onPress={handleBack}>
               <Text style={styles.backIcon}>←</Text>
             </TouchableOpacity>
 
@@ -369,9 +392,8 @@ export default function BehavioralSubtopicScreenB() {
               )}
             </View>
 
-            {/* Question text + TTS button */}
+            {/* Question text + TTS button — button first, reachable without scrolling */}
             <View style={styles.questionBox}>
-              <Text style={styles.questionText}>{currentQ.question_amharic}</Text>
               <TouchableOpacity
                 style={styles.ttsPlayBtn}
                 onPress={async () => {
@@ -400,6 +422,7 @@ export default function BehavioralSubtopicScreenB() {
               >
                 <Text style={styles.ttsPlayIcon}>{ttsSpeaking ? '⏸' : '▶️'}</Text>
               </TouchableOpacity>
+              <Text style={styles.questionText}>{currentQ.question_amharic}</Text>
             </View>
 
             {/* Answer cards */}
@@ -479,7 +502,7 @@ export default function BehavioralSubtopicScreenB() {
                 <Text style={[styles.signNavArrow, !prevSubtopic && styles.navArrowDisabled]}>‹</Text>
               </TouchableOpacity>
 
-              <TouchableOpacity style={styles.signThumbBtn} onPress={() => router.back()}>
+              <TouchableOpacity style={styles.signThumbBtn} onPress={handleBack}>
                 {subtopic.image_url ? (
                   <Image source={{ uri: subtopic.image_url }} style={styles.signThumb} resizeMode="contain" />
                 ) : (
@@ -510,7 +533,7 @@ export default function BehavioralSubtopicScreenB() {
           </Text>
           <TouchableOpacity
             style={[styles.continueBtn, { backgroundColor: levelColor, paddingHorizontal: 32 }]}
-            onPress={() => router.back()}
+            onPress={handleBack}
             activeOpacity={0.85}
           >
             <Text style={styles.continueBtnText}>← חזור לרשימה</Text>

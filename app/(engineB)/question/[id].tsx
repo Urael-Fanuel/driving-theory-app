@@ -229,11 +229,8 @@ export default function EngineBQuestionScreen() {
           </View>
         )}
 
-        {/* Question text + optional audio */}
+        {/* Question text + optional audio — button first, reachable without scrolling */}
         <View style={styles.questionContainer}>
-          <Text style={styles.questionText}>
-            {currentQuestion.question_amharic}
-          </Text>
           {currentQuestion.question_audio_url && (
             <AudioButton
               audioUri={currentQuestion.question_audio_url}
@@ -242,6 +239,9 @@ export default function EngineBQuestionScreen() {
               style={styles.questionAudio}
             />
           )}
+          <Text style={styles.questionText}>
+            {currentQuestion.question_amharic}
+          </Text>
         </View>
 
         {/* Answer choices */}

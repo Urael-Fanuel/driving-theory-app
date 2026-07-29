@@ -167,10 +167,6 @@ export default function EngineBExamScreen() {
 
         {/* Question text */}
         <View style={styles.questionCard}>
-          <Text style={styles.questionText}>
-            {currentQuestion.question_amharic}
-          </Text>
-
           {currentQuestion.question_audio_url && (
             <AudioButton
               audioUri={currentQuestion.question_audio_url}
@@ -179,6 +175,10 @@ export default function EngineBExamScreen() {
               style={styles.questionAudio}
             />
           )}
+
+          <Text style={styles.questionText}>
+            {currentQuestion.question_amharic}
+          </Text>
         </View>
 
         {/* Answer choices */}

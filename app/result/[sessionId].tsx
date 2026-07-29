@@ -36,7 +36,7 @@ import { DBSign } from '../../backend/supabaseClient';
 import { ResultData, WrongQuestion, getExamResult, preloadExamResult } from '../../utils/examResult';
 import { AdCard } from '../../components/shared/AdCard';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
-import { speakAndAwait } from '../../utils/googleTTS';
+import { speakAndAwait, stopTTS } from '../../utils/googleTTS';
 import ConfettiCannon from 'react-native-confetti-cannon';
 import { IS_EXPO_GO } from '../../components/shared/SafeBannerAd';
 
@@ -86,7 +86,7 @@ export default function ResultScreen() {
   const { sessionId } = useLocalSearchParams<{ sessionId: string }>();
   const router        = useRouter();
   const { engineType } = useEngine();
-  const { playAudio }  = useAudio();
+  const { playAudio, stopAudio } = useAudio();
 
   const { score: sParam, total: tParam, passed: pParam, duration: dParam } =
     useLocalSearchParams<{ sessionId: string; score: string; total: string; passed: string; duration: string }>();
@@ -204,6 +204,8 @@ export default function ResultScreen() {
 
   const handleGoHome = async () => {
     await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+    await stopAudio();
+    await stopTTS().catch(() => {});
     if (isEngineA) {
       router.replace('/(engineA)/home' as any);
     } else {
@@ -213,6 +215,8 @@ export default function ResultScreen() {
 
   const handleRetry = async () => {
     await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+    await stopAudio();
+    await stopTTS().catch(() => {});
     if (isEngineA) {
       router.replace('/(engineA)/exam' as any);
     } else {
@@ -222,6 +226,8 @@ export default function ResultScreen() {
 
   const handleSignPress = async (signId: string) => {
     await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    await stopAudio();
+    await stopTTS().catch(() => {});
     if (isEngineA) {
       router.push(`/(engineA)/sign/${signId}` as any);
     } else {
@@ -231,6 +237,8 @@ export default function ResultScreen() {
 
   const handlePracticeWeak = async () => {
     await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+    await stopAudio();
+    await stopTTS().catch(() => {});
     // Pass wrong question IDs as a comma-separated URL param
     const ids = wrongQuestions.map(q => q.questionId).join(',');
     if (isEngineA) {
