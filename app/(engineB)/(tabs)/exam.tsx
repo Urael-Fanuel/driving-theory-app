@@ -21,6 +21,7 @@ import { TextAnswerCard } from '../../../components/engineB/TextAnswerCard';
 import { TextFeedback } from '../../../components/engineB/TextFeedback';
 import { AudioButton } from '../../../components/shared/AudioButton';
 import { ProgressBar } from '../../../components/shared/ProgressBar';
+import { OfflineBanner } from '../../../components/shared/OfflineBanner';
 import { useExam } from '../../../hooks/useExam';
 import { useAudio } from '../../../hooks/useAudio';
 import { useNetworkStatus } from '../../../hooks/useNetworkStatus';
@@ -142,11 +143,7 @@ export default function EngineBExamScreen() {
       {isSaving && (
         <Text style={{ textAlign: 'center', color: '#888', fontSize: 11, marginTop: 2 }}>ማስቀመጥ...</Text>
       )}
-      {!isConnected && (
-        <Text style={{ textAlign: 'center', color: '#fff', backgroundColor: '#e67e22', fontSize: 12, padding: 4 }}>
-          {'ኢንተርኔት የለም — ድምፁ አይሰራም። ጽሑፉን ማንበብ ይቻላል።'}
-        </Text>
-      )}
+      <OfflineBanner isConnected={isConnected} />
 
       <ScrollView
         ref={scrollRef}

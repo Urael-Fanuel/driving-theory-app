@@ -42,6 +42,8 @@ import * as api from '../../../backend/api';
 import { useProgress } from '../../../hooks/useProgress';
 import { useAudio } from '../../../hooks/useAudio';
 import { extractSignNumber, shouldShowSignBadge } from '../../../utils/signNumber';
+import { OfflineBanner } from '../../../components/shared/OfflineBanner';
+import { prefetchSignAudio } from '../../../services/audioCache';
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
@@ -78,6 +80,12 @@ export default function EngineBQuestionScreen() {
         const found = allSigns.find(s => s.id === signId) ?? null;
         setSign(found);
         setQuestions(qs);
+
+        // Pull this sign's audio down immediately (~22 files / ~1.2 MB, a few
+        // seconds), so a disconnection right after opening the screen does not
+        // break playback. The topic-wide prefetch takes minutes.
+        prefetchSignAudio(found, qs).catch(() => {});
+
         if (found) {
           const sorted = allSigns
             .filter(s => s.topic_id === found.topic_id)
@@ -179,6 +187,7 @@ export default function EngineBQuestionScreen() {
 
   return (
     <SafeAreaView style={styles.safeArea}>
+      <OfflineBanner />
 
       {/* ── Header: ← | ● ● ● | 1/3 ── */}
       <View style={styles.header}>

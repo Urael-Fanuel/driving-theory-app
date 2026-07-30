@@ -26,6 +26,7 @@ import { ImageAnswerCard } from '../../../components/engineA/ImageAnswerCard';
 import { VoiceAnswerButton } from '../../../components/engineA/VoiceAnswerButton';
 import { AudioFeedback } from '../../../components/engineA/AudioFeedback';
 import { ProgressBar } from '../../../components/shared/ProgressBar';
+import { OfflineBanner } from '../../../components/shared/OfflineBanner';
 import { useExam } from '../../../hooks/useExam';
 import { useNetworkStatus } from '../../../hooks/useNetworkStatus';
 import { isQuestionAudioReady, prefetchQuestionAudio, preCacheAudioBatch } from '../../../services/audioCache';
@@ -69,7 +70,6 @@ export default function EngineAExamScreen() {
   const [showFeedback,             setShowFeedback]             = useState(false);
   const scrollRef = useRef<any>(null);
   const isConnected = useNetworkStatus();
-  const [currentQuestionAudioReady, setCurrentQuestionAudioReady] = useState(true);
   const [audioRestartKey,          setAudioRestartKey]          = useState(0);
   const prevConnectedRef  = useRef(true);
   const isConnectedRef    = useRef(isConnected);
@@ -97,18 +97,6 @@ export default function EngineAExamScreen() {
     api.getAllSigns().then(setSigns).catch(() => {});
   }, []);
 
-  // Check audio cache only when internet disconnects — not proactively.
-  // While connected: assume ready. When offline: check if audio is actually cached.
-  useEffect(() => {
-    if (isConnected) {
-      setCurrentQuestionAudioReady(true);
-      return;
-    }
-    if (!currentQuestion) return;
-    isQuestionAudioReady(currentQuestion)
-      .then(ready => setCurrentQuestionAudioReady(ready))
-      .catch(() => setCurrentQuestionAudioReady(false));
-  }, [isConnected, currentQuestion?.id]);
 
   // On reconnect: kill the running sequence immediately, re-download audio for current + next 3,
   // then restart sequence from the beginning of the current question.
@@ -182,6 +170,24 @@ export default function EngineAExamScreen() {
   // 2nd+ failure → play "still failing, move to next question or topic"
   const ttsFailCountRef      = useRef(0);
   const ttsFailQuestionIdRef = useRef('');
+
+  /**
+   * A clip could not be played, so the user heard nothing. Say so out loud —
+   * Engine A users may not read, and unexplained silence is indistinguishable
+   * from the app being broken. Used by the pre-recorded audio path; the TTS
+   * path above does the same inline.
+   */
+  const reportAudioFailure = useCallback((questionId: string) => {
+    if (ttsFailQuestionIdRef.current !== questionId) {
+      ttsFailCountRef.current      = 0;
+      ttsFailQuestionIdRef.current = questionId;
+    }
+    ttsFailCountRef.current += 1;
+    const errorFile = ttsFailCountRef.current > 1
+      ? 'tts_error_retry.mp3'
+      : 'tts_error_first.mp3';
+    playAudio(`${_AUDIO_BASE}/${errorFile}`).catch(() => {});
+  }, [playAudio]);
 
   // Stable callback ref so useVoiceRecognition doesn't re-init on re-renders
   const answerCallbackRef = useRef<(idx: number) => void>(() => {});
@@ -296,7 +302,13 @@ export default function EngineAExamScreen() {
       } else {
         const qAudioUrl = currentQuestion!.question_audio_url
           || `${_AUDIO_BASE}/${qId.toLowerCase()}.mp3`;
-        await playAndAwaitAudio(qAudioUrl, isCancelled);
+        // Pre-recorded audio gets the same treatment as TTS above: if nothing
+        // was heard, say so and stop. The offline pre-check further down cannot
+        // catch a connection dropping mid-sequence.
+        if (!await playAndAwaitAudio(qAudioUrl, isCancelled)) {
+          reportAudioFailure(qId);
+          return;
+        }
         if (isCancelled()) return;
       }
 
@@ -323,7 +335,11 @@ export default function EngineAExamScreen() {
         answerAudioStartedRef.current = false;
         answerFullyReadRef.current    = false;
 
-        await playAndAwaitAudio(NUMBER_URLS[i], isCancelled);
+        if (!await playAndAwaitAudio(NUMBER_URLS[i], isCancelled)) {
+          setPlayingAnswerIndex(null);
+          reportAudioFailure(qId);
+          return;
+        }
         if (isCancelled()) return;
 
         // Yield to the macrotask queue so any pending tap events are processed
@@ -359,7 +375,11 @@ export default function EngineAExamScreen() {
         } else {
           const answerUrl = answer?.audio_url
             || `${_AUDIO_BASE}/answer_${qId}_${answer?.id}.mp3`;
-          await playAndAwaitAudio(answerUrl, isCancelled);
+          if (!await playAndAwaitAudio(answerUrl, isCancelled)) {
+            setPlayingAnswerIndex(null);
+            reportAudioFailure(qId);
+            return;
+          }
           if (isCancelled()) return;
         }
 
@@ -485,9 +505,12 @@ export default function EngineAExamScreen() {
     setPlayingAnswerIndex(answerIndex); // yellow border on the tapped card
     // playAndAwaitAudio stops the current audio, plays this answer, resolves only
     // when it finishes — no race condition with the sequence.
-    await playAndAwaitAudio(audioUrl, () => phaseRef.current !== 'question');
+    const replayed = await playAndAwaitAudio(audioUrl, () => phaseRef.current !== 'question');
     setPlayingAnswerIndex(null);
     if (phaseRef.current !== 'question') return;
+    // Nothing was heard (offline, not cached) — don't resume the sequence, which
+    // would just fail again on its first clip.
+    if (!replayed) { reportAudioFailure(currentQuestion?.id ?? ''); return; }
     // If the sequence had already finished (playingAtTime === null), just replay —
     // don't restart the cycle (user is reviewing, not in the middle of listening).
     if (playingAtTime === null) return;
@@ -558,17 +581,11 @@ export default function EngineAExamScreen() {
       {isSaving && (
         <Text style={{ textAlign: 'center', color: '#888', fontSize: 11, marginTop: 2 }}>ማስቀመጥ...</Text>
       )}
-      {!isConnected && !currentQuestionAudioReady && phase === 'question' && (
-        <View style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(0,0,0,0.85)', justifyContent: 'center', alignItems: 'center', zIndex: 999, padding: 32 }}>
-          <Text style={{ color: '#fff', fontSize: 48, marginBottom: 16 }}>📵</Text>
-          <Text style={{ color: '#fff', fontSize: 18, textAlign: 'center', marginBottom: 8 }}>{'ኢንተርኔት የለም'}</Text>
-          <Text style={{ color: '#ccc', fontSize: 14, textAlign: 'center', marginBottom: 32 }}>{'ድምፅ ማጫወት አይቻልም። እባክዎ ኢንተርኔት ሲኖር ይመለሱ።'}</Text>
-          <TouchableOpacity onPress={() => { router.navigate('/(engineA)/home' as any); }}
-            style={{ backgroundColor: '#e67e22', paddingHorizontal: 32, paddingVertical: 12, borderRadius: 24 }}>
-            <Text style={{ color: '#fff', fontSize: 16 }}>{'ወደ ቤት ተመለስ'}</Text>
-          </TouchableOpacity>
-        </View>
-      )}
+      {/* Replaces a full-screen black overlay whose only action was "go back
+          home". That blocked the exam entirely the moment reception dropped,
+          even though the questions, answers and any cached audio were all still
+          usable. The banner informs without taking the exam away. */}
+      <OfflineBanner isConnected={isConnected} />
 
       <ScrollView
         ref={scrollRef}

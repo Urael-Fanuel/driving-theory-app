@@ -41,6 +41,8 @@ import * as api from '../../../backend/api';
 import { useAudio, playAndAwaitAudio } from '../../../hooks/useAudio';
 import { useProgress } from '../../../hooks/useProgress';
 import { extractSignNumber, shouldShowSignBadge } from '../../../utils/signNumber';
+import { OfflineBanner } from '../../../components/shared/OfflineBanner';
+import { prefetchSignAudio } from '../../../services/audioCache';
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
@@ -69,6 +71,16 @@ export default function EngineASignScreen() {
         const signs = await api.getAllSigns();
         const found = signs.find(s => s.id === id) ?? null;
         setSign(found);
+
+        // Get this sign's explanation AND question audio onto disk now, while
+        // the user is still listening to the explanation. By the time they tap
+        // through to the questions it is already local, so losing reception in
+        // between changes nothing. getQuestionsBySign is cached, so the question
+        // screen reuses this result instead of fetching again.
+        api.getQuestionsBySign(id)
+          .then(qs => prefetchSignAudio(found, qs))
+          .catch(() => {});
+
         if (found) {
           const sorted = signs
             .filter(s => s.topic_id === found.topic_id)
@@ -201,6 +213,7 @@ export default function EngineASignScreen() {
 
   return (
     <SafeAreaView style={styles.safeArea}>
+      <OfflineBanner />
       <ScrollView
         contentContainerStyle={styles.scrollContent}
         showsVerticalScrollIndicator={false}

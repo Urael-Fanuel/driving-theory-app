@@ -53,6 +53,7 @@ import theRoadData          from '../../../content/the_road_scaffold.json';
 import myVehicleData        from '../../../content/my_vehicle_scaffold.json';
 import twoWheelersData      from '../../../content/two_wheelers_scaffold.json';
 import basicsLicenseData    from '../../../content/basics_license_scaffold.json';
+import { OfflineBanner } from '../../../components/shared/OfflineBanner';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 interface Answer   { text_amharic: string; is_correct: boolean; }
@@ -261,6 +262,7 @@ export default function BehavioralSubtopicScreenB() {
   // ── Render ────────────────────────────────────────────────────────────────────
   return (
     <SafeAreaView style={styles.safeArea}>
+      <OfflineBanner />
 
       {/* ════════════════════ PHASE: EXPLANATION ════════════════════ */}
       {phase === 'explanation' && (
@@ -407,11 +409,15 @@ export default function BehavioralSubtopicScreenB() {
                     ttsSpeakingRef.current = true;
                     setTtsSpeaking(true);
 
-                    await speakAndAwait(currentQ.question_amharic);
+                    // `heard` gates the loop: speakAndAwait returns false when
+                    // nothing was actually spoken (offline with no cached
+                    // rendering). Without this the loop runs through every
+                    // answer in milliseconds in total silence.
+                    let heard = await speakAndAwait(currentQ.question_amharic);
 
-                    for (let i = 0; i < currentQ.answers.length; i++) {
+                    for (let i = 0; heard && i < currentQ.answers.length; i++) {
                       if (!ttsSpeakingRef.current) break;
-                      await speakAndAwait(`${AMHARIC_NUMBERS[i]}። ${currentQ.answers[i].text_amharic}`);
+                      heard = await speakAndAwait(`${AMHARIC_NUMBERS[i]}። ${currentQ.answers[i].text_amharic}`);
                     }
 
                     ttsSpeakingRef.current = false;

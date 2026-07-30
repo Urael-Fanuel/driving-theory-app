@@ -13,6 +13,7 @@
 
 import { Audio } from 'expo-av';
 import { supabase } from '../backend/supabaseClient';
+import { getCachedTtsUri, storeTtsAudio, releaseAudioFiles } from '../services/audioCache';
 
 // TTS requests go through a Supabase Edge Function (supabase/functions/tts) —
 // the Google API key lives server-side only and is never shipped in the app.
@@ -128,7 +129,14 @@ export async function playUrlAndAwait(url: string): Promise<boolean> {
  *  Returns true if the text was spoken successfully, false if it failed
  *  (network timeout, API error, no audio content).
  *  Callers MUST check the return value — if false, the user heard nothing
- *  and the sequence should stop rather than continue to the next step. */
+ *  and the sequence should stop rather than continue to the next step.
+ *
+ *  ⚠️ OFFLINE: behavioral questions and answers have no pre-recorded files and
+ *  are spoken only through here. Every rendering is therefore cached to disk
+ *  keyed by the exact text, so the FIRST read of a given sentence needs a
+ *  connection and every read after it works offline. Do not remove the cache
+ *  lookup below — without it the whole behavioral side of the app goes silent
+ *  the moment reception drops. */
 export async function speakAndAwait(text: string): Promise<boolean> {
   await stopTTS();
   const myGeneration = _ttsGeneration;  // Capture AFTER stopTTS increments it
@@ -136,28 +144,56 @@ export async function speakAndAwait(text: string): Promise<boolean> {
     _emitSpeaking(true);
     await Audio.setAudioModeAsync({ playsInSilentModeIOS: true, playThroughEarpieceAndroid: false });
 
-    // Call the Edge Function proxy (not Google directly) — the API key
-    // stays server-side. Race against a timeout to prevent ANR if the
-    // function ever hangs (mirrors the old 7s Google fetch timeout).
-    const invokePromise = supabase.functions.invoke('tts', { body: { text } });
-    const timeoutPromise = new Promise<{ data: null; error: Error }>((resolve) =>
-      setTimeout(() => resolve({ data: null, error: new Error('tts timeout') }), 8_000)
-    );
-    const { data, error } = await Promise.race([invokePromise, timeoutPromise]);
+    // ── 1. Offline-first: a previous rendering of this exact text ────────────
+    let uri           = await getCachedTtsUri(text);
+    const fromCache   = !!uri;
+    // Base64 to persist after playback starts (null when served from cache).
+    let toStore: string | null = null;
 
-    if (error || !data?.audioContent) {
-      if (error) console.warn('[googleTTS] tts function error:', error);
+    if (_ttsGeneration !== myGeneration) { _emitSpeaking(false); return false; }
+
+    // ── 2. Not cached — ask the Edge Function proxy (not Google directly), so
+    //       the API key stays server-side. Race against a timeout to prevent
+    //       ANR if the function ever hangs.
+    if (!uri) {
+      const invokePromise = supabase.functions.invoke('tts', { body: { text } });
+      const timeoutPromise = new Promise<{ data: null; error: Error }>((resolve) =>
+        setTimeout(() => resolve({ data: null, error: new Error('tts timeout') }), 8_000)
+      );
+      const { data, error } = await Promise.race([invokePromise, timeoutPromise]);
+
+      if (error || !data?.audioContent) {
+        if (error) console.warn('[googleTTS] tts function error:', error);
+        _emitSpeaking(false);
+        return false;
+      }
+      // Cancelled during fetch — another stopTTS() was called while we were waiting
+      if (_ttsGeneration !== myGeneration) { _emitSpeaking(false); return false; }
+
+      uri     = `data:audio/mp3;base64,${data.audioContent}`;
+      toStore = data.audioContent;
+    }
+
+    // ── 3. Play ──────────────────────────────────────────────────────────────
+    let sound: Audio.Sound;
+    try {
+      ({ sound } = await Audio.Sound.createAsync({ uri }));
+    } catch (err) {
+      // Only a cached file can fail here in a recoverable way. Drop it and let
+      // the caller retry against the network rather than caching a dud forever.
+      if (fromCache) {
+        console.warn('[googleTTS] cached TTS unreadable, discarding:', err);
+        await releaseAudioFiles([uri]).catch(() => {});
+      }
       _emitSpeaking(false);
       return false;
     }
-    // Cancelled during fetch — another stopTTS() was called while we were waiting
-    if (_ttsGeneration !== myGeneration) { _emitSpeaking(false); return false; }
 
-    const uri = `data:audio/mp3;base64,${data.audioContent}`;
-    const { sound } = await Audio.Sound.createAsync({ uri });
     if (_ttsGeneration !== myGeneration) { sound.unloadAsync().catch(() => {}); _emitSpeaking(false); return false; }
     currentSound = sound;
     await sound.playAsync();
+    // Persist AFTER playback starts so writing to disk never delays the audio.
+    if (toStore) storeTtsAudio(text, toStore).catch(() => {});
     await awaitSound(sound);
     _emitSpeaking(false);
     return true;
@@ -171,4 +207,91 @@ export async function speakAndAwait(text: string): Promise<boolean> {
 /** Fire-and-forget TTS — kept for backward compatibility. */
 export function speakAmharic(text: string): void {
   speakAndAwait(text).catch(() => {});
+}
+
+// ─── Offline pre-rendering ────────────────────────────────────────────────────
+
+/**
+ * Spoken-number prefixes Engine B puts in front of each answer.
+ * ⚠️ Must stay identical to the AMHARIC_NUMBERS arrays in
+ * app/(engineB)/behavioral-subtopic/[id].tsx and
+ * app/(engineB)/topic-quiz/[topicId].tsx. The TTS cache is keyed by the exact
+ * string spoken, so any drift here silently turns every Engine B answer into a
+ * cache miss and it goes back to needing a live connection.
+ */
+const TTS_NUMBER_PREFIXES = ['አንድ', 'ሁለት', 'ሶስት', 'አራት'];
+
+/**
+ * Collect the sentences that can ONLY be voiced by TTS.
+ *
+ * A question with a `question_audio_url` has pre-recorded files and is handled
+ * by the normal audio cache. A question without one is behavioral: its text is
+ * the only source, so it must be rendered and stored ahead of time or it will
+ * be silent the moment reception drops.
+ *
+ * The two engines say answers differently: Engine A reads the answer text on
+ * its own, Engine B prefixes it with the spoken number. Those are separate
+ * cache entries, so pass `engine` to render only the wording that will
+ * actually be spoken. When it is unknown, BOTH are collected — caching a
+ * little extra is cheap, guessing wrong means silence offline.
+ */
+export function collectTtsTexts(
+  questions: Array<{
+    question_amharic?: string;
+    question_audio_url?: string;
+    answers?: Array<{ text_amharic?: string; audio_url?: string }>;
+  }>,
+  engine?: 'A' | 'B' | null
+): string[] {
+  const texts: string[] = [];
+  for (const q of questions) {
+    if (q.question_audio_url) continue; // has real audio files
+    if (q.question_amharic) texts.push(q.question_amharic);
+    (q.answers ?? []).forEach((a, i) => {
+      if (a.audio_url || !a.text_amharic) return;
+      if (engine !== 'B') texts.push(a.text_amharic);                     // Engine A
+      if (engine !== 'A') {
+        const prefix = TTS_NUMBER_PREFIXES[i];
+        if (prefix) texts.push(`${prefix}። ${a.text_amharic}`);            // Engine B
+      }
+    });
+  }
+  return texts;
+}
+
+/**
+ * Render and store TTS for the given texts so they can be spoken offline later.
+ *
+ * Deliberately isolated from playback: it never touches currentSound,
+ * _ttsGeneration or the speaking state, so it cannot interfere with audio the
+ * user is listening to right now. Failures are silent — this is an
+ * optimisation, and a miss simply means falling back to a live call later.
+ */
+export async function prefetchTtsForTexts(texts: string[]): Promise<void> {
+  const pending: string[] = [];
+  const seen = new Set<string>();
+
+  for (const text of texts) {
+    if (!text || seen.has(text)) continue;
+    seen.add(text);
+    const cached = await getCachedTtsUri(text).catch(() => null);
+    if (!cached) pending.push(text);
+  }
+
+  // Small batches: an exam can need ~40 renderings, and firing them all at
+  // once would hammer the Edge Function.
+  const BATCH_SIZE = 3;
+  for (let i = 0; i < pending.length; i += BATCH_SIZE) {
+    await Promise.all(
+      pending.slice(i, i + BATCH_SIZE).map(async (text) => {
+        try {
+          const { data, error } = await supabase.functions.invoke('tts', { body: { text } });
+          if (error || !data?.audioContent) return;
+          await storeTtsAudio(text, data.audioContent);
+        } catch {
+          // Offline or rate-limited — nothing to do, the live path still works.
+        }
+      })
+    );
+  }
 }

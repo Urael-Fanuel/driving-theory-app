@@ -15,7 +15,9 @@
 import { useState, useCallback, useEffect, useRef } from 'react';
 import { DBQuestion } from '../backend/supabaseClient';
 import * as api from '../backend/api';
-import { prefetchQuestionAudio } from '../services/audioCache';
+import { prefetchQuestionAudio, releaseQuestionAudio } from '../services/audioCache';
+import { collectTtsTexts, prefetchTtsForTexts } from '../utils/googleTTS';
+import { useEngine } from '../contexts/EngineContext';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -64,6 +66,7 @@ const PASS_THRESHOLD_PCT = 0.7;
 // ─── Hook ─────────────────────────────────────────────────────────────────────
 
 export function useTopicQuiz(topicId: string, levelId?: string): UseTopicQuizReturn {
+  const { engineType } = useEngine();
   const [phase,              setPhase]              = useState<TopicQuizPhase>('loading');
   const [questions,          setQuestions]          = useState<DBQuestion[]>([]);
   const [currentIndex,       setCurrentIndex]       = useState(0);
@@ -95,6 +98,12 @@ export function useTopicQuiz(topicId: string, levelId?: string): UseTopicQuizRet
       setQuestions(qs);
       // Prefetch audio for first 3 questions
       qs.slice(0, 3).forEach(q => prefetchQuestionAudio(q));
+
+      // Behavioral topics have no audio files — only text read by live TTS.
+      // Render it to disk while the connection that just loaded the quiz is
+      // still there, so a mid-quiz disconnect doesn't silence the whole topic.
+      prefetchTtsForTexts(collectTtsTexts(qs, engineType)).catch(() => {});
+
       setPhase(qs.length > 0 ? 'question' : 'result');
     } catch (err) {
       console.error('[useTopicQuiz] Failed to load questions:', err);
@@ -140,6 +149,12 @@ export function useTopicQuiz(topicId: string, levelId?: string): UseTopicQuizRet
 
       setResult({ score, total: finalAnswers.length, passed, wrongIds });
       setPhase('result');
+
+      // Topic finished — free the audio of the questions the user got RIGHT.
+      // Wrong ones stay cached so reviewing them still works with no
+      // connection. See the CACHE-RETENTION INVARIANT in services/audioCache.ts.
+      const wrongSet = new Set(wrongIds);
+      releaseQuestionAudio(questions.filter(q => !wrongSet.has(q.id))).catch(() => {});
     } else {
       setCurrentIndex(nextIndex);
       setPhase('question');

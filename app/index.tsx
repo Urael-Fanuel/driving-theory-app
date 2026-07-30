@@ -99,10 +99,14 @@ export default function EngineSelectionScreen() {
     const token = { cancelled: false };
     activeTokenRef.current = token;
     try {
-      await playAndAwaitAudio('assets/audio/welcome_select_mode.mp3', () => token.cancelled);
+      // Each step stops the chain if nothing was heard (offline + not cached).
+      // Otherwise the highlight would jump A → B in a fraction of a second in
+      // total silence, which is the worst possible first impression for a user
+      // who cannot read and depends on this narration to choose an engine.
+      if (!await playAndAwaitAudio('assets/audio/welcome_select_mode.mp3', () => token.cancelled)) return;
       if (token.cancelled) return;
       setHighlightedEngine('A');
-      await playAndAwaitAudio('assets/audio/explain_mode_a.mp3', () => token.cancelled);
+      if (!await playAndAwaitAudio('assets/audio/explain_mode_a.mp3', () => token.cancelled)) return;
       if (token.cancelled) return;
       setHighlightedEngine('B');
       await playAndAwaitAudio('assets/audio/explain_mode_b.mp3', () => token.cancelled);

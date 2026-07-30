@@ -47,6 +47,8 @@ import { useAudio, playAndAwaitAudio } from '../../../hooks/useAudio';
 import { useProgress } from '../../../hooks/useProgress';
 import { extractSignNumber, shouldShowSignBadge } from '../../../utils/signNumber';
 import { useVoiceRecognition } from '../../../hooks/useVoiceRecognition';
+import { OfflineBanner } from '../../../components/shared/OfflineBanner';
+import { prefetchSignAudio } from '../../../services/audioCache';
 
 // ─── Number announcement URLs (played before each answer) ─────────────────────
 const _AUDIO_BASE = (process.env.EXPO_PUBLIC_SUPABASE_URL ?? '') + '/storage/v1/object/public/audio';
@@ -128,6 +130,13 @@ export default function EngineAQuestionScreen() {
         const found = allSigns.find(s => s.id === signId) ?? null;
         setSign(found);
         setQuestions(qs);
+
+        // Pull this sign's audio down immediately (~22 files / ~1.2 MB, a few
+        // seconds). This screen previously had NO prefetch at all, so its audio
+        // was streamed live and a disconnection broke it instantly. The
+        // topic-wide prefetch takes minutes; this covers the first seconds.
+        prefetchSignAudio(found, qs).catch(() => {});
+
         if (found) {
           const sorted = allSigns
             .filter(s => s.topic_id === found.topic_id)
@@ -174,7 +183,7 @@ export default function EngineAQuestionScreen() {
 
         const qAudioUrl = currentQuestion!.question_audio_url
           || `${_AUDIO_BASE}/${qId.toLowerCase()}.mp3`;
-        await playAndAwaitAudio(qAudioUrl, isCancelled);
+        if (!await playAndAwaitAudio(qAudioUrl, isCancelled)) { setPlayingAnswerIndex(null); return; }
         if (isCancelled()) return;
 
         await new Promise(res => setTimeout(res, 300));
@@ -186,13 +195,16 @@ export default function EngineAQuestionScreen() {
 
         setPlayingAnswerIndex(i);
 
-        await playAndAwaitAudio(NUMBER_URLS[i], isCancelled);
+        // Stop the moment a clip cannot be heard (offline + not cached).
+        // Continuing would walk the yellow highlight through every answer in
+        // silence, which reads as the app answering by itself.
+        if (!await playAndAwaitAudio(NUMBER_URLS[i], isCancelled)) { setPlayingAnswerIndex(null); return; }
         if (isCancelled() || answeredIndexRef.current !== null) return;
 
         const answer = currentQuestion!.answers[i];
         const answerUrl = answer?.audio_url
           || `${_AUDIO_BASE}/answer_${qId}_${answer?.id}.mp3`;
-        await playAndAwaitAudio(answerUrl, isCancelled);
+        if (!await playAndAwaitAudio(answerUrl, isCancelled)) { setPlayingAnswerIndex(null); return; }
       }
       setPlayingAnswerIndex(null);
     }
@@ -226,9 +238,12 @@ export default function EngineAQuestionScreen() {
     // condition where fire-and-forget playAudio() + waitForAudioEnd() could
     // resolve prematurely (before playAudio changed the audio state) and restart
     // the sequence while the replay was still playing.
-    await playAndAwaitAudio(audioUrl, () => answeredIndexRef.current !== null);
+    const replayed = await playAndAwaitAudio(audioUrl, () => answeredIndexRef.current !== null);
     setPlayingAnswerIndex(null);               // clear highlight before resuming
     if (answeredIndexRef.current !== null) return; // user selected answer while replaying
+    // Nothing was heard (offline, not cached) — don't resume the sequence, which
+    // would just fail again on its first clip.
+    if (!replayed) return;
     // Resume sequence from the next answer (skip what was already heard)
     const nextIndex = answerIndex + 1;
     const answerCount = currentQuestion?.answers.length ?? 0;
@@ -397,6 +412,7 @@ export default function EngineAQuestionScreen() {
 
   return (
     <SafeAreaView style={styles.safeArea}>
+      <OfflineBanner />
       <ScrollView
         contentContainerStyle={styles.content}
         showsVerticalScrollIndicator={false}

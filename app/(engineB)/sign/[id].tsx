@@ -34,6 +34,8 @@ import { DBSign } from '../../../backend/supabaseClient';
 import * as api from '../../../backend/api';
 import { useProgress } from '../../../hooks/useProgress';
 import { useAudio } from '../../../hooks/useAudio';
+import { OfflineBanner } from '../../../components/shared/OfflineBanner';
+import { prefetchSignAudio } from '../../../services/audioCache';
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
@@ -58,6 +60,16 @@ export default function EngineBSignScreen() {
         const allSigns = await api.getAllSigns();
         const found    = allSigns.find(s => s.id === id) ?? null;
         setSign(found);
+
+        // Get this sign's explanation AND question audio onto disk now, while
+        // the user is still reading the explanation. By the time they tap
+        // through to the questions it is already local, so losing reception in
+        // between changes nothing. getQuestionsBySign is cached, so the question
+        // screen reuses this result instead of fetching again.
+        api.getQuestionsBySign(id)
+          .then(qs => prefetchSignAudio(found, qs))
+          .catch(() => {});
+
         if (found) {
           markSignViewed(found.id);
           const sorted = allSigns
@@ -122,6 +134,7 @@ export default function EngineBSignScreen() {
 
   return (
     <SafeAreaView style={styles.safeArea}>
+      <OfflineBanner />
 
       {/* Header — back button + position */}
       <View style={styles.header}>

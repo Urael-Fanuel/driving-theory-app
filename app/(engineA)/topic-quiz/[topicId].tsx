@@ -39,6 +39,7 @@ import ConfettiCannon from 'react-native-confetti-cannon';
 import { isQuestionAudioReady } from '../../../services/audioCache';
 import * as api from '../../../backend/api';
 import { DBSign } from '../../../backend/supabaseClient';
+import { OfflineBanner } from '../../../components/shared/OfflineBanner';
 
 
 // ─── Praise phrases (same set as behavioral-subtopic) ─────────────────────────
@@ -201,7 +202,9 @@ export default function EngineATopicQuizScreen() {
           const qId      = currentQuestion!.id;
           const qAudioUrl = currentQuestion!.question_audio_url
             || `${_AUDIO_BASE}/${qId.toLowerCase()}.mp3`;
-          await playAndAwaitAudio(qAudioUrl, isCancelled);
+          // Same contract the behavioral branch above already follows: if
+          // nothing was heard, stop rather than advance in silence.
+          if (!await playAndAwaitAudio(qAudioUrl, isCancelled)) { setPlayingAnswerIndex(null); return; }
           if (isCancelled()) return;
         }
 
@@ -216,7 +219,7 @@ export default function EngineATopicQuizScreen() {
         answerAudioStartedRef.current = false;
         answerFullyReadRef.current    = false;
 
-        await playAndAwaitAudio(NUMBER_URLS[i], isCancelled);
+        if (!await playAndAwaitAudio(NUMBER_URLS[i], isCancelled)) { setPlayingAnswerIndex(null); return; }
         if (isCancelled()) return;
 
         await new Promise<void>(r => setTimeout(r, 0));
@@ -235,7 +238,7 @@ export default function EngineATopicQuizScreen() {
         } else {
           const answerUrl = answer?.audio_url
             || `${_AUDIO_BASE}/answer_${currentQuestion!.id}_${answer?.id}.mp3`;
-          await playAndAwaitAudio(answerUrl, isCancelled);
+          if (!await playAndAwaitAudio(answerUrl, isCancelled)) { setPlayingAnswerIndex(null); return; }
           if (isCancelled()) return;
         }
 
@@ -298,9 +301,12 @@ export default function EngineATopicQuizScreen() {
     sequenceCancelledRef.current = true;
     await stopTTS();
     setPlayingAnswerIndex(answerIndex);
-    await playAndAwaitAudio(audioUrl, () => phaseRef.current !== 'question');
+    const replayed = await playAndAwaitAudio(audioUrl, () => phaseRef.current !== 'question');
     setPlayingAnswerIndex(null);
     if (phaseRef.current !== 'question') return;
+    // Nothing was heard (offline, not cached) — don't resume the sequence, which
+    // would just fail again on its first clip.
+    if (!replayed) return;
     if (playingAtTime === null) return;
     const resumeFrom = answerFullyReadRef.current
       ? playingAtTime + 1
@@ -491,6 +497,7 @@ export default function EngineATopicQuizScreen() {
   // ── Question screen ───────────────────────────────────────────────────────────
   return (
     <SafeAreaView style={styles.safeArea}>
+      <OfflineBanner />
       {/* Top bar */}
       <View style={styles.topBar}>
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>

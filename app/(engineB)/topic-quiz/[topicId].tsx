@@ -36,6 +36,7 @@ import { speakAndAwait, stopTTS } from '../../../utils/googleTTS';
 import ConfettiCannon from 'react-native-confetti-cannon';
 import * as api from '../../../backend/api';
 import { DBSign } from '../../../backend/supabaseClient';
+import { OfflineBanner } from '../../../components/shared/OfflineBanner';
 
 
 // ─── Audio base URL ────────────────────────────────────────────────────────────
@@ -279,6 +280,7 @@ export default function EngineBTopicQuizScreen() {
   // ── Question screen ────────────────────────────────────────────────────────
   return (
     <SafeAreaView style={styles.safeArea}>
+      <OfflineBanner />
       {/* Top bar */}
       <View style={styles.topBar}>
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
@@ -354,10 +356,14 @@ export default function EngineBTopicQuizScreen() {
                 } else {
                   ttsSpeakingRef.current = true;
                   setTtsSpeaking(true);
-                  await speakAndAwait(currentQuestion.question_amharic);
-                  for (let i = 0; i < currentQuestion.answers.length; i++) {
+                  // `heard` gates the loop: speakAndAwait returns false when
+                  // nothing was actually spoken (offline with no cached
+                  // rendering). Without this the loop runs through every answer
+                  // in milliseconds in total silence.
+                  let heard = await speakAndAwait(currentQuestion.question_amharic);
+                  for (let i = 0; heard && i < currentQuestion.answers.length; i++) {
                     if (!ttsSpeakingRef.current) break;
-                    await speakAndAwait(`${AMHARIC_NUMBERS[i]}። ${currentQuestion.answers[i].text_amharic ?? ''}`);
+                    heard = await speakAndAwait(`${AMHARIC_NUMBERS[i]}። ${currentQuestion.answers[i].text_amharic ?? ''}`);
                   }
                   ttsSpeakingRef.current = false;
                   setTtsSpeaking(false);

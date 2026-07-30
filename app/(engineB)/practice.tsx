@@ -27,6 +27,7 @@ import { TextFeedback } from '../../components/engineB/TextFeedback';
 import { AudioButton } from '../../components/shared/AudioButton';
 import { ProgressBar } from '../../components/shared/ProgressBar';
 import { usePracticeWeak } from '../../hooks/usePracticeWeak';
+import { OfflineBanner } from '../../components/shared/OfflineBanner';
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
@@ -108,6 +109,7 @@ export default function EngineBPracticeScreen() {
 
   return (
     <SafeAreaView style={styles.safeArea}>
+      <OfflineBanner />
 
       {/* Header */}
       <View style={styles.header}>

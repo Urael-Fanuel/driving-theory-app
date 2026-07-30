@@ -31,6 +31,7 @@ import { useAudio, playAndAwaitAudio } from '../../hooks/useAudio';
 import { useVoiceRecognition } from '../../hooks/useVoiceRecognition';
 import * as api from '../../backend/api';
 import { DBSign } from '../../backend/supabaseClient';
+import { OfflineBanner } from '../../components/shared/OfflineBanner';
 
 // ─── Audio URLs ───────────────────────────────────────────────────────────────
 const _AUDIO_BASE = (process.env.EXPO_PUBLIC_SUPABASE_URL ?? '') + '/storage/v1/object/public/audio';
@@ -138,7 +139,7 @@ export default function EngineAPracticeScreen() {
       const qId      = currentQuestion!.id;
       const qAudioUrl = currentQuestion!.question_audio_url
         || `${_AUDIO_BASE}/${qId.toLowerCase()}.mp3`;
-      await playAndAwaitAudio(qAudioUrl, isCancelled);
+      if (!await playAndAwaitAudio(qAudioUrl, isCancelled)) { setPlayingAnswerIndex(null); return; }
       if (isCancelled()) return;
 
       await new Promise(res => setTimeout(res, 1000));
@@ -148,13 +149,15 @@ export default function EngineAPracticeScreen() {
         if (isCancelled() || phaseRef.current !== 'question') return;
         setPlayingAnswerIndex(i);
 
-        await playAndAwaitAudio(NUMBER_URLS[i], isCancelled);
+        // Stop the moment a clip cannot be heard (offline + not cached) —
+        // otherwise the highlight walks all four answers in silence.
+        if (!await playAndAwaitAudio(NUMBER_URLS[i], isCancelled)) { setPlayingAnswerIndex(null); return; }
         if (isCancelled() || phaseRef.current !== 'question') return;
 
         const answer    = currentQuestion!.answers[i];
         const answerUrl = answer?.audio_url
           || `${_AUDIO_BASE}/answer_${qId}_${answer?.id}.mp3`;
-        await playAndAwaitAudio(answerUrl, isCancelled);
+        if (!await playAndAwaitAudio(answerUrl, isCancelled)) { setPlayingAnswerIndex(null); return; }
       }
       setPlayingAnswerIndex(null);
     }
@@ -244,6 +247,7 @@ export default function EngineAPracticeScreen() {
 
   return (
     <SafeAreaView style={styles.safeArea}>
+      <OfflineBanner />
 
       {/* Fixed top bar */}
       <View style={styles.topBar}>

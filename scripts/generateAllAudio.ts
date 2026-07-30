@@ -87,6 +87,7 @@ const SYSTEM_AUDIO: Record<string, string> = {
   'wrong_generic.mp3':          'ስህተት ነው!',
   'loading.mp3':                'እየጫነ ነው። ይጠብቁ።',
   'network_needed.mp3':         'ኔት ወርክ አስፈልጋል። ኢንተርኔት ያቋቁሙ።',
+  'offline_notice.mp3':         'ኢንተርኔት አይሰራም። ሲመለስ ይቀጥላል።',
   'exam_start.mp3':             'ፈተና ጀምሯል። 30 ጥያቄዎች። ይጀምሩ!',
   'exam_pass.mp3':              'እንኳን ደስ አላቸሁ! ፈተናውን አለፉ!',
   'exam_fail.mp3':              'ፈተናው አልተሳካም። ደግሞ ሞክሩ!',

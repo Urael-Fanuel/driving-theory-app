@@ -23,6 +23,7 @@ import { DBSign, DBTopic } from '../../../backend/supabaseClient';
 import * as api from '../../../backend/api';
 import { useProgress } from '../../../hooks/useProgress';
 import { extractSignNumber, shouldShowSignBadge } from '../../../utils/signNumber';
+import { prefetchTopicAudio } from '../../../services/audioCache';
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
@@ -44,6 +45,15 @@ export default function EngineBTopicScreen() {
         ]);
         setTopic(topicData);
         setSigns(signsData);
+
+        // Entering a topic is the moment to pull its audio down, while the user
+        // is still browsing the sign list and almost certainly still online.
+        // By the time they are a few signs in, losing reception no longer
+        // interrupts anything. Fire-and-forget on purpose: this can take
+        // minutes and must never block the screen.
+        api.getQuestionsByTopic(id)
+          .then(questions => prefetchTopicAudio(signsData, questions))
+          .catch(() => {});
       } catch (err) {
         console.error('[EngineB/topic] Failed to load:', err);
       } finally {

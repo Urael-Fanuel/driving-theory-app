@@ -55,6 +55,7 @@ import theRoadData          from '../../../content/the_road_scaffold.json';
 import myVehicleData        from '../../../content/my_vehicle_scaffold.json';
 import twoWheelersData      from '../../../content/two_wheelers_scaffold.json';
 import basicsLicenseData    from '../../../content/basics_license_scaffold.json';
+import { OfflineBanner } from '../../../components/shared/OfflineBanner';
 
 // ─── Number announcement URLs ──────────────────────────────────────────────────
 const _AUDIO_BASE = (process.env.EXPO_PUBLIC_SUPABASE_URL ?? '') + '/storage/v1/object/public/audio';
@@ -226,7 +227,9 @@ export default function BehavioralSubtopicScreenA() {
           if (isCancelled()) return;
         }
 
-        await speakAndAwait(currentQ!.question_amharic);
+        // Nothing spoken (offline with no cached rendering) — stop instead of
+        // walking the highlight through every answer in silence.
+        if (!await speakAndAwait(currentQ!.question_amharic)) { setPlayingAnswerIndex(null); setAudioPlaying(false); return; }
         if (isCancelled()) return;
 
         await new Promise<void>(res => setTimeout(res, 300));
@@ -239,10 +242,10 @@ export default function BehavioralSubtopicScreenA() {
 
         setPlayingAnswerIndex(i);
 
-        await playUrlAndAwait(NUMBER_URLS[i]);
+        if (!await playUrlAndAwait(NUMBER_URLS[i])) break;
         if (isCancelled() || answeredIndexRef.current !== null) break;
 
-        await speakAndAwait(currentQ!.answers[i].text_amharic);
+        if (!await speakAndAwait(currentQ!.answers[i].text_amharic)) break;
         if (isCancelled()) break;
       }
 
@@ -440,6 +443,7 @@ export default function BehavioralSubtopicScreenA() {
   // ── Render ────────────────────────────────────────────────────────────────────
   return (
     <SafeAreaView style={styles.safeArea}>
+      <OfflineBanner />
 
       {/* ════════════════════ PHASE: EXPLANATION ════════════════════ */}
       {phase === 'explanation' && (

@@ -25,6 +25,7 @@ import { LoadingScreen } from '../../../components/shared/LoadingScreen';
 import { DBSign } from '../../../backend/supabaseClient';
 import * as api from '../../../backend/api';
 import { useProgress } from '../../../hooks/useProgress';
+import { prefetchTopicAudio } from '../../../services/audioCache';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 const CARD_SIZE = (SCREEN_WIDTH - 48 - 16) / 3; // 3 columns
@@ -44,6 +45,15 @@ export default function EngineATopicScreen() {
       try {
         const data = await api.getSignsByTopic(id);
         setSigns(data);
+
+        // Entering a topic is the moment to pull its audio down, while the user
+        // is still browsing the sign grid and almost certainly still online.
+        // By the time they are a few signs in, losing reception no longer
+        // interrupts anything. Fire-and-forget on purpose: this can take
+        // minutes and must never block the screen.
+        api.getQuestionsByTopic(id)
+          .then(questions => prefetchTopicAudio(data, questions))
+          .catch(() => {});
       } catch (err) {
         console.error('[EngineA/topic] Failed to load signs:', err);
       } finally {

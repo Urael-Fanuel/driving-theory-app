@@ -111,17 +111,28 @@ export function waitForAudioEnd(): Promise<void> {
  * audio finishes, errors, or is cancelled/replaced.
  *
  * This is the correct way to sequence audio:
- *   await playAndAwaitAudio(url, () => cancelled);
+ *   const ok = await playAndAwaitAudio(url, () => cancelled);
+ *   if (!ok) return;   // nothing was heard — do not advance the sequence
  *
  * Unlike playAudio() + waitForAudioEnd(), this Promise is tied to a single
  * sound instance via _soundId — it cannot be resolved prematurely by another
  * audio completing or by global _currentState changes.
+ *
+ * ⚠️ RETURN VALUE IS NOT OPTIONAL TO CHECK.
+ *   false = the clip genuinely failed to load or play, i.e. the user heard
+ *           NOTHING. This is the normal case offline for a file that was never
+ *           cached. A caller that ignores it will march through the rest of its
+ *           sequence in milliseconds, moving highlights with no sound — which
+ *           to a non-reading user looks like the app answering by itself.
+ *   true  = finished normally, OR was deliberately cancelled/superseded (the
+ *           caller's own isCancelled() check handles that case, and a
+ *           cancellation must not be reported as a connection failure).
  */
 export async function playAndAwaitAudio(
   rawUri: string,
   isCancelled: () => boolean,
-): Promise<void> {
-  if (!rawUri || isCancelled()) return;
+): Promise<boolean> {
+  if (!rawUri || isCancelled()) return true;
 
   // Convert local asset paths to Supabase CDN URLs (mirrors playAudio hook)
   let uri = rawUri;
@@ -136,13 +147,16 @@ export async function playAndAwaitAudio(
 
   _emit('loading');
   await _stop();
-  if (isCancelled()) return;
+  if (isCancelled()) return true;
 
   const thisSoundId = _soundId; // Captured after _stop() — uniquely identifies THIS sound
 
-  return new Promise<void>((resolve) => {
+  return new Promise<boolean>((resolve) => {
     let resolved = false;
-    const safeResolve = () => { if (!resolved) { resolved = true; resolve(); } };
+    /** played = did the user actually hear this clip? See the doc comment. */
+    const settle = (played: boolean) => {
+      if (!resolved) { resolved = true; resolve(played); }
+    };
 
     // Safety: resolve after 150 s even if didJustFinish never fires.
     // Prevents permanent hang (ANR) on Xiaomi / Samsung Android devices
@@ -152,7 +166,9 @@ export async function playAndAwaitAudio(
       // Emit only if this sound is still current — if it was long since
       // replaced, a late 'finished' would stomp the newer sound's state.
       if (thisSoundId === _soundId) _emit('finished');
-      safeResolve();
+      // The sound loaded and we simply never got the finish callback, so treat
+      // it as heard rather than reporting a false connection failure.
+      settle(true);
     }, 150_000);
 
     Audio.Sound.createAsync(
@@ -162,22 +178,22 @@ export async function playAndAwaitAudio(
         // Guard: another audio started or sequence was cancelled
         if (thisSoundId !== _soundId || isCancelled()) {
           clearTimeout(safetyTimer);
-          safeResolve();
+          settle(true); // deliberate cancellation, not a playback failure
           return;
         }
         if (!status.isLoaded) {
-          if (status.error) { clearTimeout(safetyTimer); _emit('error'); safeResolve(); }
+          if (status.error) { clearTimeout(safetyTimer); _emit('error'); settle(false); }
           return;
         }
         if (status.isPlaying)     _emit('playing');
-        if (status.didJustFinish) { clearTimeout(safetyTimer); _emit('finished'); safeResolve(); }
+        if (status.didJustFinish) { clearTimeout(safetyTimer); _emit('finished'); settle(true); }
       }
     )
     .then(({ sound }) => {
       if (thisSoundId !== _soundId || isCancelled()) {
         clearTimeout(safetyTimer);
         sound.unloadAsync().catch(() => {});
-        safeResolve();
+        settle(true); // deliberate cancellation, not a playback failure
         return;
       }
       _sound = sound;
@@ -189,7 +205,9 @@ export async function playAndAwaitAudio(
       // Emit only if still current — a stale failure must not stomp the
       // state of a newer sound that is already playing.
       if (thisSoundId === _soundId) _emit('error');
-      safeResolve(); // Resolve on error — never hang the sequence
+      // Resolve rather than hang, but report that nothing was heard so the
+      // caller stops instead of silently racing through its sequence.
+      settle(false);
     });
   });
 }

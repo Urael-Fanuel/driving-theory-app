@@ -18,7 +18,8 @@ import { DBQuestion } from '../backend/supabaseClient';
 import * as api from '../backend/api';
 import { useEngine } from '../contexts/EngineContext';
 import { enqueue, dequeue } from '../utils/answerQueue';
-import { prefetchQuestionAudio, clearAudioCache } from '../services/audioCache';
+import { prefetchQuestionAudio, releaseQuestionAudio } from '../services/audioCache';
+import { collectTtsTexts, prefetchTtsForTexts } from '../utils/googleTTS';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -144,6 +145,12 @@ export function useExam(): UseExamReturn {
 
       // Prefetch audio for first 3 questions in background
       qs.slice(0, 3).forEach(q => prefetchQuestionAudio(q));
+
+      // Behavioral questions have no audio files — they exist only as text read
+      // by live TTS. Render them to disk NOW, while we still have the
+      // connection that just loaded the exam, so losing reception mid-exam
+      // doesn't leave ~8 of the 30 questions silent in Engine A.
+      prefetchTtsForTexts(collectTtsTexts(qs, engineType)).catch(() => {});
     } catch (error) {
       console.error('[useExam] Failed to load questions:', error);
       // Keep in loading state — UI should show error
@@ -265,8 +272,19 @@ export function useExam(): UseExamReturn {
     setElapsedSeconds(duration);
     setPhase('result');
 
-    // Clear cached audio — exam is done
-    clearAudioCache().catch(() => {});
+    // Free the space this exam used — but only for questions the user actually
+    // finished with, i.e. answered CORRECTLY. The wrong ones are kept on
+    // purpose: the result screen offers "practice your mistakes" right below,
+    // and it must still work with no connection. Whatever is left over is
+    // reclaimed later by the cache's own size budget (LRU).
+    //
+    // Deleting the whole cache directory here (as an earlier version did) also
+    // destroyed the audio of every topic the user is still studying, plus the
+    // number announcements Engine A needs — leaving the app silent offline
+    // after any exam. See the CACHE-RETENTION INVARIANT in services/audioCache.ts.
+    const wrongIds     = new Set(wrongQuestions.map(w => w.questionId));
+    const finishedWith = questions.filter(q => !wrongIds.has(q.id));
+    releaseQuestionAudio(finishedWith).catch(() => {});
   }
 
   // ── Navigate to any question (view answered, or advance to unanswered) ────────
