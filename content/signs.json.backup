@@ -30391,41 +30391,41 @@
     "image_filename": "916.png",
     "video_filename": null,
     "name_hebrew": "916",
-    "name_amharic": "ይህ ምልክት ከፊት ለፊትህ ያለው አደጋ ወይም ልዩ ሁኔታ 2500 ሜትር ርቀት ላይ መሆኑን ያመለክታል።",
-    "explanation_amharic": "ይህ ምልክት ከፊት ለፊትህ ያለው አደጋ፣ ገደብ ወይም ልዩ ሁኔታ 2500 ሜትር ርቀት ላይ መሆኑን ያመለክታል። አሽከርካሪው ይህንን ምልክት ሲያይ፣ ከዚህ በፊት ያየውን ዋና ምልክት ማስታወስ እና ለዚያ ሁኔታ ለመዘጋጀት በቂ ጊዜ እንዳለው መረዳት አለበት። ርቀቱን ባለማወቅ ወይም ባለመዘጋጀት አሽከርካሪው ለአደጋ ሊጋለጥ ወይም የትራፊክ ደንቦችን ሊጥስ ይችላል።",
+    "name_amharic": "የስራ ቦታ ርቀት ምልክት",
+    "explanation_amharic": "ይህ ብርቱካናማ ምልክት ከላይ ካለው ምልክት ጋር ተያይዞ የሚመጣ ሲሆን፣ ከፊት ለፊት የስራ ቦታ እንዳለ እና የስራ ቦታው ምን ያህል ርቀት ላይ እንደሚገኝ በሜትር ይገልጻል። በምልክቱ ላይ ያለው ቁጥር (ለምሳሌ 2500) የስራ ቦታው ያለበትን ትክክለኛ ርቀት የሚያሳይ ሲሆን፣ ይህ ቁጥር እንደየቦታው የሚለዋወጥ ስለሆነ አሽከርካሪው ይህንን ምልክት ሲያይ ፍጥነቱን መቀነስ እና ለስራ ቦታው አስቀድሞ መዘጋጀት አለበት። ይህን ምልክት ችላ ማለት በአደጋ፣ በቅጣት ወይም በሌሎች አሽከርካሪዎች እና ሰራተኞች ላይ ጉዳት ሊያስከትል ይችላል።",
     "audio_name_filename": "916_name.mp3",
     "audio_explanation_filename": "916_explanation.mp3",
     "questions": [
       {
         "id": "916_q1",
-        "question_amharic": "በዚህ ብርቱካናማ ምልክት ላይ ያለው '2500' ቁጥር ምን ያመለክታል?",
+        "question_amharic": "ይህ ብርቱካናማ ምልክት ከላይ ካለው ምልክት ጋር ሲታይ ምን ያሳያል?",
         "question_audio": "916_q1_question.mp3",
-        "explanation_correct_amharic": "ትክክل! ይህ ምልክት ከሌላ ዋና ምልክት ጋር በመሆን ወደፊት ያለውን ሁኔታ ለመድረስ የቀረውን ርቀት በሜትር ያሳያል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ መምረጥ አሽከርካሪው ለሚመጣው ሁኔታ እንዳይዘጋጅ በማድረግ አደጋ ላይ ሊጥለው ይችላል።",
+        "explanation_correct_amharic": "በጣም ጥሩ። ይህ ምልክት ከላይ ካለው የስራ ቦታ ማስጠንቀቂያ ምልክት ጋር በመሆን የስራ ቦታው ምን ያህል ርቀት ላይ እንደሚገኝ በትክክል ይገልጻል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የምልክቱን ትርጉም አለማወቅ አሽከርካሪው ለስራ ቦታው አስቀድሞ እንዳይዘጋጅ በማድረግ አደጋ ሊያስከትል ይችላል።",
         "explanation_correct_audio": "916_q1_correct.mp3",
         "explanation_wrong_audio": "916_q1_wrong.mp3",
         "answers": [
           {
-            "id": "A",
-            "text_amharic": "የተፈቀደው ከፍተኛ ፍጥነት 2500 ኪሎ ሜትር በሰዓት ነው።",
-            "is_correct": false,
-            "audio_filename": "answer_916_q1_A.mp3"
-          },
-          {
-            "id": "B",
-            "text_amharic": "ወደሚቀጥለው አደጋ ወይም ልዩ ሁኔታ ያለው ርቀት 2500 ሜትር ነው።",
-            "is_correct": true,
-            "audio_filename": "answer_916_q1_B.mp3"
-          },
-          {
             "id": "D",
-            "text_amharic": "ለተሽከርካሪዎች የተፈቀደው ከፍተኛ ክብደት 2500 ኪሎግራም ነው።",
+            "text_amharic": "ከፊት ለፊት አደገኛ መታጠፊያ እንዳለ እና በ2500 ሜትር ውስጥ መታጠፍ እንዳለብን ያሳያል።",
             "is_correct": false,
             "audio_filename": "answer_916_q1_D.mp3"
           },
           {
+            "id": "B",
+            "text_amharic": "ከፊት ለፊት የስራ ቦታ እንዳለ እና የስራ ቦታው በምልክቱ ላይ በተጠቀሰው ርቀት ላይ እንደሚገኝ ያሳያል።",
+            "is_correct": true,
+            "audio_filename": "answer_916_q1_B.mp3"
+          },
+          {
+            "id": "A",
+            "text_amharic": "መንገዱ ለጊዜው ዝግ መሆኑን ያሳያል።",
+            "is_correct": false,
+            "audio_filename": "answer_916_q1_A.mp3"
+          },
+          {
             "id": "C",
-            "text_amharic": "የመንገዱ ቁጥር 2500 ነው።",
+            "text_amharic": "በዚህ መንገድ ላይ የሚፈቀደው ከፍተኛ የፍጥነት መጠን 2500 ኪሎሜትር በሰዓት መሆኑን ያሳያል።",
             "is_correct": false,
             "audio_filename": "answer_916_q1_C.mp3"
           }
@@ -30433,71 +30433,71 @@
       },
       {
         "id": "916_q2",
-        "question_amharic": "አሽከርካሪው ይህንን ምልክት (ከማስጠንቀቂያ ምልክት በታች ሆኖ ሲታይ) ሲያይ ምን ማድረግ አለበት?",
+        "question_amharic": "ይህንን ምልክት ሲያዩ አሽከርካሪው ምን ማድረግ አለበት?",
         "question_audio": "916_q2_question.mp3",
-        "explanation_correct_amharic": "ትክክል! ጥሩ ነው። ይህ ምልክት አሽከርካሪው ለሚመጣው ሁኔታ ለመዘጋጀት በቂ ጊዜ እንዳለው ስለሚያሳይ ጥንቃቄ እንዲያደርግ ይረዳዋል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ምልክቱን ችላ ማለት ወይም የተሳሳተ እርምጃ መውሰድ አሽከርካሪውን እና ሌሎችንም አደጋ ላይ ይጥላል።",
+        "explanation_correct_amharic": "እሰይ። አቤት እውቀት! ይህ ምልክት አሽከርካሪው ለስራ ቦታው አስቀድሞ እንዲዘጋጅ፣ ፍጥነቱን እንዲቀንስ እና ጥንቃቄ እንዲያደርግ ያሳስባል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ፍጥነትን አለመቀነስ ወይም ምልክቱን ችላ ማለት በስራ ቦታ ላይ አደጋን ወይም ቅጣትን ሊያስከትል ይችላል።",
         "explanation_correct_audio": "916_q2_correct.mp3",
         "explanation_wrong_audio": "916_q2_wrong.mp3",
         "answers": [
           {
-            "id": "C",
-            "text_amharic": "ወዲያውኑ ማቆም እና ተጨማሪ መመሪያዎችን መጠበቅ አለበት።",
-            "is_correct": false,
-            "audio_filename": "answer_916_q2_C.mp3"
-          },
-          {
             "id": "D",
-            "text_amharic": "ምልክቱ የመረጃ ብቻ ስለሆነ ችላ ማለት አለበት።",
+            "text_amharic": "ምልክቱ የተሳሳተ ስለሆነ ችላ ብሎ መንዳት አለበት።",
             "is_correct": false,
             "audio_filename": "answer_916_q2_D.mp3"
           },
           {
-            "id": "B",
-            "text_amharic": "ከዚህ በፊት በታየው ምልክት የተገለጸውን ሁኔታ 2500 ሜትር ርቀት ላይ መሆኑን በማወቅ መዘጋጀት አለበት።",
-            "is_correct": true,
-            "audio_filename": "answer_916_q2_B.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "2500 ሜትሩን በፍጥነት ለመሸፈን ፍጥነቱን መጨመር አለበት።",
+            "text_amharic": "ፍጥነቱን ጨምሮ የስራ ቦታውን በፍጥነት ማለፍ አለበት።",
             "is_correct": false,
             "audio_filename": "answer_916_q2_A.mp3"
+          },
+          {
+            "id": "C",
+            "text_amharic": "ወደ ሌላ መንገድ ለመቀየር ወዲያውኑ መታጠፍ አለበት።",
+            "is_correct": false,
+            "audio_filename": "answer_916_q2_C.mp3"
+          },
+          {
+            "id": "B",
+            "text_amharic": "ፍጥነቱን መቀነስ፣ ጥንቃቄ ማድረግ እና ለስራ ቦታው መድረስ መዘጋጀት አለበት።",
+            "is_correct": true,
+            "audio_filename": "answer_916_q2_B.mp3"
           }
         ]
       },
       {
         "id": "916_q3",
-        "question_amharic": "በእስራኤል ውስጥ ወደ አደጋ ያለውን ርቀት የሚያመለክት ምልክት የተለመደው ቀለም እና ቅርፅ ምንድነው?",
+        "question_amharic": "በዚህ ምልክት ላይ የሚታየው ቁጥር (ለምሳሌ 2500) ምን ማለት ነው?",
         "question_audio": "916_q3_question.mp3",
-        "explanation_correct_amharic": "አሪፍ! ምልክቱ ብርቱካናማ አራት ማዕዘን ከጥቁር ቁጥሮች ጋር ያለው ምልክት በእስራኤል ውስጥ ርቀትን የሚያመለክት የተለመደ የማስጠንቀቂያ ወይም የመረጃ ምልክት ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የምልክቶችን ቀለም እና ቅርፅ አለማወቅ አሽከርካሪው የመንገድ ላይ መመሪያዎችን እንዳይረዳ ያደርገዋል ይህም ለአደጋ ያጋልጣል።",
+        "explanation_correct_amharic": "ዋው በጣም ጥሩ። በምልክቱ ላይ ያለው ቁጥር የስራ ቦታው ያለበትን ርቀት በሜትር የሚገልጽ ሲሆን፣ ይህ ቁጥር እንደየመንገዱ እና የስራ ቦታው አቀማመጥ የሚለዋወጥ ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የቁጥሩን ትክክለኛ ትርጉም አለማወቅ አሽከርካሪው ለስራ ቦታው ምን ያህል ርቀት እንደቀረው እንዳያውቅ በማድረግ አደጋ ሊያስከትል ይችላል።",
         "explanation_correct_audio": "916_q3_correct.mp3",
         "explanation_wrong_audio": "916_q3_wrong.mp3",
         "answers": [
           {
-            "id": "D",
-            "text_amharic": "አረንጓዴ ካሬ ከነጭ ቁጥሮች ጋር።",
-            "is_correct": false,
-            "audio_filename": "answer_916_q3_D.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "ሰማያዊ ክብ ከነጭ ቁጥሮች ጋር።",
+            "text_amharic": "ይህ ቁጥር የመንገዱን ስፋት በሴንቲሜትር ያሳያል።",
             "is_correct": false,
             "audio_filename": "answer_916_q3_A.mp3"
           },
           {
-            "id": "B",
-            "text_amharic": "ቀይ ሶስት ማዕዘን ከጥቁር ቁጥሮች ጋር።",
+            "id": "C",
+            "text_amharic": "ይህ ቁጥር በዚህ መንገድ ላይ የሚፈቀደው ዝቅተኛው የፍጥነት መጠን 2500 ኪሎሜትር በሰዓት መሆኑን ያሳያል።",
             "is_correct": false,
+            "audio_filename": "answer_916_q3_C.mp3"
+          },
+          {
+            "id": "B",
+            "text_amharic": "ይህ ቁጥር የስራ ቦታው የሚጀምርበትን ትክክለኛ ርቀት በሜትር ያሳያል እና ቁጥሩ እንደየቦታው ይለያያል።",
+            "is_correct": true,
             "audio_filename": "answer_916_q3_B.mp3"
           },
           {
-            "id": "C",
-            "text_amharic": "ብርቱካናማ አራት ማዕዘን ከጥቁር ቁጥሮች ጋር።",
-            "is_correct": true,
-            "audio_filename": "answer_916_q3_C.mp3"
+            "id": "D",
+            "text_amharic": "ይህ ቁጥር የስራ ቦታው የሚቆይበትን ጊዜ በሰዓታት ያሳያል።",
+            "is_correct": false,
+            "audio_filename": "answer_916_q3_D.mp3"
           }
         ]
       }
