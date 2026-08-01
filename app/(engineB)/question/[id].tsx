@@ -44,6 +44,9 @@ import { useAudio } from '../../../hooks/useAudio';
 import { extractSignNumber, shouldShowSignBadge } from '../../../utils/signNumber';
 import { OfflineBanner } from '../../../components/shared/OfflineBanner';
 import { prefetchSignAudio } from '../../../services/audioCache';
+import { LocationPermissionModal } from '../../../components/shared/LocationPermissionModal';
+import { useLocationPrompt } from '../../../hooks/useLocationPrompt';
+import { useEngine } from '../../../contexts/EngineContext';
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
@@ -52,6 +55,13 @@ export default function EngineBQuestionScreen() {
   const router   = useRouter();
   const { recordAnswer } = useProgress();
   const { stopAudio } = useAudio();
+  const { userId } = useEngine();
+  const {
+    visible: locationModalVisible,
+    maybeShow: maybeShowLocationPrompt,
+    handleApprove: handleLocationApproveBase,
+    handleNotNow: handleLocationNotNowBase,
+  } = useLocationPrompt(userId);
 
   const [signId, questionIndex] = parseQuestionId(id);
 
@@ -143,6 +153,33 @@ export default function EngineBQuestionScreen() {
     router.replace(`/(engineB)/question/${signId}_q${questionIndex + 1}`);
   }, [canGoNextQ, questionIndex, questions.length, signId, router, stopAudio]);
 
+  // ── Feedback overlay's "Next" — distinct from the bottom-nav question
+  // arrows above. On the last question canGoNextQ is (correctly) false, since
+  // there is no next QUESTION to go to — but the feedback panel's button still
+  // needs to DO something: this is the "just finished the quiz" moment, the
+  // app owner's chosen spot for the location-permission primer, then back to
+  // the sign screen (same action as this screen's own back button).
+  const handleFeedbackNext = useCallback(async () => {
+    if (canGoNextQ) {
+      await handleNextQuestion();
+      return;
+    }
+    const shown = await maybeShowLocationPrompt();
+    if (!shown) { await stopAudio(); router.back(); }
+  }, [canGoNextQ, handleNextQuestion, maybeShowLocationPrompt, stopAudio, router]);
+
+  const handleLocationApprove = () => {
+    handleLocationApproveBase();
+    stopAudio();
+    router.back();
+  };
+
+  const handleLocationNotNow = () => {
+    handleLocationNotNowBase();
+    stopAudio();
+    router.back();
+  };
+
   // ── Sign navigation ──────────────────────────────────────────────────────────
 
   const currentSignIndex = topicSigns.findIndex(s => s.id === signId);
@@ -188,6 +225,11 @@ export default function EngineBQuestionScreen() {
   return (
     <SafeAreaView style={styles.safeArea}>
       <OfflineBanner />
+      <LocationPermissionModal
+        visible={locationModalVisible}
+        onApprove={handleLocationApprove}
+        onNotNow={handleLocationNotNow}
+      />
 
       {/* ── Header: ← | ● ● ● | 1/3 ── */}
       <View style={styles.header}>
@@ -281,7 +323,7 @@ export default function EngineBQuestionScreen() {
             correctAnswer: currentQuestion.answers.find(a => a.is_correct)?.text_amharic ?? '',
           } : undefined}
           bottomOffset={bottomNavHeight}
-          onNext={handleNextQuestion}
+          onNext={handleFeedbackNext}
         />
       )}
 

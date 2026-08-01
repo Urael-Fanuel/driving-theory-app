@@ -112,10 +112,12 @@ export default function EngineBSignScreen() {
     } as any);
   };
 
+  const navigateToQuiz = () => router.push(`/(engineB)/question/${id}_q0`);
+
   const handlePractice = async () => {
     await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
     await stopAudio();
-    router.push(`/(engineB)/question/${id}_q0`);
+    navigateToQuiz();
   };
 
   const handleBack = async () => {

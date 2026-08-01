@@ -16,7 +16,7 @@
  * └─────────────────────────────────┘
  */
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 // ─── Audio base URL (Supabase Storage) ────────────────────────────────────────
 const _AUDIO_BASE = (process.env.EXPO_PUBLIC_SUPABASE_URL ?? '') + '/storage/v1/object/public/audio';
@@ -28,6 +28,7 @@ import {
   FlatList,
   SafeAreaView,
   Dimensions,
+  Animated,
   Share,
 } from 'react-native';
 import { useRouter } from 'expo-router';
@@ -44,6 +45,9 @@ import { useProgress } from '../../../hooks/useProgress';
 import { AdCard } from '../../../components/shared/AdCard';
 import { speakAndAwait } from '../../../utils/googleTTS';
 import { SafeBannerAd, IS_EXPO_GO } from '../../../components/shared/SafeBannerAd';
+import { LocationPermissionModal } from '../../../components/shared/LocationPermissionModal';
+import { useLocationPrompt } from '../../../hooks/useLocationPrompt';
+import { useEngine } from '../../../contexts/EngineContext';
 
 // react-native-google-mobile-ads has no native module in Expo Go — avoid
 // even importing it there (a static import alone can crash on load).
@@ -63,6 +67,29 @@ export default function EngineAHomeScreen() {
   const router   = useRouter();
   const { playAudio } = useAudio();
   const { isSignViewed } = useProgress();
+  const { userId } = useEngine();
+  const {
+    visible: locationModalVisible,
+    approved: locationApproved,
+    showManually: showLocationPrompt,
+    handleApprove: handleLocationApprove,
+    handleNotNow: handleLocationNotNow,
+  } = useLocationPrompt(userId);
+
+  // Gentle attention-drawing pulse, same pattern as the "Start Quiz" button
+  // elsewhere in the app — stops once approved.
+  const locationPulseAnim = useRef(new Animated.Value(1)).current;
+  useEffect(() => {
+    if (locationApproved) return;
+    const loop = Animated.loop(
+      Animated.sequence([
+        Animated.timing(locationPulseAnim, { toValue: 1.12, duration: 700, useNativeDriver: true }),
+        Animated.timing(locationPulseAnim, { toValue: 1.0,  duration: 700, useNativeDriver: true }),
+      ])
+    );
+    loop.start();
+    return () => loop.stop();
+  }, [locationApproved]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const [topics,  setTopics]  = useState<DBTopic[]>([]);
   const [loading, setLoading] = useState(true);
@@ -139,22 +166,31 @@ export default function EngineAHomeScreen() {
 
   return (
     <SafeAreaView style={styles.safeArea}>
+      <LocationPermissionModal
+        visible={locationModalVisible}
+        onApprove={handleLocationApprove}
+        onNotNow={handleLocationNotNow}
+      />
       <View style={styles.container}>
-        {/* Header with replay + share buttons */}
+        {/* Header with location + share buttons */}
         <View style={styles.header}>
+          {!locationApproved && (
+            <Animated.View style={{ transform: [{ scale: locationPulseAnim }] }}>
+              <TouchableOpacity
+                onPress={showLocationPrompt}
+                style={[styles.replayButton, styles.locationHeaderButton]}
+                accessibilityLabel="የቅርብ ቅናሾችን አሳየኝ"
+              >
+                <MaterialCommunityIcons name="map-marker" size={22} color="#ffffff" />
+              </TouchableOpacity>
+            </Animated.View>
+          )}
           <TouchableOpacity
             onPress={handleShare}
             style={styles.replayButton}
             accessibilityLabel="שתף"
           >
-            <MaterialCommunityIcons name="share-variant" size={22} color="#555555" />
-          </TouchableOpacity>
-          <TouchableOpacity
-            onPress={() => playAudio(`${_AUDIO_BASE}/home_welcome_a.mp3`).catch(() => {})}
-            style={styles.replayButton}
-            accessibilityLabel="ድምጽ ዳግም አዳምጥ"
-          >
-            <Text style={styles.replayIcon}>🔊</Text>
+            <MaterialCommunityIcons name="share-variant" size={22} color="#ffffff" />
           </TouchableOpacity>
         </View>
 
@@ -244,14 +280,24 @@ const styles = StyleSheet.create({
     width:           48,
     height:          48,
     borderRadius:    24,
-    backgroundColor: '#eeeeee',
+    backgroundColor: '#25D366',
     justifyContent:  'center',
     alignItems:      'center',
-    borderWidth:     1,
-    borderColor:     '#dde3ea',
+    shadowColor:     '#25D366',
+    shadowOffset:    { width: 0, height: 3 },
+    shadowOpacity:   0.5,
+    shadowRadius:    8,
+    elevation:       5,
   },
-  replayIcon: {
-    fontSize: 22,
+  locationHeaderButton: {
+    backgroundColor: '#29B6F6',
+    borderColor:     '#B3E5FC',
+    borderWidth:     2,
+    shadowColor:     '#29B6F6',
+    shadowOffset:    { width: 0, height: 3 },
+    shadowOpacity:   0.6,
+    shadowRadius:    8,
+    elevation:       6,
   },
   grid: {
     paddingHorizontal: 16,

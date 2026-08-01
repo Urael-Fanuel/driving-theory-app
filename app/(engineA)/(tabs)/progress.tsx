@@ -6,7 +6,7 @@
  * No text for Engine A users.
  */
 
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import {
   View,
   Text,
@@ -14,6 +14,7 @@ import {
   SafeAreaView,
   ScrollView,
   TouchableOpacity,
+  Animated,
   Share,
 } from 'react-native';
 import { useRouter } from 'expo-router';
@@ -21,9 +22,35 @@ import { Colors } from '../../../constants/colors';
 import { ProgressBar } from '../../../components/shared/ProgressBar';
 import { useProgress } from '../../../hooks/useProgress';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
+import { LocationPermissionModal } from '../../../components/shared/LocationPermissionModal';
+import { useLocationPrompt } from '../../../hooks/useLocationPrompt';
+import { useEngine } from '../../../contexts/EngineContext';
 
 export default function EngineAProgressScreen() {
   const router = useRouter();
+  const { userId } = useEngine();
+  const {
+    visible: locationModalVisible,
+    approved: locationApproved,
+    showManually: showLocationPrompt,
+    handleApprove: handleLocationApprove,
+    handleNotNow: handleLocationNotNow,
+  } = useLocationPrompt(userId);
+
+  // Gentle attention-drawing pulse on the 📍 button, same pattern as the
+  // "Start Quiz" button elsewhere in the app — stops once approved.
+  const locationPulseAnim = useRef(new Animated.Value(1)).current;
+  useEffect(() => {
+    if (locationApproved) return;
+    const loop = Animated.loop(
+      Animated.sequence([
+        Animated.timing(locationPulseAnim, { toValue: 1.12, duration: 700, useNativeDriver: true }),
+        Animated.timing(locationPulseAnim, { toValue: 1.0,  duration: 700, useNativeDriver: true }),
+      ])
+    );
+    loop.start();
+    return () => loop.stop();
+  }, [locationApproved]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleShare = async () => {
     await Share.share({
@@ -38,6 +65,11 @@ export default function EngineAProgressScreen() {
 
   return (
     <SafeAreaView style={styles.safeArea}>
+      <LocationPermissionModal
+        visible={locationModalVisible}
+        onApprove={handleLocationApprove}
+        onNotNow={handleLocationNotNow}
+      />
       <ScrollView contentContainerStyle={styles.content}>
         {/* Large circular progress indicator */}
         <View style={styles.circleContainer}>
@@ -80,6 +112,22 @@ export default function EngineAProgressScreen() {
         >
           <MaterialCommunityIcons name="share-variant" size={36} color="#ffffff" />
         </TouchableOpacity>
+
+        {/* Location recommendations — permanent low-friction entry point so a
+            user who dismissed the auto-prompt can still turn it on later.
+            Hidden once already approved. */}
+        {!locationApproved && (
+          <Animated.View style={{ transform: [{ scale: locationPulseAnim }] }}>
+            <TouchableOpacity
+              style={styles.locationButton}
+              onPress={showLocationPrompt}
+              activeOpacity={0.8}
+              accessibilityLabel="የቅርብ ቅናሾችን አሳየኝ"
+            >
+              <MaterialCommunityIcons name="map-marker" size={36} color="#ffffff" />
+            </TouchableOpacity>
+          </Animated.View>
+        )}
 
         {/* Start exam button */}
         <TouchableOpacity
@@ -152,14 +200,29 @@ const styles = StyleSheet.create({
     width:           80,
     height:          80,
     borderRadius:    40,
-    backgroundColor: '#1976D2',
+    backgroundColor: '#25D366',
     justifyContent:  'center',
     alignItems:      'center',
-    shadowColor:     '#1976D2',
+    shadowColor:     '#25D366',
     shadowOffset:    { width: 0, height: 4 },
     shadowOpacity:   0.4,
     shadowRadius:    10,
     elevation:       6,
+  },
+  locationButton: {
+    width:           80,
+    height:          80,
+    borderRadius:    40,
+    backgroundColor: '#29B6F6',
+    justifyContent:  'center',
+    alignItems:      'center',
+    borderWidth:     3,
+    borderColor:     '#B3E5FC',
+    shadowColor:     '#29B6F6',
+    shadowOffset:    { width: 0, height: 6 },
+    shadowOpacity:   0.7,
+    shadowRadius:    18,
+    elevation:       10,
   },
   examButton: {
     width:           100,

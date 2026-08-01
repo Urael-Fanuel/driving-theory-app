@@ -59,6 +59,12 @@
           "androidAppId": "ca-app-pub-3940256099942544~3347511713",
           "iosAppId": "ca-app-pub-3940256099942544~1458002511"
         }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "TODO_AMHARIC_NEEDED_BEFORE_REAL_BUILD — mirrors the in-app primer text; must come from Gemini like every other Amharic string, not typed by hand. Only affects iOS native builds — ignored by Expo Go, so it does not block testing this feature."
+        }
       ]
     ],
     "scheme": "drivingtheory",

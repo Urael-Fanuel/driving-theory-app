@@ -3,7 +3,7 @@
  * Engine B Progress Screen — Detailed text progress with per-topic stats.
  */
 
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import {
   View,
   Text,
@@ -11,6 +11,7 @@ import {
   SafeAreaView,
   ScrollView,
   TouchableOpacity,
+  Animated,
   Share,
 } from 'react-native';
 import { useRouter } from 'expo-router';
@@ -19,9 +20,35 @@ import { Typography } from '../../../constants/typography';
 import { ProgressBar } from '../../../components/shared/ProgressBar';
 import { useProgress } from '../../../hooks/useProgress';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
+import { LocationPermissionModal, PRIMER_APPROVE_BUTTON } from '../../../components/shared/LocationPermissionModal';
+import { useLocationPrompt } from '../../../hooks/useLocationPrompt';
+import { useEngine } from '../../../contexts/EngineContext';
 
 export default function EngineBProgressScreen() {
   const router = useRouter();
+  const { userId } = useEngine();
+  const {
+    visible: locationModalVisible,
+    approved: locationApproved,
+    showManually: showLocationPrompt,
+    handleApprove: handleLocationApprove,
+    handleNotNow: handleLocationNotNow,
+  } = useLocationPrompt(userId);
+
+  // Gentle attention-drawing pulse on the location button, same pattern as
+  // the "Start Quiz" button elsewhere in the app — stops once approved.
+  const locationPulseAnim = useRef(new Animated.Value(1)).current;
+  useEffect(() => {
+    if (locationApproved) return;
+    const loop = Animated.loop(
+      Animated.sequence([
+        Animated.timing(locationPulseAnim, { toValue: 1.04, duration: 700, useNativeDriver: true }),
+        Animated.timing(locationPulseAnim, { toValue: 1.0,  duration: 700, useNativeDriver: true }),
+      ])
+    );
+    loop.start();
+    return () => loop.stop();
+  }, [locationApproved]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleShare = async () => {
     await Share.share({
@@ -38,6 +65,11 @@ export default function EngineBProgressScreen() {
 
   return (
     <SafeAreaView style={styles.safeArea}>
+      <LocationPermissionModal
+        visible={locationModalVisible}
+        onApprove={handleLocationApprove}
+        onNotNow={handleLocationNotNow}
+      />
       <ScrollView contentContainerStyle={styles.content}>
         {/* Header */}
         <Text style={styles.title}>እድገቴ</Text>
@@ -129,6 +161,23 @@ export default function EngineBProgressScreen() {
           <MaterialCommunityIcons name="share-variant" size={22} color="#ffffff" />
           <Text style={styles.shareButtonText}>שתף את האפליקציה</Text>
         </TouchableOpacity>
+
+        {/* Location recommendations — permanent low-friction entry point so a
+            user who dismissed the auto-prompt can still turn it on later.
+            Hidden once already approved. Reuses the same approved copy as
+            the primer's own approve button. */}
+        {!locationApproved && (
+          <Animated.View style={{ transform: [{ scale: locationPulseAnim }] }}>
+            <TouchableOpacity
+              style={styles.locationButton}
+              onPress={showLocationPrompt}
+              activeOpacity={0.85}
+            >
+              <MaterialCommunityIcons name="map-marker" size={22} color="#ffffff" />
+              <Text style={styles.locationButtonText}>{PRIMER_APPROVE_BUTTON}</Text>
+            </TouchableOpacity>
+          </Animated.View>
+        )}
 
         {/* Start exam CTA */}
         <TouchableOpacity
@@ -256,12 +305,33 @@ const styles = StyleSheet.create({
     flexDirection:   'row',
     alignItems:      'center',
     justifyContent:  'center',
-    backgroundColor: '#1976D2',
+    backgroundColor: '#25D366',
     borderRadius:    16,
     paddingVertical: 16,
     gap:             10,
   },
   shareButtonText: {
+    ...Typography.answer,
+    color:      '#ffffff',
+    fontWeight: '700',
+  },
+  locationButton: {
+    flexDirection:   'row',
+    alignItems:      'center',
+    justifyContent:  'center',
+    backgroundColor: '#29B6F6',
+    borderRadius:    16,
+    paddingVertical: 16,
+    gap:             10,
+    borderWidth:     2,
+    borderColor:     '#B3E5FC',
+    shadowColor:     '#29B6F6',
+    shadowOffset:    { width: 0, height: 4 },
+    shadowOpacity:   0.6,
+    shadowRadius:    14,
+    elevation:       8,
+  },
+  locationButtonText: {
     ...Typography.answer,
     color:      '#ffffff',
     fontWeight: '700',

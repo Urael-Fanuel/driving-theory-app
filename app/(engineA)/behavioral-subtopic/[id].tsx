@@ -56,6 +56,9 @@ import myVehicleData        from '../../../content/my_vehicle_scaffold.json';
 import twoWheelersData      from '../../../content/two_wheelers_scaffold.json';
 import basicsLicenseData    from '../../../content/basics_license_scaffold.json';
 import { OfflineBanner } from '../../../components/shared/OfflineBanner';
+import { LocationPermissionModal } from '../../../components/shared/LocationPermissionModal';
+import { useLocationPrompt } from '../../../hooks/useLocationPrompt';
+import { useEngine } from '../../../contexts/EngineContext';
 
 // ─── Number announcement URLs ──────────────────────────────────────────────────
 const _AUDIO_BASE = (process.env.EXPO_PUBLIC_SUPABASE_URL ?? '') + '/storage/v1/object/public/audio';
@@ -115,6 +118,13 @@ export default function BehavioralSubtopicScreenA() {
     id: string; topicId: string; levelId: string;
   }>();
   const router = useRouter();
+  const { userId } = useEngine();
+  const {
+    visible: locationModalVisible,
+    maybeShow: maybeShowLocationPrompt,
+    handleApprove: handleLocationApproveBase,
+    handleNotNow: handleLocationNotNowBase,
+  } = useLocationPrompt(userId);
 
   // ── Data ──────────────────────────────────────────────────────────────────────
   const scaffold      = SCAFFOLD_MAP[topicId ?? ''];
@@ -323,11 +333,25 @@ export default function BehavioralSubtopicScreenA() {
   };
 
   // Explanation: start quiz
-  const handleStartQuiz = async () => {
-    await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+  const enterQuestionsPhase = async () => {
     await soundRef.current?.unloadAsync().catch(() => {});
     soundRef.current = null;
     setPhase('questions');
+  };
+
+  const handleStartQuiz = async () => {
+    await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+    await enterQuestionsPhase();
+  };
+
+  const handleLocationApprove = () => {
+    handleLocationApproveBase();
+    setPhase('complete');
+  };
+
+  const handleLocationNotNow = () => {
+    handleLocationNotNowBase();
+    setPhase('complete');
   };
 
   // Questions: audio control button (stop/restart sequence)
@@ -405,12 +429,14 @@ export default function BehavioralSubtopicScreenA() {
     setQIndex(newIndex);
   }, [questions.length, cancelListening]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // After feedback: go to next question or complete
-  const handleNext = useCallback(() => {
+  // After feedback: go to next question, or — on the last question — the
+  // "delighted moment" for the location-permission primer, then complete.
+  const handleNext = useCallback(async () => {
     const next = qIndex + 1;
-    if (next < questions.length) navigateToQuestion(next);
-    else setPhase('complete');
-  }, [qIndex, questions.length, navigateToQuestion]);
+    if (next < questions.length) { navigateToQuestion(next); return; }
+    const shown = await maybeShowLocationPrompt();
+    if (!shown) setPhase('complete');
+  }, [qIndex, questions.length, navigateToQuestion, maybeShowLocationPrompt]);
 
   // Subtopic navigation (used in both phases)
   const navToSubtopic = async (sub: typeof prevSubtopic) => {
@@ -444,6 +470,11 @@ export default function BehavioralSubtopicScreenA() {
   return (
     <SafeAreaView style={styles.safeArea}>
       <OfflineBanner />
+      <LocationPermissionModal
+        visible={locationModalVisible}
+        onApprove={handleLocationApprove}
+        onNotNow={handleLocationNotNow}
+      />
 
       {/* ════════════════════ PHASE: EXPLANATION ════════════════════ */}
       {phase === 'explanation' && (

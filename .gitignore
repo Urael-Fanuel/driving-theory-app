@@ -14,6 +14,10 @@ expo-env.d.ts
 .env.local
 .env.*.local
 
+# Local-only secrets staging (e.g. API keys pasted here before being set as
+# a Supabase secret) — never committed, never displayed in chat.
+local-secrets/
+
 # Native builds
 android/
 ios/

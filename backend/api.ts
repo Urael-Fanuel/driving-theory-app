@@ -544,6 +544,26 @@ export async function upsertUser(
   }
 }
 
+/**
+ * Records the user's approximate city (from a one-time, foreground-only
+ * location check — see hooks/useLocationPrompt.ts), for future location-based
+ * business matching. `country`/`region` are left for a later IP-based pass;
+ * this only ever sets `city`, computed offline via utils/nearestIsraeliCity.ts.
+ */
+export async function updateUserLocation(userId: string, city: string): Promise<void> {
+  if (USE_MOCK) return;
+
+  try {
+    const { error } = await (supabase
+      .from('users') as any)
+      .update({ city })
+      .eq('id', userId);
+    if (error) throw error;
+  } catch (err) {
+    console.error('[api] updateUserLocation:', err);
+  }
+}
+
 // ─── PROGRESS ─────────────────────────────────────────────────────────────────
 
 /**

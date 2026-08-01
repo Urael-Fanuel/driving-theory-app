@@ -5,8 +5,15 @@
  * Engine A = Non-reader (video + voice input)
  * Engine B = Amharic reader (text + tap input)
  *
- * Persists to expo-file-system (works without AsyncStorage dependency).
- * Uses Supabase anonymous auth for userId (proper UUID for DB foreign keys).
+ * UI prefs (engine choice, disclaimer seen, last-known userId) persist to
+ * expo-file-system. The Supabase AUTH SESSION itself persists separately,
+ * through AsyncStorage wired into createClient() in backend/supabaseClient.ts
+ * — that wiring is what makes getSession() below actually find a session on
+ * relaunch instead of silently returning null every time. (It was missing
+ * for a while: every launch then went straight to signInAnonymously(),
+ * minting a brand-new user_id and orphaning that user's whole progress
+ * history. See the resolvedId !== prefs.userId warning below — that log
+ * firing again in production would mean this has regressed.)
  * Falls back to locally-generated UUID if Supabase is unavailable.
  */
 
@@ -150,6 +157,17 @@ export function EngineProvider({ children }: { children: ReactNode }) {
 
         // Persist resolved userId (may differ from stored if session resumed)
         if (resolvedId !== prefs.userId) {
+          // A returning user (prefs.userId already set) getting a DIFFERENT
+          // Supabase-backed id means the persisted auth session was NOT
+          // found — i.e. the exact failure mode this file's header comment
+          // warns about. Not fatal (the new id still works), but it silently
+          // orphans that user's server-side progress, so it must be visible.
+          if (prefs.userId && fromSupabase) {
+            console.warn(
+              '[EngineContext] Supabase session was not resumed — got a new user_id ' +
+              `(had ${prefs.userId}, now ${resolvedId}). Progress under the old id is orphaned.`
+            );
+          }
           await writePrefs({ ...prefs, userId: resolvedId });
         }
 

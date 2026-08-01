@@ -197,9 +197,11 @@ export default function EngineASignScreen() {
 
   // ── Other handlers ───────────────────────────────────────────────────────────
 
-  const handleStartQuiz = () => {
+  const navigateToQuiz = () => router.push(`/(engineA)/question/${id}_q0`);
+
+  const handleStartQuiz = async () => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
-    router.push(`/(engineA)/question/${id}_q0`);
+    navigateToQuiz();
   };
 
   const handleBack = async () => {

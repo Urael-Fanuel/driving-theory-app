@@ -54,6 +54,9 @@ import myVehicleData        from '../../../content/my_vehicle_scaffold.json';
 import twoWheelersData      from '../../../content/two_wheelers_scaffold.json';
 import basicsLicenseData    from '../../../content/basics_license_scaffold.json';
 import { OfflineBanner } from '../../../components/shared/OfflineBanner';
+import { LocationPermissionModal } from '../../../components/shared/LocationPermissionModal';
+import { useLocationPrompt } from '../../../hooks/useLocationPrompt';
+import { useEngine } from '../../../contexts/EngineContext';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 interface Answer   { text_amharic: string; is_correct: boolean; }
@@ -110,6 +113,13 @@ export default function BehavioralSubtopicScreenB() {
     id: string; topicId: string; levelId: string;
   }>();
   const router = useRouter();
+  const { userId } = useEngine();
+  const {
+    visible: locationModalVisible,
+    maybeShow: maybeShowLocationPrompt,
+    handleApprove: handleLocationApproveBase,
+    handleNotNow: handleLocationNotNowBase,
+  } = useLocationPrompt(userId);
 
   // ── Data ──────────────────────────────────────────────────────────────────────
   const scaffold      = SCAFFOLD_MAP[topicId ?? ''];
@@ -183,8 +193,17 @@ export default function BehavioralSubtopicScreenB() {
   const handleStartQuiz = async () => {
     await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
     await stopAudio();  // stop narration audio before entering questions
-    if (questions.length > 0) setPhase('questions');
-    else setPhase('complete');
+    setPhase(questions.length === 0 ? 'complete' : 'questions');
+  };
+
+  const handleLocationApprove = () => {
+    handleLocationApproveBase();
+    setPhase('complete');
+  };
+
+  const handleLocationNotNow = () => {
+    handleLocationNotNowBase();
+    setPhase('complete');
   };
 
   const handleAnswerSelect = async (answerIndex: number) => {
@@ -211,12 +230,15 @@ export default function BehavioralSubtopicScreenB() {
     setTimeout(() => setShowFeedback(true), 200);
   };
 
-  const handleNext = () => {
+  const handleNext = async () => {
     setShowFeedback(false);
     setSelectedAnswer(null);
     setFeedbackText('');
-    if (qIndex < questions.length - 1) setQIndex(q => q + 1);
-    else setPhase('complete');
+    if (qIndex < questions.length - 1) { setQIndex(q => q + 1); return; }
+    // Just finished the last question — the "delighted moment" for the
+    // location-permission primer, then complete.
+    const shown = await maybeShowLocationPrompt();
+    if (!shown) setPhase('complete');
   };
 
   // Question navigation (prev/next within same subtopic)
@@ -263,6 +285,11 @@ export default function BehavioralSubtopicScreenB() {
   return (
     <SafeAreaView style={styles.safeArea}>
       <OfflineBanner />
+      <LocationPermissionModal
+        visible={locationModalVisible}
+        onApprove={handleLocationApprove}
+        onNotNow={handleLocationNotNow}
+      />
 
       {/* ════════════════════ PHASE: EXPLANATION ════════════════════ */}
       {phase === 'explanation' && (

@@ -8,6 +8,7 @@
  */
 
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 // ─── Environment Variables ────────────────────────────────────────────────────
 // In Expo: set in .env file as EXPO_PUBLIC_* (auto-exposed to client)
@@ -76,6 +77,16 @@ export interface DBUser {
   engine_type: 'A' | 'B';
   created_at: string;
   last_seen: string;
+  // Added by backend/migration_agent_platform.sql — country/region are
+  // reserved for a future IP-based pass; city is set today by
+  // hooks/useLocationPrompt.ts from a one-time foreground GPS check.
+  country?: string;
+  region?: string;
+  city?: string;
+  platform?: string;
+  os_version?: string;
+  app_version?: string;
+  locale?: string;
 }
 
 export interface DBUserProgress {
@@ -143,8 +154,16 @@ export function getSupabaseClient(): SupabaseClient<Database> {
     }
     _client = createClient<Database>(SUPABASE_URL, SUPABASE_ANON, {
       auth: {
-        persistSession: true,
-        autoRefreshToken: true,
+        // `storage` is required for persistSession to actually persist on
+        // React Native — supabase-js defaults to `localStorage`, which does
+        // not exist there. Without this, every app launch found no saved
+        // session, called signInAnonymously() again, and got a brand new
+        // user_id — so 26 real testers turned into 800+ rows in `users`,
+        // each one losing all progress on every relaunch.
+        storage:           AsyncStorage,
+        persistSession:    true,
+        autoRefreshToken:  true,
+        detectSessionInUrl: false,
       },
     });
   }

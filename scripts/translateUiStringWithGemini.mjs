@@ -1,12 +1,13 @@
 /**
  * scripts/translateUiStringWithGemini.mjs
  *
- * Translates a single short UI string to Amharic via Gemini and prints it.
+ * Translates one or more short UI strings to Amharic via Gemini and prints
+ * them, labeled.
  *
  * Exists because app UI text must be authored by Gemini, never hand-written —
- * a single wrong Ge'ez letter has slipped in that way before. Claude edits the
- * STRING_TO_TRANSLATE constant below; the user runs the script and approves the
- * output before it is wired into the app.
+ * a single wrong Ge'ez letter has slipped in that way before. Claude edits
+ * the STRINGS array below; the user runs the script and approves the output
+ * before it is wired into the app.
  *
  * Usage:
  *   node --env-file=.env scripts/translateUiStringWithGemini.mjs
@@ -16,41 +17,56 @@ const API_KEY = process.env.GEMINI_API_KEY;
 const MODEL   = 'gemini-2.5-flash';
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${API_KEY}`;
 
+// ─── Shared context for every string below ────────────────────────────────────
+
+const SHARED_CONTEXT = `
+This is the "priming" screen shown ONCE (before the real OS location-permission
+dialog) in a driving-theory learning app used by Ethiopian speakers, including
+people with very basic literacy and no technical background. Its purpose:
+explain, in a friendly and specific way, that approving location lets the app
+show recommendations for local businesses (driving instructors first; other
+business categories later) near wherever the user currently is.
+
+General requirements for every string:
+- Amharic (Ge'ez script) only.
+- Simple, everyday spoken words — the audience includes non-readers who will
+  hear this read aloud by TTS, not just read it. Avoid formal/literary
+  register (see the lesson already learned on a previous string: a first
+  attempt using the word "እድገት" progress was rejected as too literary/unclear
+  for this audience — prefer concrete, spoken phrasing throughout).
+- Do NOT use phonetic transliterations of English words.
+- Honest framing: this is about advertising/business recommendations by
+  location, not vague "improving your experience" language.
+- Provide 3 DIFFERENT phrasings per string (not minor variations) so a
+  reviewer can pick the clearest one.
+`;
+
 // ─── What to translate ────────────────────────────────────────────────────────
 
-const STRING_TO_TRANSLATE = 'אין אינטרנט. ההתקדמות תיסנכרן כשתתחבר.';
-
-/** Where it will be used — helps Gemini pick the right register and length. */
-const USAGE_CONTEXT = `
-This is a short notification banner in a driving-theory learning app used by
-Ethiopian speakers. It appears at the top of the screen the moment the phone
-loses internet connectivity.
-
-Its purpose: reassure the user that the app is NOT broken and that they can keep
-studying, and tell them their progress will be saved to the server once they
-reconnect.
-
-Requirements:
-- Amharic (Ge'ez script) only.
-- Must fit on one or two short lines in a banner — keep it brief.
-- Calm and reassuring in tone, NOT an error or alarm.
-- Do NOT tell the user to press any button, and do NOT tell them to stop or come
-  back later. They can continue using the app right now.
-- Use standard Amharic words. Do NOT use phonetic transliterations of English
-  words.
-- CRITICAL — simplicity: the audience includes people with very basic literacy
-  and no technical background. A first attempt at this translation came back
-  as "እድገትዎ ሲገናኙ ይዘምናል" (your progress will update when you connect) and was
-  rejected by a native-speaker reviewer as NOT clear or understandable enough —
-  too formal/literary a construction for an everyday app notice.
-  Use the simplest, most everyday spoken words a person would actually say out
-  loud to a friend, not formal or literary Amharic. Avoid abstract nouns like
-  "progress" (እድገት) if a plainer phrasing exists — e.g. describing what the app
-  will DO ("save it", "not lose it") rather than naming an abstract concept
-  ("your progress"). Prefer short, concrete, spoken-register sentences.
-- Provide 3 DIFFERENT phrasings (not minor variations of the same sentence) so
-  a reviewer can pick the clearest one.
-`;
+const STRINGS = [
+  {
+    key: 'PRIMER_TITLE',
+    hebrew: 'הצעות מותאמות בשבילך',
+    context: 'Short heading at the top of the screen, a few words only.',
+  },
+  {
+    key: 'PRIMER_BODY',
+    hebrew:
+      'אשר מיקום ותקבל המלצות על מורי נהיגה סבלניים ומקצועיים, ' +
+      'ועסקים אחרים שיכולים לעזור לך — קרוב אליך, איפה שאתה נמצא.',
+    context: 'One or two sentences of body text below the heading, explaining the benefit.',
+  },
+  {
+    key: 'PRIMER_APPROVE_BUTTON',
+    hebrew: 'כן, הראה לי הצעות קרובות',
+    context: 'The main, positive call-to-action button. Short — must fit on one line on a button.',
+  },
+  {
+    key: 'PRIMER_LATER_BUTTON',
+    hebrew: 'אולי מאוחר יותר',
+    context: 'The secondary, low-friction dismiss button below the main one. Very short.',
+  },
+];
 
 // ─── Run ──────────────────────────────────────────────────────────────────────
 
@@ -58,41 +74,6 @@ if (!API_KEY) {
   console.error('❌ Missing GEMINI_API_KEY. Run with: node --env-file=.env scripts/translateUiStringWithGemini.mjs');
   process.exit(1);
 }
-
-const prompt = `Translate the following Hebrew UI string into Amharic.
-
-Hebrew source:
-${STRING_TO_TRANSLATE}
-
-Context and constraints:
-${USAGE_CONTEXT}
-
-Reply with ONLY the Amharic translation as a single line of plain text.
-No quotes, no explanation, no transliteration, no alternatives.`;
-
-const res = await fetch(API_URL, {
-  method:  'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body:    JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] }),
-});
-
-if (!res.ok) {
-  console.error('❌ Gemini request failed:', res.status, await res.text());
-  process.exit(1);
-}
-
-const data      = await res.json();
-const amharic   = (data?.candidates?.[0]?.content?.parts?.[0]?.text ?? '').trim();
-
-if (!amharic) {
-  console.error('❌ Empty response from Gemini.');
-  process.exit(1);
-}
-
-console.log('');
-console.log('Hebrew source:');
-console.log(`  ${STRING_TO_TRANSLATE}`);
-console.log('');
 
 /** Flag anything outside Ethiopic / ASCII — catches stray Arabic or Latin
  *  lookalikes, which is exactly how a bad character has slipped through before. */
@@ -109,18 +90,55 @@ function characterCheck(text) {
     .join(', ');
 }
 
-// Gemini is asked for several phrasings — list them separately so they are easy
-// to compare, and strip any numbering it added itself.
-const options = amharic
-  .split('\n')
-  .map(l => l.trim().replace(/^[-*\d.)\s]+/, '').trim())
-  .filter(Boolean);
+async function translateOne({ key, hebrew, context }) {
+  const prompt = `Translate the following Hebrew UI string into Amharic.
 
-console.log('[AMHARIC]');
-options.forEach((opt, i) => {
-  const check = characterCheck(opt);
+Hebrew source:
+${hebrew}
+
+Context and constraints:
+${SHARED_CONTEXT}
+Specific to this string: ${context}
+
+Reply with ONLY the 3 Amharic phrasings, one per line, no numbering, no quotes,
+no explanation, no transliteration.`;
+
+  const res = await fetch(API_URL, {
+    method:  'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body:    JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] }),
+  });
+
+  if (!res.ok) {
+    console.error(`❌ Gemini request failed for ${key}:`, res.status, await res.text());
+    return;
+  }
+
+  const data    = await res.json();
+  const amharic = (data?.candidates?.[0]?.content?.parts?.[0]?.text ?? '').trim();
+
+  if (!amharic) {
+    console.error(`❌ Empty response from Gemini for ${key}.`);
+    return;
+  }
+
+  const options = amharic
+    .split('\n')
+    .map(l => l.trim().replace(/^[-*\d.)\s]+/, '').trim())
+    .filter(Boolean);
+
+  console.log('═'.repeat(60));
+  console.log(`[${key}]`);
+  console.log(`Hebrew: ${hebrew}`);
   console.log('');
-  console.log(`${i + 1}. ${opt}`);
-  console.log(`   ${opt.length} characters | characters: ${check === 'clean' ? 'clean (Ethiopic only)' : '⚠️  ' + check}`);
-});
-console.log('');
+  options.forEach((opt, i) => {
+    const check = characterCheck(opt);
+    console.log(`${i + 1}. ${opt}`);
+    console.log(`   ${opt.length} characters | ${check === 'clean' ? 'clean (Ethiopic only)' : '⚠️  ' + check}`);
+    console.log('');
+  });
+}
+
+for (const s of STRINGS) {
+  await translateOne(s);
+}

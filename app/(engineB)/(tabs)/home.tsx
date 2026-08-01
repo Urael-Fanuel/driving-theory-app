@@ -10,7 +10,7 @@
  * - Progress indicator
  */
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import {
   View,
   Text,
@@ -18,6 +18,7 @@ import {
   FlatList,
   SafeAreaView,
   TouchableOpacity,
+  Animated,
   Share,
 } from 'react-native';
 import { useRouter } from 'expo-router';
@@ -34,6 +35,9 @@ import { useProgress } from '../../../hooks/useProgress';
 import { AdCard } from '../../../components/shared/AdCard';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import { SafeBannerAd, IS_EXPO_GO } from '../../../components/shared/SafeBannerAd';
+import { LocationPermissionModal } from '../../../components/shared/LocationPermissionModal';
+import { useLocationPrompt } from '../../../hooks/useLocationPrompt';
+import { useEngine } from '../../../contexts/EngineContext';
 
 // react-native-google-mobile-ads has no native module in Expo Go — avoid
 // even importing it there (a static import alone can crash on load).
@@ -49,6 +53,29 @@ export default function EngineBHomeScreen() {
   const router   = useRouter();
   const { playAudio } = useAudio();
   const { topicsProgress } = useProgress();
+  const { userId } = useEngine();
+  const {
+    visible: locationModalVisible,
+    approved: locationApproved,
+    showManually: showLocationPrompt,
+    handleApprove: handleLocationApprove,
+    handleNotNow: handleLocationNotNow,
+  } = useLocationPrompt(userId);
+
+  // Gentle attention-drawing pulse, same pattern as elsewhere in the app —
+  // stops once approved.
+  const locationPulseAnim = useRef(new Animated.Value(1)).current;
+  useEffect(() => {
+    if (locationApproved) return;
+    const loop = Animated.loop(
+      Animated.sequence([
+        Animated.timing(locationPulseAnim, { toValue: 1.1, duration: 700, useNativeDriver: true }),
+        Animated.timing(locationPulseAnim, { toValue: 1.0, duration: 700, useNativeDriver: true }),
+      ])
+    );
+    loop.start();
+    return () => loop.stop();
+  }, [locationApproved]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const [topics,  setTopics]  = useState<DBTopic[]>([]);
   const [loading, setLoading] = useState(true);
@@ -97,19 +124,37 @@ export default function EngineBHomeScreen() {
 
   return (
     <SafeAreaView style={styles.safeArea}>
+      <LocationPermissionModal
+        visible={locationModalVisible}
+        onApprove={handleLocationApprove}
+        onNotNow={handleLocationNotNow}
+      />
       {/* Header */}
       <View style={styles.header}>
         <View style={styles.headerText}>
           <Text style={styles.appTitle}>መንጃ ፍቃድ</Text>
           <Text style={styles.appSubtitle}>ትምህርት ጀምር</Text>
         </View>
-        <TouchableOpacity
-          onPress={handleShare}
-          style={styles.shareButton}
-          accessibilityLabel="שתף"
-        >
-          <MaterialCommunityIcons name="share-variant" size={20} color="#555555" />
-        </TouchableOpacity>
+        <View style={styles.headerButtons}>
+          {!locationApproved && (
+            <Animated.View style={{ transform: [{ scale: locationPulseAnim }] }}>
+              <TouchableOpacity
+                onPress={showLocationPrompt}
+                style={[styles.shareButton, styles.locationHeaderButton]}
+                accessibilityLabel="የቅርብ ቅናሾችን አሳየኝ"
+              >
+                <MaterialCommunityIcons name="map-marker" size={18} color="#ffffff" />
+              </TouchableOpacity>
+            </Animated.View>
+          )}
+          <TouchableOpacity
+            onPress={handleShare}
+            style={styles.shareButton}
+            accessibilityLabel="שתף"
+          >
+            <MaterialCommunityIcons name="share-variant" size={20} color="#ffffff" />
+          </TouchableOpacity>
+        </View>
       </View>
 
       {/* Topics list */}
@@ -218,15 +263,33 @@ const styles = StyleSheet.create({
     color:     '#404943',
     marginTop: 4,
   },
+  headerButtons: {
+    flexDirection: 'row',
+    alignItems:    'center',
+    gap:           10,
+  },
   shareButton: {
     width:           44,
     height:          44,
     borderRadius:    22,
-    backgroundColor: '#eeeeee',
+    backgroundColor: '#25D366',
     justifyContent:  'center',
     alignItems:      'center',
-    borderWidth:     1,
-    borderColor:     '#dde3ea',
+    shadowColor:     '#25D366',
+    shadowOffset:    { width: 0, height: 3 },
+    shadowOpacity:   0.5,
+    shadowRadius:    8,
+    elevation:       5,
+  },
+  locationHeaderButton: {
+    backgroundColor: '#29B6F6',
+    borderColor:     '#B3E5FC',
+    borderWidth:     2,
+    shadowColor:     '#29B6F6',
+    shadowOffset:    { width: 0, height: 3 },
+    shadowOpacity:   0.6,
+    shadowRadius:    8,
+    elevation:       6,
   },
   list: {
     paddingHorizontal: 20,

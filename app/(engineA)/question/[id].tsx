@@ -49,6 +49,9 @@ import { extractSignNumber, shouldShowSignBadge } from '../../../utils/signNumbe
 import { useVoiceRecognition } from '../../../hooks/useVoiceRecognition';
 import { OfflineBanner } from '../../../components/shared/OfflineBanner';
 import { prefetchSignAudio } from '../../../services/audioCache';
+import { LocationPermissionModal } from '../../../components/shared/LocationPermissionModal';
+import { useLocationPrompt } from '../../../hooks/useLocationPrompt';
+import { useEngine } from '../../../contexts/EngineContext';
 
 // ─── Number announcement URLs (played before each answer) ─────────────────────
 const _AUDIO_BASE = (process.env.EXPO_PUBLIC_SUPABASE_URL ?? '') + '/storage/v1/object/public/audio';
@@ -66,6 +69,13 @@ export default function EngineAQuestionScreen() {
   const router     = useRouter();
   const { playAudio, stopAudio, pauseAudio, resumeAudio, audioState } = useAudio();
   const { recordAnswer } = useProgress();
+  const { userId } = useEngine();
+  const {
+    visible: locationModalVisible,
+    maybeShow: maybeShowLocationPrompt,
+    handleApprove: handleLocationApproveBase,
+    handleNotNow: handleLocationNotNowBase,
+  } = useLocationPrompt(userId);
 
   const [signId, initialIndex] = parseQuestionId(id);
 
@@ -376,16 +386,29 @@ export default function EngineAQuestionScreen() {
   );
 
   // ── Navigate to next question (after feedback) ──────────────────────────────
-  const handleNext = useCallback(() => {
+  const handleNext = useCallback(async () => {
     const nextIndex = qIndex + 1;
     if (nextIndex < questions.length) {
       navigateToQuestion(nextIndex);
-    } else {
-      // Go to the current sign's explanation screen (not router.back() which
-      // would return to the original entry sign, not the last-viewed sign).
-      handleBack();
+      return;
     }
-  }, [qIndex, questions.length, navigateToQuestion, handleBack]);
+    // Just finished the last question of this sign's quiz — the "delighted
+    // moment" the app owner chose for the location-permission primer, right
+    // before returning to the sign's explanation screen.
+    const shown = await maybeShowLocationPrompt();
+    if (!shown) handleBack();
+    // else: wait for the modal's approve/not-now, which itself calls handleBack.
+  }, [qIndex, questions.length, navigateToQuestion, handleBack, maybeShowLocationPrompt]);
+
+  const handleLocationApprove = () => {
+    handleLocationApproveBase();
+    handleBack();
+  };
+
+  const handleLocationNotNow = () => {
+    handleLocationNotNowBase();
+    handleBack();
+  };
 
   // ── Render ─────────────────────────────────────────────────────────────────
   if (loading) return <LoadingScreen />;
@@ -413,6 +436,11 @@ export default function EngineAQuestionScreen() {
   return (
     <SafeAreaView style={styles.safeArea}>
       <OfflineBanner />
+      <LocationPermissionModal
+        visible={locationModalVisible}
+        onApprove={handleLocationApprove}
+        onNotNow={handleLocationNotNow}
+      />
       <ScrollView
         contentContainerStyle={styles.content}
         showsVerticalScrollIndicator={false}
