@@ -297,10 +297,11 @@ export default function EngineBQuestionScreen() {
 
         {/* Answer choices */}
         <View style={styles.answersContainer}>
-          {currentQuestion.answers.map(answer => (
+          {currentQuestion.answers.map((answer, index) => (
             <TextAnswerCard
               key={answer.id}
               answerId={answer.id}
+              label={String(index + 1)}
               text={answer.text_amharic}
               imageUri={answer.image_url}
               cardState={getCardState(answer.id)}
