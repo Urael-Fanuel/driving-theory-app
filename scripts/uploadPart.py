@@ -19,7 +19,7 @@ import urllib.error
 
 # ── Config ───────────────────────────────────────────────────────────────────
 SUPABASE_URL      = "https://bpltieicivxixpogxfim.supabase.co"
-SERVICE_ROLE_KEY  = "sb_secret_c_pFAfrW4qzdTQjEuLSpxQ_WPbFBz_o"
+SERVICE_ROLE_KEY = os.environ.get("SUPABASE_SERVICE_ROLE_KEY", "")
 BUCKET            = "images"
 IMG_VERSION       = "v3"
 ASSETS_DIR        = r"C:\Users\Yakov\Desktop\driving-theory-app\assets\images"
