@@ -30748,113 +30748,113 @@
     "image_filename": "919.png",
     "video_filename": null,
     "name_hebrew": "919",
-    "name_amharic": "ይህ ምልክት ለአውቶቡሶች ወይም ለሕዝብ ማመላለሻ ተሽከርካሪዎች የተመደበ መስመር መኖሩን ያመለክታል።",
-    "explanation_amharic": "ይህ ምልክት ለአውቶቡሶች፣ ለታክሲዎች እና ለሌሎች የሕዝብ ማመላለሻ ተሽከርካሪዎች ብቻ የተመደበ ልዩ የመንገድ መስመር መኖሩን ያሳያል። ተራ አሽከርካሪዎች በዚህ መስመር ውስጥ መንዳት ወይም ማቆም አይፈቀድላቸውም፤ ከዚህ መስመር መውጣት ወይም መግባት የሚፈቀደው ለመታጠፊያ ወይም ወደ ሌላ መንገድ ለመግባት ሲሆን ብቻ ነው። ይህንን ህግ መጣስ የትራፊክ ፍሰትን ከማስተጓጎል በተጨማሪ የገንዘብ ቅጣት ያስከትላል።",
+    "name_amharic": "ጊዜያዊ ተለዋዋጭ መስመር",
+    "explanation_amharic": "እነዚህ ብርቱካናማ ባለሁለት የተቆራረጡ መስመሮች በመንገድ ላይ የሚታዩ ጊዜያዊ ምልክቶች ናቸው። እነሱም 'ተለዋዋጭ መስመር' መሆኑን ያመለክታሉ፤ ይህም ማለት በዚህ መስመር የመንዳት ፍቃድ ወይም አቅጣጫ ከላይ በሚታይ ምልክት (እንደ አረንጓዴ ቀስት ወይም ቀይ X) ሊለወጥ ይችላል። አሽከርካሪዎች ከላይ አረንጓዴ ቀስት ካልታየ በስተቀር ወደዚህ መስመር መግባት የለባቸውም፤ ቀይ X ከታየ ደግሞ መስመሩ ዝግ ነውና በፍጹም መግባት አይፈቀድም። ይህንን ህግ መጣስ አደገኛ አደጋ ሊያስከትል ወይም ቅጣት ሊያስወጣ ይችላል።",
     "audio_name_filename": "919_name.mp3",
     "audio_explanation_filename": "919_explanation.mp3",
     "questions": [
       {
         "id": "919_q1",
-        "question_amharic": "ይህ የመንገድ ምልክት ምን ያሳያል?",
+        "question_amharic": "በመንገድ ላይ የሚታዩት እነዚህ ብርቱካናማ ባለሁለት የተቆራረጡ መስመሮች ምን ማለት ናቸው?",
         "question_audio": "919_q1_question.mp3",
-        "explanation_correct_amharic": "ትክክل! ይህ ምልክት ለአውቶቡሶች እና ለሕዝብ ማመላለሻ ተሽከርካሪዎች ቅድሚያ የሚሰጥ መስመር መሆኑን በግልጽ ያሳያል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በተሳሳተ መንገድ መንዳት የትራፊክ ፍሰትን ከማስተጓጎል በተጨማሪ የገንዘብ ቅጣት ያስከትላል።",
+        "explanation_correct_amharic": "ጎሽ! እነዚህ መስመሮች 'ተለዋዋጭ መስመር' ሲሆኑ፣ ከላይ በሚታይ ምልክት ብቻ መግባት የሚፈቀድበት መሆኑን ያመለክታሉ።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ መምረጥ ወደ ተከለከለ መስመር እንዲገቡ ያደርጋል፣ ይህም አደገኛ እና ህገወጥ ነው።",
         "explanation_correct_audio": "919_q1_correct.mp3",
         "explanation_wrong_audio": "919_q1_wrong.mp3",
         "answers": [
           {
-            "id": "D",
-            "text_amharic": "ይህ መስመር ለመኪና ማቆሚያነት የሚያገለግል መሆኑን ያሳያል።",
-            "is_correct": false,
-            "audio_filename": "answer_919_q1_D.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "ይህ መስመር ለሁሉም ተሽከርካሪዎች ክፍት መሆኑን ያሳያል።",
+            "text_amharic": "ይህ ለአውቶቡሶች ብቻ የተከለለ መስመር ነው።",
             "is_correct": false,
             "audio_filename": "answer_919_q1_A.mp3"
           },
           {
+            "id": "C",
+            "text_amharic": "በዚህ መስመር በማንኛውም ጊዜ መግባትና መውጣት ይቻላል።",
+            "is_correct": false,
+            "audio_filename": "answer_919_q1_C.mp3"
+          },
+          {
             "id": "B",
-            "text_amharic": "ይህ መስመር ለአውቶቡሶች እና ለሕዝብ ማመላለሻ ተሽከርካሪዎች ብቻ የተመደበ መሆኑን ያሳያል።",
+            "text_amharic": "ይህ መስመር 'ተለዋዋጭ መስመር' ሲሆን ከላይ በሚታይ ምልክት ብቻ መግባት የሚፈቀድበት ነው።",
             "is_correct": true,
             "audio_filename": "answer_919_q1_B.mp3"
           },
           {
-            "id": "C",
-            "text_amharic": "ይህ መስመር ለጭነት መኪናዎች ብቻ የተመደበ መሆኑን ያሳያል።",
+            "id": "D",
+            "text_amharic": "ይህ መስመር ለመኪና ማቆሚያነት የሚያገለግል ነው።",
             "is_correct": false,
-            "audio_filename": "answer_919_q1_C.mp3"
+            "audio_filename": "answer_919_q1_D.mp3"
           }
         ]
       },
       {
         "id": "919_q2",
-        "question_amharic": "የግል መኪና አሽከርካሪ ይህንን ምልክት ሲያይ ምን ማድረግ አለበት?",
+        "question_amharic": "ከዚህ 'ተለዋዋጭ መስመር' በላይ ቀይ 'X' ምልክት ከታየ አሽከርካሪው ምን ማድረግ አለበት?",
         "question_audio": "919_q2_question.mp3",
-        "explanation_correct_amharic": "ትክክል! ጥሩ ነው። የግል ተሽከርካሪዎች በዚህ መስመር ውስጥ እንዲነዱ አይፈቀድላቸውም፤ ስለዚህ ከውጭ መንዳት አለባቸው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በሕዝብ ማመላለሻ መስመር ውስጥ መንዳት ወይም ማቆም የትራፊክ ህግን መጣስ እና ቅጣት የሚያስከትል ተግባር ነው።",
+        "explanation_correct_amharic": "ጎሽ! ቀይ 'X' ምልክት መስመሩ ዝግ መሆኑን ስለሚያመለክት፣ አሽከርካሪው ወደዚያ መስመር መግባት የለበትም።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ቀይ 'X' ምልክትን ችላ ማለት የተከለከለ መስመር ውስጥ መግባት እና አደጋ ሊያስከትል ይችላል።",
         "explanation_correct_audio": "919_q2_correct.mp3",
         "explanation_wrong_audio": "919_q2_wrong.mp3",
         "answers": [
           {
-            "id": "A",
-            "text_amharic": "ወደዚህ መስመር ገብቶ በፍጥነት መንዳት አለበት።",
-            "is_correct": false,
-            "audio_filename": "answer_919_q2_A.mp3"
-          },
-          {
-            "id": "C",
-            "text_amharic": "በዚህ መስመር ውስጥ ለጥቂት ጊዜ ማቆም ይችላል።",
-            "is_correct": false,
-            "audio_filename": "answer_919_q2_C.mp3"
-          },
-          {
             "id": "D",
-            "text_amharic": "ይህ መስመር ባዶ ከሆነ ወደ ውስጥ ገብቶ መንዳት ይችላል።",
+            "text_amharic": "ይህ ምልክት ምንም ትርጉም ስለሌለው መንዳት መቀጠል ይችላል።",
             "is_correct": false,
             "audio_filename": "answer_919_q2_D.mp3"
           },
           {
+            "id": "C",
+            "text_amharic": "ፍጥነቱን ቀንሶ ወደ ሌላ መስመር መቀየር አለበት።",
+            "is_correct": false,
+            "audio_filename": "answer_919_q2_C.mp3"
+          },
+          {
             "id": "B",
-            "text_amharic": "ከዚህ መስመር ውጭ መንዳት እና ወደ ውስጥ አለመግባት አለበት።",
-            "is_correct": true,
+            "text_amharic": "ወደዚህ መስመር ገብቶ በጥንቃቄ መንዳት አለበት።",
+            "is_correct": false,
             "audio_filename": "answer_919_q2_B.mp3"
+          },
+          {
+            "id": "A",
+            "text_amharic": "ወደዚህ መስመር በፍጹም መግባት የለበትም ምክንያቱም ዝግ ነው።",
+            "is_correct": true,
+            "audio_filename": "answer_919_q2_A.mp3"
           }
         ]
       },
       {
         "id": "919_q3",
-        "question_amharic": "የግል ተሽከርካሪ በዚህ መስመር ውስጥ እንዲገባ የሚፈቀደው መቼ ነው?",
+        "question_amharic": "እነዚህ ብርቱካናማ ባለሁለት የተቆራረጡ መስመሮች በመንገድ ላይ የት ይገኛሉ?",
         "question_audio": "919_q3_question.mp3",
-        "explanation_correct_amharic": "አሪፍ! ምልክቱ የግል ተሽከርካሪዎች ወደ ሌላ መንገድ ለመታጠፍ ወይም ለመግባት ሲዘጋጁ ብቻ ወደዚህ መስመር መግባት ይችላሉ።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ያለአግባብ ወደ ሕዝብ ማመላለሻ መስመር መግባት አደጋ ሊያስከትል እና የገንዘብ ቅጣት ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "ትክክል! ጥሩ ነው። እነዚህ ምልክቶች ጊዜያዊ ሲሆኑ፣ በመንገድ ላይ በሚካሄዱ የሥራ ቦታዎች ላይ ተለዋዋጭ መስመሮችን ለማመልከት ያገለግላሉ።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የምልክቶቹን ትክክለኛ ቦታ አለማወቅ በመንገድ ላይ በሚካሄዱ የሥራ ቦታዎች ላይ ግራ መጋባትና አደጋ ሊያስከትል ይችላል።",
         "explanation_correct_audio": "919_q3_correct.mp3",
         "explanation_wrong_audio": "919_q3_wrong.mp3",
         "answers": [
           {
-            "id": "B",
-            "text_amharic": "ወደ ቀኝ ወይም ወደ ግራ ለመታጠፍ ወይም ወደ ሌላ መንገድ ለመግባት ሲዘጋጅ።",
-            "is_correct": true,
-            "audio_filename": "answer_919_q3_B.mp3"
-          },
-          {
-            "id": "A",
-            "text_amharic": "ሌሎች ተሽከርካሪዎችን ለማለፍ ሲፈልግ።",
-            "is_correct": false,
-            "audio_filename": "answer_919_q3_A.mp3"
-          },
-          {
             "id": "C",
-            "text_amharic": "በመንገዱ ላይ የትራፊክ መጨናነቅ ሲኖር።",
-            "is_correct": false,
+            "text_amharic": "ብዙውን ጊዜ በመንገድ ላይ በሚካሄዱ የሥራ ቦታዎች ይገኛሉ።",
+            "is_correct": true,
             "audio_filename": "answer_919_q3_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "ለአጭር ጊዜ ተሳፋሪ ለማውረድ ወይም ለማንሳት።",
+            "text_amharic": "በገጠር መንገዶች ላይ ብቻ።",
             "is_correct": false,
             "audio_filename": "answer_919_q3_D.mp3"
+          },
+          {
+            "id": "A",
+            "text_amharic": "በከተማ ውስጥ ባሉ ዋና ዋና መንገዶች ላይ ብቻ።",
+            "is_correct": false,
+            "audio_filename": "answer_919_q3_A.mp3"
+          },
+          {
+            "id": "B",
+            "text_amharic": "በሕዝብ ማመላለሻ አውቶቡሶች መስመሮች ላይ ብቻ።",
+            "is_correct": false,
+            "audio_filename": "answer_919_q3_B.mp3"
           }
         ]
       }

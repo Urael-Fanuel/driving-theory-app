@@ -1,16 +1,13 @@
 /**
  * scripts/uploadNewAudio.mjs
  *
- * Uploads the newly generated audio files for numbered signs (104–153)
- * to Supabase Storage and updates the audio URLs in the DB.
- *
- * Background:
- *   Signs 104–153 were added to signs.json after the original uploadContent.ts run.
- *   generateAllAudio.ts just produced 820 new .mp3 files for them.
- *   This script uploads those files and patches the DB.
+ * Uploads newly generated audio for numbered signs to Supabase Storage and
+ * updates the audio URLs in the DB. Originally written for a one-time batch
+ * (signs 104-153), now used for any single-sign fix or range — pass
+ * --from=<N> --to=<N> to scope it (same N for both = one sign).
  *
  * Run:
- *   node --env-file=.env scripts/uploadNewAudio.mjs
+ *   node --env-file=.env scripts/uploadNewAudio.mjs --from=<N> --to=<N>
  */
 
 import { readFileSync, existsSync } from 'fs';
@@ -281,4 +278,10 @@ console.log(`   Audio files uploaded : ${uploaded}`);
 console.log(`   Signs DB updated     : ${signsOk}`);
 console.log(`   Questions DB updated : ${questionsOk}`);
 console.log(`${'═'.repeat(55)}`);
-console.log('\nהרץ את האפליקציה ובדוק תמרור 104 — אמור לשמוע אודיו ושאלות.');
+const uploadedNumbers = numberedSigns
+  .map(s => parseInt(s.image_filename))
+  .sort((a, b) => a - b);
+const signsLabel = uploadedNumbers.length === 1
+  ? `תמרור ${uploadedNumbers[0]}`
+  : `תמרורים ${uploadedNumbers[0]}–${uploadedNumbers[uploadedNumbers.length - 1]}`;
+console.log(`\nהרץ את האפליקציה ובדוק ${signsLabel} — אמור לשמוע אודיו ושאלות.`);
