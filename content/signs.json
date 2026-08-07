@@ -31700,113 +31700,113 @@
     "image_filename": "927.png",
     "video_filename": null,
     "name_hebrew": "927",
-    "name_amharic": "ይህ ምልክት ከፊትህ ባለው መንገድ ላይ የአሽከርካሪዎችን ፍጥነት ለመቀነስ የተሰሩ መስመሮች መኖራቸውን ያሳያል።",
-    "explanation_amharic": "ይህ ምልክት በመንገዱ ላይ የአሽከርካሪዎችን ትኩረት ለመሳብ እና ፍጥነት እንዲቀንሱ ለማድረግ የተሰሩ የድምፅና የንዝረት መስመሮች (rumble strips) መኖራቸውን ያመለክታል። አሽከርካሪው ይህንን ምልክት ሲያይ ፍጥነቱን መቀነስ፣ መንገድ ላይ ያለውን ሁኔታ በጥንቃቄ መመልከት እና ተሽከርካሪውን ቀስ ብሎ ማሽከርከር አለበት። ይህንን ምልክት ችላ ማለት ተሽከርካሪው እንዲጎዳ፣ ምቾት እንዲሰማው ወይም አደጋ እንዲደርስ ሊያደርግ ይችላል።",
+    "name_amharic": "የመንገድ መስመር መቀየር ምልክት",
+    "explanation_amharic": "ይህ ምልክት በመንገድ ላይ በጊዜያዊ ሥራ ምክንያት የአሁኑ የመንገድ መስመር እየተዘጋ ወይም እያበቃ መሆኑን ያሳያል። አሽከርካሪዎች ቀስ በቀስ እና በጥንቃቄ ቀስቶቹ ወደሚያመለክቱበት አቅጣጫ ወደ ጎን መስመር መቀየር አለባቸው። ይህንን ካላደረጉ አደጋ ሊያስከትል ወይም የትራፊክ ደንቦችን በመጣስ ቅጣት ሊያስከትል ይችላል።",
     "audio_name_filename": "927_name.mp3",
     "audio_explanation_filename": "927_explanation.mp3",
     "questions": [
       {
         "id": "927_q1",
-        "question_amharic": "ይህ ምልክት በመንገድ ላይ ምን ማለት ነው?",
+        "question_amharic": "ይህ የመንገድ ላይ ምልክት ምን ማለት ነው?",
         "question_audio": "927_q1_question.mp3",
-        "explanation_correct_amharic": "ዋው በጣም ጥሩ። ይህ ምልክት አሽከርካሪዎች ፍጥነታቸውን እንዲቀንሱ የሚያደርጉ መስመሮች መኖራቸውን ያመለክታል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የምልክቱን ትርጉም አለማወቅ አደጋ ሊያስከትል ወይም ለትራፊክ ህግ ጥሰት ሊዳርግ ይችላል።",
+        "explanation_correct_amharic": "ዋው በጣም ጥሩ። ይህ ምልክት የአሁኑ የመንገድ መስመር በጊዜያዊ የመንገድ ሥራ ምክንያት እየተዘጋ መሆኑን እና አሽከርካሪው ወደ ጎን መስመር በሰላም መቀላቀል እንዳለበት ያመለክታል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ምልክቱን በተሳሳተ መንገድ መተርጎም አሽከርካሪው በመዘጋት ላይ ባለው መስመር እንዲቀጥል በማድረግ አደጋ ወይም የትራፊክ መጨናነቅ ሊያስከትል ይችላል።",
         "explanation_correct_audio": "927_q1_correct.mp3",
         "explanation_wrong_audio": "927_q1_wrong.mp3",
         "answers": [
           {
+            "id": "C",
+            "text_amharic": "መንገዱ ለዘለቄታው ተዘግቷል እና ሌላ መንገድ መፈለግ አለብን።",
+            "is_correct": false,
+            "audio_filename": "answer_927_q1_C.mp3"
+          },
+          {
+            "id": "B",
+            "text_amharic": "የአሁኑ የመንገድ መስመር በጊዜያዊ ሥራ ምክንያት እየተዘጋ ስለሆነ ወደ ጎን መስመር መግባት እንዳለብን ያሳያል።",
+            "is_correct": true,
+            "audio_filename": "answer_927_q1_B.mp3"
+          },
+          {
             "id": "D",
-            "text_amharic": "የመኪና ማቆሚያ ቦታ መኖሩን ያመለክታል።",
+            "text_amharic": "አሁን ባለንበት መስመር በፍጥነት መንዳት እንደምንችል ያሳያል።",
             "is_correct": false,
             "audio_filename": "answer_927_q1_D.mp3"
           },
           {
             "id": "A",
-            "text_amharic": "መንገዱ ለጥገና ዝግ መሆኑን ያሳያል።",
+            "text_amharic": "በመንገዱ ላይ የፍጥነት መቀነሻ እብጠቶች እንዳሉ ያሳያል።",
             "is_correct": false,
             "audio_filename": "answer_927_q1_A.mp3"
-          },
-          {
-            "id": "B",
-            "text_amharic": "ከፊትህ ባለው መንገድ ላይ ፍጥነት መቀነሻ መስመሮች መኖራቸውን ያስጠነቅቃል።",
-            "is_correct": true,
-            "audio_filename": "answer_927_q1_B.mp3"
-          },
-          {
-            "id": "C",
-            "text_amharic": "ወደ ቀኝ መታጠፍ እንደሌለብህ ያሳያል።",
-            "is_correct": false,
-            "audio_filename": "answer_927_q1_C.mp3"
           }
         ]
       },
       {
         "id": "927_q2",
-        "question_amharic": "ይህን ምልክት ሲያዩ አሽከርካሪ ምን ማድረግ አለበት?",
+        "question_amharic": "ይህንን ምልክት ሲያዩ አሽከርካሪ ምን ማድረግ አለበት?",
         "question_audio": "927_q2_question.mp3",
-        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። የፍጥነት መቀነሻ መስመሮች አሽከርካሪዎች ፍጥነታቸውን እንዲቀንሱ እና ጥንቃቄ እንዲያደርጉ የታሰቡ ናቸው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ፍጥነትን አለመቀነስ የተሽከርካሪ ጉዳት ወይም አደጋ ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "ዋው በጣም ጥሩ። አሽከርካሪው የመንገድ መስመሩ እየተዘጋ መሆኑን ስለሚያውቅ፣ ቀስቶቹ ወደሚያመለክቱበት አቅጣጫ በጥንቃቄ ወደ ጎን መስመር መቀየር አለበት።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በመዘጋት ላይ ባለው መስመር ውስጥ መቆየት ወይም በችኮላ መስመር መቀየር አደጋ ሊያስከትል ወይም የትራፊክ ፍሰትን ሊያስተጓጉል ይችላል።",
         "explanation_correct_audio": "927_q2_correct.mp3",
         "explanation_wrong_audio": "927_q2_wrong.mp3",
         "answers": [
           {
-            "id": "D",
-            "text_amharic": "ወደ ሌላ መንገድ መታጠፍ አለበት።",
-            "is_correct": false,
-            "audio_filename": "answer_927_q2_D.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "ፍጥነቱን ጨምሮ በፍጥነት ማለፍ አለበት።",
+            "text_amharic": "ፍጥነቱን ጨምሮ በተቻለ ፍጥነት ከመስመሩ መውጣት አለበት።",
             "is_correct": false,
             "audio_filename": "answer_927_q2_A.mp3"
           },
           {
-            "id": "C",
-            "text_amharic": "ተሽከርካሪውን አቁሞ መጠበቅ አለበት።",
+            "id": "D",
+            "text_amharic": "ተሽከርካሪውን አቁሞ የመንገድ ሰራተኞችን መጠበቅ አለበት።",
             "is_correct": false,
-            "audio_filename": "answer_927_q2_C.mp3"
+            "audio_filename": "answer_927_q2_D.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "ፍጥነቱን ቀንሶ በጥንቃቄ ማሽከርከር አለበት።",
+            "text_amharic": "ቀስቶቹ ወደሚያመለክቱበት አቅጣጫ በጥንቃቄ ወደ ጎን መስመር መቀየር አለበት።",
             "is_correct": true,
             "audio_filename": "answer_927_q2_B.mp3"
+          },
+          {
+            "id": "C",
+            "text_amharic": "በመስመሩ ውስጥ መቆየት እና ሌሎች ተሽከርካሪዎች እንዲያልፉ መጠበቅ አለበት።",
+            "is_correct": false,
+            "audio_filename": "answer_927_q2_C.mp3"
           }
         ]
       },
       {
         "id": "927_q3",
-        "question_amharic": "በዚህ ምልክት የሚታዩት የድምፅና የንዝረት መስመሮች ዋና ዓላማ ምንድነው?",
+        "question_amharic": "ይህ ምልክት በዋነኛነት የት ሊገኝ ይችላል?",
         "question_audio": "927_q3_question.mp3",
-        "explanation_correct_amharic": "እሰይ። አቤት እውቀት! የፍጥነት መቀነሻ መስመሮች አሽከርካሪዎች አደጋ ሊያስከትሉ በሚችሉ ቦታዎች ላይ ትኩረት እንዲሰጡ እና ፍጥነታቸውን እንዲቀንሱ ይረዳሉ።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የምልክቱን ዓላማ አለመረዳት አሽከርካሪው አስፈላጊውን ጥንቃቄ እንዳያደርግ ያደርገዋል፣ ይህም አደጋ ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "ጎበዝ። ይህ ምልክት በጊዜያዊ የመንገድ ሥራ ምክንያት የመንገድ መስመሮች በሚዘጉበት ወይም በሚቀየሩበት ቦታዎች ላይ ይገኛል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የዚህ ምልክት ትክክለኛውን ቦታ አለማወቅ አሽከርካሪው ለጊዜያዊ የመንገድ ለውጦች ዝግጁ እንዳይሆን በማድረግ አደጋ ሊያጋጥመው ይችላል።",
         "explanation_correct_audio": "927_q3_correct.mp3",
         "explanation_wrong_audio": "927_q3_wrong.mp3",
         "answers": [
           {
-            "id": "B",
-            "text_amharic": "አሽከርካሪዎችን ለማስጠንቀቅ እና ፍጥነታቸውን እንዲቀንሱ ለማድረግ ነው።",
-            "is_correct": true,
-            "audio_filename": "answer_927_q3_B.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "ለመንገድ ጥገና የሚሆን ቦታ ለማመልከት ነው።",
+            "text_amharic": "በከተማ ውስጥ ባሉ የመኖሪያ አካባቢዎች ብቻ።",
             "is_correct": false,
             "audio_filename": "answer_927_q3_A.mp3"
           },
           {
+            "id": "D",
+            "text_amharic": "አሽከርካሪዎች ፍጥነታቸውን እንዲቀንሱ ለማስጠንቀቅ በማንኛውም መንገድ ላይ።",
+            "is_correct": false,
+            "audio_filename": "answer_927_q3_D.mp3"
+          },
+          {
             "id": "C",
-            "text_amharic": "የመንገዱን ስፋት ለመጨመር ነው።",
+            "text_amharic": "አውራ ጎዳናዎች ላይ ብቻ እና በቋሚነት።",
             "is_correct": false,
             "audio_filename": "answer_927_q3_C.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "የመኪና ማቆሚያ ቦታዎችን ለመለየት ነው።",
-            "is_correct": false,
-            "audio_filename": "answer_927_q3_D.mp3"
+            "id": "B",
+            "text_amharic": "በመንገድ ላይ ጊዜያዊ ሥራ በሚካሄድባቸው ቦታዎች ወይም አቅራቢያ።",
+            "is_correct": true,
+            "audio_filename": "answer_927_q3_B.mp3"
           }
         ]
       }

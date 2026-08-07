@@ -31581,111 +31581,111 @@
     "image_filename": "926.png",
     "video_filename": null,
     "name_hebrew": "926",
-    "name_amharic": "የመንገድ አቅጣጫዎች ምልክት",
-    "explanation_amharic": "ይህ ምልክት በመንገዱ ላይ የተቀባ ሲሆን ወደ መገናኛ መንገድ (צומת) ሲቃረቡ በተሽከርካሪ መስመርዎ ውስጥ የተፈቀዱትን የመንዳት አቅጣጫዎች ያሳያል። የብርቱካናማ ቀስቶች ጊዜያዊ የመንገድ ሁኔታዎችን (ለምሳሌ የመንገድ ሥራ በሚኖርበት ጊዜ) የሚያመለክቱ ሲሆን፣ ነጭ ቀስቶች ደግሞ የተለመደውን ወይም ቋሚውን የመንዳት አቅጣጫ ያሳያሉ። አሽከርካሪዎች ወደ መገናኛ መንገዱ ሲገቡ በመስመራቸው ውስጥ በተቀባው ቀስት አቅጣጫ ብቻ መሄድ አለባቸው፤ ይህን አለማድረግ አደጋን ወይም ቅጣትን ያስከትላል።",
+    "name_amharic": "የመንገድ ላይ አቅጣጫዎች",
+    "explanation_amharic": "ይህ ምልክት በመንገድ ላይ የሚታዩ ቀስቶችን ያሳያል፤ እነዚህም ወደ መገናኛ መንገድ ከመግባታችን በፊት በምንገኝበት መስመር መሄድ የምንችለውን ጊዜያዊ አቅጣጫ ያመለክታሉ። ብርቱካናማ ቀስቶች ጊዜያዊ የመንገድ ሁኔታዎችን (ለምሳሌ የመንገድ ሥራ ሲኖር) የሚያሳዩ ሲሆን፣ ነጭ ቀስቶች ደግሞ የተለመደውን ወይም ቋሚውን የመንገድ አቅጣጫ ያመለክታሉ። አሽከርካሪው ይህንን ምልክት ሲያይ አስቀድሞ ትክክለኛውን መስመር መምረጥ እና በቀስቱ ወደተመለከተው አቅጣጫ ብቻ መሄድ አለበት፤ ይህን አለማድረግ አደጋ ወይም ከባድ ቅጣት ያስከትላል።",
     "audio_name_filename": "926_name.mp3",
     "audio_explanation_filename": "926_explanation.mp3",
     "questions": [
       {
         "id": "926_q1",
-        "question_amharic": "ይህ የመንገድ ምልክት ምን ያሳያል እና አሽከርካሪ ምን ማድረግ አለበት?",
+        "question_amharic": "ይህ የመንገድ ላይ ምልክት ምን ያሳያል?",
         "question_audio": "926_q1_question.mp3",
-        "explanation_correct_amharic": "ይህ ምልክት አሽከርካሪው ወደ መገናኛ መንገድ ሲደርስ በመስመሩ ውስጥ በተቀባው ቀስት መሰረት ብቻ እንዲነዳ ያስገድዳል።",
-        "explanation_wrong_amharic": "የመንገድ ምልክቶችን ችላ ማለት የትራፊክ ደንቦችን መጣስ ሲሆን አደጋን ወይም ቅጣትን ያስከትላል።",
+        "explanation_correct_amharic": "እሰይ። አቤት እውቀት! ይህ ምልክት አሽከርካሪው ወደ መገናኛ መንገድ ከመግባቱ በፊት በየትኛው አቅጣጫ መሄድ እንዳለበት በግልጽ ያሳያል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ምልክቱን አለመረዳት አሽከርካሪው ወደተሳሳተ አቅጣጫ እንዲሄድ ወይም አደጋ እንዲያጋጥመው ሊያደርግ ይችላል።",
         "explanation_correct_audio": "926_q1_correct.mp3",
         "explanation_wrong_audio": "926_q1_wrong.mp3",
         "answers": [
           {
-            "id": "A",
-            "text_amharic": "በየትኛውም አቅጣጫ መሄድ እንደሚቻል ያሳያል።",
+            "id": "D",
+            "text_amharic": "የመንገዱን ፍጥነት ገደብ ያሳያል።",
             "is_correct": false,
-            "audio_filename": "answer_926_q1_A.mp3"
-          },
-          {
-            "id": "B",
-            "text_amharic": "ወደ መገናኛ መንገድ ሲቃረቡ በመስመሩ ውስጥ በተቀባው ቀስት አቅጣጫ ብቻ መሄድ እንዳለበት ያሳያል።",
-            "is_correct": true,
-            "audio_filename": "answer_926_q1_B.mp3"
+            "audio_filename": "answer_926_q1_D.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "የመንገድ ሥራ እየተካሄደ መሆኑን ብቻ ያሳያል።",
+            "text_amharic": "በቅርቡ የመኪና ማቆሚያ ቦታ መኖሩን ያመለክታል።",
             "is_correct": false,
             "audio_filename": "answer_926_q1_C.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "ፍጥነት መቀነስ ብቻ በቂ እንደሆነ ያሳያል።",
+            "id": "B",
+            "text_amharic": "ወደ መገናኛ መንገድ ከመግባታችን በፊት በምንገኝበት መስመር መሄድ የምንችለውን አቅጣጫ ያመለክታል።",
+            "is_correct": true,
+            "audio_filename": "answer_926_q1_B.mp3"
+          },
+          {
+            "id": "A",
+            "text_amharic": "የመንገዱን ስፋትና ጥራት ያሳያል።",
             "is_correct": false,
-            "audio_filename": "answer_926_q1_D.mp3"
+            "audio_filename": "answer_926_q1_A.mp3"
           }
         ]
       },
       {
         "id": "926_q2",
-        "question_amharic": "በመስመርዎ ውስጥ ወደ ቀኝ ብቻ የሚያመለክት ቀስት ሲኖርዎት ወደፊት ቀጥ ብለው ቢሄዱ ምን ይከሰታል?",
+        "question_amharic": "ይህንን ምልክት ሲያዩ አሽከርካሪው ምን ማድረግ አለበት?",
         "question_audio": "926_q2_question.mp3",
-        "explanation_correct_amharic": "በመስመሩ ውስጥ የተቀባውን የአቅጣጫ ቀስት አለመከተል የትራፊክ ደንብ ጥሰት ሲሆን አደጋ ሊያስከትል ይችላል።",
-        "explanation_wrong_amharic": "የተሳሳተ አቅጣጫ መውሰድ የትራፊክ ፍሰትን ሊያስተጓጉል እና ለራስዎም ሆነ ለሌሎች አሽከርካሪዎች አደጋ ሊፈጥር ይችላል።",
+        "explanation_correct_amharic": "ጎበዝ። አሽከርካሪው በቀስቱ ወደተመለከተው አቅጣጫ ብቻ መሄድ አለበት ምክንያቱም ይህ የትራፊክ ደንብ ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ከቀስቱ አቅጣጫ ውጪ መሄድ የትራፊክ ደንብ መጣስ ሲሆን አደጋን ወይም ቅጣትን ያስከትላል።",
         "explanation_correct_audio": "926_q2_correct.mp3",
         "explanation_wrong_audio": "926_q2_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "ምንም ችግር የለውም ምክንያቱም ሁሉም አቅጣጫዎች ክፍት ናቸው።",
+            "text_amharic": "የፈለገውን አቅጣጫ መምረጥ ይችላል።",
             "is_correct": false,
             "audio_filename": "answer_926_q2_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "የትራፊክ ደንቦችን በመጣስ አደጋ ሊያስከትል ወይም ቅጣት ሊያስወጣ ይችላል።",
+            "text_amharic": "አስቀድሞ ትክክለኛውን መስመር መምረጥ እና በቀስቱ ወደተመለከተው አቅጣጫ ብቻ መሄድ አለበት።",
             "is_correct": true,
             "audio_filename": "answer_926_q2_B.mp3"
           },
           {
-            "id": "C",
-            "text_amharic": "ሌሎች አሽከርካሪዎች መንገድ ይሰጡዎታል።",
-            "is_correct": false,
-            "audio_filename": "answer_926_q2_C.mp3"
-          },
-          {
             "id": "D",
-            "text_amharic": "ወደፊት ቀጥ ብሎ መሄድ ሁልጊዜ ይፈቀዳል።",
+            "text_amharic": "መኪናውን አቁሞ ሌላ መንገድ መፈለግ አለበት።",
             "is_correct": false,
             "audio_filename": "answer_926_q2_D.mp3"
+          },
+          {
+            "id": "C",
+            "text_amharic": "ፍጥነቱን ጨምሮ በፍጥነት ማለፍ አለበት።",
+            "is_correct": false,
+            "audio_filename": "answer_926_q2_C.mp3"
           }
         ]
       },
       {
         "id": "926_q3",
-        "question_amharic": "በዚህ ምልክት ላይ የብርቱካናማ ቀስት እና የነጭ ቀስት መካከል ያለው ልዩነት ምንድነው?",
+        "question_amharic": "በዚህ ምልክት ላይ ብርቱካናማ ቀስት እና ነጭ ቀስት ቢኖር ምን ማለት ነው?",
         "question_audio": "926_q3_question.mp3",
-        "explanation_correct_amharic": "የብርቱካናማ ቀስቶች ብዙውን ጊዜ የመንገድ ሥራ በሚኖርበት ጊዜ የሚታዩ ጊዜያዊ ለውጦችን ሲያመለክቱ፣ ነጭ ቀስቶች ደግሞ የተለመደውን የመንገድ አቅጣጫ ያሳያሉ።",
-        "explanation_wrong_amharic": "የቀስቶቹን ቀለም ትርጉም አለማወቅ አሽከርካሪው የተሳሳተ አቅጣጫ እንዲሄድ በማድረግ የትራፊክ ደንቦችን እንዲጥስ ያደርገዋል።",
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት ብርቱካናማ ቀስቶች ብዙውን ጊዜ ጊዜያዊ የመንገድ ለውጦችን የሚያመለክቱ ሲሆን ነጭ ቀስቶች ደግሞ ቋሚውን የመንገድ አቅጣጫ ያሳያሉ።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የቀስቶቹን ቀለም ትርጉም አለማወቅ አሽከርካሪው በተሳሳተ ጊዜያዊ ወይም ቋሚ መንገድ እንዲሄድ በማድረግ አደጋ ሊያስከትል ይችላል።",
         "explanation_correct_audio": "926_q3_correct.mp3",
         "explanation_wrong_audio": "926_q3_wrong.mp3",
         "answers": [
           {
-            "id": "A",
-            "text_amharic": "ሁለቱም ቀስቶች አንድ አይነት ትርጉም አላቸው እና ምንም ልዩነት የለም።",
-            "is_correct": false,
-            "audio_filename": "answer_926_q3_A.mp3"
-          },
-          {
             "id": "B",
-            "text_amharic": "የብርቱካናማ ቀስት ጊዜያዊ የመንዳት አቅጣጫን ሲያሳይ፣ ነጭ ቀስት ደግሞ ቋሚውን ወይም የተለመደውን አቅጣጫ ያመለክታል።",
+            "text_amharic": "ብርቱካናማው ቀስት ጊዜያዊውን አቅጣጫ ሲያሳይ፣ ነጩ ቀስት ደግሞ የተለመደውን ቋሚ አቅጣጫ ያመለክታል።",
             "is_correct": true,
             "audio_filename": "answer_926_q3_B.mp3"
           },
           {
+            "id": "A",
+            "text_amharic": "ሁለቱም ቀስቶች አንድ አይነት ትርጉም አላቸው።",
+            "is_correct": false,
+            "audio_filename": "answer_926_q3_A.mp3"
+          },
+          {
             "id": "C",
-            "text_amharic": "ነጭ ቀስት ለአውቶቡሶች ብቻ ሲሆን ብርቱካናማ ቀስት ለግል መኪናዎች ነው።",
+            "text_amharic": "ነጩ ቀስት ለከባድ መኪናዎች ሲሆን ብርቱካናማው ለቀላል መኪናዎች ነው።",
             "is_correct": false,
             "audio_filename": "answer_926_q3_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "የብርቱካናማ ቀስት በቀን ብቻ ጥቅም ላይ ይውላል፣ ነጭ ቀስት ደግሞ በሌሊት ነው።",
+            "text_amharic": "ብርቱካናማው ቀስት ወደ ግራ መታጠፍን ሲያመለክት ነጩ ቀስት ደግሞ ወደ ቀኝ መታጠፍን ያሳያል።",
             "is_correct": false,
             "audio_filename": "answer_926_q3_D.mp3"
           }
