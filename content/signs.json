@@ -31462,111 +31462,111 @@
     "image_filename": "925.png",
     "video_filename": null,
     "name_hebrew": "925",
-    "name_amharic": "ይህ ምልክት ተሽከርካሪዎን ማቆም በፍጹም የተከለከለ መሆኑን ያሳያል።",
-    "explanation_amharic": "ይህ ምልክት ተሽከርካሪን ማቆም በፍጹም የተከለከለ መሆኑን ያመለክታል። ይህ ማለት ለተወሰነ ጊዜም ቢሆን ሰዎችን ለማውረድ ወይም ለመጫን፣ ዕቃ ለማውረድ ወይም ለመጫን፣ ወይም ሌላ ማንኛውንም ነገር ለማድረግ ማቆም አይፈቀድም። አሽከርካሪው ትራፊክ ካልቆመ ወይም አደጋን ለማስወገድ ካልሆነ በስተቀር በዚህ ምልክት በተመለከተው ቦታ ላይ ማቆም የለበትም። ይህን ህግ መጣስ የትራፊክ ፍሰትን ሊያስተጓጉል፣ አደጋ ሊያስከትል እና ከፍተኛ ቅጣት ያስከትላል።",
+    "name_amharic": "ጊዜያዊ የብርቱካን ማቆሚያ መስመር",
+    "explanation_amharic": "ይህ ምልክት በመንገድ ላይ የሚገኝ ጊዜያዊ፣ ብርቱካናማ እና ሙሉ የማቆሚያ መስመር ነው። ይህ መስመር አሽከርካሪው ማቆም ሲገባው ተሽከርካሪውን የት ማቆም እንዳለበት በትክክል ያሳያል። አሽከርካሪው ማቆም በሚያስፈልግበት ጊዜ (ለምሳሌ በመንገድ ሥራ ምክንያት በሚሰጥ ምልክት ወይም መመሪያ) ከመስመሩ በፊት እና በቅርበት ማቆም አለበት። ይህንን መስመር ችላ ማለት አደጋን፣ የትራፊክ ፍሰት መስተጓጎልን ወይም ቅጣትን ሊያስከትል ይችላል።",
     "audio_name_filename": "925_name.mp3",
     "audio_explanation_filename": "925_explanation.mp3",
     "questions": [
       {
         "id": "925_q1",
-        "question_amharic": "የ'መቆም ክልክል ነው' (ምልክት 925) ምልክት ምን ማለት ነው?",
+        "question_amharic": "ይህ ብርቱካናማ መስመር በመንገድ ላይ ምን ያመለክታል?",
         "question_audio": "925_q1_question.mp3",
-        "explanation_correct_amharic": "ትክክل! ይህ ምልክት የሚያሳየው ትራፊክ ካልቆመ ወይም አደጋን ለመከላከል ካልሆነ በስተቀር ተሽከርካሪን ማቆም በፍጹም የተከለከለ መሆኑን ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በተከለከለ ቦታ ማቆም የትራፊክ ፍሰትን ሊያስተጓጉል፣ አደጋ ሊያስከትል እና የገንዘብ ቅጣት ያስከትላል።",
+        "explanation_correct_amharic": "እሰይ። አቤት እውቀት! ይህ መስመር አሽከርካሪው ማቆም ሲገባው ተሽከርካሪውን የት ማቆም እንዳለበት በትክክል የሚያሳይ ጊዜያዊ ምልክት ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህንን መስመር እንደ ማቆም ክልከላ መረዳት አሽከርካሪው አስፈላጊ በሚሆንበት ጊዜ እንዳያቆም በማድረግ አደጋ ሊያስከትል ይችላል።",
         "explanation_correct_audio": "925_q1_correct.mp3",
         "explanation_wrong_audio": "925_q1_wrong.mp3",
         "answers": [
           {
-            "id": "C",
-            "text_amharic": "ትራፊክ ካልቆመ ወይም አደጋን ለማስወገድ ካልሆነ በስተቀር በምንም ምክንያት ማቆም አይቻልም።",
-            "is_correct": true,
-            "audio_filename": "answer_925_q1_C.mp3"
-          },
-          {
-            "id": "A",
-            "text_amharic": "ሰዎችን ለማውረድ ወይም ለመጫን ለአጭር ጊዜ ማቆም ይቻላል።",
-            "is_correct": false,
-            "audio_filename": "answer_925_q1_A.mp3"
-          },
-          {
             "id": "D",
-            "text_amharic": "መኪናዎን እዚህ እስከ 10 ደቂቃ ድረስ ማቆም ይችላሉ።",
+            "text_amharic": "የመንገድ መስመሮች የሚለዩበት ቋሚ ምልክት ነው።",
             "is_correct": false,
             "audio_filename": "answer_925_q1_D.mp3"
           },
           {
-            "id": "B",
-            "text_amharic": "ዕቃዎችን በፍጥነት ለማውረድ ወይም ለመጫን ማቆም ይቻላል።",
+            "id": "A",
+            "text_amharic": "ተሽከርካሪ ማቆም ፈጽሞ የተከለከለበት ቦታ ነው።",
             "is_correct": false,
+            "audio_filename": "answer_925_q1_A.mp3"
+          },
+          {
+            "id": "B",
+            "text_amharic": "ተሽከርካሪው ማቆም ሲገባው የት ማቆም እንዳለበት የሚያሳይ ጊዜያዊ የማቆሚያ መስመር ነው።",
+            "is_correct": true,
             "audio_filename": "answer_925_q1_B.mp3"
+          },
+          {
+            "id": "C",
+            "text_amharic": "አሽከርካሪዎች ፍጥነታቸውን እንዲቀንሱ የሚያስገድድ ማስጠንቀቂያ ነው።",
+            "is_correct": false,
+            "audio_filename": "answer_925_q1_C.mp3"
           }
         ]
       },
       {
         "id": "925_q2",
-        "question_amharic": "አሽከርካሪው 'መቆም ክልክል ነው' የሚለውን ምልክት ሲያይ ምን ማድረግ አለበት?",
+        "question_amharic": "ይህንን ብርቱካናማ የማቆሚያ መስመር ሲያዩ እና ማቆም ሲያስፈልግዎ ምን ማድረግ አለብዎት?",
         "question_audio": "925_q2_question.mp3",
-        "explanation_correct_amharic": "ትክክል! ጥሩ ነው። ይህ ምልክት በሚኖርበት ቦታ ላይ ትራፊክ ካልቆመ ወይም አደጋን ለማስወገድ ካልሆነ በስተቀር ማቆም የተከለከለ ስለሆነ አሽከርካሪው መንዳት መቀጠል አለበት።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በተከለከለ ቦታ ማቆም የትራፊክ ፍሰትን ሊያስተጓጉል፣ አደጋ ሊያስከትል እና የገንዘብ ቅጣት ያስከትላል።",
+        "explanation_correct_amharic": "እሰይ። አቤት እውቀት! ትክክለኛው አሰራር ተሽከርካሪውን ከመስመሩ በፊት በማቆም የትራፊክ ፍሰትን እና ደህንነትን መጠበቅ ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ከመስመሩ በኋላ ማቆም ወይም ያለማቋረጥ ማለፍ በመንገድ ሥራ አካባቢዎች አደጋን ወይም የትራፊክ መስተጓጎልን ሊያስከትል ይችላል።",
         "explanation_correct_audio": "925_q2_correct.mp3",
         "explanation_wrong_audio": "925_q2_wrong.mp3",
         "answers": [
           {
-            "id": "D",
-            "text_amharic": "የአደጋ መብራቶችን አብርቶ ለአፍታ መጠበቅ አለበት።",
-            "is_correct": false,
-            "audio_filename": "answer_925_q2_D.mp3"
-          },
-          {
-            "id": "B",
-            "text_amharic": "ትራፊክ እንዲያቆም ካላስገደደው ወይም ድንገተኛ አደጋ ካልሆነ በስተቀር ሳያቆም መንዳት መቀጠል አለበት።",
-            "is_correct": true,
-            "audio_filename": "answer_925_q2_B.mp3"
-          },
-          {
             "id": "C",
-            "text_amharic": "በስልኩ አቅጣጫዎችን ለመፈተሽ ለአጭር ጊዜ ማቆም አለበት።",
+            "text_amharic": "መስመሩን ካለፉ በኋላ ወዲያውኑ ማቆም አለብዎት።",
             "is_correct": false,
             "audio_filename": "answer_925_q2_C.mp3"
           },
           {
             "id": "A",
-            "text_amharic": "ፍጥነቱን ቀንስ እና በአቅራቢያ ያለ የመኪና ማቆሚያ ቦታ ፈልግ።",
-            "is_correct": false,
+            "text_amharic": "ተሽከርካሪዎን ከመስመሩ በፊት እና በቅርበት ማቆም አለብዎት።",
+            "is_correct": true,
             "audio_filename": "answer_925_q2_A.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ፍጥነትዎን በመቀነስ ያለማቋረጥ ማለፍ ይችላሉ።",
+            "is_correct": false,
+            "audio_filename": "answer_925_q2_D.mp3"
+          },
+          {
+            "id": "B",
+            "text_amharic": "በመስመሩ ላይ ማቆም አለብዎት።",
+            "is_correct": false,
+            "audio_filename": "answer_925_q2_B.mp3"
           }
         ]
       },
       {
         "id": "925_q3",
-        "question_amharic": "ምክንያት ሳይኖር 'መቆም ክልክል ነው' በሚል ምልክት በተከለከለ ቦታ ላይ ማቆም የሚያስከትለው ውጤት ምንድን ነው?",
+        "question_amharic": "ይህ ብርቱካናማ የማቆሚያ መስመር በዋናነት የትኞቹ ቦታዎች ላይ ይገኛል?",
         "question_audio": "925_q3_question.mp3",
-        "explanation_correct_amharic": "አሪፍ! ምልክቱ በተከለከለ ቦታ ላይ ያለ በቂ ምክንያት ማቆም የትራፊክ ፍሰትን ስለሚረብሽ እና አደጋ ሊያስከትል ስለሚችል ከፍተኛ ቅጣት ያስከትላል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በተከለከለ ቦታ ላይ ማቆም ሁልጊዜም ህግን መጣስ ሲሆን፣ የትራፊክ ፍሰትን ሊያስተጓጉል እና አደጋ ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "በጣም ጥሩ። ይህ ምልክት ጊዜያዊ በመሆኑ በመንገድ ሥራ ቦታዎች ወይም የትራፊክ ፍሰት ለጊዜው በሚቀየርባቸው አካባቢዎች ላይ ይገኛል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህንን ምልክት ቋሚ ወይም ለሌላ ዓላማ እንደሆነ መረዳት በመንገድ ሥራ አካባቢዎች ውስጥ ያለውን አደጋ ችላ እንድንል ያደርገናል።",
         "explanation_correct_audio": "925_q3_correct.mp3",
         "explanation_wrong_audio": "925_q3_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "ከፖሊስ መኮንን የቃል ማስጠንቀቂያ ሊደርስብዎ ይችላል።",
-            "is_correct": false,
+            "text_amharic": "በመንገድ ሥራ ቦታዎች ወይም ጊዜያዊ የትራፊክ ለውጦች ባሉባቸው አካባቢዎች ነው።",
+            "is_correct": true,
             "audio_filename": "answer_925_q3_A.mp3"
           },
           {
+            "id": "B",
+            "text_amharic": "በሁሉም የከተማ መንገዶች ላይ በቋሚነት ይገኛል።",
+            "is_correct": false,
+            "audio_filename": "answer_925_q3_B.mp3"
+          },
+          {
             "id": "C",
-            "text_amharic": "ከአንድ ደቂቃ ባነሰ ጊዜ ካቆሙ ምንም አይፈጠርም።",
+            "text_amharic": "በአውራ ጎዳናዎች ላይ ብቻ ጥቅም ላይ ይውላል።",
             "is_correct": false,
             "audio_filename": "answer_925_q3_C.mp3"
           },
           {
-            "id": "B",
-            "text_amharic": "የትራፊክ መጨናነቅ ወይም አደጋ ሊያስከትሉ እና ከፍተኛ የገንዘብ ቅጣት ሊጣልብዎ ይችላል።",
-            "is_correct": true,
-            "audio_filename": "answer_925_q3_B.mp3"
-          },
-          {
             "id": "D",
-            "text_amharic": "ተሽከርካሪዎን ያለአዋቂ ትተው ከሄዱ ብቻ ቅጣት ይደርስብዎታል።",
+            "text_amharic": "በመኖሪያ አካባቢዎች ውስጥ የፍጥነት ገደብን ለማመልከት ነው።",
             "is_correct": false,
             "audio_filename": "answer_925_q3_D.mp3"
           }
