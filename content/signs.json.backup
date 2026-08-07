@@ -31224,113 +31224,113 @@
     "image_filename": "923.png",
     "video_filename": null,
     "name_hebrew": "923",
-    "name_amharic": "ጊዜያዊ የሌይን ዓላማ ለውጥ",
-    "explanation_amharic": "ይህ ብርቱካናማ የተቆራረጠ መስመር በመንገድ ላይ የሚገኝ ሲሆን፣ አንድ የትራፊክ መስመር (ሌይን) የተለመደ ዓላማውን ለጊዜያዊነት እንደለወጠ ያሳያል። አሽከርካሪዎች በመስመሩ ላይ የተቀመጡትን ፍላጻዎች በጥንቃቄ መመልከት እና በተጠቀሰው ጊዜያዊ አቅጣጫ ወይም ዓላማ መሰረት መንዳት አለባቸው። እነዚህን ጊዜያዊ ምልክቶች አለማክበር ግራ መጋባት፣ አደጋ ወይም የትራፊክ ቅጣት ሊያስከትል ይችላል።",
+    "name_amharic": "ጊዜያዊ የመንገድ መስመር ለውጥ",
+    "explanation_amharic": "ይህ ብርቱካናማ የተቆራረጠ የመንገድ ምልክት በመንገድ ሥራ ምክንያት የአንድ መስመር የተለመደ ዓላማ ጊዜያዊ ለውጥ ያሳያል። አሽከርካሪዎች በዚያ ቦታ በመስመሩ ላይ የተቀመጡትን ልዩ ቀስቶች (ለምሳሌ ለመታጠፍ፣ ለመቀላቀል ወይም ፍጥነት ለመጨመር) በጥብቅ መከተል አለባቸው። ይህንን ጊዜያዊ መመሪያ አለመከተል አደጋዎችን፣ የትራፊክ መጨናነቅን እና የህግ ቅጣቶችን ሊያስከትል ይችላል።",
     "audio_name_filename": "923_name.mp3",
     "audio_explanation_filename": "923_explanation.mp3",
     "questions": [
       {
         "id": "923_q1",
-        "question_amharic": "ይህ ብርቱካናማ የተቆራረጠ የመንገድ ምልክት (ምልክት 923) ምን ያመለክታል?",
+        "question_amharic": "ይህ ብርቱካናማ የተቆራረጠ የመንገድ ምልክት ምን ያሳያል?",
         "question_audio": "923_q1_question.mp3",
-        "explanation_correct_amharic": "ይህ ምልክት አንድ ሌይን በመንገድ ሥራ ምክንያት ለጊዜያዊነት የተለየ ዓላማ እንዳለው ያመለክታል፣ ይህም አሽከርካሪዎች ለውጡን እንዲያውቁ ያስችላል።",
-        "explanation_wrong_amharic": "የምልክቱን ትክክለኛ ትርጉም አለማወቅ አሽከርካሪው የተሳሳተ መንገድ እንዲከተል ወይም የትራፊክ ደንቦችን እንዲጥስ ያደርገዋል።",
+        "explanation_correct_amharic": "ጎሽ! ይህ ምልክት በመንገድ ሥራ ምክንያት የመንገድ መስመር ዓላማው ለጊዜው እንደተለወጠ የሚያሳይ ሲሆን አሽከርካሪዎች ለዚያ መስመር የተሰጠውን አዲስ መመሪያ መከተል አለባቸው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ መምረጥ አሽከርካሪው የመንገድ መስመሩን ትክክለኛ ዓላማ እንዳይረዳ በማድረግ አደጋ ወይም የትራፊክ መጨናነቅ ሊያስከትል ይችላል።",
         "explanation_correct_audio": "923_q1_correct.mp3",
         "explanation_wrong_audio": "923_q1_wrong.mp3",
         "answers": [
           {
+            "id": "D",
+            "text_amharic": "ይህ ምልክት ሁልጊዜ ወደ ግራ መታጠፍ ወይም ዩ-ተርን ማድረግ እንደሚቻል ያሳያል።",
+            "is_correct": false,
+            "audio_filename": "answer_923_q1_D.mp3"
+          },
+          {
+            "id": "C",
+            "text_amharic": "ይህ ምልክት አሽከርካሪዎች በማንኛውም ጊዜ መስመር እንዲቀይሩ ይፈቅዳል።",
+            "is_correct": false,
+            "audio_filename": "answer_923_q1_C.mp3"
+          },
+          {
             "id": "A",
-            "text_amharic": "ይህ ምልክት አንድ ሌይን ለዘለቄታው ወደ ግራ ለመታጠፍ ብቻ እንደተመደበ ያሳያል።",
+            "text_amharic": "ይህ ምልክት ቋሚ የሆነ የመንገድ መስመር መለያ መስመር መሆኑን ያሳያል።",
             "is_correct": false,
             "audio_filename": "answer_923_q1_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "ይህ ምልክት በመንገድ ሥራ ምክንያት አንድ ሌይን የተለመደ ዓላማውን ለጊዜያዊነት እንደለወጠ ያሳያል።",
+            "text_amharic": "ይህ ምልክት በመንገድ ሥራ ምክንያት የአንድ መስመር የተለመደ ዓላማ ጊዜያዊ ለውጥ ያሳያል።",
             "is_correct": true,
             "audio_filename": "answer_923_q1_B.mp3"
-          },
-          {
-            "id": "C",
-            "text_amharic": "ይህ ምልክት ተሽከርካሪዎችን ለጊዜው ማቆም የሚቻልበት ቦታ መሆኑን ያመለክታል።",
-            "is_correct": false,
-            "audio_filename": "answer_923_q1_C.mp3"
-          },
-          {
-            "id": "D",
-            "text_amharic": "ይህ ምልክት በዚህ ሌይን ላይ ማለፍ (overtaking) ሁልጊዜ የተከለከለ መሆኑን ያሳያል።",
-            "is_correct": false,
-            "audio_filename": "answer_923_q1_D.mp3"
           }
         ]
       },
       {
         "id": "923_q2",
-        "question_amharic": "አሽከርካሪ ይህንን ጊዜያዊ የመንገድ ምልክት ሲያይ ምን ማድረግ አለበት?",
+        "question_amharic": "ይህንን ምልክት ሲያዩ አሽከርካሪ ምን ማድረግ አለበት?",
         "question_audio": "923_q2_question.mp3",
-        "explanation_correct_amharic": "አሽከርካሪው በመስመሩ ላይ የሚገኙትን ፍላጻዎች በመከተል በተጠቀሰው ጊዜያዊ ዓላማ መሰረት መንዳት አለበት።",
-        "explanation_wrong_amharic": "የምልክቱን መመሪያ አለመከተል አሽከርካሪው አደጋ ውስጥ እንዲገባ ወይም የትራፊክ ፍሰትን እንዲያስተጓጉል ያደርገዋል።",
+        "explanation_correct_amharic": "ትክክል! ጥሩ ነው። አሽከርካሪው በመስመሩ ላይ የተቀመጡትን ቀስቶች በመከተል የመስመሩን ጊዜያዊ ዓላማ ማክበር አለበት።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በመስመሩ ላይ የተቀመጡትን ቀስቶች አለመከተል የተሳሳተ አቅጣጫ ለመሄድ ወይም ከሌሎች ተሽከርካሪዎች ጋር ግጭት ለመፍጠር ያጋልጣል።",
         "explanation_correct_audio": "923_q2_correct.mp3",
         "explanation_wrong_audio": "923_q2_wrong.mp3",
         "answers": [
           {
-            "id": "A",
-            "text_amharic": "አሽከርካሪው ሁልጊዜ ወደ ግራ መታጠፍ አለበት፣ በመስመሩ ላይ ያሉት ፍላጻዎች ምንም ቢሆኑ።",
-            "is_correct": false,
-            "audio_filename": "answer_923_q2_A.mp3"
-          },
-          {
-            "id": "B",
-            "text_amharic": "አሽከርካሪው በመስመሩ ላይ የተቀመጡትን የተወሰኑ ፍላጻዎች መከተል እና በተጠቀሰው አቅጣጫ መንዳት አለበት።",
-            "is_correct": true,
-            "audio_filename": "answer_923_q2_B.mp3"
-          },
-          {
             "id": "C",
-            "text_amharic": "አሽከርካሪው ፍጥነቱን ቀንሶ ወዲያውኑ ማቆም አለበት።",
+            "text_amharic": "አሽከርካሪው ፍጥነቱን ጨምሮ በፍጥነት ማለፍ አለበት።",
             "is_correct": false,
             "audio_filename": "answer_923_q2_C.mp3"
           },
           {
+            "id": "B",
+            "text_amharic": "አሽከርካሪው በመስመሩ ላይ የተቀመጡትን ልዩ ቀስቶች በጥብቅ መከተል አለበት።",
+            "is_correct": true,
+            "audio_filename": "answer_923_q2_B.mp3"
+          },
+          {
             "id": "D",
-            "text_amharic": "ሌላ ትራፊክ ከሌለ አሽከርካሪው ምልክቱን ችላ ማለት ይችላል።",
+            "text_amharic": "አሽከርካሪው ወዲያውኑ ወደ ሌላ መስመር መቀየር አለበት።",
             "is_correct": false,
             "audio_filename": "answer_923_q2_D.mp3"
+          },
+          {
+            "id": "A",
+            "text_amharic": "አሽከርካሪው የፈለገውን አቅጣጫ መምረጥ ይችላል።",
+            "is_correct": false,
+            "audio_filename": "answer_923_q2_A.mp3"
           }
         ]
       },
       {
         "id": "923_q3",
-        "question_amharic": "በዚህ ምልክት የሚታየው የሌይን ዓላማ ለውጥ ባህሪ ምንድነው?",
+        "question_amharic": "ይህንን ጊዜያዊ የመንገድ ምልክት ችላ ማለት ምን ሊያስከትል ይችላል?",
         "question_audio": "923_q3_question.mp3",
-        "explanation_correct_amharic": "ይህ ምልክት የሚያሳየው የሌይን ዓላማ ለውጥ ጊዜያዊ ሲሆን፣ ይህም በመንገድ ሥራ ወይም በሌሎች ጊዜያዊ ሁኔታዎች ሊከሰት ይችላል።",
-        "explanation_wrong_amharic": "የሌይኑን ለውጥ ጊዜያዊነት አለመረዳት አሽከርካሪው ለረጅም ጊዜ የሚቆይ ለውጥ አድርጎ እንዲያስብ እና የተሳሳተ ውሳኔ እንዲወስን ያደርገዋል።",
+        "explanation_correct_amharic": "ጎበዝ። ይህንን ጊዜያዊ ምልክት ችላ ማለት በመንገድ ሥራ ቦታዎች ላይ አደጋዎችን፣ የትራፊክ መስተጓጎልን እና የህግ ቅጣቶችን ያስከትላል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ምልክቱን ችላ ማለት አሽከርካሪው ህጎችን እንዲጥስ እና ለራሱም ሆነ ለሌሎች አደጋ እንዲፈጥር ያደርጋል።",
         "explanation_correct_audio": "923_q3_correct.mp3",
         "explanation_wrong_audio": "923_q3_wrong.mp3",
         "answers": [
           {
-            "id": "A",
-            "text_amharic": "የሌይኑ ዓላማ ለዘለቄታው ተለውጧል።",
+            "id": "D",
+            "text_amharic": "የመንገድ ሥራው በፍጥነት እንዲጠናቀቅ ያደርጋል።",
             "is_correct": false,
-            "audio_filename": "answer_923_q3_A.mp3"
-          },
-          {
-            "id": "B",
-            "text_amharic": "ሌይኑ ሁልጊዜ ለዩ-ተርን ብቻ የተዘጋጀ ነው።",
-            "is_correct": false,
-            "audio_filename": "answer_923_q3_B.mp3"
+            "audio_filename": "answer_923_q3_D.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "ሌይኑ ለሁሉም ትራፊክ ዝግ ነው።",
+            "text_amharic": "አሽከርካሪው ወደሚፈልገው ቦታ በፍጥነት እንዲደርስ ይረዳዋል።",
             "is_correct": false,
             "audio_filename": "answer_923_q3_C.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "የሌይኑ ዓላማ ለጊዜያዊነት የተለወጠ ሲሆን፣ ብዙውን ጊዜ በመንገድ ሥራ ምክንያት ነው።",
+            "id": "B",
+            "text_amharic": "አደጋዎችን፣ የትራፊክ መጨናነቅን እና የህግ ቅጣቶችን ሊያስከትል ይችላል።",
             "is_correct": true,
-            "audio_filename": "answer_923_q3_D.mp3"
+            "audio_filename": "answer_923_q3_B.mp3"
+          },
+          {
+            "id": "A",
+            "text_amharic": "ምንም አይነት አደጋ ስለሌለ ምንም ችግር አያመጣም።",
+            "is_correct": false,
+            "audio_filename": "answer_923_q3_A.mp3"
           }
         ]
       }

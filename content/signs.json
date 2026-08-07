@@ -31343,113 +31343,113 @@
     "image_filename": "924.png",
     "video_filename": null,
     "name_hebrew": "924",
-    "name_amharic": "ይህ ምልክት ወደፊት የክብ መገናኛ (ራውንድአባውት) መኖሩን ያመለክታል።",
-    "explanation_amharic": "ይህ ምልክት ወደፊት የክብ መገናኛ (ራውንድአባውት) መኖሩን ያሳያል። ወደዚህ መገናኛ ሲቃረቡ ፍጥነትዎን መቀነስ፣ በክብ መገናኛው ውስጥ ላሉ ተሽከርካሪዎች ቅድሚያ መስጠት እና በተቃራኒ ሰዓት አቅጣጫ መዞር አለብዎት። እነዚህን ህጎች አለማክበር አደጋ ሊያስከትል ወይም ቅጣት ሊያስጥል ይችላል።",
+    "name_amharic": "በግንባታ ቦታ የመታጠፊያ መስመር",
+    "explanation_amharic": "ይህ ብርቱካናማ የተቆራረጠ መስመር በጊዜያዊ የግንባታ ቦታዎች ውስጥ በሚገኙ መስቀለኛ መንገዶች ላይ የሚገኝ ምልክት ነው። አሽከርካሪዎች ሲታጠፉ ከመስመሩ ጋር ትይዩ በመሆን በጥንቃቄ መንዳት አለባቸው። በዚህ ምልክት አሽከርካሪዎች የዩ-ተርን (የኋላ መመለስ) ማድረግ ይፈቀድላቸዋል፣ በሌላ ምልክት በግልጽ ካልተከለከለ በስተቀር፤ ይህንን መመሪያ አለመከተል አደጋ ሊያስከትል ይችላል።",
     "audio_name_filename": "924_name.mp3",
     "audio_explanation_filename": "924_explanation.mp3",
     "questions": [
       {
         "id": "924_q1",
-        "question_amharic": "ይህ የመንገድ ላይ ምልክት ምን ያሳያል?",
+        "question_amharic": "ይህ ብርቱካናማ የተቆራረጠ የመንገድ ምልክት የት ነው የሚገኘው እና ምን ያሳያል?",
         "question_audio": "924_q1_question.mp3",
-        "explanation_correct_amharic": "ዋው በጣም ጥሩ። ይህ ምልክት አሽከርካሪዎች ወደ ክብ መገናኛ እየቀረቡ መሆኑን አስቀድሞ ለማስጠንቀቅ ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ምልክቱን በተሳሳተ መንገድ መተርጎም ወደ ክብ መገናኛው ሲገቡ ግራ መጋባትና አደጋ ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "ጎበዝ። ይህ ምልክት በጊዜያዊ የግንባታ ቦታዎች ውስጥ በሚገኙ መስቀለኛ መንገዶች ላይ የሚገኝ ሲሆን አሽከርካሪዎች እንዴት መታጠፍ እንዳለባቸው ይመራል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህንን ምልክት አለማወቅ በግንባታ ቦታዎች ላይ ወደ ግራ መጋባትና አደጋ ሊያመራ ይችላል።",
         "explanation_correct_audio": "924_q1_correct.mp3",
         "explanation_wrong_audio": "924_q1_wrong.mp3",
         "answers": [
           {
-            "id": "C",
-            "text_amharic": "ወደፊት የመኪና ማቆሚያ ቦታ እንዳለ ያሳያል።",
-            "is_correct": false,
-            "audio_filename": "answer_924_q1_C.mp3"
-          },
-          {
             "id": "B",
-            "text_amharic": "ወደፊት የክብ መገናኛ (ራውንድአባውት) መኖሩን ያመለክታል።",
+            "text_amharic": "በጊዜያዊ የግንባታ ቦታዎች ውስጥ በሚገኙ መስቀለኛ መንገዶች ላይ የሚገኝ ሲሆን የመታጠፊያ መንገድን ያሳያል።",
             "is_correct": true,
             "audio_filename": "answer_924_q1_B.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "ወደፊት የትራፊክ መብራት እንዳለ ያሳያል።",
-            "is_correct": false,
-            "audio_filename": "answer_924_q1_D.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "ወደፊት አደገኛ መታጠፊያ እንዳለ ያሳያል።",
+            "text_amharic": "በመደበኛ መንገዶች ላይ ብቻ የሚገኝ ሲሆን የፍጥነት ገደብን ያሳያል።",
             "is_correct": false,
             "audio_filename": "answer_924_q1_A.mp3"
+          },
+          {
+            "id": "C",
+            "text_amharic": "በከተማ ውስጥ ብቻ የሚገኝ ሲሆን የመኪና ማቆሚያ ቦታን ያሳያል።",
+            "is_correct": false,
+            "audio_filename": "answer_924_q1_C.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "በገጠር መንገዶች ላይ ብቻ የሚገኝ ሲሆን የእንስሳት መሻገሪያ ቦታን ያሳያል።",
+            "is_correct": false,
+            "audio_filename": "answer_924_q1_D.mp3"
           }
         ]
       },
       {
         "id": "924_q2",
-        "question_amharic": "ይህን ምልክት ሲያዩ አሽከርካሪ ምን ማድረግ አለበት?",
+        "question_amharic": "ይህንን ብርቱካናማ የተቆራረጠ መስመር ሲያዩ በመስቀለኛ መንገድ ላይ ሲታጠፉ ምን ማድረግ አለብዎት?",
         "question_audio": "924_q2_question.mp3",
-        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። በክብ መገናኛ ውስጥ ያሉ ተሽከርካሪዎች ቅድሚያ ስላላቸው አሽከርካሪው ፍጥነቱን ቀንሶ ቅድሚያ መስጠት አለበት።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ቅድሚያ ሳይሰጡ መግባት ወይም ፍጥነት መጨመር ከሌሎች ተሽከርካሪዎች ጋር ግጭት ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። አሽከርካሪዎች በዚህ ምልክት ላይ ሲታጠፉ ከመስመሩ ጋር ትይዩ በመሆን በትክክለኛው መንገድ መንዳት አለባቸው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ከመስመሩ ጋር ትይዩ አለመንዳት በግንባታ ቦታ ላይ ባሉ መስቀለኛ መንገዶች ላይ አደጋ ሊያስከትል ይችላል።",
         "explanation_correct_audio": "924_q2_correct.mp3",
         "explanation_wrong_audio": "924_q2_wrong.mp3",
         "answers": [
           {
+            "id": "C",
+            "text_amharic": "መስመሩን በፍጥነት በመሻገር ወደ ሌላ መንገድ መግባት አለብዎት።",
+            "is_correct": false,
+            "audio_filename": "answer_924_q2_C.mp3"
+          },
+          {
             "id": "D",
-            "text_amharic": "ቀጥታ ወደፊት ብቻ መሄድ አለበት።",
+            "text_amharic": "መስመሩን ከግራ በኩል ብቻ ማለፍ አለብዎት።",
             "is_correct": false,
             "audio_filename": "answer_924_q2_D.mp3"
           },
           {
             "id": "A",
-            "text_amharic": "ፍጥነቱን ጨምሮ በፍጥነት ወደ መገናኛው መግባት አለበት።",
+            "text_amharic": "መስመሩን ችላ ብለው እንደፈለጉ መታጠፍ አለብዎት።",
             "is_correct": false,
             "audio_filename": "answer_924_q2_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "ፍጥነቱን መቀነስ፣ በክብ መገናኛው ውስጥ ላሉ ተሽከርካሪዎች ቅድሚያ መስጠት እና በጥንቃቄ መግባት አለበት።",
+            "text_amharic": "ከመስመሩ ጋር ትይዩ በመሆን በጥንቃቄ መንዳት አለብዎት።",
             "is_correct": true,
             "audio_filename": "answer_924_q2_B.mp3"
-          },
-          {
-            "id": "C",
-            "text_amharic": "መኪናውን አቁሞ ሌላ መንገድ መፈለግ አለበት።",
-            "is_correct": false,
-            "audio_filename": "answer_924_q2_C.mp3"
           }
         ]
       },
       {
         "id": "924_q3",
-        "question_amharic": "በእስራኤል ውስጥ ባለው ክብ መገናኛ ውስጥ አሽከርካሪው በየትኛው አቅጣጫ መጓዝ አለበት?",
+        "question_amharic": "ይህ ብርቱካናማ የተቆራረጠ መስመር ባለበት መስቀለኛ መንገድ ላይ የዩ-ተርን (የኋላ መመለስ) ማድረግ ይፈቀዳል ወይ?",
         "question_audio": "924_q3_question.mp3",
-        "explanation_correct_amharic": "እሰይ። አቤት እውቀት! በእስራኤል የትራፊክ ህግ መሰረት በክብ መገናኛ ውስጥ ሁልጊዜ በተቃራኒ ሰዓት አቅጣጫ መዞር ግዴታ ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በተሳሳተ አቅጣጫ መጓዝ ከሌሎች ተሽከርካሪዎች ጋር የፊት ለፊት ግጭት ሊያስከትል እና ለከባድ አደጋ ሊዳርግ ይችላል።",
+        "explanation_correct_amharic": "እሰይ። አቤት እውቀት! ይህ ምልክት ባለበት ቦታ የዩ-ተርን ማድረግ ይፈቀዳል፣ ነገር ግን ሌላ ምልክት በግልጽ ከከለከለ ግን መደረግ የለበትም።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የዩ-ተርን ማድረግ የተከለከለ ነው ብሎ ማሰብ አላስፈላጊ የሆነ መንገድ ማራዘም ወይም የትራፊክ ፍሰትን ማስተጓጎል ሊያስከትል ይችላል።",
         "explanation_correct_audio": "924_q3_correct.mp3",
         "explanation_wrong_audio": "924_q3_wrong.mp3",
         "answers": [
           {
-            "id": "C",
-            "text_amharic": "አሽከርካሪው በፈለገው አቅጣጫ መሄድ ይችላል።",
-            "is_correct": false,
-            "audio_filename": "answer_924_q3_C.mp3"
-          },
-          {
-            "id": "A",
-            "text_amharic": "በሰዓት አቅጣጫ መዞር አለበት።",
-            "is_correct": false,
-            "audio_filename": "answer_924_q3_A.mp3"
-          },
-          {
             "id": "D",
-            "text_amharic": "ወደ ቀኝ ብቻ መታጠፍ አለበት።",
+            "text_amharic": "የሚፈቀደው ትላልቅ ተሽከርካሪዎች ብቻ ናቸው።",
             "is_correct": false,
             "audio_filename": "answer_924_q3_D.mp3"
           },
           {
+            "id": "A",
+            "text_amharic": "በፍጹም አይፈቀድም፣ የዩ-ተርን ማድረግ ሁልጊዜ የተከለከለ ነው።",
+            "is_correct": false,
+            "audio_filename": "answer_924_q3_A.mp3"
+          },
+          {
             "id": "B",
-            "text_amharic": "በተቃራኒ ሰዓት አቅጣጫ መዞር አለበት።",
+            "text_amharic": "አዎ ይፈቀዳል፣ በሌላ ምልክት በግልጽ ካልተከለከለ በስተቀር።",
             "is_correct": true,
             "audio_filename": "answer_924_q3_B.mp3"
+          },
+          {
+            "id": "C",
+            "text_amharic": "የሚፈቀደው ማታ ላይ ብቻ ነው።",
+            "is_correct": false,
+            "audio_filename": "answer_924_q3_C.mp3"
           }
         ]
       }
