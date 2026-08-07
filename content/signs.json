@@ -31819,111 +31819,111 @@
     "image_filename": "928.png",
     "video_filename": null,
     "name_hebrew": "928",
-    "name_amharic": "ይህ ምልክት በመንገድ ላይ ከጎን የሚመጣ ኃይለኛ ነፋስ መኖሩን ያመለክታል።",
-    "explanation_amharic": "ይህ ምልክት በመንገድ ላይ ከጎን የሚመጣ ኃይለኛ ነፋስ መኖሩን ያስጠነቅቃል። እንዲህ ያለው ነፋስ በተለይ ለትላልቅ ተሽከርካሪዎች እና ለሞተር ሳይክሎች አደገኛ ስለሆነ አሽከርካሪው ፍጥነቱን መቀነስ እና መሪውን በጥብቅ መያዝ አለበት። ይህን ማስጠንቀቂያ ችላ ማለት ተሽከርካሪው ከመንገዱ እንዲወጣ ወይም ከባድ አደጋ እንዲደርስ ሊያደርግ ይችላል።",
+    "name_amharic": "ብርቱካናማ የተከለከለ የመንገድ ቦታ",
+    "explanation_amharic": "ይህ ብርቱካናማ ምልክት በመንገድ ላይ የሚገኝ ጊዜያዊ የተከለከለ ቦታ ያሳያል። በዚህ ምልክት በተከለለው ቦታ ላይ ማለፍ ወይም መሻገር አይፈቀድም። በተጨማሪም፣ በዚህ ምልክት ላይ ተሽከርካሪን ለጥቂት ጊዜም ቢሆን ማቆም ወይም አቁሞ መሄድ በጥብቅ የተከለከለ ነው። ይህንን ምልክት ችላ ማለት አደጋ ሊያስከትል ወይም የትራፊክ ቅጣት ሊያስወርድ ይችላል።",
     "audio_name_filename": "928_name.mp3",
     "audio_explanation_filename": "928_explanation.mp3",
     "questions": [
       {
         "id": "928_q1",
-        "question_amharic": "ይህ የመንገድ ምልክት ምን ያመለክታል?",
+        "question_amharic": "ይህ ብርቱካናማ ምልክት በመንገድ ላይ ምን ያሳያል?",
         "question_audio": "928_q1_question.mp3",
-        "explanation_correct_amharic": "ትክክል! ይህ ምልክት ምልክቱ የተሽከርካሪዎችን እንቅስቃሴ ሊያስተጓጉል የሚችል ኃይለኛ የጎን ነፋስ መኖሩን በግልጽ ያሳያል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ መምረጥ አሽከርካሪው ለጎን ነፋስ ሳይዘጋጅ እንዲነዳ በማድረግ አደጋ ውስጥ ሊጥለው ይችላል።",
+        "explanation_correct_amharic": "ትክክል! ጥሩ ነው። ይህ ምልክት በመንገድ ላይ ለጊዜው የተከለለ ቦታ መኖሩን ያሳያል, ይህም አሽከርካሪዎች እንዳይገቡበት ያሳስባል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህ ምልክት ከጠንካራ ንፋስ ጋር ምንም ግንኙነት የለውም፤ ይልቁንም በመንገድ ላይ የተከለከለ ቦታን ያመለክታል።",
         "explanation_correct_audio": "928_q1_correct.mp3",
         "explanation_wrong_audio": "928_q1_wrong.mp3",
         "answers": [
           {
-            "id": "D",
-            "text_amharic": "በመንገድ ላይ የውሃ መጥለቅለቅ እንዳለ ያመለክታል።",
-            "is_correct": false,
-            "audio_filename": "answer_928_q1_D.mp3"
-          },
-          {
-            "id": "B",
-            "text_amharic": "በመንገድ ላይ ከጎን የሚመጣ ኃይለኛ ነፋስ መኖሩን ያስጠነቅቃል።",
-            "is_correct": true,
-            "audio_filename": "answer_928_q1_B.mp3"
-          },
-          {
             "id": "C",
-            "text_amharic": "መንገዱ የሚያዳልጥ መሆኑን ያመለክታል።",
+            "text_amharic": "መንገዱ ለዘለቄታው እንደተዘጋ ያሳያል።",
             "is_correct": false,
             "audio_filename": "answer_928_q1_C.mp3"
           },
           {
             "id": "A",
-            "text_amharic": "ከፊት ለፊት ጠባብ መንገድ እንዳለ ያመለክታል።",
+            "text_amharic": "ጠንካራ የጎን ንፋስ ማስጠንቀቂያ ነው።",
             "is_correct": false,
             "audio_filename": "answer_928_q1_A.mp3"
+          },
+          {
+            "id": "B",
+            "text_amharic": "በመንገድ ላይ ጊዜያዊ የተከለከለ ቦታ መኖሩን ያሳያል።",
+            "is_correct": true,
+            "audio_filename": "answer_928_q1_B.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ተሽከርካሪዎች በፍጥነት እንዲነዱ የሚፈቅድ ምልክት ነው።",
+            "is_correct": false,
+            "audio_filename": "answer_928_q1_D.mp3"
           }
         ]
       },
       {
         "id": "928_q2",
-        "question_amharic": "ይህን ምልክት ሲያዩ አሽከርካሪው ምን ማድረግ አለበት?",
+        "question_amharic": "ይህንን ብርቱካናማ ምልክት በተመለከተ አሽከርካሪ ምን ማድረግ የለበትም?",
         "question_audio": "928_q2_question.mp3",
-        "explanation_correct_amharic": "ትክክል! ጥሩ ነው። ፍጥነት መቀነስ እና መሪውን በጥብቅ መያዝ በኃይለኛ ነፋስ ምክንያት ተሽከርካሪው ከመንገዱ እንዳይወጣ ለመከላከል ይረዳል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ትክክለኛውን እርምጃ አለመውሰድ ተሽከርካሪው ከቁጥጥር ውጭ እንዲሆን እና አደጋ እንዲደርስ ሊያደርግ ይችላል።",
+        "explanation_correct_amharic": "ጎሽ! በዚህ ብርቱካናማ ምልክት ላይ ማለፍ፣ ለጥቂት ጊዜ ማቆም ወይም ተሽከርካሪን አቁሞ መሄድ የተከለከሉ ድርጊቶች ናቸው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በዚህ ምልክት ላይ ማቆም ወይም ማለፍ የትራፊክ ደንቦችን መጣስ ሲሆን አደጋ ሊያስከትል ይችላል።",
         "explanation_correct_audio": "928_q2_correct.mp3",
         "explanation_wrong_audio": "928_q2_wrong.mp3",
         "answers": [
           {
-            "id": "D",
-            "text_amharic": "የፊት መብራቱን አብርቶ መንዳት አለበት።",
+            "id": "C",
+            "text_amharic": "ወደ ሌላ መንገድ መታጠፍ አለበት።",
             "is_correct": false,
-            "audio_filename": "answer_928_q2_D.mp3"
-          },
-          {
-            "id": "A",
-            "text_amharic": "ፍጥነቱን ጨምሮ በፍጥነት ማለፍ አለበት።",
-            "is_correct": false,
-            "audio_filename": "answer_928_q2_A.mp3"
+            "audio_filename": "answer_928_q2_C.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "ፍጥነቱን መቀነስ፣ መሪውን በጥብቅ መያዝ እና በጥንቃቄ መንዳት አለበት።",
+            "text_amharic": "በዚህ ምልክት ላይ ማለፍ፣ ለጥቂት ጊዜ ማቆም ወይም ተሽከርካሪን አቁሞ መሄድ አይፈቀድም።",
             "is_correct": true,
             "audio_filename": "answer_928_q2_B.mp3"
           },
           {
-            "id": "C",
-            "text_amharic": "ተሽከርካሪውን አቁሞ ነፋሱ እስኪያልፍ መጠበቅ አለበት።",
+            "id": "A",
+            "text_amharic": "ፍጥነት መቀነስ እና በጥንቃቄ ማሽከርከር አለበት።",
             "is_correct": false,
-            "audio_filename": "answer_928_q2_C.mp3"
+            "audio_filename": "answer_928_q2_A.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ተሽከርካሪውን አቁሞ ሰዎችን ማውረድ ይችላል።",
+            "is_correct": false,
+            "audio_filename": "answer_928_q2_D.mp3"
           }
         ]
       },
       {
         "id": "928_q3",
-        "question_amharic": "ይህን የጎን ነፋስ ማስጠንቀቂያ ምልክት ችላ ማለት ምን አደጋ ሊያስከትል ይችላል?",
+        "question_amharic": "ይህ ብርቱካናማ ምልክት ብዙውን ጊዜ የት ይገኛል እና ችላ ቢባል ምን ሊከሰት ይችላል?",
         "question_audio": "928_q3_question.mp3",
-        "explanation_correct_amharic": "አሪፍ! ምልክቱ ኃይለኛ የጎን ነፋስ በተለይም በትላልቅ ተሽከርካሪዎች ላይ ተሽከርካሪውን ከመንገዱ እንዲያፈነግጥ በማድረግ ከባድ አደጋ ሊያስከትል ይችላል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የምልክቱን አደጋ ችላ ማለት የአሽከርካሪውን እና የሌሎችን የመንገድ ተጠቃሚዎችን ህይወት አደጋ ላይ ይጥላል።",
+        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። ምልክቱ ብዙውን ጊዜ የመንገድ ሥራ በሚካሄድባቸው ቦታዎች ላይ የሚገኝ ሲሆን ደንቦቹን አለመከተል አደጋ ወይም ቅጣት ያስከትላል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህ ምልክት የትራፊክ ፍሰትን ለማፋጠን ወይም የእንስሳት መሻገሪያን ለማሳየት አይደለም፤ ይልቁንም አደጋን ለመከላከል የተከለከለ ቦታን ያመለክታል።",
         "explanation_correct_audio": "928_q3_correct.mp3",
         "explanation_wrong_audio": "928_q3_wrong.mp3",
         "answers": [
           {
+            "id": "D",
+            "text_amharic": "በማንኛውም ቦታ ሊገኝ ይችላል እና ምንም አይነት አደጋ አያስከትልም።",
+            "is_correct": false,
+            "audio_filename": "answer_928_q3_D.mp3"
+          },
+          {
             "id": "C",
-            "text_amharic": "የመንገድ ትራፊክ መጨናነቅን ይፈጥራል።",
+            "text_amharic": "በገጠር መንገዶች ላይ ብቻ የሚገኝ ሲሆን የእንስሳት መሻገሪያን ያሳያል።",
             "is_correct": false,
             "audio_filename": "answer_928_q3_C.mp3"
           },
           {
             "id": "A",
-            "text_amharic": "የነዳጅ ፍጆታ እንዲጨምር ያደርጋል።",
+            "text_amharic": "በከተማ ውስጥ ብቻ የሚገኝ ሲሆን የትራፊክ ፍሰትን ያፋጥናል።",
             "is_correct": false,
             "audio_filename": "answer_928_q3_A.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "የመንገድ ምልክቶችን እንዳይታዩ ያደርጋል።",
-            "is_correct": false,
-            "audio_filename": "answer_928_q3_D.mp3"
-          },
-          {
             "id": "B",
-            "text_amharic": "ተሽከርካሪው ከመንገዱ እንዲወጣ ወይም ከባድ አደጋ እንዲደርስ ሊያደርግ ይችላል።",
+            "text_amharic": "ብዙውን ጊዜ የመንገድ ሥራ በሚካሄድባቸው ቦታዎች የሚገኝ ሲሆን ችላ ማለቱ አደጋ ወይም ቅጣት ያስከትላል።",
             "is_correct": true,
             "audio_filename": "answer_928_q3_B.mp3"
           }
