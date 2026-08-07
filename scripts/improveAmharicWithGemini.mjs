@@ -117,6 +117,8 @@ Note this covers THREE distinct things the marking protects access to — privat
 ⚠️ MANDATORY for name_amharic: השם הנוכחי הוא משפט הסבר מלא ולא כותרת קצרה (מפר את הכלל הקבוע מתמרור 404 ואילך — name_amharic = כותרת קצרה, לא חופפת ל-explanation_amharic). הכותרת החדשה חייבת להיות קצרה (כמה מילים בלבד), למשל בסגנון "קו הפרדה כפול כתום" — לא משפט שלם עם "ማለት" / "ያመለክታል" בסופו.`,
   921: `תמרור 921 (מקבוצת תמרורים באתר עבודה) הוא תמרור אזהרה/הכוונה, לא תיאור של מצב קבוע: הוא מתריע מראש על קו הפרדה רצוף כפול בצבע כתום (בדיוק כמו תמרור 920) שיופיע בהמשך הדרך. חובה על הנהג לעבור לנתיב הימני לפני שקו ההפרדה הרצוף מתחיל בפועל. מופיע בדרך כלל באזורים של שיפוצים/עבודות בכביש, ומסייע בהכוונת התנועה בבטחה סביב האזור החסום.
 אושר ויזואלית: התמונה מראה קו כתום שמתחיל כמקווקו (בצד אחד) ועובר לרצוף (בצד השני) — בדיוק התבנית של "אזהרה מוקדמת לפני קו רצוף מתקרב", לא סימון של מצב סופי/קבוע. חשוב מאוד: התוכן הקיים כרגע שגוי — הוא מתאר "ماله מותרת ותמיד" / "מותר לעבור", בלי שום התייחסות לכך שזו אזהרה מקדימה ולא היתר קבוע. אסור לתאר את זה כ"מותר לעבור" סתם — ההסבר וכל שאלה/תשובה חייבים להבהיר: (1) זו אזהרה על קו רצוף כפול שמתקרב, לא מצב נוכחי, (2) חובה לעבור לנתיב הימני לפני שהקו הרצוף מתחיל, (3) לא לערבב עם תמרור 920 עצמו (זה השלט המקדים, 920 הוא הקו הרצוף בפועל).`,
+  923: `תמרור 923 (מקבוצת תמרורים באתר עבודה) הוא סימון על פני הדרך בדמות קו מלבנים (מקווקו) בצבע כתום. הוא מציין נתיב שמשנה את ייעודו הרגיל — יכול להיות נתיב לפנייה בלעדית, נתיב האצה/האטה, נתיב השתזרות (merging/weaving), או כל נתיב אחר שמקבל ייעוד זמני שונה. הנהג חייב לנסוע בהתאם לייעוד המסומן בפועל על הנתיב באותו מקום ספציפי (לפי החצים שמצוירים עליו).
+מקור: המשתמש (בעל האפליקציה) אימת את זה ישירות. חשוב מאוד: התוכן הקיים כרגע שגוי — הוא מתאר את זה כ"נתיב ייעודי לפנייה שמאלה/U-turn" בלבד, אבל זו רק אחת מכמה אפשרויות; הסימון הכללי הוא "שינוי ייעוד נתיב", לא ספציפית פנייה שמאלה. זה גם מסביר למה בתמונה יש כמה סוגי חצים שונים (שמאלה, מעוקל, כפול, ישר) — כי זה סימון כללי לייעוד-נתיב-משתנה, לא תמיד אותו ייעוד. ההסבר וכל שאלה/תשובה חייבים לתאר את הרעיון הכללי (נתיב שמשנה ייעוד, נהיגה לפי הסימון בפועל באותו מקום) ולא לנעול על "פנייה שמאלה/U-turn" בלבד.`,
 };
 const EXTRA_CONTEXT_ARG = process.argv.find(a => a.startsWith('--extra-context='));
 const EXTRA_CONTEXT = EXTRA_CONTEXT_ARG
@@ -167,6 +169,10 @@ Strict rules — follow all without exception:
      "the correct answer is B". These fields are read aloud and shown standalone, disconnected from
      the lettered answer list, and each engine displays a different label scheme (Ge'ez letters, or
      no letters at all for non-readers) — describe the actual fact/consequence only, never a letter.
+   - NEVER use a phonetic transliteration of an English word written in Ge'ez script (e.g. "ሌይን" for
+     "lane") anywhere in name_amharic, explanation_amharic, or any question/answer/explanation — this
+     reads as meaningless noise to a listener who cannot see the English word being approximated.
+     Always use a proper standard Amharic word instead (e.g. "የመንገድ መስመር" or "ንብረት መስመር" for "lane").
 
 4. Write in clear, simple Amharic that any ordinary adult can understand — no jargon.
 5. Use a respectful, moderately formal tone — NOT street slang, NOT bureaucratic language.

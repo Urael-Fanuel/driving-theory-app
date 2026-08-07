@@ -30986,112 +30986,112 @@
     "image_filename": "921.png",
     "video_filename": null,
     "name_hebrew": "921",
-    "name_amharic": "የብርቱካናማ መስመር ማስጠንቀቂያ",
-    "explanation_amharic": "ይህ ምልክት ወደፊት በመንገድ ላይ የሚገኝ ባለሁለት ተከታታይ የብርቱካናማ መስመር (እንደ ምልክት 920) ማስጠንቀቂያ ነው። አሽከርካሪው ይህንን ምልክት ሲያይ፣ ባለሁለት ተከታታይ መስመሩ ከመጀመሩ በፊት ወደ ቀኝ መስመር መግባት አለበት። ይህንን ማስጠንቀቂያ ችላ ማለት እና መስመሩን መሻገር የትራፊክ ጥሰት፣ ቅጣት ወይም አደጋ ሊያስከትል ይችላል።",
+    "name_amharic": "የብርቱካናማ መስመር ቅድመ ማስጠንቀቂያ",
+    "explanation_amharic": "ይህ ምልክት ወደፊት ድርብ ተከታታይ ብርቱካናማ መስመር (እንደ ምልክት 920) እንደሚመጣ አስቀድሞ ያስጠነቅቃል። ይህ መስመር ብዙውን ጊዜ የመንገድ ሥራ ባለበት ቦታ ላይ የሚገኝ ሲሆን፣ አሽከርካሪው ወደ ቀኝ መስመር እንዲገባ ያዛል። አሽከርካሪው ይህንን ምልክት ሲያይ፣ የብርቱካናማው መስመር ከመጀመሩ በፊት ወደ ቀኝ መስመር መግባት አለበት፤ አለበለዚያ አደጋ ሊደርስ ወይም የትራፊክ ደንብ መጣስ ሊሆን ይችላል።",
     "audio_name_filename": "921_name.mp3",
     "audio_explanation_filename": "921_explanation.mp3",
     "questions": [
       {
         "id": "921_q1",
-        "question_amharic": "ይህ ምልክት (921) ምን ያመለክታል?",
+        "question_amharic": "ይህ የብርቱካናማ መስመር ምልክት ምን ያሳያል?",
         "question_audio": "921_q1_question.mp3",
-        "explanation_correct_amharic": "አሪፍ! ምልክቱ ትክክለኛው መልስ B ነው ምክንያቱም ይህ ምልክት ባለሁለት ተከታታይ የብርቱካናማ መስመር ወደፊት እንደሚመጣ የሚያስጠነቅቅ ሲሆን አሽከርካሪውም መስመሩ ከመጀመሩ በፊት ወደ ቀኝ መስመር እንዲገባ ያዛል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ ከመረጡ፣ ባለሁለት ተከታታይ መስመርን ተሻግረው የትራፊክ ጥሰት ሊፈጽሙ ወይም አደጋ ሊያጋጥምዎት ይችላል።",
+        "explanation_correct_amharic": "ጎበዝ። ይህ ምልክት አሽከርካሪዎች ወደፊት የሚመጣውን ድርብ ተከታታይ ብርቱካናማ መስመር አስቀድመው እንዲያውቁት ለማስጠንቀቅ ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ምልክቱን በተሳሳተ መንገድ መተርጎም አሽከርካሪው ለድንገተኛ የመንገድ ለውጥ ዝግጁ እንዳይሆን እና አደጋ ላይ እንዲወድቅ ያደርገዋል።",
         "explanation_correct_audio": "921_q1_correct.mp3",
         "explanation_wrong_audio": "921_q1_wrong.mp3",
         "answers": [
           {
             "id": "B",
-            "text_amharic": "ባለሁለት ተከታታይ የብርቱካናማ መስመር እየቀረበ መሆኑን ያስጠነቅቃል፣ እና መስመሩ ከመጀመሩ በፊት ወደ ቀኝ መስመር መግባት አለብዎት።",
+            "text_amharic": "ይህ ምልክት ወደፊት ድርብ ተከታታይ ብርቱካናማ መስመር እንደሚመጣ አስቀድሞ ያስጠነቅቃል።",
             "is_correct": true,
             "audio_filename": "answer_921_q1_B.mp3"
           },
           {
             "id": "A",
-            "text_amharic": "የብርቱካናማውን የተቆራረጠ መስመር ሁልጊዜ መሻገር የሚፈቀድበት መንገድ ላይ እንዳሉ ያመለክታል።",
+            "text_amharic": "ይህ ምልክት አሁን ባለንበት ቦታ ድርብ ተከታታይ መስመር መኖሩን ያሳያል።",
             "is_correct": false,
             "audio_filename": "answer_921_q1_A.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "ይህ ለአደጋ ጊዜ ተሽከርካሪዎች ብቻ የሆነ ጊዜያዊ መስመር ያሳያል።",
-            "is_correct": false,
-            "audio_filename": "answer_921_q1_D.mp3"
-          },
-          {
             "id": "C",
-            "text_amharic": "የብርቱካናማውን መስመር መሻገር የሚፈቀደው ትራፊክ ከሌለ ብቻ ነው።",
+            "text_amharic": "ይህ ምልክት በማንኛውም ጊዜ መስመር መቀየር እንደሚፈቀድ ያሳያል።",
             "is_correct": false,
             "audio_filename": "answer_921_q1_C.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ይህ ምልክት የመንገድ ሥራው መጠናቀቁን ያመለክታል።",
+            "is_correct": false,
+            "audio_filename": "answer_921_q1_D.mp3"
           }
         ]
       },
       {
         "id": "921_q2",
-        "question_amharic": "በተለይ በስራ ቦታዎች ላይ የዚህን ምልክት መመሪያ መከተል ለምን አስፈላጊ ነው?",
+        "question_amharic": "ይህንን ምልክት ሲያዩ አሽከርካሪው ምን ማድረግ አለበት?",
         "question_audio": "921_q2_question.mp3",
-        "explanation_correct_amharic": "በጣም ጥሩ። ትክክለኛው መልስ B ነው ምክንያቱም ይህ ምልክት በስራ ቦታዎች ላይ አሽከርካሪዎች ደህንነታቸውን እንዲጠብቁ እና አደጋዎችን እንዲያስወግዱ ለመርዳት ታስቦ የተሰራ ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ ከመረጡ፣ በስራ ቦታዎች ላይ አደጋ ሊያስከትሉ ወይም የትራፊክ ፍሰትን ሊያስተጓጉሉ ይችላሉ።",
+        "explanation_correct_amharic": "ዋው በጣም ጥሩ። የብርቱካናማው መስመር ከመጀመሩ በፊት ወደ ቀኝ መስመር መግባት የመንገድ ሥራ ባለበት አካባቢ ደህንነትን ለማረጋገጥ ወሳኝ ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ትክክለኛውን መስመር በጊዜ አለመያዝ የትራፊክ ፍሰትን ሊያስተጓጉል እና አደጋ ሊያስከትል ይችላል።",
         "explanation_correct_audio": "921_q2_correct.mp3",
         "explanation_wrong_audio": "921_q2_wrong.mp3",
         "answers": [
           {
-            "id": "C",
-            "text_amharic": "ፈጣን ተሽከርካሪዎች በቀላሉ እንዲያልፉ ለመፍቀድ።",
+            "id": "A",
+            "text_amharic": "አሽከርካሪው ፍጥነቱን ጨምሮ በተመሳሳይ መስመር መቀጠል አለበት።",
             "is_correct": false,
-            "audio_filename": "answer_921_q2_C.mp3"
+            "audio_filename": "answer_921_q2_A.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "መስመሮችን በተደጋጋሚ ለመቀየር ለመለማመድ።",
+            "text_amharic": "አሽከርካሪው ወደ ግራ መስመር በመቀየር ማለፍ ይችላል።",
             "is_correct": false,
             "audio_filename": "answer_921_q2_D.mp3"
           },
           {
-            "id": "B",
-            "text_amharic": "በስራ ቦታዎች ላይ ደህንነትን ለማረጋገጥ እና አደጋዎችን ለመከላከል ነው።",
-            "is_correct": true,
-            "audio_filename": "answer_921_q2_B.mp3"
+            "id": "C",
+            "text_amharic": "አሽከርካሪው ወዲያውኑ መኪናውን አቁሞ የመንገድ ሥራው እስኪያልቅ መጠበቅ አለበት።",
+            "is_correct": false,
+            "audio_filename": "answer_921_q2_C.mp3"
           },
           {
-            "id": "A",
-            "text_amharic": "በመንገድ ላይ የክፍያ ቦታዎችን ለማስወገድ።",
-            "is_correct": false,
-            "audio_filename": "answer_921_q2_A.mp3"
+            "id": "B",
+            "text_amharic": "አሽከርካሪው ድርብ ተከታታይ መስመሩ ከመጀመሩ በፊት ወደ ቀኝ መስመር መግባት አለበት።",
+            "is_correct": true,
+            "audio_filename": "answer_921_q2_B.mp3"
           }
         ]
       },
       {
         "id": "921_q3",
-        "question_amharic": "ይህንን ምልክት ካዩ በኋላ አሽከርካሪው ወደ ቀኝ መስመር መቼ መግባት አለበት?",
+        "question_amharic": "የብርቱካናማው መስመር ምን ማለት ነው እና ካልታዘዙ ምን ይከሰታል?",
         "question_audio": "921_q3_question.mp3",
-        "explanation_correct_amharic": "በጣም ጥሩ። ትክክለኛው መልስ C ነው ምክንያቱም ምልክቱ የሚያስጠነቅቀው መስመሩ ከመጀመሩ በፊት ወደ ቀኝ መስመር እንዲገቡ ስለሆነ ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ ከመረጡ፣ ባለሁለት ተከታታይ መስመርን በመጣስ ቅጣት ሊጣልብዎ ወይም አደጋ ሊያጋጥምዎ ይችላል።",
+        "explanation_correct_amharic": "በጣም ጥሩ። ብርቱካናማ መስመሮች ጊዜያዊ የመንገድ ሥራ ምልክቶች ሲሆኑ፣ እነሱን አለማክበር ከባድ አደጋዎችን እና የህግ ቅጣቶችን ያስከትላል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የብርቱካናማ መስመሮችን ጊዜያዊነት እና አስፈላጊነት አለመረዳት የመንገድ ደህንነትን አደጋ ላይ ይጥላል።",
         "explanation_correct_audio": "921_q3_correct.mp3",
         "explanation_wrong_audio": "921_q3_wrong.mp3",
         "answers": [
           {
+            "id": "D",
+            "text_amharic": "ብርቱካናማው መስመር የውበት ማስዋቢያ ሲሆን፣ አሽከርካሪዎች ትኩረት መስጠት የለባቸውም።",
+            "is_correct": false,
+            "audio_filename": "answer_921_q3_D.mp3"
+          },
+          {
             "id": "A",
-            "text_amharic": "ባለሁለት ተከታታይ የብርቱካናማ መስመርን ከተሻገሩ በኋላ ብቻ።",
+            "text_amharic": "ብርቱካናማው መስመር ቋሚ የመንገድ ምልክት ሲሆን፣ ካልታዘዙ ምንም ችግር የለውም።",
             "is_correct": false,
             "audio_filename": "answer_921_q3_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "በተቻለ ፍጥነት፣ ነገር ግን ትራፊክ ከሌለ ብቻ።",
-            "is_correct": false,
+            "text_amharic": "ብርቱካናማው መስመር ጊዜያዊ የመንገድ ሥራ ምልክት ሲሆን፣ ካልታዘዙ አደጋ ሊደርስ ወይም የትራፊክ ደንብ መጣስ ሊሆን ይችላል።",
+            "is_correct": true,
             "audio_filename": "answer_921_q3_B.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "ወደ ቀኝ መስመር መግባት አስፈላጊ አይደለም፣ ቀጥ ብለው መቀጠል ይችላሉ።",
-            "is_correct": false,
-            "audio_filename": "answer_921_q3_D.mp3"
-          },
-          {
             "id": "C",
-            "text_amharic": "ባለሁለት ተከታታይ የብርቱካናማ መስመሩ በመንገድ ላይ ከመጀመሩ በፊት።",
-            "is_correct": true,
+            "text_amharic": "ብርቱካናማው መስመር አሽከርካሪዎች በፈለጉት ቦታ መስመር እንዲቀይሩ የሚፈቅድ ምልክት ነው።",
+            "is_correct": false,
             "audio_filename": "answer_921_q3_C.mp3"
           }
         ]
@@ -31224,113 +31224,113 @@
     "image_filename": "923.png",
     "video_filename": null,
     "name_hebrew": "923",
-    "name_amharic": "ይህ ምልክት ወደ ግራ ለመታጠፍ ወይም ሙሉ በሙሉ ለመዞር (U-turn) የተዘጋጀ መስመር መኖሩን ያሳያል።",
-    "explanation_amharic": "ይህ የመንገድ ምልክት አሽከርካሪዎች ወደ ግራ ለመታጠፍ ወይም ሙሉ በሙሉ ለመዞር (U-turn) የተለየ መስመር እንዲጠቀሙ ያስችላቸዋል። ይህንን ምልክት ሲያዩ፣ ወደ ግራ ለመታጠፍ ወይም U-turn ለማድረግ ካሰቡ ወደዚህ መስመር መግባት አለብዎት። ትክክለኛውን መስመር አለመጠቀም የትራፊክ ፍሰትን ሊያስተጓጉል እና አደጋ ሊያስከትል ይችላል።",
+    "name_amharic": "ጊዜያዊ የሌይን ዓላማ ለውጥ",
+    "explanation_amharic": "ይህ ብርቱካናማ የተቆራረጠ መስመር በመንገድ ላይ የሚገኝ ሲሆን፣ አንድ የትራፊክ መስመር (ሌይን) የተለመደ ዓላማውን ለጊዜያዊነት እንደለወጠ ያሳያል። አሽከርካሪዎች በመስመሩ ላይ የተቀመጡትን ፍላጻዎች በጥንቃቄ መመልከት እና በተጠቀሰው ጊዜያዊ አቅጣጫ ወይም ዓላማ መሰረት መንዳት አለባቸው። እነዚህን ጊዜያዊ ምልክቶች አለማክበር ግራ መጋባት፣ አደጋ ወይም የትራፊክ ቅጣት ሊያስከትል ይችላል።",
     "audio_name_filename": "923_name.mp3",
     "audio_explanation_filename": "923_explanation.mp3",
     "questions": [
       {
         "id": "923_q1",
-        "question_amharic": "ይህ የመንገድ ምልክት ምን ያመለክታል?",
+        "question_amharic": "ይህ ብርቱካናማ የተቆራረጠ የመንገድ ምልክት (ምልክት 923) ምን ያመለክታል?",
         "question_audio": "923_q1_question.mp3",
-        "explanation_correct_amharic": "ጎበዝ። ይህ ምልክት ወደ ግራ ለመታጠፍ ወይም ሙሉ በሙሉ ለመዞር (U-turn) የተዘጋጀ ልዩ መስመር መኖሩን ያሳያል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ መምረጥ ወደ ተሳሳተ አቅጣጫ እንዲሄዱ ወይም አደጋ እንዲፈጠር ሊያደርግ ይችላል።",
+        "explanation_correct_amharic": "ይህ ምልክት አንድ ሌይን በመንገድ ሥራ ምክንያት ለጊዜያዊነት የተለየ ዓላማ እንዳለው ያመለክታል፣ ይህም አሽከርካሪዎች ለውጡን እንዲያውቁ ያስችላል።",
+        "explanation_wrong_amharic": "የምልክቱን ትክክለኛ ትርጉም አለማወቅ አሽከርካሪው የተሳሳተ መንገድ እንዲከተል ወይም የትራፊክ ደንቦችን እንዲጥስ ያደርገዋል።",
         "explanation_correct_audio": "923_q1_correct.mp3",
         "explanation_wrong_audio": "923_q1_wrong.mp3",
         "answers": [
           {
+            "id": "A",
+            "text_amharic": "ይህ ምልክት አንድ ሌይን ለዘለቄታው ወደ ግራ ለመታጠፍ ብቻ እንደተመደበ ያሳያል።",
+            "is_correct": false,
+            "audio_filename": "answer_923_q1_A.mp3"
+          },
+          {
+            "id": "B",
+            "text_amharic": "ይህ ምልክት በመንገድ ሥራ ምክንያት አንድ ሌይን የተለመደ ዓላማውን ለጊዜያዊነት እንደለወጠ ያሳያል።",
+            "is_correct": true,
+            "audio_filename": "answer_923_q1_B.mp3"
+          },
+          {
             "id": "C",
-            "text_amharic": "ወደ ቀኝ ብቻ መታጠፍ እንደሚችሉ ያመለክታል።",
+            "text_amharic": "ይህ ምልክት ተሽከርካሪዎችን ለጊዜው ማቆም የሚቻልበት ቦታ መሆኑን ያመለክታል።",
             "is_correct": false,
             "audio_filename": "answer_923_q1_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "ወዲያውኑ ማቆም እንዳለብዎ ያመለክታል።",
+            "text_amharic": "ይህ ምልክት በዚህ ሌይን ላይ ማለፍ (overtaking) ሁልጊዜ የተከለከለ መሆኑን ያሳያል።",
             "is_correct": false,
             "audio_filename": "answer_923_q1_D.mp3"
-          },
-          {
-            "id": "B",
-            "text_amharic": "ወደ ግራ ለመታጠፍ ወይም ሙሉ በሙሉ ለመዞር (U-turn) የተዘጋጀ መስመር መኖሩን ያመለክታል።",
-            "is_correct": true,
-            "audio_filename": "answer_923_q1_B.mp3"
-          },
-          {
-            "id": "A",
-            "text_amharic": "ቀጥ ብለው ብቻ መሄድ እንዳለብዎ ያመለክታል።",
-            "is_correct": false,
-            "audio_filename": "answer_923_q1_A.mp3"
           }
         ]
       },
       {
         "id": "923_q2",
-        "question_amharic": "አሽከርካሪው ወደ ግራ መታጠፍ ፈልጎ ይህንን ምልክት ሲያይ ምን ማድረግ አለበት?",
+        "question_amharic": "አሽከርካሪ ይህንን ጊዜያዊ የመንገድ ምልክት ሲያይ ምን ማድረግ አለበት?",
         "question_audio": "923_q2_question.mp3",
-        "explanation_correct_amharic": "በጣም ጥሩ። ወደ ግራ ለመታጠፍ ወይም U-turn ለማድረግ ካሰቡ ወደ ተዘጋጀው መስመር መግባት አለብዎት።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በትክክለኛው መስመር አለመግባት የትራፊክ ፍሰትን ሊያስተጓጉል እና አደጋ ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "አሽከርካሪው በመስመሩ ላይ የሚገኙትን ፍላጻዎች በመከተል በተጠቀሰው ጊዜያዊ ዓላማ መሰረት መንዳት አለበት።",
+        "explanation_wrong_amharic": "የምልክቱን መመሪያ አለመከተል አሽከርካሪው አደጋ ውስጥ እንዲገባ ወይም የትራፊክ ፍሰትን እንዲያስተጓጉል ያደርገዋል።",
         "explanation_correct_audio": "923_q2_correct.mp3",
         "explanation_wrong_audio": "923_q2_wrong.mp3",
         "answers": [
           {
-            "id": "C",
-            "text_amharic": "ከማንኛውም መስመር U-turn ማድረግ አለበት።",
-            "is_correct": false,
-            "audio_filename": "answer_923_q2_C.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "በአሁኑ መስመሩ ቀጥ ብሎ መሄድ አለበት።",
+            "text_amharic": "አሽከርካሪው ሁልጊዜ ወደ ግራ መታጠፍ አለበት፣ በመስመሩ ላይ ያሉት ፍላጻዎች ምንም ቢሆኑ።",
             "is_correct": false,
             "audio_filename": "answer_923_q2_A.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "ቆሞ ሌላ ምልክት መጠበቅ አለበት።",
-            "is_correct": false,
-            "audio_filename": "answer_923_q2_D.mp3"
-          },
-          {
             "id": "B",
-            "text_amharic": "ወደ ግራ መታጠፊያ ወይም U-turn ወደተዘጋጀው መስመር መግባት አለበት።",
+            "text_amharic": "አሽከርካሪው በመስመሩ ላይ የተቀመጡትን የተወሰኑ ፍላጻዎች መከተል እና በተጠቀሰው አቅጣጫ መንዳት አለበት።",
             "is_correct": true,
             "audio_filename": "answer_923_q2_B.mp3"
+          },
+          {
+            "id": "C",
+            "text_amharic": "አሽከርካሪው ፍጥነቱን ቀንሶ ወዲያውኑ ማቆም አለበት።",
+            "is_correct": false,
+            "audio_filename": "answer_923_q2_C.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ሌላ ትራፊክ ከሌለ አሽከርካሪው ምልክቱን ችላ ማለት ይችላል።",
+            "is_correct": false,
+            "audio_filename": "answer_923_q2_D.mp3"
           }
         ]
       },
       {
         "id": "923_q3",
-        "question_amharic": "ይህንን ምልክት ችላ በማለት እና ወደተዘጋጀው የመታጠፊያ መስመር ባለመግባት ምን አደጋ ሊያጋጥም ይችላል?",
+        "question_amharic": "በዚህ ምልክት የሚታየው የሌይን ዓላማ ለውጥ ባህሪ ምንድነው?",
         "question_audio": "923_q3_question.mp3",
-        "explanation_correct_amharic": "ጎሽ! ትክክለኛውን መስመር አለመጠቀም የትራፊክ ፍሰትን ሊያስተጓጉል እና አደጋ ሊያስከትል ይችላል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የትራፊክ ደንቦችን አለማክበር ቅጣት ያስከትላል እና የመንገድ ደህንነትን አደጋ ላይ ይጥላል።",
+        "explanation_correct_amharic": "ይህ ምልክት የሚያሳየው የሌይን ዓላማ ለውጥ ጊዜያዊ ሲሆን፣ ይህም በመንገድ ሥራ ወይም በሌሎች ጊዜያዊ ሁኔታዎች ሊከሰት ይችላል።",
+        "explanation_wrong_amharic": "የሌይኑን ለውጥ ጊዜያዊነት አለመረዳት አሽከርካሪው ለረጅም ጊዜ የሚቆይ ለውጥ አድርጎ እንዲያስብ እና የተሳሳተ ውሳኔ እንዲወስን ያደርገዋል።",
         "explanation_correct_audio": "923_q3_correct.mp3",
         "explanation_wrong_audio": "923_q3_wrong.mp3",
         "answers": [
           {
+            "id": "A",
+            "text_amharic": "የሌይኑ ዓላማ ለዘለቄታው ተለውጧል።",
+            "is_correct": false,
+            "audio_filename": "answer_923_q3_A.mp3"
+          },
+          {
             "id": "B",
-            "text_amharic": "የትራፊክ መጨናነቅ ወይም አደጋ ሊያስከትሉ ይችላሉ።",
-            "is_correct": true,
+            "text_amharic": "ሌይኑ ሁልጊዜ ለዩ-ተርን ብቻ የተዘጋጀ ነው።",
+            "is_correct": false,
             "audio_filename": "answer_923_q3_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "ከማንኛውም መስመር እንዲታጠፉ ይፈቀድልዎታል።",
+            "text_amharic": "ሌይኑ ለሁሉም ትራፊክ ዝግ ነው።",
             "is_correct": false,
             "audio_filename": "answer_923_q3_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "ጥንቃቄ እስካደረጉ ድረስ ምንም ችግር የለውም።",
-            "is_correct": false,
+            "text_amharic": "የሌይኑ ዓላማ ለጊዜያዊነት የተለወጠ ሲሆን፣ ብዙውን ጊዜ በመንገድ ሥራ ምክንያት ነው።",
+            "is_correct": true,
             "audio_filename": "answer_923_q3_D.mp3"
-          },
-          {
-            "id": "A",
-            "text_amharic": "ወደ መድረሻዎ በፍጥነት ይደርሳሉ።",
-            "is_correct": false,
-            "audio_filename": "answer_923_q3_A.mp3"
           }
         ]
       }
