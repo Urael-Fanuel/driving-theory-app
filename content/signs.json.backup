@@ -30867,76 +30867,76 @@
     "image_filename": "920.png",
     "video_filename": null,
     "name_hebrew": "920",
-    "name_amharic": "ይህ ምልክት በመንገድ ላይ ሁለት ተከታታይ ቢጫ መስመሮች ሲሆኑ ማለፍ ወይም ማለፍ ክልክል መሆኑን ያመለክታል።",
-    "explanation_amharic": "ይህ ምልክት በመንገድ ላይ የሚገኙ ሁለት ተከታታይ ቢጫ መስመሮችን ያሳያል። እነዚህ መስመሮች የመንገድ ክፍፍልን የሚያመለክቱ ሲሆን፣ አሽከርካሪዎች መስመሮቹን ማለፍ፣ ማለፍ ወይም ወደ ግራ መታጠፍ ፈጽሞ የተከለከለ ነው። ይህንን ህግ መጣስ የትራፊክ አደጋ ሊያስከትል፣ ቅጣት ሊያስወጣ ወይም ነጥቦች ሊያስመዘግብ ይችላል።",
+    "name_amharic": "ብርቱካናማ ድርብ መለያ መስመር",
+    "explanation_amharic": "ይህ ምልክት በመንገድ ላይ የሚገኝ ብርቱካናማ ቀለም ያለው ድርብ ተከታታይ መስመር ነው። ይህ መስመር አሽከርካሪዎች በመንገዱ በቀኝ በኩል እንዲያሽከረክሩ እና መስመሩን በምንም መልኩ በመኪናቸው አካል ወይም በከፊል እንዳያቋርጡ ያዛል። ይህንን ህግ መጣስ የትራፊክ ጥሰት ሲሆን አደጋ ሊያስከትል ወይም ከፍተኛ ቅጣት ሊያስወጣ ይችላል።",
     "audio_name_filename": "920_name.mp3",
     "audio_explanation_filename": "920_explanation.mp3",
     "questions": [
       {
         "id": "920_q1",
-        "question_amharic": "በመንገድ ላይ ሁለት ተከታታይ ቢጫ መስመሮች ሲያዩ ምን ማለት ነው?",
+        "question_amharic": "ይህ ብርቱካናማ ድርብ መስመር በመንገድ ላይ ሲታይ ምን ማድረግ አለብዎት?",
         "question_audio": "920_q1_question.mp3",
-        "explanation_correct_amharic": "ጎበዝ። ሁለት ተከታታይ ቢጫ መስመሮች ማለፍ፣ ማለፍ ወይም ወደ ግራ መታጠፍ ፈጽሞ የተከለከለ መሆኑን ያመለክታሉ።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: መስመሩን ማለፍ የትራፊክ ደንቦችን መጣስ ሲሆን አደጋ ሊያስከትል ወይም ቅጣት ሊያስወጣ ይችላል።",
+        "explanation_correct_amharic": "አሪፍ! ምልክቱ ብርቱካናማው ድርብ መስመር ሁልጊዜም በመንገዱ በቀኝ በኩል እንድንነዳ እና በፍጹም እንዳናቋርጠው ያዝዛል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: መስመሩን ማቋረጥ አደገኛ እና ህገወጥ ሲሆን የትራፊክ ደንብ ጥሰት ያስከትላል።",
         "explanation_correct_audio": "920_q1_correct.mp3",
         "explanation_wrong_audio": "920_q1_wrong.mp3",
         "answers": [
           {
             "id": "C",
-            "text_amharic": "ይህ ለአውቶቡሶች ብቻ የተለየ መስመር መሆኑን ያመለክታል።",
+            "text_amharic": "ፍጥነትዎን በመጨመር ሌሎች ተሽከርካሪዎችን ማለፍ ይችላሉ።",
             "is_correct": false,
             "audio_filename": "answer_920_q1_C.mp3"
           },
           {
+            "id": "A",
+            "text_amharic": "በጥንቃቄ መስመሩን አቋርጦ ወደ ግራ መታጠፍ ይቻላል።",
+            "is_correct": false,
+            "audio_filename": "answer_920_q1_A.mp3"
+          },
+          {
             "id": "B",
-            "text_amharic": "ለማለፍም ሆነ ወደ ግራ ለመታጠፍ ጨምሮ በምንም ምክንያት ማለፍ የለብዎትም።",
+            "text_amharic": "በመስመሩ በቀኝ በኩል መንዳት እና መስመሩን በምንም መልኩ አለማቋረጥ አለብዎት።",
             "is_correct": true,
             "audio_filename": "answer_920_q1_B.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "ይህ ለጊዜያዊ የግንባታ ስራዎች የተዘጋጀ ቦታ ነው።",
+            "text_amharic": "ይህ መስመር የመኪና ማቆሚያ ቦታ መሆኑን ያመለክታል።",
             "is_correct": false,
             "audio_filename": "answer_920_q1_D.mp3"
-          },
-          {
-            "id": "A",
-            "text_amharic": "መንገዱ ባዶ ከሆነ ለማለፍ ማለፍ ይችላሉ።",
-            "is_correct": false,
-            "audio_filename": "answer_920_q1_A.mp3"
           }
         ]
       },
       {
         "id": "920_q2",
-        "question_amharic": "ሁለት ተከታታይ ቢጫ መስመሮችን ሲያዩ የትኛው ተግባር በጥብቅ የተከለከለ ነው?",
+        "question_amharic": "የብርቱካናማው ድርብ መስመር ልዩ ትርጉም ምንድነው?",
         "question_audio": "920_q2_question.mp3",
-        "explanation_correct_amharic": "በጣም ጥሩ። ሁለት ተከታታይ ቢጫ መስመሮችን ማለፍ የትራፊክ ደንቦችን የሚጥስ እና አደገኛ ተግባር ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተከለከለውን ተግባር መፈጸም የትራፊክ አደጋ ሊያስከትል ወይም ህጋዊ ቅጣት ሊያስወጣ ይችላል።",
+        "explanation_correct_amharic": "ትክክል! ጥሩ ነው። ብርቱካናማው ድርብ መስመር በተለይ በሥራ ቦታዎች ላይ የሚገኝ ሲሆን መስመሩን ማቋረጥ በፍጹም የተከለከለ መሆኑን ያጎላል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የመስመሩን ቀለም በተሳሳተ መንገድ መረዳት ወይም የመሻገር እገዳውን ችላ ማለት አደገኛ ሁኔታዎችን ይፈጥራል።",
         "explanation_correct_audio": "920_q2_correct.mp3",
         "explanation_wrong_audio": "920_q2_wrong.mp3",
         "answers": [
           {
+            "id": "B",
+            "text_amharic": "ይህ መስመር በመንገድ ላይ በሚደረግ የሥራ ቦታ ላይ የሚገኝ ሲሆን መስመሩን በምንም መልኩ ማቋረጥ በፍጹም የተከለከለ መሆኑን ያመለክታል።",
+            "is_correct": true,
+            "audio_filename": "answer_920_q2_B.mp3"
+          },
+          {
             "id": "D",
-            "text_amharic": "በሌሊት መንዳት።",
+            "text_amharic": "ይህ መስመር ለአጭር ጊዜ መኪና ለማቆም የሚያገለግል ቦታ ነው።",
             "is_correct": false,
             "audio_filename": "answer_920_q2_D.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "የመታጠፊያ ምልክትዎን መጠቀም።",
+            "text_amharic": "ይህ መስመር አሽከርካሪዎች ፍጥነታቸውን እንዲጨምሩ እና በፍጥነት እንዲያልፉ ይፈቅዳል።",
             "is_correct": false,
             "audio_filename": "answer_920_q2_C.mp3"
           },
           {
-            "id": "B",
-            "text_amharic": "መስመሮቹን በማለፍ መስመር መቀየር።",
-            "is_correct": true,
-            "audio_filename": "answer_920_q2_B.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "በዝግታ መንዳት።",
+            "text_amharic": "ይህ መስመር ቢጫ ቀለም ያለው ሲሆን በጥንቃቄ ማለፍ እንደሚቻል ያሳያል።",
             "is_correct": false,
             "audio_filename": "answer_920_q2_A.mp3"
           }
@@ -30944,36 +30944,36 @@
       },
       {
         "id": "920_q3",
-        "question_amharic": "ሁለት ተከታታይ ቢጫ መስመሮችን በማለፍ የሚያስከትለው ውጤት ምንድነው?",
+        "question_amharic": "ብርቱካናማውን ድርብ መስመር አቋርጦ መንዳት ምን ያስከትላል?",
         "question_audio": "920_q3_question.mp3",
-        "explanation_correct_amharic": "ጎሽ! ሁለት ተከታታይ ቢጫ መስመሮችን ማለፍ ከባድ የትራፊክ ጥሰት ሲሆን ቅጣት፣ ነጥቦች እና የአደጋ ስጋት ያስከትላል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የመንገድ ህጎችን መጣስ ሁልጊዜም የሚያስከትለው ውጤት አለው፣ ፖሊስ ባያይም እንኳን አደጋ ሊከሰት ይችላል።",
+        "explanation_correct_amharic": "ጎሽ! ብርቱካናማውን ድርብ መስመር ማቋረጥ በህግ የተከለከለ ሲሆን ለከባድ ቅጣቶች ያጋልጣል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የመንገድ ደንቦችን ችላ ማለት የራስዎን እና የሌሎችን ህይወት አደጋ ላይ ይጥላል።",
         "explanation_correct_audio": "920_q3_correct.mp3",
         "explanation_wrong_audio": "920_q3_wrong.mp3",
         "answers": [
           {
             "id": "C",
-            "text_amharic": "አደጋ ካላስከተሉ በስተቀር ቅጣት ብቻ ይደርስብዎታል።",
+            "text_amharic": "ሌሎች አሽከርካሪዎች እንዲያልፉ ለመፍቀድ መስመሩን ማቋረጥ ይፈቀዳል።",
             "is_correct": false,
             "audio_filename": "answer_920_q3_C.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "ምንም ነገር አይከሰትም፣ ፖሊስ እስካላየዎት ድረስ።",
-            "is_correct": false,
-            "audio_filename": "answer_920_q3_D.mp3"
+            "id": "B",
+            "text_amharic": "የትራፊክ ደንብ ጥሰት ሲሆን ከፍተኛ የገንዘብ ቅጣት እና የነጥብ ቅጣት ያስከትላል።",
+            "is_correct": true,
+            "audio_filename": "answer_920_q3_B.mp3"
           },
           {
             "id": "A",
-            "text_amharic": "ከፖሊስ ማስጠንቀቂያ ሊደርስብዎ ይችላል።",
+            "text_amharic": "ምንም አይነት ቅጣት የለውም ምክንያቱም ጊዜያዊ ምልክት ነው።",
             "is_correct": false,
             "audio_filename": "answer_920_q3_A.mp3"
           },
           {
-            "id": "B",
-            "text_amharic": "አደጋ ሊያስከትሉ፣ ቅጣት ሊቀጡ እና በመንጃ ፍቃድዎ ላይ ነጥቦች ሊመዘገቡ ይችላሉ።",
-            "is_correct": true,
-            "audio_filename": "answer_920_q3_B.mp3"
+            "id": "D",
+            "text_amharic": "ይህ ድርጊት የመንገድ ደህንነትን የሚያሻሽል ስለሆነ የሚመከር ነው።",
+            "is_correct": false,
+            "audio_filename": "answer_920_q3_D.mp3"
           }
         ]
       }
@@ -30986,41 +30986,41 @@
     "image_filename": "921.png",
     "video_filename": null,
     "name_hebrew": "921",
-    "name_amharic": "ይህ ምልክት ጊዜያዊ የመንገድ መስመር መለያ ሲሆን ማለፍ እንደሚፈቀድ ያሳያል።",
-    "explanation_amharic": "ይህ ምልክት በመንገድ ላይ ጊዜያዊ የትራፊክ መስመር መለያ ሲሆን፣ መስመሩን አቋርጦ ማለፍ እንደሚፈቀድ ያመለክታል። አሽከርካሪው ይህንን ምልክት ሲያይ፣ መስመሩን አቋርጦ ማለፍ ቢፈቀድም፣ በመንገድ ላይ ለሚደረጉ ጊዜያዊ ለውጦች እና ለሚሰሩ ሠራተኞች ከፍተኛ ጥንቃቄ ማድረግ አለበት። ጥንቃቄ አለማድረግ አደጋ ሊያስከትል ወይም የትራፊክ ደንቦችን በመጣስ ቅጣት ሊያስከትል ይችላል።",
+    "name_amharic": "የብርቱካናማ መስመር ማስጠንቀቂያ",
+    "explanation_amharic": "ይህ ምልክት ወደፊት በመንገድ ላይ የሚገኝ ባለሁለት ተከታታይ የብርቱካናማ መስመር (እንደ ምልክት 920) ማስጠንቀቂያ ነው። አሽከርካሪው ይህንን ምልክት ሲያይ፣ ባለሁለት ተከታታይ መስመሩ ከመጀመሩ በፊት ወደ ቀኝ መስመር መግባት አለበት። ይህንን ማስጠንቀቂያ ችላ ማለት እና መስመሩን መሻገር የትራፊክ ጥሰት፣ ቅጣት ወይም አደጋ ሊያስከትል ይችላል።",
     "audio_name_filename": "921_name.mp3",
     "audio_explanation_filename": "921_explanation.mp3",
     "questions": [
       {
         "id": "921_q1",
-        "question_amharic": "ብርቱካናማ የተቆራረጠ የመንገድ መስመር ምን ያሳያል?",
+        "question_amharic": "ይህ ምልክት (921) ምን ያመለክታል?",
         "question_audio": "921_q1_question.mp3",
-        "explanation_correct_amharic": "ዋው በጣም ጥሩ። ብርቱካናማ የተቆራረጠ መስመር ጊዜያዊ የመንገድ መለያ ሲሆን፣ ጥንቃቄ በማድረግ መስመሩን አቋርጦ ማለፍ እንደሚፈቀድ ያመለክታል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ መምረጥ አሽከርካሪው አላስፈላጊ አደጋ ውስጥ እንዲገባ ወይም የትራፊክ ደንቦችን በመጣስ ቅጣት እንዲጣልበት ያደርጋል።",
+        "explanation_correct_amharic": "አሪፍ! ምልክቱ ትክክለኛው መልስ B ነው ምክንያቱም ይህ ምልክት ባለሁለት ተከታታይ የብርቱካናማ መስመር ወደፊት እንደሚመጣ የሚያስጠነቅቅ ሲሆን አሽከርካሪውም መስመሩ ከመጀመሩ በፊት ወደ ቀኝ መስመር እንዲገባ ያዛል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ ከመረጡ፣ ባለሁለት ተከታታይ መስመርን ተሻግረው የትራፊክ ጥሰት ሊፈጽሙ ወይም አደጋ ሊያጋጥምዎት ይችላል።",
         "explanation_correct_audio": "921_q1_correct.mp3",
         "explanation_wrong_audio": "921_q1_wrong.mp3",
         "answers": [
           {
             "id": "B",
-            "text_amharic": "መስመሩን አቋርጦ ማለፍ የሚፈቀድ ሲሆን ጥንቃቄ ማድረግ ያስፈልጋል።",
+            "text_amharic": "ባለሁለት ተከታታይ የብርቱካናማ መስመር እየቀረበ መሆኑን ያስጠነቅቃል፣ እና መስመሩ ከመጀመሩ በፊት ወደ ቀኝ መስመር መግባት አለብዎት።",
             "is_correct": true,
             "audio_filename": "answer_921_q1_B.mp3"
           },
           {
             "id": "A",
-            "text_amharic": "መስመሩን አቋርጦ ማለፍ በፍጹም የተከለከለ ነው።",
+            "text_amharic": "የብርቱካናማውን የተቆራረጠ መስመር ሁልጊዜ መሻገር የሚፈቀድበት መንገድ ላይ እንዳሉ ያመለክታል።",
             "is_correct": false,
             "audio_filename": "answer_921_q1_A.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "በፍጥነት ማሽከርከር እንደሚፈቀድ ያመለክታል።",
+            "text_amharic": "ይህ ለአደጋ ጊዜ ተሽከርካሪዎች ብቻ የሆነ ጊዜያዊ መስመር ያሳያል።",
             "is_correct": false,
             "audio_filename": "answer_921_q1_D.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "መንገዱ ለዘለቄታው ተዘግቷል ማለት ነው።",
+            "text_amharic": "የብርቱካናማውን መስመር መሻገር የሚፈቀደው ትራፊክ ከሌለ ብቻ ነው።",
             "is_correct": false,
             "audio_filename": "answer_921_q1_C.mp3"
           }
@@ -31028,34 +31028,34 @@
       },
       {
         "id": "921_q2",
-        "question_amharic": "ይህንን ብርቱካናማ የተቆራረጠ የመንገድ መስመር ሲያዩ ምን ማድረግ አለብዎት?",
+        "question_amharic": "በተለይ በስራ ቦታዎች ላይ የዚህን ምልክት መመሪያ መከተል ለምን አስፈላጊ ነው?",
         "question_audio": "921_q2_question.mp3",
-        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። ብርቱካናማ የተቆራረጠ መስመር ባለበት ቦታ ማለፍ ቢፈቀድም፣ የመንገድ ሥራ ወይም ጊዜያዊ ለውጦች ሊኖሩ ስለሚችሉ ከፍተኛ ጥንቃቄ ማድረግ ግዴታ ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ መምረጥ አሽከርካሪው አላስፈላጊ አደጋ ውስጥ እንዲገባ ወይም የትራፊክ ደንቦችን በመጣስ ቅጣት እንዲጣልበት ያደርጋል።",
+        "explanation_correct_amharic": "በጣም ጥሩ። ትክክለኛው መልስ B ነው ምክንያቱም ይህ ምልክት በስራ ቦታዎች ላይ አሽከርካሪዎች ደህንነታቸውን እንዲጠብቁ እና አደጋዎችን እንዲያስወግዱ ለመርዳት ታስቦ የተሰራ ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ ከመረጡ፣ በስራ ቦታዎች ላይ አደጋ ሊያስከትሉ ወይም የትራፊክ ፍሰትን ሊያስተጓጉሉ ይችላሉ።",
         "explanation_correct_audio": "921_q2_correct.mp3",
         "explanation_wrong_audio": "921_q2_wrong.mp3",
         "answers": [
           {
+            "id": "C",
+            "text_amharic": "ፈጣን ተሽከርካሪዎች በቀላሉ እንዲያልፉ ለመፍቀድ።",
+            "is_correct": false,
+            "audio_filename": "answer_921_q2_C.mp3"
+          },
+          {
             "id": "D",
-            "text_amharic": "መኪናዎን አቁመው የመንገድ ሥራው እስኪያልቅ መጠበቅ አለብዎት።",
+            "text_amharic": "መስመሮችን በተደጋጋሚ ለመቀየር ለመለማመድ።",
             "is_correct": false,
             "audio_filename": "answer_921_q2_D.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "መስመሩን አቋርጦ ማለፍ ቢፈቀድም፣ ለጊዜያዊ ለውጦች እና ለሠራተኞች ጥንቃቄ ማድረግ አለብዎት።",
+            "text_amharic": "በስራ ቦታዎች ላይ ደህንነትን ለማረጋገጥ እና አደጋዎችን ለመከላከል ነው።",
             "is_correct": true,
             "audio_filename": "answer_921_q2_B.mp3"
           },
           {
-            "id": "C",
-            "text_amharic": "ወደ ሌላ መንገድ መዞር እና መንገዱን ማስወገድ አለብዎት።",
-            "is_correct": false,
-            "audio_filename": "answer_921_q2_C.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "ፍጥነትዎን በመጨመር በፍጥነት ማለፍ አለብዎት።",
+            "text_amharic": "በመንገድ ላይ የክፍያ ቦታዎችን ለማስወገድ።",
             "is_correct": false,
             "audio_filename": "answer_921_q2_A.mp3"
           }
@@ -31063,36 +31063,36 @@
       },
       {
         "id": "921_q3",
-        "question_amharic": "ብርቱካናማ የመንገድ ምልክቶች በዋነኝነት የሚጠቀሙበት ምክንያት ምንድን ነው?",
+        "question_amharic": "ይህንን ምልክት ካዩ በኋላ አሽከርካሪው ወደ ቀኝ መስመር መቼ መግባት አለበት?",
         "question_audio": "921_q3_question.mp3",
-        "explanation_correct_amharic": "እሰይ። አቤት እውቀት! ብርቱካናማ የመንገድ ምልክቶች ሁልጊዜ ጊዜያዊ ሁኔታዎችን፣ እንደ የመንገድ ሥራ ወይም የትራፊክ ለውጦች፣ ለማመልከት ያገለግላሉ።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ መምረጥ አሽከርካሪው አላስፈላጊ አደጋ ውስጥ እንዲገባ ወይም የትራፊክ ደንቦችን በመጣስ ቅጣት እንዲጣልበት ያደርጋል።",
+        "explanation_correct_amharic": "በጣም ጥሩ። ትክክለኛው መልስ C ነው ምክንያቱም ምልክቱ የሚያስጠነቅቀው መስመሩ ከመጀመሩ በፊት ወደ ቀኝ መስመር እንዲገቡ ስለሆነ ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ ከመረጡ፣ ባለሁለት ተከታታይ መስመርን በመጣስ ቅጣት ሊጣልብዎ ወይም አደጋ ሊያጋጥምዎ ይችላል።",
         "explanation_correct_audio": "921_q3_correct.mp3",
         "explanation_wrong_audio": "921_q3_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "መንገዱ ለዘለቄታው እንደተዘጋ ለማመልከት ነው።",
+            "text_amharic": "ባለሁለት ተከታታይ የብርቱካናማ መስመርን ከተሻገሩ በኋላ ብቻ።",
             "is_correct": false,
             "audio_filename": "answer_921_q3_A.mp3"
           },
           {
-            "id": "C",
-            "text_amharic": "በምሽት የመንገዱን ታይነት ለማሻሻል ነው።",
-            "is_correct": false,
-            "audio_filename": "answer_921_q3_C.mp3"
-          },
-          {
             "id": "B",
-            "text_amharic": "በመንገድ ላይ ጊዜያዊ ሁኔታዎች ወይም የመንገድ ሥራዎች መኖራቸውን ለማሳየት ነው።",
-            "is_correct": true,
+            "text_amharic": "በተቻለ ፍጥነት፣ ነገር ግን ትራፊክ ከሌለ ብቻ።",
+            "is_correct": false,
             "audio_filename": "answer_921_q3_B.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "በአስቸኳይ ጊዜ ብቻ ጥቅም ላይ የሚውሉ ናቸው።",
+            "text_amharic": "ወደ ቀኝ መስመር መግባት አስፈላጊ አይደለም፣ ቀጥ ብለው መቀጠል ይችላሉ።",
             "is_correct": false,
             "audio_filename": "answer_921_q3_D.mp3"
+          },
+          {
+            "id": "C",
+            "text_amharic": "ባለሁለት ተከታታይ የብርቱካናማ መስመሩ በመንገድ ላይ ከመጀመሩ በፊት።",
+            "is_correct": true,
+            "audio_filename": "answer_921_q3_C.mp3"
           }
         ]
       }

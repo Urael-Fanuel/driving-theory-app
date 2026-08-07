@@ -30986,113 +30986,113 @@
     "image_filename": "921.png",
     "video_filename": null,
     "name_hebrew": "921",
-    "name_amharic": "ይህ ምልክት ጊዜያዊ የመንገድ መስመር መለያ ሲሆን ማለፍ እንደሚፈቀድ ያሳያል።",
-    "explanation_amharic": "ይህ ምልክት በመንገድ ላይ ጊዜያዊ የትራፊክ መስመር መለያ ሲሆን፣ መስመሩን አቋርጦ ማለፍ እንደሚፈቀድ ያመለክታል። አሽከርካሪው ይህንን ምልክት ሲያይ፣ መስመሩን አቋርጦ ማለፍ ቢፈቀድም፣ በመንገድ ላይ ለሚደረጉ ጊዜያዊ ለውጦች እና ለሚሰሩ ሠራተኞች ከፍተኛ ጥንቃቄ ማድረግ አለበት። ጥንቃቄ አለማድረግ አደጋ ሊያስከትል ወይም የትራፊክ ደንቦችን በመጣስ ቅጣት ሊያስከትል ይችላል።",
+    "name_amharic": "የብርቱካናማ መስመር ቅድመ ማስጠንቀቂያ",
+    "explanation_amharic": "ይህ ምልክት ወደፊት ድርብ ተከታታይ ብርቱካናማ መስመር (እንደ ምልክት 920) እንደሚመጣ አስቀድሞ ያስጠነቅቃል። ይህ መስመር ብዙውን ጊዜ የመንገድ ሥራ ባለበት ቦታ ላይ የሚገኝ ሲሆን፣ አሽከርካሪው ወደ ቀኝ መስመር እንዲገባ ያዛል። አሽከርካሪው ይህንን ምልክት ሲያይ፣ የብርቱካናማው መስመር ከመጀመሩ በፊት ወደ ቀኝ መስመር መግባት አለበት፤ አለበለዚያ አደጋ ሊደርስ ወይም የትራፊክ ደንብ መጣስ ሊሆን ይችላል።",
     "audio_name_filename": "921_name.mp3",
     "audio_explanation_filename": "921_explanation.mp3",
     "questions": [
       {
         "id": "921_q1",
-        "question_amharic": "ብርቱካናማ የተቆራረጠ የመንገድ መስመር ምን ያሳያል?",
+        "question_amharic": "ይህ የብርቱካናማ መስመር ምልክት ምን ያሳያል?",
         "question_audio": "921_q1_question.mp3",
-        "explanation_correct_amharic": "ዋው በጣም ጥሩ። ብርቱካናማ የተቆራረጠ መስመር ጊዜያዊ የመንገድ መለያ ሲሆን፣ ጥንቃቄ በማድረግ መስመሩን አቋርጦ ማለፍ እንደሚፈቀድ ያመለክታል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ መምረጥ አሽከርካሪው አላስፈላጊ አደጋ ውስጥ እንዲገባ ወይም የትራፊክ ደንቦችን በመጣስ ቅጣት እንዲጣልበት ያደርጋል።",
+        "explanation_correct_amharic": "ጎበዝ። ይህ ምልክት አሽከርካሪዎች ወደፊት የሚመጣውን ድርብ ተከታታይ ብርቱካናማ መስመር አስቀድመው እንዲያውቁት ለማስጠንቀቅ ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ምልክቱን በተሳሳተ መንገድ መተርጎም አሽከርካሪው ለድንገተኛ የመንገድ ለውጥ ዝግጁ እንዳይሆን እና አደጋ ላይ እንዲወድቅ ያደርገዋል።",
         "explanation_correct_audio": "921_q1_correct.mp3",
         "explanation_wrong_audio": "921_q1_wrong.mp3",
         "answers": [
           {
             "id": "B",
-            "text_amharic": "መስመሩን አቋርጦ ማለፍ የሚፈቀድ ሲሆን ጥንቃቄ ማድረግ ያስፈልጋል።",
+            "text_amharic": "ይህ ምልክት ወደፊት ድርብ ተከታታይ ብርቱካናማ መስመር እንደሚመጣ አስቀድሞ ያስጠነቅቃል።",
             "is_correct": true,
             "audio_filename": "answer_921_q1_B.mp3"
           },
           {
             "id": "A",
-            "text_amharic": "መስመሩን አቋርጦ ማለፍ በፍጹም የተከለከለ ነው።",
+            "text_amharic": "ይህ ምልክት አሁን ባለንበት ቦታ ድርብ ተከታታይ መስመር መኖሩን ያሳያል።",
             "is_correct": false,
             "audio_filename": "answer_921_q1_A.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "በፍጥነት ማሽከርከር እንደሚፈቀድ ያመለክታል።",
-            "is_correct": false,
-            "audio_filename": "answer_921_q1_D.mp3"
-          },
-          {
             "id": "C",
-            "text_amharic": "መንገዱ ለዘለቄታው ተዘግቷል ማለት ነው።",
+            "text_amharic": "ይህ ምልክት በማንኛውም ጊዜ መስመር መቀየር እንደሚፈቀድ ያሳያል።",
             "is_correct": false,
             "audio_filename": "answer_921_q1_C.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ይህ ምልክት የመንገድ ሥራው መጠናቀቁን ያመለክታል።",
+            "is_correct": false,
+            "audio_filename": "answer_921_q1_D.mp3"
           }
         ]
       },
       {
         "id": "921_q2",
-        "question_amharic": "ይህንን ብርቱካናማ የተቆራረጠ የመንገድ መስመር ሲያዩ ምን ማድረግ አለብዎት?",
+        "question_amharic": "ይህንን ምልክት ሲያዩ አሽከርካሪው ምን ማድረግ አለበት?",
         "question_audio": "921_q2_question.mp3",
-        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። ብርቱካናማ የተቆራረጠ መስመር ባለበት ቦታ ማለፍ ቢፈቀድም፣ የመንገድ ሥራ ወይም ጊዜያዊ ለውጦች ሊኖሩ ስለሚችሉ ከፍተኛ ጥንቃቄ ማድረግ ግዴታ ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ መምረጥ አሽከርካሪው አላስፈላጊ አደጋ ውስጥ እንዲገባ ወይም የትራፊክ ደንቦችን በመጣስ ቅጣት እንዲጣልበት ያደርጋል።",
+        "explanation_correct_amharic": "ዋው በጣም ጥሩ። የብርቱካናማው መስመር ከመጀመሩ በፊት ወደ ቀኝ መስመር መግባት የመንገድ ሥራ ባለበት አካባቢ ደህንነትን ለማረጋገጥ ወሳኝ ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ትክክለኛውን መስመር በጊዜ አለመያዝ የትራፊክ ፍሰትን ሊያስተጓጉል እና አደጋ ሊያስከትል ይችላል።",
         "explanation_correct_audio": "921_q2_correct.mp3",
         "explanation_wrong_audio": "921_q2_wrong.mp3",
         "answers": [
           {
+            "id": "A",
+            "text_amharic": "አሽከርካሪው ፍጥነቱን ጨምሮ በተመሳሳይ መስመር መቀጠል አለበት።",
+            "is_correct": false,
+            "audio_filename": "answer_921_q2_A.mp3"
+          },
+          {
             "id": "D",
-            "text_amharic": "መኪናዎን አቁመው የመንገድ ሥራው እስኪያልቅ መጠበቅ አለብዎት።",
+            "text_amharic": "አሽከርካሪው ወደ ግራ መስመር በመቀየር ማለፍ ይችላል።",
             "is_correct": false,
             "audio_filename": "answer_921_q2_D.mp3"
           },
           {
-            "id": "B",
-            "text_amharic": "መስመሩን አቋርጦ ማለፍ ቢፈቀድም፣ ለጊዜያዊ ለውጦች እና ለሠራተኞች ጥንቃቄ ማድረግ አለብዎት።",
-            "is_correct": true,
-            "audio_filename": "answer_921_q2_B.mp3"
-          },
-          {
             "id": "C",
-            "text_amharic": "ወደ ሌላ መንገድ መዞር እና መንገዱን ማስወገድ አለብዎት።",
+            "text_amharic": "አሽከርካሪው ወዲያውኑ መኪናውን አቁሞ የመንገድ ሥራው እስኪያልቅ መጠበቅ አለበት።",
             "is_correct": false,
             "audio_filename": "answer_921_q2_C.mp3"
           },
           {
-            "id": "A",
-            "text_amharic": "ፍጥነትዎን በመጨመር በፍጥነት ማለፍ አለብዎት።",
-            "is_correct": false,
-            "audio_filename": "answer_921_q2_A.mp3"
+            "id": "B",
+            "text_amharic": "አሽከርካሪው ድርብ ተከታታይ መስመሩ ከመጀመሩ በፊት ወደ ቀኝ መስመር መግባት አለበት።",
+            "is_correct": true,
+            "audio_filename": "answer_921_q2_B.mp3"
           }
         ]
       },
       {
         "id": "921_q3",
-        "question_amharic": "ብርቱካናማ የመንገድ ምልክቶች በዋነኝነት የሚጠቀሙበት ምክንያት ምንድን ነው?",
+        "question_amharic": "የብርቱካናማው መስመር ምን ማለት ነው እና ካልታዘዙ ምን ይከሰታል?",
         "question_audio": "921_q3_question.mp3",
-        "explanation_correct_amharic": "እሰይ። አቤት እውቀት! ብርቱካናማ የመንገድ ምልክቶች ሁልጊዜ ጊዜያዊ ሁኔታዎችን፣ እንደ የመንገድ ሥራ ወይም የትራፊክ ለውጦች፣ ለማመልከት ያገለግላሉ።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ መምረጥ አሽከርካሪው አላስፈላጊ አደጋ ውስጥ እንዲገባ ወይም የትራፊክ ደንቦችን በመጣስ ቅጣት እንዲጣልበት ያደርጋል።",
+        "explanation_correct_amharic": "በጣም ጥሩ። ብርቱካናማ መስመሮች ጊዜያዊ የመንገድ ሥራ ምልክቶች ሲሆኑ፣ እነሱን አለማክበር ከባድ አደጋዎችን እና የህግ ቅጣቶችን ያስከትላል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የብርቱካናማ መስመሮችን ጊዜያዊነት እና አስፈላጊነት አለመረዳት የመንገድ ደህንነትን አደጋ ላይ ይጥላል።",
         "explanation_correct_audio": "921_q3_correct.mp3",
         "explanation_wrong_audio": "921_q3_wrong.mp3",
         "answers": [
           {
+            "id": "D",
+            "text_amharic": "ብርቱካናማው መስመር የውበት ማስዋቢያ ሲሆን፣ አሽከርካሪዎች ትኩረት መስጠት የለባቸውም።",
+            "is_correct": false,
+            "audio_filename": "answer_921_q3_D.mp3"
+          },
+          {
             "id": "A",
-            "text_amharic": "መንገዱ ለዘለቄታው እንደተዘጋ ለማመልከት ነው።",
+            "text_amharic": "ብርቱካናማው መስመር ቋሚ የመንገድ ምልክት ሲሆን፣ ካልታዘዙ ምንም ችግር የለውም።",
             "is_correct": false,
             "audio_filename": "answer_921_q3_A.mp3"
           },
           {
-            "id": "C",
-            "text_amharic": "በምሽት የመንገዱን ታይነት ለማሻሻል ነው።",
-            "is_correct": false,
-            "audio_filename": "answer_921_q3_C.mp3"
-          },
-          {
             "id": "B",
-            "text_amharic": "በመንገድ ላይ ጊዜያዊ ሁኔታዎች ወይም የመንገድ ሥራዎች መኖራቸውን ለማሳየት ነው።",
+            "text_amharic": "ብርቱካናማው መስመር ጊዜያዊ የመንገድ ሥራ ምልክት ሲሆን፣ ካልታዘዙ አደጋ ሊደርስ ወይም የትራፊክ ደንብ መጣስ ሊሆን ይችላል።",
             "is_correct": true,
             "audio_filename": "answer_921_q3_B.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "በአስቸኳይ ጊዜ ብቻ ጥቅም ላይ የሚውሉ ናቸው።",
+            "id": "C",
+            "text_amharic": "ብርቱካናማው መስመር አሽከርካሪዎች በፈለጉት ቦታ መስመር እንዲቀይሩ የሚፈቅድ ምልክት ነው።",
             "is_correct": false,
-            "audio_filename": "answer_921_q3_D.mp3"
+            "audio_filename": "answer_921_q3_C.mp3"
           }
         ]
       }

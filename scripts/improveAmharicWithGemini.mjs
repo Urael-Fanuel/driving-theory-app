@@ -115,6 +115,8 @@ Note this covers THREE distinct things the marking protects access to — privat
   920: `תמרור 920 (מקבוצת תמרורים באתר עבודה) הוא סימון על פני הכביש — קו הפרדה רצוף כפול (לא מקווקו, בניגוד לתמרור 919) בצבע כתום, לא צהוב. משמעות: על הנהג לנסוע בצידם הימני של הקווים, ואסור לחצות את הקווים בגוף הרכב או בכל חלק ממנו — איסור מוחלט על חצייה, לא רק "איסור עקיפה" כללי.
 מאומת מ-noeg.co.il (התאמה ישירה למספר התמרור — "תמרור 920 - קו הפרדה רצוף כפול בצבע כתום: נהג בצידם הימני של הקוים, אל תעבור את הקוים בגוף הרכב או בחלקו"), וכן אושר ויזואלית: התמונה מראה שני קווים רצופים (לא מקווקווים) בצבע כתום על רקע אפור-כביש. חשוב מאוד: התוכן הקיים כרגע שגוי בשני דברים — (1) הצבע מתואר כ"ቢጫ" (צהוב), אבל בתמונה ובמקור המאומת הצבע הוא כתום ("ብርቱካናማ" באמהרית), ולא צהוב. (2) הכלל מתואר בעמימות כ"איסור לעבור/לפנות שמאלה", אבל הכלל המדויק הוא ספציפי יותר: נסיעה בצד הימני של הקווים בלבד, ואיסור מוחלט על חציית הקווים בגוף הרכב או בחלקו (לא תיאור כללי של "עקיפה" או "שינוי נתיב" בלבד). ההסבר וכל שאלה/תשובה חייבים להזכיר את הצבע הכתום (לא צהוב) ואת הכלל המדויק של נסיעה מימין לקו + איסור חצייה מוחלט.
 ⚠️ MANDATORY for name_amharic: השם הנוכחי הוא משפט הסבר מלא ולא כותרת קצרה (מפר את הכלל הקבוע מתמרור 404 ואילך — name_amharic = כותרת קצרה, לא חופפת ל-explanation_amharic). הכותרת החדשה חייבת להיות קצרה (כמה מילים בלבד), למשל בסגנון "קו הפרדה כפול כתום" — לא משפט שלם עם "ማለት" / "ያመለክታል" בסופו.`,
+  921: `תמרור 921 (מקבוצת תמרורים באתר עבודה) הוא תמרור אזהרה/הכוונה, לא תיאור של מצב קבוע: הוא מתריע מראש על קו הפרדה רצוף כפול בצבע כתום (בדיוק כמו תמרור 920) שיופיע בהמשך הדרך. חובה על הנהג לעבור לנתיב הימני לפני שקו ההפרדה הרצוף מתחיל בפועל. מופיע בדרך כלל באזורים של שיפוצים/עבודות בכביש, ומסייע בהכוונת התנועה בבטחה סביב האזור החסום.
+אושר ויזואלית: התמונה מראה קו כתום שמתחיל כמקווקו (בצד אחד) ועובר לרצוף (בצד השני) — בדיוק התבנית של "אזהרה מוקדמת לפני קו רצוף מתקרב", לא סימון של מצב סופי/קבוע. חשוב מאוד: התוכן הקיים כרגע שגוי — הוא מתאר "ماله מותרת ותמיד" / "מותר לעבור", בלי שום התייחסות לכך שזו אזהרה מקדימה ולא היתר קבוע. אסור לתאר את זה כ"מותר לעבור" סתם — ההסבר וכל שאלה/תשובה חייבים להבהיר: (1) זו אזהרה על קו רצוף כפול שמתקרב, לא מצב נוכחי, (2) חובה לעבור לנתיב הימני לפני שהקו הרצוף מתחיל, (3) לא לערבב עם תמרור 920 עצמו (זה השלט המקדים, 920 הוא הקו הרצוף בפועל).`,
 };
 const EXTRA_CONTEXT_ARG = process.argv.find(a => a.startsWith('--extra-context='));
 const EXTRA_CONTEXT = EXTRA_CONTEXT_ARG
@@ -160,6 +162,11 @@ Strict rules — follow all without exception:
    - Wrong answers must be plausible but clearly wrong
    - explanation_correct_amharic: why the correct answer is right (1 sentence)
    - explanation_wrong_amharic: what the driver risks by choosing wrong (1 sentence)
+   - NEVER mention the answer's letter/label (A/B/C/D, or any other letter/number identifier) inside
+     explanation_correct_amharic or explanation_wrong_amharic — e.g. do NOT write something meaning
+     "the correct answer is B". These fields are read aloud and shown standalone, disconnected from
+     the lettered answer list, and each engine displays a different label scheme (Ge'ez letters, or
+     no letters at all for non-readers) — describe the actual fact/consequence only, never a letter.
 
 4. Write in clear, simple Amharic that any ordinary adult can understand — no jargon.
 5. Use a respectful, moderately formal tone — NOT street slang, NOT bureaucratic language.
@@ -175,9 +182,17 @@ function buildPrompt(sign) {
     const factLine = EXTRA_CONTEXT
       ? `\n\nMANDATORY FACT — verified from an authoritative source about this specific sign. This is not background color: it is REQUIRED that explanation_amharic explicitly covers this fact, and that AT LEAST ONE of the 3 questions specifically tests understanding of it. Do not contradict it, do not omit it, do not water it down to a generic statement: ${EXTRA_CONTEXT}`
       : '';
+    // Policy decided 2026-08-05, applies from sign 922 onward only (signs
+    // below 922 in this topic are already shipped and are NOT being
+    // retrofitted) — almost every work_site sign describes a temporary
+    // construction/roadwork condition, and explanation_amharic must say so
+    // explicitly (word "ጊዜያዊ" or equivalent), not just imply it via context.
+    const temporaryLine = (sign.topic_id === 'work_site' && parseInt(signNum, 10) >= 922)
+      ? `\n\nMANDATORY: this sign belongs to a group of signs that only exist because of temporary road works/construction — explanation_amharic MUST explicitly state that the marking/situation is TEMPORARY (use the word "ጊዜያዊ" or an equally explicit equivalent), not just describe the rule without saying so.`
+      : '';
     return `This is Israeli traffic sign number ${signNum} (from the Israeli Highway Code).
 
-Look at the image and use your knowledge of Israeli traffic laws (תקנות התעבורה) to write complete educational Amharic content for Ethiopian immigrants learning to drive in Israel.${factLine}
+Look at the image and use your knowledge of Israeli traffic laws (תקנות התעבורה) to write complete educational Amharic content for Ethiopian immigrants learning to drive in Israel.${factLine}${temporaryLine}
 
 Return JSON with this exact structure:
 {
