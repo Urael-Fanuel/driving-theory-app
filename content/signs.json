@@ -32652,41 +32652,41 @@
     "image_filename": "935.png",
     "video_filename": null,
     "name_hebrew": "935",
-    "name_amharic": "ከፊትህ ያለው መንገድ ከግራ በኩል እየጠበበ መሆኑን የሚያሳይ የማስጠንቀቂያ ምልክት ነው።",
-    "explanation_amharic": "ይህ ምልክት ከፊትህ ያለው መንገድ ከግራ በኩል እየጠበበ መሆኑን ያስጠነቅቃል። አሽከርካሪው ይህንን ምልክት ሲያይ ፍጥነቱን መቀነስ፣ ጥንቃቄ ማድረግ እና መንገዱ በሚጠብበት ጊዜ ቦታውን ለማስተካከል ዝግጁ መሆን አለበት። ይህንን ምልክት ችላ ማለት ከሌሎች ተሽከርካሪዎች ጋር ግጭት በመፍጠር አደጋ ሊያስከትል ይችላል።",
+    "name_amharic": "የድንገተኛ አደጋ ማቆሚያ ቦታ",
+    "explanation_amharic": "ይህ ምልክት በጊዜያዊ የመንገድ ሥራ ቦታ ላይ የሚገኝ የድንገተኛ አደጋ ማቆሚያ ቦታ መኖሩን ያሳያል። ይህ ቦታ ተሽከርካሪዎ ሲበላሽ ወይም የጤና ችግር ሲያጋጥምዎ ከመደበኛው የመንገድ መስመር ውጭ በደህና ለማቆም የተዘጋጀ ነው። አሽከርካሪዎች ይህንን ቦታ መጠቀም ያለባቸው እውነተኛ የድንገተኛ አደጋ ሲያጋጥማቸው ብቻ ሲሆን ለተለመደው ማቆሚያ ወይም ማረፊያ መጠቀም የለባቸውም፤ ያለአግባብ መጠቀም የትራፊክ ፍሰትን ሊያስተጓጉል እና አደጋ ሊያስከትል ይችላል።",
     "audio_name_filename": "935_name.mp3",
     "audio_explanation_filename": "935_explanation.mp3",
     "questions": [
       {
         "id": "935_q1",
-        "question_amharic": "ይህ የመንገድ ምልክት ምን ማለት ነው?",
+        "question_amharic": "ይህ ምልክት ምን ያሳያል?",
         "question_audio": "935_q1_question.mp3",
-        "explanation_correct_amharic": "ጎበዝ። ይህ ምልክት መንገዱ ከግራ በኩል እየጠበበ መሆኑን በማስጠንቀቅ አሽከርካሪው እንዲዘጋጅ ይረዳል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የምልክቱን ትክክለኛ ትርጉም አለማወቅ አሽከርካሪው ላልተጠበቀ የመንገድ ሁኔታ ዝግጁ እንዳይሆን በማድረግ አደጋ ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "ጎበዝ። ምልክቱ በጊዜያዊ የመንገድ ሥራ ቦታ ላይ ለድንገተኛ አደጋዎች ብቻ የተዘጋጀ ማቆሚያ ቦታ መኖሩን በግልጽ ያሳያል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ምልክቱን በተሳሳተ መንገድ መረዳት አሽከርካሪው አደጋ በሚያጋጥምበት ጊዜ ደህንነቱ የተጠበቀ ማቆሚያ ቦታ እንዳያገኝ ወይም የትራፊክ ፍሰትን ያለአግባብ እንዲያስተጓጉል ያደርገዋል።",
         "explanation_correct_audio": "935_q1_correct.mp3",
         "explanation_wrong_audio": "935_q1_wrong.mp3",
         "answers": [
           {
-            "id": "A",
-            "text_amharic": "መንገዱ እየሰፋ መሆኑን ያመለክታል።",
-            "is_correct": false,
-            "audio_filename": "answer_935_q1_A.mp3"
-          },
-          {
             "id": "D",
-            "text_amharic": "ወደ ግራ መታጠፍ እንዳለብህ ያዝዛል።",
+            "text_amharic": "በዚህ ቦታ ላይ መኪና ማቆም የተከለከለ መሆኑን ያሳያል።",
             "is_correct": false,
             "audio_filename": "answer_935_q1_D.mp3"
           },
           {
+            "id": "A",
+            "text_amharic": "መንገዱ ወደፊት እንደሚጠብብ ያሳያል።",
+            "is_correct": false,
+            "audio_filename": "answer_935_q1_A.mp3"
+          },
+          {
             "id": "B",
-            "text_amharic": "ከፊትህ ያለው መንገድ ከግራ በኩል እየጠበበ መሆኑን ያሳያል።",
+            "text_amharic": "በመንገድ ሥራ ቦታ ላይ የድንገተኛ አደጋ ማቆሚያ ቦታ መኖሩን ያሳያል።",
             "is_correct": true,
             "audio_filename": "answer_935_q1_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "ወደ ግራ በኩል ስለታም መታጠፊያ እንዳለ ያመለክታል።",
+            "text_amharic": "ተሽከርካሪዎችን ለማቆም እና ለማረፍ የተፈቀደ ቦታ ነው።",
             "is_correct": false,
             "audio_filename": "answer_935_q1_C.mp3"
           }
@@ -32694,69 +32694,69 @@
       },
       {
         "id": "935_q2",
-        "question_amharic": "ይህን ምልክት ሲያዩ አሽከርካሪው ምን ማድረግ አለበት?",
+        "question_amharic": "አሽከርካሪ ይህንን የድንገተኛ አደጋ ማቆሚያ ቦታ መጠቀም ያለበት መቼ ነው?",
         "question_audio": "935_q2_question.mp3",
-        "explanation_correct_amharic": "በጣም ጥሩ። ፍጥነት መቀነስ እና ጥንቃቄ ማድረግ መንገዱ በሚጠብበት ጊዜ ደህንነቱ የተጠበቀ የመንዳት ልምድን ያረጋግጣል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ትክክለኛውን እርምጃ አለመውሰድ የመንገድ አደጋዎችን ሊያስከትል ወይም የትራፊክ ፍሰትን ሊያስተጓጉል ይችላል።",
+        "explanation_correct_amharic": "በጣም ጥሩ። ይህ ቦታ የተዘጋጀው ለድንገተኛ አደጋዎች ብቻ በመሆኑ ተሽከርካሪ ሲበላሽ ወይም የጤና ችግር ሲያጋጥም ብቻ ጥቅም ላይ መዋል አለበት።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ቦታውን ያለአግባብ መጠቀም የትራፊክ ፍሰትን ሊያስተጓጉል፣ የድንገተኛ አደጋ አገልግሎቶችን ሊያግድ እና አደጋ ሊያስከትል ይችላል።",
         "explanation_correct_audio": "935_q2_correct.mp3",
         "explanation_wrong_audio": "935_q2_wrong.mp3",
         "answers": [
           {
+            "id": "B",
+            "text_amharic": "ተሽከርካሪው ሲበላሽ ወይም የጤና ችግር ሲያጋጥመው ብቻ ነው።",
+            "is_correct": true,
+            "audio_filename": "answer_935_q2_B.mp3"
+          },
+          {
             "id": "A",
-            "text_amharic": "ጠባብ ክፍሉን በፍጥነት ለማለፍ ፍጥነቱን መጨመር አለበት።",
+            "text_amharic": "ለጥቂት ደቂቃዎች ለማረፍ ወይም ስልክ ለመደወል ሲፈልግ።",
             "is_correct": false,
             "audio_filename": "answer_935_q2_A.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "ተሽከርካሪውን አቁሞ መንገዱ እስኪሰፋ ድረስ መጠበቅ አለበት።",
-            "is_correct": false,
-            "audio_filename": "answer_935_q2_D.mp3"
-          },
-          {
             "id": "C",
-            "text_amharic": "ሳያጣራ ወዲያውኑ ወደ ቀኝ መስመር መቀየር አለበት።",
+            "text_amharic": "በመንገድ ላይ የትራፊክ መጨናነቅ ሲኖር ወደ ጎን ለመውጣት።",
             "is_correct": false,
             "audio_filename": "answer_935_q2_C.mp3"
           },
           {
-            "id": "B",
-            "text_amharic": "ፍጥነቱን መቀነስ፣ ጥንቃቄ ማድረግ እና መንገዱ ከግራ በኩል ለመጥበብ መዘጋጀት አለበት።",
-            "is_correct": true,
-            "audio_filename": "answer_935_q2_B.mp3"
+            "id": "D",
+            "text_amharic": "በማንኛውም ጊዜ ለመኪና ማቆም ወይም ለመጠበቅ ሲፈልግ።",
+            "is_correct": false,
+            "audio_filename": "answer_935_q2_D.mp3"
           }
         ]
       },
       {
         "id": "935_q3",
-        "question_amharic": "ይህን የማስጠንቀቂያ ምልክት ችላ የማለት አደጋው ምንድን ነው?",
+        "question_amharic": "የዚህ የድንገተኛ አደጋ ማቆሚያ ቦታ ዋና ዓላማ ምንድን ነው?",
         "question_audio": "935_q3_question.mp3",
-        "explanation_correct_amharic": "ጎሽ! ምልክቱን ችላ ማለት አሽከርካሪው ላልተጠበቀ የመንገድ ሁኔታ ዝግጁ እንዳይሆን በማድረግ አደጋ የመፍጠር እድልን ይጨምራል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የምልክቱን ማስጠንቀቂያ አለመቀበል አሽከርካሪውን እና ሌሎችንም አደጋ ላይ የሚጥል ከባድ የመንገድ አደጋ ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "አሪፍ! ምልክቱ የድንገተኛ አደጋ ማቆሚያ ቦታ ዋና ዓላማ አሽከርካሪዎች አደጋ ሲያጋጥማቸው ከመንገድ ላይ ወጥተው በደህና እንዲያቆሙ እና የሌሎችን ተሽከርካሪዎች እንቅስቃሴ እንዳያደናቅፉ ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ቦታውን ለሌላ ዓላማ መጠቀም የትራፊክ ደህንነትን አደጋ ላይ ይጥላል እና ለድንገተኛ አደጋዎች የሚያስፈልገውን ቦታ ያግዳል ይህም ከባድ መዘዝ ሊያስከትል ይችላል።",
         "explanation_correct_audio": "935_q3_correct.mp3",
         "explanation_wrong_audio": "935_q3_wrong.mp3",
         "answers": [
           {
             "id": "B",
-            "text_amharic": "በቂ ቦታ ባለመኖሩ ወይም ከሌላ ተሽከርካሪ ጋር በመጋጨት አደጋ ሊያስከትል ይችላል።",
-            "is_correct": true,
+            "text_amharic": "ተሳፋሪዎችን ለማውረድ ወይም ለመጫን ምቹ ቦታ ለመስጠት።",
+            "is_correct": false,
             "audio_filename": "answer_935_q3_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "መውጫ መንገድዎን ሊያመልጥዎ ይችላል።",
-            "is_correct": false,
+            "text_amharic": "በድንገተኛ አደጋ ጊዜ ተሽከርካሪውን ከመደበኛው የመንገድ መስመር ውጭ በደህና ለማቆም እና የትራፊክ ፍሰትን ላለማስተጓጎል ነው።",
+            "is_correct": true,
             "audio_filename": "answer_935_q3_C.mp3"
           },
           {
             "id": "A",
-            "text_amharic": "የመኪና ጎማ ሊፈነዳ ይችላል።",
+            "text_amharic": "አሽከርካሪዎች ፍጥነታቸውን እንዲቀንሱ ለማስገደድ።",
             "is_correct": false,
             "audio_filename": "answer_935_q3_A.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "የመኪና ማቆሚያ ቅጣት ይደርስብዎታል።",
+            "text_amharic": "ለረጅም ጊዜ መኪና ለማቆም እና ለመዝናናት የሚያስችል ቦታ ለመስጠት።",
             "is_correct": false,
             "audio_filename": "answer_935_q3_D.mp3"
           }
