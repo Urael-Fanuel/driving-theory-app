@@ -32176,111 +32176,111 @@
     "image_filename": "931.png",
     "video_filename": null,
     "name_hebrew": "931",
-    "name_amharic": "ይህ ምልክት በመንገድ ላይ ጊዜያዊ አደጋ፣ የሥራ ቦታ ወይም የትራፊክ አቅጣጫ መኖሩን ያመለክታል።",
-    "explanation_amharic": "ይህ ምልክት በመንገድ ላይ ጊዜያዊ አደጋዎች፣ የሥራ ቦታዎች ወይም የትራፊክ አቅጣጫ ለውጦች መኖራቸውን ለማመልከት ያገለግላል። አሽከርካሪዎች ይህንን ምልክት ሲያዩ ፍጥነታቸውን መቀነስ፣ ከፍተኛ ጥንቃቄ ማድረግ እና በመንገዱ ላይ ለሚደረጉ ለውጦች ትኩረት መስጠት አለባቸው። እነዚህን መመሪያዎች አለመከተል አደጋ፣ ቅጣት ወይም የትራፊክ መጨናነቅ ሊያስከትል ይችላል።",
+    "name_amharic": "የመንገድ ኮን ምልክት",
+    "explanation_amharic": "ይህ ምልክት (ኮን) በመንገድ ላይ ጊዜያዊ አደጋን፣ መሰናክልን ወይም የስራ ቦታን የሚያመለክት ሲሆን አሽከርካሪዎችን ለመምራት ያገለግላል። አሽከርካሪዎች የኮኖቹን አቀማመጥ በመከተል በጥንቃቄ መንዳት አለባቸው፤ እንዲሁም በኮኖቹ ላይ ወይም በሚያመለክቱት መሰናክል ላይ መንዳት ወይም ማለፍ በጥብቅ የተከለከለ ነው። ይህን ህግ አለማክበር አደጋን፣ የትራፊክ ፍሰት መስተጓጎልን ወይም ቅጣትን ያስከትላል።",
     "audio_name_filename": "931_name.mp3",
     "audio_explanation_filename": "931_explanation.mp3",
     "questions": [
       {
         "id": "931_q1",
-        "question_amharic": "የትራፊክ ኮን (ምልክት 931) በዋነኝነት የሚያመለክተው ምንድን ነው?",
+        "question_amharic": "ይህ የኮን ምልክት በመንገድ ላይ ሲታይ ምን ማድረግ አለብዎት?",
         "question_audio": "931_q1_question.mp3",
-        "explanation_correct_amharic": "ትክክል! ይህ ምልክት የትራፊክ ኮኖች በመንገድ ላይ ጊዜያዊ አደጋዎችን ወይም የሥራ ቦታዎችን ለማመልከት ያገለግላሉ።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህን ምልክት ችላ ማለት አደጋ ውስጥ ሊከት ወይም የትራፊክ ደንቦችን መጣስ ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "አሪፍ! ምልክቱ የኮን ምልክቶች የመንገድ ላይ መሰናክልን ወይም አቅጣጫን የሚያመለክቱ በመሆናቸው አሽከርካሪዎች በጥንቃቄ በመንዳት የተሰጠውን መመሪያ መከተል አለባቸው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የኮን ምልክቶችን ችላ ማለት ወይም በላያቸው ላይ ማለፍ አደጋን፣ የመኪና ጉዳትን ወይም የትራፊክ ህግ ጥሰትን ያስከትላል።",
         "explanation_correct_audio": "931_q1_correct.mp3",
         "explanation_wrong_audio": "931_q1_wrong.mp3",
         "answers": [
           {
-            "id": "C",
-            "text_amharic": "ለድንገተኛ አደጋ ተሽከርካሪዎች ብቻ ማቆም ይፈቀዳል።",
-            "is_correct": false,
-            "audio_filename": "answer_931_q1_C.mp3"
-          },
-          {
             "id": "D",
-            "text_amharic": "የፍጥነት ገደቡ በከፍተኛ ሁኔታ ጨምሯል ማለት ነው።",
+            "text_amharic": "ኮኖቹ የጌጥ ስራ ስለሆኑ ትኩረት መስጠት አያስፈልግም።",
             "is_correct": false,
             "audio_filename": "answer_931_q1_D.mp3"
           },
           {
-            "id": "B",
-            "text_amharic": "ከፊት ለፊት ጊዜያዊ አደጋ ወይም የሥራ ቦታ መኖሩን ያመለክታል።",
-            "is_correct": true,
-            "audio_filename": "answer_931_q1_B.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "መንገዱ በቋሚነት ተዘግቷል ማለት ነው።",
+            "text_amharic": "ፍጥነትዎን ሳይቀንሱ መንዳትዎን መቀጠል አለብዎት።",
             "is_correct": false,
             "audio_filename": "answer_931_q1_A.mp3"
+          },
+          {
+            "id": "C",
+            "text_amharic": "መንገዱ ዝግ ስለሆነ ወደ ሌላ መንገድ መዞር አለብዎት።",
+            "is_correct": false,
+            "audio_filename": "answer_931_q1_C.mp3"
+          },
+          {
+            "id": "B",
+            "text_amharic": "የኮኖቹን አቀማመጥ በመከተል በጥንቃቄ መንዳት እና በላያቸው ላይ አለማለፍ አለብዎት።",
+            "is_correct": true,
+            "audio_filename": "answer_931_q1_B.mp3"
           }
         ]
       },
       {
         "id": "931_q2",
-        "question_amharic": "አሽከርካሪ የትራፊክ ኮን ሲያይ ምን ዓይነት እርምጃ መውሰድ አለበት?",
+        "question_amharic": "በኮን ምልክቶች የታጠረን ቦታ ወይም በኮን ምልክት የተጠቆመ መሰናክልን በተመለከተ ትክክለኛው ህግ ምንድነው?",
         "question_audio": "931_q2_question.mp3",
-        "explanation_correct_amharic": "ትክክል! ጥሩ ነው። የትራፊክ ኮኖች ጥንቃቄ እንድናደርግ እና ፍጥነታችንን እንድንቀንስ ስለሚያስፈልግ ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ፍጥነት መጨመር ወይም ጥንቃቄ አለማድረግ አደጋን ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። የኮን ምልክቶች አደጋን ወይም መሰናክልን የሚያመለክቱ በመሆናቸው ደህንነትን ለመጠበቅ በላያቸው ላይ ማለፍ ወይም መንዳት በጥብቅ የተከለከለ ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በኮን ምልክቶች ላይ ማለፍ ወይም የተከለከለውን ቦታ መግባት ለከባድ አደጋ፣ ለሰራተኞች ጉዳት ወይም ለትራፊክ ቅጣት ያጋልጣል።",
         "explanation_correct_audio": "931_q2_correct.mp3",
         "explanation_wrong_audio": "931_q2_wrong.mp3",
         "answers": [
           {
-            "id": "C",
-            "text_amharic": "መንገዱ ንጹህ ነው ብሎ እንደተለመደው መንዳት አለበት።",
-            "is_correct": false,
-            "audio_filename": "answer_931_q2_C.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "አካባቢውን በፍጥነት ለማለፍ ፍጥነቱን መጨመር አለበት።",
+            "text_amharic": "ቦታው ሰፊ ከሆነ በኮኖቹ ላይ ማለፍ ይፈቀዳል።",
             "is_correct": false,
             "audio_filename": "answer_931_q2_A.mp3"
           },
           {
+            "id": "B",
+            "text_amharic": "በኮኖቹ ላይ መንዳት ወይም በሚያመለክቱት መሰናክል ላይ ማለፍ በፍጹም የተከለከለ ነው።",
+            "is_correct": true,
+            "audio_filename": "answer_931_q2_B.mp3"
+          },
+          {
             "id": "D",
-            "text_amharic": "በመንገዱ መካከል ወዲያውኑ ማቆም አለበት።",
+            "text_amharic": "የሌሊት ጊዜ ከሆነ በኮኖቹ ላይ ማለፍ ይፈቀዳል።",
             "is_correct": false,
             "audio_filename": "answer_931_q2_D.mp3"
           },
           {
-            "id": "B",
-            "text_amharic": "ፍጥነቱን መቀነስ እና ከፍተኛ ጥንቃቄ ማድረግ አለበት።",
-            "is_correct": true,
-            "audio_filename": "answer_931_q2_B.mp3"
+            "id": "C",
+            "text_amharic": "ኮኖቹ ጊዜያዊ ስለሆኑ ትኩረት መስጠት አያስፈልግም።",
+            "is_correct": false,
+            "audio_filename": "answer_931_q2_C.mp3"
           }
         ]
       },
       {
         "id": "931_q3",
-        "question_amharic": "የትራፊክ ኮኖችን እና ማስጠንቀቂያዎቻቸውን ችላ የማለት ሊያስከትል የሚችለው ውጤት ምንድን ነው?",
+        "question_amharic": "የኮን ምልክቶች ብዙውን ጊዜ በመንገድ ላይ የሚቀመጡት በምን ዓይነት ሁኔታዎች ነው?",
         "question_audio": "931_q3_question.mp3",
-        "explanation_correct_amharic": "አሪፍ! ምልክቱ የትራፊክ ኮኖችን ችላ ማለት አደጋን፣ ጉዳትን ወይም የሕግ ቅጣትን ሊያስከትል ይችላል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የትራፊክ ኮኖች የደህንነት ምልክቶች በመሆናቸው ችላ ማለት አደገኛ ነው።",
+        "explanation_correct_amharic": "ጎሽ! የኮን ምልክቶች ጊዜያዊ የመንገድ ላይ ሁኔታዎችን እንደ ስራ ቦታዎች ወይም አደጋዎች ለማመልከት እና አሽከርካሪዎች ጥንቃቄ እንዲያደርጉ ለመምራት ያገለግላሉ።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የኮን ምልክቶችን ትክክለኛ ዓላማ አለመረዳት አሽከርካሪዎች አላስፈላጊ አደጋ ውስጥ እንዲገቡ ወይም የትራፊክ ደንቦችን እንዲጥሱ ያደርጋል።",
         "explanation_correct_audio": "931_q3_correct.mp3",
         "explanation_wrong_audio": "931_q3_wrong.mp3",
         "answers": [
           {
             "id": "B",
-            "text_amharic": "አደጋ ሊያስከትሉ ወይም የትራፊክ ቅጣት ሊቀበሉ ይችላሉ።",
+            "text_amharic": "በመንገድ ላይ ጊዜያዊ ስራዎች፣ ጥገናዎች ወይም አደጋዎች ሲኖሩ አሽከርካሪዎችን ለመምራት።",
             "is_correct": true,
             "audio_filename": "answer_931_q3_B.mp3"
           },
           {
             "id": "A",
-            "text_amharic": "ለብቃት ማሽከርከር ሽልማት ያገኛሉ።",
+            "text_amharic": "መንገዱ ለዘለቄታው ሲዘጋ ብቻ ነው።",
             "is_correct": false,
             "audio_filename": "answer_931_q3_A.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "በተጠቀሰው ቦታ የትም ቦታ ማቆም ይፈቀድልዎታል።",
+            "text_amharic": "አሽከርካሪዎች ፍጥነት እንዲጨምሩ ለማበረታታት።",
             "is_correct": false,
             "audio_filename": "answer_931_q3_D.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "መንገዱ በራስ-ሰር ለእርስዎ ይጸዳል።",
+            "text_amharic": "መንገዱ ንጹህ ሲሆን እና ምንም አይነት ችግር ሳይኖር።",
             "is_correct": false,
             "audio_filename": "answer_931_q3_C.mp3"
           }
