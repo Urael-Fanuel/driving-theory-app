@@ -32414,41 +32414,41 @@
     "image_filename": "933.png",
     "video_filename": null,
     "name_hebrew": "933",
-    "name_amharic": "ይህ ምልክት በመንገድ ላይ እንቅፋት እንዳለ እና ወደ ግራ ማለፍ እንዳለብን ያመለክታል።",
-    "explanation_amharic": "ይህ ምልክት በመንገድ ላይ እንቅፋት፣ የመንገድ ክፍፍል ወይም የሥራ ቦታ መኖሩን የሚያመለክት ሲሆን አሽከርካሪዎች ወደ ግራ በኩል እንዲያልፉ ያዛል። ይህንን ምልክት ሲያዩ ፍጥነትዎን መቀነስ፣ ጥንቃቄ ማድረግ እና እንቅፋቱን በግራ በኩል በማለፍ መንዳት አለብዎት። ምልክቱን ችላ ማለት አደጋ፣ የትራፊክ ቅጣት ወይም የመኪና ጉዳት ሊያስከትል ይችላል።",
+    "name_amharic": "የሥራ ቦታ አቅጣጫ ምልክት",
+    "explanation_amharic": "ይህ ምልክት ጊዜያዊ የመንገድ ሥራ ቦታ ወይም መሰናክል መኖሩን የሚያሳይ ተንቀሳቃሽና ብልጭ ድርግም የሚል ሰሌዳ ነው። አሽከርካሪዎች በዚህ ሰሌዳ ላይ ከሚታየው ተጨማሪ ቀስት ወይም ምልክት የሚሰጠውን አቅጣጫ በጥንቃቄ መከተል አለባቸው። በዚህ ምስል ላይ እንደሚታየው፣ ሰማያዊው ክብ ምልክት ወደ ግራ የሚያመለክት ቀስት ስላለው፣ አሽከርካሪዎች መሰናክሉን በግራ በኩል በማለፍ ማሽከርከር አለባቸው። ይህንን አቅጣጫ አለመከተል አደጋ ሊያስከትል ይችላል።",
     "audio_name_filename": "933_name.mp3",
     "audio_explanation_filename": "933_explanation.mp3",
     "questions": [
       {
         "id": "933_q1",
-        "question_amharic": "ይህ ምልክት በመንገድ ላይ ምን ያሳያል?",
+        "question_amharic": "ይህ ብልጭ ድርግም የሚል ሰሌዳ ምን ያመለክታል?",
         "question_audio": "933_q1_question.mp3",
-        "explanation_correct_amharic": "ዋው በጣም ጥሩ። ይህ ምልክት በመንገድ ላይ ያለን እንቅፋት በግራ በኩል በማለፍ እንድንሄድ የሚያዝ ትዕዛዝ ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ምልክቱን ተረድቶ ትክክለኛውን እርምጃ አለመውሰድ አደጋ ወይም የትራፊክ ቅጣት ያስከትላል።",
+        "explanation_correct_amharic": "ዋው በጣም ጥሩ። ይህ ምልክት ጊዜያዊ የመንገድ ሥራ ቦታ ወይም መሰናክል መኖሩን የሚያስጠነቅቅ ሲሆን፣ አሽከርካሪዎችም የተሰጠውን አቅጣጫ እንዲከተሉ ያሳስባል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ መምረጥ አሽከርካሪው አደጋ ውስጥ እንዲገባ ወይም የትራፊክ ፍሰትን እንዲያስተጓጉል ያደርገዋል።",
         "explanation_correct_audio": "933_q1_correct.mp3",
         "explanation_wrong_audio": "933_q1_wrong.mp3",
         "answers": [
           {
+            "id": "C",
+            "text_amharic": "በዚህ ቦታ ማቆም ወይም መኪና ማቆም እንደሚፈቀድ ያሳያል።",
+            "is_correct": false,
+            "audio_filename": "answer_933_q1_C.mp3"
+          },
+          {
             "id": "B",
-            "text_amharic": "በመንገድ ላይ እንቅፋት ወይም የመንገድ ክፍፍል እንዳለ እና በግራ በኩል ማለፍ እንዳለብዎት ያሳያል።",
+            "text_amharic": "ጊዜያዊ የመንገድ ሥራ ቦታ ወይም መሰናክል መኖሩን እና የትኛውን አቅጣጫ መከተል እንዳለብን ያሳያል።",
             "is_correct": true,
             "audio_filename": "answer_933_q1_B.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "እንቅፋቱን ከየትኛውም ወገን ማለፍ እንደሚችሉ ያሳያል።",
+            "text_amharic": "ሁልጊዜ ወደ ግራ ብቻ መታጠፍ እንዳለብን ያመለክታል።",
             "is_correct": false,
             "audio_filename": "answer_933_q1_D.mp3"
           },
           {
-            "id": "C",
-            "text_amharic": "ወዲያውኑ ማቆም እንዳለብዎት ያሳያል።",
-            "is_correct": false,
-            "audio_filename": "answer_933_q1_C.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "ከፊት ለፊት አደገኛ መታጠፊያ እንዳለ ያሳያል።",
+            "text_amharic": "መንገዱ ለዘለቄታው ተዘግቷል ማለት ነው።",
             "is_correct": false,
             "audio_filename": "answer_933_q1_A.mp3"
           }
@@ -32456,69 +32456,69 @@
       },
       {
         "id": "933_q2",
-        "question_amharic": "ይህንን ምልክት ሲያዩ አሽከርካሪው ምን ዓይነት እርምጃ መውሰድ አለበት?",
+        "question_amharic": "በዚህ ምስል ላይ የሚታየውን ምልክት ሲያዩ ምን ማድረግ አለብዎት?",
         "question_audio": "933_q2_question.mp3",
-        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። ምልክቱ እንቅፋቱን በግራ በኩል ብቻ እንድናልፍ እና ጥንቃቄ እንድናደርግ ያዛል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ እርምጃ መውሰድ ከአደጋ ወይም ከትራፊክ ህግ ጥሰት ጋር ያጋጥመናል።",
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት በዚህ ምስል ላይ ያለው ሰማያዊ ክብ ምልክት ወደ ግራ የሚያመለክት ቀስት ስላለው፣ መሰናክሉን በግራ በኩል በማለፍ ማሽከርከር ግዴታ ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ አቅጣጫ መከተል ከሥራ ቦታው ሠራተኞች ወይም መሳሪያዎች ጋር ግጭት ሊፈጥር ይችላል።",
         "explanation_correct_audio": "933_q2_correct.mp3",
         "explanation_wrong_audio": "933_q2_wrong.mp3",
         "answers": [
           {
-            "id": "D",
-            "text_amharic": "ቆሞ ተጨማሪ መመሪያዎችን መጠበቅ አለበት።",
-            "is_correct": false,
-            "audio_filename": "answer_933_q2_D.mp3"
-          },
-          {
             "id": "B",
-            "text_amharic": "ፍጥነቱን መቀነስ፣ ጥንቃቄ ማድረግ እና እንቅፋቱን በግራ በኩል ብቻ ማለፍ አለበት።",
+            "text_amharic": "መሰናክሉን በስተግራ በኩል በማለፍ ማሽከርከር አለብዎት።",
             "is_correct": true,
             "audio_filename": "answer_933_q2_B.mp3"
           },
           {
-            "id": "C",
-            "text_amharic": "በሚቀጥለው መስቀለኛ መንገድ ወደ ቀኝ መታጠፍ አለበት።",
+            "id": "D",
+            "text_amharic": "ወደ ኋላ ተመልሰው ሌላ መንገድ መፈለግ አለብዎት።",
             "is_correct": false,
-            "audio_filename": "answer_933_q2_C.mp3"
+            "audio_filename": "answer_933_q2_D.mp3"
           },
           {
             "id": "A",
-            "text_amharic": "እንቅፋቱን በፍጥነት ለማለፍ ፍጥነት መጨመር አለበት።",
+            "text_amharic": "መሰናክሉን በስተቀኝ በኩል በማለፍ ማሽከርከር አለብዎት።",
             "is_correct": false,
             "audio_filename": "answer_933_q2_A.mp3"
+          },
+          {
+            "id": "C",
+            "text_amharic": "ወዲያውኑ ፍጥነትዎን ቀንሰው መኪናዎን ማቆም አለብዎት።",
+            "is_correct": false,
+            "audio_filename": "answer_933_q2_C.mp3"
           }
         ]
       },
       {
         "id": "933_q3",
-        "question_amharic": "ይህንን ምልክት ችላ ብሎ ወደ ቀኝ በኩል ለማለፍ መሞከር የሚያስከትለው ውጤት ምንድን ነው?",
+        "question_amharic": "የዚህ ምልክት የአቅጣጫ አመላካችነት በተመለከተ በጣም አስፈላጊው ደንብ ምንድነው?",
         "question_audio": "933_q3_question.mp3",
-        "explanation_correct_amharic": "እሰይ። አቤት እውቀት! ምልክቱ ወደ ግራ እንድንሄድ ስለሚያዝ፣ ወደ ቀኝ መሄድ እንቅፋቱን እንድንመታ እና አደጋ እንድናደርስ ያደርጋል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የትራፊክ ምልክቶችን ችላ ማለት ለራስ እና ለሌሎች አሽከርካሪዎች አደጋን ይፈጥራል።",
+        "explanation_correct_amharic": "ዋው በጣም ጥሩ። የዚህ ምልክት ዋና ዓላማ ጊዜያዊ መሰናክልን ማሳየት ሲሆን፣ ትክክለኛው የአሽከርካሪው አቅጣጫ የሚወሰነው ከእሱ ጋር በተገጠመው ተጨማሪ ቀስት ወይም ምልክት ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የአቅጣጫውን መመሪያ አለመከተል ወይም የተሳሳተ ግንዛቤ መያዝ አደገኛ ሁኔታዎችን ሊያስከትል ይችላል።",
         "explanation_correct_audio": "933_q3_correct.mp3",
         "explanation_wrong_audio": "933_q3_wrong.mp3",
         "answers": [
           {
-            "id": "A",
-            "text_amharic": "ጉዞውን የበለጠ ምቹ ያደርገዋል።",
-            "is_correct": false,
-            "audio_filename": "answer_933_q3_A.mp3"
-          },
-          {
             "id": "C",
-            "text_amharic": "ወደ መድረሻዎ በፍጥነት ይደርሳሉ።",
+            "text_amharic": "አሽከርካሪዎች የትኛውንም አቅጣጫ መምረጥ ይችላሉ።",
             "is_correct": false,
             "audio_filename": "answer_933_q3_C.mp3"
           },
           {
+            "id": "A",
+            "text_amharic": "ይህ ምልክት ሁልጊዜ አሽከርካሪዎች ወደ ግራ እንዲያልፉ ያዛል።",
+            "is_correct": false,
+            "audio_filename": "answer_933_q3_A.mp3"
+          },
+          {
             "id": "B",
-            "text_amharic": "እንቅፋቱን መምታት፣ አደጋ ማድረስ፣ መጎዳት ወይም የትራፊክ ቅጣት ሊያስከትል ይችላል።",
+            "text_amharic": "የአቅጣጫው አመላካችነት የሚወሰነው ከሰሌዳው ጋር በሚታየው ተጨማሪ ቀስት ወይም ምልክት ሲሆን፣ ይህም ሊለያይ ይችላል።",
             "is_correct": true,
             "audio_filename": "answer_933_q3_B.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "ጥንቃቄ እስካደረጉ ድረስ ምንም ልዩ ውጤት የለውም።",
+            "text_amharic": "ይህ ምልክት ምንም ዓይነት የአቅጣጫ መመሪያ አይሰጥም።",
             "is_correct": false,
             "audio_filename": "answer_933_q3_D.mp3"
           }

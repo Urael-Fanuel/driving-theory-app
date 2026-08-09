@@ -32295,76 +32295,76 @@
     "image_filename": "932.png",
     "video_filename": null,
     "name_hebrew": "932",
-    "name_amharic": "ይህ ምልክት በመንገድ ላይ የፖሊስ ወይም የትራፊክ ተቆጣጣሪ መመሪያዎችን መከተል እንዳለብዎት ያሳያል።",
-    "explanation_amharic": "ይህ ምልክት በመንገድ ላይ የፖሊስ መኮንን ወይም የትራፊክ ተቆጣጣሪ በሚኖርበት ጊዜ የእነሱን መመሪያዎች ብቻ መከተል እንዳለብን ያሳያል። የትራፊክ መብራቶች ወይም ሌሎች ምልክቶች ቢኖሩም እንኳ የሰውን መመሪያ ቅድሚያ መስጠት አለብን። አሽከርካሪው ይህንን ምልክት ሲያይ የፖሊስ ወይም የትራፊክ ተቆጣጣሪ የሚሰጡትን ማንኛውንም ምልክት ወይም ትዕዛዝ ወዲያውኑ መታዘዝ አለበት። የእነሱን መመሪያ አለመከተል የትራፊክ ፍሰትን ሊያስተጓጉል፣ አደጋ ሊያስከትል ወይም ቅጣት ሊያስከትል ይችላል።",
+    "name_amharic": "ብርቱካናማ ብልጭ ድርግም የሚል መብራት",
+    "explanation_amharic": "ይህ ብርቱካናማ ብልጭ ድርግም የሚል መብራት በመንገድ ላይ ጊዜያዊ የሥራ ቦታ መኖሩን የሚያመለክት የማስጠንቀቂያ ምልክት ነው። ይህ መብራት አሽከርካሪዎችን እና እግረኞችን ለማስጠንቀቅ፣ ለማሳወቅ እና ለመጠቆም ያገለግላል። አሽከርካሪዎች ይህንን ምልክት ሲያዩ ፍጥነታቸውን መቀነስ፣ ከፍተኛ ጥንቃቄ ማድረግ እና የመንገድ ላይ የሥራ ቦታ መመሪያዎችን መከተል አለባቸው፤ አለበለዚያ አደጋ ሊደርስ ወይም የትራፊክ ደንቦችን በመጣስ ቅጣት ሊጣልባቸው ይችላል።",
     "audio_name_filename": "932_name.mp3",
     "audio_explanation_filename": "932_explanation.mp3",
     "questions": [
       {
         "id": "932_q1",
-        "question_amharic": "ይህ የትራፊክ ምልክት ምን ማለት እንደሆነ በትክክል ይግለጹ።",
+        "question_amharic": "ይህ ብርቱካናማ ብልጭ ድርግም የሚል ምልክት በመንገድ ላይ ሲታይ ምን ማለት ነው?",
         "question_audio": "932_q1_question.mp3",
-        "explanation_correct_amharic": "ጎበዝ። ይህ ምልክት የፖሊስ ወይም የትራፊክ ተቆጣጣሪ መመሪያዎች ከሌሎች የትራፊክ ምልክቶች ሁሉ ቅድሚያ እንደሚሰጣቸው ያመለክታል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ መምረጥ የፖሊስን ትዕዛዝ ባለመታዘዝ የትራፊክ ህግን መጣስ እና ቅጣት ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። ይህ ምልክት በመንገድ ላይ ጊዜያዊ የሥራ ቦታ እንዳለ የሚያሳይ ሲሆን አሽከርካሪዎች ጥንቃቄ እንዲያደርጉ ያስጠነቅቃል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የምልክቱን ትክክለኛ ትርጉም አለማወቅ አሽከርካሪው ለሥራ ቦታው ዝግጁ እንዳይሆን በማድረግ አደጋ ሊያስከትል ይችላል።",
         "explanation_correct_audio": "932_q1_correct.mp3",
         "explanation_wrong_audio": "932_q1_wrong.mp3",
         "answers": [
           {
+            "id": "A",
+            "text_amharic": "በመንገዱ ላይ ቋሚ የትራፊክ መብራት መኖሩን ያሳያል።",
+            "is_correct": false,
+            "audio_filename": "answer_932_q1_A.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "በአቅራቢያው የፖሊስ ጣቢያ መኖሩን ያመለክታል።",
+            "is_correct": false,
+            "audio_filename": "answer_932_q1_D.mp3"
+          },
+          {
             "id": "C",
-            "text_amharic": "ወደፊት ትልቅ የትራፊክ መጨናነቅ እንዳለ ያስጠነቅቃል።",
+            "text_amharic": "አሽከርካሪዎች ፍጥነታቸውን እንዲጨምሩ ያበረታታል።",
             "is_correct": false,
             "audio_filename": "answer_932_q1_C.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "የፖሊስ መኮንን ወይም የትራፊክ ተቆጣጣሪ የሚሰጡትን መመሪያዎች መከተል እንዳለብዎት ያመለክታል።",
+            "text_amharic": "በመንገዱ ላይ ጊዜያዊ የሥራ ቦታ መኖሩን ያስጠነቅቃል።",
             "is_correct": true,
             "audio_filename": "answer_932_q1_B.mp3"
-          },
-          {
-            "id": "D",
-            "text_amharic": "የትራፊክ መብራቶችን ብቻ መታዘዝ እንዳለብዎት ያሳያል።",
-            "is_correct": false,
-            "audio_filename": "answer_932_q1_D.mp3"
-          },
-          {
-            "id": "A",
-            "text_amharic": "በመንገድ ላይ ምንም አይነት ልዩ ህግ እንደሌለ ያሳያል።",
-            "is_correct": false,
-            "audio_filename": "answer_932_q1_A.mp3"
           }
         ]
       },
       {
         "id": "932_q2",
-        "question_amharic": "ይህንን ምልክት አይተው የፖሊስ መኮንን በእጅ ምልክት እንዲቆሙ ሲያዝዎት ምን ማድረግ አለብዎት?",
+        "question_amharic": "ይህንን ብልጭ ድርግም የሚል ምልክት ያየ አሽከርካሪ ምን ማድረግ አለበት?",
         "question_audio": "932_q2_question.mp3",
-        "explanation_correct_amharic": "በጣም ጥሩ። የፖሊስ መኮንን ወይም የትራፊክ ተቆጣጣሪ የሚሰጡት መመሪያዎች ከሁሉም የትራፊክ ምልክቶችና መብራቶች በላይ ቅድሚያ አላቸው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የፖሊስን መመሪያ አለመታዘዝ አደጋ ሊያስከትል፣ የትራፊክ ፍሰትን ሊያስተጓጉል እና ህጋዊ ቅጣት ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት አሽከርካሪው ፍጥነቱን በመቀነስ እና ጥንቃቄ በማድረግ በሥራ ቦታው አካባቢ ያሉትን አደጋዎች መቀነስ ይችላል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ምልክቱን ችላ ማለት ወይም ፍጥነት መጨመር በሥራ ቦታው ላይ አደጋ ሊያስከትል ወይም የትራፊክ ደንቦችን መጣስ ሊሆን ይችላል።",
         "explanation_correct_audio": "932_q2_correct.mp3",
         "explanation_wrong_audio": "932_q2_wrong.mp3",
         "answers": [
           {
-            "id": "D",
-            "text_amharic": "በመንገድ ላይ ያሉትን ሌሎች ምልክቶች ብቻ መከተል አለብዎት።",
-            "is_correct": false,
-            "audio_filename": "answer_932_q2_D.mp3"
-          },
-          {
             "id": "C",
-            "text_amharic": "ሌሎች አሽከርካሪዎች ምን እንደሚያደርጉ ማየት አለብዎት።",
+            "text_amharic": "ተሽከርካሪውን አቁሞ የሥራ ቦታው እስኪያልቅ መጠበቅ አለበት።",
             "is_correct": false,
             "audio_filename": "answer_932_q2_C.mp3"
           },
           {
+            "id": "D",
+            "text_amharic": "ምልክቱን ችላ ብሎ እንደተለመደው ማሽከርከር አለበት።",
+            "is_correct": false,
+            "audio_filename": "answer_932_q2_D.mp3"
+          },
+          {
             "id": "B",
-            "text_amharic": "የፖሊስ መኮንኑን የእጅ ምልክት ወዲያውኑ በመታዘዝ ማቆም አለብዎት።",
+            "text_amharic": "ፍጥነቱን መቀነስ እና ከፍተኛ ጥንቃቄ ማድረግ አለበት።",
             "is_correct": true,
             "audio_filename": "answer_932_q2_B.mp3"
           },
           {
             "id": "A",
-            "text_amharic": "የትራፊክ መብራቱ አረንጓዴ እስኪሆን ድረስ መጠበቅ አለብዎት።",
+            "text_amharic": "ፍጥነቱን ጨምሮ በፍጥነት ማለፍ አለበት።",
             "is_correct": false,
             "audio_filename": "answer_932_q2_A.mp3"
           }
@@ -32372,36 +32372,36 @@
       },
       {
         "id": "932_q3",
-        "question_amharic": "ይህ ምልክት ባለበት ቦታ የፖሊስ መኮንን የሰጡትን መመሪያ ችላ ማለት ምን የሚያስከትል አደጋ አለው?",
+        "question_amharic": "የብርቱካናማው ብልጭ ድርግም የሚል መብራት ዋና ዓላማ ምንድን ነው እና የት ይገኛል?",
         "question_audio": "932_q3_question.mp3",
-        "explanation_correct_amharic": "ጎሽ! የፖሊስ ወይም የትራፊክ ተቆጣጣሪ መመሪያዎችን አለመከተል ከባድ የትራፊክ ጥሰት ሲሆን አደጋ እና ቅጣት ያስከትላል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የፖሊስን ትዕዛዝ ችላ ማለት የትራፊክ ህግን መጣስ ሲሆን ይህም ለራስዎ እና ለሌሎች አሽከርካሪዎች አደጋን ይፈጥራል።",
+        "explanation_correct_amharic": "ትክክል! ጥሩ ነው። ይህ ብልጭ ድርግም የሚል መብራት በጊዜያዊ የሥራ ቦታዎች ላይ አደጋዎችን ለመከላከል እና የትራፊክ ፍሰትን ለማስተዳደር ወሳኝ የማስጠንቀቂያ መሳሪያ ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የምልክቱን ትክክለኛ ዓላማ አለማወቅ አሽከርካሪው በሥራ ቦታው ላይ ለሚፈጠሩ አደጋዎች ተገቢውን ምላሽ እንዳይሰጥ ያደርገዋል ይህም አደጋ ሊያስከትል ይችላል።",
         "explanation_correct_audio": "932_q3_correct.mp3",
         "explanation_wrong_audio": "932_q3_wrong.mp3",
         "answers": [
           {
-            "id": "A",
-            "text_amharic": "ምንም አይነት አደጋ የለውም ምክንያቱም የፖሊስ መመሪያዎች ሁልጊዜ ግዴታ አይደሉም።",
-            "is_correct": false,
-            "audio_filename": "answer_932_q3_A.mp3"
+            "id": "B",
+            "text_amharic": "በጊዜያዊ የሥራ ቦታዎች ላይ አሽከርካሪዎችን እና እግረኞችን ለማስጠንቀቅ፣ ለማሳወቅ እና ለመጠቆም የሚያገለግል ነው።",
+            "is_correct": true,
+            "audio_filename": "answer_932_q3_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "ሌሎች አሽከርካሪዎች ብቻ ናቸው የሚቀጡት።",
+            "text_amharic": "አሽከርካሪዎች ያለ ምንም ጥንቃቄ እንዲያልፉ ለመፍቀድ የተጫነ ነው።",
             "is_correct": false,
             "audio_filename": "answer_932_q3_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "የፖሊስ መኮንኑ ማስጠንቀቂያ ብቻ ይሰጣል እንጂ አይቀጣም።",
+            "text_amharic": "በአደጋ ጊዜ የፖሊስ መኮንኖችን ለመጥራት የሚያገለግል ነው።",
             "is_correct": false,
             "audio_filename": "answer_932_q3_D.mp3"
           },
           {
-            "id": "B",
-            "text_amharic": "የትራፊክ ፍሰትን ሊያስተጓጉል፣ አደጋ ሊያስከትል እና የገንዘብ ቅጣት ሊያስከትል ይችላል።",
-            "is_correct": true,
-            "audio_filename": "answer_932_q3_B.mp3"
+            "id": "A",
+            "text_amharic": "የመንገድ ላይ የትራፊክ መብራቶችን ለመተካት የሚያገለግል ቋሚ ምልክት ነው።",
+            "is_correct": false,
+            "audio_filename": "answer_932_q3_A.mp3"
           }
         ]
       }
@@ -32414,111 +32414,111 @@
     "image_filename": "933.png",
     "video_filename": null,
     "name_hebrew": "933",
-    "name_amharic": "ይህ ምልክት በመንገድ ላይ እንቅፋት እንዳለ እና ወደ ግራ ማለፍ እንዳለብን ያመለክታል።",
-    "explanation_amharic": "ይህ ምልክት በመንገድ ላይ እንቅፋት፣ የመንገድ ክፍፍል ወይም የሥራ ቦታ መኖሩን የሚያመለክት ሲሆን አሽከርካሪዎች ወደ ግራ በኩል እንዲያልፉ ያዛል። ይህንን ምልክት ሲያዩ ፍጥነትዎን መቀነስ፣ ጥንቃቄ ማድረግ እና እንቅፋቱን በግራ በኩል በማለፍ መንዳት አለብዎት። ምልክቱን ችላ ማለት አደጋ፣ የትራፊክ ቅጣት ወይም የመኪና ጉዳት ሊያስከትል ይችላል።",
+    "name_amharic": "የሥራ ቦታ ግራ አቅጣጫ",
+    "explanation_amharic": "ይህ ምልክት በጊዜያዊ የሥራ ቦታ ላይ የሚገኝ የሚያበራ ተንቀሳቃሽ ሰሌዳ ነው። አሽከርካሪዎች በመንገዱ ላይ ያለውን እንቅፋት ወይም የሥራ ቦታ በግራ በኩል እንዲያልፉ ያሳያል። አሽከርካሪው ፍጥነቱን መቀነስ፣ ከፍተኛ ጥንቃቄ ማድረግ እና የተሰጠውን አቅጣጫ መከተል አለበት፤ አለበለዚያ አደጋ ሊደርስ ወይም ቅጣት ሊጣልበት ይችላል።",
     "audio_name_filename": "933_name.mp3",
     "audio_explanation_filename": "933_explanation.mp3",
     "questions": [
       {
         "id": "933_q1",
-        "question_amharic": "ይህ ምልክት በመንገድ ላይ ምን ያሳያል?",
+        "question_amharic": "ይህ የሚያበራ ተንቀሳቃሽ ምልክት በመንገድ ላይ ምን ያሳያል?",
         "question_audio": "933_q1_question.mp3",
-        "explanation_correct_amharic": "ዋው በጣም ጥሩ። ይህ ምልክት በመንገድ ላይ ያለን እንቅፋት በግራ በኩል በማለፍ እንድንሄድ የሚያዝ ትዕዛዝ ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ምልክቱን ተረድቶ ትክክለኛውን እርምጃ አለመውሰድ አደጋ ወይም የትራፊክ ቅጣት ያስከትላል።",
+        "explanation_correct_amharic": "ይህ ምልክት በጊዜያዊ የሥራ ቦታ ላይ ያለውን እንቅፋት በግራ በኩል ማለፍ እንዳለብን በግልጽ ያሳያል።",
+        "explanation_wrong_amharic": "የተሳሳተውን አቅጣጫ መከተል ወይም መንገዱ ዝግ ነው ብሎ ማሰብ አደጋ ሊያስከትል ይችላል።",
         "explanation_correct_audio": "933_q1_correct.mp3",
         "explanation_wrong_audio": "933_q1_wrong.mp3",
         "answers": [
           {
+            "id": "A",
+            "text_amharic": "መንገዱ ሙሉ በሙሉ ዝግ መሆኑን ያሳያል።",
+            "is_correct": false,
+            "audio_filename": "answer_933_q1_A.mp3"
+          },
+          {
             "id": "B",
-            "text_amharic": "በመንገድ ላይ እንቅፋት ወይም የመንገድ ክፍፍል እንዳለ እና በግራ በኩል ማለፍ እንዳለብዎት ያሳያል።",
+            "text_amharic": "በጊዜያዊ የሥራ ቦታ ላይ ያለውን እንቅፋት በግራ በኩል ማለፍ እንዳለብን ያሳያል።",
             "is_correct": true,
             "audio_filename": "answer_933_q1_B.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "እንቅፋቱን ከየትኛውም ወገን ማለፍ እንደሚችሉ ያሳያል።",
-            "is_correct": false,
-            "audio_filename": "answer_933_q1_D.mp3"
-          },
-          {
             "id": "C",
-            "text_amharic": "ወዲያውኑ ማቆም እንዳለብዎት ያሳያል።",
+            "text_amharic": "በቀኝ በኩል ብቻ ማለፍ እንደሚቻል ያሳያል።",
             "is_correct": false,
             "audio_filename": "answer_933_q1_C.mp3"
           },
           {
-            "id": "A",
-            "text_amharic": "ከፊት ለፊት አደገኛ መታጠፊያ እንዳለ ያሳያል።",
+            "id": "D",
+            "text_amharic": "በዚህ አካባቢ መኪና ማቆም እንደሚቻል ያሳያል።",
             "is_correct": false,
-            "audio_filename": "answer_933_q1_A.mp3"
+            "audio_filename": "answer_933_q1_D.mp3"
           }
         ]
       },
       {
         "id": "933_q2",
-        "question_amharic": "ይህንን ምልክት ሲያዩ አሽከርካሪው ምን ዓይነት እርምጃ መውሰድ አለበት?",
+        "question_amharic": "ይህንን ምልክት ሲያዩ አሽከርካሪው ምን ማድረግ አለበት?",
         "question_audio": "933_q2_question.mp3",
-        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። ምልክቱ እንቅፋቱን በግራ በኩል ብቻ እንድናልፍ እና ጥንቃቄ እንድናደርግ ያዛል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ እርምጃ መውሰድ ከአደጋ ወይም ከትራፊክ ህግ ጥሰት ጋር ያጋጥመናል።",
+        "explanation_correct_amharic": "አሽከርካሪው ፍጥነቱን በመቀነስ፣ ጥንቃቄ በማድረግ እና በግራ በኩል ያለውን አቅጣጫ በመከተል ደህንነቱን መጠበቅ አለበት።",
+        "explanation_wrong_amharic": "ፍጥነት መጨመር ወይም ምልክቱን ችላ ማለት ከባድ አደጋ ሊያስከትል ይችላል።",
         "explanation_correct_audio": "933_q2_correct.mp3",
         "explanation_wrong_audio": "933_q2_wrong.mp3",
         "answers": [
           {
-            "id": "D",
-            "text_amharic": "ቆሞ ተጨማሪ መመሪያዎችን መጠበቅ አለበት።",
+            "id": "A",
+            "text_amharic": "ፍጥነቱን ጨምሮ በፍጥነት ማለፍ አለበት።",
             "is_correct": false,
-            "audio_filename": "answer_933_q2_D.mp3"
+            "audio_filename": "answer_933_q2_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "ፍጥነቱን መቀነስ፣ ጥንቃቄ ማድረግ እና እንቅፋቱን በግራ በኩል ብቻ ማለፍ አለበት።",
+            "text_amharic": "ፍጥነቱን መቀነስ፣ ጥንቃቄ ማድረግ እና በተጠቀሰው የግራ አቅጣጫ መሄድ አለበት።",
             "is_correct": true,
             "audio_filename": "answer_933_q2_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "በሚቀጥለው መስቀለኛ መንገድ ወደ ቀኝ መታጠፍ አለበት።",
+            "text_amharic": "ምልክቱን ችላ ብሎ በቀጥታ መሄድ አለበት።",
             "is_correct": false,
             "audio_filename": "answer_933_q2_C.mp3"
           },
           {
-            "id": "A",
-            "text_amharic": "እንቅፋቱን በፍጥነት ለማለፍ ፍጥነት መጨመር አለበት።",
+            "id": "D",
+            "text_amharic": "መኪናውን አቁሞ እርዳታ መጠበቅ አለበት።",
             "is_correct": false,
-            "audio_filename": "answer_933_q2_A.mp3"
+            "audio_filename": "answer_933_q2_D.mp3"
           }
         ]
       },
       {
         "id": "933_q3",
-        "question_amharic": "ይህንን ምልክት ችላ ብሎ ወደ ቀኝ በኩል ለማለፍ መሞከር የሚያስከትለው ውጤት ምንድን ነው?",
+        "question_amharic": "ይህ ምልክት የሚያመለክተው ሁኔታ ምን ዓይነት ነው እና ካልተከተልነው ምን ሊከሰት ይችላል?",
         "question_audio": "933_q3_question.mp3",
-        "explanation_correct_amharic": "እሰይ። አቤት እውቀት! ምልክቱ ወደ ግራ እንድንሄድ ስለሚያዝ፣ ወደ ቀኝ መሄድ እንቅፋቱን እንድንመታ እና አደጋ እንድናደርስ ያደርጋል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የትራፊክ ምልክቶችን ችላ ማለት ለራስ እና ለሌሎች አሽከርካሪዎች አደጋን ይፈጥራል።",
+        "explanation_correct_amharic": "ምልክቱ ጊዜያዊ የሥራ ቦታን የሚያመለክት ሲሆን፣ መመሪያውን አለመከተል አደጋ ወይም ቅጣት ያስከትላል።",
+        "explanation_wrong_amharic": "ሁኔታውን ቋሚ ነው ብሎ ማሰብ ወይም አደጋ እንደሌለ ማመን የተሳሳተ ሲሆን ለከፋ ችግር ያጋልጣል።",
         "explanation_correct_audio": "933_q3_correct.mp3",
         "explanation_wrong_audio": "933_q3_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "ጉዞውን የበለጠ ምቹ ያደርገዋል።",
+            "text_amharic": "ቋሚ የመንገድ ለውጥ ሲሆን፣ ምንም አደጋ የለውም።",
             "is_correct": false,
             "audio_filename": "answer_933_q3_A.mp3"
           },
           {
-            "id": "C",
-            "text_amharic": "ወደ መድረሻዎ በፍጥነት ይደርሳሉ።",
-            "is_correct": false,
-            "audio_filename": "answer_933_q3_C.mp3"
-          },
-          {
             "id": "B",
-            "text_amharic": "እንቅፋቱን መምታት፣ አደጋ ማድረስ፣ መጎዳት ወይም የትራፊክ ቅጣት ሊያስከትል ይችላል።",
+            "text_amharic": "ጊዜያዊ የሥራ ቦታ ሁኔታ ሲሆን፣ ካልተከተልነው አደጋ ወይም ቅጣት ሊያስከትል ይችላል።",
             "is_correct": true,
             "audio_filename": "answer_933_q3_B.mp3"
           },
           {
+            "id": "C",
+            "text_amharic": "የመዝናኛ ቦታ ሲሆን፣ ፍጥነታችንን መጨመር አለብን።",
+            "is_correct": false,
+            "audio_filename": "answer_933_q3_C.mp3"
+          },
+          {
             "id": "D",
-            "text_amharic": "ጥንቃቄ እስካደረጉ ድረስ ምንም ልዩ ውጤት የለውም።",
+            "text_amharic": "የመንገድ ጥገና ባለመኖሩ ምክንያት የተለጠፈ ምልክት ሲሆን፣ ምንም ማድረግ አያስፈልግም።",
             "is_correct": false,
             "audio_filename": "answer_933_q3_D.mp3"
           }
