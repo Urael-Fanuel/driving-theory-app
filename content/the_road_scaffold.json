@@ -256,10 +256,76 @@
           "name_hebrew": "עקיפה בטוחה",
           "name_amharic": "ደህንነቱ የተጠበቀ ማለፍ",
           "icon": "↗️",
-          "explanation_amharic": "",
-          "narration_script": "",
-          "image_description": "",
-          "questions": []
+          "explanation_amharic": "አንድ ተሽከርካሪ ከፊትዎ እየነዳ ከሆነ እና እሱን አልፈው መሄድ ከፈለጉ፣ ወደ ግራ መስመር ይሻገራሉ፣ ከጎኑ ይነዳሉ፣ ከዚያም ከፊት ለፊቱ ወደ ቀኝ መስመር ይመለሳሉ። ይህ ድርጊት 'መቅደም' ይባላል።\n\nመቅደም ከሁሉም የመንዳት ተግባራት ውስጥ በጣም ውስብስብ እና አደገኛ ተግባር ነው። ስለዚህ፣ በእርግጥ አስፈላጊ ሲሆን ብቻ መከናወን አለበት፤ እርግጠኛ ካልሆኑ ወይም ጥርጣሬ ካለዎት በፍጹም መቅደም የለብዎትም።\n\nመቅደም ከመጀመርዎ በፊት የኋላ መመልከቻ መስታወቶችዎን እና የጎን መስታወቶችዎን በጥንቃቄ ያረጋግጡ። እንዲሁም ራስዎን ወደ ግራ በማዞር የማይታይ ቦታ መኖሩን ያረጋግጡ። ከፊት ያለው መንገድ በበቂ ሁኔታ ክፍት መሆኑን እና መቅደሙን በደህና ማጠናቀቅ እንደሚችሉ ያረጋግጡ። ከዚያም ወደ ግራ መስመር ለመሻገር ምልክት ይስጡ።\n\nወደ ግራ መስመር ሲገቡ ቀስ በቀስ እንጂ በድንገት አይግቡ። ከሌላው ተሽከርካሪ ጎን ለጎን ከሚያስፈልገው በላይ አይቆዩ። በቂ የጎን ርቀት ይጠብቁ እና በሚቀድሙበት ጊዜ ከተፈቀደው ፍጥነት በላይ በፍጹም ፍጥነት አይጨምሩ።\n\nያለፉትን ተሽከርካሪ ሁለቱን የፊት መብራቶች በውስጠኛው የኋላ መመልከቻ መስተዋትዎ ውስጥ ሲያዩ፣ ወደ ቀኝ በደህና መመለስ ይችላሉ። ወደ ቀኝ መስመር ከመመለስዎ በፊት ወደ ቀኝ ምልክት ይስጡ እና ራስዎን ወደ ቀኝ በማዞር የቀኝ በኩል ያለውን የማይታይ ቦታ ያረጋግጡ። ቀስ በቀስ ይመለሱ እና የቀደሙትን ተሽከርካሪ አይቁረጡ።\n\nመቅደም የሌለብዎት ሁኔታዎች አሉ። ታይነት ደካማ ሲሆን ወይም እይታዎ ሲታገድ፣ የእግረኛ ማቋረጫ አጠገብ፣ መስቀለኛ መንገድ ውስጥ ወይም አጠገብ፣ ያልተቋረጠ የመስመር መለያ ሲኖር፣ እና በቂ ቦታ ስለመኖሩ ጥርጣሬ ሲኖር በፍጹም አይቅደሙ።\n\nሌላ ተሽከርካሪ ሲቀድምዎ ወደ ቀኝ ይያዙ፣ የተረጋጋ ፍጥነት ይጠብቁ እና በፍጹም ፍጥነት አይጨምሩ። አንድ ተሽከርካሪ እርስዎን እየቀደመ እያለ ከፊት ለፊት የሚመጣ ተሽከርካሪ በድንገት ከታየ፣ በተቻለ መጠን ወደ ቀኝ ይሂዱ እና ፍጥነትዎን አይጨምሩ። ዋናው ህግ ይህ ነው፡ ደህንነቱ የተጠበቀ መሆኑን እርግጠኛ ካልሆኑ፣ አይቅደሙ።",
+          "narration_script": "አንድ ተሽከርካሪ ከፊትዎ እየነዳ ከሆነ እና እሱን አልፈው መሄድ ከፈለጉ፣ ወደ ግራ መስመር ይሻገራሉ፣ ከጎኑ ይነዳሉ፣ ከዚያም ከፊት ለፊቱ ወደ ቀኝ መስመር ይመለሳሉ። ይህ ድርጊት 'መቅደም' ይባላል።\n\nመቅደም ከሁሉም የመንዳት ተግባራት ውስጥ በጣም ውስብስብ እና አደገኛ ተግባር ነው። ስለዚህ፣ በእርግጥ አስፈላጊ ሲሆን ብቻ መከናወን አለበት፤ እርግጠኛ ካልሆኑ ወይም ጥርጣሬ ካለዎት በፍጹም መቅደም የለብዎትም።\n\nመቅደም ከመጀመርዎ በፊት የኋላ መመልከቻ መስታወቶችዎን እና የጎን መስታወቶችዎን በጥንቃቄ ያረጋግጡ። እንዲሁም ራስዎን ወደ ግራ በማዞር የማይታይ ቦታ መኖሩን ያረጋግጡ። ከፊት ያለው መንገድ በበቂ ሁኔታ ክፍት መሆኑን እና መቅደሙን በደህና ማጠናቀቅ እንደሚችሉ ያረጋግጡ። ከዚያም ወደ ግራ መስመር ለመሻገር ምልክት ይስጡ።\n\nወደ ግራ መስመር ሲገቡ ቀስ በቀስ እንጂ በድንገት አይግቡ። ከሌላው ተሽከርካሪ ጎን ለጎን ከሚያስፈልገው በላይ አይቆዩ። በቂ የጎን ርቀት ይጠብቁ እና በሚቀድሙበት ጊዜ ከተፈቀደው ፍጥነት በላይ በፍጹም ፍጥነት አይጨምሩ።\n\nያለፉትን ተሽከርካሪ ሁለቱን የፊት መብራቶች በውስጠኛው የኋላ መመልከቻ መስተዋትዎ ውስጥ ሲያዩ፣ ወደ ቀኝ በደህና መመለስ ይችላሉ። ወደ ቀኝ መስመር ከመመለስዎ በፊት ወደ ቀኝ ምልክት ይስጡ እና ራስዎን ወደ ቀኝ በማዞር የቀኝ በኩል ያለውን የማይታይ ቦታ ያረጋግጡ። ቀስ በቀስ ይመለሱ እና የቀደሙትን ተሽከርካሪ አይቁረጡ።\n\nመቅደም የሌለብዎት ሁኔታዎች አሉ። ታይነት ደካማ ሲሆን ወይም እይታዎ ሲታገድ፣ የእግረኛ ማቋረጫ አጠገብ፣ መስቀለኛ መንገድ ውስጥ ወይም አጠገብ፣ ያልተቋረጠ የመስመር መለያ ሲኖር፣ እና በቂ ቦታ ስለመኖሩ ጥርጣሬ ሲኖር በፍጹም አይቅደሙ።\n\nሌላ ተሽከርካሪ ሲቀድምዎ ወደ ቀኝ ይያዙ፣ የተረጋጋ ፍጥነት ይጠብቁ እና በፍጹም ፍጥነት አይጨምሩ። አንድ ተሽከርካሪ እርስዎን እየቀደመ እያለ ከፊት ለፊት የሚመጣ ተሽከርካሪ በድንገት ከታየ፣ በተቻለ መጠን ወደ ቀኝ ይሂዱ እና ፍጥነትዎን አይጨምሩ። ዋናው ህግ ይህ ነው፡ ደህንነቱ የተጠበቀ መሆኑን እርግጠኛ ካልሆኑ፣ አይቅደሙ።",
+          "image_description": "Photorealistic photo taken from the driver's point of view of a car following behind in the right lane of a two-lane road. The CLOSEST car in the frame, directly in front of the camera and nearest to the viewer, is the one actively overtaking: its body is angled diagonally, clearly straddling the dashed white lane divider, moving out of the right lane into the left lane, with its left rear turn signal lit up bright amber/orange and blinking (distinctly different in color from red brake lights). Further ahead, a second car is smaller, more distant, and stays entirely within the right lane, driving straight, being overtaken. Only these two cars. Two clearly separated lanes divided by a dashed white line, clear dry asphalt, daylight, open road, no oncoming traffic in sight.",
+          "questions": [
+            {
+              "question_amharic": "አንድ አሽከርካሪ መቅደም ከመጀመሩ በፊት ምን ማረጋገጥ እና ማድረግ አለበት?",
+              "answers": [
+                {
+                  "text_amharic": "የፊት መብራቶቹን ማብራት እና ፍጥነት መጨመር",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የኋላ መመልከቻ መስታወቶቹን እና የማይታይ ቦታውን ማረጋገጥ፣ ከፊት ያለው መንገድ ክፍት መሆኑን ማረጋገጥ እና ወደ ግራ ምልክት መስጠት",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ወደ ቀኝ መስመር መሻገር እና የጎን ርቀትን መቀነስ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የሬዲዮን ድምጽ ከፍ ማድረግ እና መስኮቶቹን መክፈት",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "ሌላ ተሽከርካሪ እርስዎን እየቀደመ እያለ ከፊት ለፊት የሚመጣ ተሽከርካሪ በድንገት ከታየ አሽከርካሪው ምን ማድረግ አለበት?",
+              "answers": [
+                {
+                  "text_amharic": "ፍጥነት መጨመር እና ወደ ግራ መሻገር",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "በተቻለ መጠን ወደ ቀኝ መሄድ እና ፍጥነት አለመጨመር",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "የፊት መብራቶቹን ማብራት እና መኪናውን ማቆም",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ምንም ነገር አለማድረግ እና ተሽከርካሪው እንዲያልፍ መጠበቅ",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "መቅደም ስለመቻል ለመወሰን በጣም አስፈላጊው ህግ ምንድነው?",
+              "answers": [
+                {
+                  "text_amharic": "በተቻለ ፍጥነት መቅደም",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ከሌሎች አሽከርካሪዎች ጋር የዓይን ግንኙነት መፍጠር",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የደህንነት ጥርጣሬ ካለ፣ አለመቅደም",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ሁልጊዜ ከቀኝ በኩል መቅደም",
+                  "is_correct": false
+                }
+              ]
+            }
+          ],
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_tr_l2_s2_narration_1786276023441.mp3",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/tr_l2_s2_image_1786287612653.jpg"
         }
       ]
     },
