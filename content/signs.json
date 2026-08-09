@@ -32533,113 +32533,113 @@
     "image_filename": "934.png",
     "video_filename": null,
     "name_hebrew": "934",
-    "name_amharic": "ይህ ምልክት ባቡር የሚያልፍበትን መንገድ ያለመከላከያ የሚያሳይ አደገኛ መስቀለኛ መንገድ መኖሩን ያመለክታል።",
-    "explanation_amharic": "ይህ ምልክት አሽከርካሪው ባቡር የሚያልፍበትን መንገድ ያለመከላከያ እንዲጠነቀቅ ያደርጋል። ባቡር ሲመጣ የሚዘጋ መከላከያ ወይም የትራፊክ መብራት የሌለበት ቦታ ስለሆነ፣ አሽከርካሪው ፍጥነቱን መቀነስ፣ በሁለቱም አቅጣጫ ባቡር መኖሩን ማየትና መስማት አለበት። ይህንን ምልክት ችላ ማለት ለከባድ አደጋ፣ ለሞት ወይም ለከፍተኛ የህግ ቅጣት ሊዳርግ ይችላል።",
+    "name_amharic": "መንገድ ዝግ ነው ምልክት",
+    "explanation_amharic": "ይህ የሚያብረቀርቅ ተንቀሳቃሽ ምልክት መንገዱ ለጊዜው ሙሉ በሙሉ ዝግ መሆኑን ያሳያል። አሽከርካሪዎች በዚህ መንገድ ወይም መስመር መቀጠል የለባቸውም፤ ይልቁንም ሌላ አማራጭ መንገድ መፈለግ እና መጠቀም አለባቸው። ይህንን ምልክት ችላ ማለት አደጋን ወይም የትራፊክ ቅጣትን ያስከትላል።",
     "audio_name_filename": "934_name.mp3",
     "audio_explanation_filename": "934_explanation.mp3",
     "questions": [
       {
         "id": "934_q1",
-        "question_amharic": "ይህ ምልክት በመንገድ ላይ ምን መኖሩን ያመለክታል?",
+        "question_amharic": "ይህ ምልክት ምን ማለት ነው?",
         "question_audio": "934_q1_question.mp3",
-        "explanation_correct_amharic": "ትክክل! ይህ ምልክት አሽከርካሪው ባቡር የሚያልፍበትን መንገድ ያለመከላከያ እንዲጠነቀቅ ያደርጋል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የምልክቱን ትርጉም አለማወቅ አሽከርካሪው ለከባድ አደጋ ሊጋለጥ ይችላል።",
+        "explanation_correct_amharic": "አሪፍ! ምልክቱ ይህ ምልክት መንገዱ ሙሉ በሙሉ ዝግ መሆኑን በግልጽ ያሳያል፤ ስለዚህ ማለፍ አይፈቀድም።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: መንገዱ ዝግ ሆኖ ሳለ ለማለፍ መሞከር ከባድ አደጋ ሊያስከትል ይችላል።",
         "explanation_correct_audio": "934_q1_correct.mp3",
         "explanation_wrong_audio": "934_q1_wrong.mp3",
         "answers": [
           {
-            "id": "C",
-            "text_amharic": "ከፊት ለፊት የግንባታ ቦታ አለ።",
-            "is_correct": false,
-            "audio_filename": "answer_934_q1_C.mp3"
-          },
-          {
             "id": "A",
-            "text_amharic": "ከፊት ለፊት የባቡር መከላከያ ያለው መስቀለኛ መንገድ አለ።",
+            "text_amharic": "መንገዱ ለጥገና ክፍት ነው ግን በጥንቃቄ መንዳት ያስፈልጋል።",
             "is_correct": false,
             "audio_filename": "answer_934_q1_A.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "ከፊት ለፊት የእግረኛ መሻገሪያ አለ።",
+            "id": "C",
+            "text_amharic": "ወደ ግራ ወይም ወደ ቀኝ መታጠፍ አለብዎት።",
             "is_correct": false,
-            "audio_filename": "answer_934_q1_D.mp3"
+            "audio_filename": "answer_934_q1_C.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "ከፊት ለፊት የባቡር መከላከያ የሌለው አደገኛ መስቀለኛ መንገድ አለ።",
+            "text_amharic": "መንገዱ ሙሉ በሙሉ ዝግ ነው እና ማለፍ አይቻልም።",
             "is_correct": true,
             "audio_filename": "answer_934_q1_B.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "በቀስታ መንዳት እና ለድንገተኛ አደጋ ዝግጁ መሆን አለብዎት።",
+            "is_correct": false,
+            "audio_filename": "answer_934_q1_D.mp3"
           }
         ]
       },
       {
         "id": "934_q2",
-        "question_amharic": "ይህን ምልክት ሲያዩ አሽከርካሪው ምን ማድረግ አለበት?",
+        "question_amharic": "ይህንን ምልክት ሲያዩ ምን ማድረግ አለብዎት?",
         "question_audio": "934_q2_question.mp3",
-        "explanation_correct_amharic": "ትክክል! ጥሩ ነው። ባቡር የሌለበትን ጊዜ በማረጋገጥ ብቻ በደህና ማለፍ ይቻላል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ትክክለኛውን እርምጃ አለመውሰድ በባቡር መስመር ላይ ለሞት የሚዳርግ አደጋ ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "ትክክል! ይህ ምልክት መንገዱ ሙሉ በሙሉ ዝግ ስለሆነ ወደፊት መቀጠል አይቻልም፤ ስለዚህ ሌላ መንገድ መፈለግ ግዴታ ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ዝግ በሆነ መንገድ ላይ ለመቀጠል መሞከር ወይም መጠበቅ የትራፊክ ፍሰትን ያደናቅፋል እንዲሁም አደጋን ይፈጥራል።",
         "explanation_correct_audio": "934_q2_correct.mp3",
         "explanation_wrong_audio": "934_q2_wrong.mp3",
         "answers": [
           {
-            "id": "B",
-            "text_amharic": "ፍጥነቱን መቀነስ፣ ባቡር መኖሩን በሁለቱም አቅጣጫ ማየትና መስማት፣ እንዲሁም ለመቆም ዝግጁ መሆን አለበት።",
-            "is_correct": true,
-            "audio_filename": "answer_934_q2_B.mp3"
-          },
-          {
             "id": "C",
-            "text_amharic": "ወዲያውኑ ቆሞ ከባንዲራ ያዥ ምልክት መጠበቅ አለበት።",
+            "text_amharic": "ለጥቂት ጊዜ ጠብቀው መንገዱ እስኪከፈት መጠበቅ አለብዎት።",
             "is_correct": false,
             "audio_filename": "answer_934_q2_C.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "ባቡሮች ሁልጊዜ ቅድሚያ ስለሚሰጡ በመደበኛ ፍጥነት መንዳት መቀጠል አለበት።",
-            "is_correct": false,
-            "audio_filename": "answer_934_q2_D.mp3"
+            "id": "B",
+            "text_amharic": "ወደፊት ከመሄድ ይልቅ ሌላ አማራጭ መንገድ መፈለግ አለብዎት።",
+            "is_correct": true,
+            "audio_filename": "answer_934_q2_B.mp3"
           },
           {
             "id": "A",
-            "text_amharic": "ባቡር ከመምጣቱ በፊት በፍጥነት ለማለፍ ፍጥነቱን መጨመር አለበት።",
+            "text_amharic": "ፍጥነትዎን ቀንሰው በጥንቃቄ ማሽከርከር ይችላሉ።",
             "is_correct": false,
             "audio_filename": "answer_934_q2_A.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "በቀኝ በኩል ያለውን መንገድ መጠቀም አለብዎት።",
+            "is_correct": false,
+            "audio_filename": "answer_934_q2_D.mp3"
           }
         ]
       },
       {
         "id": "934_q3",
-        "question_amharic": "ይህን ምልክት ችላ የማለት ዋናው አደጋ ምንድነው?",
+        "question_amharic": "ይህ የሚያብረቀርቅ ምልክት የሚያሳየው የመንገድ መዘጋት ምን ዓይነት ነው?",
         "question_audio": "934_q3_question.mp3",
-        "explanation_correct_amharic": "አሪፍ! ምልክቱ ይህ ምልክት ለሕይወት አስጊ የሆነ አደጋን ስለሚያመለክት ጥንቃቄ ማድረግ ግዴታ ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የምልክቱን ማስጠንቀቂያ ችላ ማለት ለከባድ አደጋ እና ለሕይወት መጥፋት ሊዳርግ ይችላል።",
+        "explanation_correct_amharic": "በጣም ጥሩ። ይህ ምልክት የሚያሳየው መዘጋት በስራ ቦታዎች ላይ የሚደረግ ጊዜያዊ እና ሙሉ የመንገድ መዘጋት ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የመንገዱን ሁኔታ በተሳሳተ መንገድ መረዳት አሽከርካሪውን አላስፈላጊ ወደሆነ አደጋ ወይም የትራፊክ ጥሰት ሊያመራ ይችላል።",
         "explanation_correct_audio": "934_q3_correct.mp3",
         "explanation_wrong_audio": "934_q3_wrong.mp3",
         "answers": [
           {
-            "id": "C",
-            "text_amharic": "መውጫ መንገድዎን ሊያመልጥዎ ይችላል።",
-            "is_correct": false,
-            "audio_filename": "answer_934_q3_C.mp3"
-          },
-          {
             "id": "B",
-            "text_amharic": "ከባቡር ጋር ከባድ አደጋ ሊያደርሱ፣ ጉዳት ሊደርስብዎ ወይም ሊሞቱ ይችላሉ።",
+            "text_amharic": "መዘጋቱ ጊዜያዊ ሲሆን መንገዱ ሙሉ በሙሉ ዝግ ነው።",
             "is_correct": true,
             "audio_filename": "answer_934_q3_B.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "አነስተኛ የገንዘብ ቅጣት ይጣልብዎታል።",
+            "text_amharic": "በምሽት ብቻ የሚዘጋ መንገድ ነው።",
             "is_correct": false,
             "audio_filename": "answer_934_q3_D.mp3"
           },
           {
             "id": "A",
-            "text_amharic": "የመኪና ማቆሚያ ቅጣት ሊያገኙ ይችላሉ።",
+            "text_amharic": "መዘጋቱ ቋሚ ነው እና መንገዱ በጭራሽ አይከፈትም።",
             "is_correct": false,
             "audio_filename": "answer_934_q3_A.mp3"
+          },
+          {
+            "id": "C",
+            "text_amharic": "መንገዱ ለከባድ መኪናዎች ብቻ ዝግ ነው።",
+            "is_correct": false,
+            "audio_filename": "answer_934_q3_C.mp3"
           }
         ]
       }
