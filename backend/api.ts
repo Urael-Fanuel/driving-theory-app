@@ -16,6 +16,10 @@ import * as mockData from './mockData';
 import vehicleKnowledgeScaffold from '../content/vehicle_knowledge_scaffold.json';
 import mindSafetyScaffold       from '../content/mind_safety_scaffold.json';
 import societyLawScaffold       from '../content/society_law_scaffold.json';
+import theRoadScaffold          from '../content/the_road_scaffold.json';
+import myVehicleScaffold        from '../content/my_vehicle_scaffold.json';
+import twoWheelersScaffold      from '../content/two_wheelers_scaffold.json';
+import basicsLicenseScaffold    from '../content/basics_license_scaffold.json';
 
 // ─── Config ───────────────────────────────────────────────────────────────────
 
@@ -210,26 +214,48 @@ function normalizeQuestion(q: DBQuestion): DBQuestion {
   };
 }
 
+// ─── Behavioral topics (local JSON — no Supabase needed) ─────────────────────
+
+/**
+ * Every behavioral topic and its scaffold. Single source of truth: the exam,
+ * the daily challenge, and the per-topic/per-level quizzes all read this map,
+ * so adding a topic here wires it into all of them at once.
+ */
+const BEHAVIORAL_SCAFFOLD_MAP: Record<string, any> = {
+  vehicle_knowledge: vehicleKnowledgeScaffold,
+  mind_safety:       mindSafetyScaffold,
+  society_law:       societyLawScaffold,
+  the_road:          theRoadScaffold,
+  my_vehicle:        myVehicleScaffold,
+  two_wheelers:      twoWheelersScaffold,
+  basics_license:    basicsLicenseScaffold,
+};
+
+/** Behavioral topic IDs — questions live in local JSON, not Supabase. */
+const BEHAVIORAL_TOPIC_IDS = Object.keys(BEHAVIORAL_SCAFFOLD_MAP);
+
 // ─── Behavioral exam questions (local JSON → DBQuestion format) ───────────────
 
 /** How many behavioral questions to include in each 30-question exam session */
 const BEHAVIORAL_EXAM_COUNT = 8;
 
+/** Daily challenge: 60% behavioral, 40% sign-based. */
+const DAILY_QUESTION_COUNT      = 10;
+const DAILY_BEHAVIORAL_FRACTION = 0.6;
+
 /**
  * Load behavioral questions from local scaffold JSON files and convert them to
  * the DBQuestion shape so the exam hooks can consume them without changes.
  *
- * Covered topics: vehicle_knowledge, mind_safety, society_law.
+ * Covers every topic in BEHAVIORAL_SCAFFOLD_MAP. Topics whose scaffold has no
+ * questions yet simply contribute nothing.
  * Questions have no sign_id (empty string) and no pre-recorded audio URLs —
  * Engine A's exam screen uses TTS for these, Engine B shows text only.
  */
 function loadBehavioralExamQuestions(): DBQuestion[] {
   const ANSWER_IDS = ['A', 'B', 'C', 'D'] as const;
-  const scaffolds = [
-    { topicId: 'vehicle_knowledge', data: vehicleKnowledgeScaffold as any },
-    { topicId: 'mind_safety',       data: mindSafetyScaffold       as any },
-    { topicId: 'society_law',       data: societyLawScaffold       as any },
-  ];
+  const scaffolds = Object.entries(BEHAVIORAL_SCAFFOLD_MAP)
+    .map(([topicId, data]) => ({ topicId, data }));
 
   const questions: DBQuestion[] = [];
 
@@ -266,18 +292,9 @@ function loadBehavioralExamQuestions(): DBQuestion[] {
   return questions;
 }
 
-/** Behavioral topic IDs — questions live in local JSON, not Supabase. */
-const BEHAVIORAL_TOPIC_IDS = ['vehicle_knowledge', 'mind_safety', 'society_law'];
-
-const BEHAVIORAL_SCAFFOLD_MAP: Record<string, any> = {
-  vehicle_knowledge: vehicleKnowledgeScaffold,
-  mind_safety:       mindSafetyScaffold,
-  society_law:       societyLawScaffold,
-};
-
 /**
  * Load questions for a behavioral topic (per-topic or per-level quiz).
- * @param topicId  — The behavioral topic ID (vehicle_knowledge, mind_safety, society_law)
+ * @param topicId  — Any behavioral topic ID from BEHAVIORAL_SCAFFOLD_MAP
  * @param levelId  — Optional: if provided, only returns questions from that level
  */
 function loadBehavioralTopicQuestions(topicId: string, levelId?: string): DBQuestion[] {
@@ -326,16 +343,23 @@ function loadBehavioralTopicQuestions(topicId: string, levelId?: string): DBQues
  * Fetch a random set of exam questions, proportionally distributed across topics.
  * Uses the get_random_questions stored procedure.
  *
- * Always includes ~8 behavioral questions (vehicle_knowledge, mind_safety,
- * society_law) drawn from local JSON files, so every topic in the app is
- * represented regardless of Supabase content.
+ * Behavioral questions are drawn from every topic in BEHAVIORAL_SCAFFOLD_MAP
+ * via local JSON files, so every topic in the app is represented regardless of
+ * Supabase content. The full exam takes BEHAVIORAL_EXAM_COUNT of them; the
+ * daily challenge passes its own quota so it can hold a 60/40 split.
+ *
+ * @param behavioralCount — how many behavioral questions to include.
+ *                          Defaults to the full exam's fixed quota.
  */
-export async function getRandomExamQuestions(count: number = 30): Promise<DBQuestion[]> {
+export async function getRandomExamQuestions(
+  count: number = 30,
+  behavioralCount: number = BEHAVIORAL_EXAM_COUNT,
+): Promise<DBQuestion[]> {
   // Only return questions with exactly 4 answers (3-answer questions are outdated)
   const onlyNew = (qs: DBQuestion[]) => qs.filter(q => q.answers.length >= 4);
 
   // ── Behavioral questions (always from local JSON) ────────────────────────────
-  const numBehavioral = Math.min(BEHAVIORAL_EXAM_COUNT, count);
+  const numBehavioral = Math.min(Math.max(0, behavioralCount), count);
   const behavioralQs  = loadBehavioralExamQuestions()
     .sort(() => Math.random() - 0.5)
     .slice(0, numBehavioral);
@@ -455,9 +479,12 @@ export async function getQuestionsByIds(ids: string[]): Promise<DBQuestion[]> {
  * Questions are filtered to those with 4 answers (the new format).
  */
 export async function getQuestionsByTopic(topicId: string, levelId?: string): Promise<DBQuestion[]> {
-  // Daily challenge — 10 random questions from all topics (sign + behavioral)
+  // Daily challenge — random questions from all topics, 60% behavioral / 40% signs
   if (topicId === 'daily') {
-    return getRandomExamQuestions(10);
+    return getRandomExamQuestions(
+      DAILY_QUESTION_COUNT,
+      Math.round(DAILY_QUESTION_COUNT * DAILY_BEHAVIORAL_FRACTION),
+    );
   }
 
   // Behavioral topics live in local JSON — no Supabase needed

@@ -336,7 +336,10 @@ export default function BehavioralSubtopicScreenA() {
   const enterQuestionsPhase = async () => {
     await soundRef.current?.unloadAsync().catch(() => {});
     soundRef.current = null;
-    setPhase('questions');
+    // A subtopic with no questions yet renders nothing in the 'questions' phase,
+    // and the back button lives inside that block — go straight to 'complete'
+    // instead of stranding the user on a blank screen. Mirrors Engine B.
+    setPhase(questions.length === 0 ? 'complete' : 'questions');
   };
 
   const handleStartQuiz = async () => {

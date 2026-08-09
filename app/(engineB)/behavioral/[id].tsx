@@ -41,6 +41,7 @@ interface Subtopic {
   name_amharic?: string;
   icon: string;
   image_url?: string;
+  questions?: unknown[];
 }
 
 interface Level {
@@ -73,6 +74,14 @@ const SCAFFOLD_MAP: Record<string, ScaffoldData> = {
   two_wheelers:      twoWheelersData      as ScaffoldData,
   basics_license:    basicsLicenseData    as ScaffoldData,
 };
+
+/**
+ * Subtopics that still have no content contribute no questions, and a quiz with
+ * zero questions leaves the quiz screen stuck on its loading state. Gate every
+ * quiz button on there actually being something to ask.
+ */
+const levelHasQuestions = (level: Level): boolean =>
+  (level.subtopics ?? []).some(s => (s.questions?.length ?? 0) > 0);
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
@@ -185,8 +194,8 @@ export default function BehavioralTopicScreenB() {
               </TouchableOpacity>
             ))}
 
-            {/* Level quiz button — only shown when there are 2+ subtopics */}
-            {item.subtopics.length >= 2 && (
+            {/* Level quiz button — needs 2+ subtopics AND real questions behind them */}
+            {item.subtopics.length >= 2 && levelHasQuestions(item) && (
               <TouchableOpacity
                 style={[styles.levelQuizBtn, { borderLeftColor: item.color }]}
                 onPress={() => router.push({
@@ -240,14 +249,16 @@ export default function BehavioralTopicScreenB() {
         showsVerticalScrollIndicator={false}
         ListFooterComponent={
           <View style={styles.footerWrapper}>
-            <TouchableOpacity
-              style={styles.quizButton}
-              onPress={() => router.push(`/(engineB)/topic-quiz/${data.topicId}` as any)}
-              activeOpacity={0.85}
-            >
-              <Text style={styles.quizButtonIcon}>📝</Text>
-              <Text style={styles.quizButtonText}>የርዕሰ ጉዳዩ ፈተና</Text>
-            </TouchableOpacity>
+            {data.levels.some(levelHasQuestions) && (
+              <TouchableOpacity
+                style={styles.quizButton}
+                onPress={() => router.push(`/(engineB)/topic-quiz/${data.topicId}` as any)}
+                activeOpacity={0.85}
+              >
+                <Text style={styles.quizButtonIcon}>📝</Text>
+                <Text style={styles.quizButtonText}>የርዕሰ ጉዳዩ ፈተና</Text>
+              </TouchableOpacity>
+            )}
             <View style={{ height: 16 }} />
           </View>
         }

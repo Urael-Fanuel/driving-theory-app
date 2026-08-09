@@ -27,13 +27,31 @@ export const BEHAVIORAL_LEVEL_ICON_MAP: Record<string, string> = {
   // society_law
   sl_l1: 'walk',
   sl_l2: 'police-badge-outline',
+  // the_road
+  tr_l1: 'city',
+  tr_l2: 'road-variant',
+  tr_l3: 'weather-pouring',
+  // my_vehicle
+  mv_l1: 'car-brake-alert',
+  mv_l2: 'parking',
+  mv_l3: 'account-group',
+  // two_wheelers
+  tw_l1: 'motorbike',
+  tw_l2: 'motorbike-electric',
+  // basics_license
+  bl_l1: 'card-account-details-outline',
+  bl_l2: 'medical-bag',
 };
 
-// ── Subtopic count for behavioral topics (no sign_count in DB) ────────────────
+// ── Level count for behavioral topics (no sign_count in DB) ───────────────────
 export const TOPIC_SUBTOPIC_COUNT: Record<string, number> = {
   vehicle_knowledge: 8,
   mind_safety:       4,
   society_law:       2,
+  the_road:          3,
+  my_vehicle:        3,
+  two_wheelers:      2,
+  basics_license:    2,
 };
 
 // ── Primary color of each topic's icon (used for count badge) ─────────────────
