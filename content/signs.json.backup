@@ -32057,113 +32057,113 @@
     "image_filename": "930.png",
     "video_filename": null,
     "name_hebrew": "930",
-    "name_amharic": "ይህ ምልክት በመንገድ ላይ ጊዜያዊ እንቅፋት ወይም አደጋ መኖሩን ያመለክታል።",
-    "explanation_amharic": "ይህ ምልክት በመንገድ ላይ ጊዜያዊ እንቅፋት፣ የሥራ ቦታ ወይም አደጋ መኖሩን ያመለክታል። አሽከርካሪው ይህንን ምልክት ሲያይ ፍጥነቱን መቀነስ፣ ከፍተኛ ጥንቃቄ ማድረግ እና ሌሎች የመንገድ ምልክቶችን ወይም የሰራተኞችን መመሪያ መከተል አለበት። ይህንን ምልክት ችላ ማለት አደጋን፣ የትራፊክ ቅጣትን ወይም ከባድ ጉዳትን ሊያስከትል ይችላል።",
+    "name_amharic": "የመንገድ ዳር መሪ ምሰሶዎች",
+    "explanation_amharic": "ይህ ምልክት በመንገድ ዳር ላይ የሚገኙ ብርቱካናማና ጥቁር ሰንሰለታማ መስመሮች ያላቸው ጊዜያዊ መሪ ምሰሶዎችን ያሳያል። እነዚህ ምሰሶዎች በመንገድ ላይ ባሉ የሥራ ቦታዎች ወይም እንቅፋቶች ዙሪያ ደህንነቱ የተጠበቀውን የመንዳት መንገድ ለማሳየት ያገለግላሉ፤ መስመሮቹም ወደ ክፍት የመንገድ መስመር ያመለክታሉ። አሽከርካሪው ይህንን ምልክት ሲያይ ፍጥነቱን መቀነስ፣ የመስመሮቹን አቅጣጫ በመከተል በጥንቃቄ መንዳት እና አደጋን ማስወገድ አለበት።",
     "audio_name_filename": "930_name.mp3",
     "audio_explanation_filename": "930_explanation.mp3",
     "questions": [
       {
         "id": "930_q1",
-        "question_amharic": "ይህ ምልክት በመንገድ ላይ ምን ያመለክታል?",
+        "question_amharic": "ይህንን የመንገድ ዳር መሪ ምሰሶ ምልክት ሲያዩ ምን ማድረግ አለብዎት?",
         "question_audio": "930_q1_question.mp3",
-        "explanation_correct_amharic": "ዋው በጣም ጥሩ። ይህ ምልክት በመንገድ ላይ ለጊዜው የተፈጠረን እንቅፋት ወይም አደጋ ለማመልከት ያገለግላል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ መምረጥ አሽከርካሪው ለአደጋ እንዲጋለጥ ወይም የትራፊክ ደንቦችን እንዲጥስ ያደርገዋል።",
+        "explanation_correct_amharic": "በጣም ጥሩ። ምልክቱ በመንገድ ላይ ጊዜያዊ እንቅፋት ወይም የሥራ ቦታ እንዳለ ስለሚያመለክት ፍጥነትን በመቀነስ እና የመስመሮቹን አቅጣጫ በመከተል በጥንቃቄ ማሽከርከር ደህንነቱ የተጠበቀ ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ፍጥነት መጨመር፣ በድንገት ማቆም ወይም በመንገድ ዳር መቆም አደጋ ሊያስከትል ወይም የትራፊክ ፍሰትን ሊያስተጓጉል ይችላል።",
         "explanation_correct_audio": "930_q1_correct.mp3",
         "explanation_wrong_audio": "930_q1_wrong.mp3",
         "answers": [
           {
-            "id": "C",
-            "text_amharic": "በዝናብ ምክንያት መንገዱ የሚያዳልጥ ነው።",
-            "is_correct": false,
-            "audio_filename": "answer_930_q1_C.mp3"
-          },
-          {
             "id": "D",
-            "text_amharic": "የእግረኛ መሻገሪያ እየቀረበ ነው።",
+            "text_amharic": "የመንገድ ዳር ላይ ቆመው ሌሎች ተሽከርካሪዎች እንዲያልፉ መፍቀድ አለብዎት።",
             "is_correct": false,
             "audio_filename": "answer_930_q1_D.mp3"
           },
           {
+            "id": "B",
+            "text_amharic": "ፍጥነትዎን መቀነስ እና የመስመሮቹን አቅጣጫ በመከተል በጥንቃቄ መንዳት አለብዎት።",
+            "is_correct": true,
+            "audio_filename": "answer_930_q1_B.mp3"
+          },
+          {
             "id": "A",
-            "text_amharic": "ከፊት ለፊት ቋሚ የመንገድ መዘጋት አለ።",
+            "text_amharic": "ፍጥነትዎን መጨመር እና በፍጥነት ማለፍ አለብዎት።",
             "is_correct": false,
             "audio_filename": "answer_930_q1_A.mp3"
           },
           {
-            "id": "B",
-            "text_amharic": "በመንገድ ላይ ጊዜያዊ እንቅፋት ወይም አደጋ አለ።",
-            "is_correct": true,
-            "audio_filename": "answer_930_q1_B.mp3"
+            "id": "C",
+            "text_amharic": "ወዲያውኑ ማቆም እና እርዳታ መጠበቅ አለብዎት።",
+            "is_correct": false,
+            "audio_filename": "answer_930_q1_C.mp3"
           }
         ]
       },
       {
         "id": "930_q2",
-        "question_amharic": "ይህንን ምልክት ሲያዩ አሽከርካሪው ምን ማድረግ አለበት?",
+        "question_amharic": "በእነዚህ መሪ ምሰሶዎች ላይ ያሉት ብርቱካናማና ጥቁር ሰንሰለታማ መስመሮች ወደ የትኛው አቅጣጫ ይጠቁማሉ እና ምን ያሳያሉ?",
         "question_audio": "930_q2_question.mp3",
-        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። ፍጥነት መቀነስ እና ጥንቃቄ ማድረግ በመንገድ ላይ ያለውን አደጋ በሰላም ለማለፍ ወሳኝ ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ እርምጃ መውሰድ አደጋን፣ የትራፊክ ቅጣትን ወይም ከባድ ጉዳትን ሊያስከትል ይችላል።",
+        "explanation_correct_amharic": "ትክክል! ጥሩ ነው። የምልክቱ ዓላማ አሽከርካሪዎችን በጊዜያዊ እንቅፋቶች ዙሪያ ደህንነቱ የተጠበቀውን መንገድ ማሳየት ሲሆን፣ መስመሮቹም ወደ ክፍት የመንገድ መስመር ያመለክታሉ።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የመስመሮቹን ትክክለኛ ትርጉም አለመረዳት አሽከርካሪው ወደ አደገኛ ቦታ እንዲገባ ወይም የትራፊክ ደንቦችን እንዲጥስ ሊያደርግ ይችላል።",
         "explanation_correct_audio": "930_q2_correct.mp3",
         "explanation_wrong_audio": "930_q2_wrong.mp3",
         "answers": [
           {
-            "id": "B",
-            "text_amharic": "ፍጥነቱን መቀነስ፣ ጥንቃቄ ማድረግ እና ተጨማሪ መመሪያዎችን መከተል አለበት።",
-            "is_correct": true,
-            "audio_filename": "answer_930_q2_B.mp3"
-          },
-          {
-            "id": "C",
-            "text_amharic": "ምልክቱን ችላ ብሎ እንደተለመደው ማሽከርከር አለበት።",
-            "is_correct": false,
-            "audio_filename": "answer_930_q2_C.mp3"
-          },
-          {
             "id": "D",
-            "text_amharic": "በመንገዱ መካከል ወዲያውኑ ማቆም አለበት።",
+            "text_amharic": "መስመሮቹ ወደ ሰማይ በመጠቆም በመንገዱ ላይ ምንም አይነት አደጋ እንደሌለ ያረጋግጣሉ።",
             "is_correct": false,
             "audio_filename": "answer_930_q2_D.mp3"
           },
           {
             "id": "A",
-            "text_amharic": "እንቅፋቱን በፍጥነት ለማለፍ ፍጥነቱን መጨመር አለበት።",
+            "text_amharic": "መስመሮቹ ወደ መንገዱ ስፋት በመጠቆም የመንገዱን ርዝመት ያሳያሉ።",
             "is_correct": false,
             "audio_filename": "answer_930_q2_A.mp3"
+          },
+          {
+            "id": "C",
+            "text_amharic": "መስመሮቹ ወደ መንገዱ ዳር በመጠቆም መኪና ማቆም እንደሚፈቀድ ያሳያሉ።",
+            "is_correct": false,
+            "audio_filename": "answer_930_q2_C.mp3"
+          },
+          {
+            "id": "B",
+            "text_amharic": "መስመሮቹ ወደ ክፍት የመንገድ መስመር በመጠቆም ደህንነቱ የተጠበቀውን የመንዳት መንገድ ያሳያሉ።",
+            "is_correct": true,
+            "audio_filename": "answer_930_q2_B.mp3"
           }
         ]
       },
       {
         "id": "930_q3",
-        "question_amharic": "ይህንን ምልክት ችላ የማለት ሊከሰት የሚችል ውጤት ምንድን ነው?",
+        "question_amharic": "እነዚህ መሪ ምሰሶዎች በመንገድ ላይ የሚቀመጡበት ዋናው ዓላማ ምንድን ነው?",
         "question_audio": "930_q3_question.mp3",
-        "explanation_correct_amharic": "እሰይ። አቤት እውቀት! ይህንን ምልክት ችላ ማለት አደጋን ወይም የህግ ጥሰትን ሊያስከትል ይችላል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተሳሳተ መልስ መምረጥ አሽከርካሪው ለአደጋ እንዲጋለጥ ወይም የትራፊክ ደንቦችን እንዲጥስ ያደርገዋል።",
+        "explanation_correct_amharic": "አሪፍ! ምልክቱ እነዚህ ምሰሶዎች በመንገድ ላይ ጊዜያዊ ለውጦች ወይም እንቅፋቶች ሲኖሩ አሽከርካሪዎች ደህንነቱ የተጠበቀውን መንገድ እንዲከተሉ ለመርዳት ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የምልክቱን ትክክለኛ ዓላማ አለመረዳት አሽከርካሪው አደገኛ አካባቢ ውስጥ እንዲገባ ወይም አደጋ እንዲያጋጥመው ሊያደርግ ይችላል።",
         "explanation_correct_audio": "930_q3_correct.mp3",
         "explanation_wrong_audio": "930_q3_wrong.mp3",
         "answers": [
           {
-            "id": "C",
-            "text_amharic": "መንገዱ በራሱ ይጸዳል።",
+            "id": "A",
+            "text_amharic": "የመንገዱን ውበት ለመጨመር እና ለማስዋብ ነው።",
             "is_correct": false,
-            "audio_filename": "answer_930_q3_C.mp3"
-          },
-          {
-            "id": "B",
-            "text_amharic": "አደጋ ሊያስከትሉ ወይም የትራፊክ ቅጣት ሊቀጡ ይችላሉ።",
-            "is_correct": true,
-            "audio_filename": "answer_930_q3_B.mp3"
+            "audio_filename": "answer_930_q3_A.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "ለመቀጠል ልዩ ፈቃድ ይሰጥዎታል።",
+            "text_amharic": "በመንገድ ላይ ለዘለቄታው የመንገድ መስመሮችን ለመለየት ነው።",
             "is_correct": false,
             "audio_filename": "answer_930_q3_D.mp3"
           },
           {
-            "id": "A",
-            "text_amharic": "ወደ መድረሻዎ በፍጥነት ይደርሳሉ።",
+            "id": "B",
+            "text_amharic": "በመንገድ ላይ ባሉ ጊዜያዊ የሥራ ቦታዎች ወይም እንቅፋቶች ዙሪያ አሽከርካሪዎችን በደህና ለመምራት ነው።",
+            "is_correct": true,
+            "audio_filename": "answer_930_q3_B.mp3"
+          },
+          {
+            "id": "C",
+            "text_amharic": "አሽከርካሪዎች ፍጥነታቸውን እንዲጨምሩ ለማበረታታት ነው።",
             "is_correct": false,
-            "audio_filename": "answer_930_q3_A.mp3"
+            "audio_filename": "answer_930_q3_C.mp3"
           }
         ]
       }
