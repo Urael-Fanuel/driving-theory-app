@@ -180,10 +180,76 @@
           "name_hebrew": "ביטוח חובה",
           "name_amharic": "የግዴታ ኢንሹራንስ",
           "icon": "📝",
-          "explanation_amharic": "",
-          "narration_script": "",
-          "image_description": "",
-          "questions": []
+          "explanation_amharic": "የግዴታ ኢንሹራንስ ማለት አብዛኛዎቹ ሀገራት አንድ አሽከርካሪ በመንገድ ላይ ተሽከርካሪ በሚያሽከረክሩበት ጊዜ እንዲኖረው የሚጠይቁት የኢንሹራንስ አይነት ነው። ይህ ኢንሹራንስ ያለው አሽከርካሪውን ሳይሆን ሌሎች ሰዎችን ለመጠበቅ ያለ ነው።\n\nአንድ አሽከርካሪ አደጋ ሲያደርስ፣ የሚጎዱት ሰዎች ወይም ንብረታቸው የሚጎዳባቸው ተጎጂዎች ይባላሉ። የግዴታ ኢንሹራንስ ለእነዚህ ተጎጂዎች የሚደርሰውን ጉዳት ይከፍላል። ይህም ከተጎዱ የህክምና ወጪያቸውን፣ እንዲሁም የተሽከርካሪያቸው ወይም የንብረታቸው ጥገና ወይም ምትክ ወጪን ያጠቃልላል።\n\nየግዴታ ኢንሹራንስ ከሌለ፣ አደጋ ያደረሰ አሽከርካሪ ይህን ሁሉ የተጎጂዎችን ጉዳት ከራሱ ኪስ መክፈል ይኖርበታል። እነዚህ ወጪዎች ደግሞ በተለይ አንድ ሰው ከባድ ጉዳት ከደረሰበት እጅግ በጣም ከፍተኛ ሊሆን ይችላል። አብዛኛው ሰው እንዲህ ያለውን ወጪ በራሱ መክፈል አይችልም።\n\nበዚህ ምክንያት፣ አብዛኛዎቹ ሀገራት የግዴታ ኢንሹራንስን ህጋዊ ግዴታ ያደርጉታል። ትክክለኛ የግዴታ ኢንሹራንስ ሳይኖር ተሽከርካሪ ማሽከርከር ህገወጥ ነው። ያለ ኢንሹራንስ አደጋ ካደረሱ፣ ከባድ ህጋዊና የገንዘብ ችግር ሊገጥምዎት ይችላል። ተጎጂዎችም የሚያስፈልጋቸውን እርዳታና ካሳ ላያገኙ ይችላሉ።\n\nአንድ አሽከርካሪ ሁልጊዜ የግዴታ ኢንሹራንሱ ትክክለኛና ወቅታዊ መሆኑን ማረጋገጥ አለበት። እንዲሁም ማስረጃውን ከሌሎች አስፈላጊ ሰነዶቹ ጋር በተሽከርካሪው ውስጥ ማስቀመጥ ይኖርበታል።",
+          "narration_script": "የግዴታ ኢንሹራንስ ማለት አብዛኛዎቹ ሀገራት አንድ አሽከርካሪ በመንገድ ላይ ተሽከርካሪ በሚያሽከረክሩበት ጊዜ እንዲኖረው የሚጠይቁት የኢንሹራንስ አይነት ነው። ይህ ኢንሹራንስ ያለው አሽከርካሪውን ሳይሆን ሌሎች ሰዎችን ለመጠበቅ ያለ ነው።\n\nአንድ አሽከርካሪ አደጋ ሲያደርስ፣ የሚጎዱት ሰዎች ወይም ንብረታቸው የሚጎዳባቸው ተጎጂዎች ይባላሉ። የግዴታ ኢንሹራንስ ለእነዚህ ተጎጂዎች የሚደርሰውን ጉዳት ይከፍላል። ይህም ከተጎዱ የህክምና ወጪያቸውን፣ እንዲሁም የተሽከርካሪያቸው ወይም የንብረታቸው ጥገና ወይም ምትክ ወጪን ያጠቃልላል።\n\nየግዴታ ኢንሹራንስ ከሌለ፣ አደጋ ያደረሰ አሽከርካሪ ይህን ሁሉ የተጎጂዎችን ጉዳት ከራሱ ኪስ መክፈል ይኖርበታል። እነዚህ ወጪዎች ደግሞ በተለይ አንድ ሰው ከባድ ጉዳት ከደረሰበት እጅግ በጣም ከፍተኛ ሊሆን ይችላል። አብዛኛው ሰው እንዲህ ያለውን ወጪ በራሱ መክፈል አይችልም።\n\nበዚህ ምክንያት፣ አብዛኛዎቹ ሀገራት የግዴታ ኢንሹራንስን ህጋዊ ግዴታ ያደርጉታል። ትክክለኛ የግዴታ ኢንሹራንስ ሳይኖር ተሽከርካሪ ማሽከርከር ህገወጥ ነው። ያለ ኢንሹራንስ አደጋ ካደረሱ፣ ከባድ ህጋዊና የገንዘብ ችግር ሊገጥምዎት ይችላል። ተጎጂዎችም የሚያስፈልጋቸውን እርዳታና ካሳ ላያገኙ ይችላሉ።\n\nአንድ አሽከርካሪ ሁልጊዜ የግዴታ ኢንሹራንሱ ትክክለኛና ወቅታዊ መሆኑን ማረጋገጥ አለበት። እንዲሁም ማስረጃውን ከሌሎች አስፈላጊ ሰነዶቹ ጋር በተሽከርካሪው ውስጥ ማስቀመጥ ይኖርበታል።",
+          "image_description": "A photorealistic photo of a hand with Ethiopian/East African brown skin tone holding an official-looking insurance certificate document. The document has a formal structured layout with a header area, printed lines of text, a table or grid section, and an official stamp or seal in the corner, giving it the clear visual appearance of a real insurance certificate — but the text itself is blurred, small, or stylized so it is not legible or readable, and there is no real or invented company name, logo, or brand visible. The hand is standing next to a parked car with the vehicle visible in the background. Daylight, ordinary street setting. Realistic photography style, no faces, no license plates.",
+          "questions": [
+            {
+              "question_amharic": "የግዴታ ኢንሹራንስ በዋናነት የሚጠብቀው ማንን ነው?",
+              "answers": [
+                {
+                  "text_amharic": "የአሽከርካሪውን ተሽከርካሪ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "አደጋ የደረሰበትን አሽከርካሪ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ሌሎች ሰዎችን፣ ማለትም በአሽከርካሪው አደጋ የተጎዱትን።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "የመንግስትን ንብረት።",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "የግዴታ ኢንሹራንስ ሳይኖረው አደጋ ያደረሰ አሽከርካሪ ምን ሊገጥመው ይችላል?",
+              "answers": [
+                {
+                  "text_amharic": "ምንም አይነት ችግር አይገጥማቸውም።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "መንግስት ወጪውን ይሸፍንላቸዋል።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ለተጎጂዎች የሚደርሰውን ጉዳት በሙሉ ከራሳቸው ኪስ መክፈል ይኖርባቸዋል፣ ይህም እጅግ ከፍተኛ ሊሆን ይችላል።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ተሽከርካሪያቸው ወዲያውኑ ይሸጣል።",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "አንድ አሽከርካሪ የግዴታ ኢንሹራንስን በተመለከተ ሁልጊዜ ምን ማረጋገጥ አለበት?",
+              "answers": [
+                {
+                  "text_amharic": "ኢንሹራንሱ ጊዜው ያለፈበት መሆኑን።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ኢንሹራንሱ ትክክለኛና ወቅታዊ መሆኑን እንዲሁም ማስረጃውን በተሽከርካሪው ውስጥ ማስቀመጥ።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ኢንሹራንስ መኖሩን ለፖሊስ ብቻ ማሳወቅ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ኢንሹራንስ መግዛት የግል ምርጫ መሆኑን።",
+                  "is_correct": false
+                }
+              ]
+            }
+          ],
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_bl_l2_s2_narration_1786463555664.mp3",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/bl_l2_s2_image_1786464019511.jpg"
         }
       ]
     }
