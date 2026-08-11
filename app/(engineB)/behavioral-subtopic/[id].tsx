@@ -35,8 +35,9 @@ import {
   SafeAreaView,
   ScrollView,
   Platform,
+  BackHandler,
 } from 'react-native';
-import { useLocalSearchParams, useRouter } from 'expo-router';
+import { useLocalSearchParams, useRouter, useFocusEffect } from 'expo-router';
 import * as Haptics from 'expo-haptics';
 import { Colors } from '../../../constants/colors';
 import { Typography } from '../../../constants/typography';
@@ -166,6 +167,33 @@ export default function BehavioralSubtopicScreenB() {
     };
   }, []);
 
+  // ── Handlers ──────────────────────────────────────────────────────────────────
+  // Declared BEFORE the 404 early-return so the hooks below always run in the
+  // same order on every render (React rules-of-hooks).
+
+  const handleBack = useCallback(async () => {
+    ttsSpeakingRef.current = false;   // cancel the read-aloud sequence, not just the current clip
+    setTtsSpeaking(false);
+    await stopAudio();
+    await stopTTS().catch(() => {});
+    router.back();
+  }, [stopAudio, router]);
+
+  // Android hardware back button must stop the audio too, exactly like the
+  // in-app ← button. Without this the screen simply unmounts while the
+  // narration keeps playing: the useAudio sound lives in a module-level
+  // singleton that deliberately survives unmount (another screen may own it),
+  // and the unmount cleanup above only stops TTS. Mirrors Engine A.
+  useFocusEffect(
+    useCallback(() => {
+      const sub = BackHandler.addEventListener('hardwareBackPress', () => {
+        handleBack();
+        return true;   // we handled it — don't let the default pop run
+      });
+      return () => sub.remove();
+    }, [handleBack])
+  );
+
   // ── 404 fallback ──────────────────────────────────────────────────────────────
   if (!subtopic || !level) {
     return (
@@ -179,16 +207,6 @@ export default function BehavioralSubtopicScreenB() {
       </SafeAreaView>
     );
   }
-
-  // ── Handlers ──────────────────────────────────────────────────────────────────
-
-  const handleBack = async () => {
-    ttsSpeakingRef.current = false;   // cancel the read-aloud sequence, not just the current clip
-    setTtsSpeaking(false);
-    await stopAudio();
-    await stopTTS().catch(() => {});
-    router.back();
-  };
 
   const handleStartQuiz = async () => {
     await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
@@ -297,8 +315,15 @@ export default function BehavioralSubtopicScreenB() {
           contentContainerStyle={styles.explainContent}
           showsVerticalScrollIndicator={false}
         >
-          <TouchableOpacity style={styles.backBtn} onPress={handleBack}>
-            <Text style={styles.backIcon}>←</Text>
+          {/* Back — left-aligned like every other topic screen, and given a
+              stronger outline/shadow so it reads clearly against the page. */}
+          <TouchableOpacity
+            style={[styles.backBtnProminent, { borderColor: levelColor }]}
+            onPress={handleBack}
+            accessibilityLabel="חזור"
+            activeOpacity={0.8}
+          >
+            <Text style={[styles.backIconProminent, { color: levelColor }]}>←</Text>
           </TouchableOpacity>
 
           {/* Image / icon — dual layout when image_url_2 exists */}
@@ -591,6 +616,20 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.10, shadowRadius: 6, elevation: 3,
   },
   backIcon: { fontSize: 22, color: '#191c1e' },
+
+  // Explanation-phase back button — same left position as every other topic
+  // screen (alignSelf overrides the parent's alignItems:'center'), plus a
+  // larger tap target, coloured outline and deeper shadow so it stands out.
+  backBtnProminent: {
+    width: 54, height: 54, borderRadius: 27,
+    backgroundColor: '#ffffff',
+    justifyContent: 'center', alignItems: 'center',
+    alignSelf: 'flex-start',
+    borderWidth: 2,
+    shadowColor: '#000', shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.20, shadowRadius: 8, elevation: 6,
+  },
+  backIconProminent: { fontSize: 28, fontWeight: '700', lineHeight: 32 },
 
   // ── Explanation phase ────────────────────────────────────────────────────────
   explainContent: {

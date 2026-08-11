@@ -483,8 +483,13 @@ export default function BehavioralSubtopicScreenA() {
       {phase === 'explanation' && (
         <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
 
-          <TouchableOpacity style={styles.backButton} onPress={handleBack}>
-            <Text style={styles.backIcon}>←</Text>
+          <TouchableOpacity
+            style={[styles.backButtonProminent, { borderColor: levelColor }]}
+            onPress={handleBack}
+            accessibilityLabel="חזור"
+            activeOpacity={0.8}
+          >
+            <Text style={[styles.backIconProminent, { color: levelColor }]}>←</Text>
           </TouchableOpacity>
 
           {/* Large image / icon — dual layout when image_url_2 exists */}
@@ -576,8 +581,13 @@ export default function BehavioralSubtopicScreenA() {
           showsVerticalScrollIndicator={false}
           scrollEnabled={!showFeedback}
         >
-          <TouchableOpacity style={styles.backButton} onPress={handleBack}>
-            <Text style={styles.backIcon}>←</Text>
+          <TouchableOpacity
+            style={[styles.backButtonProminent, { borderColor: levelColor }]}
+            onPress={handleBack}
+            accessibilityLabel="חזור"
+            activeOpacity={0.8}
+          >
+            <Text style={[styles.backIconProminent, { color: levelColor }]}>←</Text>
           </TouchableOpacity>
 
           {/* Small subtopic image */}
@@ -720,6 +730,19 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.10, shadowRadius: 6, elevation: 3,
   },
   backIcon: { fontSize: 22, color: '#191c1e' },
+
+  // Standalone back button (explanation + questions phases) — larger tap target,
+  // coloured outline and deeper shadow so it stands out. Kept identical to
+  // Engine B's backBtnProminent so both engines look the same.
+  backButtonProminent: {
+    width: 54, height: 54, borderRadius: 27,
+    backgroundColor: '#ffffff',
+    justifyContent: 'center', alignItems: 'center', alignSelf: 'flex-start',
+    borderWidth: 2,
+    shadowColor: '#000', shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.20, shadowRadius: 8, elevation: 6,
+  },
+  backIconProminent: { fontSize: 28, fontWeight: '700', lineHeight: 32 },
 
   // ── Explanation phase ────────────────────────────────────────────────────────
   imageContainer: {
