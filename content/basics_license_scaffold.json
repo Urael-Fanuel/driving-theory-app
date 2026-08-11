@@ -88,16 +88,6 @@
           ],
           "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_bl_l1_s1_narration_1786459383576.mp3",
           "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/bl_l1_s1_image_1786460040079.jpg"
-        },
-        {
-          "id": "bl_l1_s2",
-          "name_hebrew": "אחריות הנהג",
-          "name_amharic": "የሹፌሩ ሃላፊነት",
-          "icon": "⚖️",
-          "explanation_amharic": "",
-          "narration_script": "",
-          "image_description": "",
-          "questions": []
         }
       ]
     },
@@ -114,10 +104,76 @@
           "name_hebrew": "עזרה ראשונה לנפגעי תאונה",
           "name_amharic": "ለአደጋ ተጎጂዎች የመጀመሪያ እርዳታ",
           "icon": "🩺",
-          "explanation_amharic": "",
-          "narration_script": "",
-          "image_description": "",
-          "questions": []
+          "explanation_amharic": "አንድ አሽከርካሪ በሚያሽከረክሩበት ጊዜ ሰዎች የተጎዱበት የመንገድ አደጋ ሲደርስበት፣ ወዲያውኑ ተሽከርካሪውን በአደጋው ቦታ ወይም በተቻለ መጠን ቅርብ በሆነ ቦታ ማቆም አለበት። ተሽከርካሪውን ማንቀሳቀስ የሚያስፈልገው በጣም አስፈላጊ ከሆነ ወይም ከባለስልጣን አካል ፈቃድ ካገኘ ብቻ ነው። ተሽከርካሪውን ማንቀሳቀስ ካስፈለገ ግን፣ መጀመሪያ የነበረበትን ቦታ ምልክት ማድረግ ይገባል።\n\nአሽከርካሪው በራሱ ችሎታና ስልጠና መሰረት ለተጎዳው ሰው ተገቢውን እርዳታ መስጠት አለበት። ይህም ተጎጂው ተጨማሪ ጉዳት እንዳይደርስበት ማረጋገጥን፣ እንዲሁም በችሎታውና በስልጠናው ልክ የመጀመሪያ እርዳታ መስጠትን ያካትታል።\n\nአሽከርካሪው አስፈላጊ የሆኑትን የድንገተኛ ጊዜ አገልግሎቶች እንደ አምቡላንስ፣ ፖሊስ ወይም የእሳት አደጋ መጥራት አለበት። የድንገተኛ ጊዜ አገልግሎቶች እስኪደርሱ ድረስም ከተጎጂው ሰው አጠገብ መጠበቅ ይገባል።\n\nአምቡላንስ መጥቶ ተጎጂውን መውሰድ ካልቻለ፣ አሽከርካሪው ተጎጂውን ወደ ህክምና እርዳታ ለመውሰድ ተስማሚ በሆነ ሌላ ተሽከርካሪ እንዲጓጓዝ መርዳት አለበት።\n\nበአደጋው የተሳተፈው አሽከርካሪ ስሙንና አድራሻውን የመሳሰሉ መሰረታዊ መረጃዎችን ለተጎጂው፣ ለሌሎች አሽከርካሪዎች፣ ለፖሊስ ወይም ከተጎጂው ጋር ለነበሩ ሰዎች ማጋራት አለበት። እንዲሁም አደጋው የደረሰበትን ቦታና የተጎጂውን ሁኔታ በሚያውቀው መጠን ለባለስልጣናት በተቻለ ፍጥነት ማሳወቅ አለበት።\n\nአደጋው የንብረት ጉዳት ብቻ ከሆነና ሰዎች ካልተጎዱ፣ አሽከርካሪው መረጃውን ለተጎዳው ንብረት ባለቤት ወይም ለፖሊስ ማጋራት አለበት። መረጃ ከተለዋወጡ በኋላም ተሽከርካሪዎቹን ከመንገድ ላይ አንስቶ ትራፊክ እንዳይዘጋ ማድረግ ይገባል። የንብረቱ ባለቤት በቦታው ከሌለ፣ አስፈላጊውን መረጃ የያዘ ማስታወሻ በተጎዳው ተሽከርካሪ ላይ ትቶ አደጋውን ለፖሊስ ማሳወቅ ይጠበቅበታል።\n\nአንድ አሽከርካሪ ሰዎች የተጎዱበት የአደጋ ቦታ የሚያልፍ ከሆነ፣ ደህንነቱ በተጠበቀ ቦታ ማቆም አለበት። ተጎጂዎችን ለመርዳት ምክንያታዊ በሆነ መንገድ ማድረግ የሚችለውን ሁሉ ሳያደርግ ጉዞውን መቀጠል የለበትም።",
+          "narration_script": "አንድ አሽከርካሪ በሚያሽከረክሩበት ጊዜ ሰዎች የተጎዱበት የመንገድ አደጋ ሲደርስበት፣ ወዲያውኑ ተሽከርካሪውን በአደጋው ቦታ ወይም በተቻለ መጠን ቅርብ በሆነ ቦታ ማቆም አለበት። ተሽከርካሪውን ማንቀሳቀስ የሚያስፈልገው በጣም አስፈላጊ ከሆነ ወይም ከባለስልጣን አካል ፈቃድ ካገኘ ብቻ ነው። ተሽከርካሪውን ማንቀሳቀስ ካስፈለገ ግን፣ መጀመሪያ የነበረበትን ቦታ ምልክት ማድረግ ይገባል።\n\nአሽከርካሪው በራሱ ችሎታና ስልጠና መሰረት ለተጎዳው ሰው ተገቢውን እርዳታ መስጠት አለበት። ይህም ተጎጂው ተጨማሪ ጉዳት እንዳይደርስበት ማረጋገጥን፣ እንዲሁም በችሎታውና በስልጠናው ልክ የመጀመሪያ እርዳታ መስጠትን ያካትታል።\n\nአሽከርካሪው አስፈላጊ የሆኑትን የድንገተኛ ጊዜ አገልግሎቶች እንደ አምቡላንስ፣ ፖሊስ ወይም የእሳት አደጋ መጥራት አለበት። የድንገተኛ ጊዜ አገልግሎቶች እስኪደርሱ ድረስም ከተጎጂው ሰው አጠገብ መጠበቅ ይገባል።\n\nአምቡላንስ መጥቶ ተጎጂውን መውሰድ ካልቻለ፣ አሽከርካሪው ተጎጂውን ወደ ህክምና እርዳታ ለመውሰድ ተስማሚ በሆነ ሌላ ተሽከርካሪ እንዲጓጓዝ መርዳት አለበት።\n\nበአደጋው የተሳተፈው አሽከርካሪ ስሙንና አድራሻውን የመሳሰሉ መሰረታዊ መረጃዎችን ለተጎጂው፣ ለሌሎች አሽከርካሪዎች፣ ለፖሊስ ወይም ከተጎጂው ጋር ለነበሩ ሰዎች ማጋራት አለበት። እንዲሁም አደጋው የደረሰበትን ቦታና የተጎጂውን ሁኔታ በሚያውቀው መጠን ለባለስልጣናት በተቻለ ፍጥነት ማሳወቅ አለበት።\n\nአደጋው የንብረት ጉዳት ብቻ ከሆነና ሰዎች ካልተጎዱ፣ አሽከርካሪው መረጃውን ለተጎዳው ንብረት ባለቤት ወይም ለፖሊስ ማጋራት አለበት። መረጃ ከተለዋወጡ በኋላም ተሽከርካሪዎቹን ከመንገድ ላይ አንስቶ ትራፊክ እንዳይዘጋ ማድረግ ይገባል። የንብረቱ ባለቤት በቦታው ከሌለ፣ አስፈላጊውን መረጃ የያዘ ማስታወሻ በተጎዳው ተሽከርካሪ ላይ ትቶ አደጋውን ለፖሊስ ማሳወቅ ይጠበቅበታል።\n\nአንድ አሽከርካሪ ሰዎች የተጎዱበት የአደጋ ቦታ የሚያልፍ ከሆነ፣ ደህንነቱ በተጠበቀ ቦታ ማቆም አለበት። ተጎጂዎችን ለመርዳት ምክንያታዊ በሆነ መንገድ ማድረግ የሚችለውን ሁሉ ሳያደርግ ጉዞውን መቀጠል የለበትም።",
+          "image_description": "A photorealistic photo of a real traffic accident scene on an ordinary road in daylight: two cars involved in a collision, one car with visible front-end damage having struck the rear of the other car ahead of it, both vehicles stopped at the side of the road with hazard lights flashing. A person with Ethiopian/East African brown skin tone, wearing a reflective safety vest, stands near the vehicles looking at the damage, having stopped to help. Realistic photography style, visible vehicle damage (dented bumper, broken taillight) but no visible injuries, no blood, no graphic content, no close-up faces, no text, no graphics, no overlays, no license plates.",
+          "questions": [
+            {
+              "question_amharic": "አንድ አሽከርካሪ ሰዎች የተጎዱበት አደጋ ሲደርስበት መጀመሪያ ምን ማድረግ አለበት?",
+              "answers": [
+                {
+                  "text_amharic": "ለቤተሰቦቹ መደወል አለበት።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የተሽከርካሪውን ጉዳት ማረጋገጥ አለበት።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ወዲያውኑ በአደጋው ቦታ ወይም ቅርብ በሆነ ቦታ ማቆም እና አስፈላጊ ካልሆነ ወይም ባለስልጣን ካልፈቀደ በስተቀር ተሽከርካሪውን አለማንቀሳቀስ አለበት።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ወደ ቅርብ ሆስፒታል መንዳት አለበት።",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "አንድ አሽከርካሪ የተጎዳውን ሰው በአምቡላንስ ማስገባት ካልቻለ ምን ማድረግ አለበት?",
+              "answers": [
+                {
+                  "text_amharic": "ተጎጂውን በቦታው ትቶ መሄድ አለበት።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የድንገተኛ ጊዜ አገልግሎት እስኪመጣ ድረስ ያለገደብ መጠበቅ አለበት።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ተጎጂውን ወደ ህክምና እርዳታ ለመውሰድ ተስማሚ በሆነ ሌላ ተሽከርካሪ እንዲጓጓዝ መርዳት አለበት።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ታክሲ መጥራት አለበት።",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "አንድ አሽከርካሪ ሰዎች የተጎዱበት የአደጋ ቦታ የሚያልፍ ከሆነ ምን ማድረግ አለበት?",
+              "answers": [
+                {
+                  "text_amharic": "በፍጥነት ማሽከርከር አለበት።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ፎቶግራፍ ማንሳት አለበት።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ደህንነቱ በተጠበቀ ቦታ ማቆም እና ምክንያታዊ በሆነ መንገድ መርዳት የሚችለውን ሁሉ ማድረግ አለበት እንጂ ዝም ብሎ ጉዞውን መቀጠል የለበትም።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "አደጋውን ችላ ብሎ ማለፍ አለበት።",
+                  "is_correct": false
+                }
+              ]
+            }
+          ],
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_bl_l2_s1_narration_1786462155403.mp3",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/bl_l2_s1_image_1786462853805.jpg"
         },
         {
           "id": "bl_l2_s2",
