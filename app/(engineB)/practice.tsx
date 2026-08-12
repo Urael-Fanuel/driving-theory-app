@@ -17,6 +17,7 @@ import {
   SafeAreaView,
   ScrollView,
   TouchableOpacity,
+  Image,
 } from 'react-native';
 import { useRouter, useLocalSearchParams } from 'expo-router';
 import { Colors } from '../../constants/colors';
@@ -28,6 +29,9 @@ import { AudioButton } from '../../components/shared/AudioButton';
 import { ProgressBar } from '../../components/shared/ProgressBar';
 import { usePracticeWeak } from '../../hooks/usePracticeWeak';
 import { OfflineBanner } from '../../components/shared/OfflineBanner';
+import * as api from '../../backend/api';
+import { DBSign } from '../../backend/supabaseClient';
+import { extractSignNumber, shouldShowSignBadge } from '../../utils/signNumber';
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
@@ -50,6 +54,18 @@ export default function EngineBPracticeScreen() {
   } = usePracticeWeak(questionIds);
 
   const [showFeedback, setShowFeedback] = React.useState(false);
+  const [signs,        setSigns]        = React.useState<DBSign[]>([]);
+
+  // Load all signs once on mount (for displaying sign image per question) —
+  // same pattern as exam.tsx. Without this, currentSign is always null, so
+  // neither the sign image nor the behavioral question image ever rendered
+  // here at all (this screen previously showed no image whatsoever).
+  useEffect(() => {
+    api.getAllSigns().then(setSigns).catch(() => {});
+  }, []);
+
+  const currentSign  = signs.find(s => s.id === currentQuestion?.sign_id) ?? null;
+  const isBehavioral = !currentQuestion?.sign_id;
 
   // Show feedback after answer
   useEffect(() => {
@@ -135,6 +151,34 @@ export default function EngineBPracticeScreen() {
         showsVerticalScrollIndicator={false}
         scrollEnabled={!showFeedback}
       >
+        {/* Sign or behavioral question image — same pattern as topic-quiz.tsx.
+            This screen previously showed no image at all for either type. */}
+        {isBehavioral && currentQuestion.question_image_url ? (
+          <View style={styles.signImageContainer}>
+            <Image
+              source={{ uri: currentQuestion.question_image_url }}
+              style={styles.signImage}
+              resizeMode="cover"
+            />
+          </View>
+        ) : !isBehavioral && currentSign?.image_url ? (
+          <View style={styles.signImageContainer}>
+            <Image
+              source={{ uri: currentSign.image_url }}
+              style={styles.signImage}
+              resizeMode="contain"
+            />
+            {/* Official sign number — same badge as sign/[id].tsx (via
+                SignTextDetail). Some questions ask about the sign's number
+                directly, so this isn't cosmetic. */}
+            {shouldShowSignBadge(currentSign.image_url) && (
+              <View style={styles.signNumberBadge}>
+                <Text style={styles.signNumberText}>{extractSignNumber(currentSign.image_url)}</Text>
+              </View>
+            )}
+          </View>
+        ) : null}
+
         {/* Question text */}
         <View style={styles.questionCard}>
           {currentQuestion.question_audio_url && (
@@ -271,6 +315,40 @@ const styles = StyleSheet.create({
   content: {
     padding: 16,
     gap:     16,
+  },
+  // Same values as topic-quiz.tsx's (Engine B) sign image block.
+  signImageContainer: {
+    alignSelf:       'center',
+    width:           150,
+    height:          150,
+    borderRadius:    20,
+    backgroundColor: '#ffffff',
+    shadowColor:     '#000',
+    shadowOffset:    { width: 0, height: 3 },
+    shadowOpacity:   0.10,
+    shadowRadius:    6,
+    elevation:       3,
+    position:        'relative', // anchors signNumberBadge below
+  },
+  signImage: {
+    width:  '100%',
+    height: '100%',
+  },
+  // Same values as SignTextDetail's badge (the learning screen's).
+  signNumberBadge: {
+    position:          'absolute',
+    top:               8,
+    left:              8,
+    backgroundColor:   'rgba(0,0,0,0.55)',
+    borderRadius:      5,
+    paddingHorizontal: 7,
+    paddingVertical:   3,
+    zIndex:            1,
+  },
+  signNumberText: {
+    color:      '#FFFFFF',
+    fontSize:   12,
+    fontWeight: 'bold',
   },
   questionCard: {
     backgroundColor: Colors.card,
