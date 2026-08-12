@@ -72,7 +72,11 @@ export async function flushQueue(): Promise<void> {
 
   for (const answer of queue) {
     try {
-      await api.saveAnswer(answer.userId, answer.questionId, answer.isCorrect, 2);
+      // Reuse the queue entry's own id as the submission id — if the
+      // original save already reached the server before this replay (the
+      // usual crash-between-success-and-dequeue case this queue exists
+      // for), the server sees the same id again and skips re-incrementing.
+      await api.saveAnswer(answer.userId, answer.questionId, answer.isCorrect, 2, answer.id);
       await dequeue(answer.id);
     } catch {
       // Will retry next time app opens

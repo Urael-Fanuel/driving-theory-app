@@ -6,9 +6,26 @@
 // Auth: Supabase verifies the caller's JWT before this code runs (default
 // Edge Function behavior), so only signed-in app users (incl. anonymous
 // Supabase sessions) can reach this endpoint — not the public internet.
+//
+// Rate limit: on top of that, each caller is capped at MAX_REQUESTS calls
+// per WINDOW_SECONDS (see ../_shared/rateLimit.ts) — this is what stops a
+// script that mints anonymous sessions from running up the Google bill.
+// A real learner tapping the play button never comes close to this limit.
+
+import { subFromJwt, checkRateLimit } from '../_shared/rateLimit.ts';
 
 const GOOGLE_TTS_URL = 'https://texttospeech.googleapis.com/v1/text:synthesize';
 const GOOGLE_KEY = Deno.env.get('GOOGLE_TTS_KEY') ?? '';
+const SUPABASE_URL = Deno.env.get('SUPABASE_URL') ?? '';
+const ANON_KEY = Deno.env.get('SUPABASE_ANON_KEY') ?? '';
+// Higher than stt/rag-explain: the app's own offline pre-caching
+// (utils/googleTTS.ts prefetchTtsForTexts — fills the TTS cache ahead of
+// an exam so playback works without a connection later) can legitimately
+// burst to ~40 calls in well under a minute. 90 leaves headroom for that
+// while still being far below what a script hammering this endpoint
+// non-stop would need.
+const MAX_REQUESTS = 90;
+const WINDOW_SECONDS = 60;
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -21,6 +38,32 @@ Deno.serve(async (req: Request) => {
   }
 
   try {
+    const authHeader = req.headers.get('authorization');
+    const callerSub = subFromJwt(authHeader);
+    if (!callerSub) {
+      return new Response(JSON.stringify({ error: 'Missing or invalid auth token' }), {
+        status: 401,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      });
+    }
+    if (SUPABASE_URL && ANON_KEY) {
+      const allowed = await checkRateLimit({
+        supabaseUrl: SUPABASE_URL,
+        anonKey: ANON_KEY,
+        authHeader: authHeader!,
+        userId: callerSub,
+        endpoint: 'tts',
+        maxRequests: MAX_REQUESTS,
+        windowSeconds: WINDOW_SECONDS,
+      });
+      if (!allowed) {
+        return new Response(JSON.stringify({ error: 'Too many requests, please slow down' }), {
+          status: 429,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        });
+      }
+    }
+
     const { text } = await req.json();
 
     if (!text || typeof text !== 'string') {

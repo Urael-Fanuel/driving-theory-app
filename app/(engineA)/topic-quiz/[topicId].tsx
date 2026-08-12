@@ -40,12 +40,18 @@ import { isQuestionAudioReady } from '../../../services/audioCache';
 import * as api from '../../../backend/api';
 import { DBSign } from '../../../backend/supabaseClient';
 import { OfflineBanner } from '../../../components/shared/OfflineBanner';
+import { extractSignNumber, shouldShowSignBadge } from '../../../utils/signNumber';
 
 
 // ─── Praise phrases (same set as behavioral-subtopic) ─────────────────────────
+// Commit e0b352e (2026-07-27) fixed two pronunciation bugs in this same word
+// set for signs (scripts/addPrefixesAndShuffle.mjs + content/signs.json) —
+// doubled-letter 'ዋውው' → 'ዋው', wrong-letter 'ጎቨዝ' → 'ጎበዝ' — but never
+// applied the fix here. Corrected spellings below are copied from that
+// already-fixed script, not newly composed.
 const CORRECT_PRAISES = [
-  'ትክክል!', 'አዎ!', 'አሪፍ!', 'ጎሽ!', 'እሰይ!', 'ዋውው!', 'ጎቨዝ!',
-  'በጣም ጥሩ!', 'በጣም አሪፍ!', 'እንድያ ነው!', 'ዋውው በጣም ጥሩ!',
+  'ትክክል!', 'አዎ!', 'አሪፍ!', 'ጎሽ!', 'እሰይ!', 'ዋው!', 'ጎበዝ!',
+  'በጣም ጥሩ!', 'በጣም አሪፍ!', 'እንድያ ነው!', 'ዋው በጣም ጥሩ!',
 ];
 const randomPraise = () => CORRECT_PRAISES[Math.floor(Math.random() * CORRECT_PRAISES.length)];
 
@@ -535,6 +541,14 @@ export default function EngineATopicQuizScreen() {
               style={styles.signImage}
               resizeMode="contain"
             />
+            {/* Official sign number — same badge as sign/[id].tsx. Some
+                questions ask about the sign's number directly, so this
+                isn't cosmetic. */}
+            {shouldShowSignBadge(currentSign.image_url) && (
+              <View style={styles.signNumberBadge}>
+                <Text style={styles.signNumberText}>{extractSignNumber(currentSign.image_url)}</Text>
+              </View>
+            )}
           </View>
         ) : null}
 
@@ -669,6 +683,23 @@ const styles = StyleSheet.create({
     shadowOpacity:   0.10,
     shadowRadius:    6,
     elevation:       3,
+    position:        'relative', // anchors signNumberBadge below
+  },
+  // Same values as sign/[id].tsx's badge.
+  signNumberBadge: {
+    position:          'absolute',
+    top:               10,
+    left:              10,
+    backgroundColor:   'rgba(255,255,255,0.92)',
+    borderRadius:      5,
+    paddingHorizontal: 8,
+    paddingVertical:   4,
+    zIndex:            1,
+  },
+  signNumberText: {
+    color:      '#404943',
+    fontSize:   14,
+    fontWeight: '700',
   },
   signImage: {
     width:  '100%',

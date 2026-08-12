@@ -10,10 +10,21 @@
 //
 // The Gemini API key lives ONLY here (as a Supabase secret) — never in the app.
 // Auth: Supabase verifies the caller's JWT before this code runs.
+//
+// Rate limit: on top of that, each caller is capped at MAX_REQUESTS calls
+// per WINDOW_SECONDS (see ../_shared/rateLimit.ts) — this is what stops a
+// script that mints anonymous sessions from running up the Gemini bill.
+// A real learner asking "explain why" after a wrong answer never comes
+// close to this limit.
+
+import { subFromJwt, checkRateLimit } from '../_shared/rateLimit.ts';
 
 const GEMINI_KEY = Deno.env.get('GEMINI_API_KEY') ?? '';
 const SUPABASE_URL = Deno.env.get('SUPABASE_URL') ?? '';
 const SERVICE_KEY = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') ?? '';
+const ANON_KEY = Deno.env.get('SUPABASE_ANON_KEY') ?? '';
+const MAX_REQUESTS = 15;
+const WINDOW_SECONDS = 60;
 
 const EMBED_URL =
   `https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:embedContent?key=${GEMINI_KEY}`;
@@ -38,6 +49,26 @@ Deno.serve(async (req: Request) => {
   }
 
   try {
+    const authHeader = req.headers.get('authorization');
+    const callerSub = subFromJwt(authHeader);
+    if (!callerSub) {
+      return json({ error: 'Missing or invalid auth token' }, 401);
+    }
+    if (SUPABASE_URL && ANON_KEY) {
+      const allowed = await checkRateLimit({
+        supabaseUrl: SUPABASE_URL,
+        anonKey: ANON_KEY,
+        authHeader: authHeader!,
+        userId: callerSub,
+        endpoint: 'rag-explain',
+        maxRequests: MAX_REQUESTS,
+        windowSeconds: WINDOW_SECONDS,
+      });
+      if (!allowed) {
+        return json({ error: 'Too many requests, please slow down' }, 429);
+      }
+    }
+
     const { question, wrong_answer, correct_answer } = await req.json();
 
     if (

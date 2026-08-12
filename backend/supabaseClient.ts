@@ -134,7 +134,7 @@ export interface Database {
     };
     Functions: {
       get_random_questions: { Args: { question_count: number }; Returns: DBQuestion[] };
-      upsert_user_progress: { Args: { p_user_id: string; p_question_id: string; p_is_correct: boolean }; Returns: void };
+      upsert_user_progress: { Args: { p_user_id: string; p_question_id: string; p_is_correct: boolean; p_submission_id?: string }; Returns: void };
       upsert_sign_view:     { Args: { p_user_id: string; p_sign_id: string; p_video_completed: boolean }; Returns: void };
     };
   };

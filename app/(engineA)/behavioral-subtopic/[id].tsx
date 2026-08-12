@@ -69,21 +69,27 @@ const NUMBER_URLS = [
   `${_AUDIO_BASE}/number_4.mp3`,
 ];
 
-// ─── Praise phrases for correct answers (exact phrases used in signs) ─────────
+// ─── Praise phrases for correct answers ────────────────────────────────────
+// Commit e0b352e (2026-07-27) fixed two pronunciation bugs in this same word
+// set for signs (scripts/addPrefixesAndShuffle.mjs + content/signs.json) —
+// doubled-letter 'ዋውው' → 'ዋው', wrong-letter 'ጎቨዝ' → 'ጎበዝ' — but never
+// applied the fix here, the actual source every other copy of this list was
+// taken from. Corrected spellings below are copied from that already-fixed
+// script, not newly composed.
 const CORRECT_PRAISES = [
   'ትክክል!',
   'አዎ!',
   'አሪፍ!',
   'ጎሽ!',
   'እሰይ!',
-  'ዋውው!',
-  'ጎቨዝ!',
+  'ዋው!',
+  'ጎበዝ!',
   'በጣም ጥሩ!',
   'በጣም አሪፍ!',
   'እንድያ ነው!',
   'እንዲያ ነው!',
-  'ዋውው በጣም ጥሩ!',
-  'እሰይ የኔ ጎቨዝ!',
+  'ዋው በጣም ጥሩ!',
+  'እሰይ የኔ ጎበዝ!',
   'ትክክል፥ አቬት እውቀት!',
   'አቬት ችሎታ ትክክል!',
 ];

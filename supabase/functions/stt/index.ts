@@ -6,9 +6,20 @@
 // Auth: Supabase verifies the caller's JWT before this code runs (default
 // Edge Function behavior), so only signed-in app users (incl. anonymous
 // Supabase sessions) can reach this endpoint — not the public internet.
+//
+// Rate limit: on top of that, each caller is capped at MAX_REQUESTS calls
+// per WINDOW_SECONDS (see ../_shared/rateLimit.ts) — this is what stops a
+// script that mints anonymous sessions from running up the Google bill.
+// A real learner recording answers never comes close to this limit.
+
+import { subFromJwt, checkRateLimit } from '../_shared/rateLimit.ts';
 
 const GOOGLE_STT_URL = 'https://speech.googleapis.com/v1/speech:recognize';
 const GOOGLE_KEY = Deno.env.get('GOOGLE_STT_KEY') ?? '';
+const SUPABASE_URL = Deno.env.get('SUPABASE_URL') ?? '';
+const ANON_KEY = Deno.env.get('SUPABASE_ANON_KEY') ?? '';
+const MAX_REQUESTS = 30;
+const WINDOW_SECONDS = 60;
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -28,6 +39,32 @@ Deno.serve(async (req: Request) => {
   }
 
   try {
+    const authHeader = req.headers.get('authorization');
+    const callerSub = subFromJwt(authHeader);
+    if (!callerSub) {
+      return new Response(JSON.stringify({ error: 'Missing or invalid auth token' }), {
+        status: 401,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      });
+    }
+    if (SUPABASE_URL && ANON_KEY) {
+      const allowed = await checkRateLimit({
+        supabaseUrl: SUPABASE_URL,
+        anonKey: ANON_KEY,
+        authHeader: authHeader!,
+        userId: callerSub,
+        endpoint: 'stt',
+        maxRequests: MAX_REQUESTS,
+        windowSeconds: WINDOW_SECONDS,
+      });
+      if (!allowed) {
+        return new Response(JSON.stringify({ error: 'Too many requests, please slow down' }), {
+          status: 429,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        });
+      }
+    }
+
     const { audioBase64, encoding, sampleRateHertz } = await req.json();
 
     if (!audioBase64 || typeof audioBase64 !== 'string') {

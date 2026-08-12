@@ -35,6 +35,7 @@ import { speakAndAwait, stopTTS, onTTSSpeakingChange, getIsTTSSpeaking } from '.
 import { useVoiceRecognition } from '../../../hooks/useVoiceRecognition';
 import * as api from '../../../backend/api';
 import { DBSign } from '../../../backend/supabaseClient';
+import { extractSignNumber, shouldShowSignBadge } from '../../../utils/signNumber';
 
 // ─── Number announcement URLs (same as question/[id].tsx) ────────────────────
 const _AUDIO_BASE = (process.env.EXPO_PUBLIC_SUPABASE_URL ?? '') + '/storage/v1/object/public/audio';
@@ -44,6 +45,31 @@ const NUMBER_URLS = [
   `${_AUDIO_BASE}/number_3.mp3`,
   `${_AUDIO_BASE}/number_4.mp3`,
 ];
+
+// ─── Praise phrases — list from behavioral-subtopic/[id].tsx, with the same
+// two pronunciation-bug spellings commit e0b352e already fixed elsewhere
+// (scripts/addPrefixesAndShuffle.mjs + content/signs.json, 2026-07-27) but
+// never applied here: doubled-letter 'ዋውው' → 'ዋው', wrong-letter 'ጎቨዝ' →
+// 'ጎበዝ'. Both corrected spellings are copied from that already-fixed
+// script, not newly composed.
+const CORRECT_PRAISES = [
+  'ትክክል!',
+  'አዎ!',
+  'አሪፍ!',
+  'ጎሽ!',
+  'እሰይ!',
+  'ዋው!',
+  'ጎበዝ!',
+  'በጣም ጥሩ!',
+  'በጣም አሪፍ!',
+  'እንድያ ነው!',
+  'እንዲያ ነው!',
+  'ዋው በጣም ጥሩ!',
+  'እሰይ የኔ ጎበዝ!',
+  'ትክክል፥ አቬት እውቀት!',
+  'አቬት ችሎታ ትክክል!',
+];
+const randomPraise = () => CORRECT_PRAISES[Math.floor(Math.random() * CORRECT_PRAISES.length)];
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
@@ -68,6 +94,16 @@ export default function EngineAExamScreen() {
   const { playAudio, stopAudio, audioState } = useAudio();
   const [isTTSPlaying,             setIsTTSPlaying]             = useState(getIsTTSSpeaking);
   const [showFeedback,             setShowFeedback]             = useState(false);
+  // Behavioral questions have no pre-recorded explanation audio at all
+  // (explanation_correct_audio_url/explanation_wrong_audio_url are always
+  // undefined for them — see loadBehavioralExamQuestions). Without this,
+  // AudioFeedback was handed an empty explanationAudioUri and no ttsText:
+  // playAudio('') no-ops immediately (see hooks/useAudio.ts's `if (!rawUri)
+  // return`), audioState never reaches 'finished', and the Next button —
+  // which only appears once audioState does — never appeared. The user was
+  // stuck on the ✅/❌ overlay with no way to continue. Same fix already
+  // used in topic-quiz.tsx for the identical reason.
+  const [feedbackTTSText,          setFeedbackTTSText]          = useState('');
   const scrollRef = useRef<any>(null);
   const isConnected = useNetworkStatus();
   const [audioRestartKey,          setAudioRestartKey]          = useState(0);
@@ -231,6 +267,19 @@ export default function EngineAExamScreen() {
     stopAudio();
     stopTTS().catch(() => {}); // Also stop TTS if a behavioral question was playing
     setPlayingAnswerIndex(null);
+
+    // Behavioral questions: build the TTS feedback text (same logic as
+    // topic-quiz.tsx / behavioral-subtopic) since there's no recorded
+    // explanation audio to fall back to.
+    if (!currentQuestion.sign_id) {
+      const correctText = currentQuestion.answers.find(a => a.is_correct)?.text_amharic ?? '';
+      setFeedbackTTSText(
+        answer.is_correct
+          ? `${randomPraise()} ${correctText}`
+          : `ስህተት! ትክክለኛው መልስ: ${correctText}`
+      );
+    }
+
     submitAnswer(answer.id);
   }, [currentQuestion, phase, submitAnswer, stopAudio, cancelListening]);
 
@@ -537,11 +586,44 @@ export default function EngineAExamScreen() {
     }
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
+  // ── 🔊 Answer audio button for BEHAVIORAL questions ──────────────────────────
+  // Same cancel/replay/resume contract as handleAnswerAudioPress above, but
+  // behavioral answers have no pre-recorded audio_url to hand to
+  // playAndAwaitAudio — they only exist as text, spoken live via TTS (exactly
+  // how the auto-play sequence itself reads them, see isBehavioral branch in
+  // runSequence). Without this, tapping 🔊 on a behavioral answer card did
+  // nothing, because onAudioPress was never wired up for that case at all.
+  const handleBehavioralAnswerAudioPress = useCallback(async (text: string, answerIndex: number) => {
+    if (phaseRef.current !== 'question') return;
+    const playingAtTime = playingAnswerIndexRef.current;
+    sequenceCancelledRef.current = true;
+    await stopAudio(); // stop the number-clip engine in case it's mid-play
+    setPlayingAnswerIndex(answerIndex);
+    const spoken = await speakAndAwait(text);
+    setPlayingAnswerIndex(null);
+    if (phaseRef.current !== 'question') return;
+    if (!spoken) { reportAudioFailure(currentQuestion?.id ?? ''); return; }
+    if (playingAtTime === null) return;
+    const resumeFrom = answerFullyReadRef.current
+      ? playingAtTime + 1
+      : answerAudioStartedRef.current
+        ? answerIndex + 1
+        : playingAtTime;
+    if (resumeFrom < 4) {
+      replayFromAnswerRef.current = resumeFrom;
+      sequenceCancelledRef.current = false;
+      setAudioRestartKey(k => k + 1);
+    }
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
   const audioButtonIcon = (audioState === 'playing' || isTTSPlaying) ? '⏸' : '▶️';
 
   // ── States ─────────────────────────────────────────────────────────────────
   if (phase === 'loading') return <LoadingScreen />;
   if (!currentQuestion)    return <LoadingScreen />;
+
+  // Behavioral question = no sign_id (same check runSequence uses above).
+  const isBehavioral = !currentQuestion.sign_id;
 
   const answerCardState = (index: number) => {
     if (phase !== 'feedback_correct' && phase !== 'feedback_wrong') {
@@ -602,6 +684,17 @@ export default function EngineAExamScreen() {
               style={styles.signImage}
               resizeMode="contain"
             />
+            {/* Official sign number — same badge as sign/[id].tsx (learning
+                screen). Tied to currentSign specifically, never to a
+                behavioral question's image, so it can never show a bogus
+                number on a behavioral topic illustration. Some exam
+                questions ask about the sign's number directly, so this
+                isn't cosmetic — without it those questions were unanswerable. */}
+            {shouldShowSignBadge(currentSign?.image_url) && (
+              <View style={styles.signNumberBadge}>
+                <Text style={styles.signNumberText}>{extractSignNumber(currentSign?.image_url)}</Text>
+              </View>
+            )}
           </View>
         )}
 
@@ -650,7 +743,9 @@ export default function EngineAExamScreen() {
               onPress={() => handleAnswerSelect(index)}
               onAudioPress={answer.audio_url
                 ? () => handleAnswerAudioPress(answer.audio_url!, index)
-                : undefined}
+                : (isBehavioral && answer.text_amharic)
+                  ? () => handleBehavioralAnswerAudioPress(answer.text_amharic!, index)
+                  : undefined}
               disabled={phase !== 'question'}
             />
           ))}
@@ -672,6 +767,7 @@ export default function EngineAExamScreen() {
         <AudioFeedback
           isCorrect={!!lastAnswerCorrect}
           explanationAudioUri={feedbackAudioUri}
+          ttsText={isBehavioral && feedbackTTSText ? feedbackTTSText : undefined}
           ragQuery={!lastAnswerCorrect && currentQuestion && selectedAnswerId ? {
             question:      currentQuestion.question_amharic,
             wrongAnswer:   currentQuestion.answers.find(a => a.id === selectedAnswerId)?.text_amharic ?? '',
@@ -744,6 +840,24 @@ const styles = StyleSheet.create({
     shadowOpacity:   0.10,
     shadowRadius:    6,
     elevation:       3,
+    position:        'relative', // anchors signNumberBadge below
+  },
+  // Same values as sign/[id].tsx's badge — kept visually identical between
+  // the learning screen and the exam.
+  signNumberBadge: {
+    position:          'absolute',
+    top:               10,
+    left:              10,
+    backgroundColor:   'rgba(255,255,255,0.92)',
+    borderRadius:      5,
+    paddingHorizontal: 8,
+    paddingVertical:   4,
+    zIndex:            1,
+  },
+  signNumberText: {
+    color:      '#404943',
+    fontSize:   14,
+    fontWeight: '700',
   },
   signImage: {
     width:  '100%',

@@ -11,6 +11,7 @@
 
 import { supabase, DBTopic, DBSign, DBQuestion, DBExamSession, DBUserProgress, DBSignView } from './supabaseClient';
 import * as mockData from './mockData';
+import { getIsConnected } from '../hooks/useNetworkStatus';
 
 // ─── Behavioral scaffold data (local JSON — no Supabase needed) ───────────────
 import vehicleKnowledgeScaffold from '../content/vehicle_knowledge_scaffold.json';
@@ -25,6 +26,43 @@ import basicsLicenseScaffold    from '../content/basics_license_scaffold.json';
 
 /** True when no Supabase URL is configured → use mock data */
 const USE_MOCK = !process.env.EXPO_PUBLIC_SUPABASE_URL;
+
+/**
+ * Every function below falls back to the bundled copy (mockData — a full
+ * local snapshot of the sign catalog, see backend/mockData.ts) when a live
+ * Supabase call fails, so the app keeps working offline. That's correct
+ * behavior when there's genuinely no connection.
+ *
+ * But the SAME fallback also silently swallows a real server-side failure
+ * (a Supabase outage, a bad query, a bug) — falling back looks identical
+ * either way, so a real problem was invisible. This just makes the two
+ * cases distinguishable: call it from a catch block right before falling
+ * back to mockData. It changes nothing about what the app returns or
+ * shows — only what gets logged and recorded.
+ *
+ * A genuine online-but-failed error is also written to the client_errors
+ * table (see backend/migration_client_errors.sql) — a console.error only
+ * reaches the screen of whichever single device hit it, at the moment it
+ * happened, which in practice nobody is ever watching. This makes the
+ * same event checkable later with a plain query, the same way
+ * api_rate_limits and answer_submissions already are. Fire-and-forget:
+ * this is best-effort visibility, so it must never affect what the
+ * caller gets back, and a failed insert is silently ignored rather than
+ * retried or surfaced.
+ */
+function logFallbackToMock(fnName: string, err: unknown): void {
+  if (getIsConnected()) {
+    console.error(`[api] ${fnName}: SERVER ERROR while online — falling back to bundled data`, err);
+    (supabase.from('client_errors') as any)
+      .insert({
+        function_name: fnName,
+        error_message: err instanceof Error ? err.message : String(err),
+      })
+      .then(() => {}, () => {});
+  } else {
+    console.log(`[api] ${fnName}: offline — using bundled data (expected)`);
+  }
+}
 
 // ─── Types (extended with nested data) ───────────────────────────────────────
 
@@ -71,7 +109,7 @@ export async function getTopics(): Promise<Topic[]> {
     if (error) throw error;
     return data ?? [];
   } catch (err) {
-    console.error('[api] getTopics:', err);
+    logFallbackToMock('getTopics', err);
     return mockData.topics; // Fallback to mock on error
   }
 }
@@ -92,7 +130,7 @@ export async function getTopic(topicId: string): Promise<Topic | null> {
     if (error) throw error;
     return data;
   } catch (err) {
-    console.error('[api] getTopic:', err);
+    logFallbackToMock('getTopic', err);
     return mockData.topics.find(t => t.id === topicId) ?? null;
   }
 }
@@ -115,7 +153,7 @@ export async function getSignsByTopic(topicId: string): Promise<Sign[]> {
     if (error) throw error;
     return data ?? [];
   } catch (err) {
-    console.error('[api] getSignsByTopic:', err);
+    logFallbackToMock('getSignsByTopic', err);
     return mockData.signs.filter(s => s.topic_id === topicId);
   }
 }
@@ -145,7 +183,7 @@ export async function getSignWithQuestions(signId: string): Promise<SignWithQues
       questions: ((questionsResult.data as unknown as DBQuestion[]) ?? []).map(normalizeQuestion),
     };
   } catch (err) {
-    console.error('[api] getSignWithQuestions:', err);
+    logFallbackToMock('getSignWithQuestions', err);
     const sign = mockData.signs.find(s => s.id === signId);
     if (!sign) return null;
     return { ...sign, questions: mockData.questions.filter(q => q.sign_id === signId) };
@@ -171,7 +209,7 @@ export async function getAllSigns(): Promise<Sign[]> {
     _signsCache = data ?? [];
     return _signsCache;
   } catch (err) {
-    console.error('[api] getAllSigns:', err);
+    logFallbackToMock('getAllSigns', err);
     return mockData.signs;
   }
 }
@@ -386,15 +424,26 @@ export async function getRandomExamQuestions(
     } catch (err) {
       console.warn('[api] getRandomExamQuestions RPC failed, trying direct query:', err);
 
-      // Fallback: direct table query
+      // Fallback: direct table query. Must filter sign_id IS NOT NULL exactly
+      // like get_random_questions does — the `questions` table also holds
+      // "registry" rows for behavioral questions (sign_id = NULL, kept only
+      // so foreign keys like user_progress.question_id can resolve; see
+      // backend/migration_behavioral_questions.sql). Without this filter
+      // those rows leak in as if they were sign questions on top of the
+      // ones already added from local JSON above — double-counting
+      // behavioral questions in one exam, the exact bug that migration's
+      // WHERE clause exists to prevent in the primary RPC path.
       try {
-        const { data, error } = await supabase.from('questions').select('*');
+        const { data, error } = await supabase
+          .from('questions')
+          .select('*')
+          .not('sign_id', 'is', null);
         if (error) throw error;
         signQs = onlyNew(((data as DBQuestion[]) ?? []).map(normalizeQuestion))
           .sort(() => Math.random() - 0.5)
           .slice(0, numSign);
       } catch (err2) {
-        console.error('[api] getRandomExamQuestions direct query also failed:', err2);
+        logFallbackToMock('getRandomExamQuestions (direct query also failed)', err2);
         signQs = onlyNew([...mockData.questions].map(normalizeQuestion))
           .sort(() => Math.random() - 0.5)
           .slice(0, numSign);
@@ -446,7 +495,7 @@ export async function getQuestionsBySign(signId: string): Promise<DBQuestion[]> 
     setCachedQuestions(signId, qs);
     return qs;
   } catch (err) {
-    console.error('[api] getQuestionsBySign:', err);
+    logFallbackToMock('getQuestionsBySign', err);
     return mockData.questions.filter(q => q.sign_id === signId);
   }
 }
@@ -454,22 +503,44 @@ export async function getQuestionsBySign(signId: string): Promise<DBQuestion[]> 
 /**
  * Fetch specific questions by their IDs.
  * Used for weak-area practice after an exam.
+ *
+ * Behavioral question IDs (loadBehavioralExamQuestions' "beh_..." prefix)
+ * never exist in Supabase's `questions` table or in mockData.questions —
+ * they're generated on the fly from local scaffold JSON, not stored
+ * anywhere a table lookup could find them. Before this split, a wrong
+ * behavioral-topic answer from the exam would vanish from weak-area
+ * practice entirely: the .in('id', ids) / mockData filter below simply
+ * never matched it, so it was silently dropped instead of showing up to
+ * retry. Splitting by ID prefix routes each half to the source that can
+ * actually resolve it.
  */
 export async function getQuestionsByIds(ids: string[]): Promise<DBQuestion[]> {
   if (!ids.length) return [];
-  if (USE_MOCK) return mockData.questions.filter(q => ids.includes(q.id));
+
+  const behavioralIds = ids.filter(id => id.startsWith('beh_'));
+  const signIds        = ids.filter(id => !id.startsWith('beh_'));
+
+  const behavioralQs = behavioralIds.length
+    ? loadBehavioralExamQuestions().filter(q => behavioralIds.includes(q.id))
+    : [];
+
+  if (!signIds.length) return behavioralQs;
+
+  if (USE_MOCK) {
+    return [...mockData.questions.filter(q => signIds.includes(q.id)), ...behavioralQs];
+  }
 
   try {
     const { data, error } = await supabase
       .from('questions')
       .select('*')
-      .in('id', ids);
+      .in('id', signIds);
 
     if (error) throw error;
-    return (data ?? []).map(normalizeQuestion);
+    return [...(data ?? []).map(normalizeQuestion), ...behavioralQs];
   } catch (err) {
-    console.error('[api] getQuestionsByIds:', err);
-    return mockData.questions.filter(q => ids.includes(q.id));
+    logFallbackToMock('getQuestionsByIds', err);
+    return [...mockData.questions.filter(q => signIds.includes(q.id)), ...behavioralQs];
   }
 }
 
@@ -529,7 +600,7 @@ export async function getQuestionsByTopic(topicId: string, levelId?: string): Pr
       ((data ?? []) as DBQuestion[]).map(normalizeQuestion).sort(() => Math.random() - 0.5),
     );
   } catch (err) {
-    console.error('[api] getQuestionsByTopic:', err);
+    logFallbackToMock('getQuestionsByTopic', err);
     const signIds = mockData.signs
       .filter(s => s.topic_id === topicId)
       .map(s => s.id);
@@ -596,21 +667,34 @@ export async function updateUserLocation(userId: string, city: string): Promise<
 /**
  * Record a question answer (correct or wrong).
  * Uses upsert_user_progress stored procedure for atomic increment.
+ *
+ * submissionId identifies ONE answer event (not one network call). Pass the
+ * same id across every retry of the same answer, and again if that answer
+ * is later replayed from utils/answerQueue.ts after an app restart — the
+ * server (see backend/migration_answer_idempotency.sql) recognizes a
+ * repeat submission_id and skips the increment instead of double-counting
+ * an answer that was already saved. If omitted, one is generated here so
+ * this call's own internal retries are still deduped even by callers that
+ * don't have a queue id to pass in.
  */
 export async function saveAnswer(
   userId: string,
   questionId: string,
   isCorrect: boolean,
-  retries = 3
+  retries = 3,
+  submissionId?: string
 ): Promise<void> {
   if (USE_MOCK) return;
+
+  const subId = submissionId ?? `${userId}_${questionId}_${Date.now()}_${Math.random().toString(36).slice(2)}`;
 
   for (let attempt = 0; attempt < retries; attempt++) {
     try {
       const { error } = await supabase.rpc('upsert_user_progress', {
-        p_user_id:     userId,
-        p_question_id: questionId,
-        p_is_correct:  isCorrect,
+        p_user_id:        userId,
+        p_question_id:    questionId,
+        p_is_correct:     isCorrect,
+        p_submission_id:  subId,
       } as any);
       if (error) throw error;
       return; // success
@@ -721,12 +805,26 @@ async function getAllQuestionsLocal(): Promise<DBQuestion[]> {
   try {
     const { data } = await supabase.from('questions').select('id, topic_id, sign_id');
     return (data as DBQuestion[]) ?? mockData.questions;
-  } catch {
+  } catch (err) {
+    logFallbackToMock('getAllQuestionsLocal', err);
     return mockData.questions;
   }
 }
 
 // ─── EXAM SESSIONS ────────────────────────────────────────────────────────────
+
+/**
+ * The exam pass mark: 26 correct out of 30 (~87%) — the Israeli Ministry of
+ * Transport's own theory-test standard, confirmed 2026-08-12 (kolzchut.org.il,
+ * easyteo.co.il). This app's exam already mirrors that test's 30-question
+ * structure, so this fraction is applied to whatever the actual question
+ * count of a session turns out to be, rather than a hardcoded "24" — the
+ * single source of truth for BOTH hooks/useExam.ts (live pass/fail during
+ * the exam) and saveExamSession below (what gets written to the DB). Before
+ * this, "24" was duplicated in both places by hand, with nothing keeping
+ * them in sync if one was ever changed without the other.
+ */
+export const PASS_FRACTION = 26 / 30;
 
 /**
  * Save a completed exam session.
@@ -739,7 +837,8 @@ export async function saveExamSession(
   durationSeconds: number,
   topicBreakdown: Record<string, { correct: number; total: number }>
 ): Promise<ExamResult> {
-  const passed = score >= 24; // 80% of 30 questions
+  const passThreshold = Math.round(total * PASS_FRACTION);
+  const passed = score >= passThreshold;
 
   if (USE_MOCK) {
     return { sessionId: 'mock-' + Date.now(), score, total, passed, topicBreakdown };
@@ -754,7 +853,7 @@ export async function saveExamSession(
         score,
         total_questions:  total,
         passed,
-        pass_threshold:   24,
+        pass_threshold:   passThreshold,
         duration_seconds: durationSeconds,
         topic_breakdown:  topicBreakdown,
       } as any)

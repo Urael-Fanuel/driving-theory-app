@@ -27,6 +27,7 @@ import { useAudio } from '../../../hooks/useAudio';
 import { useNetworkStatus } from '../../../hooks/useNetworkStatus';
 import * as api from '../../../backend/api';
 import { DBSign } from '../../../backend/supabaseClient';
+import { extractSignNumber, shouldShowSignBadge } from '../../../utils/signNumber';
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
@@ -159,6 +160,15 @@ export default function EngineBExamScreen() {
               style={styles.signImage}
               resizeMode="contain"
             />
+            {/* Official sign number — same badge as sign/[id].tsx (via
+                SignTextDetail). Tied to currentSign specifically, never to
+                a behavioral question's image. Some questions ask about the
+                sign's number directly, so this isn't cosmetic. */}
+            {shouldShowSignBadge(currentSign?.image_url) && (
+              <View style={styles.signNumberBadge}>
+                <Text style={styles.signNumberText}>{extractSignNumber(currentSign?.image_url)}</Text>
+              </View>
+            )}
           </View>
         )}
 
@@ -299,6 +309,23 @@ const styles = StyleSheet.create({
     shadowOpacity:   0.08,
     shadowRadius:    6,
     elevation:       3,
+    position:        'relative', // anchors signNumberBadge below
+  },
+  // Same values as SignTextDetail's badge (the learning screen's).
+  signNumberBadge: {
+    position:          'absolute',
+    top:               8,
+    left:              8,
+    backgroundColor:   'rgba(0,0,0,0.55)',
+    borderRadius:      5,
+    paddingHorizontal: 7,
+    paddingVertical:   3,
+    zIndex:            1,
+  },
+  signNumberText: {
+    color:      '#FFFFFF',
+    fontSize:   12,
+    fontWeight: 'bold',
   },
   signImage: {
     width:  160,

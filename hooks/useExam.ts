@@ -92,7 +92,10 @@ export interface UseExamReturn {
 // ─── Constants ────────────────────────────────────────────────────────────────
 
 const EXAM_QUESTION_COUNT = 30;
-const PASS_THRESHOLD      = 24; // 24/30 = 80%
+// Pass mark is derived from api.PASS_FRACTION (26/30, the Israeli MoT
+// theory-test standard), not a second hardcoded number — see the comment
+// on PASS_FRACTION in backend/api.ts for why this must not be duplicated
+// here as its own literal.
 
 // ─── Hook ─────────────────────────────────────────────────────────────────────
 
@@ -184,7 +187,12 @@ export function useExam(): UseExamReturn {
       setIsSaving(true);
       enqueue({ userId, questionId: question.id, isCorrect })
         .then(queueId =>
-          api.saveAnswer(userId, question.id, isCorrect)
+          // Pass queueId as the submission id — if this save succeeds but the
+          // app never gets to persist the dequeue() (crash/kill right after),
+          // flushQueue() will replay this exact answer on next launch under
+          // the SAME id, so the server recognizes it as already-applied
+          // instead of counting it a second time.
+          api.saveAnswer(userId, question.id, isCorrect, 3, queueId)
             .then(() => dequeue(queueId))
         )
         .catch(err => console.warn('[useExam] save failed:', err))
@@ -217,9 +225,10 @@ export function useExam(): UseExamReturn {
       timerRef.current = null;
     }
 
-    const duration = Math.floor((Date.now() - startTimeRef.current) / 1000);
-    const score    = finalAnswers.filter(a => a.isCorrect).length;
-    const passed   = score >= PASS_THRESHOLD;
+    const duration      = Math.floor((Date.now() - startTimeRef.current) / 1000);
+    const score         = finalAnswers.filter(a => a.isCorrect).length;
+    const passThreshold = Math.round(finalAnswers.length * api.PASS_FRACTION);
+    const passed        = score >= passThreshold;
 
     // Build topic breakdown
     const breakdown: Record<string, { correct: number; total: number }> = {};

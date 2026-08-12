@@ -28,10 +28,12 @@ import { AudioFeedback } from '../../components/engineA/AudioFeedback';
 import { ProgressBar } from '../../components/shared/ProgressBar';
 import { usePracticeWeak } from '../../hooks/usePracticeWeak';
 import { useAudio, playAndAwaitAudio } from '../../hooks/useAudio';
+import { speakAndAwait, stopTTS, onTTSSpeakingChange, getIsTTSSpeaking } from '../../utils/googleTTS';
 import { useVoiceRecognition } from '../../hooks/useVoiceRecognition';
 import * as api from '../../backend/api';
 import { DBSign } from '../../backend/supabaseClient';
 import { OfflineBanner } from '../../components/shared/OfflineBanner';
+import { extractSignNumber, shouldShowSignBadge } from '../../utils/signNumber';
 
 // ─── Audio URLs ───────────────────────────────────────────────────────────────
 const _AUDIO_BASE = (process.env.EXPO_PUBLIC_SUPABASE_URL ?? '') + '/storage/v1/object/public/audio';
@@ -41,6 +43,31 @@ const NUMBER_URLS = [
   `${_AUDIO_BASE}/number_3.mp3`,
   `${_AUDIO_BASE}/number_4.mp3`,
 ];
+
+// ─── Praise phrases — list from behavioral-subtopic/[id].tsx, with the same
+// two pronunciation-bug spellings commit e0b352e already fixed elsewhere
+// (scripts/addPrefixesAndShuffle.mjs + content/signs.json, 2026-07-27) but
+// never applied here: doubled-letter 'ዋውው' → 'ዋው', wrong-letter 'ጎቨዝ' →
+// 'ጎበዝ'. Both corrected spellings are copied from that already-fixed
+// script, not newly composed.
+const CORRECT_PRAISES = [
+  'ትክክል!',
+  'አዎ!',
+  'አሪፍ!',
+  'ጎሽ!',
+  'እሰይ!',
+  'ዋው!',
+  'ጎበዝ!',
+  'በጣም ጥሩ!',
+  'በጣም አሪፍ!',
+  'እንድያ ነው!',
+  'እንዲያ ነው!',
+  'ዋው በጣም ጥሩ!',
+  'እሰይ የኔ ጎበዝ!',
+  'ትክክል፥ አቬት እውቀት!',
+  'አቬት ችሎታ ትክክል!',
+];
+const randomPraise = () => CORRECT_PRAISES[Math.floor(Math.random() * CORRECT_PRAISES.length)];
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
@@ -67,6 +94,20 @@ export default function EngineAPracticeScreen() {
   const [playingAnswerIndex, setPlayingAnswerIndex] = useState<number | null>(null);
   const [signs,              setSigns]              = useState<DBSign[]>([]);
   const [isTabFocused,       setIsTabFocused]       = useState(false);
+  // Behavioral questions have no pre-recorded explanation audio at all, so
+  // without a ttsText fallback AudioFeedback gets an empty explanationAudioUri,
+  // playAudio('') no-ops immediately, audioState never reaches 'finished', and
+  // the Next button (which only appears once it does) never appears — the
+  // user gets stuck on the ✅/❌ overlay. Same bug and fix as exam.tsx.
+  const [feedbackTTSText,    setFeedbackTTSText]    = useState('');
+  const [isTTSPlaying,       setIsTTSPlaying]       = useState(getIsTTSSpeaking);
+  // TTS has no pause/resume (a live utterance can't be resumed mid-word) —
+  // bumping this forces the sequence effect to re-run and replay a
+  // behavioral question from the start, the same restart-key pattern
+  // exam.tsx uses for the same reason.
+  const [audioRestartKey,    setAudioRestartKey]    = useState(0);
+
+  useEffect(() => onTTSSpeakingChange(setIsTTSPlaying), []);
 
   // Load all signs for sign images
   useEffect(() => {
@@ -96,8 +137,10 @@ export default function EngineAPracticeScreen() {
       return () => {
         setIsTabFocused(false);
         cancelListening();
+        stopAudio();
+        stopTTS().catch(() => {});
       };
-    }, [cancelListening])
+    }, [cancelListening, stopAudio])
   );
 
   // Answer select (tap OR voice)
@@ -108,7 +151,20 @@ export default function EngineAPracticeScreen() {
     if (!answer) return;
     cancelListening();
     stopAudio();
+    stopTTS().catch(() => {}); // Also stop TTS if a behavioral question was playing
     setPlayingAnswerIndex(null);
+
+    // Behavioral questions: build the TTS feedback text (same logic as
+    // exam.tsx / topic-quiz.tsx) since there's no recorded explanation audio.
+    if (!currentQuestion.sign_id) {
+      const correctText = currentQuestion.answers.find(a => a.is_correct)?.text_amharic ?? '';
+      setFeedbackTTSText(
+        answer.is_correct
+          ? `${randomPraise()} ${correctText}`
+          : `ስህተት! ትክክለኛው መልስ: ${correctText}`
+      );
+    }
+
     submitAnswer(answer.id);
   }, [currentQuestion, phase, submitAnswer, stopAudio, cancelListening]);
 
@@ -134,12 +190,22 @@ export default function EngineAPracticeScreen() {
 
     async function runSequence() {
       await stopAudio();
+      await stopTTS();
       if (isCancelled()) return;
 
-      const qId      = currentQuestion!.id;
-      const qAudioUrl = currentQuestion!.question_audio_url
-        || `${_AUDIO_BASE}/${qId.toLowerCase()}.mp3`;
-      if (!await playAndAwaitAudio(qAudioUrl, isCancelled)) { setPlayingAnswerIndex(null); return; }
+      const qId = currentQuestion!.id;
+      // Behavioral question = no sign_id (same check exam.tsx uses). These
+      // have no pre-recorded audio at all — only TTS can read them.
+      const isBehavioral = !currentQuestion!.sign_id;
+
+      if (isBehavioral) {
+        const qSpoken = await speakAndAwait(currentQuestion!.question_amharic ?? '');
+        if (!qSpoken) { setPlayingAnswerIndex(null); return; }
+      } else {
+        const qAudioUrl = currentQuestion!.question_audio_url
+          || `${_AUDIO_BASE}/${qId.toLowerCase()}.mp3`;
+        if (!await playAndAwaitAudio(qAudioUrl, isCancelled)) { setPlayingAnswerIndex(null); return; }
+      }
       if (isCancelled()) return;
 
       await new Promise(res => setTimeout(res, 1000));
@@ -154,10 +220,20 @@ export default function EngineAPracticeScreen() {
         if (!await playAndAwaitAudio(NUMBER_URLS[i], isCancelled)) { setPlayingAnswerIndex(null); return; }
         if (isCancelled() || phaseRef.current !== 'question') return;
 
-        const answer    = currentQuestion!.answers[i];
-        const answerUrl = answer?.audio_url
-          || `${_AUDIO_BASE}/answer_${qId}_${answer?.id}.mp3`;
-        if (!await playAndAwaitAudio(answerUrl, isCancelled)) { setPlayingAnswerIndex(null); return; }
+        const answer = currentQuestion!.answers[i];
+        if (isBehavioral) {
+          // Unload the number sound (useAudio engine) before the TTS answer
+          // (googleTTS engine) plays — the two engines don't stop each
+          // other, so a lingering number would bleed into the answer.
+          await stopAudio();
+          const answerSpoken = await speakAndAwait(answer?.text_amharic ?? '');
+          if (!answerSpoken) { setPlayingAnswerIndex(null); return; }
+        } else {
+          const answerUrl = answer?.audio_url
+            || `${_AUDIO_BASE}/answer_${qId}_${answer?.id}.mp3`;
+          if (!await playAndAwaitAudio(answerUrl, isCancelled)) { setPlayingAnswerIndex(null); return; }
+        }
+        if (isCancelled() || phaseRef.current !== 'question') return;
       }
       setPlayingAnswerIndex(null);
     }
@@ -167,7 +243,7 @@ export default function EngineAPracticeScreen() {
       cancelled = true;
       setPlayingAnswerIndex(null);
     };
-  }, [currentQuestion?.id, isTabFocused]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [currentQuestion?.id, isTabFocused, audioRestartKey]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Voice failure → play try-again audio
   useEffect(() => {
@@ -196,18 +272,30 @@ export default function EngineAPracticeScreen() {
   const handleBack = async () => {
     cancelListening();
     await stopAudio();
+    await stopTTS().catch(() => {});
     router.back();
   };
 
   // Audio control
+  const isBehavioralQuestion = !currentQuestion?.sign_id;
   const handleAudioButton = async () => {
+    if (isTTSPlaying) {
+      // TTS can't be paused/resumed mid-utterance — stop it. The button is
+      // now idle, so the branch below restarts the sequence on next tap.
+      await stopTTS().catch(() => {});
+      return;
+    }
     if (audioState === 'playing') {
       await pauseAudio();
     } else if (audioState === 'paused') {
       await resumeAudio();
+    } else if (isBehavioralQuestion) {
+      // Behavioral + idle (finished or never started) — nothing is loaded
+      // to resume, so replay the whole sequence from the beginning.
+      setAudioRestartKey(k => k + 1);
     }
   };
-  const audioButtonIcon = audioState === 'playing' ? '⏸' : '▶️';
+  const audioButtonIcon = (audioState === 'playing' || isTTSPlaying) ? '⏸' : '▶️';
 
   // ── Done screen ─────────────────────────────────────────────────────────────
   if (phase === 'done') {
@@ -269,14 +357,23 @@ export default function EngineAPracticeScreen() {
         showsVerticalScrollIndicator={false}
         scrollEnabled={!showFeedback}
       >
-        {/* Traffic sign image */}
-        {currentSign?.image_url && (
+        {/* Sign or behavioral question image */}
+        {(currentSign?.image_url || currentQuestion.question_image_url) && (
           <View style={styles.signImageContainer}>
             <Image
-              source={{ uri: currentSign.image_url }}
+              source={{ uri: currentSign?.image_url ?? currentQuestion.question_image_url! }}
               style={styles.signImage}
               resizeMode="contain"
             />
+            {/* Official sign number — same badge as sign/[id].tsx. Tied to
+                currentSign specifically, never to a behavioral question's
+                image. Some questions ask about the sign's number directly,
+                so this isn't cosmetic. */}
+            {shouldShowSignBadge(currentSign?.image_url) && (
+              <View style={styles.signNumberBadge}>
+                <Text style={styles.signNumberText}>{extractSignNumber(currentSign?.image_url)}</Text>
+              </View>
+            )}
           </View>
         )}
 
@@ -306,7 +403,9 @@ export default function EngineAPracticeScreen() {
               onPress={() => handleAnswerSelect(index)}
               onAudioPress={answer.audio_url
                 ? () => playAudio(answer.audio_url!).catch(() => {})
-                : undefined}
+                : (isBehavioralQuestion && answer.text_amharic)
+                  ? () => { stopAudio(); speakAndAwait(answer.text_amharic!).catch(() => {}); }
+                  : undefined}
               disabled={phase !== 'question'}
             />
           ))}
@@ -328,6 +427,7 @@ export default function EngineAPracticeScreen() {
         <AudioFeedback
           isCorrect={!!lastAnswerCorrect}
           explanationAudioUri={feedbackAudioUri}
+          ttsText={isBehavioralQuestion && feedbackTTSText ? feedbackTTSText : undefined}
           ragQuery={!lastAnswerCorrect && currentQuestion && selectedAnswerId ? {
             question:      currentQuestion.question_amharic,
             wrongAnswer:   currentQuestion.answers.find(a => a.id === selectedAnswerId)?.text_amharic ?? '',
@@ -421,6 +521,23 @@ const styles = StyleSheet.create({
     borderRadius:    20,
     overflow:        'hidden',
     backgroundColor: '#FFFFFF',
+    position:        'relative', // anchors signNumberBadge below
+  },
+  // Same values as sign/[id].tsx's badge.
+  signNumberBadge: {
+    position:          'absolute',
+    top:               10,
+    left:              10,
+    backgroundColor:   'rgba(255,255,255,0.92)',
+    borderRadius:      5,
+    paddingHorizontal: 8,
+    paddingVertical:   4,
+    zIndex:            1,
+  },
+  signNumberText: {
+    color:      '#404943',
+    fontSize:   14,
+    fontWeight: '700',
   },
   signImage: {
     width:  '100%',

@@ -113,12 +113,20 @@ export async function recognizeAmharicAnswer(
 
     console.log(`[STT] Got: "${transcript}" (confidence: ${confidence.toFixed(2)})`);
 
-    // Reject low-confidence results
-    if (confidence < MIN_CONFIDENCE) {
+    const answer = mapSpeechToAnswer(transcript);
+
+    // The confidence gate only matters when the transcript did NOT match one
+    // of our four known answer words — that's the case where a low score is
+    // actually telling us something (background noise, unrelated speech).
+    // A single short word (a name-only utterance like "አንድ") routinely scores
+    // BELOW 65% from Google even when heard correctly, because the model's
+    // confidence is calibrated for full sentences, not one-word answers.
+    // Rejecting an exact match against our own known vocabulary here was
+    // discarding correct recognitions and forcing the user to repeat
+    // themselves — trust the match instead of re-gating it.
+    if (answer === null && confidence < MIN_CONFIDENCE) {
       return { answer: null, confidence, transcript, isRecognized: false };
     }
-
-    const answer = mapSpeechToAnswer(transcript);
 
     return {
       answer,

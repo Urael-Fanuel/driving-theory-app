@@ -37,6 +37,7 @@ import ConfettiCannon from 'react-native-confetti-cannon';
 import * as api from '../../../backend/api';
 import { DBSign } from '../../../backend/supabaseClient';
 import { OfflineBanner } from '../../../components/shared/OfflineBanner';
+import { extractSignNumber, shouldShowSignBadge } from '../../../utils/signNumber';
 
 
 // ─── Audio base URL ────────────────────────────────────────────────────────────
@@ -337,6 +338,14 @@ export default function EngineBTopicQuizScreen() {
               style={styles.signImage}
               resizeMode="contain"
             />
+            {/* Official sign number — same badge as sign/[id].tsx (via
+                SignTextDetail). Some questions ask about the sign's number
+                directly, so this isn't cosmetic. */}
+            {shouldShowSignBadge(currentSign.image_url) && (
+              <View style={styles.signNumberBadge}>
+                <Text style={styles.signNumberText}>{extractSignNumber(currentSign.image_url)}</Text>
+              </View>
+            )}
           </View>
         ) : null}
 
@@ -507,6 +516,23 @@ const styles = StyleSheet.create({
     shadowOpacity:   0.10,
     shadowRadius:    6,
     elevation:       3,
+    position:        'relative', // anchors signNumberBadge below
+  },
+  // Same values as SignTextDetail's badge (the learning screen's).
+  signNumberBadge: {
+    position:          'absolute',
+    top:               8,
+    left:              8,
+    backgroundColor:   'rgba(0,0,0,0.55)',
+    borderRadius:      5,
+    paddingHorizontal: 7,
+    paddingVertical:   3,
+    zIndex:            1,
+  },
+  signNumberText: {
+    color:      '#FFFFFF',
+    fontSize:   12,
+    fontWeight: 'bold',
   },
   signImage: {
     width:  '100%',
