@@ -225,8 +225,10 @@ export default function EngineAHomeScreen() {
         <View style={styles.bottomActions}>
           <TouchableOpacity
             style={[styles.actionButton, { backgroundColor: '#FDD835' }]}
-            onPress={async () => {
-              await speakAndAwait('ጥያቄዎች ለዛሬ');
+            onPress={() => {
+              // Fire-and-forget, same pattern as handleTopicPress's audio —
+              // don't block navigation waiting for narration to finish.
+              speakAndAwait('ጥያቄዎች ለዛሬ').catch(() => {});
               router.push('/(engineA)/topic-quiz/daily' as any);
             }}
             activeOpacity={0.8}
