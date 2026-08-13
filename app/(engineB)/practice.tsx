@@ -279,18 +279,27 @@ const styles = StyleSheet.create({
     paddingVertical:   12,
     gap:               12,
   },
+  // Prominent, fixed color everywhere in the app — see Colors.backButtonAccent.
   exitButton: {
-    width:           40,
-    height:          40,
-    borderRadius:    20,
+    width:           54,
+    height:          54,
+    borderRadius:    27,
     backgroundColor: Colors.card,
     justifyContent:  'center',
     alignItems:      'center',
     flexShrink:      0,
+    borderWidth:     2,
+    borderColor:     Colors.backButtonAccent,
+    shadowColor:     '#000',
+    shadowOffset:    { width: 0, height: 3 },
+    shadowOpacity:   0.20,
+    shadowRadius:    8,
+    elevation:       6,
   },
   exitIcon: {
-    fontSize: 18,
-    color:    Colors.textSecondary,
+    fontSize:   28,
+    fontWeight: '700',
+    color:      Colors.backButtonAccent,
   },
   headerCenter: {
     flex: 1,
@@ -319,8 +328,8 @@ const styles = StyleSheet.create({
   // Same values as topic-quiz.tsx's (Engine B) sign image block.
   signImageContainer: {
     alignSelf:       'center',
-    width:           150,
-    height:          150,
+    width:           220,
+    height:          220,
     borderRadius:    20,
     backgroundColor: '#ffffff',
     shadowColor:     '#000',

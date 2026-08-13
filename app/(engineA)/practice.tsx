@@ -483,18 +483,27 @@ const styles = StyleSheet.create({
     paddingBottom:     8,
     gap:               10,
   },
+  // Prominent, fixed color everywhere in the app — see Colors.backButtonAccent.
   backButton: {
-    width:           40,
-    height:          40,
-    borderRadius:    20,
+    width:           54,
+    height:          54,
+    borderRadius:    27,
     backgroundColor: Colors.card,
     justifyContent:  'center',
     alignItems:      'center',
     flexShrink:      0,
+    borderWidth:     2,
+    borderColor:     Colors.backButtonAccent,
+    shadowColor:     '#000',
+    shadowOffset:    { width: 0, height: 3 },
+    shadowOpacity:   0.20,
+    shadowRadius:    8,
+    elevation:       6,
   },
   backIcon: {
-    fontSize: 18,
-    color:    Colors.textSecondary,
+    fontSize:   28,
+    fontWeight: '700',
+    color:      Colors.backButtonAccent,
   },
   remainingText: {
     fontSize:         18,
@@ -516,8 +525,8 @@ const styles = StyleSheet.create({
 
   // Sign image
   signImageContainer: {
-    width:           160,
-    height:          160,
+    width:           220,
+    height:          220,
     borderRadius:    20,
     overflow:        'hidden',
     backgroundColor: '#FFFFFF',

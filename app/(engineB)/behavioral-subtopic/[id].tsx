@@ -323,12 +323,12 @@ export default function BehavioralSubtopicScreenB() {
           {/* Back — left-aligned like every other topic screen, and given a
               stronger outline/shadow so it reads clearly against the page. */}
           <TouchableOpacity
-            style={[styles.backBtnProminent, { borderColor: levelColor }]}
+            style={styles.backBtnProminent}
             onPress={handleBack}
             accessibilityLabel="חזור"
             activeOpacity={0.8}
           >
-            <Text style={[styles.backIconProminent, { color: levelColor }]}>←</Text>
+            <Text style={styles.backIconProminent}>←</Text>
           </TouchableOpacity>
 
           {/* Image / icon — dual layout when image_url_2 exists */}
@@ -631,10 +631,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center', alignItems: 'center',
     alignSelf: 'flex-start',
     borderWidth: 2,
+    // Fixed color everywhere in the app (not per-topic) — same reasoning as
+    // every other screen's back button.
+    borderColor: Colors.backButtonAccent,
     shadowColor: '#000', shadowOffset: { width: 0, height: 3 },
     shadowOpacity: 0.20, shadowRadius: 8, elevation: 6,
   },
-  backIconProminent: { fontSize: 28, fontWeight: '700', lineHeight: 32 },
+  backIconProminent: { fontSize: 28, fontWeight: '700', lineHeight: 32, color: Colors.backButtonAccent },
 
   // ── Explanation phase ────────────────────────────────────────────────────────
   explainContent: {
@@ -724,7 +727,7 @@ const styles = StyleSheet.create({
     paddingBottom: 24,
   },
   thumbWrap: {
-    width: 110, height: 110,
+    width: 220, height: 220,
     borderRadius: 16, overflow: 'hidden',
     backgroundColor: '#ffffff',
   },
@@ -732,7 +735,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center', alignItems: 'center',
     backgroundColor: '#f0f4f8',
   },
-  thumbImage: { width: 110, height: 110, backgroundColor: '#ffffff' },
+  thumbImage: { width: 220, height: 220, backgroundColor: '#ffffff' },
 
   questionBox: {
     alignSelf: 'stretch',

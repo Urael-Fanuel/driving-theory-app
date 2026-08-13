@@ -36,9 +36,12 @@ export default function EngineBExamScreen() {
   const {
     phase,
     currentQuestion,
+    currentIndex,
+    questions,
     progress,
     submitAnswer,
     nextQuestion,
+    goToQuestion,
     result,
     lastAnswerCorrect,
     selectedAnswerId,
@@ -100,6 +103,24 @@ export default function EngineBExamScreen() {
     nextQuestion();
   };
 
+  // ── Question navigation (prev / next) — same pattern as topic-quiz.tsx (Engine B) ──
+  const canGoPrev = currentIndex > 0;
+  const canGoNext = currentIndex < (questions.length || 30) - 1;
+
+  const handleNavPrev = async () => {
+    if (!canGoPrev) return;
+    await stopAudio();
+    setShowFeedback(false);
+    goToQuestion(currentIndex - 1);
+  };
+
+  const handleNavNext = async () => {
+    if (!canGoNext) return;
+    await stopAudio();
+    setShowFeedback(false);
+    goToQuestion(currentIndex + 1);
+  };
+
   if (phase === 'loading') return <LoadingScreen message="ጥያቄዎችን እየጫነ..." />;
   if (!currentQuestion)    return <LoadingScreen />;
 
@@ -144,6 +165,31 @@ export default function EngineBExamScreen() {
       {isSaving && (
         <Text style={{ textAlign: 'center', color: '#888', fontSize: 11, marginTop: 2 }}>ማስቀመጥ...</Text>
       )}
+
+      {/* Navigation row: ‹ | 1/30 | › — same pattern as topic-quiz.tsx (Engine B).
+          Was missing here entirely; Engine A's exam already has it. */}
+      <View style={styles.navRow}>
+        <TouchableOpacity
+          style={[styles.navBtn, !canGoPrev && styles.navBtnDisabled]}
+          onPress={handleNavPrev}
+          disabled={!canGoPrev}
+          accessibilityLabel="ወደ ቀዳሚ ጥያቄ"
+        >
+          <Text style={styles.navBtnIcon}>‹</Text>
+        </TouchableOpacity>
+
+        <Text style={styles.navCounter}>{currentIndex + 1} / {questions.length || 30}</Text>
+
+        <TouchableOpacity
+          style={[styles.navBtn, !canGoNext && styles.navBtnDisabled]}
+          onPress={handleNavNext}
+          disabled={!canGoNext}
+          accessibilityLabel="ወደ ቀጣይ ጥያቄ"
+        >
+          <Text style={styles.navBtnIcon}>›</Text>
+        </TouchableOpacity>
+      </View>
+
       <OfflineBanner isConnected={isConnected} />
 
       <ScrollView
@@ -237,23 +283,29 @@ const styles = StyleSheet.create({
     paddingVertical:   12,
     gap:               12,
   },
+  // Prominent, fixed color everywhere in the app — see Colors.backButtonAccent
+  // (constants/colors.ts). This file uses raw hex elsewhere, so matching that
+  // instead of adding a new import just for this one value.
   exitButton: {
-    width:           40,
-    height:          40,
-    borderRadius:    20,
+    width:           54,
+    height:          54,
+    borderRadius:    27,
     backgroundColor: '#ffffff',
     justifyContent:  'center',
     alignItems:      'center',
     flexShrink:      0,
+    borderWidth:     2,
+    borderColor:     '#29B6F6',
     shadowColor:     '#000',
-    shadowOffset:    { width: 0, height: 2 },
-    shadowOpacity:   0.10,
-    shadowRadius:    4,
-    elevation:       3,
+    shadowOffset:    { width: 0, height: 3 },
+    shadowOpacity:   0.20,
+    shadowRadius:    8,
+    elevation:       6,
   },
   exitIcon: {
-    fontSize: 18,
-    color:    '#404943',
+    fontSize:   28,
+    fontWeight: '700',
+    color:      '#29B6F6',
   },
   headerCenter: {
     flex: 1,
@@ -272,6 +324,44 @@ const styles = StyleSheet.create({
     color:      '#1565C0',
     fontWeight: '700',
     flexShrink: 0,
+  },
+  // Same values as topic-quiz.tsx's (Engine B) nav row.
+  navRow: {
+    flexDirection:     'row',
+    alignItems:        'center',
+    justifyContent:    'center',
+    paddingHorizontal: 16,
+    paddingBottom:     8,
+    gap:               16,
+  },
+  navBtn: {
+    width:           48,
+    height:          48,
+    borderRadius:    24,
+    backgroundColor: '#ffffff',
+    justifyContent:  'center',
+    alignItems:      'center',
+    shadowColor:     '#000',
+    shadowOffset:    { width: 0, height: 2 },
+    shadowOpacity:   0.10,
+    shadowRadius:    4,
+    elevation:       3,
+  },
+  navBtnDisabled: {
+    opacity: 0.35,
+  },
+  navBtnIcon: {
+    fontSize:   34,
+    color:      '#1565C0',
+    fontWeight: '300',
+    lineHeight: 40,
+  },
+  navCounter: {
+    fontSize:   17,
+    fontWeight: '700',
+    color:      '#191c1e',
+    minWidth:   70,
+    textAlign:  'center',
   },
   content: {
     padding: 16,
@@ -328,7 +418,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   signImage: {
-    width:  160,
-    height: 160,
+    width:  220,
+    height: 220,
   },
 });

@@ -40,6 +40,11 @@ export const Colors = {
   textOnPrimary:  '#FFFFFF',
   textOnSecondary:'#1a1a2e',
 
+  // ─── Back button (all screens, deliberately one fixed color everywhere —
+  // not per-topic/per-screen — so it's instantly recognizable as "the back
+  // button" no matter which screen the user is on) ──────────────────────────
+  backButtonAccent: '#29B6F6',   // Light blue / תכלת
+
   // ─── Microphone button states ─────────────────────────────────────────────
   micIdle:        '#1565C0',   // Blue — ready to listen
   micListening:   '#E53935',   // Red — actively recording

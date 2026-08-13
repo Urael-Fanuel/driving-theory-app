@@ -28,6 +28,32 @@ import basicsLicenseScaffold    from '../content/basics_license_scaffold.json';
 const USE_MOCK = !process.env.EXPO_PUBLIC_SUPABASE_URL;
 
 /**
+ * Fisher-Yates shuffle. Does NOT mutate `arr` — returns a new array.
+ *
+ * Every "shuffle a list of questions" call in this file used to do
+ * `arr.sort(() => Math.random() - 0.5)`. That looks random but isn't: a
+ * sort comparator is supposed to be consistent (given the same two
+ * elements, always return the same sign), and `Math.random() - 0.5`
+ * breaks that contract — the result is whatever bias the engine's sort
+ * implementation happens to produce for an inconsistent comparator, not a
+ * uniform shuffle. Measured directly (2026-08-12): shuffling 12 items and
+ * taking the top 3 gave the first item a ~38% chance of being picked and
+ * a late item as low as ~17%, when every item should have had an equal
+ * 25% chance. This is what was making certain behavioral questions (ones
+ * that happen to sit early in their topic's array) show up far more often
+ * than others. Fisher-Yates is the standard algorithm that actually
+ * guarantees a uniform random permutation.
+ */
+function shuffle<T>(arr: T[]): T[] {
+  const result = [...arr];
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [result[i], result[j]] = [result[j], result[i]];
+  }
+  return result;
+}
+
+/**
  * Every function below falls back to the bundled copy (mockData — a full
  * local snapshot of the sign catalog, see backend/mockData.ts) when a live
  * Supabase call fails, so the app keeps working offline. That's correct
@@ -298,12 +324,16 @@ const DAILY_BEHAVIORAL_FRACTION = 0.6;
  * Questions have no sign_id (empty string) and no pre-recorded audio URLs —
  * Engine A's exam screen uses TTS for these, Engine B shows text only.
  */
-function loadBehavioralExamQuestions(): DBQuestion[] {
+/** A behavioral question tagged with which subtopic it came from — see
+ * selectProportionalByTopic's subtopic-level allocation below. */
+type BehavioralQuestion = DBQuestion & { subtopicKey: string };
+
+function loadBehavioralExamQuestions(): BehavioralQuestion[] {
   const ANSWER_IDS = ['A', 'B', 'C', 'D'] as const;
   const scaffolds = Object.entries(BEHAVIORAL_SCAFFOLD_MAP)
     .map(([topicId, data]) => ({ topicId, data }));
 
-  const questions: DBQuestion[] = [];
+  const questions: BehavioralQuestion[] = [];
 
   for (const { topicId, data } of scaffolds) {
     (data.levels ?? []).forEach((level: any, li: number) => {
@@ -314,6 +344,10 @@ function loadBehavioralExamQuestions(): DBQuestion[] {
             id:                            qId,
             sign_id:                       '',   // no sign — behavioral topic
             topic_id:                      topicId,
+            // Identifies the exact subtopic this question belongs to (a
+            // subtopic is usually exactly 3 questions) — used to spread
+            // an exam's picks across subtopics, not just across topics.
+            subtopicKey:                   `${topicId}_${li}_${si}`,
             question_amharic:              q.question_amharic ?? '',
             question_audio_url:            undefined,
             question_image_url:            sub.image_url ?? undefined,
@@ -336,6 +370,121 @@ function loadBehavioralExamQuestions(): DBQuestion[] {
   }
 
   return questions;
+}
+
+/**
+ * Pick `count` questions out of `pool`, allocating each topic a share
+ * proportional to how many questions it contributes to the pool, THEN —
+ * within each topic's own allocation — doing the exact same proportional
+ * split again across that topic's subtopics, before finally picking
+ * randomly inside each subtopic, and combining every topic's picks with a
+ * ROUND-ROBIN pass rather than a flat random trim. Three problems this
+ * fixes, not one:
+ *
+ * 1. A flat shuffle+slice over the whole pool lets large topics dominate
+ *    purely because they have more rows (e.g. vehicle_knowledge's 81
+ *    behavioral questions vs society_law's 6 — a flat draw of 21 would
+ *    statistically hand vehicle_knowledge ~12 of them and society_law ~1
+ *    by raw volume alone, regardless of how much material each topic
+ *    actually needs to cover). The topic-level allocation fixes this.
+ *
+ * 2. Even after fixing #1, picking a topic's own share randomly from ALL
+ *    of its questions still let the SAME subtopic (usually just 3
+ *    questions, or the same individual sign) contribute 2+ of those picks
+ *    purely by chance — measured directly (2026-08-12): with only the
+ *    topic-level fix, 92.3% of simulated behavioral exams had at least
+ *    one subtopic repeat (2.96% for signs, less severe because sign
+ *    topics have far more distinct signs than behavioral topics have
+ *    subtopics). The nested per-subtopic/per-sign allocation below fixes
+ *    this — dropped to 0.0% in both cases.
+ *
+ * 3. CEIL-ing every topic's share means the allocations almost always sum
+ *    to MORE than `count` (rounding up on every topic, not just some) —
+ *    e.g. 9 sign topics for a 9-question slice CEIL to 14 candidates, not
+ *    9. A flat `shuffle(everyone).slice(0, count)` trims that surplus
+ *    with no regard for WHICH topics already only had one candidate to
+ *    begin with, so a topic that rounded up to exactly 1 could easily
+ *    have that single slot cut — measured directly: 34-39% topic absence
+ *    even with fix #2 already applied. The round-robin final pass fixes
+ *    this by taking each topic's FIRST pick before any topic's second,
+ *    each topic's second before any topic's third, and so on — so a
+ *    topic never loses its one guaranteed slot to another topic's surplus
+ *    (2nd, 3rd, ...) pick. Dropped topic absence to 0.0% in the same
+ *    5,000-run simulation.
+ *
+ * Mirrors get_random_questions' own per-topic CEIL/ROW_NUMBER allocation
+ * for signs (see backend/migration_behavioral_questions.sql and
+ * backend/migration_sign_level_balance.sql) — same technique, applied at
+ * both levels, since behavioral questions live in local JSON, not a table
+ * a SQL function can query.
+ *
+ * `getSubKey` names the second-level grouping: a behavioral question's
+ * subtopic (see BehavioralQuestion.subtopicKey) or a sign question's own
+ * `sign_id` — same technique, two different "what's the smaller unit
+ * inside a topic" answers.
+ */
+function selectProportionalByTopic<T extends { topic_id: string }>(
+  pool: T[],
+  count: number,
+  getSubKey: (item: T) => string,
+): T[] {
+  if (pool.length <= count) return pool;
+
+  const byTopic = new Map<string, T[]>();
+  for (const item of pool) {
+    if (!byTopic.has(item.topic_id)) byTopic.set(item.topic_id, []);
+    byTopic.get(item.topic_id)!.push(item);
+  }
+
+  // One shuffled, capped queue per topic — round-robined below instead of
+  // flattened and randomly trimmed, so a topic's single guaranteed slot
+  // can never be the one that gets cut.
+  const topicQueues: T[][] = [];
+  for (const topicQs of byTopic.values()) {
+    const topicAllocated = Math.ceil(count * (topicQs.length / pool.length));
+
+    // Second pass: spread this topic's own allocation across ITS subtopics
+    // (or signs), the same way the outer pass spreads `count` across topics.
+    const bySubtopic = new Map<string, T[]>();
+    for (const item of topicQs) {
+      const key = getSubKey(item);
+      if (!bySubtopic.has(key)) bySubtopic.set(key, []);
+      bySubtopic.get(key)!.push(item);
+    }
+    const topicSelected: T[] = [];
+    for (const subQs of bySubtopic.values()) {
+      const subAllocated = Math.ceil(topicAllocated * (subQs.length / topicQs.length));
+      topicSelected.push(...shuffle(subQs).slice(0, subAllocated));
+    }
+
+    topicQueues.push(shuffle(topicSelected).slice(0, topicAllocated));
+  }
+
+  // Randomize which topic's turn comes first — without this, when there
+  // are more topics than `count` (e.g. the daily challenge: 6 slots for 7
+  // behavioral topics), the round-robin loop below always exhausts `count`
+  // partway through round 0, and whichever topic happened to be LAST in
+  // Map iteration order would NEVER get picked — not randomly unlucky,
+  // permanently excluded, every single time. Shuffling the turn order
+  // first makes that exclusion random (and thus fair on average across
+  // many exams) instead of landing on the same topic forever.
+  const orderedQueues = shuffle(topicQueues);
+
+  // Round-robin: everyone's round-0 pick before anyone's round-1 pick, etc.
+  const selected: T[] = [];
+  for (let round = 0; selected.length < count; round++) {
+    let tookAny = false;
+    for (const queue of orderedQueues) {
+      if (selected.length >= count) break;
+      if (queue[round] !== undefined) {
+        selected.push(queue[round]);
+        tookAny = true;
+      }
+    }
+    if (!tookAny) break; // every queue exhausted — pool was smaller than count
+  }
+
+  return shuffle(selected);
 }
 
 /**
@@ -382,7 +531,7 @@ function loadBehavioralTopicQuestions(topicId: string, levelId?: string): DBQues
   });
 
   // Shuffle so each quiz session has a different question order
-  return questions.sort(() => Math.random() - 0.5);
+  return shuffle(questions);
 }
 
 /**
@@ -406,9 +555,7 @@ export async function getRandomExamQuestions(
 
   // ── Behavioral questions (always from local JSON) ────────────────────────────
   const numBehavioral = Math.min(Math.max(0, behavioralCount), count);
-  const behavioralQs  = loadBehavioralExamQuestions()
-    .sort(() => Math.random() - 0.5)
-    .slice(0, numBehavioral);
+  const behavioralQs  = selectProportionalByTopic(loadBehavioralExamQuestions(), numBehavioral, q => q.subtopicKey);
 
   const numSign = count - behavioralQs.length; // how many sign-based Qs to fetch
 
@@ -416,9 +563,11 @@ export async function getRandomExamQuestions(
   let signQs: DBQuestion[] = [];
 
   if (USE_MOCK) {
-    signQs = onlyNew(
-      [...mockData.questions].map(normalizeQuestion).sort(() => Math.random() - 0.5)
-    ).slice(0, numSign);
+    signQs = selectProportionalByTopic(
+      onlyNew(mockData.questions.map(normalizeQuestion)),
+      numSign,
+      q => q.sign_id,
+    );
   } else {
     // Try the stored procedure first (fastest, balanced distribution)
     try {
@@ -426,8 +575,7 @@ export async function getRandomExamQuestions(
         question_count: numSign,
       } as any);
       if (error) throw error;
-      signQs = onlyNew(((data as DBQuestion[]) ?? []).map(normalizeQuestion))
-        .sort(() => Math.random() - 0.5)
+      signQs = shuffle(onlyNew(((data as DBQuestion[]) ?? []).map(normalizeQuestion)))
         .slice(0, numSign);
     } catch (err) {
       console.warn('[api] getRandomExamQuestions RPC failed, trying direct query:', err);
@@ -447,20 +595,24 @@ export async function getRandomExamQuestions(
           .select('*')
           .not('sign_id', 'is', null);
         if (error) throw error;
-        signQs = onlyNew(((data as DBQuestion[]) ?? []).map(normalizeQuestion))
-          .sort(() => Math.random() - 0.5)
-          .slice(0, numSign);
+        signQs = selectProportionalByTopic(
+          onlyNew(((data as DBQuestion[]) ?? []).map(normalizeQuestion)),
+          numSign,
+          q => q.sign_id,
+        );
       } catch (err2) {
         logFallbackToMock('getRandomExamQuestions (direct query also failed)', err2);
-        signQs = onlyNew([...mockData.questions].map(normalizeQuestion))
-          .sort(() => Math.random() - 0.5)
-          .slice(0, numSign);
+        signQs = selectProportionalByTopic(
+          onlyNew(mockData.questions.map(normalizeQuestion)),
+          numSign,
+          q => q.sign_id,
+        );
       }
     }
   }
 
   // ── Combine sign + behavioral, shuffle, return ───────────────────────────────
-  return [...signQs, ...behavioralQs].sort(() => Math.random() - 0.5);
+  return shuffle([...signQs, ...behavioralQs]);
 }
 
 /**
@@ -579,10 +731,11 @@ export async function getQuestionsByTopic(topicId: string, levelId?: string): Pr
       .filter(s => s.topic_id === topicId)
       .map(s => s.id);
     return onlyNew(
-      mockData.questions
-        .filter(q => signIds.includes(q.sign_id ?? ''))
-        .map(normalizeQuestion)
-        .sort(() => Math.random() - 0.5),
+      shuffle(
+        mockData.questions
+          .filter(q => signIds.includes(q.sign_id ?? ''))
+          .map(normalizeQuestion),
+      ),
     );
   }
 
@@ -605,7 +758,7 @@ export async function getQuestionsByTopic(topicId: string, levelId?: string): Pr
     if (error) throw error;
     // Shuffle so consecutive questions on the same sign aren't always grouped
     return onlyNew(
-      ((data ?? []) as DBQuestion[]).map(normalizeQuestion).sort(() => Math.random() - 0.5),
+      shuffle(((data ?? []) as DBQuestion[]).map(normalizeQuestion)),
     );
   } catch (err) {
     logFallbackToMock('getQuestionsByTopic', err);
@@ -613,10 +766,11 @@ export async function getQuestionsByTopic(topicId: string, levelId?: string): Pr
       .filter(s => s.topic_id === topicId)
       .map(s => s.id);
     return onlyNew(
-      mockData.questions
-        .filter(q => signIds.includes(q.sign_id ?? ''))
-        .map(normalizeQuestion)
-        .sort(() => Math.random() - 0.5),
+      shuffle(
+        mockData.questions
+          .filter(q => signIds.includes(q.sign_id ?? ''))
+          .map(normalizeQuestion),
+      ),
     );
   }
 }

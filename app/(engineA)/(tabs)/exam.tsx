@@ -797,23 +797,29 @@ const styles = StyleSheet.create({
     paddingBottom:     8,
     gap:               10,
   },
+  // Prominent, fixed color everywhere in the app — see constants/colors.ts
+  // Colors.backButtonAccent — so it reads instantly as "the back button"
+  // regardless of which screen the user is on.
   backButton: {
-    width:           40,
-    height:          40,
-    borderRadius:    20,
+    width:           54,
+    height:          54,
+    borderRadius:    27,
     backgroundColor: '#ffffff',
     justifyContent:  'center',
     alignItems:      'center',
     flexShrink:      0,
+    borderWidth:     2,
+    borderColor:     Colors.backButtonAccent,
     shadowColor:     '#000',
-    shadowOffset:    { width: 0, height: 2 },
-    shadowOpacity:   0.10,
-    shadowRadius:    4,
-    elevation:       3,
+    shadowOffset:    { width: 0, height: 3 },
+    shadowOpacity:   0.20,
+    shadowRadius:    8,
+    elevation:       6,
   },
   backIcon: {
-    fontSize: 18,
-    color:    '#404943',
+    fontSize:   28,
+    fontWeight: '700',
+    color:      Colors.backButtonAccent,
   },
   timerIcon: {
     fontSize:   20,
@@ -829,10 +835,10 @@ const styles = StyleSheet.create({
     gap:               14,
   },
 
-  // Sign image — slightly smaller than learning screen to save space
+  // Sign image
   signImageContainer: {
-    width:           160,
-    height:          160,
+    width:           220,
+    height:          220,
     borderRadius:    20,
     backgroundColor: '#ffffff',
     shadowColor:     '#000',

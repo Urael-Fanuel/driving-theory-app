@@ -490,12 +490,12 @@ export default function BehavioralSubtopicScreenA() {
         <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
 
           <TouchableOpacity
-            style={[styles.backButtonProminent, { borderColor: levelColor }]}
+            style={styles.backButtonProminent}
             onPress={handleBack}
             accessibilityLabel="חזור"
             activeOpacity={0.8}
           >
-            <Text style={[styles.backIconProminent, { color: levelColor }]}>←</Text>
+            <Text style={styles.backIconProminent}>←</Text>
           </TouchableOpacity>
 
           {/* Large image / icon — dual layout when image_url_2 exists */}
@@ -588,12 +588,12 @@ export default function BehavioralSubtopicScreenA() {
           scrollEnabled={!showFeedback}
         >
           <TouchableOpacity
-            style={[styles.backButtonProminent, { borderColor: levelColor }]}
+            style={styles.backButtonProminent}
             onPress={handleBack}
             accessibilityLabel="חזור"
             activeOpacity={0.8}
           >
-            <Text style={[styles.backIconProminent, { color: levelColor }]}>←</Text>
+            <Text style={styles.backIconProminent}>←</Text>
           </TouchableOpacity>
 
           {/* Small subtopic image */}
@@ -745,10 +745,14 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffffff',
     justifyContent: 'center', alignItems: 'center', alignSelf: 'flex-start',
     borderWidth: 2,
+    // Fixed color everywhere in the app (not per-topic) — same reasoning as
+    // every other screen's back button: instantly recognizable regardless
+    // of which topic/screen the user is on.
+    borderColor: Colors.backButtonAccent,
     shadowColor: '#000', shadowOffset: { width: 0, height: 3 },
     shadowOpacity: 0.20, shadowRadius: 8, elevation: 6,
   },
-  backIconProminent: { fontSize: 28, fontWeight: '700', lineHeight: 32 },
+  backIconProminent: { fontSize: 28, fontWeight: '700', lineHeight: 32, color: Colors.backButtonAccent },
 
   // ── Explanation phase ────────────────────────────────────────────────────────
   imageContainer: {
@@ -818,7 +822,7 @@ const styles = StyleSheet.create({
 
   // ── Questions phase ──────────────────────────────────────────────────────────
   signImageContainer: {
-    width: 200, height: 200,
+    width: 220, height: 220,
     borderRadius: 20, overflow: 'hidden',
     backgroundColor: '#ffffff',
     shadowColor: '#000', shadowOffset: { width: 0, height: 3 },
