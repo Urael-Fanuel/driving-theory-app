@@ -274,8 +274,16 @@ const BEHAVIORAL_TOPIC_IDS = Object.keys(BEHAVIORAL_SCAFFOLD_MAP);
 
 // ─── Behavioral exam questions (local JSON → DBQuestion format) ───────────────
 
-/** How many behavioral questions to include in each 30-question exam session */
-const BEHAVIORAL_EXAM_COUNT = 8;
+/**
+ * How many behavioral questions to include in each 30-question exam session.
+ * 21 behavioral + 9 sign (30%) — matches the real Israeli MoT theory test's
+ * topic mix, where only ~8-10 of 30 questions (25-33%) are about signs
+ * specifically and the rest cover traffic law, right of way, and safety
+ * (verified 2026-08-12: dr-teoria.org.il, mylicense.co.il). The exam was
+ * previously the inverse (22 sign / 8 behavioral) — signs as the majority —
+ * which didn't represent the real exam at all.
+ */
+const BEHAVIORAL_EXAM_COUNT = 21;
 
 /** Daily challenge: 60% behavioral, 40% sign-based. */
 const DAILY_QUESTION_COUNT      = 10;
