@@ -10479,7 +10479,7 @@
         "id": "226_q3",
         "question_amharic": "በዚህ ምልክት በተሰየመ መንገድ ላይ ለተሽከርካሪዎች የተከለከለው ምንድን ነው?",
         "question_audio": "226_q3_question.mp3",
-        "explanation_correct_amharic": "አቬት ችሎታ፥ ትክክል። ይህ ምልክት ተሽከርካሪዎች ወደዚህ መንገድ እንዳይገቡ እና እንዳይነዱ ይከለክላል።",
+        "explanation_correct_amharic": "አቬት ችሎታ፥ ትክክል። ይህ ምልክት ተሽከርካሪዎች ወደዚህ መንገድ እንዳይገቡ እና እንዳያሽከረክሩ ይከለክላል።",
         "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: መግባት እና በእሱ ላይ መንዳት።",
         "explanation_correct_audio": "226_q3_correct.mp3",
         "explanation_wrong_audio": "226_q3_wrong.mp3",
