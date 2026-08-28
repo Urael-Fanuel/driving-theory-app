@@ -66,12 +66,19 @@ const PROTECTED_FILES: readonly string[] = [
   'explain_mode_b.mp3',
   'selected_mode_a.mp3',
   'selected_mode_b.mp3',
-  // Engine A home screen + shared loading screen.
+  // Engine A home screen.
   'home_welcome_a.mp3',
-  'loading.mp3',
-  // Result / quiz-pass feedback. Note it is crowd_cheer that plays on success
-  // (result screen + both engines' topic quiz); exam_passed.mp3 is not used.
+  // loading.mp3 removed 2026-08-17 — LoadingScreen no longer plays it (see
+  // that file's header comment), so pre-caching it here would only spend
+  // storage on a file nothing ever uses.
+  // Result / quiz-pass feedback. On success the result screen plays
+  // crowd_cheer.mp3 and then exam_pass.mp3 ("congratulations, you passed");
+  // the topic quizzes play crowd_cheer.mp3 alone. On failure it is
+  // exam_failed.mp3 — note the 'ed', which is what the screen actually asks
+  // for (the generator produced 'exam_fail.mp3' for months, so that file was
+  // missing entirely and failing an exam was silent).
   'crowd_cheer.mp3',
+  'exam_pass.mp3',
   'exam_failed.mp3',
   // "Connection problem, press play to retry" messages. These are what a
   // non-reading user hears WHEN audio fails, so they are the last thing that
