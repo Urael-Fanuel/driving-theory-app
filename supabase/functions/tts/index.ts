@@ -18,13 +18,23 @@ const GOOGLE_TTS_URL = 'https://texttospeech.googleapis.com/v1/text:synthesize';
 const GOOGLE_KEY = Deno.env.get('GOOGLE_TTS_KEY') ?? '';
 const SUPABASE_URL = Deno.env.get('SUPABASE_URL') ?? '';
 const ANON_KEY = Deno.env.get('SUPABASE_ANON_KEY') ?? '';
-// Higher than stt/rag-explain: the app's own offline pre-caching
-// (utils/googleTTS.ts prefetchTtsForTexts — fills the TTS cache ahead of
-// an exam so playback works without a connection later) can legitimately
-// burst to ~40 calls in well under a minute. 90 leaves headroom for that
-// while still being far below what a script hammering this endpoint
-// non-stop would need.
-const MAX_REQUESTS = 90;
+// Higher than stt/rag-explain because the app's own offline pre-caching
+// (utils/googleTTS.ts prefetchTtsForTexts — fills the TTS cache ahead of an
+// exam so playback works without a connection later) legitimately bursts in
+// well under a minute.
+//
+// ⚠️ SIZE THIS AGAINST BEHAVIORAL_EXAM_COUNT. One exam prefetches
+// (behavioral questions) x (1 question + 4 answers) texts. This was set to 90
+// when BEHAVIORAL_EXAM_COUNT was 8 (= 40 calls, comfortable). Raising the
+// count to 21 on 2026-08-17 took one exam to 105 calls — over the cap, so the
+// last ~15 texts were rejected, never cached, and those questions played no
+// feedback audio at all. If BEHAVIORAL_EXAM_COUNT changes again, recompute
+// this number.
+//   21 questions x 5 texts   = 105 prefetch calls
+//   + live calls during play, retries, and a second exam started soon after
+//   => 250 gives real headroom while still bounding what a script that mints
+//      anonymous sessions can cost per account per minute.
+const MAX_REQUESTS = 250;
 const WINDOW_SECONDS = 60;
 
 const corsHeaders = {
