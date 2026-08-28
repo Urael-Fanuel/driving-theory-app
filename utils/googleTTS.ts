@@ -76,26 +76,48 @@ export async function resumeTTS(): Promise<void> {
  */
 function awaitSound(sound: Audio.Sound, maxMs = 30_000): Promise<void> {
   return new Promise<void>((resolve) => {
-    pendingResolve = resolve;
+    let settled = false;
+    let safetyTimer: ReturnType<typeof setTimeout> | undefined;
+
+    /**
+     * Ends THIS wait, and only this one.
+     *
+     * ⚠️ DO NOT go back to resolving the module-level `pendingResolve` from
+     * inside the status listener. That was a real, months-old latent bug that
+     * finally bit on 2026-08-17: a clip's didJustFinish can arrive slightly
+     * AFTER the next clip has already started waiting, and the old code read
+     * whatever `pendingResolve` held at that moment — by then the NEXT clip's
+     * resolve. Consequences, both observed in a device log:
+     *   1. The next clip was reported "finished" ~180 ms in (real length
+     *      ~3.2 s), so the caller advanced to the following sound immediately.
+     *   2. It also set `currentSound = null` while that newer clip was still
+     *      playing, leaving an ORPHAN that nothing could stop.
+     * Together those play two clips at once. Every guard below exists to make
+     * both impossible: a stale clip can only ever end its own wait, and can
+     * never touch a newer clip's state.
+     */
+    const finish = () => {
+      if (settled) return;
+      settled = true;
+      clearTimeout(safetyTimer);
+      // Detach first: a unloaded/stopped sound can still emit one last status.
+      try { sound.setOnPlaybackStatusUpdate(null); } catch {}
+      // Only release the shared slot / current sound if they are still OURS.
+      if (pendingResolve === finish) pendingResolve = null;
+      if (currentSound === sound)    currentSound = null;
+      sound.unloadAsync().catch(() => {});
+      resolve();
+    };
+
+    pendingResolve = finish;
 
     // Safety: always resolve after maxMs — prevents permanent hang → ANR
-    const safetyTimer = setTimeout(() => {
-      const r = pendingResolve;
-      pendingResolve = null;
-      sound.unloadAsync().catch(() => {});
-      currentSound = null;
-      r?.();
-    }, maxMs);
+    safetyTimer = setTimeout(finish, maxMs);
 
     sound.setOnPlaybackStatusUpdate((s) => {
       if (!s.isLoaded) return;
       if (s.didJustFinish) {
-        clearTimeout(safetyTimer);
-        const r = pendingResolve;
-        pendingResolve = null;
-        sound.unloadAsync().catch(() => {});
-        currentSound = null;
-        r?.();
+        finish();
       }
     });
   });
@@ -115,6 +137,16 @@ export async function playUrlAndAwait(url: string): Promise<boolean> {
     if (_ttsGeneration !== myGeneration) { sound.unloadAsync().catch(() => {}); _emitSpeaking(false); return false; }
     currentSound = sound;
     await sound.playAsync();
+    // stopTTS() can land in the gap between the check above and playback
+    // actually starting. Without this second check the clip would keep
+    // playing with currentSound already nulled — audible, and unstoppable.
+    if (_ttsGeneration !== myGeneration) {
+      sound.stopAsync().catch(() => {});
+      sound.unloadAsync().catch(() => {});
+      if (currentSound === sound) currentSound = null;
+      _emitSpeaking(false);
+      return false;
+    }
     await awaitSound(sound);
     _emitSpeaking(false);
     return true;
@@ -192,6 +224,16 @@ export async function speakAndAwait(text: string): Promise<boolean> {
     if (_ttsGeneration !== myGeneration) { sound.unloadAsync().catch(() => {}); _emitSpeaking(false); return false; }
     currentSound = sound;
     await sound.playAsync();
+    // stopTTS() can land in the gap between the check above and playback
+    // actually starting. Without this second check the clip would keep
+    // playing with currentSound already nulled — audible, and unstoppable.
+    if (_ttsGeneration !== myGeneration) {
+      sound.stopAsync().catch(() => {});
+      sound.unloadAsync().catch(() => {});
+      if (currentSound === sound) currentSound = null;
+      _emitSpeaking(false);
+      return false;
+    }
     // Persist AFTER playback starts so writing to disk never delays the audio.
     if (toStore) storeTtsAudio(text, toStore).catch(() => {});
     await awaitSound(sound);
