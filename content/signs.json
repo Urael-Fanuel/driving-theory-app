@@ -1331,7 +1331,7 @@
         "answers": [
           {
             "id": "D",
-            "text_amharic": "በተለመደው ፍጥነት ይነዱ። ወደ መታጠፊያው የመግባት እና የመውጣት ፍጥነት ምንም ለውጥ የለውም።",
+            "text_amharic": "በተለመደው ፍጥነት ያሽከረክሩ። ወደ መታጠፊያው የመግባት እና የመውጣት ፍጥነት ምንም ለውጥ የለውም።",
             "is_correct": false,
             "audio_filename": "answer_102_q1_D.mp3"
           },
@@ -1717,7 +1717,7 @@
         "question_amharic": "በዚህ ምልክት መሰረት እንዴት ይነዳሉ?",
         "question_audio": "105_q2_question.mp3",
         "explanation_correct_amharic": "ትክክል! ጠመዝማዛ መንገድ ሲያጋጥም ፍጥነት መቀነስ፣ በጥንቃቄ መንዳት እና ለመጪዎቹ መታጠፊያዎች መዘጋጀት አስፈላጊ ነው።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ፍጥነትዎን ይቀንሱ፣ በጥንቃቄ ይነዱ እና በተከታታይ ለሚመጡ መታጠፊያዎች በተለይም ለመጀመሪያው ወደ ግራ ለመታጠፍ ይዘጋጁ።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ፍጥነትዎን ይቀንሱ፣ በጥንቃቄ ያሽከረክሩ እና በተከታታይ ለሚመጡ መታጠፊያዎች በተለይም ለመጀመሪያው ወደ ግራ ለመታጠፍ ይዘጋጁ።",
         "explanation_correct_audio": "105_q2_correct.mp3",
         "explanation_wrong_audio": "105_q2_wrong.mp3",
         "answers": [
@@ -1729,13 +1729,13 @@
           },
           {
             "id": "D",
-            "text_amharic": "ፍጥነትዎን ይቀንሱ፣ በጥንቃቄ ይነዱ እና በተከታታይ ለሚመጡ መታጠፊያዎች በተለይም ለመጀመሪያው ወደ ግራ ለመታጠፍ ይዘጋጁ።",
+            "text_amharic": "ፍጥነትዎን ይቀንሱ፣ በጥንቃቄ ያሽከረክሩ እና በተከታታይ ለሚመጡ መታጠፊያዎች በተለይም ለመጀመሪያው ወደ ግራ ለመታጠፍ ይዘጋጁ።",
             "is_correct": true,
             "audio_filename": "answer_105_q2_D.mp3"
           },
           {
             "id": "A",
-            "text_amharic": "ጠንካራውን መስመር ቢያቋርጡም በቀኝ መስመር ብቻ ይነዱ።",
+            "text_amharic": "ጠንካራውን መስመር ቢያቋርጡም በቀኝ መስመር ብቻ ያሽከረክሩ።",
             "is_correct": false,
             "audio_filename": "answer_105_q2_A.mp3"
           },
