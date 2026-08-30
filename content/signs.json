@@ -17141,34 +17141,34 @@
       },
       {
         "id": "610_q3",
-        "question_amharic": "ወደ ኔትanya ለመድረስ ከፈለጉ፣ ምልክቱ ምን መረጃ ይሰጥዎታል?",
+        "question_amharic": "ወደ ናታንያ ለመድረስ ከፈለጉ፣ ምልክቱ ምን መረጃ ይሰጥዎታል?",
         "question_audio": "610_q3_question.mp3",
-        "explanation_correct_amharic": "እንድያ ነው። ምልክቱ የ'ኔትanya' ከተማ ስም እና 21 ኪሎሜትር ርቀቷን በግልጽ ያሳያል፣ ይህም አሽከርካሪው ምን ያህል መጓዝ እንዳለበት እንዲያውቅ ያስችለዋል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: '21' ቁጥር በኪሎሜትር ያለውን ርቀት ያመለክታል፣ የፍጥነት ገደብ ወይም የተሽከርካሪ ዓይነት አይደለም። ምልክቱ ኔትanya ቀጣዩ መዳረሻ መሆን አለመሆኗን ወይም ወዲያውኑ መታጠፍ እንደሚያስፈልግ አያመለክትም።",
+        "explanation_correct_amharic": "እንድያ ነው። ምልክቱ የ'ናታንያ' ከተማ ስም እና 21 ኪሎሜትር ርቀቷን በግልጽ ያሳያል፣ ይህም አሽከርካሪው ምን ያህል መጓዝ እንዳለበት እንዲያውቅ ያስችለዋል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: '21' ቁጥር በኪሎሜትር ያለውን ርቀት ያመለክታል፣ የፍጥነት ገደብ ወይም የተሽከርካሪ ዓይነት አይደለም። ምልክቱ ናታንያ ቀጣዩ መዳረሻ መሆን አለመሆኗን ወይም ወዲያውኑ መታጠፍ እንደሚያስፈልግ አያመለክትም።",
         "explanation_correct_audio": "610_q3_correct.mp3",
         "explanation_wrong_audio": "610_q3_wrong.mp3",
         "answers": [
           {
             "id": "A",
-            "text_amharic": "ምልክቱ የግል ተሽከርካሪዎች ብቻ ወደ ኔትanya እንዲያሽከረክሩ እንደተፈቀደላቸው ያሳያል።",
+            "text_amharic": "ምልክቱ የግል ተሽከርካሪዎች ብቻ ወደ ናታንያ እንዲያሽከረክሩ እንደተፈቀደላቸው ያሳያል።",
             "is_correct": false,
             "audio_filename": "answer_610_q3_A.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "ምልክቱ ኔትanya ቀጣዩ መዳረሻ እንደሆነች እና መታጠፍ እንደማያስፈልግ ያሳያል።",
+            "text_amharic": "ምልክቱ ናታንያ ቀጣዩ መዳረሻ እንደሆነች እና መታጠፍ እንደማያስፈልግ ያሳያል።",
             "is_correct": false,
             "audio_filename": "answer_610_q3_B.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "ምልክቱ ኔትanya 21 ኪሎሜትር ርቀት ላይ እንደምትገኝ ያሳያል።",
+            "text_amharic": "ምልክቱ ናታንያ 21 ኪሎሜትር ርቀት ላይ እንደምትገኝ ያሳያል።",
             "is_correct": true,
             "audio_filename": "answer_610_q3_C.mp3"
           },
           {
             "id": "D",
-            "text_amharic": "ምልክቱ ወደ ኔትanya እስክትደርሱ ድረስ በሰዓት 21 ኪሎሜትር ፍጥነት መንዳት እንዳለባችሁ ያሳያል።",
+            "text_amharic": "ምልክቱ ወደ ናታንያ እስክትደርሱ ድረስ በሰዓት 21 ኪሎሜትር ፍጥነት መንዳት እንዳለባችሁ ያሳያል።",
             "is_correct": false,
             "audio_filename": "answer_610_q3_D.mp3"
           }
