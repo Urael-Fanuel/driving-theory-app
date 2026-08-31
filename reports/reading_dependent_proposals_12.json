@@ -1,0 +1,122 @@
+[
+  {
+    "id": "610_q1",
+    "sign_id": "INFO_610",
+    "topic_id": "information_guidance",
+    "before": "በምስሉ ላይ የሚታየው ምልክት ትርጉም ምንድን ነው?",
+    "after": "በምስሉ ላይ ሁለት የመንገድ ምልክቶች ይታያሉ። አንደኛው ሰማያዊ ሲሆን ሌላኛው አረንጓዴ ነው። በእያንዳንዱ ምልክት ላይ በግራ በኩል ቁጥሮች (ለምሳሌ 21፣ 50፣ 3፣ 10) እና በቀኝ በኩል ደግሞ የከተማ ስሞች (ለምሳሌ ኔታንያ፣ ቴል አቪቭ-ያፎ፣ ኦልጋ፣ ያናይ) ተጽፈዋል። እነዚህ ምልክቶች ምን ትርጉም አላቸው?",
+    "visual_facts_used": "The image shows two road signs, one blue and one green. Each sign has numbers on the left (e.g., 21, 50, 3, 10) and city names on the right (e.g., Netanya, Tel Aviv-Yafo, Olga, Yanay).",
+    "problems": [],
+    "question_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/610_q1_question.mp3?v=1774293594925"
+  },
+  {
+    "id": "610_q2",
+    "sign_id": "INFO_610",
+    "topic_id": "information_guidance",
+    "before": "በምስሉ ላይ በሚታየው ምልክት መሰረት እንዴት ይነዳሉ?",
+    "after": "በምስሉ ላይ ሁለት የመንገድ ምልክቶች ጎን ለጎን ይታያሉ። በግራ በኩል ያለው ሰማያዊ ምልክት ሲሆን፣ ኔታንያ 21 ኪሎ ሜትር እና ቴል አቪቭ-ያፎ 50 ኪሎ ሜትር ይላል። በቀኝ በኩል ያለው አረንጓዴ ምልክት ሲሆን፣ ኦልጋ 3 ኪሎ ሜትር እና ያናይ 10 ኪሎ ሜትር ይላል። በዚህ ምልክት መሰረት እንዴት ይነዳሉ?",
+    "visual_facts_used": "The sign shows two panels side-by-side: a blue one on the left and a green one on the right. The blue sign lists 'Netanya 21 kilometers' and 'Tel Aviv-Yafo 50 kilometers'. The green sign lists 'Olga 3 kilometers' and 'Yanay 10 kilometers'.",
+    "problems": [],
+    "question_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/610_q2_question.mp3?v=1774293594925"
+  },
+  {
+    "id": "605_q1",
+    "sign_id": "INFO_605",
+    "topic_id": "information_guidance",
+    "before": "ምልክቱ ምን ያዝዛል?",
+    "after": "በምስሉ ላይ የሚታዩት የመንገድ ምልክቶች በውስጣቸው ቁጥሮች ያሉባቸው ሳጥኖች አሏቸው። ለምሳሌ፣ ሰማያዊው ምልክት '431' የሚል ቁጥር በሰማያዊ ጠርዝ ባለው ነጭ ሳጥን ውስጥ ሲኖረው፣ አረንጓዴው ምልክት ደግሞ '57' የሚል ቁጥር በቀይ ጠርዝ ባለው ነጭ ሳጥን ውስጥ አለው። ምልክቱ ምን ያዝዛል?",
+    "visual_facts_used": "The signs show numbers '431' and '57' inside distinct, bordered white boxes (blue border for 431 on a blue sign, red border for 57 on a green sign).",
+    "problems": [],
+    "question_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/605_q1_question.mp3?v=1775341099201"
+  },
+  {
+    "id": "605_q2",
+    "sign_id": "INFO_605",
+    "topic_id": "information_guidance",
+    "before": "ይህን ምልክት ሲያዩ እንዴት ይነዳሉ?",
+    "after": "በምስሉ ላይ ሁለት የመንገድ ምልክቶች ይታያሉ፤ አንደኛው ሰማያዊ ሲሆን ሌላኛው አረንጓዴ ነው። ሁለቱም ምልክቶች ወደ ቀኝ የሚያመለክቱ ቀስቶች አሏቸው። እነዚህ ምልክቶች የተለያዩ መዳረሻዎችን እና የመንገድ ቁጥሮችን ያሳያሉ። ይህን ምልክት ሲያዩ እንዴት ይነዳሉ?",
+    "visual_facts_used": "Two road signs, one blue and one green, both showing right-pointing arrows, indicating different destinations and road numbers.",
+    "problems": [],
+    "question_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/605_q2_question.mp3?v=1775341099201"
+  },
+  {
+    "id": "612_q1",
+    "sign_id": "INFO_612",
+    "topic_id": "information_guidance",
+    "before": "በምስሉ ላይ የሚታየው ምልክት (ወደ ላይ ወይም ወደ ታች ቀስት ያለው) ምን ማለት ነው?",
+    "after": "በምስሉ ላይ የሚታየው ምልክት አራት ማዕዘን ቅርጽ ያለው ሲሆን፣ ነጭ ዳራ ላይ ባለ ቀለም ጠርዝ እና በመሃሉ ላይ ቁጥር 24 አለው። ከቁጥሩ በላይ ወደ ላይ የሚያመለክት ቀስት ወይም ከቁጥሩ በታች ወደ ታች የሚያመለክት ቀስት አለው። ይህ ምልክት ምን ማለት ነው?",
+    "visual_facts_used": "The sign's rectangular shape, white background, colored border, the number 24, and the presence and direction (up/down) of an arrow.",
+    "problems": [],
+    "question_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/612_q1_question.mp3?v=1775341112892"
+  },
+  {
+    "id": "612_q2",
+    "sign_id": "INFO_612",
+    "topic_id": "information_guidance",
+    "before": "ወደ ላይ ቀስት ያለው የመንገድ ቁጥር ምልክት ሲያዩ እንዴት ይነዳሉ?",
+    "after": "አራት ማዕዘን ቅርጽ ያለው ነጭ የመንገድ ምልክት አለ። በውስጡ ቁጥር 24 ተጽፏል። ከላይ ደግሞ ወደ ላይ የሚያመለክት ቀስት ይታያል። ይህን የመንገድ ቁጥር ምልክት ሲያዩ እንዴት ይነዳሉ?",
+    "visual_facts_used": "The sign is a white rectangle with the number 24 written on it, and an upward-pointing arrow at the top.",
+    "problems": [],
+    "question_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/612_q2_question.mp3?v=1775341112892"
+  },
+  {
+    "id": "614_q3",
+    "sign_id": "INFO_614",
+    "topic_id": "information_guidance",
+    "before": "ወደ ያቭኔ መሄድ ከፈለጉ፣ በዚህ ምልክት መሰረት ምን ማድረግ አለብዎት?",
+    "after": "በምልክቱ ላይ፣ ሰማያዊ ቀለም ባለው ክፍል ውስጥ 'ያቭኔ' የሚል ጽሑፍ አለ። ከዚህ ጽሑፍ አጠገብ ወደ ቀኝ የሚጠቁም ነጭ ቀስት ይታያል። ወደ ያቭኔ መሄድ ከፈለጉ፣ በዚህ ምልክት መሰረት ምን ማድረግ አለብዎት?",
+    "visual_facts_used": "The sign has a blue section at the top with the text 'Yavne' and a white arrow pointing to the right, indicating an exit.",
+    "problems": [],
+    "question_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/614_q3_question.mp3?v=1774293594925"
+  },
+  {
+    "id": "603_q1",
+    "sign_id": "INFO_603",
+    "topic_id": "information_guidance",
+    "before": "ምልክቱ ምን ያዝዛል?",
+    "after": "በመንገድ ምልክቱ መሃል ላይ፣ ቡናማ ቀለም ባለው ሰሌዳ ላይ፣ ወደላይ የሚያመለክቱ ሁለት ቀስቶች እና ቁጥር 518 ያለበት አራት ማዕዘን ምልክት ይታያል። ከላይ በኩል 'ጊቭ' አት ሃልሮሲም' የሚል ስም ተጽፏል። ይህ ምልክት ምን ያዝዛል?",
+    "visual_facts_used": "Described the middle brown panel of the sign, its two upward arrows, the number 518 in a green-bordered white rectangle, and the destination name 'ጊቭ' አት ሃልሮሲም' (Giv'at Halrosim) in Amharic transliteration.",
+    "problems": [],
+    "question_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/603_q1_question.mp3?v=1774293594925"
+  },
+  {
+    "id": "506_q3",
+    "sign_id": "PUBLIC_506",
+    "topic_id": "public_transport",
+    "before": "ወደ ራማት ሃናሲ ለመሄድ የሚፈልግ ተሳፋሪ የትኛውን የትራም መስመር መውሰድ አለበት?",
+    "after": "ምልክቱ የትራም ማቆሚያ ጣቢያ መሆኑን ያሳያል። በቢጫ ክፍሎች ላይ የትራም መስመሮች እና መድረሻዎቻቸው ተዘርዝረዋል፤ በመጀመሪያው ክፍል በግራ በኩል ቁጥር 4፣ በቀኝ በኩል ደግሞ 'ሪዲንግ' የሚል ጽሑፍ አለ። በሁለተኛው ክፍል በግራ በኩል ቁጥር 18፣ በቀኝ በኩል ደግሞ 'ራማት ሃናሲ' የሚል ጽሑፍ አለ። ወደ ራማት ሃናሲ ለመሄድ የሚፈልግ ተሳፋሪ የትኛውን የትራም መስመር መውሰድ አለበት?",
+    "visual_facts_used": "The sign's layout, colors, the tram line numbers (4 and 18), and their respective destinations ('ሪዲንግ' and 'ራማት ሃናሲ') written in Ge'ez transliteration.",
+    "problems": [],
+    "question_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/506_q3_question.mp3?v=1774300345612"
+  },
+  {
+    "id": "629_q1",
+    "sign_id": "INFO_629",
+    "topic_id": "information_guidance",
+    "before": "ይህ ምልክት ምን ማለት ነው?",
+    "after": "በነጭ አራት ማዕዘን ቅርጽ ባለው ጥቁር ጠርዝ ባለው ምልክት ላይ፣ የመንገዱ ዳር ጠባብ መሆኑን የሚገልጽ ጽሑፍ አለ። ይህ ምልክት ምን ማለት ነው?",
+    "visual_facts_used": "The sign's white rectangular shape, black border, and the meaning of the text indicating narrow road shoulders.",
+    "problems": [],
+    "question_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/629_q1_question.mp3?v=1774294665503"
+  },
+  {
+    "id": "629_q2",
+    "sign_id": "INFO_629",
+    "topic_id": "information_guidance",
+    "before": "በዚህ ምልክት መሰረት እንዴት መንዳት አለብህ?",
+    "after": "ጥቁር ፍሬም ባለው ነጭ አራት ማዕዘን ምልክት ላይ፣ ከታች በእንግሊዝኛ ፊደላት 'ናሮው ሹልደርስ' ተብሎ ተጽፏል። በዚህ ምልክት መሰረት እንዴት መንዳት አለብህ?",
+    "visual_facts_used": "Described the white rectangular sign with a black border, stating that it has 'Narrow Shoulders' written in English at the bottom.",
+    "problems": [],
+    "question_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/629_q2_question.mp3?v=1774294665503"
+  },
+  {
+    "id": "629_q3",
+    "sign_id": "INFO_629",
+    "topic_id": "information_guidance",
+    "before": "ይህ ምልክት ሲኖር የጎን መንገዱን (ሹልደር) ከመጠቀም መቆጠብ ለምን አስፈለገ?",
+    "after": "በነጭ ዳራ ላይ ጥቁር ድንበር ያለው አራት ማዕዘን ቅርጽ ያለው ምልክት ሲሆን፣ 'የጎን መንገዱ ጠባብ ነው' የሚል መልዕክት አለው። ይህ ምልክት ሲኖር የጎን መንገዱን (ሹልደር) ከመጠቀም መቆጠብ ለምን አስፈለገ?",
+    "visual_facts_used": "The sign is a white rectangle with a black border, containing text in Hebrew, Arabic, and English, all meaning 'Narrow Shoulders'.",
+    "problems": [],
+    "question_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/629_q3_question.mp3?v=1774294665503"
+  }
+]

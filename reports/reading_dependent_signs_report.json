@@ -1,0 +1,697 @@
+{
+  "confirmed": [
+    {
+      "id": "631_q1",
+      "sign_id": "INFO_631",
+      "topic_id": "information_guidance",
+      "printed_text": "2500",
+      "reasons": [
+        "answer A needs \"2500\", printed on the sign but never spoken",
+        "answer B needs \"2500\", printed on the sign but never spoken",
+        "answer C needs \"2500\", printed on the sign but never spoken",
+        "answer D needs \"2500\", printed on the sign but never spoken"
+      ]
+    },
+    {
+      "id": "439_q1",
+      "sign_id": "PROHIBITION_439",
+      "topic_id": "prohibitions",
+      "printed_text": "הכניסה אסורה לרכב שאורכו מעל 12 מטר ممنوع الدخول لمركبه طولها يزيد عن 12 متر Entry Prohibited to Vehicles Measuring Over 12 Meters in Length",
+      "reasons": [
+        "answer A needs \"12\", printed on the sign but never spoken",
+        "answer B needs \"12\", printed on the sign but never spoken",
+        "answer C needs \"12\", printed on the sign but never spoken",
+        "answer D needs \"12\", printed on the sign but never spoken"
+      ]
+    },
+    {
+      "id": "916_q1",
+      "sign_id": "WORK_916",
+      "topic_id": "work_site",
+      "printed_text": "2500",
+      "reasons": [
+        "answer D needs \"2500\", printed on the sign but never spoken",
+        "answer C needs \"2500\", printed on the sign but never spoken"
+      ]
+    },
+    {
+      "id": "501_q3",
+      "sign_id": "PUBLIC_501",
+      "topic_id": "public_transport",
+      "printed_text": "מונית taxi\n3+",
+      "reasons": [
+        "answer D needs \"3\", printed on the sign but never spoken"
+      ]
+    },
+    {
+      "id": "406_q1",
+      "sign_id": "PROHIBITION_406",
+      "topic_id": "prohibitions",
+      "printed_text": "طن 10 t",
+      "reasons": [
+        "answer B needs \"10\", printed on the sign but never spoken",
+        "answer C needs \"10\", printed on the sign but never spoken",
+        "answer D needs \"10\", printed on the sign but never spoken"
+      ]
+    },
+    {
+      "id": "406_q2",
+      "sign_id": "PROHIBITION_406",
+      "topic_id": "prohibitions",
+      "printed_text": "طن 10 t",
+      "reasons": [
+        "answer B needs \"10\", printed on the sign but never spoken",
+        "answer C needs \"10\", printed on the sign but never spoken",
+        "answer D needs \"10\", printed on the sign but never spoken"
+      ]
+    },
+    {
+      "id": "218_q1",
+      "sign_id": "SIGN_218",
+      "topic_id": "regulatory",
+      "printed_text": "55",
+      "reasons": [
+        "answer A needs \"55\", printed on the sign but never spoken",
+        "answer B needs \"55\", printed on the sign but never spoken",
+        "answer C needs \"55\", printed on the sign but never spoken",
+        "answer D needs \"55\", printed on the sign but never spoken"
+      ]
+    },
+    {
+      "id": "218_q2",
+      "sign_id": "SIGN_218",
+      "topic_id": "regulatory",
+      "printed_text": "55",
+      "reasons": [
+        "answer A needs \"55\", printed on the sign but never spoken",
+        "answer B needs \"55\", printed on the sign but never spoken",
+        "answer C needs \"55\", printed on the sign but never spoken"
+      ]
+    },
+    {
+      "id": "218_q3",
+      "sign_id": "SIGN_218",
+      "topic_id": "regulatory",
+      "printed_text": "55",
+      "reasons": [
+        "answer C needs \"55\", printed on the sign but never spoken"
+      ]
+    },
+    {
+      "id": "222_q1",
+      "sign_id": "SIGN_222",
+      "topic_id": "regulatory",
+      "printed_text": "30",
+      "reasons": [
+        "answer A needs \"30\", printed on the sign but never spoken",
+        "answer B needs \"30\", printed on the sign but never spoken",
+        "answer C needs \"30\", printed on the sign but never spoken"
+      ]
+    },
+    {
+      "id": "222_q2",
+      "sign_id": "SIGN_222",
+      "topic_id": "regulatory",
+      "printed_text": "30",
+      "reasons": [
+        "answer A needs \"30\", printed on the sign but never spoken",
+        "answer B needs \"30\", printed on the sign but never spoken",
+        "answer C needs \"30\", printed on the sign but never spoken",
+        "answer D needs \"30\", printed on the sign but never spoken"
+      ]
+    },
+    {
+      "id": "222_q3",
+      "sign_id": "SIGN_222",
+      "topic_id": "regulatory",
+      "printed_text": "30",
+      "reasons": [
+        "answer C needs \"30\", printed on the sign but never spoken"
+      ]
+    },
+    {
+      "id": "417_q1",
+      "sign_id": "PROHIBITION_417",
+      "topic_id": "prohibitions",
+      "printed_text": "2.1",
+      "reasons": [
+        "answer A needs \"2.1\", printed on the sign but never spoken",
+        "answer B needs \"2.1\", printed on the sign but never spoken",
+        "answer C needs \"2.1\", printed on the sign but never spoken",
+        "answer D needs \"2.1\", printed on the sign but never spoken"
+      ]
+    },
+    {
+      "id": "223_q1",
+      "sign_id": "SIGN_223",
+      "topic_id": "regulatory",
+      "printed_text": "30",
+      "reasons": [
+        "answer B needs \"30\", printed on the sign but never spoken",
+        "answer D needs \"30\", printed on the sign but never spoken"
+      ]
+    },
+    {
+      "id": "223_q2",
+      "sign_id": "SIGN_223",
+      "topic_id": "regulatory",
+      "printed_text": "30",
+      "reasons": [
+        "answer A needs \"30\", printed on the sign but never spoken",
+        "answer B needs \"30\", printed on the sign but never spoken"
+      ]
+    },
+    {
+      "id": "223_q3",
+      "sign_id": "SIGN_223",
+      "topic_id": "regulatory",
+      "printed_text": "30",
+      "reasons": [
+        "answer A needs \"30\", printed on the sign but never spoken"
+      ]
+    },
+    {
+      "id": "417_q2",
+      "sign_id": "PROHIBITION_417",
+      "topic_id": "prohibitions",
+      "printed_text": "2.1",
+      "reasons": [
+        "answer D needs \"2.1\", printed on the sign but never spoken"
+      ]
+    },
+    {
+      "id": "427_q2",
+      "sign_id": "PROHIBITION_427",
+      "topic_id": "prohibitions",
+      "printed_text": "40",
+      "reasons": [
+        "answer A needs \"40\", printed on the sign but never spoken",
+        "answer D needs \"40\", printed on the sign but never spoken"
+      ]
+    },
+    {
+      "id": "427_q3",
+      "sign_id": "PROHIBITION_427",
+      "topic_id": "prohibitions",
+      "printed_text": "40",
+      "reasons": [
+        "answer A needs \"40\", printed on the sign but never spoken",
+        "answer B needs \"40\", printed on the sign but never spoken"
+      ]
+    },
+    {
+      "id": "506_q3",
+      "sign_id": "PUBLIC_506",
+      "topic_id": "public_transport",
+      "printed_text": "מוזיאון האביב 4 רידנג 18 רמת הנשיא",
+      "reasons": [
+        "answer B needs \"4\", printed on the sign but never spoken",
+        "answer C needs \"18\", printed on the sign but never spoken",
+        "answer D needs \"4\", printed on the sign but never spoken"
+      ]
+    },
+    {
+      "id": "416_q1",
+      "sign_id": "PROHIBITION_416",
+      "topic_id": "prohibitions",
+      "printed_text": "4.6",
+      "reasons": [
+        "answer B needs \"4.6\", printed on the sign but never spoken",
+        "answer C needs \"4.6\", printed on the sign but never spoken",
+        "answer D needs \"4.6\", printed on the sign but never spoken"
+      ]
+    },
+    {
+      "id": "416_q2",
+      "sign_id": "PROHIBITION_416",
+      "topic_id": "prohibitions",
+      "printed_text": "4.6",
+      "reasons": [
+        "answer A needs \"4.6\", printed on the sign but never spoken"
+      ]
+    },
+    {
+      "id": "416_q3",
+      "sign_id": "PROHIBITION_416",
+      "topic_id": "prohibitions",
+      "printed_text": "4.6",
+      "reasons": [
+        "answer B needs \"4.6\", printed on the sign but never spoken"
+      ]
+    },
+    {
+      "id": "426_q1",
+      "sign_id": "PROHIBITION_426",
+      "topic_id": "prohibitions",
+      "printed_text": "40\n60",
+      "reasons": [
+        "answer A needs \"40\", printed on the sign but never spoken",
+        "answer A needs \"60\", printed on the sign but never spoken",
+        "answer B needs \"40\", printed on the sign but never spoken",
+        "answer B needs \"60\", printed on the sign but never spoken",
+        "answer C needs \"40\", printed on the sign but never spoken",
+        "answer C needs \"60\", printed on the sign but never spoken",
+        "answer D needs \"40\", printed on the sign but never spoken",
+        "answer D needs \"60\", printed on the sign but never spoken"
+      ]
+    },
+    {
+      "id": "612_q1",
+      "sign_id": "INFO_612",
+      "topic_id": "information_guidance",
+      "printed_text": "24",
+      "reasons": [
+        "answer A needs \"24\", printed on the sign but never spoken",
+        "answer B needs \"24\", printed on the sign but never spoken",
+        "answer D needs \"24\", printed on the sign but never spoken"
+      ]
+    },
+    {
+      "id": "612_q2",
+      "sign_id": "INFO_612",
+      "topic_id": "information_guidance",
+      "printed_text": "24",
+      "reasons": [
+        "answer A needs \"24\", printed on the sign but never spoken",
+        "answer D needs \"24\", printed on the sign but never spoken"
+      ]
+    },
+    {
+      "id": "630_q2",
+      "sign_id": "INFO_630",
+      "topic_id": "information_guidance",
+      "printed_text": "2500",
+      "reasons": [
+        "answer B needs \"2500\", printed on the sign but never spoken"
+      ]
+    },
+    {
+      "id": "630_q3",
+      "sign_id": "INFO_630",
+      "topic_id": "information_guidance",
+      "printed_text": "2500",
+      "reasons": [
+        "answer A needs \"2500\", printed on the sign but never spoken",
+        "answer B needs \"2500\", printed on the sign but never spoken",
+        "answer C needs \"2500\", printed on the sign but never spoken",
+        "answer D needs \"2500\", printed on the sign but never spoken"
+      ]
+    },
+    {
+      "id": "427_q1",
+      "sign_id": "PROHIBITION_427",
+      "topic_id": "prohibitions",
+      "printed_text": "40",
+      "reasons": [
+        "answer A needs \"40\", printed on the sign but never spoken",
+        "answer B needs \"40\", printed on the sign but never spoken",
+        "answer C needs \"40\", printed on the sign but never spoken",
+        "answer D needs \"40\", printed on the sign but never spoken"
+      ]
+    },
+    {
+      "id": "426_q2",
+      "sign_id": "PROHIBITION_426",
+      "topic_id": "prohibitions",
+      "printed_text": "40\n60",
+      "reasons": [
+        "answer A needs \"40\", printed on the sign but never spoken",
+        "answer A needs \"60\", printed on the sign but never spoken"
+      ]
+    },
+    {
+      "id": "630_q1",
+      "sign_id": "INFO_630",
+      "topic_id": "information_guidance",
+      "printed_text": "2500",
+      "reasons": [
+        "answer A needs \"2500\", printed on the sign but never spoken",
+        "answer B needs \"2500\", printed on the sign but never spoken",
+        "answer C needs \"2500\", printed on the sign but never spoken",
+        "answer D needs \"2500\", printed on the sign but never spoken"
+      ]
+    },
+    {
+      "id": "501_q2",
+      "sign_id": "PUBLIC_501",
+      "topic_id": "public_transport",
+      "printed_text": "מונית taxi\n3+",
+      "reasons": [
+        "answer C needs \"3\", printed on the sign but never spoken"
+      ]
+    },
+    {
+      "id": "917_q2",
+      "sign_id": "WORK_917",
+      "topic_id": "work_site",
+      "printed_text": "2500",
+      "reasons": [
+        "answer B needs \"2500\", printed on the sign but never spoken",
+        "answer C needs \"2500\", printed on the sign but never spoken"
+      ]
+    },
+    {
+      "id": "601_q3",
+      "sign_id": "INFO_601",
+      "topic_id": "information_guidance",
+      "printed_text": "אייל إيال Eyal 1500 חביבה حبيبه Haviva 500",
+      "reasons": [
+        "answer B needs \"1500\", printed on the sign but never spoken"
+      ]
+    }
+  ],
+  "review": [
+    {
+      "id": "502_q1",
+      "sign_id": "PUBLIC_502",
+      "topic_id": "public_transport",
+      "printed_text": "מונית 3+",
+      "reasons": [
+        "sign carries printed words (מונית) — check by hand whether the answer needs them"
+      ]
+    },
+    {
+      "id": "507_q2",
+      "sign_id": "PUBLIC_507",
+      "topic_id": "public_transport",
+      "printed_text": "מוניתtaxi",
+      "reasons": [
+        "sign carries printed words (מוניתtaxi) — check by hand whether the answer needs them"
+      ]
+    },
+    {
+      "id": "507_q3",
+      "sign_id": "PUBLIC_507",
+      "topic_id": "public_transport",
+      "printed_text": "מוניתtaxi",
+      "reasons": [
+        "sign carries printed words (מוניתtaxi) — check by hand whether the answer needs them"
+      ]
+    },
+    {
+      "id": "509_q1",
+      "sign_id": "PUBLIC_509",
+      "topic_id": "public_transport",
+      "printed_text": "מונית taxi",
+      "reasons": [
+        "sign carries printed words (מונית taxi) — check by hand whether the answer needs them"
+      ]
+    },
+    {
+      "id": "509_q2",
+      "sign_id": "PUBLIC_509",
+      "topic_id": "public_transport",
+      "printed_text": "מונית taxi",
+      "reasons": [
+        "sign carries printed words (מונית taxi) — check by hand whether the answer needs them"
+      ]
+    },
+    {
+      "id": "605_q1",
+      "sign_id": "INFO_605",
+      "topic_id": "information_guidance",
+      "printed_text": "מודיעין\nموديعين\nModi'in\n431\nראשון לציון\nريشون لتسيون\nRishon LeTsiyon\nנתניה\nنتانيا\nNetanya\n57\nכפר יונה\nכפאר יונא\nKfar Yona",
+      "reasons": [
+        "sign carries printed words (מודיעין Modi ראשון לציון Rishon LeTsiyon נתניה Netanya כפר יונה כפאר יונא Kfar Yona) — check by hand whether the answer needs them"
+      ]
+    },
+    {
+      "id": "605_q2",
+      "sign_id": "INFO_605",
+      "topic_id": "information_guidance",
+      "printed_text": "מודיעין\nموديعين\nModi'in\n431\nראשון לציון\nريشون لتسيون\nRishon LeTsiyon\nנתניה\nنتانيا\nNetanya\n57\nכפר יונה\nכפאר יונא\nKfar Yona",
+      "reasons": [
+        "sign carries printed words (מודיעין Modi ראשון לציון Rishon LeTsiyon נתניה Netanya כפר יונה כפאר יונא Kfar Yona) — check by hand whether the answer needs them"
+      ]
+    },
+    {
+      "id": "439_q3",
+      "sign_id": "PROHIBITION_439",
+      "topic_id": "prohibitions",
+      "printed_text": "הכניסה אסורה לרכב שאורכו מעל 12 מטר ممنوع الدخول لمركبه طولها يزيد عن 12 متر Entry Prohibited to Vehicles Measuring Over 12 Meters in Length",
+      "reasons": [
+        "sign carries printed words (הכניסה אסורה לרכב שאורכו מעל מטר Entry Prohibited Vehicles Measuring Over Meters Length) — check by hand whether the answer needs them"
+      ]
+    },
+    {
+      "id": "614_q3",
+      "sign_id": "INFO_614",
+      "topic_id": "information_guidance",
+      "printed_text": "יבנה يافني Yavne שוק עירוני السوق البلدي Market לוד اللد Lod תל אביב تل ابيب Tel Aviv",
+      "reasons": [
+        "sign carries printed words (יבנה Yavne שוק עירוני Market לוד Lod אביב Tel Aviv) — check by hand whether the answer needs them"
+      ]
+    },
+    {
+      "id": "439_q2",
+      "sign_id": "PROHIBITION_439",
+      "topic_id": "prohibitions",
+      "printed_text": "הכניסה אסורה לרכב שאורכו מעל 12 מטר ممنوع الدخول لمركبه طولها يزيد عن 12 متر Entry Prohibited to Vehicles Measuring Over 12 Meters in Length",
+      "reasons": [
+        "sign carries printed words (הכניסה אסורה לרכב שאורכו מעל מטר Entry Prohibited Vehicles Measuring Over Meters Length) — check by hand whether the answer needs them"
+      ]
+    },
+    {
+      "id": "603_q1",
+      "sign_id": "INFO_603",
+      "topic_id": "information_guidance",
+      "printed_text": "נתניה ( דרום ) نتانيا (جنوب) Netanya (South) 553 גבעת האירוסים جفمعات هيرروسيم Giv' at Halrosim 518",
+      "reasons": [
+        "sign carries printed words (נתניה דרום Netanya South גבעת האירוסים Giv Halrosim) — check by hand whether the answer needs them"
+      ]
+    },
+    {
+      "id": "608_q1",
+      "sign_id": "INFO_608",
+      "topic_id": "information_guidance",
+      "printed_text": "יציאה\nخروج\nEXIT",
+      "reasons": [
+        "sign carries printed words (יציאה EXIT) — check by hand whether the answer needs them"
+      ]
+    },
+    {
+      "id": "608_q2",
+      "sign_id": "INFO_608",
+      "topic_id": "information_guidance",
+      "printed_text": "יציאה\nخروج\nEXIT",
+      "reasons": [
+        "sign carries printed words (יציאה EXIT) — check by hand whether the answer needs them"
+      ]
+    },
+    {
+      "id": "610_q1",
+      "sign_id": "INFO_610",
+      "topic_id": "information_guidance",
+      "printed_text": "21 נְתַנְיָה نتانيا Netanya 50 תֵּל אָבִיב-יָפוֹ تيل أبيب-يافو Tel Aviv-Yafo 3 אוֹלְגָה اولجا Olga 10 יָנַאי يناي Yanay",
+      "reasons": [
+        "sign carries printed words (נְתַנְיָה Netanya תֵּל אָבִיב יָפוֹ Tel Aviv Yafo אוֹלְגָה Olga יָנַאי Yanay) — check by hand whether the answer needs them"
+      ]
+    },
+    {
+      "id": "610_q2",
+      "sign_id": "INFO_610",
+      "topic_id": "information_guidance",
+      "printed_text": "21 נְתַנְיָה نتانيا Netanya 50 תֵּל אָבִיב-יָפוֹ تيل أبيب-يافو Tel Aviv-Yafo 3 אוֹלְגָה اولجا Olga 10 יָנַאי يناي Yanay",
+      "reasons": [
+        "sign carries printed words (נְתַנְיָה Netanya תֵּל אָבִיב יָפוֹ Tel Aviv Yafo אוֹלְגָה Olga יָנַאי Yanay) — check by hand whether the answer needs them"
+      ]
+    },
+    {
+      "id": "629_q1",
+      "sign_id": "INFO_629",
+      "topic_id": "information_guidance",
+      "printed_text": "שוליים צרים جوانب ضيقة Narrow Shoulders 5.2 מערב غرب West גודש לפניך CONGESTION",
+      "reasons": [
+        "sign carries printed words (שוליים צרים Narrow Shoulders מערב West גודש לפניך CONGESTION) — check by hand whether the answer needs them"
+      ]
+    },
+    {
+      "id": "629_q2",
+      "sign_id": "INFO_629",
+      "topic_id": "information_guidance",
+      "printed_text": "שוליים צרים جوانب ضيقة Narrow Shoulders 5.2 מערב غرب West גודש לפניך CONGESTION",
+      "reasons": [
+        "sign carries printed words (שוליים צרים Narrow Shoulders מערב West גודש לפניך CONGESTION) — check by hand whether the answer needs them"
+      ]
+    },
+    {
+      "id": "629_q3",
+      "sign_id": "INFO_629",
+      "topic_id": "information_guidance",
+      "printed_text": "שוליים צרים جوانب ضيقة Narrow Shoulders 5.2 מערב غرب West גודש לפניך CONGESTION",
+      "reasons": [
+        "sign carries printed words (שוליים צרים Narrow Shoulders מערב West גודש לפניך CONGESTION) — check by hand whether the answer needs them"
+      ]
+    }
+  ],
+  "signsWithText": [
+    {
+      "id": "WORK_916",
+      "printed_text": "2500"
+    },
+    {
+      "id": "SIGN_223",
+      "printed_text": "30"
+    },
+    {
+      "id": "SIGN_218",
+      "printed_text": "55"
+    },
+    {
+      "id": "INFO_601",
+      "printed_text": "אייל إيال Eyal 1500 חביבה حبيبه Haviva 500"
+    },
+    {
+      "id": "INFO_603",
+      "printed_text": "נתניה ( דרום ) نتانيا (جنوب) Netanya (South) 553 גבעת האירוסים جفمعات هيرروسيم Giv' at Halrosim 518"
+    },
+    {
+      "id": "INFO_608",
+      "printed_text": "יציאה\nخروج\nEXIT"
+    },
+    {
+      "id": "INFO_616",
+      "printed_text": "הר הרצל\nجبل هرتسل\nMount Herzl"
+    },
+    {
+      "id": "INFO_627",
+      "printed_text": "P"
+    },
+    {
+      "id": "INFO_630",
+      "printed_text": "2500"
+    },
+    {
+      "id": "PUBLIC_506",
+      "printed_text": "מוזיאון האביב 4 רידנג 18 רמת הנשיא"
+    },
+    {
+      "id": "PUBLIC_505",
+      "printed_text": "רחוב המסגר 10 בני ברק 300 נתניה אקספרס 20 קרית אונו מוצ\"ש במסלול קו 54 11 רעננה 500 גלילות (כוכב) קדימה [ואחייצ] 40 כפר סבא"
+    },
+    {
+      "id": "ROAD_819",
+      "printed_text": "T"
+    },
+    {
+      "id": "PROHIBITION_417",
+      "printed_text": "2.1"
+    },
+    {
+      "id": "INFO_615",
+      "printed_text": "תל אביב\nتل ابيب\nTel Aviv\nקריות\nكريوت\nKrayot"
+    },
+    {
+      "id": "INFO_605",
+      "printed_text": "מודיעין\nموديعين\nModi'in\n431\nראשון לציון\nريشون لتسيون\nRishon LeTsiyon\nנתניה\nنتانيا\nNetanya\n57\nכפר יונה\nכפאר יונא\nKfar Yona"
+    },
+    {
+      "id": "INFO_625",
+      "printed_text": "H"
+    },
+    {
+      "id": "PROHIBITION_426",
+      "printed_text": "40\n60"
+    },
+    {
+      "id": "PROHIBITION_427",
+      "printed_text": "40"
+    },
+    {
+      "id": "INFO_626",
+      "printed_text": "P"
+    },
+    {
+      "id": "SIGN_222",
+      "printed_text": "30"
+    },
+    {
+      "id": "PROHIBITION_439",
+      "printed_text": "הכניסה אסורה לרכב שאורכו מעל 12 מטר ممنوع الدخول لمركبه طولها يزيد عن 12 متر Entry Prohibited to Vehicles Measuring Over 12 Meters in Length"
+    },
+    {
+      "id": "INFO_610",
+      "printed_text": "21 נְתַנְיָה نتانيا Netanya 50 תֵּל אָבִיב-יָפוֹ تيل أبيب-يافو Tel Aviv-Yafo 3 אוֹלְגָה اولجا Olga 10 יָנַאי يناي Yanay"
+    },
+    {
+      "id": "INFO_607",
+      "printed_text": "תל אביב تل أبيب Tel Aviv 2 נתניה نتانيا Netanya 57"
+    },
+    {
+      "id": "INFO_609",
+      "printed_text": "היציאות הבאות المخارج المقبلة NEXT EXITS 14 לוד اللد Lod 18 בן שמן بن شيمن Ben Shemen היציאות הבאות المخارج المقبلة NEXT EXITS 3 אולגה اولגה Olga 10 ינאי يناي Yanay"
+    },
+    {
+      "id": "INFO_604",
+      "printed_text": "קפלן كابلان Kaplan H מכון אילון معهد أيالون Ayalon Institute רחובות ر حوبوت Rehovot 412 נתיבות نتيفوت Netivot 293 רהט رهط Rahat 264 בית קמה بيت كما Bet Kama"
+    },
+    {
+      "id": "INFO_613",
+      "printed_text": "4+ 2.5"
+    },
+    {
+      "id": "INFO_612",
+      "printed_text": "24"
+    },
+    {
+      "id": "INFO_629",
+      "printed_text": "שוליים צרים جوانب ضيقة Narrow Shoulders 5.2 מערב غرب West גודש לפניך CONGESTION"
+    },
+    {
+      "id": "INFO_631",
+      "printed_text": "2500"
+    },
+    {
+      "id": "INFO_635",
+      "printed_text": "היזהרו באש"
+    },
+    {
+      "id": "PUBLIC_501",
+      "printed_text": "מונית taxi\n3+"
+    },
+    {
+      "id": "PUBLIC_508",
+      "printed_text": "ניתtaxi"
+    },
+    {
+      "id": "PUBLIC_507",
+      "printed_text": "מוניתtaxi"
+    },
+    {
+      "id": "PUBLIC_509",
+      "printed_text": "מונית taxi"
+    },
+    {
+      "id": "WORK_917",
+      "printed_text": "2500"
+    },
+    {
+      "id": "PROHIBITION_406",
+      "printed_text": "طن 10 t"
+    },
+    {
+      "id": "INFO_602",
+      "printed_text": "Haifa حيفا חיפה 4 4 Netanya نتانيا נתניה 2 2"
+    },
+    {
+      "id": "INFO_606",
+      "printed_text": "תל אביב\nتل أبيب\nTel Aviv\n2\nחדרה\nحديرا\nHadera\n65"
+    },
+    {
+      "id": "INFO_614",
+      "printed_text": "יבנה يافني Yavne שוק עירוני السوق البلدي Market לוד اللد Lod תל אביב تل ابيب Tel Aviv"
+    },
+    {
+      "id": "INFO_628",
+      "printed_text": "P"
+    },
+    {
+      "id": "PUBLIC_502",
+      "printed_text": "מונית 3+"
+    },
+    {
+      "id": "PROHIBITION_416",
+      "printed_text": "4.6"
+    }
+  ]
+}

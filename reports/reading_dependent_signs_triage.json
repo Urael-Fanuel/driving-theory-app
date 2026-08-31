@@ -1,0 +1,258 @@
+{
+  "635_q1": {
+    "verdict": "FAIR",
+    "why": "The sign clearly depicts a tree and a flame, which visually conveys a fire hazard, making the text unnecessary to understand the warning."
+  },
+  "635_q2": {
+    "verdict": "FAIR",
+    "why": "The pictogram of a tree on fire clearly indicates a fire hazard, making the correct answer identifiable without reading the text."
+  },
+  "501_q1": {
+    "verdict": "FAIR",
+    "why": "The sign visually indicates motorcycles are allowed. The '3+' digit does not provide the specific 'no sidecar' condition, which is general road law knowledge not depicted on the sign."
+  },
+  "502_q1": {
+    "verdict": "NEEDS_READING",
+    "why": "The '3+' digit on the sign must be read to understand the 'three or more passengers' part of the correct answer."
+  },
+  "502_q2": {
+    "verdict": "FAIR",
+    "why": "The sign indicates the end of a special lane (diagonal stripe), requiring the driver to merge, which is understood from the sign's overall structure and pictograms, not the specific number '3+'."
+  },
+  "505_q1": {
+    "verdict": "FAIR",
+    "why": "The bus pictogram clearly indicates a bus stop, regardless of unreadable text or numbers."
+  },
+  "505_q2": {
+    "verdict": "FAIR",
+    "why": "The bus pictogram identifies it as a bus stop, and the question asks about a general road rule for buses exiting stops, which does not depend on reading the specific details on the sign."
+  },
+  "505_q3": {
+    "verdict": "FAIR",
+    "why": "The sign's bus pictogram clearly identifies it as a bus stop, and the question tests general road law about parking at bus stops, not specific details on the sign."
+  },
+  "508_q1": {
+    "verdict": "FAIR",
+    "why": "The sign's meaning (end of taxi stopping place) can be understood from the universally recognized taxi symbol, the 'no stopping' pictogram, and the large diagonal line indicating 'end of zone', without reading any text."
+  },
+  "507_q2": {
+    "verdict": "NEEDS_READING",
+    "why": "The specific exception to the 'No Stopping' rule (allowing immediate drop-off) depends on identifying the sign as a 'taxi stand', which requires reading the text 'מוניתtaxi'."
+  },
+  "506_q1": {
+    "verdict": "FAIR",
+    "why": "The tram pictogram, sign's informational format, and visible numbers (even if unreadable) are sufficient to identify it as a tram stop information sign."
+  },
+  "506_q2": {
+    "verdict": "FAIR",
+    "why": "The sign's tram pictogram, combined with the structured list of numbers and text, clearly indicates it is an information board for a tram stop. The purpose of helping passengers identify tram lines/destinations can be inferred without reading the specific text."
+  },
+  "507_q1": {
+    "verdict": "FAIR",
+    "why": "The yellow semi-circular shape is a widely recognized pictogram for a taxi, and the red circle with a diagonal line clearly indicates 'No Stopping'. The combination of these pictograms allows a non-reader to understand the sign's meaning as a taxi stand where stopping is prohibited for non-taxis, without needing to read the 'taxi' text."
+  },
+  "507_q3": {
+    "verdict": "NEEDS_READING",
+    "why": "The text 'taxi' on the sign is crucial to understand that the sign designates a taxi stand, which is necessary to answer the question about a 'non-taxi vehicle'."
+  },
+  "508_q2": {
+    "verdict": "FAIR",
+    "why": "The sign's shape, color, and pictograms (taxi roof light, no stopping symbol, end of restriction line) convey its meaning without needing to read the 'taxi' text."
+  },
+  "508_q3": {
+    "verdict": "FAIR",
+    "why": "The yellow shape is a widely recognized pictogram for a taxi, making the 'taxi' text redundant for understanding the sign's meaning."
+  },
+  "509_q1": {
+    "verdict": "NEEDS_READING",
+    "why": "The sign contains the word 'taxi' which is crucial for understanding that it is a taxi stand, modifying the general 'no stopping' rule."
+  },
+  "509_q2": {
+    "verdict": "NEEDS_READING",
+    "why": "The correct answer relies on reading 'taxi' on the sign to understand the exception to the 'no stopping' rule."
+  },
+  "509_q3": {
+    "verdict": "FAIR",
+    "why": "The 'No Stopping' symbol clearly indicates that stopping is forbidden for private cars, regardless of the 'taxi' text."
+  },
+  "605_q1": {
+    "verdict": "NEEDS_READING",
+    "why": "The correct answer, 'The highway number', requires reading the digits '431' printed on the sign to identify it as a road number."
+  },
+  "605_q2": {
+    "verdict": "NEEDS_READING",
+    "why": "The correct answer explicitly states 'I carefully read the sign', which a non-reader cannot do to identify their destination or road number."
+  },
+  "605_q3": {
+    "verdict": "FAIR",
+    "why": "The sign's shape, color, arrows, and distinct number boxes clearly indicate it is a directional sign with road numbers and place names, without needing to read the specific text or digits."
+  },
+  "439_q3": {
+    "verdict": "NEEDS_READING",
+    "why": "The sign's entire meaning, including the existence of a length limit, is conveyed solely through text and digits; a non-reader cannot understand the question's premise without reading the sign."
+  },
+  "616_q1": {
+    "verdict": "FAIR",
+    "why": "The correct answer refers to the universally recognized pictogram for a speed camera, which does not contain any text or digits. The text on the other sign is irrelevant."
+  },
+  "601_q2": {
+    "verdict": "FAIR",
+    "why": "The question asks about general driving behavior in response to informational junction signs, which can be understood from their shape, color, and pictograms, without needing to read specific place names or distances."
+  },
+  "602_q1": {
+    "verdict": "FAIR",
+    "why": "The sign's shape, color, arrows, and the presence of numbers in road-number-like shields clearly indicate it is a directional sign for roads and destinations, even without reading the specific city names or road numbers."
+  },
+  "614_q3": {
+    "verdict": "NEEDS_READING",
+    "why": "The learner cannot identify 'Yavne' on the sign without reading the text, which is necessary to determine the correct direction."
+  },
+  "607_q3": {
+    "verdict": "FAIR",
+    "why": "The question asks about the general consequences of not choosing the correct lane in time, which is general road-law knowledge, not specific information printed on the sign."
+  },
+  "609_q1": {
+    "verdict": "FAIR",
+    "why": "The question explicitly states it is a 'Next Exits' sign, allowing the learner to understand its purpose without reading the sign's text."
+  },
+  "635_q3": {
+    "verdict": "FAIR",
+    "why": "The sign's pictogram of a tree on fire clearly indicates a fire hazard in natural environments, allowing the listener to infer the correct answer about dry weather and forest areas without reading the text."
+  },
+  "502_q3": {
+    "verdict": "FAIR",
+    "why": "The sign indicates the end of a designated lane. The action required (merging) is understood from the 'end' symbol and general road law, regardless of the specific criteria (like '3+') for the lane itself."
+  },
+  "610_q3": {
+    "verdict": "FAIR",
+    "why": "The question verbally provides the destination name 'Netanya' and the number '21' associated with it. The learner only needs to know that numbers on blue destination signs indicate distance, which is general road-law knowledge."
+  },
+  "439_q2": {
+    "verdict": "NEEDS_READING",
+    "why": "The sign's specific length restriction of '12 Meters' is conveyed only through text and digits, which a non-reader cannot access."
+  },
+  "606_q1": {
+    "verdict": "FAIR",
+    "why": "The question explicitly states the place names and road numbers, allowing the listener to interpret the sign's function based on its visual characteristics and the provided verbal information."
+  },
+  "601_q1": {
+    "verdict": "FAIR",
+    "why": "The sign's colors (blue for highway, green for local), pictograms (interchange, T-junction), and the convention that numbers on such directional signs represent distances are part of general road-law knowledge. A learner does not need to read the specific numerical values or place names to understand the sign's overall meaning as indicating distances to different types of destinations."
+  },
+  "602_q2": {
+    "verdict": "FAIR",
+    "why": "The question asks about the meaning of blue vs. green road signs, which is general road-law knowledge based on color convention, not on reading text or numbers on the sign."
+  },
+  "602_q3": {
+    "verdict": "FAIR",
+    "why": "The sign's shape, color, and arrows clearly indicate it is a directional sign for choosing a route, even without reading the specific city names or road numbers."
+  },
+  "603_q1": {
+    "verdict": "NEEDS_READING",
+    "why": "The correct answer requires knowing the specific nature of the destination 'Giv'at Halrosim', which is only conveyed by reading its name on the sign."
+  },
+  "603_q2": {
+    "verdict": "FAIR",
+    "why": "The brown color of the middle panel indicates a tourist or recreational destination, which aligns with the correct answer about a camping or overnight parking area, without needing to read the text."
+  },
+  "603_q3": {
+    "verdict": "FAIR",
+    "why": "The question asks about how to react to a camping sign, but the image shows a directional sign for towns and road numbers. The image is irrelevant to the question, which tests general road-law knowledge about camping signs. Therefore, the ability to read the text on the provided sign does not affect the answer."
+  },
+  "604_q1": {
+    "verdict": "FAIR",
+    "why": "The sign's overall structure, multiple arrows, and destination blocks clearly indicate its function as a directional sign for various exits and places, which aligns with the correct answer, without needing to read specific text or numbers."
+  },
+  "604_q2": {
+    "verdict": "FAIR",
+    "why": "The question asks about general safe driving practice when encountering a complex directional sign, which can be understood from the sign's visual complexity and multiple arrows, not specific text or numbers."
+  },
+  "604_q3": {
+    "verdict": "FAIR",
+    "why": "The question asks about the general consequences of ignoring a directional sign, which can be understood from the sign's type and purpose, not its specific text content."
+  },
+  "606_q2": {
+    "verdict": "FAIR",
+    "why": "The question explicitly states which road number corresponds to which destination, and the road numbers are visible as distinct digits on the signs, allowing a non-reader to match the audio information with the visual signs."
+  },
+  "606_q3": {
+    "verdict": "FAIR",
+    "why": "The question asks about the meaning of the blue and green colors on road signs, which is general road-law knowledge and does not require reading the text or numbers on the signs."
+  },
+  "607_q1": {
+    "verdict": "FAIR",
+    "why": "The sign's shape, color, and downward arrows clearly indicate lane guidance for different directions, even without reading the specific place names or road numbers."
+  },
+  "607_q2": {
+    "verdict": "FAIR",
+    "why": "The sign's visual structure with multiple panels and downward arrows clearly indicates lane guidance, making the need to choose a lane in advance understandable without reading the text."
+  },
+  "608_q1": {
+    "verdict": "NEEDS_READING",
+    "why": "The sign's meaning ('EXIT') is conveyed solely by text, which a non-reader cannot access."
+  },
+  "608_q3": {
+    "verdict": "FAIR",
+    "why": "The correct answer describes a general danger of sudden lane changes, which is general road-law knowledge, not dependent on reading the specific text 'EXIT' on the sign."
+  },
+  "608_q2": {
+    "verdict": "NEEDS_READING",
+    "why": "The sign's meaning ('EXIT') is conveyed solely through text, which a non-reader cannot understand to answer the question about exiting the road."
+  },
+  "609_q2": {
+    "verdict": "FAIR",
+    "why": "The question asks for the general driving action when seeing a 'Next Exits' sign. The sign's purpose is clear from the visible 'NEXT EXITS' text and the question itself. The correct answer describes a general preparation for upcoming exits, which does not require reading the specific exit names or numbers on the sign."
+  },
+  "609_q3": {
+    "verdict": "FAIR",
+    "why": "The question asks about the meaning of the sign colors (blue vs. green), which is general road-law knowledge, not dependent on reading the specific text or numbers on the signs."
+  },
+  "610_q1": {
+    "verdict": "NEEDS_READING",
+    "why": "The correct answer states the sign shows distances in kilometers, which requires reading the numbers printed on the sign."
+  },
+  "610_q2": {
+    "verdict": "NEEDS_READING",
+    "why": "The correct answer explicitly states 'I will read the names of the destinations and their distances in kilometers', which requires reading the text and numbers on the sign."
+  },
+  "614_q1": {
+    "verdict": "FAIR",
+    "why": "The sign's shape, color, multiple destination blocks, and directional arrows clearly indicate it is a directional sign for different places and lanes, without needing to read the text."
+  },
+  "614_q2": {
+    "verdict": "FAIR",
+    "why": "The question asks about general driving behavior based on directional arrows, which are clearly visible and do not require reading any text on the sign."
+  },
+  "615_q1": {
+    "verdict": "FAIR",
+    "why": "The sign's function as a destination indicator with downward arrows can be understood from its shape, color, and arrows, even without reading the specific place name."
+  },
+  "615_q3": {
+    "verdict": "FAIR",
+    "why": "The sign's shape, color, and arrows indicate it is a directional sign. The question asks about the general consequences of ignoring a road guide sign, which can be understood without reading the specific place names."
+  },
+  "615_q2": {
+    "verdict": "FAIR",
+    "why": "The question asks how to drive according to a directional sign, which can be understood from its shape, color, and arrows, without needing to read the specific destination names."
+  },
+  "616_q2": {
+    "verdict": "FAIR",
+    "why": "The question refers to driving behavior, which is indicated by the camera pictogram on the bottom sign, not by any text."
+  },
+  "616_q3": {
+    "verdict": "FAIR",
+    "why": "The camera symbol is a pictogram, and the question asks about general consequences of traffic violations caught by a camera, which is general road-law knowledge. No text on the sign needs to be read."
+  },
+  "629_q1": {
+    "verdict": "NEEDS_READING",
+    "why": "The sign is purely text-based ('Narrow Shoulders') and has no pictogram, shape, or color that conveys its meaning without reading."
+  },
+  "629_q2": {
+    "verdict": "NEEDS_READING",
+    "why": "The correct answer relies on understanding the 'Narrow Shoulders' text, which has no corresponding pictogram or distinct shape/color to convey its meaning to a non-reader."
+  },
+  "629_q3": {
+    "verdict": "NEEDS_READING",
+    "why": "The sign indicating 'Narrow Shoulders' is purely text-based, and understanding its meaning is crucial to answering the question about avoiding the shoulder due to its narrowness."
+  }
+}
