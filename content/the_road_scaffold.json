@@ -196,7 +196,7 @@
               ]
             },
             {
-              "question_amharic": "ቢጫው መኪና ቁጥር አንድ ምን ማድረግ አለበት?",
+              "question_amharic": "ቢጫው መኪና ምን ማድረግ አለበት?",
               "answers": [
                 {
                   "text_amharic": "በፍጥነት ወደ ግራ መታጠፍ",
@@ -217,10 +217,10 @@
               ]
             },
             {
-              "question_amharic": "ቢጫው መኪና ቁጥር አንድ መንገድ መስጠት ያለበት ለምንድን ነው?",
+              "question_amharic": "ቢጫው መኪና መንገድ መስጠት ያለበት ለምንድን ነው?",
               "answers": [
                 {
-                  "text_amharic": "ወደ ግራ ሲታጠፍ መንገድ ስለሚቆራረጥ",
+                  "text_amharic": "መኪኖቹ ሊጋጩ ስለሚችሉ",
                   "is_correct": true
                 },
                 {
