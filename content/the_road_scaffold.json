@@ -164,6 +164,82 @@
           ],
           "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_tr_l1_s2_narration_1781111465492.mp3",
           "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/tr_l1_s2_image_1781111621266.jpg"
+        },
+        {
+          "id": "tr_l1_s3",
+          "name_hebrew": "פנייה שמאלה מול רכב הבא ממול",
+          "name_amharic": "በግራ መታጠፍ ቅድሚያ መስጠት",
+          "icon": "↪️",
+          "explanation_amharic": "አሁን የምታዩት ምስል መገናኛ መንገድ ያሳያል። እዚህ መገናኛ ላይ የትራፊክ መብራትም ሆነ ምልክት የለም። ከታች ቢጫ ቀለም ያለው መኪና ቁጥር አንድ አለ። ከላይ ደግሞ ሰማያዊ ቀለም ያለው መኪና ቁጥር ሁለት አለ።\n\nቢጫው መኪና ቁጥር አንድ ወደ ግራ መታጠፍ ይፈልጋል። የመታጠፊያ መብራቱ ብልጭ ድርግም ይላል። ሰማያዊው መኪና ቁጥር ሁለት ደግሞ ከፊት ለፊት እየመጣ ነው። ቀጥታ ማሽከርከር ይፈልጋል።\n\nወደ ግራ መታጠፍ የሚፈልግ አሽከርካሪ መንገድ መስጠት አለበት። ይህ ከፊት ለፊት ቀጥታ ለሚመጣ ተሽከርካሪ ነው። ስለዚህ ቢጫው መኪና ቁጥር አንድ መቆም አለበት። ሰማያዊው መኪና ቁጥር ሁለት መጀመሪያ ያልፋል።\n\nወደ ግራ ሲታጠፉ የመኪናው መንገድ ይገናኛል። ከፊት ለፊት ከሚመጣው መኪና መንገድ ጋር ይጋጫል። ስለዚህ አደጋ እንዳይፈጠር መቆም ያስፈልጋል።\n\nከመታጠፍዎ በፊት ሁሉንም አቅጣጫ ይመልከቱ። መንገዱ ሙሉ በሙሉ ሲጸዳ ብቻ ያሽከርክሩ።",
+          "narration_script": "አሁን የምታዩት ምስል መገናኛ መንገድ ያሳያል። እዚህ መገናኛ ላይ የትራፊክ መብራትም ሆነ ምልክት የለም። ከታች ቢጫ ቀለም ያለው መኪና ቁጥር አንድ አለ። ከላይ ደግሞ ሰማያዊ ቀለም ያለው መኪና ቁጥር ሁለት አለ።\n\nቢጫው መኪና ቁጥር አንድ ወደ ግራ መታጠፍ ይፈልጋል። የመታጠፊያ መብራቱ ብልጭ ድርግም ይላል። ሰማያዊው መኪና ቁጥር ሁለት ደግሞ ከፊት ለፊት እየመጣ ነው። ቀጥታ ማሽከርከር ይፈልጋል።\n\nወደ ግራ መታጠፍ የሚፈልግ አሽከርካሪ መንገድ መስጠት አለበት። ይህ ከፊት ለፊት ቀጥታ ለሚመጣ ተሽከርካሪ ነው። ስለዚህ ቢጫው መኪና ቁጥር አንድ መቆም አለበት። ሰማያዊው መኪና ቁጥር ሁለት መጀመሪያ ያልፋል።\n\nወደ ግራ ሲታጠፉ የመኪናው መንገድ ይገናኛል። ከፊት ለፊት ከሚመጣው መኪና መንገድ ጋር ይጋጫል። ስለዚህ አደጋ እንዳይፈጠር መቆም ያስፈልጋል።\n\nከመታጠፍዎ በፊት ሁሉንም አቅጣጫ ይመልከቱ። መንገዱ ሙሉ በሙሉ ሲጸዳ ብቻ ያሽከርክሩ።",
+          "image_description": "Drawn top-down diagram (SVG) of a four-way crossroads with no lights and no signs. Yellow car marked 1 at the bottom facing up, left indicator lit, red arrow showing its intended left turn (it must wait). Blue car marked 2 at the top facing down, green arrow showing it continues straight through (it has priority).",
+          "questions": [
+            {
+              "question_amharic": "በዚህ ምስል ላይ መጀመሪያ የሚያልፈው የትኛው መኪና ነው?",
+              "answers": [
+                {
+                  "text_amharic": "ቢጫው መኪና ቁጥር አንድ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ሰማያዊው መኪና ቁጥር ሁለት",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ሁለቱም በአንድ ጊዜ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የትኛውም መኪና ማለፍ አይችልም",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "ቢጫው መኪና ቁጥር አንድ ምን ማድረግ አለበት?",
+              "answers": [
+                {
+                  "text_amharic": "በፍጥነት ወደ ግራ መታጠፍ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ሰማያዊውን መኪና አስቀድሞ ማለፍ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ቀጥታ ማሽከርከር",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ቆሞ ሰማያዊውን መኪና ማሳለፍ",
+                  "is_correct": true
+                }
+              ]
+            },
+            {
+              "question_amharic": "ቢጫው መኪና ቁጥር አንድ መንገድ መስጠት ያለበት ለምንድን ነው?",
+              "answers": [
+                {
+                  "text_amharic": "ወደ ግራ ሲታጠፍ መንገድ ስለሚቆራረጥ",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ሰማያዊው መኪና ከቀኝ ስለሚመጣ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ሰማያዊው መኪና ትልቅ ስለሆነ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ቢጫው መኪና ቀድሞ ስለደረሰ",
+                  "is_correct": false
+                }
+              ]
+            }
+          ],
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_tr_l1_s3_narration_1788296968804.mp3",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/behavioral_tr_l1_s3_diagram_1788297604966.png"
         }
       ]
     },
