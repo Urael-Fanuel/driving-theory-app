@@ -52,6 +52,7 @@ export const TOPIC_SUBTOPIC_COUNT: Record<string, number> = {
   my_vehicle:        3,
   two_wheelers:      2,
   basics_license:    2,
+  road_decisions:    1,
 };
 
 // ── Primary color of each topic's icon (used for count badge) ─────────────────
@@ -72,6 +73,7 @@ export const TOPIC_ICON_COLOR: Record<string, string> = {
   my_vehicle:            '#555555',
   two_wheelers:          '#555555',
   basics_license:        '#555555',
+  road_decisions:        '#555555',
 };
 
 // ── Vector icon map for non-sign topics ───────────────────────────────────────
@@ -92,6 +94,7 @@ export const TOPIC_ICON_MAP: Record<string, string> = {
   my_vehicle:            'car-sports',
   two_wheelers:          'motorbike',
   basics_license:        'card-account-details',
+  road_decisions:        'directions-fork',
 };
 
 interface Props {

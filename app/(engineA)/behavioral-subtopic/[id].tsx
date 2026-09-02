@@ -54,6 +54,7 @@ import societyLawData       from '../../../content/society_law_scaffold.json';
 import theRoadData          from '../../../content/the_road_scaffold.json';
 import myVehicleData        from '../../../content/my_vehicle_scaffold.json';
 import twoWheelersData      from '../../../content/two_wheelers_scaffold.json';
+import roadDecisionsData   from '../../../content/road_decisions_scaffold.json';
 import basicsLicenseData    from '../../../content/basics_license_scaffold.json';
 import { OfflineBanner } from '../../../components/shared/OfflineBanner';
 import { LocationPermissionModal } from '../../../components/shared/LocationPermissionModal';
@@ -112,6 +113,7 @@ const SCAFFOLD_MAP: Record<string, Scaffold> = {
   the_road:          theRoadData          as Scaffold,
   my_vehicle:        myVehicleData        as Scaffold,
   two_wheelers:      twoWheelersData      as Scaffold,
+  road_decisions:    roadDecisionsData    as Scaffold,
   basics_license:    basicsLicenseData    as Scaffold,
 };
 

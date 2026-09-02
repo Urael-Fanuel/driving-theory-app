@@ -74,6 +74,7 @@ const BEHAVIORAL_TOPICS = [
   'the_road',
   'my_vehicle',
   'two_wheelers',
+  'road_decisions',
   'basics_license',
 ];
 

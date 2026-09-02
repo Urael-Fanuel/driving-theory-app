@@ -98,6 +98,7 @@ export default function EngineBHomeScreen() {
   const BEHAVIORAL_TOPICS = [
     'vehicle_knowledge', 'mind_safety', 'society_law',
     'the_road', 'my_vehicle', 'two_wheelers', 'basics_license',
+    'road_decisions',
   ];
 
   const handleTopicPress = async (topic: DBTopic) => {

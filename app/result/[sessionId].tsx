@@ -75,6 +75,7 @@ const TOPIC_NAMES: Record<string, string> = {
   the_road:             'የመንገድ ሁኔታዎች',
   my_vehicle:           'ትክክለኛ አነዳድ',
   two_wheelers:         'ሁለት ጎማ ተሽከርካሪ',
+  road_decisions:       'የመንገድ ላይ ውሳኔዎች',
   basics_license:       'መሠረቶች እና ፍቃድ',
 };
 export type { ResultData };

@@ -31,6 +31,7 @@ import societyLawData       from '../../../content/society_law_scaffold.json';
 import theRoadData          from '../../../content/the_road_scaffold.json';
 import myVehicleData        from '../../../content/my_vehicle_scaffold.json';
 import twoWheelersData      from '../../../content/two_wheelers_scaffold.json';
+import roadDecisionsData   from '../../../content/road_decisions_scaffold.json';
 import basicsLicenseData    from '../../../content/basics_license_scaffold.json';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -72,6 +73,7 @@ const SCAFFOLD_MAP: Record<string, ScaffoldData> = {
   the_road:          theRoadData          as ScaffoldData,
   my_vehicle:        myVehicleData        as ScaffoldData,
   two_wheelers:      twoWheelersData      as ScaffoldData,
+  road_decisions:    roadDecisionsData    as ScaffoldData,
   basics_license:    basicsLicenseData    as ScaffoldData,
 };
 

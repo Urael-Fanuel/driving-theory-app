@@ -20,6 +20,7 @@ import societyLawScaffold       from '../content/society_law_scaffold.json';
 import theRoadScaffold          from '../content/the_road_scaffold.json';
 import myVehicleScaffold        from '../content/my_vehicle_scaffold.json';
 import twoWheelersScaffold      from '../content/two_wheelers_scaffold.json';
+import roadDecisionsScaffold   from '../content/road_decisions_scaffold.json';
 import basicsLicenseScaffold    from '../content/basics_license_scaffold.json';
 
 // ─── Config ───────────────────────────────────────────────────────────────────
@@ -292,6 +293,7 @@ const BEHAVIORAL_SCAFFOLD_MAP: Record<string, any> = {
   the_road:          theRoadScaffold,
   my_vehicle:        myVehicleScaffold,
   two_wheelers:      twoWheelersScaffold,
+  road_decisions:    roadDecisionsScaffold,
   basics_license:    basicsLicenseScaffold,
 };
 
