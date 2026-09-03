@@ -187,34 +187,187 @@ function svg(inner, label) {
 `;
 }
 
-// ─── tr_l1_s3 — turning left across an oncoming car ───────────────────────────
+// ─── Scene: a wider crossroads, two lanes each way on the vertical road ───────
+//
+// Used where the question is partly about WHICH LANE a manoeuvre starts from —
+// a left turn has to begin from the lane nearest the centre line. Same road
+// geometry conventions as crossroads(); only the vertical road is widened.
+
+const VRX = 196, VRW = 248;                  // wide vertical road: 196..444
+const LANE = VRW / 4;                        // 62
+const SB_OUTER_X = VRX + LANE * 0.5;         // 227  southbound, kerb side
+const SB_INNER_X = VRX + LANE * 1.5;         // 289  southbound, centre side
+const NB_INNER_X = VRX + LANE * 2.5;         // 351  northbound, centre side — the left-turn lane
+const NB_OUTER_X = VRX + LANE * 3.5;         // 413  northbound, kerb side
+
+function crossroadsWide() {
+  return `
+  <rect width="${W}" height="${H}" fill="${C.grass}"/>
+  <g fill="${C.road}">
+    <rect x="${VRX}" y="0" width="${VRW}" height="${H}"/>
+    <rect x="0" y="${RY}" width="${W}" height="${RH}"/>
+  </g>
+  <g fill="${C.kerb}">
+    <rect x="${VRX - 6}" y="0" width="6" height="${RY}"/><rect x="${VRX + VRW}" y="0" width="6" height="${RY}"/>
+    <rect x="${VRX - 6}" y="${RY + RH}" width="6" height="${H - RY - RH}"/><rect x="${VRX + VRW}" y="${RY + RH}" width="6" height="${H - RY - RH}"/>
+    <rect x="0" y="${RY - 6}" width="${VRX - 6}" height="6"/><rect x="${VRX + VRW + 6}" y="${RY - 6}" width="${W - VRX - VRW - 6}" height="6"/>
+    <rect x="0" y="${RY + RH}" width="${VRX - 6}" height="6"/><rect x="${VRX + VRW + 6}" y="${RY + RH}" width="${W - VRX - VRW - 6}" height="6"/>
+  </g>
+  <g stroke="${C.line}" stroke-width="4">
+    <line x1="${CENTRE_X}" y1="8" x2="${CENTRE_X}" y2="${RY - 10}"/>
+    <line x1="${CENTRE_X}" y1="${RY + RH + 10}" x2="${CENTRE_X}" y2="${H - 8}"/>
+  </g>
+  <g stroke="${C.line}" stroke-width="4" stroke-dasharray="22 18">
+    <line x1="${VRX + LANE}" y1="8" x2="${VRX + LANE}" y2="${RY - 10}"/>
+    <line x1="${VRX + LANE}" y1="${RY + RH + 10}" x2="${VRX + LANE}" y2="${H - 8}"/>
+    <line x1="${VRX + LANE * 3}" y1="8" x2="${VRX + LANE * 3}" y2="${RY - 10}"/>
+    <line x1="${VRX + LANE * 3}" y1="${RY + RH + 10}" x2="${VRX + LANE * 3}" y2="${H - 8}"/>
+    <line x1="8" y1="${CENTRE_Y}" x2="${VRX - 10}" y2="${CENTRE_Y}"/>
+    <line x1="${VRX + VRW + 10}" y1="${CENTRE_Y}" x2="${W - 8}" y2="${CENTRE_Y}"/>
+  </g>
+  ${tree({ x: 96, y: 76 })}${tree({ x: 552, y: 84, r: 28 })}
+  ${tree({ x: 104, y: 376, r: 28 })}${tree({ x: 556, y: 370 })}`;
+}
+
+// ─── Scene: a wider crossroads, two lanes each way on the HORIZONTAL road ─────
+//
+// The mirror of crossroadsWide(). Used so that a left turn is not always drawn
+// from the same approach: here the turning car arrives from the left of the
+// picture and turns upward, which is a different manoeuvre to read even though
+// the law behind it is the same.
+
+const HRY = 96, HRH = 248;                   // wide horizontal road: 96..344
+const HLANE = HRH / 4;                       // 62
+const H_CENTRE_Y = HRY + HRH / 2;            // 220
+const WB_OUTER_Y = HRY + HLANE * 0.5;        // 127  westbound, kerb side
+const WB_INNER_Y = HRY + HLANE * 1.5;        // 189  westbound, centre side
+const EB_INNER_Y = HRY + HLANE * 2.5;        // 251  eastbound, centre side — the left-turn lane
+const EB_OUTER_Y = HRY + HLANE * 3.5;        // 313  eastbound, kerb side
+
+function crossroadsWideAcross() {
+  return `
+  <rect width="${W}" height="${H}" fill="${C.grass}"/>
+  <g fill="${C.road}">
+    <rect x="0" y="${HRY}" width="${W}" height="${HRH}"/>
+    <rect x="${RX}" y="0" width="${RW}" height="${H}"/>
+  </g>
+  <g fill="${C.kerb}">
+    <rect x="0" y="${HRY - 6}" width="${RX - 6}" height="6"/><rect x="${RX + RW + 6}" y="${HRY - 6}" width="${W - RX - RW - 6}" height="6"/>
+    <rect x="0" y="${HRY + HRH}" width="${RX - 6}" height="6"/><rect x="${RX + RW + 6}" y="${HRY + HRH}" width="${W - RX - RW - 6}" height="6"/>
+    <rect x="${RX - 6}" y="0" width="6" height="${HRY}"/><rect x="${RX + RW}" y="0" width="6" height="${HRY}"/>
+    <rect x="${RX - 6}" y="${HRY + HRH + 6}" width="6" height="${H - HRY - HRH - 6}"/><rect x="${RX + RW}" y="${HRY + HRH + 6}" width="6" height="${H - HRY - HRH - 6}"/>
+  </g>
+  <g stroke="${C.line}" stroke-width="4">
+    <line x1="8" y1="${H_CENTRE_Y}" x2="${RX - 10}" y2="${H_CENTRE_Y}"/>
+    <line x1="${RX + RW + 10}" y1="${H_CENTRE_Y}" x2="${W - 8}" y2="${H_CENTRE_Y}"/>
+  </g>
+  <g stroke="${C.line}" stroke-width="4" stroke-dasharray="22 18">
+    <line x1="8" y1="${HRY + HLANE}" x2="${RX - 10}" y2="${HRY + HLANE}"/>
+    <line x1="${RX + RW + 10}" y1="${HRY + HLANE}" x2="${W - 8}" y2="${HRY + HLANE}"/>
+    <line x1="8" y1="${HRY + HLANE * 3}" x2="${RX - 10}" y2="${HRY + HLANE * 3}"/>
+    <line x1="${RX + RW + 10}" y1="${HRY + HLANE * 3}" x2="${W - 8}" y2="${HRY + HLANE * 3}"/>
+    <line x1="${CENTRE_X}" y1="8" x2="${CENTRE_X}" y2="${HRY - 10}"/>
+    <line x1="${CENTRE_X}" y1="${HRY + HRH + 10}" x2="${CENTRE_X}" y2="${H - 8}"/>
+  </g>
+  ${tree({ x: 96, y: 46, r: 26 })}${tree({ x: 544, y: 44, r: 24 })}
+  ${tree({ x: 100, y: 396, r: 24 })}${tree({ x: 548, y: 394, r: 26 })}`;
+}
+
+/**
+ * The same numbered disc, but sitting ON the car rather than beside it.
+ * A wide road pushes the verge too far from the vehicle for a badge there to
+ * be unambiguous, and the official test diagrams label their vehicles the same
+ * way. The white ring keeps it readable on a dark or a pale car alike.
+ */
+function badgeOnCar({ x, y, n }) {
+  return `
+  <g>
+    <circle cx="${x}" cy="${y}" r="17" fill="${C.badge}" stroke="#ffffff" stroke-width="3"/>
+    <text x="${x}" y="${y + 6}" font-family="Arial, Helvetica, sans-serif" font-size="19"
+          font-weight="bold" fill="#ffffff" text-anchor="middle">${n}</text>
+  </g>`;
+}
+
+// ─── Scenes ───────────────────────────────────────────────────────────────────
+
+const SCENES = {};
+
+// tr_l1_s3 / rd_l1_s1 — turning left across an oncoming car.
 // Car 1 comes up from the south wanting to turn left. Car 2 comes down from the
 // north going straight, and has priority. The two arrows deliberately cross:
 // that intersection point is the whole reason car 1 must wait, and it is
 // visible on screen.
+SCENES.tr_l1_s3 = {
+  name: 'tr_l1_s3_left_turn_vs_oncoming',
+  label: 'Crossroads: a car turning left gives way to an oncoming car going straight',
+  build: () => crossroads()
+    + car({ x: NORTHBOUND_X, y: 368, heading: 0,   colour: 'yellow', indicate: 'left' })
+    + car({ x: SOUTHBOUND_X, y: 96,  heading: 180, colour: 'blue' })
+    // arrows before badges, so a badge is never buried under an arrow head
+    + arrow({ d: `M ${SOUTHBOUND_X},150 L ${SOUTHBOUND_X},322`, priority: true })
+    + arrow({
+        d: `M ${NORTHBOUND_X},312 L ${NORTHBOUND_X},${WESTBOUND_Y + 34} `
+         + `Q ${NORTHBOUND_X},${WESTBOUND_Y} ${NORTHBOUND_X - 44},${WESTBOUND_Y} `
+         + `L 196,${WESTBOUND_Y}`,
+        priority: false,
+      })
+    // badges sit on the verge beside their car, clear of arrows and bodywork
+    + badge({ x: NORTHBOUND_X + 62, y: 368, n: 1 })
+    + badge({ x: SOUTHBOUND_X - 62, y: 96,  n: 2 }),
+};
 
-const scene = crossroads()
-  + car({ x: NORTHBOUND_X, y: 368, heading: 0,   colour: 'yellow', indicate: 'left' })
-  + car({ x: SOUTHBOUND_X, y: 96,  heading: 180, colour: 'blue' })
-  // arrows before badges, so a badge is never buried under an arrow head
-  + arrow({ d: `M ${SOUTHBOUND_X},150 L ${SOUTHBOUND_X},322`, priority: true })
-  + arrow({
-      d: `M ${NORTHBOUND_X},312 L ${NORTHBOUND_X},${WESTBOUND_Y + 34} `
-       + `Q ${NORTHBOUND_X},${WESTBOUND_Y} ${NORTHBOUND_X - 44},${WESTBOUND_Y} `
-       + `L 196,${WESTBOUND_Y}`,
-      priority: false,
-    })
-  // badges sit on the verge beside their car, clear of arrows and bodywork
-  + badge({ x: NORTHBOUND_X + 62, y: 368, n: 1 })
-  + badge({ x: SOUTHBOUND_X - 62, y: 96,  n: 2 });
+// rd_l1_s2 — turning left with a third car arriving from the right.
+//
+// Same core rule as rd_l1_s1 (the left-turner gives way to oncoming traffic),
+// but with a third vehicle so the learner meets a busier junction. Car 3 comes
+// from the RIGHT, not the left, and that is a correctness decision rather than
+// an aesthetic one: with a third car on the LEFT going straight, the three
+// give-way duties form a closed loop (we yield to the oncoming car, the
+// oncoming car yields to the car on its right, that car yields to us) and the
+// law gives no entry order at all — the scene would have no correct answer.
+// From the right the order is unambiguous, and both cars simply have priority
+// over ours, which keeps the arrow vocabulary binary: green goes, red waits.
+SCENES.rd_l1_s2 = {
+  name: 'rd_l1_s2_left_turn_from_left_lane',
+  label: 'Wide crossroads: a car turning left from the inner lane gives way to an oncoming car',
+  build: () => crossroadsWideAcross()
+    // The turn is deliberately drawn from a different approach to rd_l1_s1:
+    // there the car came up from the bottom, here it arrives from the left and
+    // turns upward. Same law, a picture the learner has to read afresh.
+    // 0.88 so two cars sit side by side in adjacent lanes with visible air
+    // between them; at full size they touch and read as one shape.
+    + car({ x: 120, y: EB_INNER_Y, heading: 90,  colour: 'blue',   indicate: 'left', scale: 0.88 })
+    + car({ x: 120, y: EB_OUTER_Y, heading: 90,  colour: 'silver', scale: 0.88 })
+    + car({ x: 540, y: WB_INNER_Y, heading: 270, colour: 'yellow', scale: 0.88 })
+    // arrows before badges, so a badge is never buried under an arrow head
+    + arrow({ d: `M 480,${WB_INNER_Y} L 296,${WB_INNER_Y}`, priority: true })
+    + arrow({ d: `M 176,${EB_OUTER_Y} L 474,${EB_OUTER_Y}`, priority: true })
+    + arrow({
+        d: `M 176,${EB_INNER_Y} L ${NORTHBOUND_X - 44},${EB_INNER_Y} `
+         + `Q ${NORTHBOUND_X},${EB_INNER_Y} ${NORTHBOUND_X},${EB_INNER_Y - 44} `
+         + `L ${NORTHBOUND_X},54`,
+        priority: false,
+      })
+    + badgeOnCar({ x: 120, y: EB_INNER_Y, n: 1 })
+    + badgeOnCar({ x: 540, y: WB_INNER_Y, n: 2 })
+    + badgeOnCar({ x: 120, y: EB_OUTER_Y, n: 3 }),
+};
 
 // ─── Write SVG, then rasterise ────────────────────────────────────────────────
 
+const sceneArg  = process.argv.indexOf('--scene');
+const SCENE_KEY = sceneArg >= 0 ? process.argv[sceneArg + 1] : 'tr_l1_s3';
+const chosen    = SCENES[SCENE_KEY];
+if (!chosen) {
+  console.error(`Unknown scene "${SCENE_KEY}". Known: ${Object.keys(SCENES).join(', ')}`);
+  process.exit(1);
+}
+
 const outArg  = process.argv.indexOf('--out');
 const OUT_DIR = outArg >= 0 ? process.argv[outArg + 1] : join(ROOT, 'temp_behavioral');
-const NAME    = 'tr_l1_s3_left_turn_vs_oncoming';
+const NAME    = chosen.name;
 
-const svgText = svg(scene, 'Crossroads: a car turning left gives way to an oncoming car going straight');
+const svgText = svg(chosen.build(), chosen.label);
 const svgPath = join(OUT_DIR, `${NAME}.svg`);
 writeFileSync(svgPath, svgText, 'utf8');
 console.log(`SVG: ${svgPath}`);

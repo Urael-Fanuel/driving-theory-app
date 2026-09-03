@@ -65,22 +65,22 @@
               ]
             },
             {
-              "question_amharic": "ቢጫው መኪና መንገድ መስጠት ያለበት ለምንድን ነው?",
+              "question_amharic": "ቢጫ መኪና ቁጥር አንድ ለሰማያዊ መኪና ቁጥር ሁለት መንገድ መልቀቅ አለበት?",
               "answers": [
                 {
-                  "text_amharic": "መኪኖቹ ሊጋጩ ስለሚችሉ",
+                  "text_amharic": "አዎ፣ ምክንያቱም ወደ ግራ የሚታጠፍ አሽከርካሪ ከፊት ለፊት ለሚመጣ መኪና መንገድ ይለቃልና።",
                   "is_correct": true
                 },
                 {
-                  "text_amharic": "ሰማያዊው መኪና ከቀኝ ስለሚመጣ",
+                  "text_amharic": "አይደለም፣ ምክንያቱም ቢጫ መኪና ቁጥር አንድ መጀመሪያ ስለደረሰ።",
                   "is_correct": false
                 },
                 {
-                  "text_amharic": "ሰማያዊው መኪና ትልቅ ስለሆነ",
+                  "text_amharic": "አይደለም፣ ምክንያቱም ሰማያዊ መኪና ቁጥር ሁለት በዋናው መንገድ ላይ ስለሆነ።",
                   "is_correct": false
                 },
                 {
-                  "text_amharic": "ቢጫው መኪና ቀድሞ ስለደረሰ",
+                  "text_amharic": "አይደለም፣ ምክንያቱም ቢጫ መኪና ቁጥር አንድ ትልቅ ስለሆነ።",
                   "is_correct": false
                 }
               ]
@@ -88,6 +88,82 @@
           ],
           "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_tr_l4_s1_narration_1788296968804.mp3",
           "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/behavioral_tr_l4_s1_diagram_1788297604966.png"
+        },
+        {
+          "id": "rd_l1_s2",
+          "name_hebrew": "נהיגה נכונה בצומת",
+          "name_amharic": "በመጋጠሚያ በአግባቡ ማሽከርከር",
+          "icon": "🔀",
+          "explanation_amharic": "አሁን የምትመለከቱት መስቀለኛ መንገድ ነው። በዚህ መስቀለኛ መንገድ ላይ መብራትም ሆነ ምንም ዓይነት ምልክት የለም። መንገዱ ሰፊ ሲሆን ለእያንዳንዱ አቅጣጫ ሁለት መስመሮች አሉት። ሶስት መኪኖች ይታያሉ። በግራ በኩል ሰማያዊው መኪና ቁጥር አንድ እና ብርማ ግራጫው መኪና ቁጥር ሶስት ጎን ለጎን ቆመዋል። በቀኝ በኩል ደግሞ ቢጫው መኪና ቁጥር ሁለት ይታያል።\n\nሰማያዊው መኪና ቁጥር አንድ ወደ ግራ ለመታጠፍ ይፈልጋል። የመታጠፊያ መብራቱም ብልጭ ድርግም ይላል። ከጎኑ ያለው ብርማ ግራጫው መኪና ቁጥር ሶስት ደግሞ ቀጥ ብሎ ይሄዳል። ቢጫው መኪና ቁጥር ሁለት ከተቃራኒ አቅጣጫ እየመጣ ነው። እሱም ቀጥ ብሎ ይሄዳል።\n\nወደ ግራ ለመታጠፍ የሚያሽከረክሩ አሽከርካሪዎች ከመንገዱ መሃል መስመር አቅራቢያ ወዳለው መስመር ቀድመው መግባት አለባቸው። ሰማያዊው መኪና ቁጥር አንድ የቆመው በዚህ መስመር ነው። ቀጥ ብሎ ለመሄድ የሚያሽከረክሩ አሽከርካሪዎች ደግሞ ከመንገዱ ዳር አቅራቢያ ባለው መስመር መቆም አለባቸው። ብርማ ግራጫው መኪና ቁጥር ሶስት የቆመው በዚህ መስመር ነው።\n\nበትክክለኛው መስመር ላይ መቆም ብቻ በቂ አይደለም። ወደ ግራ ለመታጠፍ የሚያሽከረክሩ አሽከርካሪዎች ከተቃራኒ አቅጣጫ ቀጥ ብሎ ለሚመጣ ተሽከርካሪ ቅድሚያ መስጠት አለባቸው።\n\nስለዚህ በዚህ ስዕል ላይ ቢጫው መኪና ቁጥር ሁለት መጀመሪያ ያልፋል። ከዚያ በኋላ ሰማያዊው መኪና ቁጥር አንድ ወደ ግራ ይታጠፋል። ምክንያቱም ወደ ግራ የሚታጠፈው መኪና ከተቃራኒ አቅጣጫ የሚመጣውን መኪና መንገድ ያቋርጣል። ካልጠበቀ ሁለቱ መኪኖች ሊጋጩ ይችላሉ። ሁልጊዜ ትክክለኛውን መስመር ቀድመው ይምረጡ። ሁሉንም አቅጣጫዎች በደንብ ይመልከቱ። መንገዱ ሙሉ በሙሉ ግልጽ ሲሆን ብቻ መታጠፍ ይጀምሩ።",
+          "narration_script": "አሁን የምትመለከቱት መስቀለኛ መንገድ ነው። በዚህ መስቀለኛ መንገድ ላይ መብራትም ሆነ ምንም ዓይነት ምልክት የለም። መንገዱ ሰፊ ሲሆን ለእያንዳንዱ አቅጣጫ ሁለት መስመሮች አሉት። ሶስት መኪኖች ይታያሉ። በግራ በኩል ሰማያዊው መኪና ቁጥር አንድ እና ብርማ ግራጫው መኪና ቁጥር ሶስት ጎን ለጎን ቆመዋል። በቀኝ በኩል ደግሞ ቢጫው መኪና ቁጥር ሁለት ይታያል።\n\nሰማያዊው መኪና ቁጥር አንድ ወደ ግራ ለመታጠፍ ይፈልጋል። የመታጠፊያ መብራቱም ብልጭ ድርግም ይላል። ከጎኑ ያለው ብርማ ግራጫው መኪና ቁጥር ሶስት ደግሞ ቀጥ ብሎ ይሄዳል። ቢጫው መኪና ቁጥር ሁለት ከተቃራኒ አቅጣጫ እየመጣ ነው። እሱም ቀጥ ብሎ ይሄዳል።\n\nወደ ግራ ለመታጠፍ የሚያሽከረክሩ አሽከርካሪዎች ከመንገዱ መሃል መስመር አቅራቢያ ወዳለው መስመር ቀድመው መግባት አለባቸው። ሰማያዊው መኪና ቁጥር አንድ የቆመው በዚህ መስመር ነው። ቀጥ ብሎ ለመሄድ የሚያሽከረክሩ አሽከርካሪዎች ደግሞ ከመንገዱ ዳር አቅራቢያ ባለው መስመር መቆም አለባቸው። ብርማ ግራጫው መኪና ቁጥር ሶስት የቆመው በዚህ መስመር ነው።\n\nበትክክለኛው መስመር ላይ መቆም ብቻ በቂ አይደለም። ወደ ግራ ለመታጠፍ የሚያሽከረክሩ አሽከርካሪዎች ከተቃራኒ አቅጣጫ ቀጥ ብሎ ለሚመጣ ተሽከርካሪ ቅድሚያ መስጠት አለባቸው።\n\nስለዚህ በዚህ ስዕል ላይ ቢጫው መኪና ቁጥር ሁለት መጀመሪያ ያልፋል። ከዚያ በኋላ ሰማያዊው መኪና ቁጥር አንድ ወደ ግራ ይታጠፋል። ምክንያቱም ወደ ግራ የሚታጠፈው መኪና ከተቃራኒ አቅጣጫ የሚመጣውን መኪና መንገድ ያቋርጣል። ካልጠበቀ ሁለቱ መኪኖች ሊጋጩ ይችላሉ። ሁልጊዜ ትክክለኛውን መስመር ቀድመው ይምረጡ። ሁሉንም አቅጣጫዎች በደንብ ይመልከቱ። መንገዱ ሙሉ በሙሉ ግልጽ ሲሆን ብቻ መታጠፍ ይጀምሩ።",
+          "image_description": "Drawn top-down diagram (SVG) of a crossroads where the wide road runs across the picture with two lanes each way. Blue car marked 1 on the left in the lane nearest the centre line, left indicator lit, red arrow showing its intended left turn into the narrower road (it must wait). Silver car marked 3 beside it in the outer lane, green arrow going straight on. Yellow car marked 2 on the right coming from the opposite direction, green arrow going straight through (it has priority).",
+          "questions": [
+            {
+              "question_amharic": "ከሚታዩት መኪኖች ውስጥ የትኛው መኪና መጠበቅ አለበት?",
+              "answers": [
+                {
+                  "text_amharic": "ቢጫው መኪና ቁጥር ሁለት",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ብርማ ግራጫው መኪና ቁጥር ሶስት",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ሰማያዊው መኪና ቁጥር አንድ",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ሁሉም መኪኖች",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "ወደ ግራ ለመታጠፍ የሚያሽከረክሩ አሽከርካሪዎች በየትኛው መስመር መቆም አለባቸው?",
+              "answers": [
+                {
+                  "text_amharic": "ከመንገዱ ዳር አቅራቢያ ባለው መስመር",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ከመንገዱ መሃል መስመር አቅራቢያ ባለው መስመር",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "በማንኛውም መስመር",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ከመንገዱ መሃል ላይ",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "ሰማያዊ መኪና ቁጥር አንድ ለቢጫ መኪና ቁጥር ሁለት መንገድ መልቀቅ አለበት?",
+              "answers": [
+                {
+                  "text_amharic": "አይደለም፣ ምክንያቱም ሰማያዊ መኪና ቁጥር አንድ በውስጠኛው መስመር ላይ ስለሆነ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "አይደለም፣ ምክንያቱም ብርማ-ግራጫ መኪና ቁጥር ሶስት ቀጥታ እየሄደ ስለሆነ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "አዎ፣ ምክንያቱም ቢጫ መኪና ቁጥር ሁለት ከቀኝ ስለሚመጣ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "አዎ፣ ምክንያቱም ወደ ግራ የሚታጠፍ አሽከርካሪ ከፊት ለፊት ለሚመጣ መኪና መንገድ ይለቃልና።",
+                  "is_correct": true
+                }
+              ]
+            }
+          ],
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_rd_l1_s1_sc2_narration_1788466447036.mp3",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/behavioral_rd_l1_s1_sc2_diagram_1788466447036.png"
         }
       ]
     }
