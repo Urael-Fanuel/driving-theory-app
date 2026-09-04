@@ -112,6 +112,7 @@ function car({ x, y, heading = 0, colour = 'white', indicate = null, scale = 1 }
   </g>`;
 }
 
+
 /** The numbered disc that lets a spoken question say "car number two". */
 function badge({ x, y, n }) {
   return `
@@ -224,6 +225,144 @@ function teeJunction() {
   ${tree({ x: 108, y: 74 })}${tree({ x: 300, y: 66, r: 26 })}${tree({ x: 520, y: 78, r: 28 })}
   ${tree({ x: 96, y: 392, r: 30 })}${tree({ x: 552, y: 386, r: 26 })}`;
 }
+
+// ─── Scene: an open two-way road, no junction ─────────────────────────────────
+//
+// Overtaking is not a junction problem, so these cards drop the crossroads
+// entirely. What matters instead is the pair of lines down the middle: Israeli
+// marking puts a solid line and a broken line side by side, and the one NEAREST
+// A DRIVER is the one that governs them: broken on their side, they may cross to
+// overtake; solid on their side, they may not.
+//
+// `brokenLine` names which of the two is the broken one by where it sits in the
+// picture, 'lower' or 'upper' — NOT by whose side it is on. A card may put the
+// overtaking driver in either lane, and a flag named after "our side" silently
+// means the opposite one as soon as it does.
+
+const OPEN_RY = 130, OPEN_RH = 180;            // the carriageway: 130..310
+const OPEN_CENTRE_Y = OPEN_RY + OPEN_RH / 2;   // 220
+const ONCOMING_Y = OPEN_RY + 45;               // 175 — traffic coming towards us
+const OURS_Y     = OPEN_RY + OPEN_RH - 45;     // 265 — our side, right-hand traffic
+const NEAR_LINE_Y = OPEN_CENTRE_Y + 7;         // the lower of the two centre lines
+const FAR_LINE_Y  = OPEN_CENTRE_Y - 7;         // the upper of the two
+
+function openRoad({ brokenLine }) {
+  const line = (y, broken) =>
+    `<line x1="8" y1="${y}" x2="${W - 8}" y2="${y}" stroke="${C.line}" stroke-width="5"`
+    + (broken ? ` stroke-dasharray="26 20"` : '') + `/>`;
+  return `
+  <rect width="${W}" height="${H}" fill="${C.grass}"/>
+  <rect x="0" y="${OPEN_RY}" width="${W}" height="${OPEN_RH}" fill="${C.road}"/>
+  <g fill="${C.kerb}">
+    <rect x="0" y="${OPEN_RY - 6}" width="${W}" height="6"/>
+    <rect x="0" y="${OPEN_RY + OPEN_RH}" width="${W}" height="6"/>
+  </g>
+  ${line(FAR_LINE_Y, brokenLine === 'upper')}
+  ${line(NEAR_LINE_Y, brokenLine === 'lower')}
+  ${tree({ x: 90, y: 62, r: 30 })}${tree({ x: 300, y: 54, r: 26 })}${tree({ x: 540, y: 64, r: 28 })}
+  ${tree({ x: 120, y: 384, r: 28 })}${tree({ x: 380, y: 392, r: 24 })}${tree({ x: 566, y: 380, r: 30 })}`;
+}
+
+// ─── Scene: the road ahead, seen from behind our own car ──────────────────────
+//
+// Not every situation reads from above. A motorcycle seen from directly
+// overhead is mostly the rider's back, and three attempts at drawing one that
+// way were still unrecognisable. From BEHIND it is unmistakable: the rider sits
+// up, the helmet and the mirrors stand out, and the machine is obviously
+// narrow. Same scene, same questions, different viewpoint.
+//
+// Depth is linear: t runs 0 at the horizon to 1 at the bottom of the picture,
+// and everything — lane position and vehicle size — is interpolated on it.
+
+const HORIZON = 150;
+const VP_X = 320;                                    // vanishing point
+const depthAt = y => (y - HORIZON) / (H - HORIZON);  // 0 far … 1 near
+const lerp = (far, near, t) => far + (near - far) * t;
+
+// road edges and the two centre lines, far value then near value
+const EDGE_L = [298, 26], EDGE_R = [342, 614];
+const MID_L  = [316, 292], MID_R = [324, 348];
+const laneOurs     = t => lerp((MID_R[0] + EDGE_R[0]) / 2, (MID_R[1] + EDGE_R[1]) / 2, t);
+const laneOncoming = t => lerp((EDGE_L[0] + MID_L[0]) / 2, (EDGE_L[1] + MID_L[1]) / 2, t);
+
+function roadAhead({ brokenLine }) {
+  const band = (a, b, fill, extra = '') =>
+    `<path d="M ${a[0]},${HORIZON} L ${b[0]},${HORIZON} L ${b[1]},${H} L ${a[1]},${H} Z" fill="${fill}" ${extra}/>`;
+  // a centre line drawn in perspective: solid as one band, broken as chunks
+  const centreLine = (pair, broken) => {
+    if (!broken) return band([pair[0] - 1.5, pair[1] - 3], [pair[0] + 1.5, pair[1] + 3], C.line);
+    let out = '';
+    for (let i = 0; i < 7; i++) {
+      const t0 = Math.pow(i / 7, 1.7), t1 = Math.pow((i + 0.55) / 7, 1.7);
+      const y0 = HORIZON + (H - HORIZON) * t0, y1 = HORIZON + (H - HORIZON) * t1;
+      const x0 = lerp(pair[0], pair[1], t0), x1 = lerp(pair[0], pair[1], t1);
+      const w0 = lerp(1.5, 3, t0), w1 = lerp(1.5, 3, t1);
+      out += `<path d="M ${x0 - w0},${y0} L ${x0 + w0},${y0} L ${x1 + w1},${y1} L ${x1 - w1},${y1} Z" fill="${C.line}"/>`;
+    }
+    return out;
+  };
+  return `
+  <rect width="${W}" height="${HORIZON}" fill="#bfe3f5"/>
+  <rect y="${HORIZON}" width="${W}" height="${H - HORIZON}" fill="${C.grass}"/>
+  ${band(EDGE_L, EDGE_R, C.road)}
+  ${band([EDGE_L[0] - 2, EDGE_L[1] - 10], [EDGE_L[0] + 2, EDGE_L[1] + 10], C.kerb)}
+  ${band([EDGE_R[0] - 2, EDGE_R[1] - 10], [EDGE_R[0] + 2, EDGE_R[1] + 10], C.kerb)}
+  ${centreLine(MID_L, brokenLine === 'left')}
+  ${centreLine(MID_R, brokenLine === 'lower' || brokenLine === 'right')}
+  <circle cx="96" cy="${HORIZON - 26}" r="26" fill="#3f9142"/><rect x="91" y="${HORIZON - 6}" width="10" height="12" fill="#6b4a2f"/>
+  <circle cx="556" cy="${HORIZON - 30}" r="30" fill="#3f9142"/><rect x="551" y="${HORIZON - 6}" width="10" height="14" fill="#6b4a2f"/>`;
+}
+
+/** A car seen from behind, sized by how far away it is. */
+function carRear({ x, y, w, colour = 'white' }) {
+  const { body, edge } = CARS[colour] ?? CARS.white;
+  const h = w * 0.78, k = w / 100;
+  return `
+  <g transform="translate(${x} ${y}) scale(${k})">
+    <rect x="-52" y="-30" width="14" height="34" rx="4" fill="${C.tyre}"/>
+    <rect x="38"  y="-30" width="14" height="34" rx="4" fill="${C.tyre}"/>
+    <path d="M -44,0 L -40,-52 C -38,-62 -30,-66 0,-66 C 30,-66 38,-62 40,-52 L 44,0 Z"
+          fill="${body}" stroke="${edge}" stroke-width="3.5" stroke-linejoin="round"/>
+    <path d="M -31,-52 C -30,-58 -24,-60 0,-60 C 24,-60 30,-58 31,-52 L 33,-30 L -33,-30 Z" fill="${C.glass}"/>
+    <rect x="-44" y="-10" width="88" height="10" rx="3" fill="${edge}"/>
+    <rect x="-38" y="-26" width="17" height="11" rx="3" fill="#ef4444"/>
+    <rect x="21"  y="-26" width="17" height="11" rx="3" fill="#ef4444"/>
+    <rect x="-14" y="-8"  width="28" height="7"  rx="2" fill="#e5e7eb"/>
+  </g>`;
+}
+
+/**
+ * A motorcycle seen from behind, sized by how far away it is. From here the
+ * things that identify it are unmissable — the rider sitting upright, the
+ * helmet, the mirrors standing out either side, and a single narrow tyre.
+ * The rider's hands and neck are a brown skin tone: the people using this app
+ * are Ethiopian, and a default pink would be drawing somebody else.
+ */
+function motorcycleRear({ x, y, w, colour = 'green' }) {
+  const { body, edge } = CARS[colour] ?? CARS.green;
+  const k = w / 100, skin = '#8a5a34', jacket = '#1f2937';
+  return `
+  <g transform="translate(${x} ${y}) scale(${k})">
+    <rect x="-13" y="-46" width="26" height="46" rx="8" fill="${C.tyre}"/>
+    <path d="M -22,-52 C -22,-64 -14,-70 0,-70 C 14,-70 22,-64 22,-52 L 20,-40 L -20,-40 Z"
+          fill="${body}" stroke="${edge}" stroke-width="3" stroke-linejoin="round"/>
+    <rect x="-11" y="-58" width="22" height="12" rx="4" fill="#ef4444"/>
+    <path d="M -30,-96 C -30,-112 -18,-122 0,-122 C 18,-122 30,-112 30,-96 L 26,-64 L -26,-64 Z"
+          fill="${jacket}"/>
+    <path d="M -30,-104 L -54,-88" stroke="${jacket}" stroke-width="15" stroke-linecap="round"/>
+    <path d="M 30,-104 L 54,-88"  stroke="${jacket}" stroke-width="15" stroke-linecap="round"/>
+    <circle cx="-56" cy="-86" r="8" fill="${skin}"/><circle cx="56" cy="-86" r="8" fill="${skin}"/>
+    <line x1="-58" y1="-92" x2="-64" y2="-108" stroke="#4b5563" stroke-width="5"/>
+    <line x1="58"  y1="-92" x2="64"  y2="-108" stroke="#4b5563" stroke-width="5"/>
+    <ellipse cx="-66" cy="-112" rx="11" ry="8" fill="${C.glass}" stroke="#4b5563" stroke-width="3.5"/>
+    <ellipse cx="66"  cy="-112" rx="11" ry="8" fill="${C.glass}" stroke="#4b5563" stroke-width="3.5"/>
+    <rect x="-9" y="-134" width="18" height="16" fill="${skin}"/>
+    <circle cx="0" cy="-146" r="26" fill="#e8edf3" stroke="#111827" stroke-width="4"/>
+    <path d="M -22,-152 A 24,24 0 0 1 22,-152 Z" fill="#111827"/>
+  </g>`;
+}
+
+
 
 function svg(inner, label) {
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="${label}">
@@ -436,6 +575,65 @@ SCENES.rd_l1_s3 = {
     + badge({ x: 296, y: 392, n: 1 })
     + badge({ x: 140, y: 212, n: 2 }),
 };
+
+SCENES.rd_l2_s1 = {
+  name: 'rd_l2_s1_overtake_allowed',
+  label: 'Open road: the broken line is on the side of the overtaking driver, so passing the slow vehicle is allowed',
+  // This pair travels RIGHT TO LEFT along the far lane, while rd_l2_s2 and
+  // rd_l2_s3 run left to right along the near one. Three cards that all showed
+  // the same lane and the same direction let a learner recognise a picture
+  // instead of reading a situation.
+  build: () => openRoad({ brokenLine: 'upper' })
+    + car({ x: 496, y: ONCOMING_Y, heading: 270, colour: 'silver' })
+    // the vehicle being overtaken is drawn larger, so it reads as the slow one
+    + car({ x: 252, y: ONCOMING_Y, heading: 270, colour: 'red', scale: 1.18 })
+    + arrow({
+        d: `M 432,${ONCOMING_Y} L 378,${ONCOMING_Y} `
+         + `Q 334,${ONCOMING_Y} 334,${OURS_Y} `
+         + `L 216,${OURS_Y} Q 176,${OURS_Y} 176,${ONCOMING_Y} `
+         + `L 94,${ONCOMING_Y}`,
+        priority: true,
+      })
+    + badge({ x: 496, y: ONCOMING_Y - 64, n: 1 })
+    + badge({ x: 252, y: ONCOMING_Y - 68, n: 2 }),
+};
+
+SCENES.rd_l2_s2 = {
+  name: 'rd_l2_s2_overtake_forbidden',
+  label: 'Open road: the solid line is on our side, so the slow vehicle may not be overtaken',
+  // Deliberately the same road as rd_l2_s1 with the two centre lines swapped.
+  // The pair of cards differ in the one detail the rule actually turns on, so a
+  // learner cannot answer them from the general look of the picture.
+  build: () => openRoad({ brokenLine: 'upper' })
+    + car({ x: 150, y: OURS_Y, heading: 90, colour: 'blue' })
+    + car({ x: 392, y: OURS_Y, heading: 90, colour: 'yellow', scale: 1.18 })
+    + arrow({
+        d: `M 214,${OURS_Y} L 268,${OURS_Y} `
+         + `Q 312,${OURS_Y} 312,${ONCOMING_Y} `
+         + `L 430,${ONCOMING_Y} Q 470,${ONCOMING_Y} 470,${OURS_Y} `
+         + `L 552,${OURS_Y}`,
+        priority: false,
+      })
+    + badge({ x: 150, y: OURS_Y + 62, n: 1 })
+    + badge({ x: 392, y: OURS_Y + 66, n: 2 }),
+};
+
+SCENES.rd_l2_s3 = {
+  name: 'rd_l2_s3_overtake_two_wheeler',
+  label: 'The road ahead: our car is behind a motorcycle and pulls right out to pass it',
+  build: () => roadAhead({ brokenLine: 'lower' })
+    + motorcycleRear({ x: laneOurs(depthAt(300)), y: 300, w: 56, colour: 'green' })
+    // the path leaves our lane well before the rider and comes back only after
+    // — squeezing past inside the lane is exactly what this card argues against
+    + arrow({
+        d: 'M 436,412 C 386,404 332,372 292,332 C 268,308 262,284 268,248',
+        priority: true,
+      })
+    + carRear({ x: laneOurs(depthAt(420)), y: 420, w: 150, colour: 'white' })
+    + badge({ x: 566, y: 388, n: 1 })
+    + badge({ x: laneOurs(depthAt(300)) + 58, y: 286, n: 2 }),
+};
+
 
 // ─── Write SVG, then rasterise ────────────────────────────────────────────────
 

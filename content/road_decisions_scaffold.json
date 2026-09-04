@@ -242,6 +242,244 @@
           "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/behavioral_rd_l1_s3_diagram_1788513571253.png"
         }
       ]
+    },
+    {
+      "id": "rd_l2",
+      "level": 2,
+      "name_hebrew": "חוקי עקיפה",
+      "name_amharic": "ማለፍ ደንቦች",
+      "icon": "⏩",
+      "color": "#2E7D32",
+      "subtopics": [
+        {
+          "id": "rd_l2_s1",
+          "name_hebrew": "קו מקווקו",
+          "name_amharic": "የተቆራረጠ መስመር",
+          "icon": "〰️",
+          "explanation_amharic": "እርስዎ የሚያሽከረክሩት ብርማ ግራጫ ቁጥር አንድ መኪና ነው። ከፊትዎ በተመሳሳይ መስመር ላይ ቀይ ቁጥር ሁለት መኪና አለ። መንገዱ ለእያንዳንዱ አቅጣጫ አንድ መስመር አለው። በመንገዱ መሃል ላይ ሁለት ነጭ መስመሮች አሉ።\n\nለእርስዎ መስመር ቅርብ የሆነው መስመር የተቆራረጠ ነው። ሌላኛው መስመር ደግሞ ያልተቆራረጠ ነው። ለአሽከርካሪው ቅርብ የሆነው መስመር ነው የሚወስነው። የተቆራረጠ መስመር ካለ ማለፍ ይፈቀዳል።\n\nአረንጓዴው ቀስት እንዴት ማለፍ እንደሚቻል ያሳያል። በመጀመሪያ ከፊት ያለውን መንገድ ክፍት መሆኑን ሩቅ ወደፊት ይመልከቱ። ከዚያም ፍላጎትዎን በምልክት ያሳዩ። ወደ ባዶው መስመር ይግቡ። ቀዩን መኪና ይለፉ። ቀዩን መኪና በደንብ ካለፉ በኋላ ወደ መስመርዎ ይመለሱ።\n\nማለፍ የሚፈቀደው ከፊት ያለው መንገድ ክፍት ከሆነ ብቻ ነው። እንቅስቃሴውን በደህና ማጠናቀቅ አለብዎት። ማንንም ሳያግዱ ወይም አደጋ ላይ ሳይጥሉ መመለስ አለብዎት። ይህ ሌሎች የመንገድ ተጠቃሚዎችን እና እርስዎን ያካትታል።",
+          "narration_script": "እርስዎ የሚያሽከረክሩት ብርማ ግራጫ ቁጥር አንድ መኪና ነው። ከፊትዎ በተመሳሳይ መስመር ላይ ቀይ ቁጥር ሁለት መኪና አለ። መንገዱ ለእያንዳንዱ አቅጣጫ አንድ መስመር አለው። በመንገዱ መሃል ላይ ሁለት ነጭ መስመሮች አሉ።\n\nለእርስዎ መስመር ቅርብ የሆነው መስመር የተቆራረጠ ነው። ሌላኛው መስመር ደግሞ ያልተቆራረጠ ነው። ለአሽከርካሪው ቅርብ የሆነው መስመር ነው የሚወስነው። የተቆራረጠ መስመር ካለ ማለፍ ይፈቀዳል።\n\nአረንጓዴው ቀስት እንዴት ማለፍ እንደሚቻል ያሳያል። በመጀመሪያ ከፊት ያለውን መንገድ ክፍት መሆኑን ሩቅ ወደፊት ይመልከቱ። ከዚያም ፍላጎትዎን በምልክት ያሳዩ። ወደ ባዶው መስመር ይግቡ። ቀዩን መኪና ይለፉ። ቀዩን መኪና በደንብ ካለፉ በኋላ ወደ መስመርዎ ይመለሱ።\n\nማለፍ የሚፈቀደው ከፊት ያለው መንገድ ክፍት ከሆነ ብቻ ነው። እንቅስቃሴውን በደህና ማጠናቀቅ አለብዎት። ማንንም ሳያግዱ ወይም አደጋ ላይ ሳይጥሉ መመለስ አለብዎት። ይህ ሌሎች የመንገድ ተጠቃሚዎችን እና እርስዎን ያካትታል።",
+          "image_description": "Drawn top-down diagram (SVG) of a straight open road, one lane each way. The silver car marked 1 and the larger red car marked 2 ahead of it are both in the UPPER lane travelling right to left. Of the two centre lines the upper one, nearest those cars, is broken and the lower is solid. The other lane is empty. A green arrow shows the silver car crossing out, passing the red car and returning.",
+          "questions": [
+            {
+              "question_amharic": "የብርማ ግራጫው ቁጥር አንድ መኪና አሽከርካሪ እዚህ ማለፍ ይችላልን?",
+              "answers": [
+                {
+                  "text_amharic": "አይችልም፤ ምክንያቱም መስመሩ ያልተቆራረጠ ነው።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ይችላል፤ ነገር ግን ቀዩ መኪና ምልክት ካሳየ ብቻ ነው።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "አይችልም፤ ምክንያቱም ሁለት መስመሮች አሉ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ይችላል፤ ምክንያቱም ቅርብ ያለው መስመር የተቆራረጠ ሲሆን ከፊት ያለው መንገድም ክፍት ነው",
+                  "is_correct": true
+                }
+              ]
+            },
+            {
+              "question_amharic": "የብርማ ግራጫው ቁጥር አንድ መኪና አሽከርካሪ ማለፉን እንዴት ማከናወን አለበት?",
+              "answers": [
+                {
+                  "text_amharic": "ምልክት አሳይቶ ቀዩን መኪና በፍጥነት ማለፍ አለበት።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ሩቅ ወደፊት አይቶ፣ ምልክት አሳይቶ፣ ወደ ባዶው መስመር ገብቶ፣ ቀዩን መኪና አልፎ፣ በደንብ ካለፈ በኋላ ወደ መስመሩ መመለስ አለበት።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "አረንጓዴውን ቀስት ብቻ መከተል አለበት።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ቀዩ መኪና እስኪፈጥን መጠበቅ አለበት።",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "በመንገዱ መሃል ያሉት ሁለቱ መስመሮች ምን ማለት ናቸው?",
+              "answers": [
+                {
+                  "text_amharic": "ማንም ማለፍ እንደማይችል ያመለክታሉ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ሁለቱም መስመሮች ማለፍ እንደሚችሉ ያመለክታሉ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ለአሽከርካሪው ቅርብ የሆነው መስመር ነው የሚወስነው፤ እዚህ ደግሞ የተቆራረጠ ነው።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ለመንገድ ማስዋቢያ ብቻ ናቸው።",
+                  "is_correct": false
+                }
+              ]
+            }
+          ],
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_rd_l2_s1_narration_1788524075851.mp3",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/behavioral_rd_l2_s1_diagram_1788524075851.png"
+        },
+        {
+          "id": "rd_l2_s2",
+          "name_hebrew": "קו רציף",
+          "name_amharic": "የጠነከረ መስመር",
+          "icon": "➖",
+          "explanation_amharic": "ይህ ስዕል ቀጥ ያለ መንገድ ያሳያል።\nመንገዱ በሁለት አቅጣጫዎች የተከፈለ ነው።\nበእያንዳንዱ አቅጣጫ አንድ መስመር አለ።\nበመንገዱ መሃል ሁለት ነጭ መስመሮች አሉ።\n\nሰማያዊው መኪና ቁጥር አንድ ከኋላ ነው።\nቢጫው መኪና ቁጥር ሁለት ከፊት ነው።\nመኪና ቁጥር ሁለት ትልቅና ቀርፋፋ ተሽከርካሪ ነው።\nሰማያዊው መኪና ቁጥር አንድ ቢጫውን መኪና ማለፍ ይፈልጋል።\n\nወደ እኛ ቅርብ ያለው መስመር ቀጣይ ነው።\nከሱ ባሻገር ያለው መስመር የተቆራረጠ ነው።\nቀጣይ መስመር መሻገር አይፈቀድም።\nየተቆራረጠ መስመር መሻገር ይፈቀዳል።\n\nየቅርቡ መስመር ቀጣይ ከሆነ መሻገር አይቻልም።\nየሌላኛው አቅጣጫ መስመር ባዶ ቢሆንም ህጉ አይለወጥም።\nቀይ ቀስት ማለፍ እንደማይፈቀድ ያሳያል።\n\nሁልጊዜ የቅርብዎን መስመር ይመልከቱ።\nመስመሩ ቀጣይ ከሆነ አይለፉ።\nደህንነትዎን ያስቀድሙ።",
+          "narration_script": "ይህ ስዕል ቀጥ ያለ መንገድ ያሳያል።\nመንገዱ በሁለት አቅጣጫዎች የተከፈለ ነው።\nበእያንዳንዱ አቅጣጫ አንድ መስመር አለ።\nበመንገዱ መሃል ሁለት ነጭ መስመሮች አሉ።\n\nሰማያዊው መኪና ቁጥር አንድ ከኋላ ነው።\nቢጫው መኪና ቁጥር ሁለት ከፊት ነው።\nመኪና ቁጥር ሁለት ትልቅና ቀርፋፋ ተሽከርካሪ ነው።\nሰማያዊው መኪና ቁጥር አንድ ቢጫውን መኪና ማለፍ ይፈልጋል።\n\nወደ እኛ ቅርብ ያለው መስመር ቀጣይ ነው።\nከሱ ባሻገር ያለው መስመር የተቆራረጠ ነው።\nቀጣይ መስመር መሻገር አይፈቀድም።\nየተቆራረጠ መስመር መሻገር ይፈቀዳል።\n\nየቅርቡ መስመር ቀጣይ ከሆነ መሻገር አይቻልም።\nየሌላኛው አቅጣጫ መስመር ባዶ ቢሆንም ህጉ አይለወጥም።\nቀይ ቀስት ማለፍ እንደማይፈቀድ ያሳያል።\n\nሁልጊዜ የቅርብዎን መስመር ይመልከቱ።\nመስመሩ ቀጣይ ከሆነ አይለፉ።\nደህንነትዎን ያስቀድሙ።",
+          "image_description": "Drawn top-down diagram (SVG) of the same straight open road with the two centre lines swapped: the one nearer the blue car marked 1 is solid. A larger yellow car marked 2 is ahead in the same lane and the oncoming lane is empty. A red arrow shows the overtake that may not be made.",
+          "questions": [
+            {
+              "question_amharic": "የመኪና ቁጥር አንድ አሽከርካሪ እዚህ ማለፍ ይችላልን?",
+              "answers": [
+                {
+                  "text_amharic": "አይችልም፤ ምክንያቱም ወደ እሱ ቅርብ ያለው መስመር ቀጣይ ነው።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ይችላል፤ ምክንያቱም የሌላኛው አቅጣጫ መስመር ባዶ ነው።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ይችላል፤ ምክንያቱም ቢጫው መኪና ቀርፋፋ ነው።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "አይችልም፤ ምክንያቱም ከፊት ለፊት ያለው መንገድ ጠባብ ነው።",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "የመኪና ቁጥር አንድ አሽከርካሪ እንዴት መሆን አለበት?",
+              "answers": [
+                {
+                  "text_amharic": "ቢጫውን መኪና በፍጥነት ማለፍ አለበት።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ወደ ግራ መስመር ገብቶ ቀጥ ብሎ መሄድ አለበት።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ቢጫውን መኪና ተከትሎ መቅረብ አለበት።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ከመኪና ቁጥር ሁለት ኋላ መቆየት፣ አስተማማኝ ርቀት መጠበቅ እና ማለፍ የሚፈቀድበት ቦታ መጠበቅ አለበት።",
+                  "is_correct": true
+                }
+              ]
+            },
+            {
+              "question_amharic": "የሌላኛው አቅጣጫ መስመር ባዶ ነው። ይህ ማለፍን ይፈቅዳልን?",
+              "answers": [
+                {
+                  "text_amharic": "አዎ፣ ባዶ ስለሆነ ማለፍ ይፈቀዳል።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "አይፈቅድም፤ የቅርቡ ቀጣይ መስመር ባዶ ቢሆንም ማለፍን ይከለክላል።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "አዎ፣ የቢጫው መኪና ቀርፋፋ ስለሆነ ማለፍ ይፈቀዳል።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "አይፈቅድም፤ ምክንያቱም ከፊት ለፊት ያለው መንገድ ጠባብ ነው።",
+                  "is_correct": false
+                }
+              ]
+            }
+          ],
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_rd_l2_s2_narration_1788522913126.mp3",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/behavioral_rd_l2_s2_diagram_1788522913126.png"
+        },
+        {
+          "id": "rd_l2_s3",
+          "name_hebrew": "עקיפת אופנוע",
+          "name_amharic": "ሞተርሳይክል ማለፍ",
+          "icon": "🏍️",
+          "explanation_amharic": "በዚህ ስዕል ላይ ነጭ መኪና ቁጥር አንድን እናያለን። ይህ የእኛ መኪና ነው። ከፊት ለፊታችን ሞተር ሳይክል ቁጥር ሁለት አለ። ሞተር ሳይክሉ በተመሳሳይ መስመር ላይ ይሄዳል።\n\nበመንገዱ መሃል ሁለት ነጭ መስመሮች አሉ። ወደ እኛ የቀረበው መስመር የተቆራረጠ ነው። ይህ መስመር መሻገር እንደሚቻል ያሳያል። የተቃራኒው መስመር ባዶ ነው።\n\nመንገዱ ባዶ ከሆነ እና ማንም የማያደናቅፍ ከሆነ ማለፍ ይፈቀዳል። አረንጓዴው ቀስት መኪና ቁጥር አንድ ሞተር ሳይክሉን እንዴት እንደሚያልፍ ያሳያል። መኪናው ወደ ሌላኛው መስመር ገብቶ በሰፊው ያልፋል።\n\nባለ ሁለት ጎማ ተሽከርካሪ ሲያልፉ በቂ ክፍተት መተው አለብዎት። ከሞተር ሳይክሉ ራቅ ብለው ማለፍ ያስፈልጋል። የሞተር ሳይክል አሽከርካሪውን እንቅስቃሴ መከታተልም አስፈላጊ ነው።\n\nሞተር ሳይክል በድንገት ወደ ጎን ሊንቀሳቀስ ይችላል። ስለዚህ በቂ ቦታ መተው ደህንነትን ያረጋግጣል። ሁልጊዜ በጥንቃቄ ያሽከረክሩ።",
+          "narration_script": "በዚህ ስዕል ላይ ነጭ መኪና ቁጥር አንድን እናያለን። ይህ የእኛ መኪና ነው። ከፊት ለፊታችን ሞተር ሳይክል ቁጥር ሁለት አለ። ሞተር ሳይክሉ በተመሳሳይ መስመር ላይ ይሄዳል።\n\nበመንገዱ መሃል ሁለት ነጭ መስመሮች አሉ። ወደ እኛ የቀረበው መስመር የተቆራረጠ ነው። ይህ መስመር መሻገር እንደሚቻል ያሳያል። የተቃራኒው መስመር ባዶ ነው።\n\nመንገዱ ባዶ ከሆነ እና ማንም የማያደናቅፍ ከሆነ ማለፍ ይፈቀዳል። አረንጓዴው ቀስት መኪና ቁጥር አንድ ሞተር ሳይክሉን እንዴት እንደሚያልፍ ያሳያል። መኪናው ወደ ሌላኛው መስመር ገብቶ በሰፊው ያልፋል።\n\nባለ ሁለት ጎማ ተሽከርካሪ ሲያልፉ በቂ ክፍተት መተው አለብዎት። ከሞተር ሳይክሉ ራቅ ብለው ማለፍ ያስፈልጋል። የሞተር ሳይክል አሽከርካሪውን እንቅስቃሴ መከታተልም አስፈላጊ ነው።\n\nሞተር ሳይክል በድንገት ወደ ጎን ሊንቀሳቀስ ይችላል። ስለዚህ በቂ ቦታ መተው ደህንነትን ያረጋግጣል። ሁልጊዜ በጥንቃቄ ያሽከረክሩ።",
+          "image_description": "Drawn diagram (SVG) of the road seen from behind our own car: the white car marked 1 is ours, nearest the viewer, and a motorcycle marked 2 is ahead in the same lane, seen from behind with helmet and mirrors visible. The nearer centre line is broken and the oncoming lane is clear. A green arrow swings well out around the rider.",
+          "questions": [
+            {
+              "question_amharic": "የመኪና ቁጥር አንድ አሽከርካሪ ሞተር ሳይክሉን እንዴት ማለፍ አለበት?",
+              "answers": [
+                {
+                  "text_amharic": "በተመሳሳይ መስመር ውስጥ ተጠግቶ ማለፍ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "በፍጥነት አልፎ ወዲያው ወደ መስመሩ መመለስ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ወደ ሌላኛው መስመር በሰፊው ገብቶ፣ በቂ ክፍተት ትቶ፣ የአሽከርካሪውን እንቅስቃሴ እየተመለከተ።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ሞተር ሳይክሉ እስኪቆም መጠበቅ።",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "የመኪና ቁጥር አንድ አሽከርካሪ ሞተር ሳይክሉን እዚህ ማለፍ ይችላልን?",
+              "answers": [
+                {
+                  "text_amharic": "አዎ፣ ወደ መኪናው የቀረበው መስመር የተቆራረጠ ስለሆነ እና የተቃራኒው መስመር ባዶ ስለሆነ።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "አይደለም፣ ሞተር ሳይክል ማለፍ ፈጽሞ አይፈቀድም።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "አይደለም፣ የተቆራረጠ መስመር ቢሆንም ማለፍ አይቻልም።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "አዎ፣ ነገር ግን ሞተር ሳይክሉን በቅርብ ማለፍ አለበት።",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "ሞተር ሳይክልን በጣም ተጠግቶ ማለፍ ያለው አደጋ ምንድነው?",
+              "answers": [
+                {
+                  "text_amharic": "ሞተር ሳይክሉ ፍጥነቱን ሊጨምር ይችላል።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የሞተር ሳይክል አሽከርካሪው ሊናደድ ይችላል።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የመኪናው መስታወት ሊሰበር ይችላል።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ሞተር ሳይክል በድንገት ወደ ጎን ሊንቀሳቀስ ስለሚችል፣ በቂ ቦታ ከሌለ አደጋ ሊፈጠር ይችላል።",
+                  "is_correct": true
+                }
+              ]
+            }
+          ],
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_rd_l2_s3_narration_1788522915910.mp3",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/behavioral_rd_l2_s3_diagram_1788522915910.png"
+        }
+      ]
     }
   ]
 }
