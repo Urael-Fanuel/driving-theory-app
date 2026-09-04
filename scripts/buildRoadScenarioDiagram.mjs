@@ -122,6 +122,24 @@ function badge({ x, y, n }) {
   </g>`;
 }
 
+/**
+ * A give-way sign on its post: a downward-pointing triangle, red rim, pale
+ * centre.
+ *
+ * ⚠️ No lettering, ever. The app is used by Amharic speakers across many
+ * countries and a word painted on a sign is a word most of its learners cannot
+ * read — the shape and the colour have to carry the whole meaning, exactly as
+ * they do on a real road. The narration says what the sign means; the picture
+ * only shows what it looks like.
+ */
+function giveWaySign({ x, y, scale = 1 }) {
+  return `
+  <g transform="translate(${x} ${y}) scale(${scale})">
+    <rect x="-3" y="0" width="6" height="46" fill="#9ca3af" stroke="#6b7280" stroke-width="1.5"/>
+    <path d="M -30,-46 L 30,-46 L 0,4 Z" fill="#ffffff" stroke="#c81e1e" stroke-width="9" stroke-linejoin="round"/>
+  </g>`;
+}
+
 function tree({ x, y, r = 32 }) {
   return `<circle cx="${x}" cy="${y}" r="${r}" fill="#3f9142"/>`
        + `<rect x="${x - 5}" y="${y + r - 4}" width="10" height="22" fill="#6b4a2f"/>`;
@@ -149,6 +167,7 @@ const CENTRE_Y = RY + RH / 2;      // 232
 const NORTHBOUND_X = CENTRE_X + 40;
 const SOUTHBOUND_X = CENTRE_X - 40;
 const WESTBOUND_Y  = CENTRE_Y - 42;
+const EASTBOUND_Y  = CENTRE_Y + 42;
 
 function crossroads() {
   return `
@@ -171,6 +190,39 @@ function crossroads() {
   </g>
   ${tree({ x: 120, y: 80 })}${tree({ x: 520, y: 88, r: 28 })}
   ${tree({ x: 128, y: 372, r: 28 })}${tree({ x: 524, y: 366 })}`;
+}
+
+// ─── Scene: a T junction ──────────────────────────────────────────────────────
+//
+// A different shape of junction, not another dressing of the crossroads: the
+// side road ends at the main road instead of crossing it. It also settles a
+// question a four-way crossroads leaves open — which road a sign belongs to.
+// On the stem of a T the sign stands right beside the car it faces, on that
+// car's own right-hand verge, and cannot be read as belonging to anything else.
+
+const TEE_STEM_TOP = RY + RH;              // the side road starts at the main road
+
+function teeJunction() {
+  return `
+  <rect width="${W}" height="${H}" fill="${C.grass}"/>
+  <g fill="${C.road}">
+    <rect x="0" y="${RY}" width="${W}" height="${RH}"/>
+    <rect x="${RX}" y="${TEE_STEM_TOP}" width="${RW}" height="${H - TEE_STEM_TOP}"/>
+  </g>
+  <g fill="${C.kerb}">
+    <rect x="0" y="${RY - 6}" width="${W}" height="6"/>
+    <rect x="0" y="${RY + RH}" width="${RX - 6}" height="6"/>
+    <rect x="${RX + RW + 6}" y="${RY + RH}" width="${W - RX - RW - 6}" height="6"/>
+    <rect x="${RX - 6}" y="${TEE_STEM_TOP}" width="6" height="${H - TEE_STEM_TOP}"/>
+    <rect x="${RX + RW}" y="${TEE_STEM_TOP}" width="6" height="${H - TEE_STEM_TOP}"/>
+  </g>
+  <g stroke="${C.line}" stroke-width="4" stroke-dasharray="22 18">
+    <line x1="8" y1="${CENTRE_Y}" x2="${RX - 10}" y2="${CENTRE_Y}"/>
+    <line x1="${RX + RW + 10}" y1="${CENTRE_Y}" x2="${W - 8}" y2="${CENTRE_Y}"/>
+    <line x1="${CENTRE_X}" y1="${TEE_STEM_TOP + 12}" x2="${CENTRE_X}" y2="${H - 8}"/>
+  </g>
+  ${tree({ x: 108, y: 74 })}${tree({ x: 300, y: 66, r: 26 })}${tree({ x: 520, y: 78, r: 28 })}
+  ${tree({ x: 96, y: 392, r: 30 })}${tree({ x: 552, y: 386, r: 26 })}`;
 }
 
 function svg(inner, label) {
@@ -351,6 +403,38 @@ SCENES.rd_l1_s2 = {
     + badgeOnCar({ x: 120, y: EB_INNER_Y, n: 1 })
     + badgeOnCar({ x: 540, y: WB_INNER_Y, n: 2 })
     + badgeOnCar({ x: 120, y: EB_OUTER_Y, n: 3 }),
+};
+
+SCENES.rd_l1_s3 = {
+  name: 'rd_l1_s3_give_way_sign',
+  label: 'T junction: a give-way sign makes the side-road car wait before turning right onto the main road',
+  build: () => teeJunction()
+    // The sign stands on the side road's own right-hand verge, level with the
+    // car it faces, so there is no doubt which driver it is speaking to.
+    + giveWaySign({ x: 442, y: 356, scale: 0.85 })
+    + car({ x: NORTHBOUND_X, y: 392, heading: 0,  colour: 'green' })
+    + car({ x: 140, y: EASTBOUND_Y, heading: 90,  colour: 'white' })
+    // arrows before badges, so a badge is never buried under an arrow head
+    // The side-road car turns RIGHT. Two cards already show a left turn, so the
+    // manoeuvre here is a different one; what the card teaches is the sign, not
+    // the turn. Its arrow runs a little south of the main-road arrow rather than
+    // on top of it: the two are joining the same lane, and drawn on one line the
+    // red arrowhead simply buried the green arrow and the picture stopped being
+    // readable.
+    // Both cars are heading into the same lane, so the arrows share its line.
+    // They are separated ALONG that line, with the junction as the gap between
+    // them: run them side by side and the red arrowhead simply covers the green
+    // arrow. Read left to right the picture now says what actually happens —
+    // the white car goes through first, the green car follows it out.
+    + arrow({ d: `M 204,${EASTBOUND_Y} L 330,${EASTBOUND_Y}`, priority: true })
+    + arrow({
+        d: `M ${NORTHBOUND_X},344 L ${NORTHBOUND_X},${EASTBOUND_Y + 32} `
+         + `Q ${NORTHBOUND_X},${EASTBOUND_Y} ${NORTHBOUND_X + 32},${EASTBOUND_Y} `
+         + `L 468,${EASTBOUND_Y}`,
+        priority: false,
+      })
+    + badge({ x: 296, y: 392, n: 1 })
+    + badge({ x: 140, y: 212, n: 2 }),
 };
 
 // ─── Write SVG, then rasterise ────────────────────────────────────────────────

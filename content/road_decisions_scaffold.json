@@ -164,6 +164,82 @@
           ],
           "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_rd_l1_s1_sc2_narration_1788466447036.mp3",
           "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/behavioral_rd_l1_s1_sc2_diagram_1788466447036.png"
+        },
+        {
+          "id": "rd_l1_s3",
+          "name_hebrew": "תמרור תן זכות קדימה",
+          "name_amharic": "ቅድሚያ ስጥ ምልክት",
+          "icon": "⚠️",
+          "explanation_amharic": "አሁን የምትመለከቱት የቲ ቅርጽ መገናኛ ነው። አንድ የጎን መንገድ ከዋና መንገድ ጋር የሚገናኝበት ቦታ ነው። እዚህ መብራት የለም። ሁለት መኪኖች አሉ። ከታች በጎን መንገዱ ላይ ቁጥር አንድ አረንጓዴ መኪና አለ። በዋናው መንገድ ላይ ደግሞ ቁጥር ሁለት ነጭ መኪና አለ።\n\nከአረንጓዴው መኪና ቁጥር አንድ አጠገብ፣ ወደታች የሚያመለክት ሶስት ማዕዘን ምልክት አለ። ይህ ምልክት ቀይ ጠርዝ ያለው ሲሆን መሃሉ የገረጣ ነው። ይህ ምልክት የሚያሳየው፣ የሚመለከተው አሽከርካሪ ቅድሚያ መስጠት እንዳለበት ነው። በዋናው መንገድ ላይ ለሚንቀሳቀስ ማንኛውም ተሽከርካሪ ቅድሚያ መስጠት አለበት።\n\nአረንጓዴው መኪና ቁጥር አንድ በጎን መንገዱ እየመጣ ነው። ወደ ዋናው መንገድ ወደ ቀኝ መታጠፍ ይፈልጋል። ነጩ መኪና ቁጥር ሁለት ደግሞ በዋናው መንገድ ላይ ነው። ቀጥ ብሎም ይሄዳል።\n\nበዚህ ሁኔታ ነጩ መኪና ቁጥር ሁለት መጀመሪያ ያልፋል። አረንጓዴው መኪና ቁጥር አንድ ይጠብቃል። ሁለቱም መኪኖች ወደ ዋናው መንገድ አንድ መስመር እየገቡ ነው። ነጩ መኪና ግን አስቀድሞ በዋናው መንገድ ላይ ነው።\n\nነጩ መኪና ቁጥር ሁለት ከአረንጓዴው መኪና ቁጥር አንድ ግራ በኩል እየመጣ ነው። ምልክቱ ግን አረንጓዴው መኪና እንዲጠብቅ ይነግረዋል። ምልክት ሲኖር፣ ምልክቱን መከተል አለብዎት። ዋናው መንገድ እስኪጠራ ድረስ ይጠብቁ። ከዚያ በኋላ ብቻ ወደ ዋናው መንገድ ይቀላቀሉ።",
+          "narration_script": "አሁን የምትመለከቱት የቲ ቅርጽ መገናኛ ነው። አንድ የጎን መንገድ ከዋና መንገድ ጋር የሚገናኝበት ቦታ ነው። እዚህ መብራት የለም። ሁለት መኪኖች አሉ። ከታች በጎን መንገዱ ላይ ቁጥር አንድ አረንጓዴ መኪና አለ። በዋናው መንገድ ላይ ደግሞ ቁጥር ሁለት ነጭ መኪና አለ።\n\nከአረንጓዴው መኪና ቁጥር አንድ አጠገብ፣ ወደታች የሚያመለክት ሶስት ማዕዘን ምልክት አለ። ይህ ምልክት ቀይ ጠርዝ ያለው ሲሆን መሃሉ የገረጣ ነው። ይህ ምልክት የሚያሳየው፣ የሚመለከተው አሽከርካሪ ቅድሚያ መስጠት እንዳለበት ነው። በዋናው መንገድ ላይ ለሚንቀሳቀስ ማንኛውም ተሽከርካሪ ቅድሚያ መስጠት አለበት።\n\nአረንጓዴው መኪና ቁጥር አንድ በጎን መንገዱ እየመጣ ነው። ወደ ዋናው መንገድ ወደ ቀኝ መታጠፍ ይፈልጋል። ነጩ መኪና ቁጥር ሁለት ደግሞ በዋናው መንገድ ላይ ነው። ቀጥ ብሎም ይሄዳል።\n\nበዚህ ሁኔታ ነጩ መኪና ቁጥር ሁለት መጀመሪያ ያልፋል። አረንጓዴው መኪና ቁጥር አንድ ይጠብቃል። ሁለቱም መኪኖች ወደ ዋናው መንገድ አንድ መስመር እየገቡ ነው። ነጩ መኪና ግን አስቀድሞ በዋናው መንገድ ላይ ነው።\n\nነጩ መኪና ቁጥር ሁለት ከአረንጓዴው መኪና ቁጥር አንድ ግራ በኩል እየመጣ ነው። ምልክቱ ግን አረንጓዴው መኪና እንዲጠብቅ ይነግረዋል። ምልክት ሲኖር፣ ምልክቱን መከተል አለብዎት። ዋናው መንገድ እስኪጠራ ድረስ ይጠብቁ። ከዚያ በኋላ ብቻ ወደ ዋናው መንገድ ይቀላቀሉ።",
+          "image_description": "Drawn top-down diagram (SVG) of a T junction: a main road across the picture, a side road joining from below. A give-way sign (downward triangle, red rim, pale middle, no lettering) stands at the roadside beside the green car on its own right. Green car marked 1 comes up the side road with a red arrow curving right onto the main road (it must wait). White car marked 2 travels along the main road with a green arrow going straight (it has priority). Both are joining the same lane, so the arrows run one after the other along it rather than crossing.",
+          "questions": [
+            {
+              "question_amharic": "በዚህ መገናኛ ላይ ቅድሚያ የማሽከርከር መብት ያለው ማነው?",
+              "answers": [
+                {
+                  "text_amharic": "ነጩ መኪና ቁጥር ሁለት",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "አረንጓዴው መኪና ቁጥር አንድ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ሁለቱም መኪኖች በተመሳሳይ ጊዜ",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የትኛውም መኪና አይደለም",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "የአረንጓዴው መኪና ቁጥር አንድ አሽከርካሪ እንዴት ማድረግ አለበት?",
+              "answers": [
+                {
+                  "text_amharic": "ወዲያውኑ ወደ ቀኝ ታጥፎ ወደ ዋናው መንገድ መግባት አለበት።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ነጩ መኪና ቁጥር ሁለት እንዲጠብቅ ምልክት መስጠት አለበት።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ነጩ መኪና ቁጥር ሁለት እስኪያልፍ መጠበቅ እና ከዚያ ወደ ቀኝ ታጥፎ ወደ ዋናው መንገድ መግባት አለበት።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ወደ ግራ ታጥፎ ወደ ዋናው መንገድ መግባት አለበት።",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "አረንጓዴው መኪና ቁጥር አንድ ለነጩ መኪና ቁጥር ሁለት ቅድሚያ መስጠት አለበት ወይ?",
+              "answers": [
+                {
+                  "text_amharic": "አይ፣ ነጩ መኪና ከግራ በኩል ስለሚመጣ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "አዎ፣ ምክንያቱም የሚመለከተው ምልክት ቅድሚያ እንዲሰጥ ስለሚያዝ።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "አይ፣ አረንጓዴው መኪና መጀመሪያ ስለደረሰ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "አዎ፣ ሁለቱም መኪኖች ወደ አንድ መስመር ስለሚገቡ።",
+                  "is_correct": false
+                }
+              ]
+            }
+          ],
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_rd_l1_s3_narration_1788513571253.mp3",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/behavioral_rd_l1_s3_diagram_1788513571253.png"
         }
       ]
     }
