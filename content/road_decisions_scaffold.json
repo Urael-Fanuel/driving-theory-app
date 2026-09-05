@@ -480,6 +480,92 @@
           "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/behavioral_rd_l2_s3_diagram_1788522915910.png"
         }
       ]
+    },
+    {
+      "id": "rd_l3",
+      "level": 3,
+      "name_hebrew": "התנהגות כלפי הולכי רגל",
+      "name_amharic": "እግረኛ አያያዝ",
+      "icon": "🚸",
+      "color": "#2E7D32",
+      "subtopics": [
+        {
+          "id": "rd_l3_s1",
+          "name_hebrew": "כלל מעבר החצייה",
+          "name_amharic": "የእግረኛ ማቋረጫ ደንብ",
+          "icon": "🚶",
+          "explanation_amharic": "እርስዎ ቢጫውን መኪና ቁጥር አንድ ያሽከረክራሉ። ቀዩ እግረኛ ቁጥር ሁለት ወደ ማቋረጫው እየሄደ ነው።\n\nወደ ማቋረጫ ሲቃረቡ እግረኛ ቢኖርም ባይኖርም ፍጥነትዎን መቀነስ ግዴታ ነው።\n\nእግረኛ በማቋረጫው ላይ ሲሆን ቅድሚያ ይስጡት። እግረኛው ወደ ማቋረጫው ለመሻገር መዘጋጀቱ ከታየም ቅድሚያ መስጠት አለብዎት።\n\nእግረኞች በሰላም እንዲያልፉ ፍጥነትዎን ይቀንሱ። አስፈላጊ ከሆነም መኪናውን ያቁሙ።",
+          "narration_script": "እርስዎ ቢጫውን መኪና ቁጥር አንድ ያሽከረክራሉ። ቀዩ እግረኛ ቁጥር ሁለት ወደ ማቋረጫው እየሄደ ነው።\n\nወደ ማቋረጫ ሲቃረቡ እግረኛ ቢኖርም ባይኖርም ፍጥነትዎን መቀነስ ግዴታ ነው።\n\nእግረኛ በማቋረጫው ላይ ሲሆን ቅድሚያ ይስጡት። እግረኛው ወደ ማቋረጫው ለመሻገር መዘጋጀቱ ከታየም ቅድሚያ መስጠት አለብዎት።\n\nእግረኞች በሰላም እንዲያልፉ ፍጥነትዎን ይቀንሱ። አስፈላጊ ከሆነም መኪናውን ያቁሙ።",
+          "image_description": "Drawn top-down diagram (SVG) of a straight city street, one lane each way, with a pedestrian crossing painted across it as short white stripes running along the direction of travel. The yellow car marked 1 approaches from the left with a red arrow stopping short of the crossing (it must slow down and be ready to stop). A person marked 2, in red, is on the near pavement WALKING TOWARDS the crossing, not yet at it and not on the road; a green arrow carries their path along the pavement to the crossing and then over the road to the far pavement.",
+          "questions": [
+            {
+              "question_amharic": "ቢጫውን መኪና የሚያሽከረክረው ሰው እዚህ እንዴት መሆን አለበት?",
+              "answers": [
+                {
+                  "text_amharic": "በተመሳሳይ ፍጥነት ይቀጥሉ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "እግረኛው እስኪቆም ይጠብቁ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ፍጥነት ይቀንሱ፣ ለማቆም ዝግጁ ይሁኑ፣ እግረኛውን ያሳልፉ።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ሁልጊዜ ሙሉ በሙሉ ያቁሙ።",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "የሚያሽከረክረው ሰው በተመሳሳይ ፍጥነት መቀጠል ይችላል?",
+              "answers": [
+                {
+                  "text_amharic": "እግረኛው ገና ስላልደረሰ በተመሳሳይ ፍጥነት መቀጠል ይቻላል።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "እግረኛው በመንገድ ላይ ስላልሆነ ፍጥነት መቀነስ አያስፈልግም።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "አይ፣ እግረኛው እስኪቆም መጠበቅ አለብዎት።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "አይ፣ ፍጥነት ይቀንሱ፣ እግረኛው ሲደርስ ይከታተሉ፣ ከደረሰ አቁመው እንዲያቋርጥ ያድርጉ፣ ሙሉ በሙሉ ካቋረጠ በኋላ ብቻ ይቀጥሉ።",
+                  "is_correct": true
+                }
+              ]
+            },
+            {
+              "question_amharic": "እዚህ ቅድሚያ ያለው ማነው?",
+              "answers": [
+                {
+                  "text_amharic": "በመጀመሪያ የደረሰው።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ወደ ማቋረጫው እየሄደ ያለው ቀይ እግረኛ።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "የቢጫው መኪና አሽከርካሪ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ትልቁ ተሽከርካሪ።",
+                  "is_correct": false
+                }
+              ]
+            }
+          ],
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_rd_l3_s1_narration_1788635407700.mp3",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/behavioral_rd_l3_s1_diagram_1788536058384.png"
+        }
+      ]
     }
   ]
 }

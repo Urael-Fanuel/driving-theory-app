@@ -364,6 +364,46 @@ function motorcycleRear({ x, y, w, colour = 'green' }) {
 
 
 
+/**
+ * A pedestrian seen from above: head, shoulders and the arms swinging out from
+ * them. What makes a person readable from overhead is the head sitting proud
+ * of a much wider pair of shoulders, so those two shapes carry it and nothing
+ * else is drawn. `heading` points the way they are walking.
+ *
+ * Skin is a brown tone: the people using this app are Ethiopian, and a default
+ * pink would be drawing somebody else.
+ */
+function pedestrian({ x, y, heading = 0, colour = 'blue', scale = 1 }) {
+  const { body } = CARS[colour] ?? CARS.blue;
+  const skin = '#8a5a34';
+  return `
+  <g transform="translate(${x} ${y}) rotate(${heading}) scale(${scale})">
+    <path d="M -13,-2 L -21,14" stroke="${skin}" stroke-width="7" stroke-linecap="round"/>
+    <path d="M 13,-2 L 21,14"  stroke="${skin}" stroke-width="7" stroke-linecap="round"/>
+    <path d="M -6,10 L -8,26" stroke="#1f2937" stroke-width="8" stroke-linecap="round"/>
+    <path d="M 6,10  L 8,26"  stroke="#1f2937" stroke-width="8" stroke-linecap="round"/>
+    <ellipse cx="0" cy="4" rx="14" ry="11" fill="${body}" stroke="#1f2937" stroke-width="2.5"/>
+    <circle cx="0" cy="-6" r="9.5" fill="${skin}" stroke="#1f2937" stroke-width="2.5"/>
+  </g>`;
+}
+
+/**
+ * A zebra crossing painted across the carriageway, drawn from above.
+ *
+ * The stripes run ALONG the road, in the direction the traffic travels, and
+ * each one is short. A first version drew them the other way round — long bars
+ * lying across the lanes — which is not what the marking looks like on a real
+ * road.
+ */
+function zebraCrossing({ cx, roadTop, roadBottom, length = 70 }) {
+  const thickness = 12, gap = 10;
+  let out = '';
+  for (let y = roadTop + 6; y < roadBottom - thickness - 2; y += thickness + gap) {
+    out += `<rect x="${cx - length / 2}" y="${y}" width="${length}" height="${thickness}" fill="${C.line}"/>`;
+  }
+  return out;
+}
+
 function svg(inner, label) {
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="${label}">
   <defs>
@@ -634,6 +674,36 @@ SCENES.rd_l2_s3 = {
     + badge({ x: laneOurs(depthAt(300)) + 58, y: 286, n: 2 }),
 };
 
+
+SCENES.rd_l3_s1 = {
+  name: 'rd_l3_s1_pedestrian_approaching_crossing',
+  label: 'A pedestrian is walking towards the crossing, so the approaching car must slow and be ready to stop',
+  // A city street rather than the open road of the overtaking cards: one lane
+  // each way, a zebra across it, and no other vehicle. The only thing to read
+  // here is the person, which is the whole point of the card.
+  //
+  // The person is WALKING ALONG THE PAVEMENT towards the crossing rather than
+  // standing still at its mouth, and that is a legal point rather than a
+  // cosmetic one. The regulation quoted in the MoT book (pp. 76-77) turns on
+  // whether the pedestrian's intention to cross is EVIDENT, and the same book
+  // lists what makes it evident: the direction the person is walking and the
+  // pace they are walking at, read "before they ever step down into the road".
+  // Somebody already halted at the kerb is only the narrowest version of that
+  // test, so drawing them mid-approach teaches the rule at its true width.
+  //
+  // They are on the near pavement, the side the yellow car reaches first.
+  build: () => openRoad({ brokenLine: 'lower' })
+    + zebraCrossing({ cx: 330, roadTop: OPEN_RY, roadBottom: OPEN_RY + OPEN_RH })
+    + car({ x: 128, y: OURS_Y, heading: 90, colour: 'yellow' })
+    + pedestrian({ x: 214, y: 348, heading: 0, colour: 'red', scale: 1.15 })
+    // The person's arrow carries their whole intended path: along the pavement
+    // as far as the crossing, then over the road to the far side. Without that
+    // second leg a walker beside a zebra reads as somebody merely passing it.
+    + arrow({ d: `M 252,352 L 302,352 Q 330,352 330,316 L 330,112`, priority: true })
+    + arrow({ d: `M 192,${OURS_Y} L 252,${OURS_Y}`, priority: false })
+    + badge({ x: 128, y: OURS_Y + 62, n: 1 })
+    + badge({ x: 214, y: 404, n: 2 }),
+};
 
 // ─── Write SVG, then rasterise ────────────────────────────────────────────────
 
