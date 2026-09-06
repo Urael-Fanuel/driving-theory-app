@@ -564,6 +564,82 @@
           ],
           "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_rd_l3_s1_narration_1788635407700.mp3",
           "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/behavioral_rd_l3_s1_diagram_1788536058384.png"
+        },
+        {
+          "id": "rd_l3_s2",
+          "name_hebrew": "פנייה לכביש והולך רגל",
+          "name_amharic": "ወደ መንገድ መታጠፍና እግረኛ",
+          "icon": "🚸",
+          "explanation_amharic": "አረንጓዴውን መኪና ቁጥር አንድን እያሽከረከሩ ወደ ቀኝ ይታጠፋሉ።\nወደሚገቡበት ጎን መንገድ ላይ የእግረኛ ማቋረጫ አለ።\nሰማያዊው እግረኛ ቁጥር ሁለት አሁን ማቋረጫው ላይ ነው።\n\nእግረኛ በማቋረጫው ላይ ከሆነ ቅድሚያ መስጠት አለብዎት።\n\nፍጥነትዎን ይቀንሱና ያቁሙ። እግረኛው እንዲያልፍ ይፍቀዱ።\n\nእግረኛው ማቋረጫውን እስኪጨርስ ይጠብቁ። ከዚያ በኋላ ይታጠፉ።",
+          "narration_script": "አረንጓዴውን መኪና ቁጥር አንድን እያሽከረከሩ ወደ ቀኝ ይታጠፋሉ።\nወደሚገቡበት ጎን መንገድ ላይ የእግረኛ ማቋረጫ አለ።\nሰማያዊው እግረኛ ቁጥር ሁለት አሁን ማቋረጫው ላይ ነው።\n\nእግረኛ በማቋረጫው ላይ ከሆነ ቅድሚያ መስጠት አለብዎት።\n\nፍጥነትዎን ይቀንሱና ያቁሙ። እግረኛው እንዲያልፍ ይፍቀዱ።\n\nእግረኛው ማቋረጫውን እስኪጨርስ ይጠብቁ። ከዚያ በኋላ ይታጠፉ።",
+          "image_description": "Drawn top-down diagram (SVG) of a T junction: the main road runs vertically, a side road leads off it to the east. A pedestrian crossing (short white stripes) is painted across the side road a little way in from the junction. The green car marked 1 comes up the main road and turns right into the side road, its red arrow stopping short of the crossing (it must stop and wait). A person marked 2, in blue, is already on the crossing walking north across the side road, with a green arrow carrying them to the far kerb (the right of way is theirs).",
+          "questions": [
+            {
+              "question_amharic": "በዚህ ሁኔታ ውስጥ እንዴት ያሽከረክራሉ?",
+              "answers": [
+                {
+                  "text_amharic": "መኪናዎ ቅድሚያ ስላለው ማሽከርከርዎን ይቀጥላሉ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ፍጥነትዎን ይቀንሳሉ፣ ያቆማሉ፣ ሰማያዊው እግረኛ እንዲያልፍ ይፈቅዳሉ።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ለእግረኛው ማስጠንቀቂያ ይነፉና ማሽከርከርዎን ይቀጥላሉ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "እግረኛው ቢኖርም ባይኖርም ማሽከርከርዎን ይቀጥላሉ።",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "በዚህ ሁኔታ ውስጥ ቅድሚያ ያለው ማነው?",
+              "answers": [
+                {
+                  "text_amharic": "አረንጓዴው መኪና።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ማንም ቅድሚያ የለውም፣ ሁለቱም እኩል ናቸው።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "መጀመሪያ የደረሰው መኪና።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "በማቋረጫው ላይ ያለው ሰማያዊው እግረኛ።",
+                  "is_correct": true
+                }
+              ]
+            },
+            {
+              "question_amharic": "እግረኛው ማቋረጫው ላይ እያለ መታጠፍዎን ማጠናቀቅ ይችላሉ?",
+              "answers": [
+                {
+                  "text_amharic": "አዎ፣ ቀስ ብለው ካሽከረከሩ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "አዎ፣ ማስጠንቀቂያ ከነፉ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "አይ፣ እግረኛው ማቋረጫውን እስኪጨርስ ይጠብቃሉ።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "አይ፣ መኪናዎን ማቆም ብቻ በቂ ነው።",
+                  "is_correct": false
+                }
+              ]
+            }
+          ],
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_rd_l3_s2_narration_1788695766226.mp3",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/behavioral_rd_l3_s2_diagram_1788695766226.png"
         }
       ]
     }

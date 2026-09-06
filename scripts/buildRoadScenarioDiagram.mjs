@@ -404,6 +404,48 @@ function zebraCrossing({ cx, roadTop, roadBottom, length = 70 }) {
   return out;
 }
 
+// ─── Scene: a T junction turned on its side ───────────────────────────────────
+//
+// Main road VERTICAL, side road running off to the EAST. The mirror of
+// teeJunction(), and it exists for one reason: a crossing painted on this
+// side road is crossed north-to-south, so the pedestrian figure can stay
+// UPRIGHT and still face the way they are walking. On a vertical side road
+// they would have to walk east or west, and the only ways to show that are to
+// rotate the figure (which turns it into an unreadable blob) or to leave it
+// facing the wrong way. Rotating the junction instead solves it at the root.
+//
+// The side road sits higher than RY so that there is a decent run of main
+// road south of the junction for a turning car's arrow to start in.
+
+const TEE_E_RY = 104, TEE_E_RH = 164;             // side road band: 104..268
+const TEE_E_CENTRE_Y = TEE_E_RY + TEE_E_RH / 2;   // 186
+const TEE_E_EASTBOUND_Y = TEE_E_CENTRE_Y + 42;    // 228 — our side, right-hand traffic
+const TEE_E_STEM_LEFT = RX + RW;                  // 402 — where the side road begins
+
+function teeJunctionEast() {
+  return `
+  <rect width="${W}" height="${H}" fill="${C.grass}"/>
+  <g fill="${C.road}">
+    <rect x="${RX}" y="0" width="${RW}" height="${H}"/>
+    <rect x="${TEE_E_STEM_LEFT}" y="${TEE_E_RY}" width="${W - TEE_E_STEM_LEFT}" height="${TEE_E_RH}"/>
+  </g>
+  <g fill="${C.kerb}">
+    <rect x="${RX - 6}" y="0" width="6" height="${H}"/>
+    <rect x="${RX + RW}" y="0" width="6" height="${TEE_E_RY - 6}"/>
+    <rect x="${RX + RW}" y="${TEE_E_RY + TEE_E_RH + 6}" width="6" height="${H - TEE_E_RY - TEE_E_RH - 6}"/>
+    <rect x="${TEE_E_STEM_LEFT}" y="${TEE_E_RY - 6}" width="${W - TEE_E_STEM_LEFT}" height="6"/>
+    <rect x="${TEE_E_STEM_LEFT}" y="${TEE_E_RY + TEE_E_RH}" width="${W - TEE_E_STEM_LEFT}" height="6"/>
+  </g>
+  <g stroke="${C.line}" stroke-width="4" stroke-dasharray="22 18">
+    <line x1="${CENTRE_X}" y1="8" x2="${CENTRE_X}" y2="${TEE_E_RY - 10}"/>
+    <line x1="${CENTRE_X}" y1="${TEE_E_RY + TEE_E_RH + 10}" x2="${CENTRE_X}" y2="${H - 8}"/>
+    <line x1="${TEE_E_STEM_LEFT + 12}" y1="${TEE_E_CENTRE_Y}" x2="${W - 8}" y2="${TEE_E_CENTRE_Y}"/>
+  </g>
+  ${tree({ x: 74, y: 78, r: 30 })}${tree({ x: 152, y: 238, r: 26 })}${tree({ x: 84, y: 382, r: 28 })}
+  ${tree({ x: 472, y: 48, r: 26 })}${tree({ x: 584, y: 58, r: 30 })}
+  ${tree({ x: 480, y: 400, r: 30 })}${tree({ x: 596, y: 372, r: 26 })}`;
+}
+
 function svg(inner, label) {
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="${label}">
   <defs>
@@ -703,6 +745,52 @@ SCENES.rd_l3_s1 = {
     + arrow({ d: `M 192,${OURS_Y} L 252,${OURS_Y}`, priority: false })
     + badge({ x: 128, y: OURS_Y + 62, n: 1 })
     + badge({ x: 214, y: 404, n: 2 }),
+};
+
+// rd_l3_s2 — turning right into a road a pedestrian is already crossing.
+//
+// A T junction rather than card 1's open road, and a TURN rather than
+// straight travel: two of the five things this topic varies between cards
+// are covered just by the change of layout. The pedestrian is drawn actually
+// ON the crossing (bank question 0897, book p.80), not approaching it as in
+// card 1 — a related but distinct moment: there the rule was about intent
+// before anyone steps out, here it is the plainer case of someone already in
+// the road the driver is about to enter.
+//
+// Our green car comes along the main road and turns right into the side
+// road. Facing east, a right turn swings the car south into the stem — the
+// same geometry already proven in rd_l1_s3, just reversed in direction and
+// with a different destination (the stem, not the main road).
+SCENES.rd_l3_s2 = {
+  name: 'rd_l3_s2_pedestrian_crossing_turn',
+  label: 'T junction: a car turning right must give way to a pedestrian already on the crossing it is turning into',
+  build: () => teeJunctionEast()
+    // The crossing sits well east of the junction, not jammed against it.
+    // A first attempt at this scene put it at the very mouth of the side
+    // road, which left the turning arrow nowhere to go: it bent downwards
+    // and died inside the main road without ever entering the side road.
+    + zebraCrossing({ cx: 520, roadTop: TEE_E_RY, roadBottom: TEE_E_RY + TEE_E_RH })
+    + car({ x: NORTHBOUND_X, y: 380, heading: 0, colour: 'green' })
+    // Walking north, and the figure is drawn upright, which is the direction
+    // it faces. That agreement is the whole reason this card uses a sideways
+    // junction: on a vertical side road the walk would be east-west and the
+    // figure would have to be either rotated (unreadable) or wrong.
+    // Standing in the eastbound lane itself — the very lane the car is trying
+    // to turn into. Put them nearer the kerb and the two paths stop looking
+    // like they meet, which is the only thing this picture has to say.
+    + pedestrian({ x: 520, y: TEE_E_EASTBOUND_Y + 4, heading: 0, colour: 'blue', scale: 1.15 })
+    + arrow({ d: `M 520,196 L 520,88`, priority: true })
+    // The turn: north up the main road, then right into the side road, and
+    // stopping short of the crossing. The arrow has to finish INSIDE the
+    // side road for the manoeuvre to read as a turn at all.
+    + arrow({
+        d: `M ${NORTHBOUND_X},310 L ${NORTHBOUND_X},${TEE_E_EASTBOUND_Y + 34} `
+         + `Q ${NORTHBOUND_X},${TEE_E_EASTBOUND_Y} ${NORTHBOUND_X + 34},${TEE_E_EASTBOUND_Y} `
+         + `L 445,${TEE_E_EASTBOUND_Y}`,
+        priority: false,
+      })
+    + badge({ x: 425, y: 380, n: 1 })
+    + badge({ x: 520, y: 300, n: 2 }),
 };
 
 // ─── Write SVG, then rasterise ────────────────────────────────────────────────
