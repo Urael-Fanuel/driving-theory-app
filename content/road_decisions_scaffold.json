@@ -726,6 +726,82 @@
           ],
           "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_rd_l4_s1_narration_1788701370535.mp3",
           "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/behavioral_rd_l4_s1_diagram_1788701370535.png"
+        },
+        {
+          "id": "rd_l4_s2",
+          "name_hebrew": "צומת עם רמזור מהבהב",
+          "name_amharic": "ብልጭ ድርግም መብራት መገናኛ",
+          "icon": "🚦",
+          "explanation_amharic": "እርስዎ ነጭ መኪና ቁጥር አንድን ያሽከረክራሉ። በዚህ መስቀለኛ መንገድ ወደ ግራ እየታጠፉ ነው። የመንገድ መብራቶቹ ብልሽት ስላጋጠማቸው ቢጫ መብራት ብልጭ ድርግም ይላል። መብራቶቹ በማይሰሩበት ጊዜ የተለጠፉትን ምልክቶች መታዘዝ አለብዎት።\n\nየእርስዎ ነጭ መኪና ቅድሚያ ስጥ ምልክት አለው። ስለዚህ ወደ መስቀለኛ መንገዱ ለሚገቡ ወይም ለሚጠጉ ተሽከርካሪዎች ቅድሚያ ይስጡ። አረንጓዴው መኪና ቁጥር ሁለት እና ቢጫው መኪና ቁጥር ሶስት የማቆም ምልክት አላቸው። ሁለቱም መኪኖች ሙሉ በሙሉ ማቆም አለባቸው።\n\nቀዩ እግረኛ ቁጥር አራት እርስዎ ወደሚታጠፉበት መንገድ ላይ ነው። እግረኛው በእግረኛ ማቋረጫው ላይ እየተሻገረ ነው። ለእግረኛው ቅድሚያ መስጠት አለብዎት። ፍጥነትዎን ይቀንሱ እና እግረኛው በሰላም እንዲያልፍ ይፍቀዱለት።\n\nመንገዱ ሲጸዳ እና እግረኛው ሲያልፍ ነጭው መኪና መታጠፍ ይችላል።",
+          "narration_script": "እርስዎ ነጭ መኪና ቁጥር አንድን ያሽከረክራሉ። በዚህ መስቀለኛ መንገድ ወደ ግራ እየታጠፉ ነው። የመንገድ መብራቶቹ ብልሽት ስላጋጠማቸው ቢጫ መብራት ብልጭ ድርግም ይላል። መብራቶቹ በማይሰሩበት ጊዜ የተለጠፉትን ምልክቶች መታዘዝ አለብዎት።\n\nየእርስዎ ነጭ መኪና ቅድሚያ ስጥ ምልክት አለው። ስለዚህ ወደ መስቀለኛ መንገዱ ለሚገቡ ወይም ለሚጠጉ ተሽከርካሪዎች ቅድሚያ ይስጡ። አረንጓዴው መኪና ቁጥር ሁለት እና ቢጫው መኪና ቁጥር ሶስት የማቆም ምልክት አላቸው። ሁለቱም መኪኖች ሙሉ በሙሉ ማቆም አለባቸው።\n\nቀዩ እግረኛ ቁጥር አራት እርስዎ ወደሚታጠፉበት መንገድ ላይ ነው። እግረኛው በእግረኛ ማቋረጫው ላይ እየተሻገረ ነው። ለእግረኛው ቅድሚያ መስጠት አለብዎት። ፍጥነትዎን ይቀንሱ እና እግረኛው በሰላም እንዲያልፍ ይፍቀዱለት።\n\nመንገዱ ሲጸዳ እና እግረኛው ሲያልፍ ነጭው መኪና መታጠፍ ይችላል።",
+          "image_description": "Drawn top-down diagram (SVG) of a crossroads whose traffic signals are flashing amber (a signal fault) — a small flashing-amber light stands beside each of three signs. Our WHITE car marked 1 approaches from the south turning left, facing a GIVE-WAY sign (downward triangle) on its own right-hand verge. A GREEN car marked 2, on the road ahead from the north, and a YELLOW car marked 3, on the crossing road from the east, each face a STOP sign (red octagon) and are shown already stopped, with no arrows. A RED pedestrian marked 4 is on the pedestrian crossing painted on the road our car is turning into, already crossing it, with no arrow (already visibly mid-crossing). Our car's red arrow shows its intended left turn, stopping short of the crossing.",
+          "questions": [
+            {
+              "question_amharic": "በዚህ መስቀለኛ መንገድ ሲቃረቡ እንዴት ያሽከረክራሉ?",
+              "answers": [
+                {
+                  "text_amharic": "በእግረኛ ማቋረጫው ላይ ያሉ እግረኞች ቢኖሩም ቅድሚያ ለርሶ ነው።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ፍጥነትዎን ይቀንሱ፤ የመስጠት ህጎችን እና ምልክቶችን ይከተሉ።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ለሚመጣው መኪና ብቻ ቅድሚያ ይስጡ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "አረንጓዴ መብራት እስኪበራ ድረስ ሙሉ በሙሉ ያቁሙ።",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "እግረኛው ሲያቋርጥ እንዴት ያሽከረክራሉ?",
+              "answers": [
+                {
+                  "text_amharic": "ቢጫው መብራት እስኪጠፋ ድረስ ሙሉ በሙሉ ያቁሙ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "እግረኛውን ችላ ይበሉ፤ መብራቱ ለእግረኞች ብቻ ነው።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "በጥንቃቄ ያሽከረክሩ፤ እግረኛው በሰላም እንዲያልፍ ይፍቀዱ።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ማንም ባይኖርም ሁልጊዜ በእግረኛ ማቋረጫው ፊት ለፊት ያቁሙ።",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "እዚህ ሙሉ በሙሉ ማቆም ያለበት ማነው?",
+              "answers": [
+                {
+                  "text_amharic": "ነጭው መኪና።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "አረንጓዴው መኪና ብቻ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ቢጫው መኪና ብቻ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ሁለቱም አረንጓዴው መኪና እና ቢጫው መኪና።",
+                  "is_correct": true
+                }
+              ]
+            }
+          ],
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_rd_l4_s2_narration_1788723046478.mp3",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/behavioral_rd_l4_s2_diagram_1788723046478.png"
         }
       ]
     }

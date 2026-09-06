@@ -142,6 +142,25 @@ function giveWaySign({ x, y, scale = 1 }) {
 }
 
 /**
+ * A stop sign on its post: a plain red octagon, white border, no lettering —
+ * the octagon SHAPE is what a driver who cannot read Amharic (or anything
+ * else) recognises, exactly the reasoning behind every other sign here.
+ */
+function stopSign({ x, y, scale = 1 }) {
+  const r = 27, k = 0.4142; // regular-octagon corner cut (tan(22.5°))
+  const c = r * k;
+  const pts = [
+    [-c, -r], [c, -r], [r, -c], [r, c],
+    [c, r], [-c, r], [-r, c], [-r, -c],
+  ].map(([px, py]) => `${px},${py}`).join(' ');
+  return `
+  <g transform="translate(${x} ${y}) scale(${scale})">
+    <rect x="-3" y="6" width="6" height="46" fill="#9ca3af" stroke="#6b7280" stroke-width="1.5"/>
+    <polygon points="${pts}" fill="#c81e1e" stroke="#ffffff" stroke-width="4"/>
+  </g>`;
+}
+
+/**
  * A traffic light on its post, drawn face-on like giveWaySign() rather than
  * from directly above — from overhead a signal head is just a dark rectangle
  * and the one thing that matters, WHICH lamp is lit, would be invisible.
@@ -966,6 +985,90 @@ SCENES.rd_l3_s3 = {
     + badgeOnCar({ x: 330, y: 204, n: 2 })
     + badgeOnCar({ x: 140, y: 204, n: 3 })
     + badgeOnCar({ x: 512, y: 176, n: 4 }),
+};
+
+// rd_l4_s2 — a green light does not turn a left turn into a protected one.
+//
+// Same junction and the same left-turn geometry as tr_l1_s3 (rd_l1_s1) —
+// this card adds a signal on top of that unsignalised scene rather than
+// replacing it, because the point being made is specifically about what a
+// green light does and does not grant. Book p.63 already establishes that a
+// left-turning driver gives way to oncoming traffic; book p.71 establishes
+// that a driver at a signalised junction gives way to a pedestrian crossing
+// there. A green ball resolves nothing between simultaneous permitted
+// movements — it only says the junction may be entered — so both duties
+// still apply once inside it.
+//
+// A third car, stopped on the crossing arm at its own red light, is in the
+// picture for the reason the user asked for it: it makes the junction read
+// as a real, busy, multi-directional signalised junction rather than a
+// two-car diagram with a light bolted on. It carries no arrow and is not
+// part of the question, the same way background cars work in rd_l3_s1.
+// rd_l4_s2 — a signal that has failed, not one that is merely green.
+//
+// Rebuilt after review: the original version gave both directions of the
+// through road a plain green ball at once, which is how ordinary permissive
+// left turns work everywhere (the book's own left-turn-yields-to-oncoming
+// rule, p.63, exists BECAUSE of exactly that setup) — but it asked the
+// learner to accept two simultaneous greens on faith, and that reads as a
+// contradiction before it reads as a rule. Book p.73 offers a cleaner, fully
+// unambiguous version of the same lesson: a FLASHING amber (signal fault)
+// hands control to whatever signs are posted, "as at a junction where
+// give-way signs are posted", with pedestrians already crossing or clearly
+// about to keeping their priority regardless. That removes the two-greens
+// question entirely — only one sign here ever means "go".
+//
+// Our car faces a give-way sign: proceed once safe, which in this picture
+// means once the pedestrian has finished. Both other cars face a stop sign
+// each and are shown already stopped, so neither has an arrow — a stopped
+// car with nothing left to decide does not need one, the same convention
+// used for the blocked car in rd_l4_s1.
+SCENES.rd_l4_s2 = {
+  name: 'rd_l4_s2_signal_fault_give_way',
+  label: 'Crossroads with a flashing amber signal fault: our car faces a give-way sign, the other two face a stop sign, and the pedestrian keeps priority over all of them',
+  build: () => crossroads()
+    + zebraCrossing({ cx: 140, roadTop: RY, roadBottom: RY + RH })
+    // On our car's own right-hand verge, level with it — the placement
+    // rule this topic has used for every sign since rd_l1_s3.
+    + giveWaySign({ x: 440, y: 368, scale: 0.85 })
+    // Facing car 2: its right-hand verge is the WEST side (facing south,
+    // right is west), so the sign stands short of the road's west kerb.
+    + stopSign({ x: 210, y: 96, scale: 0.85 })
+    // Facing car 3: its right-hand verge is the NORTH side (facing west,
+    // right is north). x=470 was tried first and failed a geometry check:
+    // the sign's post ran down to within 3px of car 3's own roofline, close
+    // enough to read as touching it. Moved further along the verge, ahead
+    // of the car in its direction of travel, matching how every other sign
+    // in this topic sits ahead of the car it faces rather than beside it.
+    + stopSign({ x: 410, y: 95, scale: 0.85 })
+    // A small flashing-amber head beside each sign, so the picture reads as
+    // a real signal that has FAILED — not as a junction that simply never
+    // had lights. One general light standing alone (tried first) had no
+    // sign of its own to pair with and looked like an odd extra; three
+    // small ones, each paired with the sign it now defers to, read clearly
+    // as the same broken signal seen from each approach.
+    + trafficLight({ x: 490, y: 405, lit: 'amber', scale: 0.55 })
+    + trafficLight({ x: 170, y: 65,  lit: 'amber', scale: 0.55 })
+    + trafficLight({ x: 460, y: 65,  lit: 'amber', scale: 0.55 })
+    + car({ x: NORTHBOUND_X, y: 368, heading: 0, colour: 'white', indicate: 'left' })
+    // Already stopped at its own sign, not mid-manoeuvre — no arrow.
+    + car({ x: SOUTHBOUND_X, y: 96, heading: 180, colour: 'green' })
+    + car({ x: 500, y: WESTBOUND_Y, heading: 270, colour: 'yellow' })
+    + pedestrian({ x: 140, y: CENTRE_Y, heading: 0, colour: 'red', scale: 1.15 })
+    // Our turn: identical path to tr_l1_s3's, because the manoeuvre itself
+    // has not changed — only what is controlling the junction has.
+    + arrow({
+        d: `M ${NORTHBOUND_X},312 L ${NORTHBOUND_X},${WESTBOUND_Y + 34} `
+         + `Q ${NORTHBOUND_X},${WESTBOUND_Y} ${NORTHBOUND_X - 44},${WESTBOUND_Y} `
+         + `L 196,${WESTBOUND_Y}`,
+        priority: false,
+      })
+    + badgeOnCar({ x: NORTHBOUND_X, y: 388, n: 1 })
+    // On the car rather than beside it: car 2's own verge now carries its
+    // stop sign, exactly where a beside-the-car badge would otherwise sit.
+    + badgeOnCar({ x: SOUTHBOUND_X, y: 96, n: 2 })
+    + badgeOnCar({ x: 500, y: 148, n: 3 })
+    + badgeOnCar({ x: 140, y: 196, n: 4 }),
 };
 
 // ─── Write SVG, then rasterise ────────────────────────────────────────────────
