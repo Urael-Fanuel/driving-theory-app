@@ -141,6 +141,27 @@ function giveWaySign({ x, y, scale = 1 }) {
   </g>`;
 }
 
+/**
+ * A traffic light on its post, drawn face-on like giveWaySign() rather than
+ * from directly above — from overhead a signal head is just a dark rectangle
+ * and the one thing that matters, WHICH lamp is lit, would be invisible.
+ *
+ * `lit` names the burning lamp; the other two are drawn dark, the way an
+ * unlit lamp actually looks. No lettering, as with every sign in this app.
+ */
+function trafficLight({ x, y, lit = 'green', scale = 1 }) {
+  const lamp = (cy, colour, on) =>
+    `<circle cx="0" cy="${cy}" r="7.5" fill="${on ? colour : '#3f3f46'}" stroke="#18181b" stroke-width="1.5"/>`;
+  return `
+  <g transform="translate(${x} ${y}) scale(${scale})">
+    <rect x="-3" y="0" width="6" height="42" fill="#9ca3af" stroke="#6b7280" stroke-width="1.5"/>
+    <rect x="-14" y="-58" width="28" height="60" rx="6" fill="#27272a" stroke="#18181b" stroke-width="2"/>
+    ${lamp(-43, '#dc2626', lit === 'red')}
+    ${lamp(-28, '#f2b705', lit === 'amber')}
+    ${lamp(-13, '#1f9d55', lit === 'green')}
+  </g>`;
+}
+
 function tree({ x, y, r = 32 }) {
   return `<circle cx="${x}" cy="${y}" r="${r}" fill="#3f9142"/>`
        + `<rect x="${x - 5}" y="${y + r - 4}" width="10" height="22" fill="#6b4a2f"/>`;
@@ -191,6 +212,44 @@ function crossroads() {
   </g>
   ${tree({ x: 120, y: 80 })}${tree({ x: 520, y: 88, r: 28 })}
   ${tree({ x: 128, y: 372, r: 28 })}${tree({ x: 524, y: 366 })}`;
+}
+
+// ─── Scene: the same crossroads, sitting higher in the frame ──────────────────
+//
+// Identical to crossroads() except that the horizontal road is raised, which
+// lengthens the southern approach from 126px to 172px. That extra room is not
+// cosmetic: a signal head has to stand clear of the carriageway, and it is
+// drawn upwards from its post, so with the junction at its usual height the
+// head could never be placed AHEAD of a car waiting on the approach — the car
+// simply filled the whole gap between the junction and the bottom edge.
+
+const CR_HI_RY = 104;
+const CR_HI_CENTRE_Y  = CR_HI_RY + RH / 2;   // 186
+const CR_HI_WESTBOUND_Y = CR_HI_CENTRE_Y - 42;
+const CR_HI_EASTBOUND_Y = CR_HI_CENTRE_Y + 42;
+
+function crossroadsRaised() {
+  const RB = CR_HI_RY + RH;                  // 268, south edge of the horizontal road
+  return `
+  <rect width="${W}" height="${H}" fill="${C.grass}"/>
+  <g fill="${C.road}">
+    <rect x="${RX}" y="0" width="${RW}" height="${H}"/>
+    <rect x="0" y="${CR_HI_RY}" width="${W}" height="${RH}"/>
+  </g>
+  <g fill="${C.kerb}">
+    <rect x="${RX - 6}" y="0" width="6" height="${CR_HI_RY}"/><rect x="${RX + RW}" y="0" width="6" height="${CR_HI_RY}"/>
+    <rect x="${RX - 6}" y="${RB}" width="6" height="${H - RB}"/><rect x="${RX + RW}" y="${RB}" width="6" height="${H - RB}"/>
+    <rect x="0" y="${CR_HI_RY - 6}" width="${RX - 6}" height="6"/><rect x="${RX + RW + 6}" y="${CR_HI_RY - 6}" width="${W - RX - RW - 6}" height="6"/>
+    <rect x="0" y="${RB}" width="${RX - 6}" height="6"/><rect x="${RX + RW + 6}" y="${RB}" width="${W - RX - RW - 6}" height="6"/>
+  </g>
+  <g stroke="${C.line}" stroke-width="4" stroke-dasharray="22 18">
+    <line x1="${CENTRE_X}" y1="8" x2="${CENTRE_X}" y2="${CR_HI_RY - 10}"/>
+    <line x1="${CENTRE_X}" y1="${RB + 10}" x2="${CENTRE_X}" y2="${H - 8}"/>
+    <line x1="8" y1="${CR_HI_CENTRE_Y}" x2="${RX - 10}" y2="${CR_HI_CENTRE_Y}"/>
+    <line x1="${RX + RW + 10}" y1="${CR_HI_CENTRE_Y}" x2="${W - 8}" y2="${CR_HI_CENTRE_Y}"/>
+  </g>
+  ${tree({ x: 112, y: 48, r: 28 })}${tree({ x: 540, y: 44, r: 30 })}
+  ${tree({ x: 118, y: 388, r: 30 })}${tree({ x: 556, y: 380, r: 28 })}`;
 }
 
 // ─── Scene: a T junction ──────────────────────────────────────────────────────
@@ -328,6 +387,71 @@ function carRear({ x, y, w, colour = 'white' }) {
     <rect x="-38" y="-26" width="17" height="11" rx="3" fill="#ef4444"/>
     <rect x="21"  y="-26" width="17" height="11" rx="3" fill="#ef4444"/>
     <rect x="-14" y="-8"  width="28" height="7"  rx="2" fill="#e5e7eb"/>
+  </g>`;
+}
+
+/**
+ * A traffic light standing at the roadside AHEAD of us, in the rear view.
+ *
+ * This is the viewpoint a signal actually needs. Drawn on a plan, a signal
+ * head is a dark rectangle with no direction: it cannot be made to "face"
+ * the car it governs, and three attempts at placing one on a top-down
+ * junction all failed for that reason. Seen from behind the wheel it faces
+ * the viewer by construction, because the viewer is the driver it speaks to.
+ *
+ * `groundY` is where the post meets the ground, `h` the height to the top of
+ * the head — both already in perspective, chosen by the scene.
+ */
+function trafficLightAhead({ x, groundY, h, lit = 'green' }) {
+  const headH = h * 0.36, headW = headH * 0.46, r = headW * 0.27;
+  const top = groundY - h;
+  const lamp = (cy, colour, on) =>
+    `<circle cx="${x}" cy="${cy}" r="${r}" fill="${on ? colour : '#3f3f46'}" stroke="#18181b" stroke-width="1.2"/>`;
+  return `
+  <rect x="${x - h * 0.022}" y="${top + headH}" width="${h * 0.044}" height="${h - headH}" fill="#9ca3af" stroke="#6b7280" stroke-width="1.2"/>
+  <rect x="${x - headW / 2}" y="${top}" width="${headW}" height="${headH}" rx="${headW * 0.2}" fill="#27272a" stroke="#18181b" stroke-width="1.5"/>
+  ${lamp(top + headH * 0.22, '#dc2626', lit === 'red')}
+  ${lamp(top + headH * 0.50, '#f2b705', lit === 'amber')}
+  ${lamp(top + headH * 0.78, '#1f9d55', lit === 'green')}`;
+}
+
+/**
+ * A pedestrian crossing painted across the road, in the rear view: bars
+ * running AWAY from the viewer, which is the same thing as running along the
+ * direction of travel, spread across the width of the road. Each bar narrows
+ * with distance, so the band reads as lying flat on the tarmac.
+ */
+function zebraAhead({ yFar, yNear, bars = 7 }) {
+  const tF = depthAt(yFar), tN = depthAt(yNear);
+  const lF = lerp(EDGE_L[0], EDGE_L[1], tF), rF = lerp(EDGE_R[0], EDGE_R[1], tF);
+  const lN = lerp(EDGE_L[0], EDGE_L[1], tN), rN = lerp(EDGE_R[0], EDGE_R[1], tN);
+  let out = '';
+  for (let i = 0; i < bars; i++) {
+    const a0 = (i + 0.18) / bars, a1 = (i + 0.82) / bars;
+    out += `<path d="M ${lF + (rF - lF) * a0},${yFar} L ${lF + (rF - lF) * a1},${yFar}`
+         + ` L ${lN + (rN - lN) * a1},${yNear} L ${lN + (rN - lN) * a0},${yNear} Z" fill="${C.line}"/>`;
+  }
+  return out;
+}
+
+/**
+ * A person seen FROM THE SIDE, walking across in front of us — the only way
+ * a pedestrian appears in a rear-view scene. Easier to read than the top-down
+ * figure, because a human silhouette from the side is unmistakable: head,
+ * shoulders, and legs caught mid-stride.
+ *
+ * Skin is a brown tone, as everywhere else in this app.
+ */
+function pedestrianSide({ x, groundY, h, colour = 'red', facing = 'left' }) {
+  const { body } = CARS[colour] ?? CARS.red;
+  const k = h / 100, skin = '#8a5a34', dir = facing === 'left' ? -1 : 1;
+  return `
+  <g transform="translate(${x} ${groundY}) scale(${dir * k} ${k})">
+    <path d="M 0,-42 L -13,-2" stroke="#1f2937" stroke-width="9" stroke-linecap="round" fill="none"/>
+    <path d="M 0,-42 L 14,-3"  stroke="#1f2937" stroke-width="9" stroke-linecap="round" fill="none"/>
+    <path d="M -1,-72 L 15,-50" stroke="${skin}" stroke-width="7.5" stroke-linecap="round" fill="none"/>
+    <rect x="-11" y="-78" width="22" height="38" rx="8" fill="${body}" stroke="#1f2937" stroke-width="2.5"/>
+    <circle cx="1" cy="-88" r="11" fill="${skin}" stroke="#1f2937" stroke-width="2.5"/>
   </g>`;
 }
 
@@ -791,6 +915,57 @@ SCENES.rd_l3_s2 = {
       })
     + badge({ x: 425, y: 380, n: 1 })
     + badge({ x: 520, y: 300, n: 2 }),
+};
+
+// rd_l3_s3 — a green light that does not mean "go".
+//
+// The busiest picture in the topic: three cars, a signal, a crossing and a
+// pedestrian. Book p.71 carries both halves of the rule: "a driver shall not
+// enter a junction that is not clear ... even if the light shows green", and
+// "a driver approaching a signalised junction where pedestrians are crossing
+// shall stop, to let them complete the crossing safely".
+//
+// TWO orientation problems decide this layout, and both were learned the hard
+// way on earlier drafts of this same scene:
+//
+//  1. A signal head drawn face-on has no direction of its own on a plan. It
+//     only reads as belonging to a particular driver when that driver is
+//     travelling UP the picture and the head stands ahead of them on their
+//     right — exactly where rd_l1_s3 puts its give-way sign. So OUR car runs
+//     northbound. Every draft that had it running east left the signal
+//     floating, apparently addressed to nobody.
+//
+//  2. The pedestrian figure cannot be rotated without turning into a blob, so
+//     the crossing they use has to lie on a HORIZONTAL road, walked
+//     north-south. Hence the crossing sits on the east arm, not on ours.
+//
+// Those two together give the scene its shape: we come up to the junction on
+// a green, the car that stopped for the pedestrian on the east arm is stranded
+// across the junction, and there is nowhere for us to go.
+SCENES.rd_l3_s3 = {
+  name: 'rd_l3_s3_green_light_junction_not_clear',
+  label: 'Signalised crossroads: our light is green, but a car stopped for a pedestrian is blocking the junction',
+  build: () => crossroadsRaised()
+    + zebraCrossing({ cx: 470, roadTop: CR_HI_RY, roadBottom: CR_HI_RY + RH })
+    // Ahead of our car and on its right, the placement rd_l1_s3 settled for
+    // a sign. Its whole head has to clear the kerb or it reads as an
+    // obstacle standing in the carriageway.
+    + trafficLight({ x: 424, y: 322, lit: 'green', scale: 0.78 })
+    + car({ x: 140, y: CR_HI_EASTBOUND_Y, heading: 90, colour: 'blue' })
+    // Stranded across the junction: it entered, then had to stop for the
+    // person on the crossing beyond. This is what makes the junction "not
+    // clear", and it is the reason our green light is worth nothing.
+    + car({ x: 330, y: CR_HI_EASTBOUND_Y, heading: 90, colour: 'yellow' })
+    + pedestrian({ x: 470, y: 204, heading: 0, colour: 'red', scale: 1.15 })
+    + car({ x: NORTHBOUND_X, y: 376, heading: 0, colour: 'silver' })
+    // Only the pedestrian gets an arrow. Our own car does not need one: a red
+    // arrow over the car the question is about only says "this is you", which
+    // the badge already says, and it crowded a picture that is busy enough.
+    + arrow({ d: `M 470,168 L 470,78`, priority: true })
+    + badgeOnCar({ x: NORTHBOUND_X, y: 342, n: 1 })
+    + badgeOnCar({ x: 330, y: 204, n: 2 })
+    + badgeOnCar({ x: 140, y: 204, n: 3 })
+    + badgeOnCar({ x: 512, y: 176, n: 4 }),
 };
 
 // ─── Write SVG, then rasterise ────────────────────────────────────────────────

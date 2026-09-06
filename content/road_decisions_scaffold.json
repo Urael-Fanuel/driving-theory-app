@@ -642,6 +642,92 @@
           "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/behavioral_rd_l3_s2_diagram_1788695766226.png"
         }
       ]
+    },
+    {
+      "id": "rd_l4",
+      "level": 4,
+      "name_hebrew": "התנהגות בצומת מרומזר",
+      "name_amharic": "የመገናኛ አያያዝ",
+      "icon": "🚦",
+      "color": "#2E7D32",
+      "subtopics": [
+        {
+          "id": "rd_l4_s1",
+          "name_hebrew": "צומת עם רמזור ירוק",
+          "name_amharic": "አረንጓዴ መብራት መገናኛ",
+          "icon": "🚦",
+          "explanation_amharic": "እርስዎ የብር ቀለም መኪና ቁጥር አንድን ያሽከረክራሉ። የእርስዎ መብራት አረንጓዴ ነው። ነገር ግን የመገናኛው ማዶ ተይዟል። ቢጫ ቀለም መኪና ቁጥር ሁለት ለቀይ እግረኛ ቁጥር አራት ቆሟል። ሰማያዊ ቀለም መኪና ቁጥር ሶስት ከቢጫው ኋላ ቆሟል።\n\nአረንጓዴ መብራት ብቻውን መግባት አይፈቅድም። መገናኛው ነጻ ሲሆን ብቻ ይግቡ።\n\nነጻ ያልሆነ ማለት ሌላ መኪና ቦታውን ይዟል ማለት ነው። ከገቡ በመገናኛው ውስጥ ይቆማሉ።\n\nከመገናኛው በፊት ይቁሙ። እስኪለቅ ይጠብቁ። መብራቱ አረንጓዴ ቢሆንም እንኳ ይጠብቁ።",
+          "narration_script": "እርስዎ የብር ቀለም መኪና ቁጥር አንድን ያሽከረክራሉ። የእርስዎ መብራት አረንጓዴ ነው። ነገር ግን የመገናኛው ማዶ ተይዟል። ቢጫ ቀለም መኪና ቁጥር ሁለት ለቀይ እግረኛ ቁጥር አራት ቆሟል። ሰማያዊ ቀለም መኪና ቁጥር ሶስት ከቢጫው ኋላ ቆሟል።\n\nአረንጓዴ መብራት ብቻውን መግባት አይፈቅድም። መገናኛው ነጻ ሲሆን ብቻ ይግቡ።\n\nነጻ ያልሆነ ማለት ሌላ መኪና ቦታውን ይዟል ማለት ነው። ከገቡ በመገናኛው ውስጥ ይቆማሉ።\n\nከመገናኛው በፊት ይቁሙ። እስኪለቅ ይጠብቁ። መብራቱ አረንጓዴ ቢሆንም እንኳ ይጠብቁ።",
+          "image_description": "Drawn top-down diagram (SVG) of a crossroads with a raised southern approach. The silver car marked 1 approaches from the south with a traffic light showing green standing on its own right-hand verge just ahead of it. On the far (east) arm of the junction, the yellow car marked 2 is stopped, unable to clear the junction because a red pedestrian marked 4 is crossing there on a marked crossing (green arrow showing them still crossing). The blue car marked 3 is stopped behind the yellow car. The silver car has no arrow — its own position and the green light make its situation clear without one; the picture shows why entering is impossible even though the light is green: the far side of the junction is occupied.",
+          "questions": [
+            {
+              "question_amharic": "መብራቱ አረንጓዴ ቢሆንም መገናኛው በመኪኖች ታግቷል፤ ምን ያደርጋሉ?",
+              "answers": [
+                {
+                  "text_amharic": "የታገደ መገናኛ ውስጥ አይገቡም።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "መብራቱ እንደሚያዘው ወደ መገናኛው ይገባሉ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "በማንኛውም ሁኔታ ወደ መገናኛው መግባት ይፈቀድልዎታል።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ወደ መገናኛው ገብተው በፍጥነት ያልፋሉ።",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "ነጻ ያልሆነ መገናኛ ደርሰዋል፤ ምን ያደርጋሉ?",
+              "answers": [
+                {
+                  "text_amharic": "መብራቱ አረንጓዴ ከሆነ ነጻ ባልሆነ መገናኛም ይገባሉ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ነጻ ባልሆነ መገናኛም ቢሆን ወደ ግራ መታጠፍ ይፈቀድልዎታል።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ከመገናኛው በፊት ይቁሙና እስኪለቅ ይጠብቁ።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "በጥንቃቄ ወደ መገናኛው ገብተው እዚያው እስኪለቅ ይጠብቁ።",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "የብር ቀለም መኪናው መብራቱ አረንጓዴ ቢሆንም ለምን መግባት አይችልም?",
+              "answers": [
+                {
+                  "text_amharic": "መኪናው ገና ሩቅ ስለሆነ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "እግረኛው ማቋረጫ ላይ ስላልሆነ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ሰማያዊው መኪና ወደ ኋላ እየተመለሰ ስለሆነ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የመገናኛው ማዶ ቢጫው መኪና ለእግረኛው ቆሞ ስለያዘው ነው።",
+                  "is_correct": true
+                }
+              ]
+            }
+          ],
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_rd_l4_s1_narration_1788701370535.mp3",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/behavioral_rd_l4_s1_diagram_1788701370535.png"
+        }
+      ]
     }
   ]
 }
