@@ -640,6 +640,82 @@
           ],
           "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_rd_l3_s2_narration_1788695766226.mp3",
           "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/behavioral_rd_l3_s2_diagram_1788695766226.png"
+        },
+        {
+          "id": "rd_l3_s3",
+          "name_hebrew": "סכנה ליד מכוניות חונות",
+          "name_amharic": "አደጋ የቆሙ መኪኖች አጠገብ",
+          "icon": "🅿️",
+          "explanation_amharic": "መኪና ቁጥር አንድ ሰማያዊው መኪና በመንገድ ላይ ያሽከረክራል።\nይህ የከተማ መንገድ ነው።\nበመንገዱ ዳር መኪኖች ቆመዋል።\n\nከቆሙት መኪኖች መካከል እግረኛ ወይም ልጅ በድንገት ሊወጣ ይችላል።\nቆመው ያሉት መኪኖች እይታን ስለሚጋርዱ ማስጠንቀቂያ አይኖርም።\n\nቀጥታ ከመመልከት ይልቅ የቆሙ መኪኖች ዳርና በመካከላቸው ይመልከቱ።\nፍጥነትዎን ይቀንሱ።\nከቆሙት መኪኖች የበለጠ ርቀት ይያዙ።\nይህም በሰላም ለማቆም ያስችላል።\n\nስለዚህ አሽከርካሪው አስቀድሞ ጥንቃቄ ማድረግ አለበት።\nምንም ሰው ባይታይም ጥንቃቄ ያስፈልጋል።",
+          "narration_script": "መኪና ቁጥር አንድ ሰማያዊው መኪና በመንገድ ላይ ያሽከረክራል።\nይህ የከተማ መንገድ ነው።\nበመንገዱ ዳር መኪኖች ቆመዋል።\n\nከቆሙት መኪኖች መካከል እግረኛ ወይም ልጅ በድንገት ሊወጣ ይችላል።\nቆመው ያሉት መኪኖች እይታን ስለሚጋርዱ ማስጠንቀቂያ አይኖርም።\n\nቀጥታ ከመመልከት ይልቅ የቆሙ መኪኖች ዳርና በመካከላቸው ይመልከቱ።\nፍጥነትዎን ይቀንሱ።\nከቆሙት መኪኖች የበለጠ ርቀት ይያዙ።\nይህም በሰላም ለማቆም ያስችላል።\n\nስለዚህ አሽከርካሪው አስቀድሞ ጥንቃቄ ማድረግ አለበት።\nምንም ሰው ባይታይም ጥንቃቄ ያስፈልጋል።",
+          "image_description": "Drawn top-down diagram (SVG) of a residential street with a single dashed centre line. Three cars are parked along the near kerb, in order: silver, yellow, white. A child, marked 2, in red, stands off the road (on the grass side) in the gap between the yellow and white parked cars, hidden from an approaching driver's view. Our car, marked 1, in blue, is well back down the road with a short green arrow showing it is moving, not parked.",
+          "questions": [
+            {
+              "question_amharic": "ከፊትዎ ያለው መንገድ ምን ይመስላል?",
+              "answers": [
+                {
+                  "text_amharic": "የከተማ መንገድ ሲሆን መኪኖች ቆመውበታል። እግረኞችም ከመኪኖች መካከል ሊወጡ ይችላሉ።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ምንም አደጋ የለም። ሁሉም ነገር ደህና ነው።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "መንገዱ ሰፊና ምቹ ነው። ምንም አስገራሚ ነገር አይጠበቅም።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የተቀላቀለ መንገድ ነው። ፍጥነትዎን ከሰላሳ ኪሎ ሜትር በላይ አያድርጉ።",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "እዚህ እንዴት ማሽከርከር አለብዎት?",
+              "answers": [
+                {
+                  "text_amharic": "በተለመደው ፍጥነትዎ ይቀጥሉ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ከቆሙት መኪኖች አጠገብ ይለፉ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ፍጥነትዎን ይቀንሱ። ከቆሙት መኪኖችም ርቀት ይያዙ። በሰላም ለማቆም እንዲችሉ።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ለአካባቢዎ ትኩረት አይስጡ።",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "እዚህ ምን አደጋ ሊያጋጥም ይችላል?",
+              "answers": [
+                {
+                  "text_amharic": "ቆመው ያሉት መኪኖች እግረኛ እንዳያልፍ ይዘጋሉ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ምንም አደጋ የለም።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ፖሊስ ለቆሙት መኪኖች ቅጣት ሊጽፍ ይችላል።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "እግረኞች ወይም ልጆች ከመኪኖች መካከል በድንገት ሊወጡ ይችላሉ።",
+                  "is_correct": true
+                }
+              ]
+            }
+          ],
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_rd_l3_s3_narration_1788728425919.mp3",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/behavioral_rd_l3_s3_diagram_1788727172183.png"
         }
       ]
     },

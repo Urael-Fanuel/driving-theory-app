@@ -34,6 +34,7 @@ const SCAFFOLD_MAP = {
   mv_:  'my_vehicle_scaffold.json',
   tw_:  'two_wheelers_scaffold.json',
   bl_:  'basics_license_scaffold.json',
+  rd_:  'road_decisions_scaffold.json',
 };
 const scaffoldFile = Object.entries(SCAFFOLD_MAP).find(([prefix]) => SUBTOPIC_ID.startsWith(prefix))?.[1]
   ?? 'vehicle_knowledge_scaffold.json';

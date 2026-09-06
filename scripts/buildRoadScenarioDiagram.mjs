@@ -341,6 +341,27 @@ function openRoad({ brokenLine }) {
   ${tree({ x: 120, y: 384, r: 28 })}${tree({ x: 380, y: 392, r: 24 })}${tree({ x: 566, y: 380, r: 30 })}`;
 }
 
+// ─── Scene: a residential street with parked cars ──────────────────────────────
+//
+// A plain single dashed centre line, not the paired broken/solid lines
+// openRoad() draws — that pairing is specifically the Israeli overtaking
+// marking, and this card has nothing to do with overtaking. Drawing it here
+// anyway would silently invite the question "can I pass here?", which is not
+// what this street is teaching.
+
+function parkedStreet() {
+  return `
+  <rect width="${W}" height="${H}" fill="${C.grass}"/>
+  <rect x="0" y="${OPEN_RY}" width="${W}" height="${OPEN_RH}" fill="${C.road}"/>
+  <g fill="${C.kerb}">
+    <rect x="0" y="${OPEN_RY - 6}" width="${W}" height="6"/>
+    <rect x="0" y="${OPEN_RY + OPEN_RH}" width="${W}" height="6"/>
+  </g>
+  <line x1="8" y1="${OPEN_CENTRE_Y}" x2="${W - 8}" y2="${OPEN_CENTRE_Y}" stroke="${C.line}" stroke-width="5" stroke-dasharray="26 20"/>
+  ${tree({ x: 90, y: 62, r: 30 })}${tree({ x: 300, y: 54, r: 26 })}${tree({ x: 540, y: 64, r: 28 })}
+  ${tree({ x: 566, y: 380, r: 30 })}`;
+}
+
 // ─── Scene: the road ahead, seen from behind our own car ──────────────────────
 //
 // Not every situation reads from above. A motorcycle seen from directly
@@ -961,7 +982,14 @@ SCENES.rd_l3_s2 = {
 // Those two together give the scene its shape: we come up to the junction on
 // a green, the car that stopped for the pedestrian on the east arm is stranded
 // across the junction, and there is nowhere for us to go.
-SCENES.rd_l3_s3 = {
+// This scene's key was originally rd_l3_s3, from when this card was still
+// meant for the pedestrian level — it was moved to rd_l4_s1 after review
+// (see the comment further up), but the SCENES key was never renamed to
+// match. Left alone, a genuinely new rd_l3_s3 card later would silently
+// overwrite this entry instead of erroring, which is exactly what a first
+// attempt at that card did — the regression check kept "passing" because it
+// was comparing this scene against itself.
+SCENES.rd_l4_s1 = {
   name: 'rd_l3_s3_green_light_junction_not_clear',
   label: 'Signalised crossroads: our light is green, but a car stopped for a pedestrian is blocking the junction',
   build: () => crossroadsRaised()
@@ -1069,6 +1097,51 @@ SCENES.rd_l4_s2 = {
     + badgeOnCar({ x: SOUTHBOUND_X, y: 96, n: 2 })
     + badgeOnCar({ x: 500, y: 148, n: 3 })
     + badgeOnCar({ x: 140, y: 196, n: 4 }),
+};
+
+// rd_l3_s3 — a child hidden between parked cars, about to step out.
+//
+// Every other card in this level put the pedestrian somewhere the driver
+// could already see them — approaching a crossing, on one, or on the road
+// being turned into. Book p.79 teaches the opposite hazard: a pedestrian
+// (the book specifically says "a pedestrian OR A CHILD") can be completely
+// invisible until the last moment, because parked cars block the sightline.
+// The lesson is not "who has right of way" — it is that a driver has to
+// slow down and widen their gap from parked cars BEFORE anyone becomes
+// visible at all, precisely because there is nothing yet to react to.
+//
+// Sources: book p.79 ("ליד כלי-רכב חונים" is listed among the places
+// requiring special alertness; "להקטין את המהירות... לשמור רווח גדול יותר
+// מכלי-רכב חונים") and bank questions 0892 / 0921 (their own wording for
+// "what characterises this road" and "what danger must you allow for").
+//
+// A plain, single dashed centre line (parkedStreet(), not openRoad()) —
+// this card has nothing to do with overtaking, and the paired broken/solid
+// lines used for that topic would wrongly suggest it does.
+SCENES.rd_l3_s3 = {
+  name: 'rd_l3_s3_child_between_parked_cars',
+  label: 'A residential street: a child is hidden between two parked cars, about to step into the road our car has not yet reached',
+  build: () => parkedStreet()
+    + car({ x: 280, y: 282, heading: 90, colour: 'silver', scale: 0.92 })
+    + car({ x: 400, y: 282, heading: 90, colour: 'yellow', scale: 0.92 })
+    + car({ x: 560, y: 282, heading: 90, colour: 'white', scale: 0.92 })
+    // In the gap between the yellow and white cars — narrow enough that
+    // only stepping fully clear of both would reveal them to a driver.
+    // On the grass behind the parked row, not yet in the road at all —
+    // the point is that a driver has nothing to react to yet. Small scale,
+    // since the book specifically names a CHILD as the harder-to-see case.
+    + pedestrian({ x: 480, y: 330, heading: 0, colour: 'red', scale: 0.65 })
+    // Our own car, well back from the parked row — this is the moment
+    // BEFORE the hazard is visible, which is the entire point of the card.
+    + car({ x: 60, y: OURS_Y, heading: 90, colour: 'blue' })
+    // A short green arrow, only long enough to read as "under way" — with
+    // no arrow at all the first render of this scene left the blue car
+    // looking like a fourth parked car rather than one approaching.
+    + arrow({ d: `M 128,${OURS_Y} L 190,${OURS_Y}`, priority: true })
+    // Only our car and the child are numbered — the three parked cars are
+    // scenery a question never has to single out individually.
+    + badgeOnCar({ x: 60, y: OURS_Y + 30, n: 1 })
+    + badge({ x: 480, y: 358, n: 2 }),
 };
 
 // ─── Write SVG, then rasterise ────────────────────────────────────────────────
