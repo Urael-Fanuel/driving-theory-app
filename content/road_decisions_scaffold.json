@@ -715,7 +715,7 @@
             }
           ],
           "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_rd_l3_s3_narration_1788728425919.mp3",
-          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/behavioral_rd_l3_s3_diagram_1788727172183.png"
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/behavioral_rd_l3_s3_diagram_1788902031269.png"
         }
       ]
     },
@@ -878,6 +878,82 @@
           ],
           "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_rd_l4_s2_narration_1788723046478.mp3",
           "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/behavioral_rd_l4_s2_diagram_1788723046478.png"
+        },
+        {
+          "id": "rd_l4_s3",
+          "name_hebrew": "שוטר מכוון תנועה בצומת",
+          "name_amharic": "ፖሊስ እንቅስቃሴ ተቆጣጣሪ መገናኛ",
+          "icon": "👮",
+          "explanation_amharic": "እርስዎ ሰማያዊ መኪና ቁጥር አንድን ያሽከረክራሉ።\nወደ መገናኛ መንገድ እየቀረቡ ነው።\nበመገናኛው መሃል ፖሊስ በእጅ ምልክት ያዛል።\nየመብራት ምልክቶችም በመደበኛነት ይሰራሉ።\n\nየፖሊስ ትዕዛዝ የመብራት ምልክትን ይሽራል።\nየብር ቀለም መኪና ቁጥር ሁለት ቀይ መብራት ቢኖረውም ፖሊሱ እንዲያልፍ አዟል።\nስለዚህ የብር ቀለም መኪናው ያልፋል።\n\nየእርስዎ ሰማያዊ መኪና መብራት አረንጓዴ ነው።\nፖሊሱ ግን እንዲቆሙ ምልክት ሰጥቶዎታል።\nፖሊስ መመሪያ ሲሰጥ አረንጓዴ መብራት ዋጋ የለውም።\nስለዚህ እርስዎ ቆመው የፖሊስን ምልክት ይጠብቃሉ።\n\nእርስዎ ሁልጊዜ የፖሊስን ትዕዛዝ መከተል አለብዎት።\nትዕዛዙ ከመብራት ምልክቱ ጋር ቢቃረንም ይከተላሉ።\nይህንን በከፍተኛ ጥንቃቄ ማድረግ አለብዎት።",
+          "narration_script": "እርስዎ ሰማያዊ መኪና ቁጥር አንድን ያሽከረክራሉ።\nወደ መገናኛ መንገድ እየቀረቡ ነው።\nበመገናኛው መሃል ፖሊስ በእጅ ምልክት ያዛል።\nየመብራት ምልክቶችም በመደበኛነት ይሰራሉ።\n\nየፖሊስ ትዕዛዝ የመብራት ምልክትን ይሽራል።\nየብር ቀለም መኪና ቁጥር ሁለት ቀይ መብራት ቢኖረውም ፖሊሱ እንዲያልፍ አዟል።\nስለዚህ የብር ቀለም መኪናው ያልፋል።\n\nየእርስዎ ሰማያዊ መኪና መብራት አረንጓዴ ነው።\nፖሊሱ ግን እንዲቆሙ ምልክት ሰጥቶዎታል።\nፖሊስ መመሪያ ሲሰጥ አረንጓዴ መብራት ዋጋ የለውም።\nስለዚህ እርስዎ ቆመው የፖሊስን ምልክት ይጠብቃሉ።\n\nእርስዎ ሁልጊዜ የፖሊስን ትዕዛዝ መከተል አለብዎት።\nትዕዛዙ ከመብራት ምልክቱ ጋር ቢቃረንም ይከተላሉ።\nይህንን በከፍተኛ ጥንቃቄ ማድረግ አለብዎት።",
+          "image_description": "Drawn top-down diagram (SVG) of a signalised crossroads. A traffic officer stands in the middle of the junction, arms held out to both sides, directing traffic by hand. Our BLUE car, number one, approaches on one road with a GREEN light on its own approach, but is shown stopped short of the junction, obeying the officer instead. A SILVER car, number two, approaches on the crossing road with a RED light, but is shown proceeding straight through, waved on by the officer. A WHITE car, number three, waits in the background on the same road as car one (also green) and is not part of the question. All three lights are lit normally; nothing is malfunctioning.",
+          "questions": [
+            {
+              "question_amharic": "ወደዚህ መገናኛ መንገድ ሲያሽከረክሩ እንዴት ያደርጋሉ?",
+              "answers": [
+                {
+                  "text_amharic": "ከመገናኛ መንገዱ በፊት ቆመው ወዲያውኑ ይለፉ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ፖሊሱ እንዲቆሙ ስላዘዘዎት ያቁሙ።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "የመብራት ምልክቱን መታዘዝ አያስፈልግም።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ለመሻገሪያው መንገድ ተሽከርካሪዎች ቅድሚያ ይስጡ።",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "የፖሊስ ትዕዛዝ ከመብራት ምልክት ጋር ቢቃረንም መታዘዝ ግዴታ ነው?",
+              "answers": [
+                {
+                  "text_amharic": "የአቁም ምልክት ቢቃረንም የፖሊስ ትዕዛዝ መታዘዝ ግዴታ አይደለም።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የፖሊስ ትዕዛዝ የመግቢያ ክልከላ ምልክትን ቢቃረን መታዘዝ ግዴታ አይደለም።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "አዎ፣ በከፍተኛ ጥንቃቄ መታዘዝ ግዴታ ነው።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "አይደለም፣ መታዘዝ ግዴታ አይደለም።",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "ብር ቀለም ያለው መኪና ቁጥር ሁለት ቀይ መብራት እያለው ለምን ያልፋል?",
+              "answers": [
+                {
+                  "text_amharic": "ፖሊሱ እንዲያልፍ ምልክት ስለሰጠው ነው።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "የመብራት ምልክቱ ስለተበላሸ ነው።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "እግረኛ መንገድ ስለሚያቋርጥ ነው።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ቀይ መብራት ለሌላ አቅጣጫ ብቻ ነው።",
+                  "is_correct": false
+                }
+              ]
+            }
+          ],
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_rd_l4_s3_narration_1788900508361.mp3",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/behavioral_rd_l4_s3_diagram_1788901418261.png"
         }
       ]
     }

@@ -186,6 +186,42 @@ function tree({ x, y, r = 32 }) {
        + `<rect x="${x - 5}" y="${y + r - 4}" width="10" height="22" fill="#6b4a2f"/>`;
 }
 
+/**
+ * A building, seen from above as a roof — the only part of a building a
+ * top-down scene actually shows. A flat rectangle would read as a car park
+ * or a slab of pavement, so a centre ridge line is drawn on top of it to
+ * read specifically as a pitched roof, the way tree() reads as a tree only
+ * once the trunk is added.
+ */
+/**
+ * A house — drawn face-on (peaked roof, wall, door, two windows), the same
+ * reason signs and lights in this file are drawn face-on rather than from
+ * directly above: a top-down roof is just a coloured rectangle, unreadable
+ * as "a building" at this size. A pointed roof over a wall with a door is
+ * the one silhouette that reads as a house at a glance, the same way
+ * tree()'s trunk is what makes a plain circle read as a tree.
+ *
+ * (x, y) is the ground-level centre of the house; w/h are its total
+ * footprint, kept identical in meaning to the flat rectangle this replaced
+ * so every placement already checked clear of the road and of other
+ * elements stays clear here too.
+ */
+function building({ x, y, w = 70, h = 46, wall = '#e7d9c0', roof = '#a63b12' }) {
+  const roofH = h * 0.52, wallH = h - roofH;
+  const top = y - h / 2, eave = top + roofH, ground = y + h / 2;
+  const doorW = w * 0.2, doorH = wallH * 0.72;
+  const winW = w * 0.17, winH = wallH * 0.4, winY = eave + wallH * 0.16;
+  return `
+  <g>
+    <rect x="${x - w / 2}" y="${eave}" width="${w}" height="${wallH}" fill="${wall}" stroke="#6b4a2f" stroke-width="2"/>
+    <polygon points="${x - w / 2 - 3},${eave} ${x + w / 2 + 3},${eave} ${x},${top}"
+             fill="${roof}" stroke="#6b3510" stroke-width="2.5"/>
+    <rect x="${x - w * 0.32}" y="${winY}" width="${winW}" height="${winH}" fill="#cfe8f5" stroke="#6b4a2f" stroke-width="1.5"/>
+    <rect x="${x + w * 0.32 - winW}" y="${winY}" width="${winW}" height="${winH}" fill="#cfe8f5" stroke="#6b4a2f" stroke-width="1.5"/>
+    <rect x="${x - doorW / 2}" y="${ground - doorH}" width="${doorW}" height="${doorH}" fill="#6b4a2f"/>
+  </g>`;
+}
+
 /** A movement arrow. `priority` picks green "goes first" or red "must wait". */
 function arrow({ d, priority = true }) {
   const col = priority ? C.go : C.wait;
@@ -358,7 +394,17 @@ function parkedStreet() {
     <rect x="0" y="${OPEN_RY + OPEN_RH}" width="${W}" height="6"/>
   </g>
   <line x1="8" y1="${OPEN_CENTRE_Y}" x2="${W - 8}" y2="${OPEN_CENTRE_Y}" stroke="${C.line}" stroke-width="5" stroke-dasharray="26 20"/>
+  <!-- Houses along both sides — the explanation calls this an urban street,
+       but grass and trees alone read as open countryside. Placed in the
+       gaps between and around the existing trees so nothing overlaps, and
+       kept off the road entirely (only ever in the grass strips). -->
+  ${building({ x: 24, y: 30, w: 44, h: 40, roof: '#a63b12' })}
+  ${building({ x: 180, y: 28, w: 90, h: 44, roof: '#8a6a4a' })}
+  ${building({ x: 420, y: 26, w: 100, h: 40, roof: '#a63b12' })}
+  ${building({ x: 611, y: 32, w: 46, h: 40, roof: '#8a6a4a' })}
   ${tree({ x: 90, y: 62, r: 30 })}${tree({ x: 300, y: 54, r: 26 })}${tree({ x: 540, y: 64, r: 28 })}
+  ${building({ x: 150, y: 382, w: 100, h: 46, roof: '#8a6a4a' })}
+  ${building({ x: 350, y: 386, w: 90, h: 42, roof: '#a63b12' })}
   ${tree({ x: 566, y: 380, r: 30 })}`;
 }
 
@@ -548,6 +594,45 @@ function pedestrian({ x, y, heading = 0, colour = 'blue', scale = 1 }) {
     <path d="M 6,10  L 8,26"  stroke="#1f2937" stroke-width="8" stroke-linecap="round"/>
     <ellipse cx="0" cy="4" rx="14" ry="11" fill="${body}" stroke="#1f2937" stroke-width="2.5"/>
     <circle cx="0" cy="-6" r="9.5" fill="${skin}" stroke="#1f2937" stroke-width="2.5"/>
+  </g>`;
+}
+
+/**
+ * A traffic officer standing at a junction, directing traffic by hand.
+ *
+ * Deliberately NEVER rotated — same reason as pedestrian(): a rotated
+ * person reads as an unreadable blob, not as "facing that way". Which car
+ * gets which instruction is carried entirely by the arrows, exactly like
+ * every other figure in this file; the officer itself only needs to read as
+ * "a traffic officer", not as facing any particular direction.
+ *
+ * Arms held straight out to both sides (rather than pedestrian()'s relaxed
+ * diagonal arms) is what makes this figure read as a person actively
+ * directing traffic rather than a pedestrian standing still. A dark peaked
+ * cap and a hi-vis (amber) body — reusing the same amber already used for
+ * the amber lamp elsewhere — keep it visually distinct from both a
+ * pedestrian and a car at a glance, without any lettering.
+ */
+function trafficOfficer({ x, y, scale = 1 }) {
+  const skin = '#8a5a34';
+  // Navy, not hi-vis amber: an amber vest reads as a road-works worker, not
+  // specifically a police officer. Navy is what the cap and uniform below
+  // are built to read as together.
+  const uniform = '#1e3a5f';
+  const uniformDark = '#0f2340';
+  return `
+  <g transform="translate(${x} ${y}) scale(${scale})">
+    <path d="M -26,-2 L 26,-2" stroke="${skin}" stroke-width="8" stroke-linecap="round"/>
+    <path d="M -7,11 L -9,28" stroke="#1f2937" stroke-width="9" stroke-linecap="round"/>
+    <path d="M 7,11  L 9,28"  stroke="#1f2937" stroke-width="9" stroke-linecap="round"/>
+    <ellipse cx="0" cy="5" rx="17" ry="13" fill="${uniform}" stroke="${uniformDark}" stroke-width="2.5"/>
+    <circle cx="0" cy="-6" r="10.5" fill="${skin}" stroke="#1f2937" stroke-width="2.5"/>
+    <!-- Peaked cap: dome, a light band, then a brim wider than the dome —
+         the band-plus-brim silhouette is what reads as "police cap" rather
+         than the plain dark dome the first version used. -->
+    <path d="M -13,-13 A 13,12 0 0 1 13,-13 Z" fill="${uniformDark}"/>
+    <rect x="-13" y="-14.5" width="26" height="3.5" fill="#e5e7eb"/>
+    <ellipse cx="0" cy="-10.5" rx="16" ry="3.5" fill="${uniformDark}"/>
   </g>`;
 }
 
@@ -1142,6 +1227,73 @@ SCENES.rd_l3_s3 = {
     // scenery a question never has to single out individually.
     + badgeOnCar({ x: 60, y: OURS_Y + 30, n: 1 })
     + badge({ x: 480, y: 358, n: 2 }),
+};
+
+// rd_l4_s3 — a traffic officer's hand signal overrides the traffic light.
+//
+// Book p.75 ("מדרג הציות" — the hierarchy of obedience): a police officer's
+// instruction takes precedence over the traffic light, even when it
+// contradicts it; the light in turn takes precedence over any sign. This is
+// the one case in this level where a driver disregards a green light not
+// because the junction is physically blocked (rd_l4_s1) and not because the
+// signal itself has failed (rd_l4_s2), but because a human authority
+// present at the junction has taken over completely.
+//
+// No pedestrian in this scene: level 3 already covers that ground, and a
+// third kind of actor in every level-4 card would blur which single rule
+// each one is actually testing.
+SCENES.rd_l4_s3 = {
+  name: 'rd_l4_s3_officer_overrides_green_light',
+  label: 'Signalised crossroads: a traffic officer stands in the middle of the junction directing traffic. Our light is green, but the officer signals our car to stop, while waving a car on the crossing road through.',
+  build: () => crossroads()
+    // Our light is green — the whole point of the card is that this alone
+    // means nothing once an officer is present. North verge, because
+    // heading west makes north our car's right-hand side; these are the
+    // same coordinates already proven clear of a car in this exact
+    // position when rd_l4_s2 placed a sign here instead of a light.
+    // All three approaches in view get their own light, showing an
+    // ordinary, fully working signal pattern — not a fault. Car 1 and car 3
+    // travel the same road in opposite directions, so both correctly show
+    // green together; car 2 is on the crossing road, correctly red. Nothing
+    // here contradicts anything else — the ONLY override in this picture is
+    // the officer, which is the entire point.
+    + trafficLight({ x: 410, y: 90, lit: 'green', scale: 0.8 })
+    + car({ x: 500, y: WESTBOUND_Y, heading: 270, colour: 'blue' })
+    // Stopping short of the junction despite the green light: the officer,
+    // not the light, decides here.
+    + arrow({ d: `M 500,${WESTBOUND_Y} L 420,${WESTBOUND_Y}`, priority: false })
+    + badgeOnCar({ x: 500, y: WESTBOUND_Y, n: 1 })
+    // West verge: heading south, right is west. Same coordinates already
+    // proven clear of a car in this exact position, where rd_l4_s2 placed a
+    // stop sign for this same car.
+    + trafficLight({ x: 210, y: 96, lit: 'red', scale: 0.8 })
+    // Not "green" — that colour is reserved for a lit green lamp elsewhere
+    // in this picture, and a green CAR sitting at a RED light reads as a
+    // mistake at a glance. Silver keeps car colour and lamp colour from
+    // ever being confused with one another.
+    + car({ x: SOUTHBOUND_X, y: 96, heading: 180, colour: 'silver' })
+    // Waved through by the officer despite its own red light — the clearest
+    // possible demonstration that the officer's gesture, not the lamp,
+    // decides who moves.
+    + arrow({ d: `M ${SOUTHBOUND_X},150 L ${SOUTHBOUND_X},330`, priority: true })
+    + badgeOnCar({ x: SOUTHBOUND_X, y: 96, n: 2 })
+    // A third, waiting car on the crossing road's other approach — the same
+    // "this reads as a real, busy junction" reason rd_l4_s2 carries one.
+    // No arrow: like every other background car in this topic, it is not
+    // part of the question.
+    + car({ x: 140, y: EASTBOUND_Y, heading: 90, colour: 'white' })
+    + badgeOnCar({ x: 140, y: EASTBOUND_Y, n: 3 })
+    // South verge: heading east, right is south. Pushed to y=388 (rather
+    // than sitting just past the kerb at 320) so the head's own height
+    // clears the kerb line by a comfortable margin — the same class of bug
+    // rd_l4_s2's signs hit twice before that rule became standard practice.
+    + trafficLight({ x: 220, y: 388, lit: 'green', scale: 0.75 })
+    // Larger and shifted slightly east from the first version, both for
+    // presence (user feedback: the figure needs to read as clearly there,
+    // not incidental) and to keep clear of the green car's arrow at x=280
+    // now that the wider figure's own bounding box reaches further left.
+    + trafficOfficer({ x: 345, y: 235, scale: 1.5 })
+    + badge({ x: 345, y: 297, n: 4 }),
 };
 
 // ─── Write SVG, then rasterise ────────────────────────────────────────────────
