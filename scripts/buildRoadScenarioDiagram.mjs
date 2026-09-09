@@ -195,10 +195,19 @@ function tree({ x, y, r = 32 }) {
  * ordinary road signal that merely happens to be stuck on red.
  */
 function crossingLight({ x, y, scale = 1 }) {
+  // A single lamp on a bare post read as a map pin; a dark backing panel
+  // behind two level red lamps fixed that and is where this settled — a
+  // later attempt at a "beam" toward the approaching car read as a
+  // megaphone bolted onto the sign and was dropped. Positioning (between
+  // the barrier and the approaching car, close to the kerb) carries the
+  // "facing traffic" idea instead, the same way every sign in this file
+  // signals direction through placement, never through rotating the icon.
   return `
   <g transform="translate(${x} ${y}) scale(${scale})">
-    <rect x="-3" y="0" width="6" height="30" fill="#9ca3af" stroke="#6b7280" stroke-width="1.5"/>
-    <circle cx="0" cy="-8" r="9" fill="#dc2626" stroke="#7f1d1d" stroke-width="2"/>
+    <rect x="-4" y="0" width="8" height="30" fill="#71717a" stroke="#3f3f46" stroke-width="2"/>
+    <rect x="-24" y="-30" width="48" height="26" rx="4" fill="#18181b" stroke="#000000" stroke-width="2"/>
+    <circle cx="-11" cy="-17" r="9" fill="#dc2626" stroke="#7f1d1d" stroke-width="2"/>
+    <circle cx="11" cy="-17" r="9" fill="#dc2626" stroke="#7f1d1d" stroke-width="2"/>
   </g>`;
 }
 
@@ -1381,15 +1390,46 @@ SCENES.rd_l5_s1 = {
   label: 'A road crossing a railway track. The level-crossing barrier is lowered, blocking the road, and a red warning light beside it is lit. Our car has stopped short of the barrier.',
   build: () => levelCrossing()
     + levelCrossingBarrier({ x: 380, y0: OPEN_RY - 6, y1: OPEN_RY + OPEN_RH + 6 })
-    // Right-hand verge, ahead of our car — the same placement rule every
-    // sign and light in this file has used since rd_l1_s3.
-    + crossingLight({ x: 350, y: 345, scale: 0.85 })
+    // Between the barrier and our car, pulled in as close to the kerb as
+    // the panel's own height allows (about 3-4px clearance) — user
+    // feedback asked for this twice, closer each time than every other
+    // sign in this file.
+    + crossingLight({ x: 330, y: 345, scale: 0.85 })
     + car({ x: 280, y: OURS_Y, heading: 90, colour: 'blue' })
     // Stops short of the barrier, not at it — the arrow ends with a visible
     // gap before the striped bar, the same way rd_l4_s2's give-way car
     // stopped with room in front of it rather than touching the line.
     + arrow({ d: `M 280,${OURS_Y} L 350,${OURS_Y}`, priority: false })
     + badgeOnCar({ x: 280, y: OURS_Y, n: 1 }),
+};
+
+// rd_l5_s2 — a level crossing with a STOP sign and no barrier.
+//
+// Book p.83's other stopping trigger: no barrier at all, only a stop sign
+// posted before the crossing. The rule this card teaches is not "stop"
+// alone (rd_l5_s1 already covers that) but the specific CHECK a driver must
+// perform once stopped — turn off the radio, open the window, listen and
+// look both ways along the track — before ever moving again. No train is
+// drawn in the picture on purpose: the whole point of the rule is that the
+// driver checks BEFORE knowing whether one is coming, the same reasoning
+// rd_l3_s3 used to keep its hazard invisible until the last moment.
+// Opposite lane, opposite direction and colour from rd_l5_s1 — travelling
+// west on ONCOMING_Y rather than east on OURS_Y, so the two cards do not
+// read as the same picture with one sign swapped for another. Right-hand
+// verge flips with the direction: heading west, right is north, so the
+// sign moves to the north verge instead of the south one.
+SCENES.rd_l5_s2 = {
+  name: 'rd_l5_s2_stop_sign_no_barrier',
+  label: 'A road crossing a railway track, seen from the opposite direction to rd_l5_s1. There is no barrier here, only a stop sign on the near (north) verge before the track. Our yellow car has stopped short of the track.',
+  build: () => levelCrossing()
+    // North verge, ahead of our car (which is heading west) and short of
+    // the track — the mirror image of rd_l5_s1's south-verge placement.
+    + stopSign({ x: 490, y: 65, scale: 0.85 })
+    + car({ x: 580, y: ONCOMING_Y, heading: 270, colour: 'yellow' })
+    // Stops with a clear gap before the near rail, matching the book's "at
+    // least four metres before the near rail" fallback rule.
+    + arrow({ d: `M 580,${ONCOMING_Y} L 465,${ONCOMING_Y}`, priority: false })
+    + badgeOnCar({ x: 580, y: ONCOMING_Y, n: 1 }),
 };
 
 // ─── Write SVG, then rasterise ────────────────────────────────────────────────

@@ -1039,7 +1039,83 @@
             }
           ],
           "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_rd_l5_s1_narration_1788949673549.mp3",
-          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/behavioral_rd_l5_s1_diagram_1788949673549.png"
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/behavioral_rd_l5_s1_diagram_1788960439583.png"
+        },
+        {
+          "id": "rd_l5_s2",
+          "name_hebrew": "תמרור עצור, בלי מחסום",
+          "name_amharic": "የማቆሚያ ምልክት ማገጃ የሌለው",
+          "icon": "🛑",
+          "explanation_amharic": "እርስዎ ቢጫው መኪና ቁጥር አንድን እያሽከረከሩ ነው።\nአሁን የባቡር መስመር ጋር ደርሰው ቆመዋል።\nእዚህ መዝጊያ የለም። የማቆሚያ ምልክት ብቻ ነው ያለው።\nከአቅራቢያው የባቡር መስመር በፊት ማቆም ግዴታ ነው።\n\nሬዲዮውን ወይም ሌላ የሚጫወት ሙዚቃን ያጥፉ።\nከእርስዎ አጠገብ ያለውን መስኮት ይክፈቱ።\n\nከዚያም ያዳምጡ። የባቡር መስመሩን በሁለቱም አቅጣጫ ይመልከቱ።\n\nባቡር እንደማይመጣና የማስጠንቀቂያ ምልክት እንደሌለ እርግጠኛ ሲሆኑ ብቻ ያሽከርክሩ።",
+          "narration_script": "እርስዎ ቢጫው መኪና ቁጥር አንድን እያሽከረከሩ ነው።\nአሁን የባቡር መስመር ጋር ደርሰው ቆመዋል።\nእዚህ መዝጊያ የለም። የማቆሚያ ምልክት ብቻ ነው ያለው።\nከአቅራቢያው የባቡር መስመር በፊት ማቆም ግዴታ ነው።\n\nሬዲዮውን ወይም ሌላ የሚጫወት ሙዚቃን ያጥፉ።\nከእርስዎ አጠገብ ያለውን መስኮት ይክፈቱ።\n\nከዚያም ያዳምጡ። የባቡር መስመሩን በሁለቱም አቅጣጫ ይመልከቱ።\n\nባቡር እንደማይመጣና የማስጠንቀቂያ ምልክት እንደሌለ እርግጠኛ ሲሆኑ ብቻ ያሽከርክሩ።",
+          "image_description": "Drawn top-down diagram (SVG) of a straight road crossing a railway track, seen from the opposite direction to the previous card. There is no barrier here, only a stop sign, on the near (north) verge before the track. Our YELLOW car, number one, travelling west on the near lane, has stopped with a clear gap before the track.",
+          "questions": [
+            {
+              "question_amharic": "እዚህ ካቆሙ በኋላ ወዲያው ምን ማድረግ አለብዎት?",
+              "answers": [
+                {
+                  "text_amharic": "ሬዲዮውን አጥፍተው መስኮትዎን ይክፈቱ።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "መስተዋትዎን ብቻ ይመልከቱ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "መስኮትዎን ዘግተው ሬዲዮውን ይክፈቱ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ስልክዎን ይመልከቱ።",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "ባቡር መኖሩን እንዴት ያረጋግጣሉ?",
+              "answers": [
+                {
+                  "text_amharic": "ወደፊት ብቻ በመመልከት።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "በማዳመጥና በሁለቱም አቅጣጫ በመመልከት።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ሌላ መኪና እስኪያልፍ በመጠበቅ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ሳያዩ በማዳመጥ ብቻ።",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "መቼ ማሽከርከርዎን መቀጠል ይችላሉ?",
+              "answers": [
+                {
+                  "text_amharic": "ለአጭር ጊዜ ከጠበቁ በኋላ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ባቡር ከቅርብ ጊዜ ወዲህ ካላለፈ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "አንድ ጊዜ በፍጥነት ከተመለከቱ በኋላ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ባቡር የመምጣት ምንም ምልክት እንደሌለ እርግጠኛ ሲሆኑ።",
+                  "is_correct": true
+                }
+              ]
+            }
+          ],
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_rd_l5_s2_narration_1788954983327.mp3",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/behavioral_rd_l5_s2_diagram_1788954983327.png"
         }
       ]
     }
