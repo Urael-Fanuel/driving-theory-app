@@ -187,6 +187,46 @@ function tree({ x, y, r = 32 }) {
 }
 
 /**
+ * The single red lamp mounted beside a level crossing, warning of an
+ * approaching train (book p.83: "עדשה אדומה מהבהבת"). Deliberately its own
+ * primitive rather than trafficLight() with the other two lamps left dark —
+ * a real crossing light is one lamp (sometimes a pair), never a red/amber/
+ * green head, and drawing it as one keeps it from being misread as an
+ * ordinary road signal that merely happens to be stuck on red.
+ */
+function crossingLight({ x, y, scale = 1 }) {
+  return `
+  <g transform="translate(${x} ${y}) scale(${scale})">
+    <rect x="-3" y="0" width="6" height="30" fill="#9ca3af" stroke="#6b7280" stroke-width="1.5"/>
+    <circle cx="0" cy="-8" r="9" fill="#dc2626" stroke="#7f1d1d" stroke-width="2"/>
+  </g>`;
+}
+
+/**
+ * A level-crossing barrier arm, LOWERED — drawn as the driver actually sees
+ * it: a red/white striped bar lying across the full width of the road,
+ * blocking it, with a small dark post base at the verge end. Spans between
+ * two y-coordinates rather than taking a single point, since (unlike a sign
+ * or a light) the whole point of this element is that it stretches all the
+ * way across the carriageway.
+ */
+function levelCrossingBarrier({ x, y0, y1, width = 14 }) {
+  let stripes = '';
+  let cy = y0, i = 0;
+  const stripeH = 20;
+  while (cy < y1) {
+    const h = Math.min(stripeH, y1 - cy);
+    stripes += `<rect x="${x - width / 2}" y="${cy}" width="${width}" height="${h}" fill="${i % 2 === 0 ? '#dc2626' : '#f8fafc'}"/>`;
+    cy += h; i++;
+  }
+  return `
+  <g stroke="#1f2937" stroke-width="2">
+    ${stripes}
+    <rect x="${x - width / 2 - 5}" y="${y1}" width="${width + 10}" height="14" fill="#3f3f46"/>
+  </g>`;
+}
+
+/**
  * A building, seen from above as a roof — the only part of a building a
  * top-down scene actually shows. A flat rectangle would read as a car park
  * or a slab of pavement, so a centre ridge line is drawn on top of it to
@@ -406,6 +446,35 @@ function parkedStreet() {
   ${building({ x: 150, y: 382, w: 100, h: 46, roof: '#8a6a4a' })}
   ${building({ x: 350, y: 386, w: 90, h: 42, roof: '#a63b12' })}
   ${tree({ x: 566, y: 380, r: 30 })}`;
+}
+
+// ─── Scene: a road crossing a railway track ────────────────────────────────────
+//
+// Level 5's background: an ordinary straight road, exactly like openRoad(),
+// with a railway track crossing it at a right angle further along. The
+// track is drawn the full height of the frame — it does not stop at the
+// road's edges, because a track that visibly continues on both sides is
+// what makes it read as a railway crossing rather than a road marking.
+
+function levelCrossing() {
+  const trackX = 430;
+  let sleepers = '';
+  for (let sy = 4; sy < H; sy += 26) {
+    sleepers += `<rect x="${trackX - 18}" y="${sy}" width="36" height="10" fill="#6b4a2f"/>`;
+  }
+  return `
+  <rect width="${W}" height="${H}" fill="${C.grass}"/>
+  <rect x="0" y="${OPEN_RY}" width="${W}" height="${OPEN_RH}" fill="${C.road}"/>
+  <g fill="${C.kerb}">
+    <rect x="0" y="${OPEN_RY - 6}" width="${W}" height="6"/>
+    <rect x="0" y="${OPEN_RY + OPEN_RH}" width="${W}" height="6"/>
+  </g>
+  <line x1="8" y1="${OPEN_CENTRE_Y}" x2="${W - 8}" y2="${OPEN_CENTRE_Y}" stroke="${C.line}" stroke-width="5" stroke-dasharray="26 20"/>
+  ${sleepers}
+  <rect x="${trackX - 19}" y="0" width="4" height="${H}" fill="#9ca3af"/>
+  <rect x="${trackX + 15}" y="0" width="4" height="${H}" fill="#9ca3af"/>
+  ${tree({ x: 90, y: 62, r: 30 })}${tree({ x: 560, y: 64, r: 26 })}
+  ${tree({ x: 120, y: 384, r: 28 })}${tree({ x: 566, y: 380, r: 30 })}`;
 }
 
 // ─── Scene: the road ahead, seen from behind our own car ──────────────────────
@@ -1294,6 +1363,33 @@ SCENES.rd_l4_s3 = {
     // now that the wider figure's own bounding box reaches further left.
     + trafficOfficer({ x: 345, y: 235, scale: 1.5 })
     + badge({ x: 345, y: 297, n: 4 }),
+};
+
+// rd_l5_s1 — a level-crossing barrier that is down: stop, don't go round it.
+//
+// Level 5's first card, opening the "railway crossing" level of the agreed
+// road_decisions plan (junctions → overtaking → pedestrians → signalised
+// junctions → railway crossing → two-wheelers → stopping/parking).
+//
+// Source: book p.83 and its own official sample question on p.84 ("כיצד
+// עליך לנהוג בהתקרבך למחסום משמאל כשהוא מורד?" — correct answer: stop
+// before it and do not continue while it is moving or lowered). Kept to a
+// single car for this first card of a new level, the same way tr_l1_s3 and
+// rd_l3_s1 opened their own levels simply before later cards added more.
+SCENES.rd_l5_s1 = {
+  name: 'rd_l5_s1_barrier_lowered_stop',
+  label: 'A road crossing a railway track. The level-crossing barrier is lowered, blocking the road, and a red warning light beside it is lit. Our car has stopped short of the barrier.',
+  build: () => levelCrossing()
+    + levelCrossingBarrier({ x: 380, y0: OPEN_RY - 6, y1: OPEN_RY + OPEN_RH + 6 })
+    // Right-hand verge, ahead of our car — the same placement rule every
+    // sign and light in this file has used since rd_l1_s3.
+    + crossingLight({ x: 350, y: 345, scale: 0.85 })
+    + car({ x: 280, y: OURS_Y, heading: 90, colour: 'blue' })
+    // Stops short of the barrier, not at it — the arrow ends with a visible
+    // gap before the striped bar, the same way rd_l4_s2's give-way car
+    // stopped with room in front of it rather than touching the line.
+    + arrow({ d: `M 280,${OURS_Y} L 350,${OURS_Y}`, priority: false })
+    + badgeOnCar({ x: 280, y: OURS_Y, n: 1 }),
 };
 
 // ─── Write SVG, then rasterise ────────────────────────────────────────────────

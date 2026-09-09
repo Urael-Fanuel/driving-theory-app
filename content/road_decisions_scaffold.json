@@ -956,6 +956,92 @@
           "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/behavioral_rd_l4_s3_diagram_1788901418261.png"
         }
       ]
+    },
+    {
+      "id": "rd_l5",
+      "level": 5,
+      "name_hebrew": "מפגש מסילת ברזל",
+      "name_amharic": "የባቡር መንገድ መገናኛ",
+      "icon": "🚂",
+      "color": "#2E7D32",
+      "subtopics": [
+        {
+          "id": "rd_l5_s1",
+          "name_hebrew": "מחסום מורד",
+          "name_amharic": "የወረደ ማገጃ",
+          "icon": "🚧",
+          "explanation_amharic": "እርስዎ ሰማያዊውን መኪና ቁጥር አንድን ያሽከረክራሉ። እዚህ መንገዱ የባቡር ሀዲድን ያቋርጣል። መዝጊያው ወርዶ መንገዱን ዘግቷል። ቀይ የማስጠንቀቂያ መብራትም በርቷል።\n\nመዝጊያው ዝቅ ባለበት ወይም በሚንቀሳቀስበት ጊዜ ማለፍ አይችሉም። ሙሉ በሙሉ እስኪከፈት ወይም የማስጠንቀቂያው ምልክት እስኪቆም ድረስ ይጠብቁ።\n\nባቡር ሀዲድ ማቋረጫ ላይ ማቆም ሲያስፈልግ፣ ከማቆሚያ መስመሩ በፊት ይቁሙ። መስመር ከሌለ ከመዝጊያው በፊት ይቁሙ። መዝጊያ ከሌለ ከአቅራቢያው ሀዲድ አራት ሜትር በፊት ይቁሙ።\n\nመዝጊያው ሙሉ በሙሉ ሲከፈትና ማስጠንቀቂያው ሲቆም ብቻ ማለፍ ይችላሉ።",
+          "narration_script": "እርስዎ ሰማያዊውን መኪና ቁጥር አንድን ያሽከረክራሉ። እዚህ መንገዱ የባቡር ሀዲድን ያቋርጣል። መዝጊያው ወርዶ መንገዱን ዘግቷል። ቀይ የማስጠንቀቂያ መብራትም በርቷል።\n\nመዝጊያው ዝቅ ባለበት ወይም በሚንቀሳቀስበት ጊዜ ማለፍ አይችሉም። ሙሉ በሙሉ እስኪከፈት ወይም የማስጠንቀቂያው ምልክት እስኪቆም ድረስ ይጠብቁ።\n\nባቡር ሀዲድ ማቋረጫ ላይ ማቆም ሲያስፈልግ፣ ከማቆሚያ መስመሩ በፊት ይቁሙ። መስመር ከሌለ ከመዝጊያው በፊት ይቁሙ። መዝጊያ ከሌለ ከአቅራቢያው ሀዲድ አራት ሜትር በፊት ይቁሙ።\n\nመዝጊያው ሙሉ በሙሉ ሲከፈትና ማስጠንቀቂያው ሲቆም ብቻ ማለፍ ይችላሉ።",
+          "image_description": "Drawn top-down diagram (SVG) of a straight road crossing a railway track. The track runs the full height of the picture (two rails with wooden sleepers between them). A level-crossing barrier is lowered — a red-and-white striped bar mounted on a post — blocking the full width of the road just before the track. A red warning light on a short post beside the barrier is lit. Our BLUE car, number one, has stopped with a clear gap before the barrier, wanting to continue but unable to.",
+          "questions": [
+            {
+              "question_amharic": "መዝጊያው ዝቅ ብሏል። ወደዚህ ሲጠጉ እንዴት ያሽከረክራሉ?",
+              "answers": [
+                {
+                  "text_amharic": "በቀኝ በኩል አልፈው ይሂዱ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ከመዝጊያው በፊት ይቁሙ። ዝቅ ሲልም ሆነ ሲንቀሳቀስ አያሽከረክሩ።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "መኪናውን አቁመው ሞተሩን ያጥፉ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "በጥንቃቄ ስር ወይም ዙሪያውን አልፈው ያሽከረክሩ።",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "ባቡር ሀዲድ ማቋረጫ ላይ ማቆም ካለብዎት፣ መኪናዎን የት ያቆማሉ?",
+              "answers": [
+                {
+                  "text_amharic": "ከመስመሩ በኋላ፣ ስምንት ሜትር ከአቅራቢያው ሀዲድ በፊት።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ከመዝጊያው በፊት። መዝጊያ ከሌለ ከአቅራቢያው ሀዲድ ስድስት ሜትር በፊት።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ከማቆሚያ መስመሩ በፊት። መስመር ከሌለ ከመዝጊያው በፊት። መዝጊያ ከሌለ ከአቅራቢያው ሀዲድ አራት ሜትር በፊት።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "እይታው ጥሩ በሆነበት ቦታ፣ የባቡሩን እንቅስቃሴ ሳይረብሹ።",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "ዝቅ ያለው መዝጊያና የበራው ቀይ መብራት እዚህ ምን ማለት ነው?",
+              "answers": [
+                {
+                  "text_amharic": "ባቡር እየመጣ ሊሆን ይችላል፤ መዝጊያው እስኪከፈትና ማስጠንቀቂያው እስኪቆም ድረስ አያልፉ።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "መንገዱ ባዶ ከሆነ መዝጊያው ቢወርድም ማለፍ ይቻላል።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ይህ ማስጠንቀቂያ ለጭነት መኪናዎችና ለአውቶቡሶች ብቻ ነው።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "መዝጊያው ዝቅ ቢልም፣ ባቡር የማይታይ ከሆነ ማለፍ ይቻላል።",
+                  "is_correct": false
+                }
+              ]
+            }
+          ],
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_rd_l5_s1_narration_1788949673549.mp3",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/behavioral_rd_l5_s1_diagram_1788949673549.png"
+        }
+      ]
     }
   ]
 }
