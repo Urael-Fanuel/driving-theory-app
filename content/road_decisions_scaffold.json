@@ -1194,6 +1194,92 @@
           "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/behavioral_rd_l5_s3_diagram_1788975291715.png"
         }
       ]
+    },
+    {
+      "id": "rd_l6",
+      "level": 6,
+      "name_hebrew": "דו-גלגליים",
+      "name_amharic": "ባለ ሁለት ጎማ ተሽከርካሪዎች",
+      "icon": "🏍️",
+      "color": "#2E7D32",
+      "subtopics": [
+        {
+          "id": "rd_l6_s1",
+          "name_hebrew": "נסיעה במקביל לדו-גלגלי",
+          "name_amharic": "ባለ ሁለት ጎማ ጎን ለጎን ማሽከርከር",
+          "icon": "↔️",
+          "explanation_amharic": "እርስዎ ሰማያዊውን መኪና ቁጥር አንድ እያሽከረከሩ ነው።\nከእርስዎ ጎን ሞተር ሳይክል ቁጥር ሁለት አለ።\nሁለቱም በአንድ መስመር ጎን ለጎን ተስተካክለው ይጓዛሉ።\n\nበመንገድዎ መስመር ባለ ሁለት ጎማ ተሽከርካሪ ያያሉ።\nእንደዚህ ጎን ለጎን ማሽከርከር ፈጽሞ አይፈቀድም።\n\nቢጫውን ሞተር ሳይክል ለማለፍ ወደ ሌላኛው መስመር ገብተው እንደ መኪና ይለፉ።\nማለፍ ካልቻሉ ከኋላው ይቆዩ።\nበአስተማማኝ ሁኔታ ማለፍ እስከሚችሉ ድረስ ይከተሉት።\n\nባለ ሁለት ጎማ ተሽከርካሪ አሽከርካሪዎች ጥበቃቸው በቂ አይደለም።\nበአንድ መስመር ጎን ለጎን መቆየት ደህንነቱ የተጠበቀ አይደለም።\nድንገት ለመጠምዘዝ ቦታ አይኖራቸውም።",
+          "narration_script": "እርስዎ ሰማያዊውን መኪና ቁጥር አንድ እያሽከረከሩ ነው።\nከእርስዎ ጎን ሞተር ሳይክል ቁጥር ሁለት አለ።\nሁለቱም በአንድ መስመር ጎን ለጎን ተስተካክለው ይጓዛሉ።\n\nበመንገድዎ መስመር ባለ ሁለት ጎማ ተሽከርካሪ ያያሉ።\nእንደዚህ ጎን ለጎን ማሽከርከር ፈጽሞ አይፈቀድም።\n\nቢጫውን ሞተር ሳይክል ለማለፍ ወደ ሌላኛው መስመር ገብተው እንደ መኪና ይለፉ።\nማለፍ ካልቻሉ ከኋላው ይቆዩ።\nበአስተማማኝ ሁኔታ ማለፍ እስከሚችሉ ድረስ ይከተሉት።\n\nባለ ሁለት ጎማ ተሽከርካሪ አሽከርካሪዎች ጥበቃቸው በቂ አይደለም።\nበአንድ መስመር ጎን ለጎን መቆየት ደህንነቱ የተጠበቀ አይደለም።\nድንገት ለመጠምዘዝ ቦታ አይኖራቸውም።",
+          "image_description": "Drawn top-down diagram (SVG) of a straight road, one plain dashed white line down its true centre (an ordinary two-way road, one lane each direction, nothing unusual about the line). Our BLUE car, number one, and a YELLOW motorcycle, number two, are travelling in OUR lane, genuinely side by side, level with each other, a small visible gap between them. A short RED arrow just ahead of the car shows it still going straight — neither vehicle has moved over. This is the exact situation the rule is about, still unresolved.",
+          "questions": [
+            {
+              "question_amharic": "በሥዕሉ ላይ እንደሚታየው ባለ ሁለት ጎማ ተሽከርካሪ ጎን ለጎን ማሽከርከር ይፈቀዳል?",
+              "answers": [
+                {
+                  "text_amharic": "ትንሽ ቦታ እስካለ ድረስ ይፈቀዳል።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "አይ፣ በተመሳሳይ መስመር ጎን ለጎን ማሽከርከር ፈጽሞ አይፈቀድም።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ሞተር ሳይክል ከመኪና ጠባብ ስለሆነ ይፈቀዳል።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ቀስ ብለው የሚያሽከርክሩ ከሆነ ይፈቀዳል።",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "ባለ ሁለት ጎማ ተሽከርካሪውን አሁን ማለፍ ካልቻሉ ምን ማድረግ አለብዎት?",
+              "answers": [
+                {
+                  "text_amharic": "አሽከርካሪው እስኪርቅ ድረስ መለከት ይንፉ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ጎን ለጎን በተመሳሳይ ፍጥነት ማሽከርከርዎን ይቀጥሉ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "በአስተማማኝ ሁኔታ ማለፍ እስከሚችሉ ድረስ ከኋላው ይቆዩ።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "መስመር ሳይቀይሩ በቅርብ ርቀት ይለፉ።",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "በአስተማማኝ ሁኔታ ማለፍ ሲችሉ ባለ ሁለት ጎማ ተሽከርካሪውን እንዴት ማለፍ አለብዎት?",
+              "answers": [
+                {
+                  "text_amharic": "ሙሉ በሙሉ ወደ ሌላ መስመር በመግባት እንደ መኪና ይለፉት።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ፍጥነትዎን በመቀነስ መስመር ሳይቀይሩ ይለፉ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "መለከት በመንፋት በተመሳሳይ መስመር በፍጥነት ይለፉ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "በከፊል ብቻ ወደ ጎን በመሄድ በራስዎ መስመር ይቆዩ።",
+                  "is_correct": false
+                }
+              ]
+            }
+          ],
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_rd_l6_s1_narration_1788982805574.mp3",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/behavioral_rd_l6_s1_diagram_1788982832024.png"
+        }
+      ]
     }
   ]
 }

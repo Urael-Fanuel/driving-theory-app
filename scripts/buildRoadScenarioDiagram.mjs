@@ -452,6 +452,32 @@ function openRoad({ brokenLine }) {
   ${tree({ x: 120, y: 384, r: 28 })}${tree({ x: 380, y: 392, r: 24 })}${tree({ x: 566, y: 380, r: 30 })}`;
 }
 
+// ─── Scene: the same road, one plain dashed centre line ───────────────────────
+//
+// Same carriageway, same kerb, same grass and trees as openRoad() — nothing
+// invented. The only difference is a single dashed line (not openRoad()'s
+// solid+broken overtaking pair, which has no business appearing on a card
+// that isn't about overtaking) at `lineY`. A first version of this scene
+// moved the line off true centre to buy extra height for OUR side — a user
+// correctly rejected that too: a real two-way road's lanes are the same
+// width, so the line belongs at the middle, same as parkedStreet() and
+// levelCrossing() already put it. `lineY` stays a parameter only so a
+// caller can pass OPEN_CENTRE_Y explicitly rather than this function
+// hard-coding yet another name for the same constant.
+
+function openRoadOneLine({ lineY }) {
+  return `
+  <rect width="${W}" height="${H}" fill="${C.grass}"/>
+  <rect x="0" y="${OPEN_RY}" width="${W}" height="${OPEN_RH}" fill="${C.road}"/>
+  <g fill="${C.kerb}">
+    <rect x="0" y="${OPEN_RY - 6}" width="${W}" height="6"/>
+    <rect x="0" y="${OPEN_RY + OPEN_RH}" width="${W}" height="6"/>
+  </g>
+  <line x1="8" y1="${lineY}" x2="${W - 8}" y2="${lineY}" stroke="${C.line}" stroke-width="5" stroke-dasharray="26 20"/>
+  ${tree({ x: 90, y: 62, r: 30 })}${tree({ x: 300, y: 54, r: 26 })}${tree({ x: 540, y: 64, r: 28 })}
+  ${tree({ x: 120, y: 384, r: 28 })}${tree({ x: 380, y: 392, r: 24 })}${tree({ x: 566, y: 380, r: 30 })}`;
+}
+
 // ─── Scene: a residential street with parked cars ──────────────────────────────
 //
 // A plain single dashed centre line, not the paired broken/solid lines
@@ -698,6 +724,40 @@ function pedestrian({ x, y, heading = 0, colour = 'blue', scale = 1 }) {
     <path d="M 6,10  L 8,26"  stroke="#1f2937" stroke-width="8" stroke-linecap="round"/>
     <ellipse cx="0" cy="4" rx="14" ry="11" fill="${body}" stroke="#1f2937" stroke-width="2.5"/>
     <circle cx="0" cy="-6" r="9.5" fill="${skin}" stroke="#1f2937" stroke-width="2.5"/>
+  </g>`;
+}
+
+/**
+ * A motorcycle, seen from above like every vehicle in this file (car()'s
+ * motorcycleRear() counterpart, for scenes that aren't from behind the
+ * wheel). Two wheels in line front-to-back rather than a car's four
+ * corners, a narrow body between them, handlebars, and a rider reduced to
+ * a torso and a plain dark helmet — deliberately much narrower than
+ * car()'s own silhouette, since that width difference is what makes "do
+ * not ride alongside this" legible next to a full-width car.
+ */
+function motorcycle({ x, y, heading = 0, colour = 'blue', scale = 1 }) {
+  const { body, edge } = CARS[colour] ?? CARS.blue;
+  // First version overlapped the helmet onto the front wheel — both dark,
+  // they fused into one blob with no visible wheel. Every dark part here
+  // now sits with a clear gap from the next.
+  //
+  // The rider's jacket used to be a fixed mid grey regardless of `colour`
+  // — the ONLY part that actually used `colour` was the thin 6px frame
+  // stripe between the wheels, all but invisible at this scale, so the
+  // motorcycle read as grey/black no matter what colour was passed, and a
+  // user rightly flagged it as swallowed by the (also dark grey) road. The
+  // jacket is the single largest shape here, so it now carries `colour`
+  // instead — the wheels and helmet stay dark, which still keeps three
+  // components (wheel, rider, wheel) reading as three, not one silhouette.
+  return `
+  <g transform="translate(${x} ${y}) rotate(${heading}) scale(${scale})">
+    <rect x="-5" y="-38" width="10" height="12" rx="3" fill="${C.tyre}"/>
+    <rect x="-3" y="-26" width="6" height="52" fill="${body}" stroke="${edge}" stroke-width="2"/>
+    <rect x="-5" y="26" width="10" height="12" rx="3" fill="${C.tyre}"/>
+    <path d="M -15,-19 L 15,-19" stroke="#3f3f46" stroke-width="4" stroke-linecap="round"/>
+    <ellipse cx="0" cy="2" rx="9" ry="15" fill="${body}" stroke="${edge}" stroke-width="2"/>
+    <circle cx="0" cy="-15" r="7.5" fill="#111827"/>
   </g>`;
 }
 
@@ -1487,6 +1547,45 @@ SCENES.rd_l5_s3 = {
     // normally with nothing yet forcing a decision.
     + arrow({ d: `M 240,${OURS_Y} L 280,${OURS_Y}`, priority: true })
     + badgeOnCar({ x: 180, y: OURS_Y, n: 1 }),
+};
+
+// rd_l6_s1 — never ride alongside a two-wheeler in your own lane.
+//
+// First card of level 6 (two-wheelers), next in the agreed plan after
+// railway crossings. Book p.82: a driver who catches up to a two-wheeler
+// travelling in the same lane must never simply travel BESIDE it — either
+// commit fully to overtaking it properly (moving into the other lane, same
+// as overtaking a car), or drop back and follow until overtaking is safe.
+// rd_l2_s3 already shows the MECHANICS of a safe pass; that is not this
+// card's lesson. This picture shows the moment the rule is ABOUT, not its
+// resolution: our car and a motorcycle genuinely side by side in the same
+// lane, both still going straight, neither having moved over.
+//
+// Fitting a full-size car and a motorcycle side by side needs to make full
+// use of OUR half of the carriageway. Three earlier attempts got this
+// wrong, all caught by the user, not by me: two full vehicles squeezed in
+// with the car itself nudged out of its ordinary position; then a
+// fabricated "paved shoulder" with a painted boundary line that does not
+// exist on any real road; then the real fix's own first try, which moved
+// the centre line off true middle to buy extra room and quietly narrowed
+// the oncoming lane in the process. The line stays exactly where every
+// other openRoad-family scene puts it (OPEN_CENTRE_Y); the car and the
+// motorcycle are simply sized to actually fit alongside each other in the
+// space that leaves.
+SCENES.rd_l6_s1 = {
+  name: 'rd_l6_s1_no_riding_alongside',
+  label: 'The same road as every other card, centre line included, nothing moved. Our blue car and a motorcycle travel genuinely side by side within our own lane, level with each other — the situation the rule is about, not yet resolved either way.',
+  build: () => openRoadOneLine({ lineY: OPEN_CENTRE_Y })
+    + car({ x: 300, y: 252, heading: 90, colour: 'blue' })
+    // Same x as the car — truly parallel, not trailing behind it — offset
+    // only in y, toward the kerb, with a clear gap so the two shapes never
+    // actually touch even though they sit right beside each other.
+    + motorcycle({ x: 300, y: 294.5, heading: 90, colour: 'yellow', scale: 0.7 })
+    // Short and RED: still going straight, not yet moving over — this is
+    // the wrong continuation the card is about, not a resolved manoeuvre.
+    + arrow({ d: `M 352,252 L 400,252`, priority: false })
+    + badgeOnCar({ x: 300, y: 252, n: 1 })
+    + badge({ x: 300, y: 350, n: 2 }),
 };
 
 // ─── Write SVG, then rasterise ────────────────────────────────────────────────
