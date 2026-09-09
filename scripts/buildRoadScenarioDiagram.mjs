@@ -57,6 +57,11 @@ const CARS = {
   white:  { body: '#f1f5f9', edge: '#64748b' },
   red:    { body: '#dc2626', edge: '#7f1d1d' },
   silver: { body: '#cbd5e1', edge: '#64748b' },
+  // Every other colour here pairs a body with a DARKER edge for definition.
+  // Black is already the darkest possible body, so it inverts that: a
+  // lighter grey edge is what actually gives it a visible outline, both
+  // against its own fill and against the (also dark) road.
+  black:  { body: '#18181b', edge: '#6b7280' },
 };
 
 // ─── Car ──────────────────────────────────────────────────────────────────────
@@ -1586,6 +1591,51 @@ SCENES.rd_l6_s1 = {
     + arrow({ d: `M 352,252 L 400,252`, priority: false })
     + badgeOnCar({ x: 300, y: 252, n: 1 })
     + badge({ x: 300, y: 350, n: 2 }),
+};
+
+// rd_l6_s2 — hug the kerb, so a two-wheeler cannot sneak past on your right
+// and turn right across it (the "right hook").
+//
+// Book p.82: because riders tend to ride the shoulder or overtake on the
+// right, a driver — especially of a large vehicle — must drive as close as
+// possible to the right-hand edge, precisely to stop a two-wheeler
+// squeezing through there and overtaking illegally, both when driving
+// straight and when turning right.
+//
+// A plain crossroads. Our car is travelling east, indicator already on for
+// a right turn — but it is NOT hugging the kerb: a clear strip of empty
+// road sits between it and the south kerb, exactly the gap the rule warns
+// about. A motorcycle, further back on the same approach, is riding that
+// gap along the kerb, about to draw level just as the car turns across it.
+//
+// A first version put the motorcycle directly beside/behind the car at a
+// scale small enough to fit the leftover sliver of lane height — self-
+// caught at the render stage as unreadable, a yellow smear half-swallowed
+// by the car with no room to read as a separate vehicle. Separating the
+// two ALONG the road instead of squeezing them into the same cross-section
+// removes the constraint entirely: with no x-overlap, nothing can visually
+// collide regardless of y, so the motorcycle can be drawn at a size that
+// actually reads, while the empty strip beside the car still shows the gap
+// on its own.
+SCENES.rd_l6_s2 = {
+  name: 'rd_l6_s2_hug_the_kerb_right_turn',
+  label: 'A crossroads. Our black car, indicating right, is not close to the kerb — a clear gap of empty road sits between it and the south kerb. Behind it on the same approach, a red motorcycle rides that gap along the kerb, about to draw level as the car turns right across its path.',
+  build: () => crossroads()
+    // Black, not blue: a deliberately different colour pair from rd_l6_s1
+    // (blue car / yellow motorcycle), so the two cards don't read as the
+    // same picture at a glance.
+    + car({ x: 170, y: 264, heading: 90, colour: 'black', indicate: 'right' })
+    // Well back from the car in x, so nothing here depends on a tight y
+    // gap — riding the kerb-side strip the car left open. No arrow of its
+    // own: a short arrow drawn here landed its head right on the car,
+    // reading as a collision rather than the motorcycle's own motion — the
+    // car's turn arrow alone already carries the scene.
+    + motorcycle({ x: 80, y: 295, heading: 90, colour: 'red', scale: 0.85 })
+    // RED: the car's turn already under way, not a safe, resolved
+    // manoeuvre — this is the execution the card is warning against.
+    + arrow({ d: `M 224,264 L 248,264 Q 280,264 280,296 L 280,340`, priority: false })
+    + badgeOnCar({ x: 170, y: 264, n: 1 })
+    + badge({ x: 80, y: 340, n: 2 }),
 };
 
 // ─── Write SVG, then rasterise ────────────────────────────────────────────────

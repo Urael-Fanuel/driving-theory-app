@@ -1278,6 +1278,82 @@
           ],
           "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_rd_l6_s1_narration_1788982805574.mp3",
           "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/behavioral_rd_l6_s1_diagram_1788982832024.png"
+        },
+        {
+          "id": "rd_l6_s2",
+          "name_hebrew": "נסיעה קרוב לשפה הימנית של הכביש",
+          "name_amharic": "የመንገድ ቀኝ ዳር በቅርብ ማሽከርከር",
+          "icon": "↪️",
+          "explanation_amharic": "እርስዎ ጥቁር መኪና ቁጥር አንድን እያሽከረከሩ ነው።\nወደ ቀኝ ለመታጠፍ ምልክት አብርተዋል።\nመኪናዎ ግን ወደ ቀኝ ዳርቻው አልቀረበም።\nበመኪናዎ እና በዳርቻው መካከል ክፍት ቦታ አለ።\nከጥቁሩ መኪና ኋላ፣ በቀኝ ዳርቻው አጠገብ ቀይ ሞተር ሳይክል ቁጥር ሁለት አለ።\n\nየሞተር ሳይክል አሽከርካሪዎች ብዙውን ጊዜ ወደ ዳርቻው ይጠጋሉ።\nወይም ደግሞ ከቀኝ በኩል ለማለፍ ይሞክራሉ።\nይህ ክፍት ቦታ ሞተር ሳይክል ለማለፍ ሊጠቀምበት ይችላል።\n\nአሽከርካሪዎች በተቻለ መጠን ወደ ቀኝ ዳርቻው ተጠግተው ማሽከርከር አለባቸው።\nይህ ቀጥታ ሲያሽከረክሩም ሆነ ወደ ቀኝ ሲታጠፉ አስፈላጊ ነው።\nባለ ሁለት ጎማ ተሽከርካሪዎች ከቀኝ በኩል ሕገወጥ ማለፍ እንዳያደርጉ ነው።\nይህ በተለይ ለትላልቅ ተሽከርካሪዎች አሽከርካሪዎች በጣም አስፈላጊ ነው።\n\nጥቁሩ መኪና ይህን ክፍት ቦታ ስለተወ፣ ከኋላው ያለው ቀዩ ሞተር ሳይክል በጊዜ ላይታይ ይችላል።\nመኪናው ወደ ቀኝ ሲታጠፍ ሊጋጨውና ሊረግጠው ይችላል።",
+          "narration_script": "እርስዎ ጥቁር መኪና ቁጥር አንድን እያሽከረከሩ ነው።\nወደ ቀኝ ለመታጠፍ ምልክት አብርተዋል።\nመኪናዎ ግን ወደ ቀኝ ዳርቻው አልቀረበም።\nበመኪናዎ እና በዳርቻው መካከል ክፍት ቦታ አለ።\nከጥቁሩ መኪና ኋላ፣ በቀኝ ዳርቻው አጠገብ ቀይ ሞተር ሳይክል ቁጥር ሁለት አለ።\n\nየሞተር ሳይክል አሽከርካሪዎች ብዙውን ጊዜ ወደ ዳርቻው ይጠጋሉ።\nወይም ደግሞ ከቀኝ በኩል ለማለፍ ይሞክራሉ።\nይህ ክፍት ቦታ ሞተር ሳይክል ለማለፍ ሊጠቀምበት ይችላል።\n\nአሽከርካሪዎች በተቻለ መጠን ወደ ቀኝ ዳርቻው ተጠግተው ማሽከርከር አለባቸው።\nይህ ቀጥታ ሲያሽከረክሩም ሆነ ወደ ቀኝ ሲታጠፉ አስፈላጊ ነው።\nባለ ሁለት ጎማ ተሽከርካሪዎች ከቀኝ በኩል ሕገወጥ ማለፍ እንዳያደርጉ ነው።\nይህ በተለይ ለትላልቅ ተሽከርካሪዎች አሽከርካሪዎች በጣም አስፈላጊ ነው።\n\nጥቁሩ መኪና ይህን ክፍት ቦታ ስለተወ፣ ከኋላው ያለው ቀዩ ሞተር ሳይክል በጊዜ ላይታይ ይችላል።\nመኪናው ወደ ቀኝ ሲታጠፍ ሊጋጨውና ሊረግጠው ይችላል።",
+          "image_description": "Drawn top-down diagram (SVG) of a plain crossroads. Our BLACK car, number one, is approaching the junction with its right turn indicator already on, but it is NOT close to the south kerb — there is a clearly visible strip of empty road between the car and the kerb. A RED motorcycle, number two, is further back on the same approach, riding that exact empty strip along the kerb, about to draw level with the car. A short red arrow shows the car's right turn already under way, curving across the strip the motorcycle is riding in.",
+          "questions": [
+            {
+              "question_amharic": "ጥቁሩ መኪና በዚህ ስዕል ላይ የተቀመጠበት መንገድ ምን ችግር አለበት?",
+              "answers": [
+                {
+                  "text_amharic": "በጣም በፍጥነት እያሽከረከረ ነው።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ምልክት ማብራት ረስቷል።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ከቀኝ ዳርቻው ርቆ ክፍት ቦታ ትቷል።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "በተሳሳተ መስመር ላይ ነው።",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "አሽከርካሪዎች በተለይ ወደ ቀኝ ከመታጠፋቸው በፊት ወደ ቀኝ ዳርቻው ለምን መቅረብ አለባቸው?",
+              "answers": [
+                {
+                  "text_amharic": "ባለ ሁለት ጎማ ተሽከርካሪዎች ሕገወጥ ማለፍ እንዳያደርጉ ለመከላከል ነው።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ነዳጅ ለመቆጠብ ነው።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ጠባብ መንገዶች ላይ ብቻ ስለሚያስፈልግ ነው።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ፈጣን መኪናዎች ከግራ እንዲያልፉ ለመፍቀድ ነው።",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "በዚህ ስዕል ላይ ለቀዩ ሞተር ሳይክል ያለው አደጋ ምንድነው?",
+              "answers": [
+                {
+                  "text_amharic": "ሞተር ሳይክሉ በጊዜ ለማቆም በጣም ፈጣን ነው።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "በዚህ መንገድ ላይ ሞተር ሳይክል አይፈቀድም።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ቆሞ መጠበቅ የሞተር ሳይክሉ ግዴታ ነበር።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ጥቁሩ መኪና ላያየውና ወደ ቀኝ ሲታጠፍ ሊጋጨውና ሊረግጠው ይችላል።",
+                  "is_correct": true
+                }
+              ]
+            }
+          ],
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_rd_l6_s2_narration_1788985810789.mp3",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/behavioral_rd_l6_s2_diagram_1788985833007.png"
         }
       ]
     }
