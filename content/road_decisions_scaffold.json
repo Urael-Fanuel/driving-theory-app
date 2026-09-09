@@ -1116,6 +1116,82 @@
           ],
           "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_rd_l5_s2_narration_1788954983327.mp3",
           "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/behavioral_rd_l5_s2_diagram_1788954983327.png"
+        },
+        {
+          "id": "rd_l5_s3",
+          "name_hebrew": "מהו מפגש מסילת ברזל",
+          "name_amharic": "የባቡር መስመር መገናኛ",
+          "icon": "❓",
+          "explanation_amharic": "እርስዎ ብር ቀለም ያለው መኪና ቁጥር አንድን እያሽከረከሩ ወደባቡር መሻገሪያ እየቀረቡ ነው። ይህ መንገድና ሀዲድ በአንድ ደረጃ የሚገናኙበት ቦታ ነው። ለዚህ ተብሎ የተተከለ ምልክትም አለው። የባቡር መሻገሪያ ይባላል።\n\nበዚህ ስዕል ላይ ግን መዝጊያ፣ ቀይ መብራት ወይም የማቆሚያ ምልክት አይታይም።\n\nባቡር ሲታይ ወይም ሲሰማ ያቁሙ። መዝጊያ፣ ቀይ መብራት ወይም የማቆሚያ ምልክት ባይኖርም፣ እርስዎ ራስዎ ማየትና መስማት አለብዎት። መዝጊያ የለም ማለት ደህና ነው ማለት አይደለም።",
+          "narration_script": "እርስዎ ብር ቀለም ያለው መኪና ቁጥር አንድን እያሽከረከሩ ወደባቡር መሻገሪያ እየቀረቡ ነው። ይህ መንገድና ሀዲድ በአንድ ደረጃ የሚገናኙበት ቦታ ነው። ለዚህ ተብሎ የተተከለ ምልክትም አለው። የባቡር መሻገሪያ ይባላል።\n\nበዚህ ስዕል ላይ ግን መዝጊያ፣ ቀይ መብራት ወይም የማቆሚያ ምልክት አይታይም።\n\nባቡር ሲታይ ወይም ሲሰማ ያቁሙ። መዝጊያ፣ ቀይ መብራት ወይም የማቆሚያ ምልክት ባይኖርም፣ እርስዎ ራስዎ ማየትና መስማት አለብዎት። መዝጊያ የለም ማለት ደህና ነው ማለት አይደለም።",
+          "image_description": "Drawn top-down diagram (SVG) of a straight road crossing a railway track. A basic railway-crossing warning sign (red triangle, black train pictogram, no lettering) is posted on the near verge — the sign every level crossing has by law. But there is no barrier, no lit warning light, and no stop sign. Our SILVER car, number one, is still under way, a short green arrow just ahead of it — an ordinary moment, nothing yet forcing a decision.",
+          "questions": [
+            {
+              "question_amharic": "የባቡር መሻገሪያ ምንድን ነው?",
+              "answers": [
+                {
+                  "text_amharic": "መንገድና የባቡር ሀዲድ በአንድ ደረጃ የሚገናኙበት ቦታ ሲሆን ምልክትም የተተከለበት።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "የባቡር ሀዲድ ማቋረጥ የሚቻልበት ማንኛውም ቦታ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "በፈጣን መንገድ ላይ መንገድና የባቡር ሀዲድ የሚገናኙበት ቦታ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "መንገድ በድልድይ ከባቡር ሀዲድ በላይ የሚያልፍበት ቦታ።",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "መዝጊያ፣ ቀይ መብራት ወይም የማቆሚያ ምልክት ባይኖርም እዚህ ለምን ንቁ መሆን አለብዎት?",
+              "answers": [
+                {
+                  "text_amharic": "ሌላ አሽከርካሪ ላይቆም ስለሚችል ነው።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "መንገዱ ጠባብ ስለሆነ በጥንቃቄ ማለፍ አለብዎት።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ባቡር በድንገት ሊመጣ ስለሚችል ማየትና መስማት አለብዎት።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "የፍጥነት ገደብ ደንብ ስላለ ነው።",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "በዚህ ስዕል ላይ መዝጊያና ማስጠንቀቂያ መብራት የለም። በግልዎ ሳያረጋግጡ ማለፍ ይችላሉ?",
+              "answers": [
+                {
+                  "text_amharic": "ባቡር አይታይምና ማለፍ ይቻላል።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "አይ፣ ባቡር አለመኖሩን ለማረጋገጥ ማየትና መስማት አለብዎት።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ሌሎች መኪኖች ስለሚያልፉ እርስዎም ማለፍ ይችላሉ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "በቀን ጊዜ ብቻ ማለፍ ይቻላል።",
+                  "is_correct": false
+                }
+              ]
+            }
+          ],
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_rd_l5_s3_narration_1788975325477.mp3",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/behavioral_rd_l5_s3_diagram_1788975291715.png"
         }
       ]
     }

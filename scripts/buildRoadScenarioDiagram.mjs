@@ -142,6 +142,32 @@ function giveWaySign({ x, y, scale = 1 }) {
 }
 
 /**
+ * The level-crossing warning sign: an upward-pointing red triangle (the
+ * general warning-sign shape, apex up — the mirror of giveWaySign()'s
+ * apex-down triangle) with a plain black train pictogram inside, no
+ * lettering. Modelled on the real sign (a red triangle with a black train
+ * silhouette) without copying its file — this app draws its own simplified
+ * version of every sign, the same as every other one in this file.
+ *
+ * This is the basic crossing-designation sign every level crossing has by
+ * law, distinct from the active control devices (a barrier, a flashing
+ * light, a stop sign) that a specific crossing may or may not also have.
+ */
+function railwayWarningSign({ x, y, scale = 1 }) {
+  return `
+  <g transform="translate(${x} ${y}) scale(${scale})">
+    <rect x="-3" y="4" width="6" height="46" fill="#9ca3af" stroke="#6b7280" stroke-width="1.5"/>
+    <path d="M 0,-46 L 30,4 L -30,4 Z" fill="#ffffff" stroke="#c81e1e" stroke-width="9" stroke-linejoin="round"/>
+    <rect x="-15" y="-13" width="30" height="15" rx="2" fill="#18181b"/>
+    <rect x="-11" y="-10" width="8" height="7" fill="#ffffff"/>
+    <rect x="1" y="-10" width="8" height="7" fill="#ffffff"/>
+    <circle cx="-8" cy="1" r="3.5" fill="#18181b"/>
+    <circle cx="8" cy="1" r="3.5" fill="#18181b"/>
+    <path d="M -4,-13 L 0,-20 L 4,-13 Z" fill="#18181b"/>
+  </g>`;
+}
+
+/**
  * A stop sign on its post: a plain red octagon, white border, no lettering —
  * the octagon SHAPE is what a driver who cannot read Amharic (or anything
  * else) recognises, exactly the reasoning behind every other sign here.
@@ -1430,6 +1456,37 @@ SCENES.rd_l5_s2 = {
     // least four metres before the near rail" fallback rule.
     + arrow({ d: `M 580,${ONCOMING_Y} L 465,${ONCOMING_Y}`, priority: false })
     + badgeOnCar({ x: 580, y: ONCOMING_Y, n: 1 }),
+};
+
+// rd_l5_s3 — what a level crossing even is, and the general duty to check.
+//
+// Third and closing card of level 5. Unlike rd_l5_s1/s2, nothing here is
+// actively stopping our car — no barrier, no lit warning light, no posted
+// sign in view. That absence IS the point: the lesson is that a driver's
+// own duty to look and listen does not depend on infrastructure being
+// present at all. Book p.83's own list of stop triggers (a train seen or
+// heard, a stop sign, a flashing red light, or a moving/closed barrier)
+// and p.84's own definition question are the sources.
+SCENES.rd_l5_s3 = {
+  name: 'rd_l5_s3_what_is_a_crossing',
+  label: 'A road crossing a railway track. The basic railway-crossing warning sign is posted, but no barrier and no lit warning light — nothing active is telling the driver what to do right now. Our silver car is still under way, approaching the crossing normally.',
+  build: () => levelCrossing()
+    // The basic crossing-designation sign every level crossing has by law
+    // (book p.84's own definition) — distinct from the ACTIVE control
+    // devices (barrier, flashing light, stop sign) this picture still has
+    // none of. Right-hand verge, ahead of the car, before the track — the
+    // same placement rule as every sign in this file.
+    + railwayWarningSign({ x: 340, y: 365, scale: 0.85 })
+    // Silver, not green — a green car sat almost invisibly under the
+    // priority arrow's own matching green when first tried.
+    + car({ x: 180, y: OURS_Y, heading: 90, colour: 'silver' })
+    // Short "under way" arrow, starting clear of the car's own front edge
+    // (car half-length 52, so 240 leaves an 8px gap) rather than on top of
+    // it, and not a long run to the track — this picture does not resolve
+    // whether it is safe to cross, only that the car is still moving
+    // normally with nothing yet forcing a decision.
+    + arrow({ d: `M 240,${OURS_Y} L 280,${OURS_Y}`, priority: true })
+    + badgeOnCar({ x: 180, y: OURS_Y, n: 1 }),
 };
 
 // ─── Write SVG, then rasterise ────────────────────────────────────────────────
