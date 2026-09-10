@@ -1735,6 +1735,38 @@ SCENES.rd_l7_s2 = {
     + badgeOnCar({ x: 330, y: 158, n: 1 }),
 };
 
+// rd_l7_s3 — parking too close before a pedestrian crossing is forbidden.
+//
+// Book p.55, and p.58's own official sample question 4: it is forbidden
+// to stand a vehicle on a pedestrian crossing, or within 12 metres BEFORE
+// it — the official exam's own correct option (ד) names exactly this
+// range, not 12m before-and-after or 20m either side (its own three
+// distractors).
+//
+// parkedStreet() again, with rd_l3_s1's proven zebraCrossing() position
+// (cx=330) reused unchanged. Three cars along the near kerb: one parked
+// at a clearly safe distance before the crossing, the red car parked much
+// closer to it (still short of the stripes themselves — the violation is
+// the GAP, not literally sitting on the paint), and one parked safely
+// past the crossing, which this specific rule does not restrict.
+//
+// A first version put the two safely-parked cars only ~50px from the
+// crossing — clear on paper (positive margins) but not a strong enough
+// contrast next to the red car's own ~17px gap for a user glancing at the
+// picture. Pushed out to the canvas edges instead, so the difference in
+// distance reads at a glance rather than needing to be measured.
+SCENES.rd_l7_s3 = {
+  name: 'rd_l7_s3_no_parking_before_crossing',
+  label: 'An ordinary two-way street with a pedestrian crossing painted across it. A red car is parked close before the crossing — much closer than the other two cars, one parked far back before it and one parked far past it.',
+  build: () => parkedStreet()
+    + zebraCrossing({ cx: 330, roadTop: OPEN_RY, roadBottom: OPEN_RY + OPEN_RH })
+    + car({ x: 55,  y: 282, heading: 90, colour: 'silver', scale: 0.92 })
+    + car({ x: 585, y: 282, heading: 90, colour: 'white',  scale: 0.92 })
+    // Close before the crossing — the violation.
+    + car({ x: 230, y: 282, heading: 90, colour: 'red', scale: 0.92 })
+    + badgeOnCar({ x: 230, y: 282, n: 1 }),
+};
+
 // ─── Write SVG, then rasterise ────────────────────────────────────────────────
 
 const sceneArg  = process.argv.indexOf('--scene');

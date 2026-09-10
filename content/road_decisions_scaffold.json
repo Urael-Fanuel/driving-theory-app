@@ -1516,6 +1516,82 @@
           ],
           "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_rd_l7_s2_narration_1789053410765.mp3",
           "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/behavioral_rd_l7_s2_diagram_1789053432406.png"
+        },
+        {
+          "id": "rd_l7_s3",
+          "name_hebrew": "איסור חנייה לפני מעבר חצייה",
+          "name_amharic": "ማቋረጫ ፊት ለፊት ማረፊያ ክልከላ",
+          "icon": "🚸",
+          "explanation_amharic": "መኪና ቁጥር አንድ ቀይ ቀለም አለው። ይህ ቀይ መኪና ከመንገዱ ማቋረጫ በፊት አርፏል። ሌሎቹ ሁለት መኪኖች በጣም ራቅ ብለው አርፈዋል።\n\nበእግረኛ ማቋረጫ ላይ ማረፊያ አይፈቀድም። ከማቋረጫው በፊት አስራ ሁለት ሜትር ውስጥም ክልክል ነው። ይህ የተወሰነ ርቀት ነው። አጠገቡ ማለት ብቻ አይደለም።\n\nመኪና ማቋረጫ አጠገብ ሲያርፍ የአሽከርካሪዎችንና የእግረኞችን ሁለቱንም የእይታ መስመር ይጋርዳል። የሚያሽከረክር ሰው እግረኛውን ማየት አይችልም። እግረኛውም የሚመጣውን መኪና ማየት ይሳነዋል።\n\nቀዩ መኪና በተከለከለው አስራ ሁለት ሜትር ውስጥ ነው። ስለዚህ ማረፊያው ህገወጥ ነው። ሌሎቹ ሁለት መኪኖች በትክክል አርፈዋል።",
+          "narration_script": "መኪና ቁጥር አንድ ቀይ ቀለም አለው። ይህ ቀይ መኪና ከመንገዱ ማቋረጫ በፊት አርፏል። ሌሎቹ ሁለት መኪኖች በጣም ራቅ ብለው አርፈዋል።\n\nበእግረኛ ማቋረጫ ላይ ማረፊያ አይፈቀድም። ከማቋረጫው በፊት አስራ ሁለት ሜትር ውስጥም ክልክል ነው። ይህ የተወሰነ ርቀት ነው። አጠገቡ ማለት ብቻ አይደለም።\n\nመኪና ማቋረጫ አጠገብ ሲያርፍ የአሽከርካሪዎችንና የእግረኞችን ሁለቱንም የእይታ መስመር ይጋርዳል። የሚያሽከረክር ሰው እግረኛውን ማየት አይችልም። እግረኛውም የሚመጣውን መኪና ማየት ይሳነዋል።\n\nቀዩ መኪና በተከለከለው አስራ ሁለት ሜትር ውስጥ ነው። ስለዚህ ማረፊያው ህገወጥ ነው። ሌሎቹ ሁለት መኪኖች በትክክል አርፈዋል።",
+          "image_description": "Drawn top-down diagram (SVG) of an ordinary two-way residential street, houses along both sides, with a pedestrian crossing painted across it. A RED car, number one, is parked close before the crossing. Two other cars (silver and white, unnumbered) are parked far from the crossing — one well before it, one well past it.",
+          "questions": [
+            {
+              "question_amharic": "በእግረኛ ማቋረጫ ዙሪያ ማረፊያ የት ክልክል ነው?",
+              "answers": [
+                {
+                  "text_amharic": "ከማቋረጫው በኋላ አስራ ሁለት ሜትርና በማቋረጫው ላይ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ሃያ ሜትር በፊትና ሃያ ሜትር በኋላ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "አስራ ሁለት ሜትር በፊትና አስራ ሁለት ሜትር በኋላ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "በማቋረጫው ላይ እንዲሁም ከሱ በፊት አስራ ሁለት ሜትር።",
+                  "is_correct": true
+                }
+              ]
+            },
+            {
+              "question_amharic": "በዚህ ስዕል ውስጥ ቀዩ መኪና ማረፊያ ያደረገው ምን ስህተት አለው?",
+              "answers": [
+                {
+                  "text_amharic": "ከመንገዱ ዳር በጣም ራቅ ብሎ አርፏል።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ከእግረኛ ማቋረጫው በፊት በጣም ቅርብ አርፏል።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "የመኪና መግቢያ በር ዘግቷል።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "በተቃራኒ አቅጣጫ አርፏል።",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "ከማቋረጫው በፊት ይህ ርቀት ለምን ባዶ መሆን አለበት?",
+              "answers": [
+                {
+                  "text_amharic": "የአሽከርካሪዎችና የእግረኞች ሁለቱም የእይታ መስመር ሙሉ በሙሉ ግልጽ እንዲሆን።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ሌሎች መኪኖች እዚያ እንዲያርፉ።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ይህ ሰፊ መንገድ ላይ ብቻ የሚሰራ ህግ ነው።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ማቋረጫው ስራ ሲበዛ ብቻ አስፈላጊ ነው።",
+                  "is_correct": false
+                }
+              ]
+            }
+          ],
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_rd_l7_s3_narration_1789057406932.mp3",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/behavioral_rd_l7_s3_diagram_1789057424621.png"
         }
       ]
     }
