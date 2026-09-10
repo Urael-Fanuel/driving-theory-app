@@ -1440,6 +1440,82 @@
           ],
           "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_rd_l7_s1_narration_1789049171023.mp3",
           "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/behavioral_rd_l7_s1_diagram_1789049188355.png"
+        },
+        {
+          "id": "rd_l7_s2",
+          "name_hebrew": "איסור חנייה בצד שמאל",
+          "name_amharic": "ግራ ጎን ማረፊያ ክልከላ",
+          "icon": "🚫",
+          "explanation_amharic": "እርስዎ አሁን የሚያዩት መኪና ቁጥር አንድ ቀይ መኪና ነው።\nይህ ቀይ መኪና በመንገዱ ሩቅ ዳርቻ ላይ ማረፊያ አድርጓል።\n\nባለ ሁለት አቅጣጫ መንገድ ላይ በመንገዱ ግራ በኩል ማረፊያ ማድረግ ክልክል ነው።\n\nሌሎች ሁለት መኪኖች (ብርና ነጭ) በትክክል ቀኝ ዳርቻ ላይ ማረፊያ አድርገዋል።\nቀዩ መኪና ግን በሩቅ በኩል ባለው ግራ ዳርቻ ላይ ብቻውን ማረፊያ አድርጓል።\n\nመኪናው በሩቁ በኩል ወደ ተሳሳተ አቅጣጫ ቆሟል። ስለዚህ ሲያሽከረክር በዚያ በኩል ወደሚመጡ መኪኖች ቀጥታ ይጋፈጣል።\n\nየመንገዱ ስፋት ለውጥ የለውም። መንገዱ ብዙ መስመሮች ቢኖሩትም ለውጥ የለውም። ከመንገዱ ዳርቻ ቢጠጋም ለውጥ የለውም። ባለ ሁለት አቅጣጫ መንገድ ላይ በግራ ማረፊያ ክልክል ነው።",
+          "narration_script": "እርስዎ አሁን የሚያዩት መኪና ቁጥር አንድ ቀይ መኪና ነው።\nይህ ቀይ መኪና በመንገዱ ሩቅ ዳርቻ ላይ ማረፊያ አድርጓል።\n\nባለ ሁለት አቅጣጫ መንገድ ላይ በመንገዱ ግራ በኩል ማረፊያ ማድረግ ክልክል ነው።\n\nሌሎች ሁለት መኪኖች (ብርና ነጭ) በትክክል ቀኝ ዳርቻ ላይ ማረፊያ አድርገዋል።\nቀዩ መኪና ግን በሩቅ በኩል ባለው ግራ ዳርቻ ላይ ብቻውን ማረፊያ አድርጓል።\n\nመኪናው በሩቁ በኩል ወደ ተሳሳተ አቅጣጫ ቆሟል። ስለዚህ ሲያሽከረክር በዚያ በኩል ወደሚመጡ መኪኖች ቀጥታ ይጋፈጣል።\n\nየመንገዱ ስፋት ለውጥ የለውም። መንገዱ ብዙ መስመሮች ቢኖሩትም ለውጥ የለውም። ከመንገዱ ዳርቻ ቢጠጋም ለውጥ የለውም። ባለ ሁለት አቅጣጫ መንገድ ላይ በግራ ማረፊያ ክልክል ነው።",
+          "image_description": "Drawn top-down diagram (SVG) of an ordinary two-way residential street, houses along both sides. A RED car, number one, is parked on the FAR kerb — the driver's left — still facing the same direction as traffic in the near lane. Two other cars (silver and white, unnumbered) are parked normally on the near kerb.",
+          "questions": [
+            {
+              "question_amharic": "ባለ ሁለት አቅጣጫ መንገድ ላይ በግራ በኩል ማረፊያ ማድረግ ይፈቀዳል?",
+              "answers": [
+                {
+                  "text_amharic": "መኪናው ከመንገዱ ዳርቻ ቅርብ ከሆነ ይፈቀዳል።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ስምንት ሜትር በላይ ሰፊ መንገድ ላይ ይፈቀዳል።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ክልክል ነው።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ሦስት ወይም ከዚያ በላይ መስመሮች ባሉት መንገድ ላይ ይፈቀዳል።",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "በዚህ ስዕል ላይ ቀዩ መኪና ማረፊያ ያደረገበት መንገድ ምን ስህተት አለበት?",
+              "answers": [
+                {
+                  "text_amharic": "ከመንገዱ ዳርቻ በጣም ራቅ ብሎ ማረፊያ አድርጓል።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "በመንገዱ ግራ በኩል ማረፊያ አድርጓል።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "የመግቢያ በር ዘግቷል።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ለሌሎች መኪኖች በጣም ተጠግቶ ማረፊያ አድርጓል።",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "ባለ ሁለት አቅጣጫ መንገድ ላይ በግራ በኩል ማረፊያ ማድረግ ለምን አደገኛ ነው?",
+              "answers": [
+                {
+                  "text_amharic": "መኪናው ለሚመጡ መኪኖች ፊት ለፊት ቆሟልና እንቅፋት ሆኖ ግጭት ሊፈጥር ይችላል።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ሁለት ማረፊያ ቦታዎችን ይይዛል።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "የመንገዱን ገጽታ ያበላሻል።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ይህ ችግር የሚሆነው በሌሊት ብቻ ነው።",
+                  "is_correct": false
+                }
+              ]
+            }
+          ],
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_rd_l7_s2_narration_1789053410765.mp3",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/behavioral_rd_l7_s2_diagram_1789053432406.png"
         }
       ]
     }

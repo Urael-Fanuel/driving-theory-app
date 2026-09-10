@@ -1708,6 +1708,33 @@ SCENES.rd_l7_s1 = {
     + badgeOnCar({ x: 300, y: 282, n: 1 }),
 };
 
+// rd_l7_s2 — parking on the LEFT side of a two-way road is forbidden.
+//
+// Book p.55, and p.58's own official sample question 3: on a two-way
+// road, parking on the left is simply forbidden — none of the exam's own
+// distractors (near the kerb, a road wider than 8m, three lanes or more)
+// carve out an exception, and neither does this card.
+//
+// parkedStreet() again: same single dashed centre line, same kerb-row car
+// height proven in rd_l3_s3/rd_l7_s1 (y=282 on our side; its mirror
+// across the centre line, y=158, for the far side). The red car sits on
+// the FAR kerb — our LEFT — still pointed the same way our own lane
+// travels, which is exactly what makes it wrong: a car sitting there
+// correctly would face the opposite way, into what is normally the
+// oncoming lane. Two ordinary cars on the near kerb for street context,
+// unbadged, the same convention rd_l7_s1 used for its own scenery cars.
+SCENES.rd_l7_s2 = {
+  name: 'rd_l7_s2_no_parking_on_the_left',
+  label: 'An ordinary two-way street. A red car is parked on the FAR kerb — our left — still facing the same direction our own lane travels, which is the wrong way for that side. Two other cars are parked normally on the near kerb.',
+  build: () => parkedStreet()
+    + car({ x: 200, y: 282, heading: 90, colour: 'silver', scale: 0.92 })
+    + car({ x: 460, y: 282, heading: 90, colour: 'white',  scale: 0.92 })
+    // Far kerb, our left. Heading 90 (not 270) is the point: it never
+    // turned around to face its own side's proper direction.
+    + car({ x: 330, y: 158, heading: 90, colour: 'red', scale: 0.92 })
+    + badgeOnCar({ x: 330, y: 158, n: 1 }),
+};
+
 // ─── Write SVG, then rasterise ────────────────────────────────────────────────
 
 const sceneArg  = process.argv.indexOf('--scene');
