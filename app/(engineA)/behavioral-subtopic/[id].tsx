@@ -38,10 +38,9 @@ import { useLocalSearchParams, useRouter, useFocusEffect } from 'expo-router';
 import * as Haptics from 'expo-haptics';
 import { Audio } from 'expo-av';
 import { Colors } from '../../../constants/colors';
-import { ImageAnswerCard } from '../../../components/engineA/ImageAnswerCard';
+import { ImageAnswerCard, ANSWER_ROW_MAX_WIDTH, ANSWER_ROW_GAP } from '../../../components/engineA/ImageAnswerCard';
 import { VoiceAnswerButton } from '../../../components/engineA/VoiceAnswerButton';
 import { AudioFeedback } from '../../../components/engineA/AudioFeedback';
-import { AdCard } from '../../../components/shared/AdCard';
 import { useVoiceRecognition } from '../../../hooks/useVoiceRecognition';
 import {
   speakAndAwait,
@@ -545,34 +544,6 @@ export default function BehavioralSubtopicScreenA() {
             </TouchableOpacity>
           </View>
 
-          {/* Ad — topic-relevant */}
-          <View style={styles.adWrapper}>
-            {topicId === 'vehicle_knowledge' ? (
-              <AdCard
-                variant="business"
-                businessName="מוסך ביתא"
-                description="🔧 የመኪና ጥገና — ፈጣን እና ታማኝ"
-                ctaLabel="ደውሉ"
-                ctaUrl="tel:0501234567"
-              />
-            ) : topicId === 'society_law' ? (
-              <AdCard
-                variant="business"
-                businessName="ביטוח ישיר"
-                description="🛡️ ርካሽ የመኪና ኢንሹራንስ ለኢትዮጵያውያን"
-                ctaLabel="ዋጋ ይጠይቁ"
-                ctaUrl="tel:0501234568"
-              />
-            ) : (
-              <AdCard
-                variant="instructor"
-                name="יוסי לוי"
-                tagline="ታማኝ፣ ታጋሽ እና ባለሙያ"
-                location="ቴል አቪቭ"
-                phone="0501234567"
-              />
-            )}
-          </View>
 
           {/* Quiz button */}
           <TouchableOpacity style={styles.startQuizBtn} onPress={handleStartQuiz} activeOpacity={0.85}>
@@ -584,20 +555,26 @@ export default function BehavioralSubtopicScreenA() {
 
       {/* ════════════════════ PHASE: QUESTIONS ════════════════════ */}
       {phase === 'questions' && currentQ && (
+        <>
+        {/* Back button — floats outside the ScrollView so it never scrolls
+            out of view (2026-09-11). It used to be the first item INSIDE
+            the ScrollView, which is exactly what made it disappear once the
+            user scrolled down to reach answers 3-4. */}
+        <TouchableOpacity
+          style={styles.backButtonFloating}
+          onPress={handleBack}
+          accessibilityLabel="חזור"
+          activeOpacity={0.8}
+        >
+          <Text style={styles.backIconProminent}>←</Text>
+        </TouchableOpacity>
+
         <ScrollView
+          style={styles.scrollArea}
           contentContainerStyle={styles.scrollContentQ}
           showsVerticalScrollIndicator={false}
           scrollEnabled={!showFeedback}
         >
-          <TouchableOpacity
-            style={styles.backButtonProminent}
-            onPress={handleBack}
-            accessibilityLabel="חזור"
-            activeOpacity={0.8}
-          >
-            <Text style={styles.backIconProminent}>←</Text>
-          </TouchableOpacity>
-
           {/* Small subtopic image */}
           <View style={styles.signImageContainer}>
             {subtopic.image_url ? (
@@ -689,6 +666,7 @@ export default function BehavioralSubtopicScreenA() {
             />
           )}
         </ScrollView>
+        </>
       )}
 
       {/* ════════════════════ PHASE: COMPLETE ════════════════════ */}
@@ -727,7 +705,12 @@ export default function BehavioralSubtopicScreenA() {
 const styles = StyleSheet.create({
   safeArea:       { flex: 1, backgroundColor: '#f7f9fb' },
   scrollContent:  { padding: 16, alignItems: 'center', gap: 24 },
-  scrollContentQ: { padding: 16, paddingBottom: 140, alignItems: 'center', gap: 24 },
+  scrollArea:     { flex: 1 },
+  // paddingTop clears the floating back button (top:12 + height:54 = 66) so
+  // the image starts below it, never behind it. paddingBottom was 140 when
+  // the mic button needed extra room at the end of the scroll; 16 is enough
+  // now (2026-09-11).
+  scrollContentQ: { padding: 16, paddingTop: 74, paddingBottom: 16, alignItems: 'center', gap: 16 },
   center:         { flex: 1, justifyContent: 'center', alignItems: 'center', gap: 24 },
 
   backButton: {
@@ -742,6 +725,10 @@ const styles = StyleSheet.create({
   // Standalone back button (explanation + questions phases) — larger tap target,
   // coloured outline and deeper shadow so it stands out. Kept identical to
   // Engine B's backBtnProminent so both engines look the same.
+  // Used by the EXPLANATION phase, where it is a normal item at the top of
+  // the scrollable content. The questions phase uses backButtonFloating
+  // below instead — do not merge the two, they are positioned differently
+  // on purpose.
   backButtonProminent: {
     width: 54, height: 54, borderRadius: 27,
     backgroundColor: '#ffffff',
@@ -755,6 +742,21 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.20, shadowRadius: 8, elevation: 6,
   },
   backIconProminent: { fontSize: 28, fontWeight: '700', lineHeight: 32, color: Colors.backButtonAccent },
+
+  // Questions phase only: same look as backButtonProminent, but floating over
+  // the top-left corner so it never scrolls out of view (2026-09-11 — it used
+  // to scroll away with the content once the user scrolled to answers 3-4).
+  // scrollContentQ's paddingTop reserves the space it would otherwise cover.
+  backButtonFloating: {
+    width: 54, height: 54, borderRadius: 27,
+    backgroundColor: '#ffffff',
+    justifyContent: 'center', alignItems: 'center',
+    position: 'absolute', top: 12, left: 16, zIndex: 10,
+    borderWidth: 2,
+    borderColor: Colors.backButtonAccent,
+    shadowColor: '#000', shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.20, shadowRadius: 8, elevation: 6,
+  },
 
   // ── Explanation phase ────────────────────────────────────────────────────────
   imageContainer: {
@@ -779,11 +781,6 @@ const styles = StyleSheet.create({
     textAlign: 'center', paddingBottom: 6, fontWeight: '600',
   },
 
-  adWrapper: {
-    width: '100%',
-    paddingHorizontal: 8,
-    marginBottom: 16,
-  },
   startQuizBtn: {
     width: 120, height: 120, borderRadius: 60,
     backgroundColor: '#27AE60',
@@ -824,7 +821,13 @@ const styles = StyleSheet.create({
 
   // ── Questions phase ──────────────────────────────────────────────────────────
   signImageContainer: {
-    width: 220, height: 220,
+    // 220 → 150 → 180 → 200 (2026-09-11): 150 and 180 were both still too
+    // small to make out sign details — users need to see the image clearly
+    // to know what it's asking, back to (about) its original size. Some
+    // scrolling to reach answers 3-4 is an accepted tradeoff (the back
+    // button/mic staying visible during that scroll was the actual hard
+    // requirement, not avoiding scroll entirely).
+    width: 200, height: 200,
     borderRadius: 20, overflow: 'hidden',
     backgroundColor: '#ffffff',
     shadowColor: '#000', shadowOffset: { width: 0, height: 3 },
@@ -854,9 +857,10 @@ const styles = StyleSheet.create({
 
   answersRow: {
     flexDirection: 'row', flexWrap: 'wrap',
-    gap: 16, justifyContent: 'center',
-    paddingHorizontal: 16,
-    // Force exactly 2 cards per row (2×2) on every device size (fixed 100px cards).
-    maxWidth: 260, alignSelf: 'center',
+    gap: ANSWER_ROW_GAP, justifyContent: 'center',
+    // Force exactly 2 cards per row (2×2) on every device size — see
+    // ImageAnswerCard's ANSWER_CARD_SIZE/ANSWER_ROW_MAX_WIDTH doc comment.
+    // Enlarged 2026-09-11 at the app owner's request.
+    maxWidth: ANSWER_ROW_MAX_WIDTH, alignSelf: 'center',
   },
 });

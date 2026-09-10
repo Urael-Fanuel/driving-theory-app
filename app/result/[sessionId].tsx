@@ -34,29 +34,37 @@ import { DBSign } from '../../backend/supabaseClient';
 
 // ─── Global result storage (passed from useExam) ──────────────────────────────
 import { ResultData, WrongQuestion, getExamResult, preloadExamResult } from '../../utils/examResult';
-import { AdCard } from '../../components/shared/AdCard';
+import { SponsorAdBanner } from '../../components/shared/SponsorAdBanner';
+import { useSponsorAd } from '../../hooks/useSponsorAd';
+import { SafeBannerAd, IS_EXPO_GO } from '../../components/shared/SafeBannerAd';
+
+// react-native-google-mobile-ads has no native module in Expo Go — avoid
+// even importing it there (a static import alone can crash on load).
+const BANNER_AD_UNIT_ID = IS_EXPO_GO
+  ? ''
+  : __DEV__
+    ? require('react-native-google-mobile-ads').TestIds.ADAPTIVE_BANNER
+    : 'ca-app-pub-XXXXXXXXXXXXXXXX/XXXXXXXXXX'; // החלף ב-ID האמיתי שלך מ-AdMob
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import { speakAndAwait, stopTTS } from '../../utils/googleTTS';
 import ConfettiCannon from 'react-native-confetti-cannon';
-import { IS_EXPO_GO } from '../../components/shared/SafeBannerAd';
 
-// react-native-google-mobile-ads has no native module in Expo Go — avoid even
-// importing it there (InterstitialAd.createForAdRequest crashes on module load).
-let AdEventType: any = null;
-let interstitial: any = null;
-if (!IS_EXPO_GO) {
-  const ads = require('react-native-google-mobile-ads');
-  AdEventType = ads.AdEventType;
-  const INTERSTITIAL_AD_UNIT_ID = __DEV__
-    ? ads.TestIds.INTERSTITIAL
-    : 'ca-app-pub-XXXXXXXXXXXXXXXX/XXXXXXXXXX'; // החלף ב-ID האמיתי שלך מ-AdMob
-  interstitial = ads.InterstitialAd.createForAdRequest(INTERSTITIAL_AD_UNIT_ID, {
-    requestNonPersonalizedAdsOnly: false,
-  });
-}
+// NOTE: this screen used to also show a Google AdMob full-screen interstitial
+// ad on mount (react-native-google-mobile-ads). Removed at the app owner's
+// explicit request (2026-09-11) — it popped up uncoordinated with the
+// confetti/celebration audio below, and is being replaced by the sponsor-ad
+// banner (SponsorAdBanner) on PASS, which the app fully controls.
 
 // ─── Audio base URL (Supabase Storage) ────────────────────────────────────────
 const _AUDIO_BASE = (process.env.EXPO_PUBLIC_SUPABASE_URL ?? '') + '/storage/v1/object/public/audio';
+
+// ─── Sponsor-ad wrapper — shown only on PASS, riding the moment's excitement.
+// Amharic text approved by the app owner directly (see conversation history,
+// not machine-translated). Engine A hears sponsor_ad_exam_pass_wrapper.mp3
+// (same text, recorded) instead of reading this. ─────────────────────────────
+const EXAM_PASS_AD_HEADLINE = 'ፈተናውን አልፈዋል';
+const EXAM_PASS_AD_BODY     = 'ወደመኪና አስተማሪ ይደውሉ እና በትክክል መንዳት ይማሩ። መንጃ ፍቃድ አውጡ።';
+const EXAM_PASS_AD_AUDIO    = `${_AUDIO_BASE}/sponsor_ad_exam_pass_wrapper.mp3`;
 
 // ─── Topic ID → Amharic name mapping ─────────────────────────────────────────
 const TOPIC_NAMES: Record<string, string> = {
@@ -86,31 +94,14 @@ export { storeExamResult } from '../../utils/examResult';
 export default function ResultScreen() {
   const { sessionId } = useLocalSearchParams<{ sessionId: string }>();
   const router        = useRouter();
-  const { engineType } = useEngine();
+  const { engineType, userId } = useEngine();
+  const sponsorAd = useSponsorAd(userId);
   const { playAudio, stopAudio } = useAudio();
 
   const { score: sParam, total: tParam, passed: pParam, duration: dParam } =
     useLocalSearchParams<{ sessionId: string; score: string; total: string; passed: string; duration: string }>();
 
   const [resultData, setResultData] = useState<ResultData | undefined>(() => getExamResult(sessionId));
-  const [adLoaded, setAdLoaded] = useState(false);
-
-  // Load and show interstitial ad when screen mounts
-  useEffect(() => {
-    if (IS_EXPO_GO || !interstitial) return;
-    const unsubLoaded = interstitial.addAdEventListener(AdEventType.LOADED, () => {
-      setAdLoaded(true);
-      interstitial.show();
-    });
-    const unsubClosed = interstitial.addAdEventListener(AdEventType.CLOSED, () => {
-      setAdLoaded(false);
-    });
-    interstitial.load();
-    return () => {
-      unsubLoaded();
-      unsubClosed();
-    };
-  }, []);
 
   // Fallback: if memory store is empty (e.g. after OTA reload), load from file
   useEffect(() => {
@@ -333,6 +324,28 @@ export default function ResultScreen() {
           </Animated.Text>
         )}
 
+        {/* PASS: sponsor ad riding the exam-pass moment. Sits high, right
+            after the score reveal, per the app owner's explicit request to
+            use this moment's excitement. FAIL: a small Google AdMob banner
+            instead, so this spot is never empty (decided 2026-09-11). */}
+        {passed ? (
+          sponsorAd && (
+            <Animated.View style={{ opacity: fadeAnim, alignSelf: 'stretch' }}>
+              <SponsorAdBanner
+                headline={EXAM_PASS_AD_HEADLINE}
+                body={EXAM_PASS_AD_BODY}
+                wrapperAudioUrl={EXAM_PASS_AD_AUDIO}
+                ad={sponsorAd}
+                engineType={engineType}
+              />
+            </Animated.View>
+          )
+        ) : (
+          <Animated.View style={{ opacity: fadeAnim, alignSelf: 'stretch', alignItems: 'center' }}>
+            <SafeBannerAd unitId={BANNER_AD_UNIT_ID} />
+          </Animated.View>
+        )}
+
         {/* Stats — Engine B shows text, Engine A shows icons */}
         <Animated.View
           style={[
@@ -474,24 +487,6 @@ export default function ResultScreen() {
             </TouchableOpacity>
           </Animated.View>
         )}
-
-        {/* ── Ad mockups — DEMO ONLY, replace with real data ── */}
-        <Animated.View style={[styles.adsContainer, { opacity: fadeAnim }]}>
-          <AdCard
-            variant="instructor"
-            name="יוסי לוי"
-            tagline="ታማኝ፣ ታጋሽ እና ባለሙያ"
-            location="ቴል አቪቭ"
-            phone="0501234567"
-          />
-          <AdCard
-            variant="business"
-            businessName="מנורה ביטוח רכב"
-            description="በአንድ ደቂቃ ዋጋ ያግኙ — ለአዲስ ፈቃድ ልዩ ዋጋ"
-            ctaLabel="ዝርዝሮች"
-            ctaUrl="https://www.menora.co.il"
-          />
-        </Animated.View>
 
         {/* Share button — only on pass */}
         {passed && (
@@ -740,12 +735,6 @@ const styles = StyleSheet.create({
     ...Typography.body,
     color:      '#FFFFFF',
     fontWeight: '700',
-  },
-
-  // ── Ads ────────────────────────────────────────────────────────────────────
-  adsContainer: {
-    alignSelf: 'stretch',
-    gap:       12,
   },
 
   // ── Share button ───────────────────────────────────────────────────────────

@@ -98,6 +98,13 @@ const SYSTEM_AUDIO: Record<string, string> = {
   'speak_answer.mp3':           'መልስዎን ይናገሩ። አንድ፣ ሁለት፣ ወይም ሶስት።',
   'home_welcome_a.mp3':         'እንኳን ደህና መጡ! ርዕስ ይምረጡ።',
   'home_welcome_b.mp3':         'እንኳን ደህና መጡ! ርዕስ ይምረጡ።',
+  // Sponsor-ad wrapper narrations (Engine A) — generated with an SSML pause
+  // between headline and body instead of the plain-text form below, see
+  // temp_behavioral/generate_sponsor_wrapper_audio.mjs. Listed here so a
+  // future full regen recognizes these files and skips them (idempotent),
+  // not as the exact generation command used.
+  'sponsor_ad_exam_pass_wrapper.mp3':      'ፈተናውን አልፈዋል! ወደመኪና አስተማሪ ይደውሉ እና በትክክል መንዳት ይማሩ። መንጃ ፍቃድ አውጡ።',
+  'sponsor_ad_progress_ready_wrapper.mp3': 'መኪና መንዳት ትምህርት ለመማር ዝግጁ ኖት፦ በእርሶ አካባቢ ከሚገኙ የመኪና አስተማሪዎች አሁን ይደውሉ እና መንዳት ይጀምሩ።',
 };
 
 // ─── Google TTS REST call ─────────────────────────────────────────────────────

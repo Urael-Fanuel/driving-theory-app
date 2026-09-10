@@ -25,10 +25,22 @@ import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import { LocationPermissionModal } from '../../../components/shared/LocationPermissionModal';
 import { useLocationPrompt } from '../../../hooks/useLocationPrompt';
 import { useEngine } from '../../../contexts/EngineContext';
+import { useSponsorAd } from '../../../hooks/useSponsorAd';
+import { SponsorAdBanner } from '../../../components/shared/SponsorAdBanner';
+
+// Amharic text approved by the app owner directly (see conversation
+// history, not machine-translated). This is what
+// sponsor_ad_progress_ready_wrapper.mp3 (Engine A's recorded narration)
+// says — kept in sync manually since regenerating it means re-recording.
+const PROGRESS_READY_AD_HEADLINE = 'መኪና መንዳት ትምህርት ለመማር ዝግጁ ኖት፦';
+const PROGRESS_READY_AD_BODY     = 'በእርሶ አካባቢ ከሚገኙ የመኪና አስተማሪዎች አሁን ይደውሉ እና መንዳት ይጀምሩ።';
+const PROGRESS_READY_AD_AUDIO    =
+  (process.env.EXPO_PUBLIC_SUPABASE_URL ?? '') + '/storage/v1/object/public/audio/sponsor_ad_progress_ready_wrapper.mp3';
 
 export default function EngineAProgressScreen() {
   const router = useRouter();
   const { userId } = useEngine();
+  const sponsorAd = useSponsorAd(userId);
   const {
     visible: locationModalVisible,
     approved: locationApproved,
@@ -103,6 +115,18 @@ export default function EngineAProgressScreen() {
           height={12}
           style={styles.progressBar}
         />
+
+        {/* Sponsor ad — shown once overall mastery crosses the real exam's
+            80% threshold, even before the user takes the formal exam. */}
+        {overallPercent >= 80 && sponsorAd && (
+          <SponsorAdBanner
+            headline={PROGRESS_READY_AD_HEADLINE}
+            body={PROGRESS_READY_AD_BODY}
+            wrapperAudioUrl={PROGRESS_READY_AD_AUDIO}
+            ad={sponsorAd}
+            engineType="A"
+          />
+        )}
 
         {/* Share button */}
         <TouchableOpacity

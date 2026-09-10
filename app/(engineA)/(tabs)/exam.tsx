@@ -22,7 +22,7 @@ import { useRouter, useFocusEffect } from 'expo-router';
 import { storeExamResult } from '../../../utils/examResult';
 import { Colors } from '../../../constants/colors';
 import { LoadingScreen } from '../../../components/shared/LoadingScreen';
-import { ImageAnswerCard } from '../../../components/engineA/ImageAnswerCard';
+import { ImageAnswerCard, ANSWER_ROW_MAX_WIDTH, ANSWER_ROW_GAP } from '../../../components/engineA/ImageAnswerCard';
 import { VoiceAnswerButton } from '../../../components/engineA/VoiceAnswerButton';
 import { AudioFeedback } from '../../../components/engineA/AudioFeedback';
 import { ProgressBar } from '../../../components/shared/ProgressBar';
@@ -671,6 +671,7 @@ export default function EngineAExamScreen() {
 
       <ScrollView
         ref={scrollRef}
+        style={styles.scrollArea}
         contentContainerStyle={styles.content}
         showsVerticalScrollIndicator={false}
         scrollEnabled={!showFeedback}
@@ -827,6 +828,9 @@ const styles = StyleSheet.create({
   },
 
   // Scrollable content — compact gaps so everything fits without scrolling
+  scrollArea: {
+    flex: 1,
+  },
   content: {
     paddingHorizontal: 16,
     paddingTop:        12,
@@ -925,15 +929,14 @@ const styles = StyleSheet.create({
 
   // Answer cards — 2×2 grid
   answersRow: {
-    flexDirection:     'row',
-    flexWrap:          'wrap',
-    gap:               14,
-    justifyContent:    'center',
-    paddingHorizontal: 8,
-    // Force exactly 2 cards per row (2×2) on every device size. Cards are a
-    // fixed 100px wide, so capping the row width keeps the layout static
-    // instead of reflowing to 3+1 on wide screens or 1-per-row on narrow ones.
-    maxWidth:          240,
-    alignSelf:         'center',
+    flexDirection:  'row',
+    flexWrap:       'wrap',
+    gap:            ANSWER_ROW_GAP,
+    justifyContent: 'center',
+    // Force exactly 2 cards per row (2×2) on every device size — see
+    // ImageAnswerCard's ANSWER_CARD_SIZE/ANSWER_ROW_MAX_WIDTH doc comment.
+    // Enlarged 2026-09-11 at the app owner's request.
+    maxWidth:       ANSWER_ROW_MAX_WIDTH,
+    alignSelf:      'center',
   },
 });

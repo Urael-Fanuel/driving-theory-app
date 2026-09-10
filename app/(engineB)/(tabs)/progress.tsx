@@ -23,10 +23,22 @@ import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import { LocationPermissionModal, PRIMER_APPROVE_BUTTON } from '../../../components/shared/LocationPermissionModal';
 import { useLocationPrompt } from '../../../hooks/useLocationPrompt';
 import { useEngine } from '../../../contexts/EngineContext';
+import { useSponsorAd } from '../../../hooks/useSponsorAd';
+import { SponsorAdBanner } from '../../../components/shared/SponsorAdBanner';
+
+// Amharic text approved by the app owner directly (see conversation
+// history, not machine-translated). Engine A hears
+// sponsor_ad_progress_ready_wrapper.mp3 (same text, recorded) instead of
+// reading this.
+const PROGRESS_READY_AD_HEADLINE = 'መኪና መንዳት ትምህርት ለመማር ዝግጁ ኖት፦';
+const PROGRESS_READY_AD_BODY     = 'በእርሶ አካባቢ ከሚገኙ የመኪና አስተማሪዎች አሁን ይደውሉ እና መንዳት ይጀምሩ።';
+const PROGRESS_READY_AD_AUDIO    =
+  (process.env.EXPO_PUBLIC_SUPABASE_URL ?? '') + '/storage/v1/object/public/audio/sponsor_ad_progress_ready_wrapper.mp3';
 
 export default function EngineBProgressScreen() {
   const router = useRouter();
   const { userId } = useEngine();
+  const sponsorAd = useSponsorAd(userId);
   const {
     visible: locationModalVisible,
     approved: locationApproved,
@@ -115,6 +127,18 @@ export default function EngineBProgressScreen() {
               : `ለፈተና ማለፍ 80% ያስፈልጋል (${Math.max(0, 80 - overallPercent)}% ቀሪ)`}
           </Text>
         </View>
+
+        {/* Sponsor ad — shown once overall mastery crosses the real exam's
+            80% threshold, even before the user takes the formal exam. */}
+        {passed && sponsorAd && (
+          <SponsorAdBanner
+            headline={PROGRESS_READY_AD_HEADLINE}
+            body={PROGRESS_READY_AD_BODY}
+            wrapperAudioUrl={PROGRESS_READY_AD_AUDIO}
+            ad={sponsorAd}
+            engineType="B"
+          />
+        )}
 
         {/* Per-topic progress */}
         {topicsProgress.length > 0 && (

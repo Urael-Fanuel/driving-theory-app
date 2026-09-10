@@ -25,6 +25,32 @@ import * as Haptics from 'expo-haptics';
 import { Colors } from '../../constants/colors';
 import { Typography } from '../../constants/typography';
 
+// ─── Sizing — single source of truth for every 2×2 answer grid in Engine A ────
+// (topic-quiz, exam, practice, question, behavioral-subtopic).
+//
+// First attempt (2026-09-11) computed the largest size that still fit 2
+// cards horizontally on the device — up to 187px on a large phone. The app
+// owner tested it and it was too big VERTICALLY: the question image above
+// and the mic/audio controls below no longer fit on one screen together
+// without scrolling. Horizontal fit alone was the wrong constraint — fixed
+// to a modest, fixed increase over the original 100px instead (same value
+// on every device, not device-width-dependent), which also fixes the
+// vertical-space problem since it no longer grows with screen width.
+//
+// Screens import ANSWER_ROW_MAX_WIDTH for their row container's maxWidth;
+// this component defaults to ANSWER_CARD_SIZE itself, so no screen needs to
+// pass a size prop unless it wants to override.
+/** Gap between the 2 cards in a row — unified across all 5 screens (was 14 in
+ *  some, 16 in others; keeping the layout truly identical everywhere means
+ *  picking one value, per the app owner's explicit "no exceptions" request,
+ *  2026-09-11). */
+export const ANSWER_ROW_GAP = 16;
+/** +15% over the original 100px — settled here 2026-09-11 after trying
+ *  130px and 120px (both too big alongside a readable question image), not
+ *  the max that horizontally fits (that broke vertical fit — see above). */
+export const ANSWER_CARD_SIZE = 115;
+export const ANSWER_ROW_MAX_WIDTH = ANSWER_CARD_SIZE * 2 + ANSWER_ROW_GAP;
+
 // ─── Types ────────────────────────────────────────────────────────────────────
 
 type CardState = 'default' | 'selected' | 'correct' | 'wrong' | 'highlight' | 'reading';
@@ -42,6 +68,9 @@ interface ImageAnswerCardProps {
   onAudioPress?: () => void;
   /** Whether interaction is disabled (after answering) */
   disabled?: boolean;
+  /** Card width/height in px. Defaults to the shared ANSWER_CARD_SIZE —
+   *  pass this only to deliberately deviate from every other screen. */
+  size?: number;
   /** Style override */
   style?: ViewStyle;
 }
@@ -55,6 +84,7 @@ export function ImageAnswerCard({
   onPress,
   onAudioPress,
   disabled = false,
+  size = ANSWER_CARD_SIZE,
   style,
 }: ImageAnswerCardProps) {
   const bounceAnim = useRef(new Animated.Value(1)).current;
@@ -110,13 +140,13 @@ export function ImageAnswerCard({
   return (
     <Animated.View style={[{ transform: [{ scale: bounceAnim }] }, style]}>
       {/* Outer wrapper — carries the shadow and lets the audio badge overflow */}
-      <View style={styles.cardWrapper}>
+      <View style={[styles.cardWrapper, { width: size, height: size }]}>
 
         {/* Card — overflow:hidden clips the image to border radius */}
         <TouchableOpacity
           onPress={handlePress}
           activeOpacity={disabled ? 1 : 0.8}
-          style={[styles.card, getStateStyle()]}
+          style={[styles.card, { width: size, height: size }, getStateStyle()]}
           accessibilityLabel={`${number}`}
           accessibilityRole="button"
         >
@@ -185,9 +215,8 @@ export function ImageAnswerCard({
 
 const styles = StyleSheet.create({
   cardWrapper: {
+    // width/height come from the `size` prop, applied inline — see JSX above.
     position:      'relative',
-    width:         100,
-    height:        100,
     borderRadius:  16,
     shadowColor:   '#000',
     shadowOffset:  { width: 0, height: 3 },
@@ -196,8 +225,7 @@ const styles = StyleSheet.create({
     elevation:     4,
   },
   card: {
-    width:           100,
-    height:          100,
+    // width/height come from the `size` prop, applied inline — see JSX above.
     borderRadius:    16,
     backgroundColor: '#ffffff',
     overflow:        'hidden',

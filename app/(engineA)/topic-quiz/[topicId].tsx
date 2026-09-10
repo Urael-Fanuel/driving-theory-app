@@ -26,13 +26,24 @@ const SCREEN_WIDTH = Dimensions.get('window').width;
 import { useLocalSearchParams, useRouter, useFocusEffect } from 'expo-router';
 import { Colors } from '../../../constants/colors';
 import { LoadingScreen } from '../../../components/shared/LoadingScreen';
-import { ImageAnswerCard } from '../../../components/engineA/ImageAnswerCard';
+import { ImageAnswerCard, ANSWER_ROW_MAX_WIDTH, ANSWER_ROW_GAP } from '../../../components/engineA/ImageAnswerCard';
 import { VoiceAnswerButton } from '../../../components/engineA/VoiceAnswerButton';
 import { AudioFeedback } from '../../../components/engineA/AudioFeedback';
 import { ProgressBar } from '../../../components/shared/ProgressBar';
 import { AdCard } from '../../../components/shared/AdCard';
 import { useTopicQuiz } from '../../../hooks/useTopicQuiz';
 import { useAudio, playAndAwaitAudio } from '../../../hooks/useAudio';
+import { useSponsorAd } from '../../../hooks/useSponsorAd';
+import { useEngine } from '../../../contexts/EngineContext';
+import { SafeBannerAd, IS_EXPO_GO } from '../../../components/shared/SafeBannerAd';
+
+// react-native-google-mobile-ads has no native module in Expo Go — avoid
+// even importing it there (a static import alone can crash on load).
+const BANNER_AD_UNIT_ID = IS_EXPO_GO
+  ? ''
+  : __DEV__
+    ? require('react-native-google-mobile-ads').TestIds.ADAPTIVE_BANNER
+    : 'ca-app-pub-XXXXXXXXXXXXXXXX/XXXXXXXXXX'; // החלף ב-ID האמיתי שלך מ-AdMob
 import { useVoiceRecognition } from '../../../hooks/useVoiceRecognition';
 import { speakAndAwait, stopTTS, onTTSSpeakingChange, getIsTTSSpeaking } from '../../../utils/googleTTS';
 import ConfettiCannon from 'react-native-confetti-cannon';
@@ -85,6 +96,8 @@ export default function EngineATopicQuizScreen() {
     restart,
   } = useTopicQuiz(topicId ?? '', levelId);
 
+  const { userId } = useEngine();
+  const sponsorAd  = useSponsorAd(userId);
   const { playAudio, stopAudio, audioState } = useAudio();
   const [isTTSPlaying,       setIsTTSPlaying]       = useState(getIsTTSSpeaking);
   const [showFeedback,       setShowFeedback]       = useState(false);
@@ -447,34 +460,28 @@ export default function EngineATopicQuizScreen() {
             style={styles.resultBar}
           />
 
-          {/* Ad — topic-relevant */}
-          <View style={styles.adWrapper}>
-            {topicId === 'vehicle_knowledge' ? (
-              <AdCard
-                variant="business"
-                businessName="מוסך ביתא"
-                description="🔧 የመኪና ጥገና — ፈጣን እና ታማኝ"
-                ctaLabel="ደውሉ"
-                ctaUrl="tel:0501234567"
-              />
-            ) : topicId === 'society_law' ? (
-              <AdCard
-                variant="business"
-                businessName="ביטוח ישיר"
-                description="🛡️ ርካሽ የመኪና ኢንሹራንስ ለኢትዮጵያውያን"
-                ctaLabel="ዋጋ ይጠይቁ"
-                ctaUrl="tel:0501234568"
-              />
-            ) : (
-              <AdCard
-                variant="instructor"
-                name="יוסי לוי"
-                tagline="ታማኝ፣ ታጋሽ እና ባለሙያ"
-                location="ቴል አቪቭ"
-                phone="0501234567"
-              />
-            )}
-          </View>
+          {/* PASS: our own sponsor ad (driving instructor), matched to the
+              user's city — renders nothing when there is no match. FAIL:
+              a small Google AdMob banner instead, so this spot is never
+              empty. Decided 2026-09-11 — mirrors app/result/[sessionId].tsx. */}
+          {passed ? (
+            sponsorAd && (
+              <View style={styles.adWrapper}>
+                <AdCard
+                  variant="instructor"
+                  name={sponsorAd.name}
+                  tagline={sponsorAd.taglineAmharic}
+                  phone={sponsorAd.phone}
+                  avatarUri={sponsorAd.avatarUrl ?? undefined}
+                  audioUri={sponsorAd.audioUrl ?? undefined}
+                />
+              </View>
+            )
+          ) : (
+            <View style={styles.adWrapper}>
+              <SafeBannerAd unitId={BANNER_AD_UNIT_ID} />
+            </View>
+          )}
 
           {/* Buttons */}
           <View style={styles.resultButtons}>
@@ -520,6 +527,7 @@ export default function EngineATopicQuizScreen() {
 
       <ScrollView
         ref={scrollRef}
+        style={styles.scrollArea}
         contentContainerStyle={styles.content}
         showsVerticalScrollIndicator={false}
         scrollEnabled={!showFeedback}
@@ -670,6 +678,9 @@ const styles = StyleSheet.create({
     color:      '#404943',
     flexShrink: 0,
   },
+  scrollArea: {
+    flex: 1,
+  },
   content: {
     paddingHorizontal: 16,
     paddingTop:        12,
@@ -754,16 +765,17 @@ const styles = StyleSheet.create({
     fontSize: 26,
   },
   answersRow: {
-    flexDirection:     'row',
-    flexWrap:          'wrap',
-    gap:               14,
-    justifyContent:    'center',
-    paddingHorizontal: 8,
-    // Force exactly 2 cards per row (2×2) on every device size. Cards are a
-    // fixed 100px wide, so capping the row width keeps the layout static
-    // instead of reflowing to 3+1 on wide screens or 1-per-row on narrow ones.
-    maxWidth:          240,
-    alignSelf:         'center',
+    flexDirection:  'row',
+    flexWrap:       'wrap',
+    gap:            ANSWER_ROW_GAP,
+    justifyContent: 'center',
+    // Force exactly 2 cards per row (2×2) on every device size. Capping the
+    // row to exactly 2 cards + gap keeps the layout static instead of
+    // reflowing to 3+1 on wide screens or 1-per-row on narrow ones (the
+    // 2026-07-21 fix). Card size and this cap now come from one shared
+    // source — see ImageAnswerCard's ANSWER_CARD_SIZE.
+    maxWidth:       ANSWER_ROW_MAX_WIDTH,
+    alignSelf:      'center',
   },
 
   // ── Result screen ──────────────────────────────────────────────────────────

@@ -807,22 +807,205 @@ export async function upsertUser(
 }
 
 /**
- * Records the user's approximate city (from a one-time, foreground-only
- * location check — see hooks/useLocationPrompt.ts), for future location-based
- * business matching. `country`/`region` are left for a later IP-based pass;
- * this only ever sets `city`, computed offline via utils/nearestIsraeliCity.ts.
+ * Records the user's approximate city AND raw coordinates (from a one-time,
+ * foreground-only GPS location check + reverse-geocode — see
+ * hooks/useLocationPrompt.ts), for location-based sponsor matching (see
+ * getSponsorAd below). lat/lon are what make "nearest sponsor within N km"
+ * possible when there is no sponsor in the user's exact city (e.g. a small
+ * town whose residents drive to a nearby city for lessons) — optional here
+ * only for callers that genuinely cannot get a fresh fix.
  */
-export async function updateUserLocation(userId: string, city: string): Promise<void> {
+export async function updateUserLocation(
+  userId: string,
+  city: string,
+  lat?: number,
+  lon?: number
+): Promise<void> {
+  if (USE_MOCK) return;
+
+  try {
+    const update: Record<string, any> = { city };
+    if (typeof lat === 'number') update.lat = lat;
+    if (typeof lon === 'number') update.lon = lon;
+    const { error } = await (supabase
+      .from('users') as any)
+      .update(update)
+      .eq('id', userId);
+    if (error) throw error;
+  } catch (err) {
+    console.error('[api] updateUserLocation:', err);
+  }
+}
+
+/**
+ * Records a COARSE, IP-derived city for a user who has not yet been asked
+ * for GPS location (see hooks/useLocationPrompt.ts). Deliberately separate
+ * from `city` (the precise, consent-gated GPS value) and from
+ * updateUserLocation — must NEVER be called for a user who explicitly
+ * declined the GPS prompt (that would work around their "not now" through
+ * a different channel for the same purpose). Callers are responsible for
+ * checking that first — see getSponsorAd's resolution order below.
+ */
+export async function updateUserIpCity(userId: string, ipCity: string): Promise<void> {
   if (USE_MOCK) return;
 
   try {
     const { error } = await (supabase
       .from('users') as any)
-      .update({ city })
+      .update({ ip_city: ipCity })
       .eq('id', userId);
     if (error) throw error;
   } catch (err) {
-    console.error('[api] updateUserLocation:', err);
+    console.error('[api] updateUserIpCity:', err);
+  }
+}
+
+/**
+ * True when this user already has SOME location on file (precise or coarse).
+ * Used by hooks/useSponsorAd.ts to skip a redundant IP-geolocation request
+ * when there is already something to match a sponsor against.
+ */
+export async function userHasLocation(userId: string): Promise<boolean> {
+  if (USE_MOCK || !userId) return false;
+
+  try {
+    const { data, error } = await (supabase
+      .from('users') as any)
+      .select('city, ip_city')
+      .eq('id', userId)
+      .maybeSingle();
+    if (error) throw error;
+    return !!(data?.city || data?.ip_city);
+  } catch (err) {
+    console.error('[api] userHasLocation:', err);
+    return false;
+  }
+}
+
+/**
+ * Called when the user explicitly declines the GPS prompt (see
+ * hooks/useLocationPrompt.ts handleNotNow) — wipes any `ip_city` collected
+ * before that decision, so a later "no" always wins and getSponsorAd's
+ * tier-3 IP fallback stops matching for this user going forward.
+ */
+export async function clearUserIpCity(userId: string): Promise<void> {
+  if (USE_MOCK) return;
+
+  try {
+    const { error } = await (supabase
+      .from('users') as any)
+      .update({ ip_city: null })
+      .eq('id', userId);
+    if (error) throw error;
+  } catch (err) {
+    console.error('[api] clearUserIpCity:', err);
+  }
+}
+
+// ─── SPONSOR ADS ────────────────────────────────────────────────────────────
+
+export interface SponsorAd {
+  name:           string;
+  taglineAmharic: string;
+  /** Recorded Amharic narration of this sponsor's pitch — Engine A only.
+   *  When null, Engine A must not show this ad (no way to convey it). */
+  audioUrl:       string | null;
+  phone:          string;
+  avatarUrl:      string | null;
+}
+
+/** Great-circle distance in km — used only for the "nearest sponsor" fallback. */
+function haversineKm(lat1: number, lon1: number, lat2: number, lon2: number): number {
+  const R = 6371;
+  const dLat = (lat2 - lat1) * Math.PI / 180;
+  const dLon = (lon2 - lon1) * Math.PI / 180;
+  const a = Math.sin(dLat / 2) ** 2
+    + Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) * Math.sin(dLon / 2) ** 2;
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+}
+
+/** "Nearest sponsor" search radius — a small town with no local sponsor
+ *  still gets matched to a nearby city's sponsor within this distance.
+ *  Tune freely; not a legal or schema constraint. */
+const NEARBY_SPONSOR_RADIUS_KM = 30;
+
+/**
+ * Looks up one active sponsor ad for the user, trying three tiers in order
+ * and rotating randomly among ties within whichever tier matches:
+ *
+ *   1. Exact city match, on the user's own precise (GPS, opt-in) city.
+ *   2. Nearest sponsor within NEARBY_SPONSOR_RADIUS_KM of the user's precise
+ *      coordinates — covers a small town/kibbutz with no local sponsor
+ *      whose residents drive to a nearby city for lessons.
+ *   3. Exact city match on the user's COARSE, IP-derived city (`ip_city`) —
+ *      only ever populated for a user who has not yet been asked for GPS
+ *      (see hooks/useLocationPrompt.ts); no distance fallback at this tier,
+ *      since IP-derived coordinates are not reliable enough for that.
+ *
+ * Returns null (show nothing, never a placeholder) when none of the three
+ * match — including when the user has no location data at all yet, or
+ * explicitly declined the GPS prompt (in which case `ip_city` is kept
+ * cleared by that decline — see hooks/useLocationPrompt.ts).
+ */
+export async function getSponsorAd(
+  userId: string,
+  category: string = 'driving_instructor'
+): Promise<SponsorAd | null> {
+  if (USE_MOCK || !userId) return null;
+
+  try {
+    const { data: userRow, error: userErr } = await (supabase
+      .from('users') as any)
+      .select('city, lat, lon, ip_city')
+      .eq('id', userId)
+      .maybeSingle();
+    if (userErr) throw userErr;
+    if (!userRow) return null;
+
+    const { city, lat, lon, ip_city: ipCity } = userRow as
+      { city: string | null; lat: number | null; lon: number | null; ip_city: string | null };
+    if (!city && !ipCity) return null; // nothing to match on at all
+
+    const { data: ads, error: adsErr } = await (supabase
+      .from('sponsor_ads') as any)
+      .select('name, tagline_amharic, audio_url, phone, avatar_url, city, lat, lon')
+      .eq('category', category)
+      .eq('is_active', true);
+    if (adsErr) throw adsErr;
+    if (!ads || ads.length === 0) return null;
+
+    const sameCity = (a: string, b: string) => a.trim().toLowerCase() === b.trim().toLowerCase();
+    const pickRandom = (rows: any[]) => rows[Math.floor(Math.random() * rows.length)];
+
+    // Tier 1 — exact match on the precise city.
+    let candidates = city ? ads.filter((a: any) => sameCity(a.city, city)) : [];
+
+    // Tier 2 — nearest within radius, using precise coordinates.
+    if (candidates.length === 0 && typeof lat === 'number' && typeof lon === 'number') {
+      candidates = ads.filter((a: any) =>
+        typeof a.lat === 'number' && typeof a.lon === 'number'
+        && haversineKm(lat, lon, a.lat, a.lon) <= NEARBY_SPONSOR_RADIUS_KM
+      );
+    }
+
+    // Tier 3 — exact match on the coarse, IP-derived city.
+    if (candidates.length === 0 && ipCity) {
+      candidates = ads.filter((a: any) => sameCity(a.city, ipCity));
+    }
+
+    if (candidates.length === 0) return null;
+
+    const pick = pickRandom(candidates);
+    return {
+      name:           pick.name,
+      taglineAmharic: pick.tagline_amharic,
+      audioUrl:       pick.audio_url ?? null,
+      phone:          pick.phone,
+      avatarUrl:      pick.avatar_url ?? null,
+    };
+  } catch (err) {
+    console.error('[api] getSponsorAd:', err);
+    return null;
   }
 }
 

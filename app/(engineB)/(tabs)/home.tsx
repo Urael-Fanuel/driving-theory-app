@@ -33,6 +33,7 @@ import * as api from '../../../backend/api';
 import { useAudio } from '../../../hooks/useAudio';
 import { useProgress } from '../../../hooks/useProgress';
 import { AdCard } from '../../../components/shared/AdCard';
+import { useSponsorAd } from '../../../hooks/useSponsorAd';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import { SafeBannerAd, IS_EXPO_GO } from '../../../components/shared/SafeBannerAd';
 import { LocationPermissionModal } from '../../../components/shared/LocationPermissionModal';
@@ -54,6 +55,7 @@ export default function EngineBHomeScreen() {
   const { playAudio } = useAudio();
   const { topicsProgress } = useProgress();
   const { userId } = useEngine();
+  const sponsorAd = useSponsorAd(userId);
   const {
     visible: locationModalVisible,
     approved: locationApproved,
@@ -177,22 +179,17 @@ export default function EngineBHomeScreen() {
         contentContainerStyle={styles.list}
         showsVerticalScrollIndicator={false}
         ListFooterComponent={
-          <View style={styles.adFooter}>
-            <AdCard
-              variant="instructor"
-              name="יוסי לוי"
-              tagline="ታማኝ፣ ታጋሽ እና ባለሙያ"
-              location="ቴል አቪቭ"
-              phone="0501234567"
-            />
-            <AdCard
-              variant="business"
-              businessName="מנורה ביטוח רכב"
-              description="በአንድ ደቂቃ ዋጋ ያግኙ — ለአዲስ ፈቃድ ልዩ ዋጋ"
-              ctaLabel="ዝርዝሮች"
-              ctaUrl="https://www.menora.co.il"
-            />
-          </View>
+          sponsorAd ? (
+            <View style={styles.adFooter}>
+              <AdCard
+                variant="instructor"
+                name={sponsorAd.name}
+                tagline={sponsorAd.taglineAmharic}
+                phone={sponsorAd.phone}
+                avatarUri={sponsorAd.avatarUrl ?? undefined}
+              />
+            </View>
+          ) : null
         }
       />
 

@@ -27,17 +27,18 @@
  * and was wrong for an international app), and saves it to the user's own
  * row.
  *
- * Does not yet feed any ad-serving system — no such system exists yet
- * (see planning/platform-architecture.md). This hook's job ends at "the
- * user's city + country are saved", which is the prerequisite for that
- * future work, not a replacement for it.
+ * Since 2026-09-11 this DOES feed an ad-serving path: the saved city and
+ * coordinates are what backend/api.ts getSponsorAd matches a local driving
+ * instructor against (see also hooks/useSponsorAd.ts). Declining here is
+ * therefore a real "no" to location-based ads — handleNotNow wipes the
+ * coarse IP fallback too, so it can't be worked around from another angle.
  */
 
 import { useCallback, useEffect, useState } from 'react';
 import * as FileSystem from 'expo-file-system/legacy';
 import * as Location from 'expo-location';
 import { supabase } from '../backend/supabaseClient';
-import { updateUserLocation } from '../backend/api';
+import { updateUserLocation, clearUserIpCity } from '../backend/api';
 
 const PREFS_PATH = (FileSystem.documentDirectory ?? '') + 'location_prompt.json';
 
@@ -157,7 +158,9 @@ export function useLocationPrompt(userId: string | null): UseLocationPromptRetur
         if (error) throw error;
 
         const city: string | null = data?.city ?? null;
-        if (userId && city) await updateUserLocation(userId, city);
+        if (userId && city) {
+          await updateUserLocation(userId, city, position.coords.latitude, position.coords.longitude);
+        }
       } catch (err) {
         console.warn('[useLocationPrompt] Location fetch failed:', err);
       }
@@ -170,8 +173,33 @@ export function useLocationPrompt(userId: string | null): UseLocationPromptRetur
       const prefs = await readPrefs();
       const notNowCount = (prefs.notNowCount ?? 0) + 1;
       await writePrefs({ ...prefs, notNowCount, quizzesSincePrompt: 0 });
+      // An explicit "no" must win over anything collected before this
+      // decision — wipe any IP-derived city (see getLocationConsentState
+      // and getSponsorAd's tier-3 fallback below).
+      if (userId) await clearUserIpCity(userId).catch(() => {});
     })().catch(() => {});
-  }, []);
+  }, [userId]);
 
   return { visible, approved, maybeShow, showManually, handleApprove, handleNotNow };
+}
+
+/**
+ * Reads this hook's own local consent state WITHOUT rendering anything —
+ * for callers (like useSponsorAd) that need to know whether it is safe to
+ * use a coarse IP-based location fallback for this user right now.
+ *
+ *   'approved' — user said yes at least once; use their precise GPS city
+ *                (already on their DB row) as normal, no IP fallback needed.
+ *   'declined' — user explicitly said "not now" at least once; NEVER use
+ *                IP location for this user going forward (see handleNotNow,
+ *                which also wipes any previously-collected ip_city).
+ *   'unknown'  — never asked at all yet; safe to resolve a coarse IP city
+ *                for this one-off ad lookup, since no purpose-specific "no"
+ *                has been given.
+ */
+export async function getLocationConsentState(): Promise<'approved' | 'declined' | 'unknown'> {
+  const prefs = await readPrefs();
+  if (prefs.approved) return 'approved';
+  if ((prefs.notNowCount ?? 0) > 0) return 'declined';
+  return 'unknown';
 }

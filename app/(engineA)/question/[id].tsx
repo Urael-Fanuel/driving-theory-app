@@ -38,7 +38,7 @@ import { useLocalSearchParams, useRouter, useFocusEffect } from 'expo-router';
 import * as Haptics from 'expo-haptics';
 import { Colors } from '../../../constants/colors';
 import { LoadingScreen } from '../../../components/shared/LoadingScreen';
-import { ImageAnswerCard } from '../../../components/engineA/ImageAnswerCard';
+import { ImageAnswerCard, ANSWER_ROW_MAX_WIDTH, ANSWER_ROW_GAP } from '../../../components/engineA/ImageAnswerCard';
 import { VoiceAnswerButton } from '../../../components/engineA/VoiceAnswerButton';
 import { AudioFeedback } from '../../../components/engineA/AudioFeedback';
 import { DBSign, DBQuestion } from '../../../backend/supabaseClient';
@@ -441,20 +441,25 @@ export default function EngineAQuestionScreen() {
         onApprove={handleLocationApprove}
         onNotNow={handleLocationNotNow}
       />
+      {/* Back button — floats outside the ScrollView so it never scrolls out
+          of view (2026-09-11). It used to be the first item INSIDE the
+          ScrollView, which is exactly what made it disappear once the user
+          scrolled down to reach answers 3-4. content's paddingTop reserves
+          the space it would otherwise cover. */}
+      <TouchableOpacity
+        style={styles.backButton}
+        onPress={handleBack}
+        accessibilityLabel="ወደ ኋላ ተመለስ"
+      >
+        <Text style={styles.backIcon}>←</Text>
+      </TouchableOpacity>
+
       <ScrollView
+        style={styles.scrollArea}
         contentContainerStyle={styles.content}
         showsVerticalScrollIndicator={false}
         scrollEnabled={!showFeedback}
       >
-        {/* Back button — returns to current sign's explanation screen */}
-        <TouchableOpacity
-          style={styles.backButton}
-          onPress={handleBack}
-          accessibilityLabel="ወደ ኋላ ተመለስ"
-        >
-          <Text style={styles.backIcon}>←</Text>
-        </TouchableOpacity>
-
         {/* Sign image */}
         {sign?.image_url && (
           <View style={styles.signImageContainer}>
@@ -602,10 +607,19 @@ const styles = StyleSheet.create({
     flex:            1,
     backgroundColor: '#f7f9fb',
   },
+  scrollArea: {
+    flex: 1,
+  },
   content: {
     padding:    16,
+    // Extra top clearance so the image starts BELOW the floating back
+    // button (top:12 + height:54 = bottom edge at 66) instead of behind
+    // it — the 2026-09-11 overlap bug was exactly this button hiding the
+    // top of the image.
+    paddingTop: 74,
+    paddingBottom: 16,
     alignItems: 'center',
-    gap:        24,
+    gap:        16,
   },
   // Prominent, fixed color everywhere in the app — see Colors.backButtonAccent.
   backButton: {
@@ -615,7 +629,13 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffffff',
     justifyContent:  'center',
     alignItems:      'center',
-    alignSelf:       'flex-start',
+    // Floats over the top-left corner instead of taking its own row, so it
+    // costs zero vertical space and never scrolls away — it's positioned
+    // against safeArea, not against the ScrollView's content (2026-09-11).
+    position:        'absolute',
+    top:             12,
+    left:            16,
+    zIndex:          10,
     borderWidth:     2,
     borderColor:     Colors.backButtonAccent,
     shadowColor:     '#000',
@@ -630,6 +650,12 @@ const styles = StyleSheet.create({
     color:      Colors.backButtonAccent,
   },
   signImageContainer: {
+    // 200 → 150 → 180 → 200 (2026-09-11): 150 and 180 were both still too
+    // small to make out sign details — users need to see the image clearly
+    // to know what it's asking, back to (about) its original size. Some
+    // scrolling to reach answers 3-4 is an accepted tradeoff (the back
+    // button/mic staying visible during that scroll was the actual hard
+    // requirement, not avoiding scroll entirely).
     width:           200,
     height:          200,
     borderRadius:    20,
@@ -749,11 +775,12 @@ const styles = StyleSheet.create({
   answersRow: {
     flexDirection:  'row',
     flexWrap:       'wrap',
-    gap:            16,
+    gap:            ANSWER_ROW_GAP,
     justifyContent: 'center',
-    paddingHorizontal: 16,
-    // Force exactly 2 cards per row (2×2) on every device size (fixed 100px cards).
-    maxWidth:       260,
+    // Force exactly 2 cards per row (2×2) on every device size — see
+    // ImageAnswerCard's ANSWER_CARD_SIZE/ANSWER_ROW_MAX_WIDTH doc comment.
+    // Enlarged 2026-09-11 at the app owner's request.
+    maxWidth:       ANSWER_ROW_MAX_WIDTH,
     alignSelf:      'center',
   },
 });

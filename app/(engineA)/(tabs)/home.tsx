@@ -43,6 +43,7 @@ import * as api from '../../../backend/api';
 import { useAudio } from '../../../hooks/useAudio';
 import { useProgress } from '../../../hooks/useProgress';
 import { AdCard } from '../../../components/shared/AdCard';
+import { useSponsorAd } from '../../../hooks/useSponsorAd';
 import { speakAndAwait } from '../../../utils/googleTTS';
 import { SafeBannerAd, IS_EXPO_GO } from '../../../components/shared/SafeBannerAd';
 import { LocationPermissionModal } from '../../../components/shared/LocationPermissionModal';
@@ -68,6 +69,7 @@ export default function EngineAHomeScreen() {
   const { playAudio } = useAudio();
   const { isSignViewed } = useProgress();
   const { userId } = useEngine();
+  const sponsorAd = useSponsorAd(userId);
   const {
     visible: locationModalVisible,
     approved: locationApproved,
@@ -205,15 +207,18 @@ export default function EngineAHomeScreen() {
           columnWrapperStyle={styles.row}
           showsVerticalScrollIndicator={false}
           ListFooterComponent={
-            <View style={styles.adFooter}>
-              <AdCard
-                variant="instructor"
-                name="יוסי לוי"
-                tagline="ታማኝ፣ ታጋሽ እና ባለሙያ"
-                location="ቴል አቪቭ"
-                phone="0501234567"
-              />
-            </View>
+            sponsorAd ? (
+              <View style={styles.adFooter}>
+                <AdCard
+                  variant="instructor"
+                  name={sponsorAd.name}
+                  tagline={sponsorAd.taglineAmharic}
+                  phone={sponsorAd.phone}
+                  avatarUri={sponsorAd.avatarUrl ?? undefined}
+                  audioUri={sponsorAd.audioUrl ?? undefined}
+                />
+              </View>
+            ) : null
           }
         />
 

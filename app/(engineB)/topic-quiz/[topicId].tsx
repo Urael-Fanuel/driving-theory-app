@@ -32,6 +32,17 @@ import { ProgressBar } from '../../../components/shared/ProgressBar';
 import { AdCard } from '../../../components/shared/AdCard';
 import { useTopicQuiz } from '../../../hooks/useTopicQuiz';
 import { useAudio, playAndAwaitAudio } from '../../../hooks/useAudio';
+import { useSponsorAd } from '../../../hooks/useSponsorAd';
+import { useEngine } from '../../../contexts/EngineContext';
+import { SafeBannerAd, IS_EXPO_GO } from '../../../components/shared/SafeBannerAd';
+
+// react-native-google-mobile-ads has no native module in Expo Go — avoid
+// even importing it there (a static import alone can crash on load).
+const BANNER_AD_UNIT_ID = IS_EXPO_GO
+  ? ''
+  : __DEV__
+    ? require('react-native-google-mobile-ads').TestIds.ADAPTIVE_BANNER
+    : 'ca-app-pub-XXXXXXXXXXXXXXXX/XXXXXXXXXX'; // החלף ב-ID האמיתי שלך מ-AdMob
 import { speakAndAwait, stopTTS } from '../../../utils/googleTTS';
 import ConfettiCannon from 'react-native-confetti-cannon';
 import * as api from '../../../backend/api';
@@ -74,6 +85,8 @@ export default function EngineBTopicQuizScreen() {
   const confettiRef    = useRef<any>(null);
   const scrollRef      = useRef<any>(null);
   const { stopAudio } = useAudio();
+  const { userId } = useEngine();
+  const sponsorAd  = useSponsorAd(userId);
 
   // Load all signs once (for displaying the sign image per question)
   useEffect(() => {
@@ -215,34 +228,27 @@ export default function EngineBTopicQuizScreen() {
             style={styles.resultBar}
           />
 
-          {/* Ad — topic-relevant */}
-          <View style={styles.adWrapper}>
-            {topicId === 'vehicle_knowledge' ? (
-              <AdCard
-                variant="business"
-                businessName="מוסך ביתא"
-                description="🔧 የመኪና ጥገና — ፈጣን እና ታማኝ"
-                ctaLabel="ደውሉ"
-                ctaUrl="tel:0501234567"
-              />
-            ) : topicId === 'society_law' ? (
-              <AdCard
-                variant="business"
-                businessName="ביטוח ישיר"
-                description="🛡️ ርካሽ የመኪና ኢንሹራንስ ለኢትዮጵያውያን"
-                ctaLabel="ዋጋ ይጠይቁ"
-                ctaUrl="tel:0501234568"
-              />
-            ) : (
-              <AdCard
-                variant="instructor"
-                name="יוסי לוי"
-                tagline="ታማኝ፣ ታጋሽ እና ባለሙያ"
-                location="ቴל אቪቭ"
-                phone="0501234567"
-              />
-            )}
-          </View>
+          {/* PASS: our own sponsor ad (driving instructor), matched to the
+              user's city — renders nothing when there is no match. FAIL:
+              a small Google AdMob banner instead, so this spot is never
+              empty. Decided 2026-09-11 — mirrors app/result/[sessionId].tsx. */}
+          {passed ? (
+            sponsorAd && (
+              <View style={styles.adWrapper}>
+                <AdCard
+                  variant="instructor"
+                  name={sponsorAd.name}
+                  tagline={sponsorAd.taglineAmharic}
+                  phone={sponsorAd.phone}
+                  avatarUri={sponsorAd.avatarUrl ?? undefined}
+                />
+              </View>
+            )
+          ) : (
+            <View style={styles.adWrapper}>
+              <SafeBannerAd unitId={BANNER_AD_UNIT_ID} />
+            </View>
+          )}
 
           {/* Buttons */}
           <View style={styles.resultButtons}>
