@@ -1356,6 +1356,92 @@
           "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/behavioral_rd_l6_s2_diagram_1788985833007.png"
         }
       ]
+    },
+    {
+      "id": "rd_l7",
+      "level": 7,
+      "name_hebrew": "עצירה וחנייה",
+      "name_amharic": "ማቆም እና ማረፊያ",
+      "icon": "🅿️",
+      "color": "#2E7D32",
+      "subtopics": [
+        {
+          "id": "rd_l7_s1",
+          "name_hebrew": "מהי חנייה",
+          "name_amharic": "አጠቃላይ ማረፊያ",
+          "icon": "🅿️",
+          "explanation_amharic": "እርስዎ አሁን የሚያዩት መኪና ቁጥር አንድ ሰማያዊ ቀለም ያለው መኪና ነው።\nይህ መኪና በመንገድ ዳር ቆሟል። በሮቹ ተዘግተዋል። ማንም ሰው እየወረደ ወይም እየገባ አይደለም። ሌላ ምንም ነገር እየተፈጠረ አይደለም።\n\nማረፊያ ማለት ሰዎችን ለማስገባት ወይም ለማውረድ ካልሆነ መኪናን ማቆም ነው።\nየቆመበት ጊዜ ርዝመት ምንም አይደለም። ዋናው ነገር የመቆሙ ምክንያት ነው።\n\nማቆም ግን ከማረፊያ የተለየ ነው። ማቆም ማለት መኪና ሰዎችን ሲያስገባ ወይም ሲያወርድ ነው።\nወይም ደግሞ ጭነት ሲያወርድ ነው። አሽከርካሪው ውስጥ ቢሆንም ይህ ማቆም ይባላል።\n\nበዚህ ስዕል ላይ ማንም ከሰማያዊው መኪና እየወረደ አይደለም።\nወይም ደግሞ እየገባ አይደለም። ሌላ ምንም ነገር እየተፈጠረ አይደለም። ስለዚህ ይህ ማረፊያ ነው።",
+          "narration_script": "እርስዎ አሁን የሚያዩት መኪና ቁጥር አንድ ሰማያዊ ቀለም ያለው መኪና ነው።\nይህ መኪና በመንገድ ዳር ቆሟል። በሮቹ ተዘግተዋል። ማንም ሰው እየወረደ ወይም እየገባ አይደለም። ሌላ ምንም ነገር እየተፈጠረ አይደለም።\n\nማረፊያ ማለት ሰዎችን ለማስገባት ወይም ለማውረድ ካልሆነ መኪናን ማቆም ነው።\nየቆመበት ጊዜ ርዝመት ምንም አይደለም። ዋናው ነገር የመቆሙ ምክንያት ነው።\n\nማቆም ግን ከማረፊያ የተለየ ነው። ማቆም ማለት መኪና ሰዎችን ሲያስገባ ወይም ሲያወርድ ነው።\nወይም ደግሞ ጭነት ሲያወርድ ነው። አሽከርካሪው ውስጥ ቢሆንም ይህ ማቆም ይባላል።\n\nበዚህ ስዕል ላይ ማንም ከሰማያዊው መኪና እየወረደ አይደለም።\nወይም ደግሞ እየገባ አይደለም። ሌላ ምንም ነገር እየተፈጠረ አይደለም። ስለዚህ ይህ ማረፊያ ነው።",
+          "image_description": "Drawn top-down diagram (SVG) of an ordinary residential street, houses along both sides. Our BLUE car, number one, sits at the kerb among two other parked cars (silver and white, unnumbered scenery). All doors shut, nobody standing nearby, nothing else happening — a plain, uneventful parked car, not a car stopped for a passenger.",
+          "questions": [
+            {
+              "question_amharic": "ማረፊያ እንዴት ይገለጻል?",
+              "answers": [
+                {
+                  "text_amharic": "ለተወሰነ ጊዜ ጭነት ለማውረድ ማቆም ነው።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ሰዎችን ለማስገባት ወይም ለማውረድ ካልሆነ መኪናን ማቆም ነው።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ጭነት ለማስገባት ብቻ ማቆም ነው።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ከሠላሳ ሰከንድ በላይ ማቆም ነው።",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "በዚህ ስዕል ላይ ሰማያዊው መኪና ምን እያደረገ ነው?",
+              "answers": [
+                {
+                  "text_amharic": "ማንም ሳይወርድ ወይም ሳይገባ ማረፊያ አድርጓል።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "አንድ ተሳፋሪ ለመውረድ እየተዘጋጀ ነው።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "አሽከርካሪው ጭነት እያወረደ ነው።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "መኪናው ተበላሽቶ ቆሟል።",
+                  "is_correct": false
+                }
+              ]
+            },
+            {
+              "question_amharic": "አሽከርካሪው ተሳፋሪ ለማውረድ ቆሞ ውስጥ ቢቀመጥ ይህ ማረፊያ ነው ወይስ ማቆም?",
+              "answers": [
+                {
+                  "text_amharic": "አሽከርካሪው ስላልወረደ ማረፊያ ነው።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "መኪናው የቆመበት ጊዜ ይወስነዋል።",
+                  "is_correct": false
+                },
+                {
+                  "text_amharic": "ተሳፋሪ ስለወረደ ይህ ማቆም ነው።",
+                  "is_correct": true
+                },
+                {
+                  "text_amharic": "ማረፊያም ማቆምም አይደለም።",
+                  "is_correct": false
+                }
+              ]
+            }
+          ],
+          "narration_audio_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/audio/behavioral_rd_l7_s1_narration_1789049171023.mp3",
+          "image_url": "https://bpltieicivxixpogxfim.supabase.co/storage/v1/object/public/images/behavioral/behavioral_rd_l7_s1_diagram_1789049188355.png"
+        }
+      ]
     }
   ]
 }

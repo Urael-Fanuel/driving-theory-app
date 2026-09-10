@@ -302,6 +302,37 @@ function building({ x, y, w = 70, h = 46, wall = '#e7d9c0', roof = '#a63b12' }) 
   </g>`;
 }
 
+/**
+ * A multi-storey city building, seen from above — flat concrete roof
+ * rather than building()'s peaked house roof, and noticeably bigger, so
+ * a street reads as inside a town rather than a row of detached houses.
+ * A plain rectangle alone reads as a car park (building()'s own reasoning
+ * for adding a roof ridge); a flat-roofed apartment block has no ridge to
+ * borrow, so this earns its "building, not pavement" read a different way:
+ * a drop-shadow offset on two edges for height, a darker parapet border,
+ * and a small grid of rooftop units (lift housing, AC condensers) — the
+ * everyday rooftop clutter no plain slab would have.
+ */
+function apartmentBuilding({ x, y, w = 100, h = 66, roof = '#9ca3af' }) {
+  const shadow = 5;
+  const cells = [];
+  const cols = 3, rows = 2, pad = w * 0.14;
+  const cellW = (w - pad * 2) / cols - 6, cellH = (h - pad * 2) / rows - 6;
+  for (let r = 0; r < rows; r++) {
+    for (let c = 0; c < cols; c++) {
+      const cx = x - w / 2 + pad + c * (cellW + 6) + cellW / 2;
+      const cy = y - h / 2 + pad + r * (cellH + 6) + cellH / 2;
+      cells.push(`<rect x="${cx - cellW / 2}" y="${cy - cellH / 2}" width="${cellW}" height="${cellH}" fill="#6b7280"/>`);
+    }
+  }
+  return `
+  <g>
+    <rect x="${x - w / 2 + shadow}" y="${y - h / 2 + shadow}" width="${w}" height="${h}" fill="#57606e"/>
+    <rect x="${x - w / 2}" y="${y - h / 2}" width="${w}" height="${h}" fill="${roof}" stroke="#4b5563" stroke-width="3"/>
+    ${cells.join('')}
+  </g>`;
+}
+
 /** A movement arrow. `priority` picks green "goes first" or red "must wait". */
 function arrow({ d, priority = true }) {
   const col = priority ? C.go : C.wait;
@@ -1636,6 +1667,45 @@ SCENES.rd_l6_s2 = {
     + arrow({ d: `M 224,264 L 248,264 Q 280,264 280,296 L 280,340`, priority: false })
     + badgeOnCar({ x: 170, y: 264, n: 1 })
     + badge({ x: 80, y: 340, n: 2 }),
+};
+
+// rd_l6_s3 was designed and iterated on at length (a two-wheeler crossing
+// like a pedestrian, book p.82's closing line) but never shipped: no
+// official exam question anywhere matches it, and the user decided the
+// source material was too thin to justify a third card — level 6 stays at
+// two cards, the same precedent already set by bl_l1_s2 (deleted when no
+// suitable book content existed for a card that slot expected). The
+// apartmentBuilding() primitive built along the way stays — a genuine
+// addition, not tied to the abandoned scene, and plausibly useful for a
+// future city-street card (stopping/parking, this project's next topic).
+
+// rd_l7_s1 — what counts as "parking" (as opposed to "stopping").
+//
+// Book p.54, and p.58's own official sample question 1: "חנייה" (parking)
+// is a vehicle standing for ANY length of time NOT for immediately taking
+// on or dropping off people, without interruption — as against "עצירה"
+// (stopping), which is specifically that embarking/disembarking moment,
+// even with passengers still seated inside. The distinction is about WHY
+// the vehicle is stationary, not how long or what it looks like from
+// outside, which is exactly why this picture is deliberately uneventful:
+// an ordinary parked car, doors shut, nobody around it, on an ordinary
+// residential street — nothing for a question to point at except the
+// plain fact of it standing there.
+//
+// Reuses parkedStreet() (built for rd_l3_s3) exactly as it is — same
+// houses, same kerb-row car height (y=282, scale 0.92) proven clear there.
+// No motion arrow: the entire point of this picture is that nothing is
+// moving or about to move, unlike every other card in this level so far.
+SCENES.rd_l7_s1 = {
+  name: 'rd_l7_s1_what_counts_as_parking',
+  label: 'An ordinary residential street. Our blue car sits at the kerb among two other parked cars, doors shut, nobody nearby — nothing is happening. A plain, uneventful parked car, not a car stopped for a passenger.',
+  build: () => parkedStreet()
+    // Scenery only, unbadged — matching rd_l3_s3's exact convention for
+    // parked cars that are not the subject of any question.
+    + car({ x: 180, y: 282, heading: 90, colour: 'silver', scale: 0.92 })
+    + car({ x: 460, y: 282, heading: 90, colour: 'white',  scale: 0.92 })
+    + car({ x: 300, y: 282, heading: 90, colour: 'blue',   scale: 0.92 })
+    + badgeOnCar({ x: 300, y: 282, n: 1 }),
 };
 
 // ─── Write SVG, then rasterise ────────────────────────────────────────────────
