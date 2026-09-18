@@ -56,7 +56,7 @@ const BANNER_AD_UNIT_ID = IS_EXPO_GO
   ? ''
   : __DEV__
     ? require('react-native-google-mobile-ads').TestIds.ADAPTIVE_BANNER
-    : 'ca-app-pub-XXXXXXXXXXXXXXXX/XXXXXXXXXX'; // החלף ב-ID האמיתי שלך מ-AdMob
+    : 'ca-app-pub-8758594752714631/6072135007';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
@@ -366,7 +366,10 @@ const styles = StyleSheet.create({
     flexDirection:     'row',
     gap:               12,
     paddingHorizontal: 16,
+    paddingTop:        16,
     paddingBottom:     16,
+    borderTopWidth:    1,
+    borderTopColor:    Colors.border,
   },
   actionButton: {
     flex:            1,

@@ -12,11 +12,21 @@ import {
   ScrollView,
   TouchableOpacity,
   StyleSheet,
-  SafeAreaView,
-  Platform,
   Image,
   Linking,
 } from 'react-native';
+// react-native's own SafeAreaView does not reliably report Android's bottom
+// gesture-nav-bar inset — that's why this used to have a guessed, fixed
+// Platform.OS === 'android' ? 24 : 14 padding, which wasn't enough on some
+// devices and cut off the bottom half of the accept button (reported
+// 2026-09-11). react-native-safe-area-context is already the established
+// pattern for this exact problem elsewhere in the app (see
+// components/engineB/TextFeedback.tsx) — reused here instead of guessing a
+// bigger constant. A NESTED SafeAreaProvider is required specifically
+// because this content lives inside a <Modal>, which presents on its own
+// native surface that the app's outer (root-level) provider does not
+// measure — a documented react-native-safe-area-context gotcha.
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { useAudio } from '../../hooks/useAudio';
 
 // ⚠️ UPDATE THIS URL before submitting to Google Play —
@@ -119,6 +129,12 @@ export default function DisclaimerModal({ visible, onAccept }: Props) {
 
   return (
     <Modal visible={visible} animationType="slide" statusBarTranslucent>
+      {/* Nested on purpose — the app's outer (root-level) SafeAreaProvider
+          does not measure this Modal's own native surface, so without a
+          provider local to it, the SafeAreaView below can't see real
+          insets and falls back to 0, which is exactly what let the accept
+          button sit under the gesture-nav bar. */}
+      <SafeAreaProvider>
       <SafeAreaView style={styles.safeArea}>
 
         {/* ── Header ─────────────────────────────────────────────────────── */}
@@ -214,6 +230,7 @@ export default function DisclaimerModal({ visible, onAccept }: Props) {
         </View>
 
       </SafeAreaView>
+      </SafeAreaProvider>
     </Modal>
   );
 }
@@ -414,7 +431,14 @@ const styles = StyleSheet.create({
   footer: {
     paddingHorizontal: 20,
     paddingTop:        14,
-    paddingBottom:     Platform.OS === 'android' ? 24 : 14,
+    // A guessed Platform.OS === 'android' ? 24 : 14 used to live here,
+    // compensating for react-native's own SafeAreaView not reporting the
+    // real Android gesture-nav-bar inset — insufficient on some devices,
+    // cut off the bottom half of the button (reported 2026-09-11). The
+    // outer SafeAreaView (now react-native-safe-area-context, see the JSX
+    // above) already reserves the real device-measured inset around the
+    // whole modal, so this only needs normal breathing room now.
+    paddingBottom:     14,
     backgroundColor:   C.surface,
     borderTopWidth:    2,
     borderTopColor:    'rgba(241,192,72,0.25)',

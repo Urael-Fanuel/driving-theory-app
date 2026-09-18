@@ -46,7 +46,7 @@ const BANNER_AD_UNIT_ID = IS_EXPO_GO
   ? ''
   : __DEV__
     ? require('react-native-google-mobile-ads').TestIds.ADAPTIVE_BANNER
-    : 'ca-app-pub-XXXXXXXXXXXXXXXX/XXXXXXXXXX'; // החלף ב-ID האמיתי שלך מ-AdMob
+    : 'ca-app-pub-8758594752714631/6072135007';
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
