@@ -27,6 +27,15 @@ import { useLocationPrompt } from '../../../hooks/useLocationPrompt';
 import { useEngine } from '../../../contexts/EngineContext';
 import { useSponsorAd } from '../../../hooks/useSponsorAd';
 import { SponsorAdBanner } from '../../../components/shared/SponsorAdBanner';
+import { SafeBannerAd, IS_EXPO_GO } from '../../../components/shared/SafeBannerAd';
+
+// react-native-google-mobile-ads has no native module in Expo Go — avoid
+// even importing it there (a static import alone can crash on load).
+const BANNER_AD_UNIT_ID = IS_EXPO_GO
+  ? ''
+  : __DEV__
+    ? require('react-native-google-mobile-ads').TestIds.ADAPTIVE_BANNER
+    : 'ca-app-pub-8758594752714631/6072135007';
 
 // Amharic text approved by the app owner directly (see conversation
 // history, not machine-translated). This is what
@@ -116,16 +125,23 @@ export default function EngineAProgressScreen() {
           style={styles.progressBar}
         />
 
-        {/* Sponsor ad — shown once overall mastery crosses the real exam's
-            80% threshold, even before the user takes the formal exam. */}
-        {overallPercent >= 80 && sponsorAd && (
-          <SponsorAdBanner
-            headline={PROGRESS_READY_AD_HEADLINE}
-            body={PROGRESS_READY_AD_BODY}
-            wrapperAudioUrl={PROGRESS_READY_AD_AUDIO}
-            ad={sponsorAd}
-            engineType="A"
-          />
+        {/* Below 80% mastery: AdMob banner, so this spot is never empty.
+            At/above 80%: our own sponsor ad (when one matches the user's
+            location) — same pass/fail-style pattern used elsewhere. */}
+        {overallPercent >= 80 ? (
+          sponsorAd && (
+            <SponsorAdBanner
+              headline={PROGRESS_READY_AD_HEADLINE}
+              body={PROGRESS_READY_AD_BODY}
+              wrapperAudioUrl={PROGRESS_READY_AD_AUDIO}
+              ad={sponsorAd}
+              engineType="A"
+            />
+          )
+        ) : (
+          <View style={styles.adWrapper}>
+            <SafeBannerAd unitId={BANNER_AD_UNIT_ID} />
+          </View>
         )}
 
         {/* Share button */}
@@ -219,6 +235,9 @@ const styles = StyleSheet.create({
   },
   progressBar: {
     alignSelf: 'stretch',
+  },
+  adWrapper: {
+    width: '100%',
   },
   shareButton: {
     width:           80,
