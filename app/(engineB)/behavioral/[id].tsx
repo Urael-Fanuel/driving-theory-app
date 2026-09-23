@@ -23,6 +23,16 @@ import { Colors } from '../../../constants/colors';
 import { Typography } from '../../../constants/typography';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import { BEHAVIORAL_LEVEL_ICON_MAP } from '../../../components/shared/TrafficSignIcon';
+import { SafeBannerAd, IS_EXPO_GO } from '../../../components/shared/SafeBannerAd';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+
+// react-native-google-mobile-ads has no native module in Expo Go — avoid
+// even importing it there (a static import alone can crash on load).
+const BANNER_AD_UNIT_ID = IS_EXPO_GO
+  ? ''
+  : __DEV__
+    ? require('react-native-google-mobile-ads').TestIds.ADAPTIVE_BANNER
+    : 'ca-app-pub-8758594752714631/6072135007';
 
 // ─── Scaffold data ────────────────────────────────────────────────────────────
 import vehicleKnowledgeData from '../../../content/vehicle_knowledge_scaffold.json';
@@ -91,6 +101,7 @@ export default function BehavioralTopicScreenB() {
   const { id }   = useLocalSearchParams<{ id: string }>();
   const router   = useRouter();
   const [expandedLevel, setExpandedLevel] = useState<string | null>(null);
+  const insets   = useSafeAreaInsets();
 
   const data = SCAFFOLD_MAP[id ?? ''];
 
@@ -265,6 +276,12 @@ export default function BehavioralTopicScreenB() {
           </View>
         }
       />
+
+      {/* react-native's SafeAreaView does not pad Android's bottom nav bar, so
+          the banner needs the real inset or the nav bar covers it. */}
+      <View style={[styles.adWrapper, { paddingBottom: Math.max(4, insets.bottom + 4) }]}>
+        <SafeBannerAd unitId={BANNER_AD_UNIT_ID} />
+      </View>
     </SafeAreaView>
   );
 }
@@ -473,6 +490,11 @@ const styles = StyleSheet.create({
   footerWrapper: {
     alignItems: 'center',
     paddingTop: 24,
+  },
+  adWrapper: {
+    alignItems:    'center',
+    paddingTop:    6,
+    paddingBottom: 4,
   },
   quizButton: {
     flexDirection:   'row',

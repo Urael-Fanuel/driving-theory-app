@@ -24,6 +24,16 @@ import * as api from '../../../backend/api';
 import { useProgress } from '../../../hooks/useProgress';
 import { extractSignNumber, shouldShowSignBadge } from '../../../utils/signNumber';
 import { prefetchTopicAudio } from '../../../services/audioCache';
+import { SafeBannerAd, IS_EXPO_GO } from '../../../components/shared/SafeBannerAd';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+
+// react-native-google-mobile-ads has no native module in Expo Go — avoid
+// even importing it there (a static import alone can crash on load).
+const BANNER_AD_UNIT_ID = IS_EXPO_GO
+  ? ''
+  : __DEV__
+    ? require('react-native-google-mobile-ads').TestIds.ADAPTIVE_BANNER
+    : 'ca-app-pub-8758594752714631/6072135007';
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
@@ -31,6 +41,7 @@ export default function EngineBTopicScreen() {
   const { id }  = useLocalSearchParams<{ id: string }>();
   const router  = useRouter();
   const { isSignViewed } = useProgress();
+  const insets  = useSafeAreaInsets();
 
   const [topic,   setTopic]   = useState<DBTopic | null>(null);
   const [signs,   setSigns]   = useState<DBSign[]>([]);
@@ -150,20 +161,26 @@ export default function EngineBTopicScreen() {
         contentContainerStyle={styles.list}
         showsVerticalScrollIndicator={false}
         ListFooterComponent={
-          signs.length > 0 ? (
-            <TouchableOpacity
-              style={styles.quizButton}
-              onPress={() => router.push(`/(engineB)/topic-quiz/${id}` as any)}
-              activeOpacity={0.85}
-            >
-              <Text style={styles.quizButtonIcon}>📝</Text>
-              <Text style={styles.quizButtonText}>የርዕሰ ጉዳዩ ፈተና</Text>
-            </TouchableOpacity>
-          ) : (
-            <View style={{ height: 20 }} />
-          )
+          <View style={styles.footerWrapper}>
+            {signs.length > 0 && (
+              <TouchableOpacity
+                style={styles.quizButton}
+                onPress={() => router.push(`/(engineB)/topic-quiz/${id}` as any)}
+                activeOpacity={0.85}
+              >
+                <Text style={styles.quizButtonIcon}>📝</Text>
+                <Text style={styles.quizButtonText}>የርዕሰ ጉዳዩ ፈተና</Text>
+              </TouchableOpacity>
+            )}
+          </View>
         }
       />
+
+      {/* react-native's SafeAreaView does not pad Android's bottom nav bar, so
+          the banner needs the real inset or the nav bar covers it. */}
+      <View style={[styles.adWrapper, { paddingBottom: Math.max(4, insets.bottom + 4) }]}>
+        <SafeBannerAd unitId={BANNER_AD_UNIT_ID} />
+      </View>
     </SafeAreaView>
   );
 }
@@ -292,6 +309,14 @@ const styles = StyleSheet.create({
   arrow: {
     fontSize: 24,
     color:    '#9e9e9e',
+  },
+  footerWrapper: {
+    alignItems: 'center',
+  },
+  adWrapper: {
+    alignItems:    'center',
+    paddingTop:    6,
+    paddingBottom: 4,
   },
   quizButton: {
     flexDirection:   'row',

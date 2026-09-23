@@ -26,6 +26,16 @@ import { DBSign } from '../../../backend/supabaseClient';
 import * as api from '../../../backend/api';
 import { useProgress } from '../../../hooks/useProgress';
 import { prefetchTopicAudio } from '../../../services/audioCache';
+import { SafeBannerAd, IS_EXPO_GO } from '../../../components/shared/SafeBannerAd';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+
+// react-native-google-mobile-ads has no native module in Expo Go — avoid
+// even importing it there (a static import alone can crash on load).
+const BANNER_AD_UNIT_ID = IS_EXPO_GO
+  ? ''
+  : __DEV__
+    ? require('react-native-google-mobile-ads').TestIds.ADAPTIVE_BANNER
+    : 'ca-app-pub-8758594752714631/6072135007';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 const CARD_SIZE = (SCREEN_WIDTH - 48 - 16) / 3; // 3 columns
@@ -36,6 +46,7 @@ export default function EngineATopicScreen() {
   const { id }          = useLocalSearchParams<{ id: string }>();
   const router          = useRouter();
   const { isSignViewed } = useProgress();
+  const insets          = useSafeAreaInsets();
 
   const [signs,   setSigns]   = useState<DBSign[]>([]);
   const [loading, setLoading] = useState(true);
@@ -130,18 +141,26 @@ export default function EngineATopicScreen() {
         columnWrapperStyle={styles.row}
         showsVerticalScrollIndicator={false}
         ListFooterComponent={
-          signs.length > 0 ? (
-            <TouchableOpacity
-              style={styles.quizButton}
-              onPress={() => router.push(`/(engineA)/topic-quiz/${id}` as any)}
-              activeOpacity={0.85}
-              accessibilityLabel="የርዕሰ ጉዳዩ ፈተና"
-            >
-              <Text style={styles.quizButtonIcon}>📝</Text>
-            </TouchableOpacity>
-          ) : null
+          <View style={styles.footerWrapper}>
+            {signs.length > 0 && (
+              <TouchableOpacity
+                style={styles.quizButton}
+                onPress={() => router.push(`/(engineA)/topic-quiz/${id}` as any)}
+                activeOpacity={0.85}
+                accessibilityLabel="የርዕሰ ጉዳዩ ፈተና"
+              >
+                <Text style={styles.quizButtonIcon}>📝</Text>
+              </TouchableOpacity>
+            )}
+          </View>
         }
       />
+
+      {/* react-native's SafeAreaView does not pad Android's bottom nav bar, so
+          the banner needs the real inset or the nav bar covers it. */}
+      <View style={[styles.adWrapper, { paddingBottom: Math.max(4, insets.bottom + 4) }]}>
+        <SafeBannerAd unitId={BANNER_AD_UNIT_ID} />
+      </View>
     </SafeAreaView>
   );
 }
@@ -242,6 +261,14 @@ const styles = StyleSheet.create({
     fontSize:   11,
     color:      '#ffffff',
     fontWeight: '700',
+  },
+  footerWrapper: {
+    alignItems: 'center',
+  },
+  adWrapper: {
+    alignItems:    'center',
+    paddingTop:    6,
+    paddingBottom: 4,
   },
   quizButton: {
     alignSelf:       'center',
