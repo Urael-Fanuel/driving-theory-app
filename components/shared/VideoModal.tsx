@@ -36,6 +36,13 @@ function ModalPlayer({
 }: { uri: string; onClose: () => void; onReady: () => void; onError: () => void }) {
   const player = useVideoPlayer(uri, p => {
     p.loop = false;
+    // Play ALONGSIDE the sign explanation, as the app always did. By default
+    // expo-video asks Android for exclusive sound focus when it starts; Android
+    // then tells expo-audio it lost focus, and expo-audio stops the explanation
+    // that is still being read on the screen behind this modal (found
+    // 2026-10-05 on sign 302, whose video has its own sound track). Must be set
+    // before play().
+    p.audioMixingMode = 'mixWithOthers';
     p.play();
   });
 
@@ -149,7 +156,7 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   loadingOverlay: {
-    ...StyleSheet.absoluteFillObject,
+    ...StyleSheet.absoluteFill,
     justifyContent: 'center',
     alignItems:     'center',
   },

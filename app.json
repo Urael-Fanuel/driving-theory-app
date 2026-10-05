@@ -6,15 +6,6 @@
     "orientation": "portrait",
     "icon": "./assets/images/መንጃ ፍቃድ በቀላል መንገድ.png",
     "userInterfaceStyle": "light",
-    "splash": {
-      "image": "./assets/images/መንጃ ፍቃድ በቀላል መንገድ.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#FFFFFF"
-    },
-    "androidNavigationBar": {
-      "barStyle": "dark-content",
-      "backgroundColor": "#f7f9fb"
-    },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/መንጃ ፍቃድ በቀላል መንገድ.png",
@@ -67,7 +58,23 @@
           "enableBackgroundRecording": false
         }
       ],
-      "expo-asset"
+      "expo-asset",
+      "expo-status-bar",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/መንጃ ፍቃድ በቀላል መንገድ.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#FFFFFF"
+        }
+      ],
+      [
+        "expo-navigation-bar",
+        {
+          "style": "dark"
+        }
+      ]
     ],
     "scheme": "drivingtheory",
     "experiments": {

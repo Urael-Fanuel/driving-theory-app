@@ -2,7 +2,6 @@
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
     "strict": true,
-    "baseUrl": ".",
     "paths": {
       "@/*": [
         "./*"
@@ -19,6 +18,11 @@
   "exclude": [
     "node_modules",
     "supabase/functions",
-    "dashboard"
+    "dashboard",
+    "scripts",
+    "backend/generateNumberAudio.ts",
+    "backend/patchAnswerAudio.ts",
+    "backend/uploadContent.ts",
+    "backend/uploadPart1.ts"
   ]
 }

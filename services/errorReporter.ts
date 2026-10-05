@@ -408,7 +408,7 @@ export function installGlobalErrorReporting(): void {
   if (_globalInstalled) return;
   _globalInstalled = true;
 
-  const EU = (global as any).ErrorUtils;
+  const EU = (globalThis as any).ErrorUtils;
   if (EU?.getGlobalHandler && EU?.setGlobalHandler) {
     const previous = EU.getGlobalHandler();
     EU.setGlobalHandler((error: unknown, isFatal?: boolean) => {
@@ -425,7 +425,7 @@ export function installGlobalErrorReporting(): void {
   }
 
   // Production only: React Native installs its own tracker in development.
-  const hermes = (global as any).HermesInternal;
+  const hermes = (globalThis as any).HermesInternal;
   if (!__DEV__ && hermes?.enablePromiseRejectionTracker) {
     try {
       hermes.enablePromiseRejectionTracker({

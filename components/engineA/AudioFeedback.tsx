@@ -209,7 +209,7 @@ export function AudioFeedback({
 
 const styles = StyleSheet.create({
   overlay: {
-    ...StyleSheet.absoluteFillObject,
+    ...StyleSheet.absoluteFill,
     justifyContent: 'center',
     alignItems:     'center',
     zIndex:         100,

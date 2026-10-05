@@ -250,7 +250,7 @@ const styles = StyleSheet.create({
     color:    Colors.textMuted,
   },
   overlay: {
-    ...StyleSheet.absoluteFillObject,
+    ...StyleSheet.absoluteFill,
     justifyContent:  'center',
     alignItems:      'center',
     backgroundColor: Colors.overlay,
