@@ -12,7 +12,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { StyleSheet, I18nManager } from 'react-native';
 import { EngineProvider } from '../contexts/EngineContext';
 import { Colors } from '../constants/colors';
-import { preCacheSystemAudio, reportCacheHealth, verifyCacheAgainstServer } from '../services/audioCache';
+import { preCacheSystemAudio, reportCacheHealth } from '../services/audioCache';
 import { installGlobalErrorReporting, flushPendingReports } from '../services/errorReporter';
 
 // Force LTR layout — Amharic is written left-to-right
@@ -42,11 +42,7 @@ export default function RootLayout() {
     // check the offline cache for broken (near-empty) files.
     const flushTimer  = setTimeout(() => { flushPendingReports().catch(() => {}); }, 8_000);
     const healthTimer = setTimeout(() => { reportCacheHealth().catch(() => {}); }, 15_000);
-    // Replace saved audio copies that are broken (partial download) or
-    // outdated (re-recorded on the server). Background only, at most once a
-    // day, only with a connection — see services/audioCache.ts.
-    const verifyTimer = setTimeout(() => { verifyCacheAgainstServer().catch(() => {}); }, 25_000);
-    return () => { clearTimeout(flushTimer); clearTimeout(healthTimer); clearTimeout(verifyTimer); };
+    return () => { clearTimeout(flushTimer); clearTimeout(healthTimer); };
   }, []);
 
   return (

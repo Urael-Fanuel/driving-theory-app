@@ -35,9 +35,7 @@
  */
 
 import * as FileSystem from 'expo-file-system/legacy';
-import * as Network from 'expo-network';
-import { supabase } from '../backend/supabaseClient';
-import { reportError } from './errorReporter';
+import { reportError, errorText } from './errorReporter';
 
 // ─── Config ───────────────────────────────────────────────────────────────────
 
@@ -132,12 +130,6 @@ async function ensureCacheDir(): Promise<void> {
 interface CacheEntry {
   bytes:      number;
   lastAccess: number;
-  /**
-   * Size the server confirmed for this file (see verifyCacheAgainstServer).
-   * Absent = not checked yet. Every new download writes a fresh entry without
-   * it, so each file gets checked once after it lands.
-   */
-  verifiedBytes?: number;
 }
 
 /** filename → entry. Authoritative once _indexLoaded is true. */
@@ -201,7 +193,15 @@ async function reconcileIndex(): Promise<void> {
     for (const file of files) {
       // Leftover temp files from an interrupted TTS write — not cache content.
       if (file.endsWith('.part')) {
-        FileSystem.deleteAsync(AUDIO_CACHE_DIR + file, { idempotent: true }).catch(() => {});
+        // A download that is running right now owns a .part file; only sweep
+        // ones that have not been touched for a while (killed mid-download).
+        const pi: any = await FileSystem.getInfoAsync(AUDIO_CACHE_DIR + file).catch(() => null);
+        const ageMs = pi?.exists && typeof pi.modificationTime === 'number'
+          ? Date.now() - pi.modificationTime * 1000
+          : Infinity;
+        if (ageMs > STALE_PART_MS) {
+          FileSystem.deleteAsync(AUDIO_CACHE_DIR + file, { idempotent: true }).catch(() => {});
+        }
         continue;
       }
       if (_index.has(file)) continue;
@@ -309,9 +309,8 @@ export async function getAudioUri(remoteUrl: string): Promise<string> {
   try {
     const filename  = urlToFilename(remoteUrl);
     const localPath = AUDIO_CACHE_DIR + filename;
-    const info      = await FileSystem.getInfoAsync(localPath);
 
-    if (info.exists) {
+    if (await hasUsableCopy(localPath)) {
       void loadIndex().then(() => touch(filename));
       return localPath; // Cached!
     }
@@ -326,66 +325,126 @@ export async function getAudioUri(remoteUrl: string): Promise<string> {
   }
 }
 
+// ─── Downloads ────────────────────────────────────────────────────────────────
+//
+// INVARIANT: a file at its final name in the cache folder is COMPLETE.
+//
+// Why this matters (found 2026-10-01, confirmed by an independent review): the
+// native download used to write straight to the final name while bytes arrived.
+// A connection that dropped part-way, or an app killed mid-download, left a
+// truncated file that every later check ("does it exist?") accepted as a good
+// copy: silence, or a clip that stops half-way, on every play, forever (it only
+// went away with "Clear data"). Now every download goes to a private temporary
+// name, is checked, and only then renamed into place in one step. A crash at any
+// moment leaves at worst a stray .part file, never a bad real one.
+//
+// All network-to-cache writes go through downloadAtomic(); do not add another
+// writer. It also guarantees one download per file at a time.
+
+/** Smallest real clip in the app is ~6 KB; anything under this is not audio. */
+const MIN_VALID_BYTES     = 1024;
+/** Per-file limit; the native download is cancelled (really stopped) when it passes. */
+const DOWNLOAD_TIMEOUT_MS = 90_000;
+/** A .part file older than this belongs to a download that no longer exists. */
+const STALE_PART_MS       = 10 * 60 * 1000;
+
+interface DownloadOutcome { ok: boolean; bytes: number }
+
+/** One download per final path at a time; later callers share its result. */
+const _inFlight = new Map<string, Promise<DownloadOutcome>>();
+
+function headerValue(headers: Record<string, string> | undefined, name: string): string | undefined {
+  if (!headers) return undefined;
+  const key = Object.keys(headers).find(k => k.toLowerCase() === name);
+  return key ? headers[key] : undefined;
+}
+
 /**
- * FileSystem.downloadAsync plus diagnostics. Behaves exactly like the plain
- * call; it only REPORTS two failure modes that matter for the offline cache:
- *
- *   - a download that never settles. On Android the native download writes
- *     straight into the final cache path as bytes arrive, and if the
- *     connection drops mid-body its promise can stay pending forever — leaving
- *     a partial file that later looks like a valid cached clip.
- *   - a download that ends with a non-200 status.
+ * True when there is a file at localPath that can be trusted as a cached clip.
+ * A file that exists but is empty or tiny is a leftover of a failed download
+ * (older app versions could create them): it is removed so it gets fetched again.
  */
-const DOWNLOAD_HUNG_MS = 120_000;
+async function hasUsableCopy(localPath: string): Promise<boolean> {
+  const info: any = await FileSystem.getInfoAsync(localPath);
+  if (!info.exists) return false;
+  if ((info.size ?? 0) >= MIN_VALID_BYTES) return true;
+  await FileSystem.deleteAsync(localPath, { idempotent: true }).catch(() => {});
+  _index.delete(urlToFilename(localPath));
+  return false;
+}
 
-function downloadWatched(
-  url: string,
-  localPath: string,
-  where: string,
-): Promise<FileSystem.FileSystemDownloadResult> {
-  const file = urlToFilename(url);
-  let settled = false;
-  const hungTimer = setTimeout(() => {
-    // Reported even when offline (it is queued and sent on a later launch):
-    // a connection that died mid-download is exactly how a partial file is
-    // left behind in the cache.
-    if (!settled) {
-      reportError('download_hung', where, `download not finished after ${DOWNLOAD_HUNG_MS / 1000}s`,
-        { file }, { localUri: localPath });
-    }
-  }, DOWNLOAD_HUNG_MS);
+function downloadAtomic(url: string, where: string): Promise<DownloadOutcome> {
+  const filename  = urlToFilename(url);
+  const finalPath = AUDIO_CACHE_DIR + filename;
 
-  return FileSystem.downloadAsync(url, localPath).then(
-    result => {
-      settled = true;
-      clearTimeout(hungTimer);
-      if (result.status !== 200) {
-        reportError('download', where, `HTTP ${result.status}`, { file, status: result.status }, { skipIfOffline: true });
+  const running = _inFlight.get(finalPath);
+  if (running) return running;
+
+  const job = (async (): Promise<DownloadOutcome> => {
+    const tmpPath = finalPath + '.' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6) + '.part';
+
+    const fail = async (reason: string, extra?: Record<string, unknown>): Promise<DownloadOutcome> => {
+      await FileSystem.deleteAsync(tmpPath, { idempotent: true }).catch(() => {});
+      // Offline is expected; everything else is worth knowing about.
+      reportError('download', where, reason, { file: filename, ...extra }, { skipIfOffline: true });
+      return { ok: false, bytes: 0 };
+    };
+
+    let task: FileSystem.DownloadResumable | null = null;
+    let timedOut = false;
+    const timer = setTimeout(() => {
+      timedOut = true;
+      task?.cancelAsync().catch(() => {});
+    }, DOWNLOAD_TIMEOUT_MS);
+
+    try {
+      await ensureCacheDir();
+
+      // The "resumable" download is used on purpose: unlike the plain one, its
+      // promise ALWAYS settles (result, error, or undefined when cancelled), so
+      // a dropped connection cannot leave a caller waiting forever.
+      task = FileSystem.createDownloadResumable(url, tmpPath);
+      const result = await task.downloadAsync();
+
+      if (!result) {
+        return await fail(timedOut ? 'download timed out after ' + (DOWNLOAD_TIMEOUT_MS / 1000) + 's' : 'download cancelled');
       }
-      return result;
-    },
-    err => {
-      settled = true;
-      clearTimeout(hungTimer);
-      reportError('download', where, err, { file }, { skipIfOffline: true, localUri: localPath });
-      throw err;
-    },
-  );
+      if (result.status !== 200) {
+        return await fail('HTTP ' + result.status, { status: result.status });
+      }
+
+      const info: any = await FileSystem.getInfoAsync(tmpPath);
+      const bytes = info.exists ? (info.size ?? 0) : 0;
+      if (bytes < MIN_VALID_BYTES) {
+        return await fail('downloaded file too small (' + bytes + ' bytes)', { bytes });
+      }
+
+      // The server states how long the file is; a shorter file was cut off.
+      const declared = Number(headerValue(result.headers, 'content-length'));
+      if (Number.isFinite(declared) && declared > 0 && declared !== bytes) {
+        return await fail('downloaded size differs from the size the server declared', { bytes, declared });
+      }
+
+      // Complete. Only now does it get its real name (a rename: one step).
+      await FileSystem.moveAsync({ from: tmpPath, to: finalPath });
+      return { ok: true, bytes };
+    } catch (err) {
+      return await fail(errorText(err));
+    } finally {
+      clearTimeout(timer);
+    }
+  })();
+
+  _inFlight.set(finalPath, job);
+  void job.then(() => { if (_inFlight.get(finalPath) === job) _inFlight.delete(finalPath); });
+  return job;
 }
 
 /** Download audio to cache in background (non-blocking) */
-function downloadInBackground(url: string, localPath: string): void {
-  ensureCacheDir()
-    .then(() => downloadWatched(url, localPath, 'downloadInBackground'))
-    .then(async result => {
-      if (result.status !== 200) {
-        console.warn('[audioCache] Download failed:', url, result.status);
-        FileSystem.deleteAsync(localPath, { idempotent: true }).catch(() => {});
-        return;
-      }
-      const fi    = await FileSystem.getInfoAsync(localPath).catch(() => null);
-      const bytes = fi && (fi as any).exists ? ((fi as any).size ?? 0) : 0;
-      await record(urlToFilename(url), bytes);
+function downloadInBackground(url: string, _localPath: string): void {
+  downloadAtomic(url, 'downloadInBackground')
+    .then(async ({ ok, bytes }) => {
+      if (ok) await record(urlToFilename(url), bytes);
     })
     .catch(err => {
       console.warn('[audioCache] Background download error:', url, err);
@@ -485,9 +544,8 @@ export async function getLocalAudioUri(url: string): Promise<string> {
   try {
     const filename  = urlToFilename(url);
     const localPath = AUDIO_CACHE_DIR + filename;
-    const info      = await FileSystem.getInfoAsync(localPath);
 
-    if (!info.exists) {
+    if (!(await hasUsableCopy(localPath))) {
       // Not cached: stream it now, and save a copy for next time.
       //
       // This is the safety net for the whole cache. Playback used to have NO
@@ -536,24 +594,14 @@ export async function preCacheAudioBatch(
 
         const filename  = urlToFilename(url);
         const localPath = AUDIO_CACHE_DIR + filename;
-        const info      = await FileSystem.getInfoAsync(localPath).catch(() => ({ exists: false }));
+        const usable    = await hasUsableCopy(localPath).catch(() => false);
 
-        if ((info as any).exists) {
+        if (usable) {
           touch(filename);
         } else {
-          try {
-            const result = await downloadWatched(url, localPath, 'preCacheAudioBatch');
-            if (result.status !== 200) {
-              FileSystem.deleteAsync(localPath, { idempotent: true }).catch(() => {});
-            } else {
-              const fi    = await FileSystem.getInfoAsync(localPath).catch(() => null);
-              const bytes = fi && (fi as any).exists ? ((fi as any).size ?? 0) : 0;
-              // Track without enforcing per file — one sweep after the batch.
-              _index.set(filename, { bytes, lastAccess: Date.now() });
-            }
-          } catch (err) {
-            console.warn('[audioCache] Batch download failed:', url, err);
-          }
+          const { ok, bytes } = await downloadAtomic(url, 'preCacheAudioBatch');
+          // Track without enforcing per file: one sweep after the batch.
+          if (ok) _index.set(filename, { bytes, lastAccess: Date.now() });
         }
 
         completed++;
@@ -834,163 +882,6 @@ export async function reportCacheHealth(): Promise<void> {
         tracked_mb:  Math.round(trackedBytes() / (1024 * 1024)),
       });
   } catch {}
-}
-
-// ─── Verification against the server ──────────────────────────────────────────
-//
-// A cached copy is used whenever it merely EXISTS (getLocalAudioUri). Two kinds
-// of copies are wrong but still exist, and so used to play forever:
-//   - partial: the native download writes straight into the final path as
-//     bytes arrive, so a download cut off half-way (connection dropped, app
-//     killed) leaves a truncated file behind — silence or a clip that stops.
-//   - outdated: the clip was re-recorded on the server since it was cached.
-//
-// Every so often, and only with a connection, the phone asks the server for
-// the real size of the files it has (one small request: just those names and
-// their sizes, via the audio_file_sizes database function) and replaces any
-// copy whose size does not match. Copies that match are marked verified and
-// never asked about again. Runs in the background and never delays playback.
-
-const VERIFY_STATE_PATH  = (FileSystem.documentDirectory ?? '') + 'audio_cache_verify.json';
-const VERIFY_INTERVAL_MS = 24 * 60 * 60 * 1000; // at most once a day
-const MAX_VERIFY_NAMES   = 3000;                 // server-side cap, see the SQL function
-const MAX_REPAIRS_PER_RUN = 150;                 // bounds data use on a single launch
-const REPAIR_CONCURRENCY  = 3;
-const REPAIR_TIMEOUT_MS   = 60_000;
-
-let _verifyRunning = false;
-
-async function readLastVerifyRun(): Promise<number> {
-  try {
-    const info = await FileSystem.getInfoAsync(VERIFY_STATE_PATH);
-    if (!info.exists) return 0;
-    const parsed = JSON.parse(await FileSystem.readAsStringAsync(VERIFY_STATE_PATH));
-    return typeof parsed?.lastRun === 'number' ? parsed.lastRun : 0;
-  } catch {
-    return 0;
-  }
-}
-
-/**
- * Download a fresh copy of one cached file and swap it in. The new copy goes
- * to a temporary name first and replaces the old one in a single step, so
- * there is never a moment with a half-written file at the real path.
- * On failure the wrong copy is deleted: playback then streams the real file
- * instead of playing the broken one.
- */
-async function repairCachedFile(file: string, expected: number): Promise<boolean> {
-  const finalPath = AUDIO_CACHE_DIR + file;
-  const tmpPath   = finalPath + '.part';
-  try {
-    const download = downloadWatched(`${STORAGE_AUDIO_BASE}/${file}`, tmpPath, 'repairCachedFile');
-    const timeout  = new Promise<never>((_, reject) =>
-      setTimeout(() => reject(new Error('repair download timed out')), REPAIR_TIMEOUT_MS));
-    const result = await Promise.race([download, timeout]);
-
-    const fi: any = await FileSystem.getInfoAsync(tmpPath).catch(() => null);
-    const size = fi?.exists ? (fi.size ?? 0) : 0;
-    if (result.status !== 200 || size <= 0) {
-      throw new Error(`repair download: HTTP ${result.status}, ${size} bytes`);
-    }
-
-    try {
-      await FileSystem.moveAsync({ from: tmpPath, to: finalPath });       // replaces in one step
-    } catch {
-      await FileSystem.deleteAsync(finalPath, { idempotent: true });
-      await FileSystem.moveAsync({ from: tmpPath, to: finalPath });
-    }
-
-    const prev = _index.get(file);
-    _index.set(file, {
-      bytes:      size,
-      lastAccess: prev?.lastAccess ?? Date.now(),
-      // If the size still differs, the server file changed after we asked —
-      // what we just downloaded IS the current file; check it again next run.
-      verifiedBytes: size === expected ? size : undefined,
-    });
-    return true;
-  } catch {
-    await FileSystem.deleteAsync(tmpPath,   { idempotent: true }).catch(() => {});
-    await FileSystem.deleteAsync(finalPath, { idempotent: true }).catch(() => {});
-    _index.delete(file);
-    return false;
-  }
-}
-
-export async function verifyCacheAgainstServer(): Promise<void> {
-  if (_verifyRunning || !supabase) return;
-  _verifyRunning = true;
-  try {
-    await loadIndex();
-
-    // Only real server files (live-TTS copies are generated on the phone and
-    // already written safely), and only ones not confirmed yet.
-    const pending = Array.from(_index.entries())
-      .filter(([file, e]) => file.endsWith('.mp3') && !file.startsWith('tts_') && e.verifiedBytes !== e.bytes);
-    if (!pending.length) return;
-
-    if (Date.now() - (await readLastVerifyRun()) < VERIFY_INTERVAL_MS) return;
-
-    const net = await Network.getNetworkStateAsync().catch(() => null);
-    if (!net?.isConnected || net.isInternetReachable === false) return;
-
-    // System audio first (Engine A depends on it), then what was used most recently.
-    pending.sort(([fa, a], [fb, b]) =>
-      (Number(PROTECTED_SET.has(fb)) - Number(PROTECTED_SET.has(fa))) || (b.lastAccess - a.lastAccess));
-    const batch = pending.slice(0, MAX_VERIFY_NAMES);
-
-    const { data, error } = await (supabase as any).rpc('audio_file_sizes', { names: batch.map(([f]) => f) });
-    if (error || !data || typeof data !== 'object') {
-      reportError('cache', 'verifyCacheAgainstServer:rpc', error ?? 'no data', undefined, { skipIfOffline: true });
-      return;
-    }
-    await FileSystem.writeAsStringAsync(VERIFY_STATE_PATH, JSON.stringify({ lastRun: Date.now() })).catch(() => {});
-
-    const serverSizes = data as Record<string, number>;
-    const mismatched: Array<{ file: string; actual: number; expected: number }> = [];
-
-    for (const [file, entry] of batch) {
-      const expected = serverSizes[file];
-      if (typeof expected !== 'number') continue; // not on the server — leave it alone
-      if (entry.bytes === expected) { entry.verifiedBytes = expected; continue; }
-
-      // The index can lag behind the disk; confirm with the real size first.
-      const fi: any = await FileSystem.getInfoAsync(AUDIO_CACHE_DIR + file).catch(() => null);
-      if (!fi?.exists) { _index.delete(file); continue; }
-      const actual = fi.size ?? 0;
-      if (actual === expected) { entry.bytes = actual; entry.verifiedBytes = expected; continue; }
-      mismatched.push({ file, actual, expected });
-    }
-    scheduleFlush();
-    if (!mismatched.length) return;
-
-    let fixed = 0;
-    let failed = 0;
-    const toRepair = mismatched.slice(0, MAX_REPAIRS_PER_RUN);
-    for (let i = 0; i < toRepair.length; i += REPAIR_CONCURRENCY) {
-      await Promise.all(toRepair.slice(i, i + REPAIR_CONCURRENCY).map(async ({ file, expected }) => {
-        if (await repairCachedFile(file, expected)) fixed++; else failed++;
-      }));
-    }
-    scheduleFlush();
-
-    // Diagnostic: this is the direct measurement of how often broken or
-    // outdated copies exist on real phones.
-    reportError('cache', 'verifyCacheAgainstServer',
-      `${mismatched.length} cached audio file(s) did not match the server`,
-      {
-        checked:    batch.length,
-        mismatched: mismatched.length,
-        fixed,
-        failed,
-        deferred:   mismatched.length - toRepair.length,
-        sample:     mismatched.slice(0, 10).map(m => `${m.file}:${m.actual}/${m.expected}`),
-      });
-  } catch (err) {
-    reportError('cache', 'verifyCacheAgainstServer', err);
-  } finally {
-    _verifyRunning = false;
-  }
 }
 
 /**
