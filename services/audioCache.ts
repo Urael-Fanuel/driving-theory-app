@@ -839,6 +839,21 @@ export async function releaseAudioFiles(urls: string[]): Promise<void> {
 }
 
 /**
+ * Throw away the saved copy of ONE clip because it could not be played, so the
+ * next play fetches a fresh one (getLocalAudioUri re-saves anything it has to
+ * stream). Unlike releaseAudioFiles() this also works for PROTECTED system
+ * audio: protection means "never evict to make room", not "keep even if broken".
+ */
+export async function discardCachedCopy(url: string): Promise<void> {
+  if (!url || url.startsWith('assets/')) return;
+  const filename = urlToFilename(url);
+  try { await FileSystem.deleteAsync(AUDIO_CACHE_DIR + filename, { idempotent: true }); } catch {}
+  await loadIndex().catch(() => {});
+  _index.delete(filename);
+  scheduleFlush();
+}
+
+/**
  * Release the cached audio for a set of questions (a finished exam or quiz).
  * Convenience wrapper over releaseAudioFiles().
  */
