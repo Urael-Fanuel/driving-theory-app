@@ -31,7 +31,7 @@ import { AppState, Platform } from 'react-native';
 import * as FileSystem from 'expo-file-system/legacy';
 import * as Network from 'expo-network';
 import * as Application from 'expo-application';
-import type { Audio, AVPlaybackStatus } from 'expo-av';
+import type { Sound, PlaybackStatus } from './sound';
 import { supabase } from '../backend/supabaseClient';
 
 // ─── Types / config ───────────────────────────────────────────────────────────
@@ -366,7 +366,7 @@ export function reportError(
  * nothing is ever heard. Read-only: it only looks at the status.
  */
 export function watchPlaybackStart(
-  sound: Audio.Sound,
+  sound: Sound,
   isCurrent: () => boolean,
   where: string,
   uri: string,
@@ -374,7 +374,7 @@ export function watchPlaybackStart(
   const check = async (attempt: 1 | 2) => {
     try {
       if (!isCurrent() || AppState.currentState !== 'active') return;
-      const st: AVPlaybackStatus = await sound.getStatusAsync();
+      const st: PlaybackStatus = await sound.getStatusAsync();
       if (!isCurrent() || !st.isLoaded) return;
       if (!st.shouldPlay || st.isPlaying || st.didJustFinish || st.positionMillis > 0) return;
 
@@ -382,12 +382,10 @@ export function watchPlaybackStart(
         ...describeUri(uri),
         attempt,
         is_buffering: st.isBuffering,
-        playable_ms:  st.playableDurationMillis ?? null,
         duration_ms:  st.durationMillis ?? null,
       };
-      const hasData = (st.playableDurationMillis ?? 0) >= Math.min(2000, st.durationMillis ?? 2000);
 
-      if (st.isBuffering && !hasData) {
+      if (st.isBuffering) {
         if (attempt === 1) { setTimeout(() => void check(2), 7_500); return; }
         reportError('audio_slow', where, 'still waiting for audio data 10s after start', snapshot, { localUri: uri });
         return;

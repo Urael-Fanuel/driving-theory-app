@@ -1,6 +1,6 @@
 /**
  * AGENT 3 — hooks/useAudio.ts
- * Audio playback hook using expo-av.
+ * Audio playback hook (playback primitive: services/sound.ts, built on expo-audio).
  *
  * Uses a module-level singleton so only ONE sound plays at a time
  * across ALL screens. Any screen that calls playAudio() stops whatever
@@ -8,7 +8,7 @@
  */
 
 import { useState, useCallback, useRef, useEffect } from 'react';
-import { Audio, AVPlaybackStatus } from 'expo-av';
+import { Sound, PlaybackStatus, applyAudioMode } from '../services/sound';
 import { getStorageUrl, BUCKETS } from '../backend/supabaseClient';
 import { getLocalAudioUri } from '../services/audioCache';
 import { reportError, watchPlaybackStart, describeUri } from '../services/errorReporter';
@@ -37,7 +37,7 @@ export interface UseAudioReturn {
 }
 
 // ─── Module-level singleton ───────────────────────────────────────────────────
-// Only one Audio.Sound exists at a time across all useAudio instances.
+// Only one Sound exists at a time across all useAudio instances.
 // All hooks share this state so any screen can detect when audio finishes.
 //
 // ⚠️ OVERLAP-SAFETY INVARIANT — every playback path in this file MUST:
@@ -55,7 +55,7 @@ export interface UseAudioReturn {
 // only for immediate silence (UX). If you add a new playback path, it must
 // follow both rules.
 
-let _sound: Audio.Sound | null = null;
+let _sound: Sound | null = null;
 let _currentState: AudioState  = 'idle';
 let _soundId                   = 0;   // Incremented on every _stop(); stale callbacks from the previous sound check this
 const _listeners = new Set<(state: AudioState) => void>();
@@ -172,10 +172,10 @@ export async function playAndAwaitAudio(
       settle(true);
     }, 150_000);
 
-    Audio.Sound.createAsync(
+    Sound.createAsync(
       { uri },
       { shouldPlay: true, progressUpdateIntervalMillis: 200 },
-      (status: AVPlaybackStatus) => {
+      (status: PlaybackStatus) => {
         // Guard: another audio started or sequence was cancelled
         if (thisSoundId !== _soundId || isCancelled()) {
           clearTimeout(safetyTimer);
@@ -225,7 +225,7 @@ export async function playAndAwaitAudio(
  * Preloads an audio file into memory without playing it.
  * Call this while another audio is playing so the next one is ready instantly.
  */
-export async function preloadAudio(uri: string): Promise<Audio.Sound | null> {
+export async function preloadAudio(uri: string): Promise<Sound | null> {
   if (!uri) return null;
   try {
     let resolvedUri = uri;
@@ -234,7 +234,7 @@ export async function preloadAudio(uri: string): Promise<Audio.Sound | null> {
       const cdnUrl = getStorageUrl(BUCKETS.AUDIO, filename);
       if (cdnUrl) resolvedUri = cdnUrl;
     }
-    const { sound } = await Audio.Sound.createAsync(
+    const { sound } = await Sound.createAsync(
       { uri: resolvedUri },
       { shouldPlay: false },
     );
@@ -246,11 +246,11 @@ export async function preloadAudio(uri: string): Promise<Audio.Sound | null> {
 }
 
 /**
- * Plays a pre-loaded Audio.Sound and waits for it to finish.
+ * Plays a pre-loaded Sound and waits for it to finish.
  * Integrates with the global singleton so stopAudio() still works.
  */
 export async function playPreloadedAudio(
-  sound: Audio.Sound | null,
+  sound: Sound | null,
   isCancelled: () => boolean,
 ): Promise<void> {
   if (!sound || isCancelled()) return;
@@ -263,7 +263,7 @@ export async function playPreloadedAudio(
   _emit('playing');
 
   return new Promise<void>((resolve) => {
-    sound.setOnPlaybackStatusUpdate((status: AVPlaybackStatus) => {
+    sound.setOnPlaybackStatusUpdate((status: PlaybackStatus) => {
       if (thisSoundId !== _soundId || isCancelled()) { resolve(); return; }
       if (!status.isLoaded) {
         if (status.error) {
@@ -297,14 +297,8 @@ export function useAudio(): UseAudioReturn {
   const [positionMs, setPositionMs] = useState(0);
 
   useEffect(() => {
-    // Configure audio session once
-    Audio.setAudioModeAsync({
-      allowsRecordingIOS:       false,
-      playsInSilentModeIOS:     true,
-      staysActiveInBackground:  false,
-      shouldDuckAndroid:        true,
-      playThroughEarpieceAndroid: false,
-    }).catch(() => {});
+    // Configure the audio session (applied once; see services/sound.ts)
+    applyAudioMode().catch(() => {});
 
     // Subscribe to global audio events
     const listener = (state: AudioState) => {
@@ -341,10 +335,10 @@ export function useAudio(): UseAudioReturn {
     const thisSoundId = _soundId;  // Capture AFTER _stop() — uniquely identifies THIS sound
 
     try {
-      const { sound } = await Audio.Sound.createAsync(
+      const { sound } = await Sound.createAsync(
         { uri },
         { shouldPlay: true, progressUpdateIntervalMillis: 200 },
-        (status: AVPlaybackStatus) => {
+        (status: PlaybackStatus) => {
           // If another playAudio() call started (and incremented _soundId), ignore this stale callback
           if (thisSoundId !== _soundId) return;
           if (!status.isLoaded) {

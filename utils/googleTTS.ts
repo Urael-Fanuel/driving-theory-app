@@ -11,7 +11,7 @@
  *   resumeTTS()             – resumes current sound
  */
 
-import { Audio } from 'expo-av';
+import { Sound, applyAudioMode } from '../services/sound';
 import { supabase } from '../backend/supabaseClient';
 import { getCachedTtsUri, storeTtsAudio, releaseAudioFiles } from '../services/audioCache';
 import { reportError, describeUri, httpStatusOf } from '../services/errorReporter';
@@ -19,7 +19,7 @@ import { reportError, describeUri, httpStatusOf } from '../services/errorReporte
 // TTS requests go through a Supabase Edge Function (supabase/functions/tts) —
 // the Google API key lives server-side only and is never shipped in the app.
 
-let currentSound:   Audio.Sound | null = null;
+let currentSound:   Sound | null = null;
 let pendingResolve: (() => void) | null = null;
 let _ttsGeneration = 0;   // Incremented by stopTTS — lets speakAndAwait/playUrlAndAwait detect mid-fetch cancellation
 
@@ -75,7 +75,7 @@ export async function resumeTTS(): Promise<void> {
  *   (c) safety timeout fires (maxMs) — prevents ANR if didJustFinish never fires
  *       on certain Android devices (known expo-av edge case).
  */
-function awaitSound(sound: Audio.Sound, maxMs = 30_000): Promise<void> {
+function awaitSound(sound: Sound, maxMs = 30_000): Promise<void> {
   return new Promise<void>((resolve) => {
     let settled = false;
     let safetyTimer: ReturnType<typeof setTimeout> | undefined;
@@ -133,8 +133,8 @@ export async function playUrlAndAwait(url: string): Promise<boolean> {
   const myGeneration = _ttsGeneration;  // Capture AFTER stopTTS increments it
   try {
     _emitSpeaking(true);
-    await Audio.setAudioModeAsync({ playsInSilentModeIOS: true, playThroughEarpieceAndroid: false });
-    const { sound } = await Audio.Sound.createAsync({ uri: url });
+    await applyAudioMode();
+    const { sound } = await Sound.createAsync({ uri: url });
     if (_ttsGeneration !== myGeneration) { sound.unloadAsync().catch(() => {}); _emitSpeaking(false); return false; }
     currentSound = sound;
     await sound.playAsync();
@@ -179,13 +179,11 @@ export async function speakAndAwait(text: string): Promise<boolean> {
   let fromCache = false;                // declared here so the final catch can report it
   try {
     _emitSpeaking(true);
-    await Audio.setAudioModeAsync({ playsInSilentModeIOS: true, playThroughEarpieceAndroid: false });
+    await applyAudioMode();
 
     // ── 1. Offline-first: a previous rendering of this exact text ────────────
     let uri           = await getCachedTtsUri(text);
     fromCache         = !!uri;
-    // Base64 to persist after playback starts (null when served from cache).
-    let toStore: string | null = null;
 
     if (_ttsGeneration !== myGeneration) { _emitSpeaking(false); return false; }
 
@@ -212,22 +210,28 @@ export async function speakAndAwait(text: string): Promise<boolean> {
       // Cancelled during fetch — another stopTTS() was called while we were waiting
       if (_ttsGeneration !== myGeneration) { _emitSpeaking(false); return false; }
 
-      uri     = `data:audio/mp3;base64,${data.audioContent}`;
-      toStore = data.audioContent;
+      // Save it first and play the saved file. That is exactly the path a cached
+      // sentence takes, so a freshly fetched one behaves like a replay (and the
+      // saved copy is there for offline use either way). The base64 data: URI is
+      // only a last resort if writing to disk fails.
+      await storeTtsAudio(text, data.audioContent);
+      if (_ttsGeneration !== myGeneration) { _emitSpeaking(false); return false; }
+      uri = await getCachedTtsUri(text);
+      if (!uri) uri = `data:audio/mp3;base64,${data.audioContent}`;
     }
 
     // ── 3. Play ──────────────────────────────────────────────────────────────
-    let sound: Audio.Sound;
+    let sound: Sound;
     try {
-      ({ sound } = await Audio.Sound.createAsync({ uri }));
+      ({ sound } = await Sound.createAsync({ uri }));
     } catch (err) {
       reportError('audio', 'speakAndAwait:load', err,
         { ...describeUri(uri), from_cache: fromCache, text_len: text.length },
         { localUri: fromCache ? uri : null });
       // Only a cached file can fail here in a recoverable way. Drop it and let
       // the caller retry against the network rather than caching a dud forever.
-      if (fromCache) {
-        console.warn('[googleTTS] cached TTS unreadable, discarding:', err);
+      if (uri.startsWith('file:')) {
+        console.warn('[googleTTS] saved TTS unreadable, discarding:', err);
         await releaseAudioFiles([uri]).catch(() => {});
       }
       _emitSpeaking(false);
@@ -247,8 +251,6 @@ export async function speakAndAwait(text: string): Promise<boolean> {
       _emitSpeaking(false);
       return false;
     }
-    // Persist AFTER playback starts so writing to disk never delays the audio.
-    if (toStore) storeTtsAudio(text, toStore).catch(() => {});
     await awaitSound(sound);
     _emitSpeaking(false);
     return true;

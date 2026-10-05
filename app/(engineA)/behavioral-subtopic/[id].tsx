@@ -36,7 +36,7 @@ import {
 } from 'react-native';
 import { useLocalSearchParams, useRouter, useFocusEffect } from 'expo-router';
 import * as Haptics from 'expo-haptics';
-import { Audio } from 'expo-av';
+import { Sound, applyAudioMode } from '../../../services/sound';
 import { Colors } from '../../../constants/colors';
 import { ImageAnswerCard, ANSWER_ROW_MAX_WIDTH, ANSWER_ROW_GAP } from '../../../components/engineA/ImageAnswerCard';
 import { VoiceAnswerButton } from '../../../components/engineA/VoiceAnswerButton';
@@ -157,7 +157,7 @@ export default function BehavioralSubtopicScreenA() {
   const [feedbackTTSText,    setFeedbackTTSText]    = useState('');
 
   // ── Refs ──────────────────────────────────────────────────────────────────────
-  const soundRef             = useRef<Audio.Sound | null>(null);   // narration sound
+  const soundRef             = useRef<Sound | null>(null);   // narration sound
   const answeredIndexRef     = useRef<number | null>(null);
   const voiceFailedRef       = useRef(false);
   const sequenceCancelledRef = useRef(false);  // set true when ⏸ pressed
@@ -189,8 +189,8 @@ export default function BehavioralSubtopicScreenA() {
       try {
         await soundRef.current?.unloadAsync();
         soundRef.current = null;
-        await Audio.setAudioModeAsync({ playsInSilentModeIOS: true });
-        const { sound } = await Audio.Sound.createAsync(
+        await applyAudioMode();
+        const { sound } = await Sound.createAsync(
           { uri: subtopic!.narration_audio_url! }
         );
         if (cancelled) { sound.unloadAsync(); return; }

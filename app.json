@@ -21,10 +21,6 @@
         "backgroundColor": "#FFFFFF"
       },
       "allowBackup": false,
-      "supportsRtl": false,
-      "minSdkVersion": 26,
-      "targetSdkVersion": 34,
-      "compileSdkVersion": 34,
       "package": "com.drivingtheory.ethiopian",
       "versionCode": 1,
       "permissions": [
@@ -48,12 +44,6 @@
     "plugins": [
       "expo-router",
       [
-        "expo-av",
-        {
-          "microphonePermission": "ለድምጽ መልስ ለመናገር ማይክሮፎን ያስፈልጋል። ቁጥሩን ለመናገር ብቻ ይጠቅማል።"
-        }
-      ],
-      [
         "react-native-google-mobile-ads",
         {
           "androidAppId": "ca-app-pub-8758594752714631~7104171763",
@@ -65,7 +55,19 @@
         {
           "locationWhenInUsePermission": "TODO_AMHARIC_NEEDED_BEFORE_REAL_BUILD — mirrors the in-app primer text; must come from Gemini like every other Amharic string, not typed by hand. Only affects iOS native builds — ignored by Expo Go, so it does not block testing this feature."
         }
-      ]
+      ],
+      "expo-font",
+      "expo-video",
+      [
+        "expo-audio",
+        {
+          "microphonePermission": "ለድምጽ መልስ ለመናገር ማይክሮፎን ያስፈልጋል። ቁጥሩን ለመናገር ብቻ ይጠቅማል።",
+          "recordAudioAndroid": true,
+          "enableBackgroundPlayback": false,
+          "enableBackgroundRecording": false
+        }
+      ],
+      "expo-asset"
     ],
     "scheme": "drivingtheory",
     "experiments": {

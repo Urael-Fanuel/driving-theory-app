@@ -13,9 +13,10 @@
  */
 
 import { useState, useCallback, useRef, useEffect } from 'react';
-import { Audio } from 'expo-av';
-// RecordingStatus is not exported from expo-av's public API — use an inline shape instead.
-type RecordingStatus = { isRecording: boolean; metering?: number; [key: string]: unknown };
+import { getRecordingPermissionsAsync, requestRecordingPermissionsAsync } from 'expo-audio';
+import { ActiveRecording, RecordingTick } from '../services/recorder';
+import { applyAudioMode } from '../services/sound';
+import * as FileSystem from 'expo-file-system/legacy';
 import { Platform } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import {
@@ -40,32 +41,9 @@ const USE_MOCK_STT = !process.env.EXPO_PUBLIC_SUPABASE_URL;
 const STT_ENCODING:    'LINEAR16' | 'AMR_WB' = Platform.OS === 'android' ? 'AMR_WB' : 'LINEAR16';
 const STT_SAMPLE_RATE: number                 = 16000;
 
-// Custom recording options — produces audio Google STT can actually decode:
-//   iOS     → .wav  LinearPCM 16 kHz mono  → LINEAR16
-//   Android → .amr  AMR-WB   16 kHz mono   → AMR_WB
-const RECORDING_OPTIONS: Audio.RecordingOptions = {
-  isMeteringEnabled: true,   // ← MUST be true for silence detection
-  android: {
-    extension:        '.amr',
-    outputFormat:     Audio.AndroidOutputFormat.AMR_WB,
-    audioEncoder:     Audio.AndroidAudioEncoder.AMR_WB,
-    sampleRate:       16000,
-    numberOfChannels: 1,
-    // bitRate intentionally omitted — AMR-WB has fixed internal bitrates
-  },
-  ios: {
-    extension:            '.wav',
-    outputFormat:         Audio.IOSOutputFormat.LINEARPCM,
-    audioQuality:         Audio.IOSAudioQuality.HIGH,
-    sampleRate:           16000,
-    numberOfChannels:     1,
-    bitRate:              128000,
-    linearPCMBitDepth:    16,
-    linearPCMIsBigEndian: false,
-    linearPCMIsFloat:     false,
-  },
-  web: { mimeType: 'audio/webm', bitsPerSecond: 64000 },
-};
+// Recording format / metering: see services/recorder.ts (AMR-WB 16 kHz mono on Android,
+// 16 kHz 16-bit PCM wav on iOS; the level scale there is converted so the
+// SILENCE_THRESHOLD_DB above keeps its original meaning).
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -87,8 +65,13 @@ export function useVoiceRecognition(
   const [hasPermission, setHasPermission] = useState(false);
   const [lastResult,    setLastResult]    = useState<STTResult | null>(null);
 
-  const recordingRef   = useRef<Audio.Recording | null>(null);
+  const recordingRef   = useRef<ActiveRecording | null>(null);
   const timeoutRef     = useRef<ReturnType<typeof setTimeout> | null>(null);
+  // True from the moment a stop begins until it has fully finished. The silence
+  // detector re-fires stopListening on every 80 ms reading once the silence
+  // limit is reached, so without this guard several stops overlap; the later
+  // ones fail ("already unloaded") and report a false "not understood".
+  const stoppingRef    = useRef(false);
 
   // Ref always pointing to the latest stopListening — used by the silence-detection
   // callback which is created inside startListening (can't close over fresh state).
@@ -100,13 +83,13 @@ export function useVoiceRecognition(
   // getPermissionsAsync() checks status silently — the actual Dialog prompt happens
   // only in startListening() when the user explicitly taps the mic.
   useEffect(() => {
-    Audio.getPermissionsAsync()
+    getRecordingPermissionsAsync()
       .then(({ granted }) => setHasPermission(granted))
       .catch(() => setHasPermission(false));
 
     return () => {
       timeoutRef.current && clearTimeout(timeoutRef.current);
-      recordingRef.current?.stopAndUnloadAsync().catch(() => {});
+      recordingRef.current?.cancel().catch(() => {});
     };
   }, []);
 
@@ -118,21 +101,18 @@ export function useVoiceRecognition(
     timeoutRef.current && clearTimeout(timeoutRef.current);
     timeoutRef.current = null;
 
-    if (!recordingRef.current) return;
+    if (!recordingRef.current || stoppingRef.current) return;
+    stoppingRef.current = true;
 
     setVoiceState('processing');
     await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
 
+    let recordedUri: string | null = null;
     try {
-      await recordingRef.current.stopAndUnloadAsync();
+      const uri = await recordingRef.current.stopAndUnload();
+      recordedUri = uri;
 
-      await Audio.setAudioModeAsync({
-        allowsRecordingIOS:   false,
-        playsInSilentModeIOS: true,
-      });
-
-      const uri = recordingRef.current.getURI();
-      if (!uri) throw new Error('No recording URI');
+      await applyAudioMode({ allowsRecording: false });
 
       const result = USE_MOCK_STT
         ? await mockRecognizeAmharicAnswer()
@@ -155,6 +135,11 @@ export function useVoiceRecognition(
       recordingRef.current = null;
       setVoiceState('failed');
       onAnswer(null);
+    } finally {
+      stoppingRef.current = false;
+      // The recording was only needed for the recognition request above; don't
+      // leave one small file behind per spoken answer.
+      if (recordedUri) FileSystem.deleteAsync(recordedUri, { idempotent: true }).catch(() => {});
     }
   }, [onAnswer]);
 
@@ -169,7 +154,7 @@ export function useVoiceRecognition(
 
     try {
       if (!hasPermission) {
-        const { granted } = await Audio.requestPermissionsAsync();
+        const { granted } = await requestRecordingPermissionsAsync();
         setHasPermission(granted);
         if (!granted) {
           console.warn('[Voice] Microphone permission denied');
@@ -182,24 +167,21 @@ export function useVoiceRecognition(
       setVoiceState('listening');
       await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Heavy);
 
-      await Audio.setAudioModeAsync({
-        allowsRecordingIOS:   true,
-        playsInSilentModeIOS: true,
-      });
+      await applyAudioMode({ allowsRecording: true });
 
       // ── Silence detection state (local to this recording session) ─────────
       const recordingStartTime = Date.now();
       let hasSpeechStarted     = false;
       let silenceStartTime: number | null = null;
 
-      const onStatus = (status: RecordingStatus) => {
+      const onStatus = (status: RecordingTick) => {
         if (!status.isRecording) return;
 
         // Wait minimum time before firing (avoids stopping on initial silence)
         const elapsed = Date.now() - recordingStartTime;
         if (elapsed < MIN_RECORDING_MS) return;
 
-        const level = status.metering ?? -160;
+        const level = status.metering;
 
         if (level > SILENCE_THRESHOLD_DB) {
           // User is speaking
@@ -218,12 +200,7 @@ export function useVoiceRecognition(
       };
 
       // Start recording with status callback and fast poll interval
-      const { recording } = await Audio.Recording.createAsync(
-        RECORDING_OPTIONS,
-        onStatus,
-        STATUS_INTERVAL_MS,
-      );
-      recordingRef.current = recording;
+      recordingRef.current = await ActiveRecording.start(onStatus, STATUS_INTERVAL_MS);
 
       // Hard fallback timeout — fires even if silence detection never triggers
       timeoutRef.current = setTimeout(() => {
@@ -244,8 +221,8 @@ export function useVoiceRecognition(
 
     if (recordingRef.current) {
       try {
-        await recordingRef.current.stopAndUnloadAsync();
-        await Audio.setAudioModeAsync({ allowsRecordingIOS: false });
+        await recordingRef.current.cancel();
+        await applyAudioMode({ allowsRecording: false });
       } catch {
         // Ignore cleanup errors
       }

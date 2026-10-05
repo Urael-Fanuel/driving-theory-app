@@ -1,10 +1,10 @@
 /**
  * components/shared/VideoModal.tsx
- * Full-screen modal video player — uses expo-av (works in Expo Go).
+ * Full-screen modal video player — uses expo-video.
  * Shows when the user taps the ▶️ button on a sign that has a video.
  */
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Modal,
   View,
@@ -14,7 +14,7 @@ import {
   ActivityIndicator,
   StatusBar,
 } from 'react-native';
-import { Video, ResizeMode, AVPlaybackStatus } from 'expo-av';
+import { useVideoPlayer, VideoView } from 'expo-video';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -26,19 +26,49 @@ interface VideoModalProps {
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
+/**
+ * The player only exists while the modal is open (it is created here, inside
+ * the modal, not in VideoModal): the sign screens mount VideoModal for every
+ * sign that has a video, and that must not start loading a video nobody asked for.
+ */
+function ModalPlayer({
+  uri, onClose, onReady, onError,
+}: { uri: string; onClose: () => void; onReady: () => void; onError: () => void }) {
+  const player = useVideoPlayer(uri, p => {
+    p.loop = false;
+    p.play();
+  });
+
+  useEffect(() => {
+    const onStatus = player.addListener('statusChange', ({ status }) => {
+      if (status === 'readyToPlay') onReady();
+      else if (status === 'error')  onError();
+    });
+    const onEnd = player.addListener('playToEnd', onClose);
+    return () => { onStatus.remove(); onEnd.remove(); };
+  }, [player]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  return (
+    <VideoView
+      player={player}
+      style={styles.video}
+      contentFit="contain"
+      nativeControls
+    />
+  );
+}
+
 export function VideoModal({ visible, videoUri, onClose }: VideoModalProps) {
   const [loading, setLoading] = useState(true);
   const [error,   setError]   = useState(false);
 
-  const handleLoad = () => setLoading(false);
-  const handleError = () => { setLoading(false); setError(true); };
+  // Start fresh each time the modal opens.
+  useEffect(() => {
+    if (visible) { setLoading(true); setError(false); }
+  }, [visible]);
 
-  const handlePlaybackStatus = (status: AVPlaybackStatus) => {
-    if (status.isLoaded) {
-      if (loading) setLoading(false);
-      if (status.didJustFinish) onClose();
-    }
-  };
+  const handleLoad  = () => setLoading(false);
+  const handleError = () => { setLoading(false); setError(true); };
 
   return (
     <Modal
@@ -66,16 +96,14 @@ export function VideoModal({ visible, videoUri, onClose }: VideoModalProps) {
             <Text style={styles.errorText}>❌ ቪዲዮውን መጫን አልተቻለም</Text>
           </View>
         ) : (
-          <Video
-            source={{ uri: videoUri }}
-            style={styles.video}
-            resizeMode={ResizeMode.CONTAIN}
-            useNativeControls
-            shouldPlay
-            onLoad={handleLoad}
-            onError={handleError}
-            onPlaybackStatusUpdate={handlePlaybackStatus}
-          />
+          visible && (
+            <ModalPlayer
+              uri={videoUri}
+              onClose={onClose}
+              onReady={handleLoad}
+              onError={handleError}
+            />
+          )
         )}
 
         {/* Loading spinner */}
