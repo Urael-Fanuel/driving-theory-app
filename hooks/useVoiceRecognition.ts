@@ -24,6 +24,7 @@ import {
   STTResult,
 } from '../services/speechRecognition';
 import { VoiceButtonState } from '../components/engineA/VoiceAnswerButton';
+import { reportError } from '../services/errorReporter';
 
 // ─── Config ───────────────────────────────────────────────────────────────────
 
@@ -150,6 +151,7 @@ export function useVoiceRecognition(
 
     } catch (error) {
       console.error('[Voice] STT error:', error);
+      reportError('recording', 'stopListening', error);
       recordingRef.current = null;
       setVoiceState('failed');
       onAnswer(null);
@@ -230,6 +232,7 @@ export function useVoiceRecognition(
 
     } catch (error) {
       console.error('[Voice] Failed to start recording:', error);
+      reportError('recording', 'startListening', error);
       setVoiceState('failed');
       onAnswer(null);
     }

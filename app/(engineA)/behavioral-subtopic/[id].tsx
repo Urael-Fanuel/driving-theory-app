@@ -42,6 +42,7 @@ import { ImageAnswerCard, ANSWER_ROW_MAX_WIDTH, ANSWER_ROW_GAP } from '../../../
 import { VoiceAnswerButton } from '../../../components/engineA/VoiceAnswerButton';
 import { AudioFeedback } from '../../../components/engineA/AudioFeedback';
 import { useVoiceRecognition } from '../../../hooks/useVoiceRecognition';
+import { reportError, describeUri } from '../../../services/errorReporter';
 import {
   speakAndAwait,
   playUrlAndAwait,
@@ -203,7 +204,11 @@ export default function BehavioralSubtopicScreenA() {
         });
         setNarState('playing');  // optimistic — shows ⏸ immediately after load
         await sound.playAsync();
-      } catch { setNarState('idle'); }
+      } catch (err) {
+        // Diagnostic only (see services/errorReporter.ts); a cancel is not a failure.
+        if (!cancelled) reportError('audio', 'behavioralNarrationA', err, describeUri(subtopic?.narration_audio_url));
+        setNarState('idle');
+      }
     }
 
     setNarState('idle');

@@ -12,13 +12,19 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { StyleSheet, I18nManager } from 'react-native';
 import { EngineProvider } from '../contexts/EngineContext';
 import { Colors } from '../constants/colors';
-import { preCacheSystemAudio } from '../services/audioCache';
+import { preCacheSystemAudio, reportCacheHealth, verifyCacheAgainstServer } from '../services/audioCache';
+import { installGlobalErrorReporting, flushPendingReports } from '../services/errorReporter';
 
 // Force LTR layout — Amharic is written left-to-right
 if (I18nManager.isRTL) {
   I18nManager.forceRTL(false);
   I18nManager.allowRTL(false);
 }
+
+// Record uncaught JS errors / crashes in client_errors (see
+// services/errorReporter.ts). Module scope so it is in place before any
+// screen renders.
+installGlobalErrorReporting();
 
 const STORAGE_BASE = (process.env.EXPO_PUBLIC_SUPABASE_URL ?? '') + '/storage/v1/object/public';
 
@@ -30,6 +36,17 @@ export default function RootLayout() {
   // themselves were cached. Fire-and-forget; failures are retried next launch.
   useEffect(() => {
     preCacheSystemAudio(STORAGE_BASE).catch(() => {});
+
+    // Diagnostics, deliberately delayed so they never compete with the first
+    // screen and its audio: send reports saved by an earlier launch, then
+    // check the offline cache for broken (near-empty) files.
+    const flushTimer  = setTimeout(() => { flushPendingReports().catch(() => {}); }, 8_000);
+    const healthTimer = setTimeout(() => { reportCacheHealth().catch(() => {}); }, 15_000);
+    // Replace saved audio copies that are broken (partial download) or
+    // outdated (re-recorded on the server). Background only, at most once a
+    // day, only with a connection — see services/audioCache.ts.
+    const verifyTimer = setTimeout(() => { verifyCacheAgainstServer().catch(() => {}); }, 25_000);
+    return () => { clearTimeout(flushTimer); clearTimeout(healthTimer); clearTimeout(verifyTimer); };
   }, []);
 
   return (

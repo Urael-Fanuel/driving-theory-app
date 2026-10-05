@@ -26,11 +26,16 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
 
+// The words Google should expect — one per answer. Every question has FOUR
+// answers; this list was written when questions had three, and "four" was
+// missing from it until 2026-10-01, which made a spoken "አራት" (answer 4)
+// harder to recognize than the other three. Keep it in step with
+// mapSpeechToAnswer() in services/speechRecognition.ts.
 const PHRASE_HINTS = [
-  'አንድ', 'ሁለት', 'ሶስት',
-  'ሀ', 'ለ', 'ሐ',
-  '1', '2', '3',
-  'one', 'two', 'three',
+  'አንድ', 'ሁለት', 'ሶስት', 'አራት',
+  'ሀ', 'ለ', 'ሐ', 'መ',
+  '1', '2', '3', '4',
+  'one', 'two', 'three', 'four',
 ];
 
 Deno.serve(async (req: Request) => {

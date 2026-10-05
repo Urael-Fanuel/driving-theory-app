@@ -12,6 +12,7 @@
 import { supabase, DBTopic, DBSign, DBQuestion, DBExamSession, DBUserProgress, DBSignView } from './supabaseClient';
 import * as mockData from './mockData';
 import { getIsConnected } from '../hooks/useNetworkStatus';
+import { reportError } from '../services/errorReporter';
 
 // ─── Behavioral scaffold data (local JSON — no Supabase needed) ───────────────
 import vehicleKnowledgeScaffold from '../content/vehicle_knowledge_scaffold.json';
@@ -80,12 +81,10 @@ function shuffle<T>(arr: T[]): T[] {
 function logFallbackToMock(fnName: string, err: unknown): void {
   if (getIsConnected()) {
     console.error(`[api] ${fnName}: SERVER ERROR while online — falling back to bundled data`, err);
-    (supabase.from('client_errors') as any)
-      .insert({
-        function_name: fnName,
-        error_message: err instanceof Error ? err.message : String(err),
-      })
-      .then(() => {}, () => {});
+    // Goes through the shared reporter, which also fixes what this used to
+    // store: Supabase errors are plain objects, so String(err) saved
+    // "[object Object]" for every row instead of the actual message.
+    reportError('api', fnName, err, undefined, { skipIfOffline: true });
   } else {
     console.log(`[api] ${fnName}: offline — using bundled data (expected)`);
   }

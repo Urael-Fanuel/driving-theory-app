@@ -80,7 +80,7 @@ const SYSTEM_AUDIO: Record<string, string> = {
   'explain_mode_b.mp3':         'ይህ ምርጫ ለፅሁፍና ድምጽ ነው። ጽሑፍ ያነቡና ድምጽ ሊሰሙ ይችላሉ።',
   'selected_mode_a.mp3':        'ምስልና ድምጽ ምርጫ ተመርጧል።',
   'selected_mode_b.mp3':        'ፅሁፍ ምርጫ ተመርጧል።',
-  'try_again.mp3':              'ዳግም ሞክር። ቁጥሩን ይናገሩ። አንድ፣ ሁለት፣ ወይም ሶስት።',
+  'try_again.mp3':              'ዳግም ይሞክሩ። ቁጥሩን ይናገሩ። አንድ፣ ሁለት፣ ሶስት፣ ወይም አራት።', // 2026-10-01: four answers (was 'one, two or three'), polite form — Gemini, approved by the app owner
   'not_heard.mp3':              'ያልተሰማ። ቁጥሩን ይጫኑ።',
   'not_heard_tap_number.mp3':   'አልተሰማም። እባክዎ ቁጥሩን ይጫኑ።',
   'correct_generic.mp3':        'ትክክል ነው!',
@@ -95,7 +95,6 @@ const SYSTEM_AUDIO: Record<string, string> = {
   'start_quiz.mp3':             'ጥያቄ ጀምሩ።',
   'next_question.mp3':          'ቀጣይ ጥያቄ።',
   'watch_video.mp3':            'ቪዲዮ ይመልከቱ።',
-  'speak_answer.mp3':           'መልስዎን ይናገሩ። አንድ፣ ሁለት፣ ወይም ሶስት።',
   'home_welcome_a.mp3':         'እንኳን ደህና መጡ! ርዕስ ይምረጡ።',
   'home_welcome_b.mp3':         'እንኳን ደህና መጡ! ርዕስ ይምረጡ።',
   // Sponsor-ad wrapper narrations (Engine A) — generated with an SSML pause

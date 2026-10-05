@@ -454,7 +454,8 @@ export default function EngineAExamScreen() {
       voiceFailedRef.current = true;
       stopAudio();
       // Play Amharic "try again, say the number" message
-      // File: try_again.mp3 = "ዳግም ሞክር། ቁጥሩን ይናገሩ። አንድ፣ ሁለት፣ ወይም ሶስት།"
+      // File: try_again.mp3 = "try again, say the number: one, two, three or four"
+      // (exact Amharic text: SYSTEM_AUDIO in scripts/generateAllAudio.ts)
       playAudio(`${_AUDIO_BASE}/try_again.mp3`).catch(() => {});
     } else {
       voiceFailedRef.current = false;

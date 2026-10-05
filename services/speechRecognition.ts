@@ -2,19 +2,20 @@
  * AGENT 4 — services/speechRecognition.ts
  * Google Cloud STT integration for Engine A voice answers.
  *
- * Recognizes ONLY Amharic number words: አንድ (1), ሁለት (2), ሶስት (3)
+ * Recognizes ONLY the Amharic number words for answers 1-4 (see mapSpeechToAnswer).
  * Phrase hints dramatically improve accuracy for limited vocabulary.
  *
  * Usage:
  *   const result = await recognizeAmharicAnswer(audioUri);
  *   if (result.answer !== null) {
- *     // 0, 1, or 2 → maps to answer A, B, C
+ *     // 0-3 → answers 1-4
  *   }
  */
 
 // expo-file-system v17+ deprecated the top-level API; use /legacy for readAsStringAsync
 import * as FileSystem from 'expo-file-system/legacy';
 import { supabase } from '../backend/supabaseClient';
+import { reportError, httpStatusOf } from './errorReporter';
 
 // ─── Config ───────────────────────────────────────────────────────────────────
 
@@ -29,7 +30,7 @@ const MIN_CONFIDENCE = 0.65;
 // ─── Types ────────────────────────────────────────────────────────────────────
 
 export interface STTResult {
-  /** Answer index: 0, 1, or 2 — null if not recognized */
+  /** Answer index: 0-3 (answers 1-4) — null if not recognized */
   answer: number | null;
   /** Confidence score 0-1 */
   confidence: number;
@@ -95,6 +96,9 @@ export async function recognizeAmharicAnswer(
 
     if (error) {
       console.error('[STT] Edge Function error:', error);
+      reportError('stt', 'recognizeAmharicAnswer:invoke', error,
+        { status: httpStatusOf(error), encoding, audio_b64_len: base64Audio?.length ?? 0 },
+        { skipIfOffline: true });
       return { answer: null, confidence: 0, transcript: '', isRecognized: false };
     }
 
@@ -141,6 +145,7 @@ export async function recognizeAmharicAnswer(
     console.error('[STT] error.name:', error?.name);
     console.error('[STT] error.message:', error?.message);
     console.error('[STT] error.stack:', error?.stack);
+    reportError('stt', 'recognizeAmharicAnswer', error, { encoding }, { skipIfOffline: true });
     return { answer: null, confidence: 0, transcript: '', isRecognized: false };
   }
 }

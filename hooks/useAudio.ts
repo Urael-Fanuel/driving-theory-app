@@ -11,6 +11,7 @@ import { useState, useCallback, useRef, useEffect } from 'react';
 import { Audio, AVPlaybackStatus } from 'expo-av';
 import { getStorageUrl, BUCKETS } from '../backend/supabaseClient';
 import { getLocalAudioUri } from '../services/audioCache';
+import { reportError, watchPlaybackStart, describeUri } from '../services/errorReporter';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -182,7 +183,10 @@ export async function playAndAwaitAudio(
           return;
         }
         if (!status.isLoaded) {
-          if (status.error) { clearTimeout(safetyTimer); _emit('error'); settle(false); }
+          if (status.error) {
+            reportError('audio', 'playAndAwaitAudio:status', status.error, describeUri(uri), { localUri: uri });
+            clearTimeout(safetyTimer); _emit('error'); settle(false);
+          }
           return;
         }
         if (status.isPlaying)     _emit('playing');
@@ -198,10 +202,15 @@ export async function playAndAwaitAudio(
       }
       _sound = sound;
       if (_currentState === 'loading') _emit('playing');
+      // Diagnostic only: reports a clip that "loaded" but never makes a sound.
+      watchPlaybackStart(sound, () => thisSoundId === _soundId && !isCancelled(), 'playAndAwaitAudio', uri);
     })
     .catch((error) => {
       clearTimeout(safetyTimer);
       console.warn('[useAudio] playAndAwaitAudio failed:', uri, error);
+      if (thisSoundId === _soundId && !isCancelled()) {
+        reportError('audio', 'playAndAwaitAudio:load', error, describeUri(uri), { localUri: uri });
+      }
       // Emit only if still current — a stale failure must not stomp the
       // state of a newer sound that is already playing.
       if (thisSoundId === _soundId) _emit('error');
@@ -230,7 +239,8 @@ export async function preloadAudio(uri: string): Promise<Audio.Sound | null> {
       { shouldPlay: false },
     );
     return sound;
-  } catch {
+  } catch (error) {
+    reportError('audio', 'preloadAudio', error, describeUri(uri));
     return null;
   }
 }
@@ -256,16 +266,22 @@ export async function playPreloadedAudio(
     sound.setOnPlaybackStatusUpdate((status: AVPlaybackStatus) => {
       if (thisSoundId !== _soundId || isCancelled()) { resolve(); return; }
       if (!status.isLoaded) {
-        if (status.error) { _emit('error'); resolve(); }
+        if (status.error) {
+          reportError('audio', 'playPreloadedAudio:status', status.error);
+          _emit('error'); resolve();
+        }
         return;
       }
       if (status.isPlaying)     _emit('playing');
       if (status.didJustFinish) { _emit('finished'); resolve(); }
     });
-    sound.playAsync().catch(() => {
+    sound.playAsync().catch((error) => {
       // Emit only if still current — if a newer sound already replaced this
       // one (unloading it mid-play), its state must not be stomped to 'error'.
-      if (thisSoundId === _soundId) _emit('error');
+      if (thisSoundId === _soundId) {
+        reportError('audio', 'playPreloadedAudio:play', error);
+        _emit('error');
+      }
       resolve();
     });
   });
@@ -332,7 +348,10 @@ export function useAudio(): UseAudioReturn {
           // If another playAudio() call started (and incremented _soundId), ignore this stale callback
           if (thisSoundId !== _soundId) return;
           if (!status.isLoaded) {
-            if (status.error) _emit('error');
+            if (status.error) {
+              reportError('audio', 'playAudio:status', status.error, describeUri(uri), { localUri: uri });
+              _emit('error');
+            }
             return;
           }
           if (isMounted.current) {
@@ -356,12 +375,17 @@ export function useAudio(): UseAudioReturn {
       _sound = sound;
       // In case the status callback fires before we reach here
       if (_currentState === 'loading') _emit('playing');
+      // Diagnostic only: reports a clip that "loaded" but never makes a sound.
+      watchPlaybackStart(sound, () => thisSoundId === _soundId, 'playAudio', uri);
 
     } catch (error) {
       console.warn('[useAudio] Failed to play audio:', uri, error);
       // Emit only if this sound is still current — a stale failure must not
       // stomp the state of a newer sound that is already playing.
-      if (thisSoundId === _soundId) _emit('error');
+      if (thisSoundId === _soundId) {
+        reportError('audio', 'playAudio:load', error, describeUri(uri), { localUri: uri });
+        _emit('error');
+      }
     }
   }, []);
 
@@ -381,6 +405,7 @@ export function useAudio(): UseAudioReturn {
         _emit('paused');
       } catch (error) {
         console.warn('[useAudio] Pause failed:', error);
+        reportError('audio', 'pauseAudio', error);
       }
     }
   }, []);
@@ -394,6 +419,7 @@ export function useAudio(): UseAudioReturn {
         _emit('playing');
       } catch (error) {
         console.warn('[useAudio] Resume failed:', error);
+        reportError('audio', 'resumeAudio', error);
         // playAsync threw — sound is in bad state; reset so the UI can restart
         _emit('idle');
       }

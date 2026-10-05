@@ -14,6 +14,7 @@
 import { Audio } from 'expo-av';
 import { supabase } from '../backend/supabaseClient';
 import { getCachedTtsUri, storeTtsAudio, releaseAudioFiles } from '../services/audioCache';
+import { reportError, describeUri, httpStatusOf } from '../services/errorReporter';
 
 // TTS requests go through a Supabase Edge Function (supabase/functions/tts) —
 // the Google API key lives server-side only and is never shipped in the app.
@@ -152,6 +153,9 @@ export async function playUrlAndAwait(url: string): Promise<boolean> {
     return true;
   } catch (e) {
     console.warn('[googleTTS] playUrlAndAwait error:', e);
+    if (_ttsGeneration === myGeneration) {  // not when stopTTS() cancelled it
+      reportError('audio', 'playUrlAndAwait', e, describeUri(url), { localUri: url });
+    }
     _emitSpeaking(false);
     return false;
   }
@@ -172,13 +176,14 @@ export async function playUrlAndAwait(url: string): Promise<boolean> {
 export async function speakAndAwait(text: string): Promise<boolean> {
   await stopTTS();
   const myGeneration = _ttsGeneration;  // Capture AFTER stopTTS increments it
+  let fromCache = false;                // declared here so the final catch can report it
   try {
     _emitSpeaking(true);
     await Audio.setAudioModeAsync({ playsInSilentModeIOS: true, playThroughEarpieceAndroid: false });
 
     // ── 1. Offline-first: a previous rendering of this exact text ────────────
     let uri           = await getCachedTtsUri(text);
-    const fromCache   = !!uri;
+    fromCache         = !!uri;
     // Base64 to persist after playback starts (null when served from cache).
     let toStore: string | null = null;
 
@@ -196,6 +201,11 @@ export async function speakAndAwait(text: string): Promise<boolean> {
 
       if (error || !data?.audioContent) {
         if (error) console.warn('[googleTTS] tts function error:', error);
+        // Only a real failure — a stop/cancel during the fetch is not one.
+        if (_ttsGeneration === myGeneration) {
+          reportError('tts', 'speakAndAwait:invoke', error ?? 'empty audioContent',
+            { status: httpStatusOf(error), text_len: text.length }, { skipIfOffline: true });
+        }
         _emitSpeaking(false);
         return false;
       }
@@ -211,6 +221,9 @@ export async function speakAndAwait(text: string): Promise<boolean> {
     try {
       ({ sound } = await Audio.Sound.createAsync({ uri }));
     } catch (err) {
+      reportError('audio', 'speakAndAwait:load', err,
+        { ...describeUri(uri), from_cache: fromCache, text_len: text.length },
+        { localUri: fromCache ? uri : null });
       // Only a cached file can fail here in a recoverable way. Drop it and let
       // the caller retry against the network rather than caching a dud forever.
       if (fromCache) {
@@ -241,6 +254,12 @@ export async function speakAndAwait(text: string): Promise<boolean> {
     return true;
   } catch (e) {
     console.warn('[googleTTS] speakAndAwait error:', e);
+    // Typically playAsync() refusing to start — e.g. expo-av's "audio focus
+    // could not be acquired" — which means the user heard nothing. Skipped
+    // when stopTTS() ran meanwhile: unloading mid-start is a cancel, not a bug.
+    if (_ttsGeneration === myGeneration) {
+      reportError('audio', 'speakAndAwait', e, { from_cache: fromCache, text_len: text.length });
+    }
     _emitSpeaking(false);
     return false;
   }
@@ -328,10 +347,15 @@ export async function prefetchTtsForTexts(texts: string[]): Promise<void> {
       pending.slice(i, i + BATCH_SIZE).map(async (text) => {
         try {
           const { data, error } = await supabase.functions.invoke('tts', { body: { text } });
-          if (error || !data?.audioContent) return;
+          if (error || !data?.audioContent) {
+            reportError('tts', 'prefetchTtsForTexts', error ?? 'empty audioContent',
+              { status: httpStatusOf(error), text_len: text.length }, { skipIfOffline: true });
+            return;
+          }
           await storeTtsAudio(text, data.audioContent);
-        } catch {
+        } catch (err) {
           // Offline or rate-limited — nothing to do, the live path still works.
+          reportError('tts', 'prefetchTtsForTexts', err, { text_len: text.length }, { skipIfOffline: true });
         }
       })
     );
