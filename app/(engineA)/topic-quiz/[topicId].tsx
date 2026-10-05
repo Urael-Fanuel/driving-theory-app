@@ -46,6 +46,7 @@ const BANNER_AD_UNIT_ID = IS_EXPO_GO
     : 'ca-app-pub-8758594752714631/6072135007';
 import { useVoiceRecognition } from '../../../hooks/useVoiceRecognition';
 import { speakAndAwait, stopTTS, onTTSSpeakingChange, getIsTTSSpeaking } from '../../../utils/googleTTS';
+import { useAudioInterrupted, resumeInterruptedAudio } from '../../../hooks/useAudioInterrupted';
 import ConfettiCannon from 'react-native-confetti-cannon';
 import { isQuestionAudioReady } from '../../../services/audioCache';
 import * as api from '../../../backend/api';
@@ -100,6 +101,7 @@ export default function EngineATopicQuizScreen() {
   const sponsorAd  = useSponsorAd(userId);
   const { playAudio, stopAudio, audioState } = useAudio();
   const [isTTSPlaying,       setIsTTSPlaying]       = useState(getIsTTSSpeaking);
+  const audioInterrupted = useAudioInterrupted();   // Android paused our audio (call, other app)
   const [showFeedback,       setShowFeedback]       = useState(false);
   const [playingAnswerIndex, setPlayingAnswerIndex] = useState<number | null>(null);
   const [signs,              setSigns]              = useState<DBSign[]>([]);
@@ -304,6 +306,9 @@ export default function EngineATopicQuizScreen() {
 
   // ── Audio button ─────────────────────────────────────────────────────────────
   const handleAudioButton = () => {
+    // Android paused the reading (call, another app): ▶️ continues it from
+    // where it stopped, instead of starting the question over.
+    if (audioInterrupted) { resumeInterruptedAudio(); return; }
     if (audioState === 'playing' || audioState === 'loading' || isTTSPlaying) {
       sequenceCancelledRef.current = true;
       stopAudio();

@@ -29,6 +29,7 @@ import * as Haptics from 'expo-haptics';
 import { Colors } from '../../constants/colors';
 import { useAudio } from '../../hooks/useAudio';
 import { speakAndAwait, stopTTS } from '../../utils/googleTTS';
+import { useAudioInterrupted, resumeInterruptedAudio } from '../../hooks/useAudioInterrupted';
 import { fetchWrongAnswerExplanation, RagQuery } from '../../utils/ragExplain';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -68,6 +69,7 @@ export function AudioFeedback({
   const ragTextRef     = useRef<string | null>(null);
   const ragSpeakingRef = useRef(false);
   const mountedRef     = useRef(true);
+  const audioInterrupted = useAudioInterrupted();   // Android paused our audio (call, other app)
 
   const iconScale = useRef(new Animated.Value(0)).current;
   const fadeIn    = useRef(new Animated.Value(0)).current;
@@ -81,6 +83,8 @@ export function AudioFeedback({
 
   const handleExplainWhy = async () => {
     if (!ragQuery || ragLoading) return;
+    // Android paused the explanation (call, another app): this tap continues it.
+    if (ragSpeakingRef.current && audioInterrupted) { resumeInterruptedAudio(); return; }
     // Second tap while speaking — stop
     if (ragSpeakingRef.current) {
       ragSpeakingRef.current = false;
@@ -183,7 +187,7 @@ export function AudioFeedback({
                 accessibilityRole="button"
               >
                 <Text style={styles.whyIcon}>
-                  {ragLoading ? '⏳' : ragSpeaking ? '⏸' : '🤔'}
+                  {ragLoading ? '⏳' : ragSpeaking && !audioInterrupted ? '⏸' : '🤔'}
                 </Text>
               </TouchableOpacity>
             )}

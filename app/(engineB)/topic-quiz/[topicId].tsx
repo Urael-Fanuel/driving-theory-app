@@ -44,6 +44,7 @@ const BANNER_AD_UNIT_ID = IS_EXPO_GO
     ? require('react-native-google-mobile-ads').TestIds.ADAPTIVE_BANNER
     : 'ca-app-pub-8758594752714631/6072135007';
 import { speakAndAwait, stopTTS } from '../../../utils/googleTTS';
+import { useAudioInterrupted, resumeInterruptedAudio } from '../../../hooks/useAudioInterrupted';
 import ConfettiCannon from 'react-native-confetti-cannon';
 import * as api from '../../../backend/api';
 import { DBSign } from '../../../backend/supabaseClient';
@@ -82,6 +83,7 @@ export default function EngineBTopicQuizScreen() {
   const [signs,        setSigns]        = useState<DBSign[]>([]);
   const [ttsSpeaking,  setTtsSpeaking]  = useState(false);
   const ttsSpeakingRef = useRef(false);
+  const audioInterrupted = useAudioInterrupted();   // Android paused our audio (call, other app)
   const confettiRef    = useRef<any>(null);
   const scrollRef      = useRef<any>(null);
   const { stopAudio } = useAudio();
@@ -364,6 +366,8 @@ export default function EngineBTopicQuizScreen() {
             <TouchableOpacity
               style={styles.ttsPlayBtn}
               onPress={async () => {
+                // Android paused the sentence (call, another app): ▶️ continues it.
+                if (ttsSpeakingRef.current && audioInterrupted) { resumeInterruptedAudio(); return; }
                 if (ttsSpeakingRef.current) {
                   ttsSpeakingRef.current = false;
                   setTtsSpeaking(false);
@@ -386,7 +390,7 @@ export default function EngineBTopicQuizScreen() {
               }}
               accessibilityLabel="ጥያቄ ድምጽ"
             >
-              <Text style={styles.ttsPlayIcon}>{ttsSpeaking ? '⏸' : '▶️'}</Text>
+              <Text style={styles.ttsPlayIcon}>{ttsSpeaking && !audioInterrupted ? '⏸' : '▶️'}</Text>
             </TouchableOpacity>
           )}
           <Text style={styles.questionText}>{currentQuestion.question_amharic}</Text>

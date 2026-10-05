@@ -42,6 +42,7 @@ import { ImageAnswerCard, ANSWER_ROW_MAX_WIDTH, ANSWER_ROW_GAP } from '../../../
 import { VoiceAnswerButton } from '../../../components/engineA/VoiceAnswerButton';
 import { AudioFeedback } from '../../../components/engineA/AudioFeedback';
 import { useVoiceRecognition } from '../../../hooks/useVoiceRecognition';
+import { useAudioInterrupted, resumeInterruptedAudio } from '../../../hooks/useAudioInterrupted';
 import { reportError, describeUri } from '../../../services/errorReporter';
 import {
   speakAndAwait,
@@ -155,6 +156,7 @@ export default function BehavioralSubtopicScreenA() {
   const [audioRestartKey,    setAudioRestartKey]    = useState(0);
   const [audioPlaying,       setAudioPlaying]       = useState(false);
   const [feedbackTTSText,    setFeedbackTTSText]    = useState('');
+  const audioInterrupted = useAudioInterrupted();   // Android paused our audio (call, other app)
 
   // ── Refs ──────────────────────────────────────────────────────────────────────
   const soundRef             = useRef<Sound | null>(null);   // narration sound
@@ -196,11 +198,14 @@ export default function BehavioralSubtopicScreenA() {
         if (cancelled) { sound.unloadAsync(); return; }
         soundRef.current = sound;
         // Register callback BEFORE playAsync so we never miss a status update.
-        // Tracks isPlaying → 'playing' and didJustFinish → 'idle'.
+        // Tracks isPlaying → 'playing', didJustFinish → 'idle', and a pause made
+        // by Android (phone call, another app) → 'paused', so the button offers
+        // ▶️ (resume) instead of showing ⏸ over silence.
         sound.setOnPlaybackStatusUpdate((s) => {
           if (!s.isLoaded) return;
           if (s.isPlaying)          setNarState('playing');
           else if (s.didJustFinish) setNarState('idle');
+          else if (s.interrupted)   setNarState('paused');
         });
         setNarState('playing');  // optimistic — shows ⏸ immediately after load
         await sound.playAsync();
@@ -372,6 +377,8 @@ export default function BehavioralSubtopicScreenA() {
   // Questions: audio control button (stop/restart sequence)
   const handleAudioBtn = async () => {
     await Haptics.selectionAsync();
+    // Android paused the sentence (call, another app): ▶️ continues it.
+    if (audioPlaying && audioInterrupted) { resumeInterruptedAudio(); return; }
     if (audioPlaying) {
       sequenceCancelledRef.current = true;  // stop runSequence before it reaches answers
       await stopTTS();
@@ -479,7 +486,7 @@ export default function BehavioralSubtopicScreenA() {
   };
 
   const narIcon   = narState === 'playing' ? '⏸' : '▶️';
-  const audioIcon = audioPlaying            ? '⏸' : '▶️';
+  const audioIcon = audioPlaying && !audioInterrupted ? '⏸' : '▶️';
 
   // ── Render ────────────────────────────────────────────────────────────────────
   return (

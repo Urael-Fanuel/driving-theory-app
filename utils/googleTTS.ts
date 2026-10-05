@@ -100,7 +100,7 @@ function awaitSound(sound: Sound, maxMs = 30_000): Promise<void> {
     const finish = () => {
       if (settled) return;
       settled = true;
-      clearTimeout(safetyTimer);
+      if (safetyTimer) clearTimeout(safetyTimer);
       // Detach first: a unloaded/stopped sound can still emit one last status.
       try { sound.setOnPlaybackStatusUpdate(null); } catch {}
       // Only release the shared slot / current sound if they are still OURS.
@@ -112,13 +112,28 @@ function awaitSound(sound: Sound, maxMs = 30_000): Promise<void> {
 
     pendingResolve = finish;
 
-    // Safety: always resolve after maxMs — prevents permanent hang → ANR
-    safetyTimer = setTimeout(finish, maxMs);
+    // Safety: resolve after maxMs of PLAYING time — prevents a permanent hang
+    // (ANR) if didJustFinish never arrives. The clock is held while Android has
+    // paused the sound (phone call, another app) and restarts on resume;
+    // otherwise a call longer than maxMs ended the sentence unheard and the
+    // lesson walked on.
+    const armSafety  = () => { if (!safetyTimer && !settled) safetyTimer = setTimeout(finish, maxMs); };
+    const holdSafety = () => { if (safetyTimer) { clearTimeout(safetyTimer); safetyTimer = undefined; } };
+    armSafety();
 
     sound.setOnPlaybackStatusUpdate((s) => {
       if (!s.isLoaded) return;
       if (s.didJustFinish) {
         finish();
+        return;
+      }
+      if (s.interrupted) {
+        // Show ▶️ instead of ⏸ over silence while Android holds the audio.
+        holdSafety();
+        if (currentSound === sound && _isTTSSpeaking) _emitSpeaking(false);
+      } else if (s.isPlaying) {
+        armSafety();
+        if (currentSound === sound && !_isTTSSpeaking) _emitSpeaking(true);
       }
     });
   });

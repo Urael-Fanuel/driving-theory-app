@@ -19,6 +19,7 @@
 import React from 'react';
 import { Modal, View, Text, TouchableOpacity, StyleSheet, SafeAreaView } from 'react-native';
 import { speakAndAwait, stopTTS } from '../../utils/googleTTS';
+import { useAudioInterrupted, resumeInterruptedAudio } from '../../hooks/useAudioInterrupted';
 
 const PRIMER_TITLE = 'ለእርስዎ የተመረጡ ጥቆማዎች';
 const PRIMER_BODY = 'ታጋሽ ና ታማኝ አስተማሪዎችን፣ የመኪና አገልግሎቶችን እና ጠቃሚ ቦታዎችን በአካባቢዎ ለማግኘት አካባቢዎን ይፍቀዱ።';
@@ -39,6 +40,8 @@ interface Props {
 
 export function LocationPermissionModal({ visible, onApprove, onNotNow }: Props) {
   const [speaking, setSpeaking] = React.useState(false);
+  const speakRunRef = React.useRef(0);
+  const audioInterrupted = useAudioInterrupted();   // Android paused our audio (call, other app)
 
   React.useEffect(() => {
     if (!visible) {
@@ -48,14 +51,19 @@ export function LocationPermissionModal({ visible, onApprove, onNotNow }: Props)
   }, [visible]);
 
   const handleSpeakerPress = async () => {
+    // Android paused the reading (call, another app): this tap continues it.
+    if (speaking && audioInterrupted) { resumeInterruptedAudio(); return; }
     if (speaking) {
+      speakRunRef.current++;
       setSpeaking(false);
       await stopTTS();
       return;
     }
+    const run = ++speakRunRef.current;
     setSpeaking(true);
-    const ok = await speakAndAwait(`${PRIMER_TITLE}. ${PRIMER_BODY} ${PRESS_BUTTON_INSTRUCTION}`);
-    if (ok) setSpeaking(false);
+    await speakAndAwait(`${PRIMER_TITLE}. ${PRIMER_BODY} ${PRESS_BUTTON_INSTRUCTION}`);
+    // Finished, failed (offline) or cancelled: clear ⏸, unless a newer run owns it.
+    if (speakRunRef.current === run) setSpeaking(false);
   };
 
   return (
@@ -66,7 +74,7 @@ export function LocationPermissionModal({ visible, onApprove, onNotNow }: Props)
             <View style={styles.header}>
               <Text style={styles.icon}>📍</Text>
               <TouchableOpacity style={styles.speakerBtn} onPress={handleSpeakerPress}>
-                <Text style={styles.speakerIcon}>{speaking ? '⏸' : '🔊'}</Text>
+                <Text style={styles.speakerIcon}>{speaking && !audioInterrupted ? '⏸' : '🔊'}</Text>
               </TouchableOpacity>
             </View>
 

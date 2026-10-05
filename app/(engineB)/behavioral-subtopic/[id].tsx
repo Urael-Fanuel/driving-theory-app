@@ -46,6 +46,7 @@ import { TextFeedback } from '../../../components/engineB/TextFeedback';
 import { AudioButton } from '../../../components/shared/AudioButton';
 import { speakAmharic, speakAndAwait, stopTTS } from '../../../utils/googleTTS';
 import { useAudio } from '../../../hooks/useAudio';
+import { useAudioInterrupted, resumeInterruptedAudio } from '../../../hooks/useAudioInterrupted';
 import vehicleKnowledgeData from '../../../content/vehicle_knowledge_scaffold.json';
 import mindSafetyData       from '../../../content/mind_safety_scaffold.json';
 import societyLawData       from '../../../content/society_law_scaffold.json';
@@ -147,6 +148,7 @@ export default function BehavioralSubtopicScreenB() {
   const [feedbackText,   setFeedbackText]   = useState('');
   const [ttsSpeaking,    setTtsSpeaking]    = useState(false);
   const ttsSpeakingRef = useRef(false); // sync ref for use inside async handlers
+  const audioInterrupted = useAudioInterrupted();   // Android paused our audio (call, other app)
 
   const currentQ   = questions[qIndex] ?? null;
   const levelColor = level?.color ?? Colors.primary;
@@ -429,6 +431,8 @@ export default function BehavioralSubtopicScreenB() {
               <TouchableOpacity
                 style={styles.ttsPlayBtn}
                 onPress={async () => {
+                  // Android paused the sentence (call, another app): ▶️ continues it.
+                  if (ttsSpeakingRef.current && audioInterrupted) { resumeInterruptedAudio(); return; }
                   if (ttsSpeakingRef.current) {
                     // ⏸ pressed — stop immediately
                     ttsSpeakingRef.current = false;
@@ -456,7 +460,7 @@ export default function BehavioralSubtopicScreenB() {
                 }}
                 accessibilityLabel="ጥያቄ ድምጽ"
               >
-                <Text style={styles.ttsPlayIcon}>{ttsSpeaking ? '⏸' : '▶️'}</Text>
+                <Text style={styles.ttsPlayIcon}>{ttsSpeaking && !audioInterrupted ? '⏸' : '▶️'}</Text>
               </TouchableOpacity>
               <Text style={styles.questionText}>{currentQ.question_amharic}</Text>
             </View>

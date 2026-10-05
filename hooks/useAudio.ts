@@ -183,18 +183,28 @@ function _startClip(
   const finish = (played: boolean, startResult: 'ok' | 'cancelled' | 'failed') => {
     if (done) return;
     done = true;
-    clearTimeout(safetyTimer);
+    holdSafety();
     resolveStarted(startResult);   // no-op if it already settled
     resolveFinished(played);
   };
 
-  const safetyTimer = setTimeout(() => {
+  // The safety clock only runs while the clip is meant to be sounding. While it
+  // is paused (by the user, or by Android during a phone call) it is held, and
+  // it starts again from zero when playback resumes. Before, a pause or a call
+  // longer than 2.5 minutes made the clip count as "finished" and the lesson
+  // moved on although nobody heard it.
+  let safetyTimer: ReturnType<typeof setTimeout> | null = null;
+  const onSafety = () => {
+    safetyTimer = null;
     // No finish callback in 2.5 minutes. If the clip was audibly playing the
     // callback was simply dropped, so count it as heard. If it never played at
     // all, the user heard nothing: that is a failure, not a success.
     if (ticket === _soundId) _emit(everPlayed ? 'finished' : 'error');
     finish(everPlayed, everPlayed ? 'ok' : 'failed');
-  }, CLIP_SAFETY_MS);
+  };
+  function armSafety()  { if (!safetyTimer && !done) safetyTimer = setTimeout(onSafety, CLIP_SAFETY_MS); }
+  function holdSafety() { if (safetyTimer) { clearTimeout(safetyTimer); safetyTimer = null; } }
+  armSafety();   // also covers loading
 
   Sound.createAsync(
     { uri: src },
@@ -213,8 +223,18 @@ function _startClip(
       }
       if (status.isPlaying || status.positionMillis > 0) everPlayed = true;
       opts.onProgress?.(status);
-      if (status.isPlaying)     _emit('playing');
-      if (status.didJustFinish) { _emit('finished'); finish(true, 'ok'); }
+      if (status.didJustFinish) { _emit('finished'); finish(true, 'ok'); return; }
+
+      if (status.interrupted || !status.shouldPlay) {
+        // Paused: by Android (call, another app) or by the user's ⏸.
+        holdSafety();
+        // Android's pause must show as a pause, so the screen offers ▶️ instead
+        // of a ⏸ over silence. (The user's own pause already set 'paused'.)
+        if (status.interrupted && _currentState !== 'paused') _emit('paused');
+        return;
+      }
+      armSafety();
+      if (status.isPlaying) _emit('playing');
     },
   )
     .then(({ sound }) => {
@@ -347,8 +367,10 @@ export async function playPreloadedAudio(
         }
         return;
       }
-      if (status.isPlaying)     _emit('playing');
-      if (status.didJustFinish) { _emit('finished'); resolve(); }
+      if (status.didJustFinish) { _emit('finished'); resolve(); return; }
+      // Paused by Android (call, another app): show ▶️, not ⏸ over silence.
+      if (status.interrupted) { if (_currentState !== 'paused') _emit('paused'); return; }
+      if (status.isPlaying) _emit('playing');
     });
     sound.playAsync().catch((error) => {
       // Emit only if still current — if a newer sound already replaced this

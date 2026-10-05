@@ -20,6 +20,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { AdCard } from './AdCard';
 import { playAndAwaitAudio } from '../../hooks/useAudio';
+import { useAudioInterrupted, resumeInterruptedAudio } from '../../hooks/useAudioInterrupted';
 import { SponsorAd } from '../../backend/api';
 import { EngineType } from '../../contexts/EngineContext';
 
@@ -35,10 +36,13 @@ interface SponsorAdBannerProps {
 export function SponsorAdBanner({ headline, body, wrapperAudioUrl, ad, engineType }: SponsorAdBannerProps) {
   const [isPlaying, setIsPlaying] = useState(false);
   const cancelledRef = useRef(false);
+  const audioInterrupted = useAudioInterrupted();   // Android paused our audio (call, other app)
 
   useEffect(() => () => { cancelledRef.current = true; }, []);
 
   const handlePlay = async () => {
+    // Android paused the ad (call, another app): this tap continues it.
+    if (isPlaying && audioInterrupted) { resumeInterruptedAudio(); return; }
     if (isPlaying) { cancelledRef.current = true; setIsPlaying(false); return; }
     cancelledRef.current = false;
     setIsPlaying(true);
@@ -60,7 +64,7 @@ export function SponsorAdBanner({ headline, body, wrapperAudioUrl, ad, engineTyp
             activeOpacity={0.8}
             accessibilityLabel="ማስታወቂያ ድምጽ"
           >
-            <Text style={styles.audioBtnIcon}>{isPlaying ? '⏸' : '🔊'}</Text>
+            <Text style={styles.audioBtnIcon}>{isPlaying && !audioInterrupted ? '⏸' : '🔊'}</Text>
           </TouchableOpacity>
         )}
       </View>

@@ -32,6 +32,7 @@ import { useNetworkStatus } from '../../../hooks/useNetworkStatus';
 import { isQuestionAudioReady, prefetchQuestionAudio, preCacheAudioBatch } from '../../../services/audioCache';
 import { useAudio, playAndAwaitAudio } from '../../../hooks/useAudio';
 import { speakAndAwait, stopTTS, onTTSSpeakingChange, getIsTTSSpeaking } from '../../../utils/googleTTS';
+import { useAudioInterrupted, resumeInterruptedAudio } from '../../../hooks/useAudioInterrupted';
 import { useVoiceRecognition } from '../../../hooks/useVoiceRecognition';
 import * as api from '../../../backend/api';
 import { DBSign } from '../../../backend/supabaseClient';
@@ -93,6 +94,7 @@ export default function EngineAExamScreen() {
 
   const { playAudio, stopAudio, audioState } = useAudio();
   const [isTTSPlaying,             setIsTTSPlaying]             = useState(getIsTTSSpeaking);
+  const audioInterrupted = useAudioInterrupted();   // Android paused our audio (call, other app)
   const [showFeedback,             setShowFeedback]             = useState(false);
   // Behavioral questions have no pre-recorded explanation audio at all
   // (explanation_correct_audio_url/explanation_wrong_audio_url are always
@@ -533,6 +535,9 @@ export default function EngineAExamScreen() {
   // ⏸ → cancel the running sequence and stop audio immediately.
   // ▶️ → restart the full sequence from scratch (question → answers).
   const handleAudioButton = () => {
+    // Android paused the reading (call, another app): ▶️ continues it from
+    // where it stopped, instead of starting the question over.
+    if (audioInterrupted) { resumeInterruptedAudio(); return; }
     if (audioState === 'playing' || audioState === 'loading' || isTTSPlaying) {
       sequenceCancelledRef.current = true;
       stopAudio();

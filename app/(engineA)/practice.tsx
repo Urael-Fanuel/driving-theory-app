@@ -29,6 +29,7 @@ import { ProgressBar } from '../../components/shared/ProgressBar';
 import { usePracticeWeak } from '../../hooks/usePracticeWeak';
 import { useAudio, playAndAwaitAudio } from '../../hooks/useAudio';
 import { speakAndAwait, stopTTS, onTTSSpeakingChange, getIsTTSSpeaking } from '../../utils/googleTTS';
+import { useAudioInterrupted, resumeInterruptedAudio } from '../../hooks/useAudioInterrupted';
 import { useVoiceRecognition } from '../../hooks/useVoiceRecognition';
 import * as api from '../../backend/api';
 import { DBSign } from '../../backend/supabaseClient';
@@ -101,6 +102,7 @@ export default function EngineAPracticeScreen() {
   // user gets stuck on the ✅/❌ overlay. Same bug and fix as exam.tsx.
   const [feedbackTTSText,    setFeedbackTTSText]    = useState('');
   const [isTTSPlaying,       setIsTTSPlaying]       = useState(getIsTTSSpeaking);
+  const audioInterrupted = useAudioInterrupted();   // Android paused our audio (call, other app)
   // TTS has no pause/resume (a live utterance can't be resumed mid-word) —
   // bumping this forces the sequence effect to re-run and replay a
   // behavioral question from the start, the same restart-key pattern
@@ -279,6 +281,9 @@ export default function EngineAPracticeScreen() {
   // Audio control
   const isBehavioralQuestion = !currentQuestion?.sign_id;
   const handleAudioButton = async () => {
+    // Android paused the reading (call, another app): ▶️ continues it from
+    // where it stopped, instead of starting the question over.
+    if (audioInterrupted) { resumeInterruptedAudio(); return; }
     if (isTTSPlaying) {
       // TTS can't be paused/resumed mid-utterance — stop it. The button is
       // now idle, so the branch below restarts the sequence on next tap.

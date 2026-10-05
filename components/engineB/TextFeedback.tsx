@@ -24,6 +24,7 @@ import { Colors } from '../../constants/colors';
 import { Typography } from '../../constants/typography';
 import { AudioButton } from '../shared/AudioButton';
 import { speakAndAwait, stopTTS } from '../../utils/googleTTS';
+import { useAudioInterrupted, resumeInterruptedAudio } from '../../hooks/useAudioInterrupted';
 import { fetchWrongAnswerExplanation, RagQuery } from '../../utils/ragExplain';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -66,6 +67,7 @@ export function TextFeedback({
   const [ragSpeaking,    setRagSpeaking]    = useState(false);
   const ragSpeakingRef = useRef(false);
   const mountedRef     = useRef(true);
+  const audioInterrupted = useAudioInterrupted();   // Android paused our audio (call, other app)
 
   useEffect(() => {
     return () => {
@@ -87,6 +89,8 @@ export function TextFeedback({
 
   const handleRagSpeak = async () => {
     if (!ragExplanation) return;
+    // Android paused the explanation (call, another app): this tap continues it.
+    if (ragSpeakingRef.current && audioInterrupted) { resumeInterruptedAudio(); return; }
     if (ragSpeakingRef.current) {
       ragSpeakingRef.current = false;
       setRagSpeaking(false);
@@ -195,7 +199,7 @@ export function TextFeedback({
               accessibilityLabel="ማብራሪያ ድምጽ"
               accessibilityRole="button"
             >
-              <Text style={styles.ragSpeakIcon}>{ragSpeaking ? '⏸' : '🔊'}</Text>
+              <Text style={styles.ragSpeakIcon}>{ragSpeaking && !audioInterrupted ? '⏸' : '🔊'}</Text>
             </TouchableOpacity>
           </View>
         )}
