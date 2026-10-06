@@ -36,6 +36,7 @@
 
 import * as FileSystem from 'expo-file-system/legacy';
 import { reportError, errorText } from './errorReporter';
+import { BUNDLED_AUDIO_NAMES } from './bundledAudio';
 
 // ─── Config ───────────────────────────────────────────────────────────────────
 
@@ -305,6 +306,8 @@ export async function getAudioUri(remoteUrl: string): Promise<string> {
     // Local asset path — return as-is
     return remoteUrl;
   }
+  // Ships inside the app (services/bundledAudio.ts): nothing to cache.
+  if (BUNDLED_AUDIO_NAMES.has(urlToFilename(remoteUrl))) return remoteUrl;
 
   try {
     const filename  = urlToFilename(remoteUrl);
@@ -541,6 +544,8 @@ export async function isQuestionAudioReady(question: {
  */
 export async function getLocalAudioUri(url: string): Promise<string> {
   if (!url || url.startsWith('assets/')) return url;
+  // Ships inside the app (services/bundledAudio.ts): never downloaded, never cached.
+  if (BUNDLED_AUDIO_NAMES.has(urlToFilename(url))) return url;
   try {
     const filename  = urlToFilename(url);
     const localPath = AUDIO_CACHE_DIR + filename;
@@ -573,6 +578,8 @@ export async function preCacheAudioBatch(
   urls: string[],
   onProgress?: (completed: number, total: number) => void
 ): Promise<void> {
+  // Clips that ship inside the app are never downloaded (services/bundledAudio.ts).
+  urls = urls.filter(u => !BUNDLED_AUDIO_NAMES.has(urlToFilename(u)));
   await ensureCacheDir();
   await loadIndex();
 
@@ -713,7 +720,16 @@ export async function prefetchTopicAudio(
 export async function preCacheSystemAudio(
   baseUrl: string
 ): Promise<void> {
-  const urls = PROTECTED_FILES.map(f => `${baseUrl}/audio/${f}`);
+  // Clips that ship inside the app are not downloaded; a copy cached by an
+  // earlier version is removed, giving its storage back (~600 KB).
+  await loadIndex().catch(() => {});
+  // (All bundled names, not only the protected ones: try_again.mp3 was
+  // cached by playback, never by this list.)
+  for (const f of BUNDLED_AUDIO_NAMES) {
+    await FileSystem.deleteAsync(AUDIO_CACHE_DIR + f, { idempotent: true }).catch(() => {});
+    if (_index.delete(f)) scheduleFlush();
+  }
+  const urls = PROTECTED_FILES.filter(f => !BUNDLED_AUDIO_NAMES.has(f)).map(f => `${baseUrl}/audio/${f}`);
   await preCacheAudioBatch(urls);
 }
 

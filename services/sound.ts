@@ -47,6 +47,7 @@
 import { Platform } from 'react-native';
 import { createAudioPlayer, setAudioModeAsync } from 'expo-audio';
 import type { AudioPlayer, AudioStatus } from 'expo-audio';
+import { bundledAudioFor } from './bundledAudio';
 
 // ─── Status shape (mirrors the subset of expo-av's AVPlaybackStatus we used) ──
 
@@ -185,9 +186,11 @@ export class Sound {
     return new Promise((resolve, reject) => {
       let player: AudioPlayer;
       try {
-        // A plain string is passed on untouched by expo-audio (an object would
-        // go through expo-asset). data: and file: URIs both work.
-        player = createAudioPlayer(source.uri, {
+        // System clips that ship inside the app (services/bundledAudio.ts) are
+        // played from the app itself, whatever URL the caller used — so they
+        // work with no connection and no cache. Everything else: the URI as
+        // given (data: and file: URIs both work).
+        player = createAudioPlayer(bundledAudioFor(source.uri) ?? source.uri, {
           updateInterval: initial.progressUpdateIntervalMillis ?? 500,
         });
       } catch (err) {

@@ -44,6 +44,7 @@ import * as Network from 'expo-network';
 import * as Application from 'expo-application';
 import type { Sound, PlaybackStatus } from './sound';
 import { supabase } from '../backend/supabaseClient';
+import { BUNDLED_AUDIO_NAMES } from './bundledAudio';
 
 // ─── Types / config ───────────────────────────────────────────────────────────
 
@@ -280,6 +281,7 @@ export function describeUri(uri?: string | null): Record<string, unknown> {
   if (!uri) return {};
   if (uri.startsWith('data:')) return { source: 'data', uri_len: uri.length };
   const file = clip(uri.split('/').pop()?.split('?')[0] ?? '', 120);
+  if (BUNDLED_AUDIO_NAMES.has(file)) return { source: 'bundled', file };   // played from inside the app
   if (uri.startsWith('file:')) return { source: 'local', file };
   if (uri.startsWith('http'))  return { source: 'remote', file };
   return { source: 'other', file };
