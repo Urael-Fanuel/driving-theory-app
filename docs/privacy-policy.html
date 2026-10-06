@@ -114,7 +114,7 @@
 <div class="hero">
   <div class="app-name">መንጃ ፍቃድ በቀላል መንገድ</div>
   <h1>Privacy Policy / የግላዊነት ፖሊሲ</h1>
-  <p class="updated">Last updated: June 2026 &nbsp;|&nbsp; ጁን 2026</p>
+  <p class="updated">Last updated: October 2026 &nbsp;|&nbsp; ጥቅምት 2026</p>
   <div class="lang-toggle">
     <button class="active" onclick="setLang('en')">English</button>
     <button onclick="setLang('am')">አማርኛ</button>
@@ -128,7 +128,7 @@
 
     <div class="section">
       <div class="highlight">
-        🔒 This app does <strong>not</strong> require registration or login. We do not collect your name, email, phone number, or any personally identifiable information.
+        🔒 This app does <strong>not</strong> require registration or login. We do not ask for your name, email address or phone number.
       </div>
       <h2><span class="icon">📋</span> Overview</h2>
       <p>
@@ -142,10 +142,13 @@
       <div class="badge">Minimal Data Collection</div>
       <p>We collect only the minimum data necessary for the app to function:</p>
       <ul>
-        <li><strong>Anonymous User ID</strong> — a random identifier generated on your device (not linked to your identity). Used to save your learning progress locally.</li>
+        <li><strong>Anonymous User ID</strong> — A random identifier that is not linked to your name or contact details. It is used to save your learning progress and to connect it with the optional data described below.</li>
         <li><strong>Learning Progress</strong> — which signs and topics you have studied, quiz scores, and exam results. Stored locally on your device and optionally synced to our backend (Supabase) using only your anonymous ID.</li>
         <li><strong>Device Information</strong> — device type, operating system version, and app version. Used for crash reporting and compatibility checks only.</li>
-        <li><strong>Microphone</strong> — used only when you tap the microphone button to answer questions by voice. Audio is processed by Google Speech-to-Text and is <strong>not stored</strong> by us.</li>
+        <li><strong>Location (optional)</strong> — If you allow it when the app asks, the app reads your phone’s location while the app is open (never in the background), turns it into a city name, and stores the coordinates and the city together with your anonymous ID. We use this only to choose which nearby driving instructors’ ads to show you. If you have not been asked yet, the app may estimate only your city from your IP address and store that city (we do not store the IP address itself). If you decline, that estimate is deleted and not used again. You can refuse location and still use the whole app.</li>
+        <li><strong>Diagnostic reports</strong> — When something goes wrong (for example a sound does not play, a download fails or the app crashes), the app may send a short technical report to our server. It contains the error message (with private parts of web addresses, keys, tokens and email addresses removed), the name of the audio file involved, your phone’s manufacturer and model, the Android and app versions, the type of network, whether you were online, and a random code for that session. A report may be linked to your anonymous ID. It does not contain your name, contact details, voice recordings or location.</li>
+        <li><strong>Microphone</strong> — Used only when you tap the microphone button to answer by voice. The recording is sent through our server to Google Cloud Speech-to-Text to recognise the number you said. We do not store recordings.</li>
+        <li><strong>“Why?” explanations</strong> — When you ask the app to explain why an answer is right or wrong, the question and the answers are sent through our server to Google’s Gemini AI service, which writes the explanation. Your name and contact details are never part of this request.</li>
       </ul>
     </div>
 
@@ -167,9 +170,16 @@
     </div>
 
     <div class="section">
+      <h2><span class="icon">🚗</span> Driving-Instructor Ads</h2>
+      <p>
+        Besides Google ads, the app shows ads from local driving instructors. To choose which ones to show, we compare your saved city (or, if you allowed location, your coordinates, to find the nearest instructor within about 30 km) with the instructors’ cities. The instructors do not receive your location or any other data from the app.
+      </p>
+    </div>
+
+    <div class="section">
       <h2><span class="icon">🎙️</span> Microphone Permission</h2>
       <p>
-        The app requests microphone access <strong>only</strong> for the voice-answer feature in Engine A (the audio-based learning engine). Voice audio is sent to <strong>Google Cloud Speech-to-Text</strong> for recognition and is not stored or logged by us.
+        The app requests microphone access <strong>only</strong> for the voice-answer feature in Engine A (the audio-based learning engine). Voice audio is sent through our server to <strong>Google Cloud Speech-to-Text</strong> for recognition and is not stored or logged by us.
       </p>
       <p>You can deny microphone permission and still use the full app — voice answering will simply be unavailable.</p>
     </div>
@@ -184,6 +194,9 @@
         <li>Syncing your learning progress to the cloud (anonymous, no login required)</li>
         <li>Text-to-Speech (Google Cloud TTS) for Amharic voice explanations</li>
         <li>Loading advertisements (Google AdMob)</li>
+        <li>Finding your city: from your location if you allow it, or estimated from your IP address if you have not been asked yet</li>
+        <li>Sending the question to Google’s Gemini AI when you ask for an explanation</li>
+        <li>Sending short diagnostic reports when something goes wrong</li>
       </ul>
     </div>
 
@@ -195,6 +208,9 @@
         <li><strong>Google AdMob</strong> — advertising (<a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a>)</li>
         <li><strong>Google Cloud Speech-to-Text</strong> — voice recognition (not stored)</li>
         <li><strong>Google Cloud Text-to-Speech</strong> — Amharic audio generation</li>
+        <li><strong>Google Maps Geocoding</strong> — turns your coordinates into a city name</li>
+        <li><strong>ipapi.co</strong> — turns an IP address into an approximate city</li>
+        <li><strong>Google Gemini</strong> — writes the “Why?” explanations</li>
       </ul>
     </div>
 
@@ -208,15 +224,26 @@
     <div class="section">
       <h2><span class="icon">🔐</span> Data Security</h2>
       <p>
-        All data transmitted between the app and our servers is encrypted using HTTPS/TLS. Anonymous user IDs are randomly generated and cannot be traced back to a real person.
+        All data sent between the app and our servers is encrypted using HTTPS/TLS. Anonymous IDs are randomly generated and do not contain your name or contact details.
       </p>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">🗓️</span> How Long We Keep Data</h2>
+      <ul>
+        <li>Learning progress, the anonymous ID and location data are kept until you ask us to delete them.</li>
+        <li>Diagnostic reports are kept only as long as needed to find and fix problems, and are deleted on request.</li>
+        <li>If you decline location, any city that was estimated from your IP address is deleted and is not used again.</li>
+        <li>Voice recordings are not stored.</li>
+      </ul>
     </div>
 
     <div class="section">
       <h2><span class="icon">🗑️</span> Your Rights</h2>
       <ul>
-        <li><strong>Delete your data</strong> — Uninstalling the app removes all locally stored progress data. To request deletion of any server-side anonymous data, contact us.</li>
+        <li><strong>Delete your data</strong> — Uninstalling the app removes all locally stored progress data. To request deletion of data stored on our servers (including location and diagnostic data), contact us.</li>
         <li><strong>Opt out of personalized ads</strong> — Via your device's ad settings.</li>
+        <li><strong>Refuse or withdraw location access</strong> — In your device settings at any time. The whole app keeps working.</li>
         <li><strong>Deny microphone access</strong> — In your device settings at any time.</li>
       </ul>
     </div>
@@ -257,10 +284,13 @@
       <h2><span class="icon">📦</span> የምንሰበስበው መረጃ</h2>
       <div class="badge">ትንሽ መረጃ ብቻ</div>
       <ul>
-        <li><strong>ስም-አልባ መለያ (Anonymous ID)</strong> — ማንነትዎን የማይገልጥ የዘፈቀደ ቁጥር። የትምህርት እድገትዎን ለማስቀመጥ ያገለግላል።</li>
+        <li><strong>ስም-አልባ መለያ (Anonymous ID)</strong> — ከስምዎ ወይም ከግንኙነት መረጃዎ ጋር ያልተገናኘ የዘፈቀደ መለያ ነው። የትምህርት እድገትዎን ለማስቀመጥ እና ከዚህ በታች ከተገለጹት አማራጭ መረጃዎች ጋር ለማገናኘት ያገለግላል።</li>
         <li><strong>የትምህርት እድገት</strong> — የተማሩዋቸው ምልክቶች፣ ውጤቶች። በመሳሪያዎ ላይ ይቀመጣሉ።</li>
         <li><strong>የመሳሪያ መረጃ</strong> — ዓይነት፣ ስርዓተ ክወና። ለጥቃቅን ስህተቶች ምርመራ ብቻ።</li>
-        <li><strong>ማይክሮፎን</strong> — የድምጽ ምላሽ ሲሰጡ ብቻ ይሠራል። ድምጽ በGoogle Speech-to-Text ይሠራዋል፣ አናስቀምጥም።</li>
+        <li><strong>ቦታ (አማራጭ)</strong> — መተግበሪያው ሲጠይቅ ከፈቀዱ፣ መተግበሪያው ክፍት እያለ (ከበስተጀርባ በጭራሽ አይሰራም) የስልክዎን ቦታ ያነባል፣ ወደ ከተማ ስም ይለውጠዋል፣ እና መጋጠሚያዎቹንና ከተማውን ከስም-አልባ መለያዎ ጋር ያከማቻል። ይህንን የምንጠቀመው በአቅራቢያዎ ያሉ የመንዳት አስተማሪዎች ማስታወቂያዎችን የትኛውን እንደምናሳይ ለመምረጥ ብቻ ነው። እስካሁን ካልተጠየቁ፣ መተግበሪያው ከተማዎን ከ IP አድራሻዎ ብቻ ሊገምት ይችላል እና ያንን ከተማ ያከማቻል (የ IP አድራሻውን ራሱ አናስቀምጥም)። እምቢ ካሉ፣ ያ ግምት ይሰረዛል እና እንደገና ጥቅም ላይ አይውልም። ቦታን እምቢ ማለት እና ሙሉውን መተግበሪያ መጠቀም ይችላሉ።</li>
+        <li><strong>የምርመራ ሪፖርቶች</strong> — የሆነ ችግር ሲፈጠር (ለምሳሌ ድምጽ ሳይጫወት ሲቀር፣ ማውረድ ሲሳና ወይም መተግበሪያው ሲዘጋ)፣ መተግበሪያው አጭር የቴክኒክ ሪፖርት ወደ ሰርቨራችን ሊልክ ይችላል። የስህተት መልዕክቱን (የድር አድራሻዎች፣ ቁልፎች፣ ቶከኖች እና የኢሜል አድራሻዎች የግል ክፍሎች ተወግደው)፣ የተሳተፈው የድምጽ ፋይል ስም፣ የስልክዎ አምራች እና ሞዴል፣ የ Android እና የመተግበሪያ ስሪቶች፣ የአውታረ መረብ አይነት፣ በመስመር ላይ የነበሩበት ሁኔታ፣ እና ለዚያ ክፍለ ጊዜ የዘፈቀደ ኮድ ይዟል። ሪፖርት ከስም-አልባ መለያዎ ጋር ሊገናኝ ይችላል። ስምዎን፣ የግንኙነት መረጃዎን፣ የድምጽ ቅጂዎችዎን ወይም ቦታዎን አልያዘም።</li>
+        <li><strong>ማይክሮፎን</strong> — በድምጽ ለመመለስ የማይክሮፎን ቁልፍን ሲነኩ ብቻ ጥቅም ላይ ይውላል። ቅጂው የተናገሩትን ቁጥር ለመለየት በሰርቨራችን በኩል ወደ Google Cloud Speech-to-Text ይላካል። ቅጂዎችን አናስቀምጥም።</li>
+        <li><strong>“ለምን?” ማብራሪያዎች</strong> — ለመተግበሪያው አንድ መልስ ትክክል ወይም ስህተት የሆነው ለምን እንደሆነ እንዲያብራራ ሲጠይቁ፣ ጥያቄው እና መልሶቹ በማብራሪያውን ወደሚጽፈው የGoogle Gemini AI አገልግሎት በሰርቨራችን በኩል ይላካሉ። ስምዎ እና የግንኙነት መረጃዎ የዚህ ጥያቄ አካል በጭራሽ አይደሉም።</li>
       </ul>
     </div>
 
@@ -280,9 +310,19 @@
     </div>
 
     <div class="section">
+      <h2><span class="icon">🚗</span> የመንዳት አስተማሪ ማስታወቂያዎች</h2>
+      <p>
+        ከGoogle ማስታወቂያዎች በተጨማሪ፣ መተግበሪያው ከአካባቢው የመንዳት አስተማሪዎች ማስታወቂያዎችን ያሳያል። የትኞቹን ማሳየት እንዳለብን ለመምረጥ፣ የተቀመጠ ከተማዎን (ወይም ቦታን ከፈቀዱ፣ በአቅራቢያዎ ያለውን አስተማሪ በ30 km ውስጥ ለማግኘት መጋጠሚያዎችዎን) ከአስተማሪዎቹ ከተሞች ጋር እናነፃፅራለን። አስተማሪዎቹ ቦታዎን ወይም ሌላ ማንኛውንም መረጃ ከመተግበሪያው አይቀበሉም።
+      </p>
+    </div>
+
+    <div class="section">
       <h2><span class="icon">🎙️</span> የማይክሮፎን ፈቃድ</h2>
       <p>
         ማይክሮፎን ለሚጠቀሙ ተጠቃሚዎች (ሞተር A) የድምጽ ምላሽ ሲሰጡ ብቻ ጥቅም ላይ ይውላል። ፈቃዱን ሳይሰጡ ሙሉ መተግበሪያውን መጠቀም ይቻላል — የድምጽ ምላሽ ብቻ አይሠራም።
+      </p>
+      <p>
+        የድምጽ ኦዲዮ ለመለየት በሰርቨራችን በኩል ወደ Google Cloud Speech-to-Text ይላካል እና በእኛ አይቀመጥም ወይም አይመዘገብም።
       </p>
     </div>
 
@@ -293,6 +333,9 @@
         <li>ስም-አልባ እድገትዎን ወደ ደመና ማስቀመጥ</li>
         <li>Google Cloud TTS — አማርኛ ቃላቶችን ማሰማት</li>
         <li>Google AdMob — ማስታወቂያዎች</li>
+        <li>ከተማዎን ማግኘት፡ ከቦታዎ ከፈቀዱ፣ ወይም እስካሁን ካልተጠየቁ ከ IP አድራሻዎ ይገመታል።</li>
+        <li>ማብራሪያ ሲጠይቁ ጥያቄውን ወደ Google Gemini AI መላክ።</li>
+        <li>የሆነ ችግር ሲፈጠር አጭር የምርመራ ሪፖርቶችን መላክ።</li>
       </ul>
     </div>
 
@@ -303,6 +346,9 @@
         <li><strong>Google AdMob</strong> — ማስታወቂያ</li>
         <li><strong>Google Cloud Speech-to-Text</strong> — ድምጽ ማወቂያ</li>
         <li><strong>Google Cloud Text-to-Speech</strong> — ድምጽ ማመንጨት</li>
+        <li><strong>Google Maps Geocoding</strong> — መጋጠሚያዎችዎን ወደ ከተማ ስም ይለውጣል</li>
+        <li><strong>ipapi.co</strong> — የ IP አድራሻን ወደ ግምታዊ ከተማ ይለውጣል</li>
+        <li><strong>Google Gemini</strong> — የ"ለምን?" ማብራሪያዎችን ይጽፋል</li>
       </ul>
     </div>
 
@@ -314,10 +360,28 @@
     </div>
 
     <div class="section">
+      <h2><span class="icon">🔐</span> የመረጃ ደህንነት</h2>
+      <p>
+        በመተግበሪያው እና በሰርቨሮቻችን መካከል የሚላክ ሁሉም መረጃ በ HTTPS/TLS በመጠቀም የተመሰጠረ ነው። ስም-አልባ መለያዎች በዘፈቀደ የሚመነጩ ናቸው እና ስምዎን ወይም የግንኙነት መረጃዎን አልያዙም።
+      </p>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">🗓️</span> መረጃን ለምን ያህል ጊዜ እንደምናስቀምጥ</h2>
+      <ul>
+        <li>የትምህርት እድገት፣ ስም-አልባ መለያ እና የቦታ መረጃ እንድንሰርዛቸው እስኪጠይቁን ድረስ ይቀመጣሉ።</li>
+        <li>የምርመራ ሪፖርቶች ችግሮችን ለማግኘት እና ለማስተካከል በሚያስፈልገው ጊዜ ብቻ ይቀመጣሉ፣ እና ሲጠየቁ ይሰረዛሉ።</li>
+        <li>ቦታን እምቢ ካሉ፣ ከ IP አድራሻዎ የተገመተ ማንኛውም ከተማ ይሰረዛል እና እንደገና ጥቅም ላይ አይውልም።</li>
+        <li>የድምጽ ቅጂዎች አይቀመጡም።</li>
+      </ul>
+    </div>
+
+    <div class="section">
       <h2><span class="icon">🗑️</span> መብቶችዎ</h2>
       <ul>
-        <li><strong>መረጃዎን ሰርዙ</strong> — መተግበሪያውን ሲሰርዙ ሁሉም ስፍራዊ እድገት ይሰረዛሉ።</li>
+        <li><strong>መረጃዎን ሰርዙ</strong> — መተግበሪያውን ማራገፍ በአካባቢው የተቀመጠውን ሁሉንም የእድገት መረጃ ይሰርዛል። በሰርቨሮቻችን ላይ የተቀመጠውን መረጃ (ቦታ እና የምርመራ መረጃን ጨምሮ) እንዲሰረዝ ለመጠየቅ፣ ያግኙን።</li>
         <li><strong>ከማስታወቂያ ወጡ</strong> — በሞባይል ቅንብሮች።</li>
+        <li><strong>የቦታ መዳረሻን እምቢ ማለት ወይም ማንሳት</strong> — በማንኛውም ጊዜ በመሳሪያዎ ቅንብሮች ውስጥ። ሙሉው መተግበሪያ መስራቱን ይቀጥላል።</li>
         <li><strong>ማይክሮፎን ፈቃድ ሰርዙ</strong> — በቅንብሮች በማናቸውም ጊዜ።</li>
       </ul>
     </div>
