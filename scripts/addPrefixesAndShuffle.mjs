@@ -86,7 +86,11 @@ const updated = data.map(sign => {
       // Smart: avoid "ይህ ምልክት ይህ ምልክት" duplication
       let newCorrect;
       if (prefix === 'ትክክል! ይህ ምልክት ' && q.explanation_correct_amharic.startsWith('ይህ ምልክት')) {
-        newCorrect = 'ትክክل! ' + q.explanation_correct_amharic;
+        // The explanation already starts with the words that follow the prefix, so keep only the
+        // prefix's first word + '!'. Derived from the prefix itself: a previous version had this
+        // word typed by hand with an Arabic letter (U+0644) in place of the Ethiopic one, which
+        // put that wrong letter into the spoken 'correct!' of five signs (810, 813, 901, 913, 929).
+        newCorrect = prefix.slice(0, prefix.indexOf('!') + 1) + ' ' + q.explanation_correct_amharic;
       } else {
         newCorrect = prefix + q.explanation_correct_amharic;
       }
