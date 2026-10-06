@@ -13,6 +13,10 @@ import { supabase, DBTopic, DBSign, DBQuestion, DBExamSession, DBUserProgress, D
 import * as mockData from './mockData';
 import { getIsConnected } from '../hooks/useNetworkStatus';
 import { reportError } from '../services/errorReporter';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import * as Application from 'expo-application';
+import { createTopicsLoader } from './topicsLoader';
+import fallbackTopics from './fallbackTopics.json';
 
 // ─── Behavioral scaffold data (local JSON — no Supabase needed) ───────────────
 import vehicleKnowledgeScaffold from '../content/vehicle_knowledge_scaffold.json';
@@ -123,28 +127,62 @@ export interface UserStats {
 /**
  * Fetch all topics ordered by display_order.
  */
-export async function getTopics(): Promise<Topic[]> {
-  if (USE_MOCK) return mockData.topics;
+/**
+ * The topic list shipped inside the app: the bundled catalog plus the topics
+ * it predates. content/topics.json holds 15 topics while the server has 17
+ * (vehicle_knowledge, road_decisions are missing); that file also feeds the
+ * progress screen and the audio generator, so it is NOT edited — the missing
+ * ones live in backend/fallbackTopics.json and are only added here, where the
+ * app falls back to bundled data. Used only when neither the server nor a saved
+ * copy is available.
+ */
+function bundledTopics(): Topic[] {
+  const have = new Set(mockData.topics.map(t => t.id));
+  const extra = (fallbackTopics as Topic[]).filter(t => !have.has(t.id));
+  return [...mockData.topics, ...extra].sort((a, b) => a.display_order - b.display_order);
+}
 
-  try {
+// The saved copy is tied to the app build: after an update the first launch
+// asks the server instead of showing a list saved by an older version.
+const TOPICS_STORAGE_KEY = `topics_cache_v1:${Application.nativeBuildVersion ?? '0'}`;
+
+const topicsLoader = createTopicsLoader<Topic>({
+  fetchFromServer: async () => {
     const { data, error } = await supabase
       .from('topics')
       .select('*')
       .order('display_order');
-
     if (error) throw error;
-    return data ?? [];
-  } catch (err) {
-    logFallbackToMock('getTopics', err);
-    return mockData.topics; // Fallback to mock on error
-  }
+    if (!data || data.length === 0) throw new Error('server returned an empty topic list');
+    return data as Topic[];
+  },
+  readStored: async () => {
+    const raw = await AsyncStorage.getItem(TOPICS_STORAGE_KEY);
+    if (!raw) return null;
+    const parsed = JSON.parse(raw);
+    const ok = Array.isArray(parsed) && parsed.length > 0 &&
+      parsed.every((t: any) => t && typeof t.id === 'string' && typeof t.name_amharic === 'string' && typeof t.display_order === 'number');
+    return ok ? (parsed as Topic[]) : null;
+  },
+  writeStored: (topics) => AsyncStorage.setItem(TOPICS_STORAGE_KEY, JSON.stringify(topics)),
+  bundled:     bundledTopics,
+  onServerFailure: (err) => logFallbackToMock('getTopics', err),
+});
+
+/**
+ * Fetch all topics ordered by display_order. Instant after the first launch
+ * (saved copy, refreshed in the background); see backend/topicsLoader.ts.
+ */
+export async function getTopics(): Promise<Topic[]> {
+  if (USE_MOCK) return bundledTopics();
+  return topicsLoader.get();
 }
 
 /**
  * Fetch a single topic by ID.
  */
 export async function getTopic(topicId: string): Promise<Topic | null> {
-  if (USE_MOCK) return mockData.topics.find(t => t.id === topicId) ?? null;
+  if (USE_MOCK) return bundledTopics().find(t => t.id === topicId) ?? null;
 
   try {
     const { data, error } = await supabase
@@ -157,7 +195,7 @@ export async function getTopic(topicId: string): Promise<Topic | null> {
     return data;
   } catch (err) {
     logFallbackToMock('getTopic', err);
-    return mockData.topics.find(t => t.id === topicId) ?? null;
+    return bundledTopics().find(t => t.id === topicId) ?? null;
   }
 }
 

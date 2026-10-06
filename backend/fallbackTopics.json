@@ -1,0 +1,22 @@
+[
+  {
+    "id": "vehicle_knowledge",
+    "name_amharic": "መኪናን ማወቅ",
+    "name_hebrew": "הכרת הרכב",
+    "icon": "🔧",
+    "color": "#4527A0",
+    "description_amharic": "የመኪና ክፍሎች፣ መቆጣጠሪያ ሰሌዳ፣ መስተዋቶች፣ መቀመጫ ቀበቶ፣ መብራቶች፣ የጎማ ግፊት እና የፈሳሽ ምርመራ።",
+    "sign_count": 0,
+    "display_order": 10
+  },
+  {
+    "id": "road_decisions",
+    "name_amharic": "የመንገድ ላይ ውሳኔዎች",
+    "name_hebrew": "החלטות בדרך",
+    "icon": "🎯",
+    "color": "#2E7D32",
+    "description_amharic": "በመንገድ ላይ የሚያጋጥሙ ሁኔታዎችን በስዕል በማየት፣ ትክክለኛውን ውሳኔ መውሰድ።",
+    "sign_count": 0,
+    "display_order": 17
+  }
+]

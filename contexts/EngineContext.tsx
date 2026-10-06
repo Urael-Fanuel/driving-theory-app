@@ -29,6 +29,8 @@ import * as FileSystem from 'expo-file-system/legacy';
 import { supabase } from '../backend/supabaseClient';
 import * as api from '../backend/api';
 import { flushQueue } from '../utils/answerQueue';
+import { resolveUserId, generateUUID, isUUID } from '../services/identity';
+import { reportError } from '../services/errorReporter';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -82,54 +84,6 @@ async function writePrefs(prefs: StoredPrefs): Promise<void> {
   }
 }
 
-/** RFC 4122 v4 UUID — used as fallback when Supabase is not available */
-function generateUUID(): string {
-  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
-    const r = Math.random() * 16 | 0;
-    const v = c === 'x' ? r : (r & 0x3 | 0x8);
-    return v.toString(16);
-  });
-}
-
-/** Returns true if s looks like a valid UUID */
-function isUUID(s: string): boolean {
-  return /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(s);
-}
-
-/**
- * Resolve user ID via Supabase anonymous auth (preferred) or local UUID fallback.
- * Anonymous auth gives a real auth.uid() that satisfies RLS policies.
- */
-async function resolveUserId(storedId?: string): Promise<{ id: string; fromSupabase: boolean }> {
-  if (supabase && process.env.EXPO_PUBLIC_SUPABASE_URL) {
-    try {
-      // Re-use existing session if available (persists across restarts)
-      const { data: { session } } = await supabase.auth.getSession();
-      if (session?.user?.id) {
-        console.log('[EngineContext] Reusing Supabase anonymous session');
-        return { id: session.user.id, fromSupabase: true };
-      }
-
-      // Sign in anonymously — creates a new session stored by Supabase
-      const { data, error } = await supabase.auth.signInAnonymously();
-      if (!error && data?.user?.id) {
-        if (__DEV__) console.log('[EngineContext] Signed in anonymously:', data.user.id);
-        return { id: data.user.id, fromSupabase: true };
-      }
-      console.warn('[EngineContext] Anonymous sign-in failed:', error?.message);
-    } catch (err) {
-      console.warn('[EngineContext] Supabase auth error:', err);
-    }
-  }
-
-  // Fallback: use stored ID if it's a valid UUID, otherwise generate one
-  // Note: fromSupabase=false means upsertUser will be skipped (no valid auth session)
-  if (storedId && isUUID(storedId)) return { id: storedId, fromSupabase: false };
-  const newId = generateUUID();
-  console.log('[EngineContext] Using local UUID fallback:', newId);
-  return { id: newId, fromSupabase: false };
-}
-
 // ─── Context ──────────────────────────────────────────────────────────────────
 
 const EngineContext = createContext<EngineContextValue | null>(null);
@@ -151,9 +105,24 @@ export function EngineProvider({ children }: { children: ReactNode }) {
         if (prefs.engineType) setEngineTypeState(prefs.engineType);
         if (prefs.hasSeenDisclaimer) setHasSeenDisclaimer(true);
 
-        // Resolve userId via anonymous auth (or fallback UUID)
-        const { id: resolvedId, fromSupabase } = await resolveUserId(prefs.userId);
+        // A returning user already HAS an identity (the one saved last time):
+        // show the app at once and confirm the sign-in in the background,
+        // instead of holding the first screen for the network (a poor
+        // connection made it a long blank start). First launch has nothing
+        // saved, so it still waits, but with a deadline (services/identity.ts).
+        if (prefs.userId && isUUID(prefs.userId)) {
+          setUserId(prefs.userId);
+          setIsLoading(false);
+        }
+
+        // Resolve userId via anonymous auth (or the saved / a local UUID)
+        const { id: resolvedId, fromSupabase, note, createdNew } = await resolveUserId(prefs.userId);
         setUserId(resolvedId);
+        if (note) {
+          // Kept the saved identity because the server was slow or unreachable.
+          // Diagnostic only; no ids are recorded.
+          reportError('api', 'EngineContext.resolveUserId', `saved identity kept: ${note}`, undefined, { skipIfOffline: true });
+        }
 
         // Persist resolved userId (may differ from stored if session resumed)
         if (resolvedId !== prefs.userId) {
@@ -167,6 +136,9 @@ export function EngineProvider({ children }: { children: ReactNode }) {
               '[EngineContext] Supabase session was not resumed — got a new user_id ' +
               `(had ${prefs.userId}, now ${resolvedId}). Progress under the old id is orphaned.`
             );
+            // Also recorded (no ids), so how often a returning user really
+            // loses their account becomes a number instead of a guess.
+            reportError('api', 'EngineContext.resolveUserId', 'session not resumed: new anonymous user for a returning user', { created_new: !!createdNew });
           }
           await writePrefs({ ...prefs, userId: resolvedId });
         }
@@ -181,7 +153,8 @@ export function EngineProvider({ children }: { children: ReactNode }) {
         flushQueue().catch(() => {});
       } catch (err) {
         console.warn('[EngineContext] Failed to load prefs:', err);
-        setUserId(generateUUID());
+        // Keep an identity already shown to the user; only make one if none exists.
+        setUserId(prev => prev ?? generateUUID());
       } finally {
         setIsLoading(false);
       }

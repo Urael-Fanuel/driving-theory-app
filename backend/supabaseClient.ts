@@ -140,6 +140,66 @@ export interface Database {
   };
 }
 
+// ─── Network deadlines ────────────────────────────────────────────────────────
+//
+// React Native's fetch has NO timeout: on a poor or blocked connection a
+// request simply waits, and every screen waiting for it spins with it. Every
+// request the Supabase client makes goes through fetchWithDeadline instead, so
+// it either answers or fails in bounded time (the callers already fall back to
+// the data bundled in the app). The same wrapper applies to sign-in/token
+// refresh, which is what used to hold up the very first screen.
+//
+// After two data requests in a row time out, further data requests fail at
+// once for a short while instead of each making the user wait again; the
+// bundled data is used meanwhile. One success ends the pause.
+
+const DEADLINE_DATA_MS      = 15_000;   // table queries / RPC
+const DEADLINE_AUTH_MS      = 10_000;   // sign-in, token refresh
+const DEADLINE_FUNCTIONS_MS = 30_000;   // edge functions (speech, explanations)
+const BREAKER_TIMEOUTS      = 2;
+const BREAKER_PAUSE_MS      = 20_000;
+
+let _dataTimeouts = 0;
+let _dataPausedUntil = 0;
+
+export function fetchWithDeadline(input: any, init?: any): Promise<Response> {
+  const url: string = typeof input === 'string' ? input : (input?.url ?? String(input));
+  const isData = url.includes('/rest/v1/');
+  const ms = url.includes('/functions/v1/') ? DEADLINE_FUNCTIONS_MS
+           : url.includes('/auth/v1/')      ? DEADLINE_AUTH_MS
+           : DEADLINE_DATA_MS;
+
+  if (isData && Date.now() < _dataPausedUntil) {
+    return Promise.reject(new TypeError('Network request skipped: the server did not answer recently'));
+  }
+
+  const controller = new AbortController();
+  const outer: AbortSignal | undefined = init?.signal;
+  if (outer) {
+    if (outer.aborted) controller.abort();
+    else outer.addEventListener('abort', () => controller.abort(), { once: true });
+  }
+  let timedOut = false;
+  const timer = setTimeout(() => { timedOut = true; controller.abort(); }, ms);
+
+  return fetch(input, { ...init, signal: controller.signal }).then(
+    res => {
+      clearTimeout(timer);
+      if (isData) _dataTimeouts = 0;
+      return res;
+    },
+    err => {
+      clearTimeout(timer);
+      if (!timedOut) throw err;          // a real failure or the caller's own cancel
+      if (isData && ++_dataTimeouts >= BREAKER_TIMEOUTS) {
+        _dataPausedUntil = Date.now() + BREAKER_PAUSE_MS;
+        _dataTimeouts = 0;
+      }
+      throw new TypeError(`Network request timed out after ${ms / 1000}s`);
+    },
+  );
+}
+
 // ─── Client Singleton ─────────────────────────────────────────────────────────
 
 let _client: SupabaseClient<Database> | null = null;
@@ -165,6 +225,7 @@ export function getSupabaseClient(): SupabaseClient<Database> {
         autoRefreshToken:  true,
         detectSessionInUrl: false,
       },
+      global: { fetch: fetchWithDeadline as any },
     });
   }
   return _client;
