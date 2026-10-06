@@ -4,6 +4,7 @@
  */
 
 import React, { useEffect, useRef } from 'react';
+import { UiStrings } from '../../../constants/strings';
 import {
   View,
   Text,
@@ -199,7 +200,7 @@ export default function EngineBProgressScreen() {
           activeOpacity={0.85}
         >
           <MaterialCommunityIcons name="share-variant" size={22} color="#ffffff" />
-          <Text style={styles.shareButtonText}>שתף את האפליקציה</Text>
+          <Text style={styles.shareButtonText}>{UiStrings.shareApp}</Text>
         </TouchableOpacity>
 
         {/* Location recommendations — permanent low-friction entry point so a

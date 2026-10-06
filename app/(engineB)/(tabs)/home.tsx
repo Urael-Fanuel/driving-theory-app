@@ -11,6 +11,7 @@
  */
 
 import React, { useEffect, useRef, useState } from 'react';
+import { UiStrings } from '../../../constants/strings';
 import {
   View,
   Text,
@@ -153,7 +154,7 @@ export default function EngineBHomeScreen() {
           <TouchableOpacity
             onPress={handleShare}
             style={styles.shareButton}
-            accessibilityLabel="שתף"
+            accessibilityLabel={UiStrings.a11yShare}
           >
             <MaterialCommunityIcons name="share-variant" size={20} color="#ffffff" />
           </TouchableOpacity>

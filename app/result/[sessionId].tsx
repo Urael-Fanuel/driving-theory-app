@@ -9,6 +9,7 @@
  */
 
 import React, { useEffect, useRef, useState } from 'react';
+import { UiStrings } from '../../constants/strings';
 import {
   View,
   Text,
@@ -498,7 +499,7 @@ export default function ResultScreen() {
             >
               <MaterialCommunityIcons name="share-variant" size={24} color="#ffffff" />
               {!isEngineA && (
-                <Text style={styles.shareBtnText}>שתף את ההצלחה שלך!</Text>
+                <Text style={styles.shareBtnText}>{UiStrings.shareSuccess}</Text>
               )}
             </TouchableOpacity>
           </Animated.View>

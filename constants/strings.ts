@@ -85,3 +85,26 @@ export const Strings = {
   tryAgain:         'ዳግም ሞክር',
   topicBreakdown:   'በርዕስ ጉዳይ',
 } as const;
+
+/**
+ * Interface texts that were left in HEBREW on screens (found 2026-10-01): a
+ * user who reads only Amharic could not understand them, and the four a11y*
+ * labels are what the screen reader (TalkBack) says aloud for a button.
+ * Wording chosen by the app owner on 2026-10-06 from options written by Gemini
+ * (shareApp is the owner's own wording). Engine A screens only use the a11y*
+ * labels; the rest appear in Engine B and on the shared result screen.
+ */
+export const UiStrings = {
+  levelsHeader:  (n: number) => "" + n + " የትምህርት ደረጃዎች • ከመሰረቱ ጀምሮ",
+  topicCount:    (n: number) => "" + n + " ርዕሰ ጉዳዮች",
+  underDevTitle: "በሂደት",
+  underDevBody:  "ይህ ይዘት በልማት ላይ ነው።",
+  backToList:    "ወደ ዝርዝሩ ተመለስ",
+  topicLabel:    "ርዕሰ ጉዳይ",
+  shareApp:      "አፕሊኬሽኑን ለሌሎች አጋሩ",
+  shareSuccess:  "ስኬትዎን ያጋሩ",
+  a11yBack:      "ተመለስ",
+  a11yShare:     "ማጋራት",
+  a11yLevel:     (n: number | string) => "ደረጃ " + n + "",
+  a11yTopicQuiz: "የርዕሰ ጉዳዩ ፈተና",
+} as const;

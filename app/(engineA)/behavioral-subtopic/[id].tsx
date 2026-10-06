@@ -24,6 +24,7 @@
  */
 
 import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { UiStrings } from '../../../constants/strings';
 import {
   View,
   Text,
@@ -505,7 +506,7 @@ export default function BehavioralSubtopicScreenA() {
           <TouchableOpacity
             style={styles.backButtonProminent}
             onPress={handleBack}
-            accessibilityLabel="חזור"
+            accessibilityLabel={UiStrings.a11yBack}
             activeOpacity={0.8}
           >
             <Text style={styles.backIconProminent}>←</Text>
@@ -575,7 +576,7 @@ export default function BehavioralSubtopicScreenA() {
         <TouchableOpacity
           style={styles.backButtonFloating}
           onPress={handleBack}
-          accessibilityLabel="חזור"
+          accessibilityLabel={UiStrings.a11yBack}
           activeOpacity={0.8}
         >
           <Text style={styles.backIconProminent}>←</Text>

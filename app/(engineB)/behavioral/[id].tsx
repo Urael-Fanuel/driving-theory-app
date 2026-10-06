@@ -8,6 +8,7 @@
  */
 
 import React, { useState } from 'react';
+import { UiStrings } from '../../../constants/strings';
 import {
   View,
   Text,
@@ -113,12 +114,12 @@ export default function BehavioralTopicScreenB() {
           <TouchableOpacity style={styles.backButton} onPress={() => router.back()}>
             <Text style={styles.backIcon}>←</Text>
           </TouchableOpacity>
-          <Text style={styles.headerTitle}>בפיתוח</Text>
+          <Text style={styles.headerTitle}>{UiStrings.underDevTitle}</Text>
           <View style={{ width: 44 }} />
         </View>
         <View style={styles.comingSoon}>
           <Text style={styles.comingSoonIcon}>🚧</Text>
-          <Text style={styles.comingSoonText}>תוכן זה בפיתוח</Text>
+          <Text style={styles.comingSoonText}>{UiStrings.underDevBody}</Text>
           <Text style={styles.comingSoonSub}>Coming soon</Text>
         </View>
       </SafeAreaView>
@@ -175,7 +176,7 @@ export default function BehavioralTopicScreenB() {
               {displayName}
             </Text>
             <Text style={styles.levelSubCount}>
-              {item.subtopics.length} נושאים
+              {UiStrings.topicCount(item.subtopics.length)}
             </Text>
           </View>
 
@@ -249,7 +250,7 @@ export default function BehavioralTopicScreenB() {
       {/* Progress hint */}
       <View style={styles.progressHint}>
         <Text style={styles.progressHintText}>
-          {data.levels.length} שלבי למידה • מתחילים מהבסיס
+          {UiStrings.levelsHeader(data.levels.length)}
         </Text>
       </View>
 

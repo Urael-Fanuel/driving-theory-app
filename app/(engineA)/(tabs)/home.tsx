@@ -17,6 +17,7 @@
  */
 
 import React, { useEffect, useRef, useState } from 'react';
+import { UiStrings } from '../../../constants/strings';
 
 // ─── Audio base URL (Supabase Storage) ────────────────────────────────────────
 const _AUDIO_BASE = (process.env.EXPO_PUBLIC_SUPABASE_URL ?? '') + '/storage/v1/object/public/audio';
@@ -191,7 +192,7 @@ export default function EngineAHomeScreen() {
           <TouchableOpacity
             onPress={handleShare}
             style={styles.replayButton}
-            accessibilityLabel="שתף"
+            accessibilityLabel={UiStrings.a11yShare}
           >
             <MaterialCommunityIcons name="share-variant" size={22} color="#ffffff" />
           </TouchableOpacity>

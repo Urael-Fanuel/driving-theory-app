@@ -8,6 +8,7 @@
  */
 
 import React, { useState } from 'react';
+import { UiStrings } from '../../../constants/strings';
 import {
   View,
   Text,
@@ -154,7 +155,7 @@ export default function BehavioralTopicScreenA() {
           ]}
           onPress={() => handleLevelPress(item)}
           activeOpacity={0.8}
-          accessibilityLabel={`שלב ${item.level}`}
+          accessibilityLabel={UiStrings.a11yLevel(item.level)}
         >
           {/* Level number */}
           <View style={[styles.levelBadge, { backgroundColor: item.color }]}>
@@ -240,7 +241,7 @@ export default function BehavioralTopicScreenA() {
                 style={styles.quizButton}
                 onPress={() => router.push(`/(engineA)/topic-quiz/${data.topicId}` as any)}
                 activeOpacity={0.85}
-                accessibilityLabel="מבחן נושא"
+                accessibilityLabel={UiStrings.a11yTopicQuiz}
               >
                 <Text style={styles.quizButtonIcon}>📝</Text>
               </TouchableOpacity>

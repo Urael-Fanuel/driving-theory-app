@@ -26,6 +26,7 @@
  */
 
 import React, { useState, useEffect, useCallback, useRef } from 'react';
+import { UiStrings } from '../../../constants/strings';
 import {
   View,
   Text,
@@ -328,7 +329,7 @@ export default function BehavioralSubtopicScreenB() {
           <TouchableOpacity
             style={styles.backBtnProminent}
             onPress={handleBack}
-            accessibilityLabel="חזור"
+            accessibilityLabel={UiStrings.a11yBack}
             activeOpacity={0.8}
           >
             <Text style={styles.backIconProminent}>←</Text>
@@ -548,7 +549,7 @@ export default function BehavioralSubtopicScreenB() {
                 ) : (
                   <Text style={{ fontSize: 36 }}>{subtopic.icon}</Text>
                 )}
-                <Text style={styles.signThumbLabel}>נושא</Text>
+                <Text style={styles.signThumbLabel}>{UiStrings.topicLabel}</Text>
               </TouchableOpacity>
 
               <TouchableOpacity
@@ -576,7 +577,7 @@ export default function BehavioralSubtopicScreenB() {
             onPress={handleBack}
             activeOpacity={0.85}
           >
-            <Text style={styles.continueBtnText}>← חזור לרשימה</Text>
+            <Text style={styles.continueBtnText}>← {UiStrings.backToList}</Text>
           </TouchableOpacity>
         </View>
       )}
