@@ -17,7 +17,7 @@ import { useState, useCallback, useEffect, useRef } from 'react';
 import { DBQuestion } from '../backend/supabaseClient';
 import * as api from '../backend/api';
 import { useEngine } from '../contexts/EngineContext';
-import { enqueue, dequeue } from '../utils/answerQueue';
+import { saveAnswerKept } from '../utils/answerQueue';
 import { prefetchQuestionAudio, releaseQuestionAudio } from '../services/audioCache';
 import { collectTtsTexts, prefetchTtsForTexts } from '../utils/googleTTS';
 
@@ -185,16 +185,14 @@ export function useExam(): UseExamReturn {
     if (__DEV__) console.log('[useExam] userId:', userId);
     if (userId) {
       setIsSaving(true);
-      enqueue({ userId, questionId: question.id, isCorrect })
-        .then(queueId =>
-          // Pass queueId as the submission id — if this save succeeds but the
-          // app never gets to persist the dequeue() (crash/kill right after),
-          // flushQueue() will replay this exact answer on next launch under
-          // the SAME id, so the server recognizes it as already-applied
-          // instead of counting it a second time.
-          api.saveAnswer(userId, question.id, isCorrect, 3, queueId)
-            .then(() => dequeue(queueId))
-        )
+      // Kept on the phone, sent, and removed only once SAVED (utils/answerQueue.ts
+      // saveAnswerKept). The queue id is the submission id, so a replay after a
+      // crash right after a successful save is not counted twice. An answer used
+      // to be removed whatever happened, so an exam answered offline was lost
+      // (CODEX QA 2026-10-08, Q09); not saved, it is sent again on reconnect / a
+      // slow timer (R8) or at the next app start. If the phone cannot write the
+      // queue file (storage full), it is still sent now (round 3).
+      saveAnswerKept(userId, question.id, isCorrect)
         .catch(err => console.warn('[useExam] save failed:', err))
         .finally(() => setTimeout(() => setIsSaving(false), 800));
     }

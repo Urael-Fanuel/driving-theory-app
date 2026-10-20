@@ -12,6 +12,7 @@
 import { useState, useCallback, useRef, useEffect } from 'react';
 import { useEngine } from '../contexts/EngineContext';
 import * as api from '../backend/api';
+import { saveAnswerKept, saveSignViewKept } from '../utils/answerQueue';
 import topicsRaw  from '../content/topics.json';
 import signsRaw   from '../content/signs.json';
 
@@ -134,9 +135,10 @@ export function useProgress(): UseProgressReturn {
     });
     refresh();
 
-    // Persist to Supabase
+    // Persist to Supabase, kept on the phone until the server has it (a sign
+    // viewed offline used to be lost; CODEX QA round 3).
     if (userId) {
-      api.recordSignView(userId, signId, videoCompleted).catch(() => {});
+      saveSignViewKept(userId, signId, videoCompleted).catch(() => {});
     }
   }, [userId, signViews, refresh]);
 
@@ -163,9 +165,10 @@ export function useProgress(): UseProgressReturn {
     });
     refresh();
 
-    // Persist to Supabase
+    // Persist to Supabase, kept on the phone until the server has it (an
+    // answer given offline used to be lost; CODEX QA round 3).
     if (userId) {
-      api.saveAnswer(userId, questionId, isCorrect).catch(() => {});
+      saveAnswerKept(userId, questionId, isCorrect).catch(() => {});
     }
   }, [userId, questionMap, refresh]);
 

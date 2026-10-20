@@ -18,6 +18,7 @@ import { useState, useCallback, useEffect, useRef } from 'react';
 import { DBQuestion } from '../backend/supabaseClient';
 import * as api from '../backend/api';
 import { useEngine } from '../contexts/EngineContext';
+import { saveAnswerKept } from '../utils/answerQueue';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -100,9 +101,10 @@ export function usePracticeWeak(questionIds: string[]): UsePracticeWeakReturn {
     setSelectedAnswerId(answerId);
     setPhase(isCorrect ? 'feedback_correct' : 'feedback_wrong');
 
-    // Save to backend
+    // Save to backend, kept on the phone until the server has it (an answer
+    // given offline used to be lost; CODEX QA round 3).
     if (userId) {
-      api.saveAnswer(userId, currentQuestion.id, isCorrect).catch(() => {});
+      saveAnswerKept(userId, currentQuestion.id, isCorrect).catch(() => {});
     }
   }, [currentQuestion, phase, userId]);
 

@@ -18,7 +18,8 @@ function load(p, mods = {}, extraCtx = {}) {
 
 (async () => {
   // ───────────────────────── A. topics loader ─────────────────────────
-  const { createTopicsLoader } = load('backend/topicsLoader.ts');
+  // topicsLoader now uses timers itself (first-launch wait, CODEX QA Q10)
+  const { createTopicsLoader } = load('backend/topicsLoader.ts', {}, { setTimeout, clearTimeout });
   const T = n => Array.from({ length: n }, (_, i) => ({ id: 't' + i }));
   const mk = (o = {}) => {
     const calls = { server: 0, write: 0, failure: [] };
@@ -160,4 +161,4 @@ function load(p, mods = {}, extraCtx = {}) {
   net.mode = 'hang'; await FT.advance(25_000); net.calls.length = 0;
   const ac = new AbortController(); p = df(D, { signal: ac.signal }).then(() => 'resolved', e => e.name); ac.abort(); await settle();
   console.log('C7 the caller\'s own cancel still works', ok((await p) === 'AbortError' && net.calls[0].signal.aborted));
-})().catch(e => console.log('TEST ERROR', e));
+})().catch(e => { console.log('TEST ERROR', e); process.exitCode = 1; });

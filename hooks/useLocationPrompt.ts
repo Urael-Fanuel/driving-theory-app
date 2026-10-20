@@ -47,6 +47,20 @@ const RE_ASK_AFTER_QUIZZES = 7;
 /** Total automatic prompts allowed: the first ask + the one re-ask. */
 const MAX_AUTO_ASKS = 2;
 
+/**
+ * Told the moment the user says "not now", after it is saved (so
+ * getLocationConsentState() already answers 'declined'), with the user's id.
+ * useSponsorAd uses it to drop an ad that was matched on the IP city,
+ * including one already on screen or still on its way (CODEX QA 2026-10-08,
+ * R7), and to keep wiping the IP city until the server confirms it, also when
+ * "not now" was pressed on a screen with no ad (CODEX QA round 3, S1).
+ */
+const _declineListeners = new Set<(userId: string | null) => void>();
+export function onLocationDeclined(fn: (userId: string | null) => void): () => void {
+  _declineListeners.add(fn);
+  return () => { _declineListeners.delete(fn); };
+}
+
 interface LocationPrefs {
   /** How many times the user dismissed with "not now". */
   notNowCount?: number;
@@ -173,10 +187,13 @@ export function useLocationPrompt(userId: string | null): UseLocationPromptRetur
       const prefs = await readPrefs();
       const notNowCount = (prefs.notNowCount ?? 0) + 1;
       await writePrefs({ ...prefs, notNowCount, quizzesSincePrompt: 0 });
+      // Tell useSponsorAd at once: an ad matched on the IP city must go.
+      _declineListeners.forEach(fn => { try { fn(userId); } catch {} });
       // An explicit "no" must win over anything collected before this
       // decision — wipe any IP-derived city (see getLocationConsentState
-      // and getSponsorAd's tier-3 fallback below).
-      if (userId) await clearUserIpCity(userId).catch(() => {});
+      // and getSponsorAd's tier-3 fallback below). If this fails (no
+      // connection), useSponsorAd tries again until the server confirms it.
+      if (userId) await clearUserIpCity(userId).catch(() => false);
     })().catch(() => {});
   }, [userId]);
 

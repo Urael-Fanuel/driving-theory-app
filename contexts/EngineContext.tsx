@@ -30,6 +30,8 @@ import { supabase } from '../backend/supabaseClient';
 import * as api from '../backend/api';
 import { flushQueue } from '../utils/answerQueue';
 import { resolveUserId, generateUUID, isUUID } from '../services/identity';
+import { startIdentityRecovery } from '../services/identityRecovery';
+import { onConnectivityChange } from '../hooks/useNetworkStatus';
 import { reportError } from '../services/errorReporter';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -63,6 +65,8 @@ interface StoredPrefs {
   engineType?: EngineType;
   userId?: string;
   hasSeenDisclaimer?: boolean;
+  /** true = userId was made on this phone and never had a server account. */
+  userIdIsLocal?: boolean;
 }
 
 async function readPrefs(): Promise<StoredPrefs> {
@@ -98,6 +102,27 @@ export function EngineProvider({ children }: { children: ReactNode }) {
 
   // ── Load persisted prefs + resolve userId on mount ──────────────────────────
   useEffect(() => {
+    let stopRecovery: (() => void) | null = null;
+    let unmounted = false;
+
+    /**
+     * Switch to the user's server account once recovery found it (see
+     * services/identityRecovery.ts), then send the answers kept on the phone
+     * under it (flushQueue moves them to this id first).
+     */
+    const adoptServerIdentity = async (serverId: string, previousId: string) => {
+      if (unmounted) return;
+      if (serverId !== previousId) {
+        setUserId(serverId);
+        // Diagnostic only; no ids are recorded.
+        reportError('api', 'EngineContext.recovery', 'switched to the server account after a slow or offline start', undefined, { skipIfOffline: true });
+      }
+      const latest = await readPrefs();
+      await writePrefs({ ...latest, userId: serverId, userIdIsLocal: undefined });
+      if (latest.engineType) api.upsertUser(serverId, latest.engineType).catch(() => {});
+      flushQueue(serverId).catch(() => {});
+    };
+
     (async () => {
       try {
         const prefs = await readPrefs();
@@ -116,7 +141,10 @@ export function EngineProvider({ children }: { children: ReactNode }) {
         }
 
         // Resolve userId via anonymous auth (or the saved / a local UUID)
-        const { id: resolvedId, fromSupabase, note, createdNew } = await resolveUserId(prefs.userId);
+        const { id: resolvedId, fromSupabase, note, createdNew, lateSignIn } = await resolveUserId(prefs.userId);
+        // An id made on this phone that never had a server account: now (first
+        // start without a usable connection), or kept from such a start earlier.
+        const localOnly = !fromSupabase && (!prefs.userId || prefs.userIdIsLocal === true);
         setUserId(resolvedId);
         if (note) {
           // Kept the saved identity because the server was slow or unreachable.
@@ -125,13 +153,14 @@ export function EngineProvider({ children }: { children: ReactNode }) {
         }
 
         // Persist resolved userId (may differ from stored if session resumed)
-        if (resolvedId !== prefs.userId) {
+        if (resolvedId !== prefs.userId || !!prefs.userIdIsLocal !== localOnly) {
           // A returning user (prefs.userId already set) getting a DIFFERENT
           // Supabase-backed id means the persisted auth session was NOT
           // found — i.e. the exact failure mode this file's header comment
           // warns about. Not fatal (the new id still works), but it silently
           // orphans that user's server-side progress, so it must be visible.
-          if (prefs.userId && fromSupabase) {
+          // (Not when the old id was only ever a local one: nothing is lost.)
+          if (prefs.userId && resolvedId !== prefs.userId && fromSupabase && !prefs.userIdIsLocal) {
             console.warn(
               '[EngineContext] Supabase session was not resumed — got a new user_id ' +
               `(had ${prefs.userId}, now ${resolvedId}). Progress under the old id is orphaned.`
@@ -140,7 +169,7 @@ export function EngineProvider({ children }: { children: ReactNode }) {
             // loses their account becomes a number instead of a guess.
             reportError('api', 'EngineContext.resolveUserId', 'session not resumed: new anonymous user for a returning user', { created_new: !!createdNew });
           }
-          await writePrefs({ ...prefs, userId: resolvedId });
+          await writePrefs({ ...prefs, userId: resolvedId, userIdIsLocal: localOnly || undefined });
         }
 
         // Ensure user row exists in DB — only when Supabase auth succeeded
@@ -149,8 +178,20 @@ export function EngineProvider({ children }: { children: ReactNode }) {
           api.upsertUser(resolvedId, prefs.engineType).catch(() => {});
         }
 
-        // Flush any answers that were saved locally but not yet sent to Supabase
-        flushQueue().catch(() => {});
+        if (fromSupabase) {
+          // Send the answers kept on the phone, under this account (entries
+          // recorded under an older or local id are moved to it first).
+          flushQueue(resolvedId).catch(() => {});
+        } else if (supabase && process.env.EXPO_PUBLIC_SUPABASE_URL && !unmounted) {
+          // No confirmed account yet (slow or no connection). Sending now would
+          // only be refused; find the account first, then send
+          // (CODEX QA 2026-10-08, Q09).
+          stopRecovery = startIdentityRecovery(
+            { currentId: resolvedId, localOnly, lateSignIn,
+              onAdopt: serverId => { void adoptServerIdentity(serverId, resolvedId); } },
+            { auth: supabase.auth as any, onConnectivityChange },
+          );
+        }
       } catch (err) {
         console.warn('[EngineContext] Failed to load prefs:', err);
         // Keep an identity already shown to the user; only make one if none exists.
@@ -159,6 +200,11 @@ export function EngineProvider({ children }: { children: ReactNode }) {
         setIsLoading(false);
       }
     })();
+
+    return () => {
+      unmounted = true;
+      stopRecovery?.();
+    };
   }, []);
 
   // ── Set engine + persist + register user in DB ───────────────────────────────

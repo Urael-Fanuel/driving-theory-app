@@ -90,5 +90,13 @@ function setup(opts = {}) {
   console.log('5 cancelled request: result =', ok5, '| alive =', t.created.filter(s => !s.unloaded).length, ok5 === true && t.created.filter(s => !s.unloaded).length === 0 ? ' OK' : ' FAIL');
 })().catch(e => { console.log('TEST ERROR', e); });
 
-// Test 3 awaits a clip that never "finishes" in the fake; give it a result by timing out the test cleanly.
-setTimeout(() => process.exit(0), 4000);
+// The audio module arms 150 s safety timers, which would keep this process alive; end it after 4 s.
+// It used to exit with SUCCESS whatever happened (CODEX QA 2026-10-08); now it fails if any line
+// failed, if the test errored, or if the scenarios did not all finish in time.
+const _log = console.log; let _bad = 0, _lines = 0;
+console.log = (...a) => { const t = a.join(' '); _lines++; if (/FAIL|TEST ERROR/.test(t)) _bad++; _log(...a); };
+setTimeout(() => {
+  if (_lines < 5) { _log('TEST ERROR: only ' + _lines + ' of 5 scenarios finished within 4 s'); process.exit(1); }
+  _log(_bad ? '\n' + _bad + ' FAILED' : '\nALL PASSED');
+  process.exit(_bad ? 1 : 0);
+}, 4000);

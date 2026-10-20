@@ -43,19 +43,51 @@ export function getIsTTSSpeaking(): boolean {
   return _isTTSSpeaking;
 }
 
+/**
+ * Switch the speaking state off, but only for the request that owns playback
+ * now. A request that was replaced (or stopped) must leave the state alone: the
+ * newer one may already be speaking, and an old request reaching one of its exit
+ * paths late used to switch it off over a live voice (CODEX QA 2026-10-08, R1).
+ */
+function _stopSpeakingIfMine(generation: number): void {
+  if (_ttsGeneration === generation) _emitSpeaking(false);
+}
+
 // ─── Core controls ────────────────────────────────────────────────────────────
 
-export async function stopTTS(): Promise<void> {
-  _ttsGeneration++;   // Invalidate any in-flight speakAndAwait / playUrlAndAwait
+/**
+ * Take ownership of TTS playback. Synchronous on purpose, like _claim() in
+ * hooks/useAudio.ts: the generation is taken BEFORE any await. Two requests
+ * that started together used to capture it only after awaiting stopTTS(), so
+ * both got the same number, both played, and stopTTS() could stop only one of
+ * them (CODEX QA 2026-10-08, Q01).
+ *
+ * Also lets any caller still waiting go, and hands back the sound playing now,
+ * which the caller must stop with _releaseTTS(). currentSound is read here and
+ * never after an await, so a stop that is still finishing can never stop or
+ * unload a sound that started after it.
+ */
+function _claimTTS(): { generation: number; previous: Sound | null } {
+  const generation = ++_ttsGeneration;   // invalidates every in-flight request
+  const previous   = currentSound;
+  currentSound = null;
   _emitSpeaking(false);
   // Resolve any pending speakAndAwait / playUrlAndAwait so the sequence exits
   const res = pendingResolve;
   pendingResolve = null;
   res?.();
+  return { generation, previous };
+}
 
-  try { await currentSound?.stopAsync(); } catch {}
-  try { await currentSound?.unloadAsync(); } catch {}
-  currentSound = null;
+async function _releaseTTS(previous: Sound | null): Promise<void> {
+  if (!previous) return;
+  try { await previous.stopAsync();   } catch {}
+  try { await previous.unloadAsync(); } catch {}
+}
+
+export async function stopTTS(): Promise<void> {
+  const { previous } = _claimTTS();
+  await _releaseTTS(previous);
 }
 
 export async function pauseTTS(): Promise<void> {
@@ -69,16 +101,41 @@ export async function resumeTTS(): Promise<void> {
 // ─── Internal helper ──────────────────────────────────────────────────────────
 
 /**
+ * How a wait ended:
+ *   'done'    — the clip played to the end (or it was audibly playing and only
+ *               the finish callback went missing),
+ *   'stopped' — stopTTS() or a newer request ended it on purpose,
+ *   'failed'  — the user heard nothing: an error after loading, or no sound
+ *               at all before the safety clock ran out.
+ * 'failed' must never be reported as success: the caller would move on as if
+ * the sentence had been heard (CODEX QA 2026-10-08, Q04).
+ */
+type SoundOutcome = 'done' | 'stopped' | 'failed';
+
+/** Margin on top of a clip's own length before the safety clock gives up on it. */
+const SAFETY_MARGIN_MS = 15_000;
+
+/**
  * Attach a playback-finish listener and return a promise that resolves when:
  *   (a) the sound finishes naturally (didJustFinish), OR
  *   (b) stopTTS() is called externally (pendingResolve is resolved from outside),
- *   (c) safety timeout fires (maxMs) — prevents ANR if didJustFinish never fires
- *       on certain Android devices (known expo-av edge case).
+ *   (c) the safety clock runs out — prevents a permanent wait if didJustFinish
+ *       never fires on certain Android devices.
+ *
+ * The safety clock is the clip's own length plus a margin once that length is
+ * known (never less than maxMs). It used to be a flat 30 s, which cut every
+ * longer reading off mid-sentence, e.g. a "why?" explanation of up to 950
+ * characters (about two minutes).
  */
-function awaitSound(sound: Sound, maxMs = 30_000): Promise<void> {
-  return new Promise<void>((resolve) => {
+function awaitSound(sound: Sound, maxMs = 30_000): Promise<SoundOutcome> {
+  return new Promise<SoundOutcome>((resolve) => {
     let settled = false;
     let safetyTimer: ReturnType<typeof setTimeout> | undefined;
+    let armedFor    = 0;       // the budget the running safety clock was given
+    let everPlayed  = false;   // did a status ever say it is actually playing?
+    let durationMs  = 0;
+    let positionMs  = 0;
+    let lastStalled = false;   // the last status said it was stuck (buffering / not playing)
 
     /**
      * Ends THIS wait, and only this one.
@@ -97,40 +154,68 @@ function awaitSound(sound: Sound, maxMs = 30_000): Promise<void> {
      * both impossible: a stale clip can only ever end its own wait, and can
      * never touch a newer clip's state.
      */
-    const finish = () => {
+    const finish = (outcome: SoundOutcome) => {
       if (settled) return;
       settled = true;
       if (safetyTimer) clearTimeout(safetyTimer);
       // Detach first: a unloaded/stopped sound can still emit one last status.
       try { sound.setOnPlaybackStatusUpdate(null); } catch {}
       // Only release the shared slot / current sound if they are still OURS.
-      if (pendingResolve === finish) pendingResolve = null;
-      if (currentSound === sound)    currentSound = null;
+      if (pendingResolve === stopWait) pendingResolve = null;
+      if (currentSound === sound)       currentSound = null;
       sound.unloadAsync().catch(() => {});
-      resolve();
+      resolve(outcome);
     };
+    const stopWait = () => finish('stopped');
 
-    pendingResolve = finish;
+    pendingResolve = stopWait;
 
-    // Safety: resolve after maxMs of PLAYING time — prevents a permanent hang
-    // (ANR) if didJustFinish never arrives. The clock is held while Android has
-    // paused the sound (phone call, another app) and restarts on resume;
-    // otherwise a call longer than maxMs ended the sentence unheard and the
-    // lesson walked on.
-    const armSafety  = () => { if (!safetyTimer && !settled) safetyTimer = setTimeout(finish, maxMs); };
-    const holdSafety = () => { if (safetyTimer) { clearTimeout(safetyTimer); safetyTimer = undefined; } };
+    // Safety: give up after the clip's own length plus a margin of PLAYING time
+    // (maxMs until the length is known). The clock is held while the sound is
+    // paused (by Android during a phone call / another app, or by the user) and
+    // restarts on resume; otherwise a call longer than the budget ended the
+    // sentence unheard and the lesson walked on. Running out after the clip was
+    // audibly playing means the finish callback was dropped: it was heard.
+    // Running out with no sound ever: nothing was heard.
+    const budget = () => durationMs > 0
+      ? Math.max(maxMs, durationMs - positionMs + SAFETY_MARGIN_MS)
+      : maxMs;
+    // Running out after it played counts as heard when it got (nearly) to its
+    // end, or when the last word from the player was that it was playing (the
+    // callbacks simply stopped arriving). When the last word was that it was
+    // stuck part-way (buffering), it was not heard to the end: a failure
+    // (CODEX QA 2026-10-08, R2). Same rule as hooks/useAudio.ts.
+    const reachedEnd = () => durationMs > 0 && durationMs - positionMs <= Math.max(3_000, durationMs * 0.1);
+    const onSafety   = () => { safetyTimer = undefined; finish(everPlayed && (reachedEnd() || !lastStalled) ? 'done' : 'failed'); };
+    const armSafety  = () => {
+      if (settled) return;
+      const want = budget();
+      if (safetyTimer && armedFor >= want) return;   // already armed with enough
+      if (safetyTimer) clearTimeout(safetyTimer);
+      armedFor    = want;
+      safetyTimer = setTimeout(onSafety, want);
+    };
+    const holdSafety = () => { if (safetyTimer) { clearTimeout(safetyTimer); safetyTimer = undefined; armedFor = 0; } };
     armSafety();
 
     sound.setOnPlaybackStatusUpdate((s) => {
-      if (!s.isLoaded) return;
-      if (s.didJustFinish) {
-        finish();
+      if (!s.isLoaded) {
+        // Was playing, then stopped by an error (see services/sound.ts).
+        if (s.error) finish('failed');
         return;
       }
-      if (s.interrupted) {
-        // Show ▶️ instead of ⏸ over silence while Android holds the audio.
+      if (s.durationMillis) durationMs = s.durationMillis;
+      positionMs = s.positionMillis ?? 0;
+      lastStalled = !!s.isBuffering || (!s.isPlaying && !!s.shouldPlay && !s.interrupted && !s.didJustFinish);
+      if (s.isPlaying || positionMs > 0) everPlayed = true;
+      if (s.didJustFinish) {
+        finish('done');
+        return;
+      }
+      if (s.interrupted || !s.shouldPlay) {
         holdSafety();
-        if (currentSound === sound && _isTTSSpeaking) _emitSpeaking(false);
+        // Show ▶️ instead of ⏸ over silence while Android holds the audio.
+        if (s.interrupted && currentSound === sound && _isTTSSpeaking) _emitSpeaking(false);
       } else if (s.isPlaying) {
         armSafety();
         if (currentSound === sound && !_isTTSSpeaking) _emitSpeaking(true);
@@ -144,13 +229,14 @@ function awaitSound(sound: Sound, maxMs = 30_000): Promise<void> {
 /** Play a pre-recorded audio URL and await completion.
  *  Returns true if audio played successfully, false if it failed. */
 export async function playUrlAndAwait(url: string): Promise<boolean> {
-  await stopTTS();
-  const myGeneration = _ttsGeneration;  // Capture AFTER stopTTS increments it
+  const { generation: myGeneration, previous } = _claimTTS();   // FIRST, before any await
+  await _releaseTTS(previous);
+  if (_ttsGeneration !== myGeneration) return false;   // replaced while the old clip was stopping
   try {
     _emitSpeaking(true);
     await applyAudioMode();
     const { sound } = await Sound.createAsync({ uri: url });
-    if (_ttsGeneration !== myGeneration) { sound.unloadAsync().catch(() => {}); _emitSpeaking(false); return false; }
+    if (_ttsGeneration !== myGeneration) { sound.unloadAsync().catch(() => {}); _stopSpeakingIfMine(myGeneration); return false; }
     currentSound = sound;
     await sound.playAsync();
     // stopTTS() can land in the gap between the check above and playback
@@ -160,18 +246,26 @@ export async function playUrlAndAwait(url: string): Promise<boolean> {
       sound.stopAsync().catch(() => {});
       sound.unloadAsync().catch(() => {});
       if (currentSound === sound) currentSound = null;
-      _emitSpeaking(false);
+      _stopSpeakingIfMine(myGeneration);
       return false;
     }
-    await awaitSound(sound);
-    _emitSpeaking(false);
+    const outcome = await awaitSound(sound);
+    // A newer request owns the speaking state now; don't switch it off.
+    _stopSpeakingIfMine(myGeneration);
+    if (outcome === 'failed') {
+      if (_ttsGeneration === myGeneration) {
+        reportError('audio', 'playUrlAndAwait:playback', 'stopped by an error or never made a sound',
+          describeUri(url), { localUri: url });
+      }
+      return false;
+    }
     return true;
   } catch (e) {
     console.warn('[googleTTS] playUrlAndAwait error:', e);
     if (_ttsGeneration === myGeneration) {  // not when stopTTS() cancelled it
       reportError('audio', 'playUrlAndAwait', e, describeUri(url), { localUri: url });
     }
-    _emitSpeaking(false);
+    _stopSpeakingIfMine(myGeneration);
     return false;
   }
 }
@@ -189,8 +283,9 @@ export async function playUrlAndAwait(url: string): Promise<boolean> {
  *  lookup below — without it the whole behavioral side of the app goes silent
  *  the moment reception drops. */
 export async function speakAndAwait(text: string): Promise<boolean> {
-  await stopTTS();
-  const myGeneration = _ttsGeneration;  // Capture AFTER stopTTS increments it
+  const { generation: myGeneration, previous } = _claimTTS();   // FIRST, before any await
+  await _releaseTTS(previous);
+  if (_ttsGeneration !== myGeneration) return false;   // replaced while the old clip was stopping
   let fromCache = false;                // declared here so the final catch can report it
   try {
     _emitSpeaking(true);
@@ -200,7 +295,7 @@ export async function speakAndAwait(text: string): Promise<boolean> {
     let uri           = await getCachedTtsUri(text);
     fromCache         = !!uri;
 
-    if (_ttsGeneration !== myGeneration) { _emitSpeaking(false); return false; }
+    if (_ttsGeneration !== myGeneration) { _stopSpeakingIfMine(myGeneration); return false; }
 
     // ── 2. Not cached — ask the Edge Function proxy (not Google directly), so
     //       the API key stays server-side. Race against a timeout to prevent
@@ -219,18 +314,18 @@ export async function speakAndAwait(text: string): Promise<boolean> {
           reportError('tts', 'speakAndAwait:invoke', error ?? 'empty audioContent',
             { status: httpStatusOf(error), text_len: text.length }, { skipIfOffline: true });
         }
-        _emitSpeaking(false);
+        _stopSpeakingIfMine(myGeneration);
         return false;
       }
       // Cancelled during fetch — another stopTTS() was called while we were waiting
-      if (_ttsGeneration !== myGeneration) { _emitSpeaking(false); return false; }
+      if (_ttsGeneration !== myGeneration) { _stopSpeakingIfMine(myGeneration); return false; }
 
       // Save it first and play the saved file. That is exactly the path a cached
       // sentence takes, so a freshly fetched one behaves like a replay (and the
       // saved copy is there for offline use either way). The base64 data: URI is
       // only a last resort if writing to disk fails.
       await storeTtsAudio(text, data.audioContent);
-      if (_ttsGeneration !== myGeneration) { _emitSpeaking(false); return false; }
+      if (_ttsGeneration !== myGeneration) { _stopSpeakingIfMine(myGeneration); return false; }
       uri = await getCachedTtsUri(text);
       if (!uri) uri = `data:audio/mp3;base64,${data.audioContent}`;
     }
@@ -249,11 +344,11 @@ export async function speakAndAwait(text: string): Promise<boolean> {
         console.warn('[googleTTS] saved TTS unreadable, discarding:', err);
         await releaseAudioFiles([uri]).catch(() => {});
       }
-      _emitSpeaking(false);
+      _stopSpeakingIfMine(myGeneration);
       return false;
     }
 
-    if (_ttsGeneration !== myGeneration) { sound.unloadAsync().catch(() => {}); _emitSpeaking(false); return false; }
+    if (_ttsGeneration !== myGeneration) { sound.unloadAsync().catch(() => {}); _stopSpeakingIfMine(myGeneration); return false; }
     currentSound = sound;
     await sound.playAsync();
     // stopTTS() can land in the gap between the check above and playback
@@ -263,11 +358,23 @@ export async function speakAndAwait(text: string): Promise<boolean> {
       sound.stopAsync().catch(() => {});
       sound.unloadAsync().catch(() => {});
       if (currentSound === sound) currentSound = null;
-      _emitSpeaking(false);
+      _stopSpeakingIfMine(myGeneration);
       return false;
     }
-    await awaitSound(sound);
-    _emitSpeaking(false);
+    const outcome = await awaitSound(sound);
+    // A newer request owns the speaking state now; don't switch it off.
+    _stopSpeakingIfMine(myGeneration);
+    if (outcome === 'failed') {
+      if (_ttsGeneration === myGeneration) {
+        reportError('audio', 'speakAndAwait:playback', 'stopped by an error or never made a sound',
+          { ...describeUri(uri), from_cache: fromCache, text_len: text.length },
+          { localUri: fromCache ? uri : null });
+        // A saved rendering that cannot be played is a dud: drop it so the next
+        // try fetches a fresh one instead of failing the same way forever.
+        if (uri.startsWith('file:')) await releaseAudioFiles([uri]).catch(() => {});
+      }
+      return false;
+    }
     return true;
   } catch (e) {
     console.warn('[googleTTS] speakAndAwait error:', e);
@@ -277,7 +384,7 @@ export async function speakAndAwait(text: string): Promise<boolean> {
     if (_ttsGeneration === myGeneration) {
       reportError('audio', 'speakAndAwait', e, { from_cache: fromCache, text_len: text.length });
     }
-    _emitSpeaking(false);
+    _stopSpeakingIfMine(myGeneration);
     return false;
   }
 }
@@ -285,6 +392,73 @@ export async function speakAndAwait(text: string): Promise<boolean> {
 /** Fire-and-forget TTS — kept for backward compatibility. */
 export function speakAmharic(text: string): void {
   speakAndAwait(text).catch(() => {});
+}
+
+/**
+ * The tts Edge Function refuses text longer than 1000 characters
+ * (supabase/functions/tts), so a long text is spoken in parts. Parts end at a
+ * sentence end where possible, never in the middle of a word.
+ */
+const TTS_PART_MAX_CHARS = 900;
+
+/** Ethiopic full stop and question mark, plus ? ! and line breaks. */
+const SENTENCE_END = /[።፧?!\n]/;
+
+/** Split a long text into parts the tts function accepts, keeping every word. */
+export function splitForTts(text: string, maxChars = TTS_PART_MAX_CHARS): string[] {
+  const clean = text.trim();
+  if (clean.length <= maxChars) return clean ? [clean] : [];
+
+  // Sentences, each keeping its own end mark.
+  const sentences: string[] = [];
+  let start = 0;
+  for (let i = 0; i < clean.length; i++) {
+    if (SENTENCE_END.test(clean[i])) {
+      sentences.push(clean.slice(start, i + 1));
+      start = i + 1;
+    }
+  }
+  if (start < clean.length) sentences.push(clean.slice(start));
+
+  const parts: string[] = [];
+  let current = '';
+  const flush = () => { if (current.trim()) parts.push(current.trim()); current = ''; };
+  for (const sentence of sentences) {
+    if (sentence.length > maxChars) {
+      // One sentence too long on its own: break it between words.
+      flush();
+      let rest = sentence.trim();
+      while (rest.length > maxChars) {
+        const cut = rest.lastIndexOf(' ', maxChars);
+        const at  = cut > 0 ? cut : maxChars;
+        parts.push(rest.slice(0, at).trim());
+        rest = rest.slice(at).trim();
+      }
+      current = rest;
+      continue;
+    }
+    if ((current + sentence).length > maxChars) flush();
+    current += sentence;
+  }
+  flush();
+  return parts;
+}
+
+/**
+ * Speak a text of any length (e.g. a "why?" explanation) and await the end.
+ * Short text is a single speakAndAwait(). Long text is spoken part after part;
+ * if stopTTS() or another request interrupts a part, the rest is not started.
+ * Returns false only if a part could not be heard.
+ */
+export async function speakLongAndAwait(text: string): Promise<boolean> {
+  for (const part of splitForTts(text)) {
+    const speaking = speakAndAwait(part);
+    const myGeneration = _ttsGeneration;   // speakAndAwait claims synchronously
+    const heard = await speaking;
+    if (_ttsGeneration !== myGeneration) return true;   // stopped or replaced: not a failure
+    if (!heard) return false;
+  }
+  return true;
 }
 
 // ─── Offline pre-rendering ────────────────────────────────────────────────────
@@ -335,6 +509,18 @@ export function collectTtsTexts(
     });
   }
   return texts;
+}
+
+/**
+ * True when every text already has a saved rendering, i.e. it can be spoken
+ * with no connection. Empty texts are skipped.
+ */
+export async function areTtsTextsCached(texts: string[]): Promise<boolean> {
+  for (const text of texts) {
+    if (!text) continue;
+    if (!(await getCachedTtsUri(text).catch(() => null))) return false;
+  }
+  return true;
 }
 
 /**

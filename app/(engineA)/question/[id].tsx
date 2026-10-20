@@ -111,6 +111,24 @@ export default function EngineAQuestionScreen() {
   // null = normal start (question first); N = skip question, start from answer N.
   const replayFromAnswerRef = useRef<number | null>(null);
 
+  // ── Bookkeeping for the 🔊 taps (same contract as exam.tsx / topic-quiz) ───────
+  // Index of the answer the AUTO-READING itself is at; null while it is still on
+  // the question, or once it has finished or failed. Set by the sequence only
+  // (never by a 🔊 replay), so it says where the reading was when a tap cut in.
+  const sequenceIndexRef      = useRef<number | null>(null);
+  // For the answer the sequence is at: its number has been said / it was read to the end.
+  const answerAudioStartedRef = useRef(false);
+  const answerFullyReadRef    = useRef(false);
+  // Counts 🔊 taps. Only the newest tap may touch the highlight or restart the
+  // reading: a tap whose clip was replaced by a newer tap is let go by the audio
+  // engine as "finished", and used to resume the reading as if it had played out.
+  const replayPressRef        = useRef(0);
+  // Bumped the moment the learner moves to another question, before anything else
+  // happens. A tap still playing then is let go by that move, and must not restart
+  // the reading of the NEW question from the middle (a ref set at render time is too
+  // late: the tap's continuation runs before the screen shows the new question).
+  const questionEpochRef      = useRef(0);
+
   // ── Stable callback ref so useVoiceRecognition doesn't re-init on every render
   // handleAnswerSelect is defined below; we wire it up after definition.
   const answerCallbackRef = useRef<(idx: number) => void>(() => {});
@@ -170,9 +188,13 @@ export default function EngineAQuestionScreen() {
     if (!currentQuestion) return;
     voiceFailedRef.current = false;           // Reset for new question
     audioSequenceCancelledRef.current = false; // Reset when sequence (re)starts
+    sequenceIndexRef.current = null;           // not at any answer yet
     cancelListening(); // Reset audio mode to playback before starting sequence
     let cancelled = false;
     const isCancelled = () => cancelled || voiceFailedRef.current || audioSequenceCancelledRef.current;
+    // The reading ended without finishing (a clip could not be heard): a later 🔊
+    // tap must not restart it.
+    const stopHere = () => { sequenceIndexRef.current = null; setPlayingAnswerIndex(null); };
 
     async function runSequence() {
       // Check if we're resuming after a 🔊 replay (skip question, start from answer N)
@@ -193,7 +215,7 @@ export default function EngineAQuestionScreen() {
 
         const qAudioUrl = currentQuestion!.question_audio_url
           || `${_AUDIO_BASE}/${qId.toLowerCase()}.mp3`;
-        if (!await playAndAwaitAudio(qAudioUrl, isCancelled)) { setPlayingAnswerIndex(null); return; }
+        if (!await playAndAwaitAudio(qAudioUrl, isCancelled)) { stopHere(); return; }
         if (isCancelled()) return;
 
         await new Promise(res => setTimeout(res, 300));
@@ -204,19 +226,37 @@ export default function EngineAQuestionScreen() {
         if (isCancelled() || answeredIndexRef.current !== null) return;
 
         setPlayingAnswerIndex(i);
+        // Where the reading is, for a 🔊 tap that cuts in: this answer's number
+        // is not said yet, and it is not read to the end yet.
+        sequenceIndexRef.current      = i;
+        answerAudioStartedRef.current = false;
+        answerFullyReadRef.current    = false;
 
         // Stop the moment a clip cannot be heard (offline + not cached).
         // Continuing would walk the yellow highlight through every answer in
         // silence, which reads as the app answering by itself.
-        if (!await playAndAwaitAudio(NUMBER_URLS[i], isCancelled)) { setPlayingAnswerIndex(null); return; }
+        if (!await playAndAwaitAudio(NUMBER_URLS[i], isCancelled)) { stopHere(); return; }
         if (isCancelled() || answeredIndexRef.current !== null) return;
+
+        // Yield, so a tap that is already waiting is handled before the next
+        // clip starts (same as exam.tsx): it prevents one extra clip playing.
+        await new Promise<void>(r => setTimeout(r, 0));
+        if (isCancelled() || answeredIndexRef.current !== null) return;
+
+        // The answer itself is about to start: from here a 🔊 tap on another
+        // answer is the learner choosing to skip the rest of this one.
+        answerAudioStartedRef.current = true;
 
         const answer = currentQuestion!.answers[i];
         const answerUrl = answer?.audio_url
           || `${_AUDIO_BASE}/answer_${qId}_${answer?.id}.mp3`;
-        if (!await playAndAwaitAudio(answerUrl, isCancelled)) { setPlayingAnswerIndex(null); return; }
+        if (!await playAndAwaitAudio(answerUrl, isCancelled)) { stopHere(); return; }
+        // Cut by a 🔊 tap: it is not "read to the end".
+        if (isCancelled()) return;
+
+        answerFullyReadRef.current = true;
       }
-      setPlayingAnswerIndex(null);
+      stopHere();
     }
 
     runSequence().catch(() => {});
@@ -240,8 +280,18 @@ export default function EngineAQuestionScreen() {
     }
   }, [voiceState]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // ── Answer audio button: stop sequence, replay answer, then resume from next ──
+  // ── Answer audio button: stop sequence, replay answer, then maybe resume ─────
+  //
+  // Same contract as exam.tsx / topic-quiz (this screen used to resume from the
+  // next answer after EVERY tap, so tapping 🔊 on answer 1 made answer 2 start,
+  // tapping answer 2 made 3 start, and so on, and quick taps on different
+  // speakers started the wrong answers):
+  //   - the reading continues after a replay ONLY if the tap cut it off while it
+  //     was reading answers; if it had finished, the tap just replays that answer;
+  //   - where it continues from depends on how far the answer it was at had got.
   const handleAnswerAudioPress = useCallback(async (audioUrl: string, answerIndex: number) => {
+    const myPress = ++replayPressRef.current;
+    const epochAtPress = questionEpochRef.current;
     audioSequenceCancelledRef.current = true;  // stop the ongoing sequence
     setPlayingAnswerIndex(answerIndex);        // move yellow highlight to the tapped answer
     // playAndAwaitAudio stops the current audio, plays the requested answer,
@@ -250,20 +300,40 @@ export default function EngineAQuestionScreen() {
     // resolve prematurely (before playAudio changed the audio state) and restart
     // the sequence while the replay was still playing.
     const replayed = await playAndAwaitAudio(audioUrl, () => answeredIndexRef.current !== null);
+    // A newer tap replaced this clip (the engine reports that as "finished"):
+    // the newer tap owns the highlight and the continuation.
+    if (myPress !== replayPressRef.current) return;
     setPlayingAnswerIndex(null);               // clear highlight before resuming
     if (answeredIndexRef.current !== null) return; // user selected answer while replaying
+    // The learner moved to another question meanwhile: nothing to resume here.
+    if (questionEpochRef.current !== epochAtPress) return;
     // Nothing was heard (offline, not cached) — don't resume the sequence, which
     // would just fail again on its first clip.
     if (!replayed) return;
-    // Resume sequence from the next answer (skip what was already heard)
-    const nextIndex = answerIndex + 1;
-    const answerCount = currentQuestion?.answers.length ?? 0;
-    if (nextIndex < answerCount) {
-      replayFromAnswerRef.current = nextIndex;
+    // Where the reading was when the tap cut it off. A replay never changes it
+    // (only the reading does), so it is the same after one tap or after several
+    // quick ones. null: the reading had already finished, or was still on the
+    // question: the learner is reviewing, not in the middle of listening, so
+    // just the replay.
+    const playingAtTime = sequenceIndexRef.current;
+    if (playingAtTime === null) return;
+    // Where to continue:
+    //  A) the answer it was at was read to the end  -> the next one;
+    //  B) its audio had started (the learner skipped the rest of it) -> after the
+    //     answer just replayed;
+    //  C) only its number was said -> that answer again.
+    const resumeFrom = answerFullyReadRef.current
+      ? playingAtTime + 1
+      : answerAudioStartedRef.current
+        ? answerIndex + 1
+        : playingAtTime;
+    const answerCount = Math.min(4, currentQuestion?.answers.length ?? 0);
+    if (resumeFrom < answerCount) {
+      replayFromAnswerRef.current = resumeFrom;
       audioSequenceCancelledRef.current = false;
       setAudioRestartKey(k => k + 1);
     }
-    // else: replayed the last answer — sequence is done, stay stopped
+    // else: nothing left to read — stay stopped
   }, [currentQuestion?.answers.length]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // ── Answer selection (via tap OR voice) ────────────────────────────────────
@@ -356,6 +426,7 @@ export default function EngineAQuestionScreen() {
   // ── Navigate between questions within the same sign ────────────────────────
   const navigateToQuestion = useCallback(async (newIndex: number) => {
     if (newIndex < 0 || newIndex >= questions.length) return;
+    questionEpochRef.current++;   // first, before stopAudio lets a playing 🔊 tap go (see its comment)
     await stopAudio();
     cancelListening();
     setAnsweredIndex(null);

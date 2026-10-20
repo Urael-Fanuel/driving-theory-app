@@ -45,6 +45,7 @@ import * as Application from 'expo-application';
 import type { Sound, PlaybackStatus } from './sound';
 import { supabase } from '../backend/supabaseClient';
 import { BUNDLED_AUDIO_NAMES } from './bundledAudio';
+import { onConnectivityChange } from '../hooks/useNetworkStatus';
 
 // ─── Types / config ───────────────────────────────────────────────────────────
 
@@ -450,6 +451,23 @@ async function adoptFatalReport(): Promise<void> {
 let _flushing = false;
 
 /**
+ * Rows are waiting on the phone: send them the moment the connection comes
+ * back, instead of only at the next app start (CODEX QA 2026-10-08). Listens
+ * only while something waits, through the app's one shared connectivity poll.
+ */
+let _reconnectWatch: (() => void) | null = null;
+function watchForReconnect(): void {
+  if (_reconnectWatch) return;
+  _reconnectWatch = onConnectivityChange(connected => {
+    if (!connected) return;
+    const stop = _reconnectWatch;
+    _reconnectWatch = null;
+    stop?.();
+    void flushPendingReports();
+  });
+}
+
+/**
  * Send rows saved by an earlier launch (offline at the time, or the app was
  * crashing). Call once after startup; safe to call repeatedly. The network is
  * never used while anything is locked: each row is read, sent (bounded by
@@ -471,7 +489,7 @@ export async function flushPendingReports(): Promise<void> {
       if (!row) { await removeFile(path); continue; }          // torn / unreadable: only this row is lost
 
       const result = await send(await withCurrentIdentity(row));
-      if (result === 'retry') break;                           // offline or server trouble: try next launch
+      if (result === 'retry') { watchForReconnect(); break; }  // offline or server trouble: try again on reconnect / next launch
       await removeFile(path);                                  // sent, or can never be accepted
     }
   } catch {
@@ -548,7 +566,7 @@ async function deliver(
 
     const result = await send(row);
     if (result === 'sent')       void flushPendingReports();   // we're online — also send anything left over
-    else if (result === 'retry') await enqueue(row);
+    else if (result === 'retry') { await enqueue(row); watchForReconnect(); }
     // 'drop': the table will never take this row; keeping it would only retry forever
   } catch {
     // Diagnostics must never become a source of failures themselves.

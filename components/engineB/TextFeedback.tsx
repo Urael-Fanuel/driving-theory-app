@@ -23,7 +23,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Colors } from '../../constants/colors';
 import { Typography } from '../../constants/typography';
 import { AudioButton } from '../shared/AudioButton';
-import { speakAndAwait, stopTTS } from '../../utils/googleTTS';
+import { speakAndAwait, speakLongAndAwait, stopTTS } from '../../utils/googleTTS';
 import { useAudioInterrupted, resumeInterruptedAudio } from '../../hooks/useAudioInterrupted';
 import { fetchWrongAnswerExplanation, RagQuery } from '../../utils/ragExplain';
 
@@ -99,7 +99,8 @@ export function TextFeedback({
     }
     ragSpeakingRef.current = true;
     setRagSpeaking(true);
-    await speakAndAwait(ragExplanation.slice(0, 950));
+    // The whole explanation, however long (it used to stop at 950 characters).
+    await speakLongAndAwait(ragExplanation);
     ragSpeakingRef.current = false;
     if (mountedRef.current) setRagSpeaking(false);
   };

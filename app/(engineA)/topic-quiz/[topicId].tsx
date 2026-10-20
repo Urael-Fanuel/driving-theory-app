@@ -116,14 +116,26 @@ export default function EngineATopicQuizScreen() {
   const confettiRef            = useRef<any>(null);
   const scrollRef              = useRef<any>(null);
   const replayFromAnswerRef    = useRef<number | null>(null);
-  const playingAnswerIndexRef  = useRef<number | null>(null);
+  // Index of the answer the AUTO-READING itself is at (null: still on the question,
+  // or finished / failed). Set by the reading only, never by a 🔊 replay, so it says
+  // where the reading was when a tap cut in, also after several quick taps. It used
+  // to be a mirror of the highlighted card, which a replay moves too.
+  const sequenceIndexRef       = useRef<number | null>(null);
+  const markSequenceAt = (i: number | null) => { sequenceIndexRef.current = i; setPlayingAnswerIndex(i); };
   const answerAudioStartedRef  = useRef(false);
   const answerFullyReadRef     = useRef(false);
+  // Counts 🔊 taps. Only the newest tap may touch the highlight or restart the
+  // reading: a tap whose clip was replaced by a newer tap is let go by the audio
+  // engine as "finished" and used to resume the reading as if it had played out
+  // (it also cleared the newer tap's highlight).
+  const replayPressRef         = useRef(0);
+  // Bumped the moment the learner moves to another question, before anything else
+  // happens: a tap still playing then must not restart the reading of the NEW
+  // question from the middle (its continuation runs before the screen shows it).
+  const questionEpochRef       = useRef(0);
   const voiceFailedRef         = useRef(false);
   const answerCallbackRef      = useRef<(idx: number) => void>(() => {});
 
-  // Keep playingAnswerIndexRef in sync
-  useEffect(() => { playingAnswerIndexRef.current = playingAnswerIndex; }, [playingAnswerIndex]);
   useEffect(() => onTTSSpeakingChange(setIsTTSPlaying), []);
 
   // Load all signs (for displaying sign image per question)
@@ -200,6 +212,7 @@ export default function EngineATopicQuizScreen() {
     if (phase !== 'question' || !currentQuestion || !isTabFocused) return;
     voiceFailedRef.current      = false;
     sequenceCancelledRef.current = false;
+    sequenceIndexRef.current    = null;   // a new reading starts on the question, not at an answer
     cancelListening();
     setShowFeedback(false);
     let cancelled = false;
@@ -225,7 +238,7 @@ export default function EngineATopicQuizScreen() {
             || `${_AUDIO_BASE}/${qId.toLowerCase()}.mp3`;
           // Same contract the behavioral branch above already follows: if
           // nothing was heard, stop rather than advance in silence.
-          if (!await playAndAwaitAudio(qAudioUrl, isCancelled)) { setPlayingAnswerIndex(null); return; }
+          if (!await playAndAwaitAudio(qAudioUrl, isCancelled)) { markSequenceAt(null); return; }
           if (isCancelled()) return;
         }
 
@@ -236,11 +249,11 @@ export default function EngineATopicQuizScreen() {
       for (let i = resumeFromAnswer ?? 0; i < currentQuestion!.answers.length && i < 4; i++) {
         if (isCancelled()) return;
 
-        setPlayingAnswerIndex(i);
+        markSequenceAt(i);
         answerAudioStartedRef.current = false;
         answerFullyReadRef.current    = false;
 
-        if (!await playAndAwaitAudio(NUMBER_URLS[i], isCancelled)) { setPlayingAnswerIndex(null); return; }
+        if (!await playAndAwaitAudio(NUMBER_URLS[i], isCancelled)) { markSequenceAt(null); return; }
         if (isCancelled()) return;
 
         await new Promise<void>(r => setTimeout(r, 0));
@@ -259,20 +272,20 @@ export default function EngineATopicQuizScreen() {
         } else {
           const answerUrl = answer?.audio_url
             || `${_AUDIO_BASE}/answer_${currentQuestion!.id}_${answer?.id}.mp3`;
-          if (!await playAndAwaitAudio(answerUrl, isCancelled)) { setPlayingAnswerIndex(null); return; }
+          if (!await playAndAwaitAudio(answerUrl, isCancelled)) { markSequenceAt(null); return; }
           if (isCancelled()) return;
         }
 
         answerFullyReadRef.current = true;
         await new Promise<void>(r => setTimeout(r, 0));
       }
-      setPlayingAnswerIndex(null);
+      markSequenceAt(null);
     }
 
     runSequence().catch(() => {});
     return () => {
       cancelled = true;
-      setPlayingAnswerIndex(null);
+      markSequenceAt(null);
     };
   }, [currentQuestion?.id, isTabFocused, audioRestartKey]); // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -319,18 +332,31 @@ export default function EngineATopicQuizScreen() {
   };
 
   // ── 🔊 Answer replay button (sign audio URL) ────────────────────────────────
+  //
+  // Quick taps on different speakers (same rules as question/[id].tsx): the newest
+  // tap wins. An older tap whose clip a newer tap replaced is let go by the audio
+  // engine as "finished"; it must neither clear the newer tap's highlight nor
+  // resume the reading (it used to do both: the wrong answer started by itself).
   const handleAnswerAudioPress = useCallback(async (audioUrl: string, answerIndex: number) => {
     if (phaseRef.current !== 'question') return;
-    const playingAtTime = playingAnswerIndexRef.current;
+    const myPress = ++replayPressRef.current;
+    const epochAtPress = questionEpochRef.current;
     sequenceCancelledRef.current = true;
     await stopTTS();
+    if (myPress !== replayPressRef.current) return;   // a newer tap arrived while stopping
     setPlayingAnswerIndex(answerIndex);
     const replayed = await playAndAwaitAudio(audioUrl, () => phaseRef.current !== 'question');
+    if (myPress !== replayPressRef.current) return;   // a newer tap replaced this clip
     setPlayingAnswerIndex(null);
     if (phaseRef.current !== 'question') return;
+    // The learner moved to another question meanwhile: nothing to resume here.
+    if (questionEpochRef.current !== epochAtPress) return;
     // Nothing was heard (offline, not cached) — don't resume the sequence, which
     // would just fail again on its first clip.
     if (!replayed) return;
+    // Where the reading was when the tap cut it off (a replay never changes it).
+    // null: it had finished, or was still on the question: just the replay.
+    const playingAtTime = sequenceIndexRef.current;
     if (playingAtTime === null) return;
     const resumeFrom = answerFullyReadRef.current
       ? playingAtTime + 1
@@ -347,14 +373,22 @@ export default function EngineATopicQuizScreen() {
   // ── 🔊 Behavioral answer TTS replay ─────────────────────────────────────────
   const handleBehavioralAnswerAudioPress = useCallback(async (text: string, answerIndex: number) => {
     if (phaseRef.current !== 'question') return;
-    const playingAtTime = playingAnswerIndexRef.current;
+    const myPress = ++replayPressRef.current;
+    const epochAtPress = questionEpochRef.current;
     sequenceCancelledRef.current = true;
     await stopAudio();
+    // Check before EACH step that touches the audio: an older tap that is slower to
+    // get going must not stop what the newest tap has already started.
+    if (myPress !== replayPressRef.current) return;   // a newer tap arrived while stopping
     await stopTTS();
+    if (myPress !== replayPressRef.current) return;   // a newer tap arrived while stopping
     setPlayingAnswerIndex(answerIndex);
     const ok = await speakAndAwait(text);
+    if (myPress !== replayPressRef.current) return;   // a newer tap replaced this reading
     setPlayingAnswerIndex(null);
     if (!ok || phaseRef.current !== 'question') return;
+    if (questionEpochRef.current !== epochAtPress) return;
+    const playingAtTime = sequenceIndexRef.current;   // see handleAnswerAudioPress
     if (playingAtTime === null) return;
     const resumeFrom = answerFullyReadRef.current
       ? playingAtTime + 1
@@ -387,6 +421,7 @@ export default function EngineATopicQuizScreen() {
 
   const handleNavPrev = async () => {
     if (!canGoPrev) return;
+    questionEpochRef.current++;           // first: see questionEpochRef
     sequenceCancelledRef.current = true;  // cancel running sequence immediately
     await stopAudio();
     await stopTTS().catch(() => {});
@@ -397,6 +432,7 @@ export default function EngineATopicQuizScreen() {
 
   const handleNavNext = async () => {
     if (!canGoNext) return;
+    questionEpochRef.current++;           // first: see questionEpochRef
     sequenceCancelledRef.current = true;  // cancel running sequence immediately
     await stopAudio();
     await stopTTS().catch(() => {});

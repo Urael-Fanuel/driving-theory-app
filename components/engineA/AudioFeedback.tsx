@@ -28,7 +28,7 @@ import {
 import * as Haptics from 'expo-haptics';
 import { Colors } from '../../constants/colors';
 import { useAudio } from '../../hooks/useAudio';
-import { speakAndAwait, stopTTS } from '../../utils/googleTTS';
+import { speakAndAwait, speakLongAndAwait, stopTTS } from '../../utils/googleTTS';
 import { useAudioInterrupted, resumeInterruptedAudio } from '../../hooks/useAudioInterrupted';
 import { fetchWrongAnswerExplanation, RagQuery } from '../../utils/ragExplain';
 
@@ -104,7 +104,8 @@ export function AudioFeedback({
     }
     ragSpeakingRef.current = true;
     setRagSpeaking(true);
-    await speakAndAwait(text.slice(0, 950));
+    // The whole explanation, however long (it used to stop at 950 characters).
+    await speakLongAndAwait(text);
     ragSpeakingRef.current = false;
     if (mountedRef.current) setRagSpeaking(false);
   };

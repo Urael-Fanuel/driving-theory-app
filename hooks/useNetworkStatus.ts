@@ -51,6 +51,13 @@ function subscribe(fn: (connected: boolean) => void): () => void {
   };
 }
 
+/**
+ * Listen for connectivity changes outside a component (same shared poll).
+ * Returns the unsubscribe; keep it short-lived, the poll runs while anything
+ * is listening.
+ */
+export const onConnectivityChange = subscribe;
+
 /** Read connectivity without subscribing (for use inside async callbacks). */
 export function getIsConnected(): boolean {
   return _isConnected;

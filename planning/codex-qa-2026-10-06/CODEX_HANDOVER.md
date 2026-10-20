@@ -1,7 +1,7 @@
 # CODEX handover: Expo SDK 57 release candidate (branch `upgrade/expo-57`)
 
 Prepared 2026-10-06 by Claude Code (the implementer) for an independent QA / code review.
-Owner: Moti (non-programmer; final decisions are his). App: "מנגד" / com.drivingtheory.ethiopian,
+Final decisions belong to the app owner (a non-programmer). App: "מנגד" / com.drivingtheory.ethiopian,
 React Native + Expo, Supabase project `bpltieicivxixpogxfim`.
 
 ## 0. Ground rules for this review
@@ -150,8 +150,8 @@ privacy page compared with the local file; `client_errors` table columns present
 ### 3b. What the live `client_errors` table and an audio audit show (read-only, 2026-10-06)
 
 54 rows. 21 are old-style (before the new reporter: failed API calls only, message lost as
-"[object Object]", no user id, 09-22 to 10-01). 33 are new-style, **all from one Samsung SM-S931B (the owner's
-test phone)** running test builds `1.0.0 (9)` on 10-05/10-06 and Expo Go today. Production v8 has no new
+"[object Object]", no user id, 09-22 to 10-01). 33 are new-style, **all from a single internal test phone**
+running test builds `1.0.0 (9)` on 10-05/10-06 and Expo Go today. Production v8 has no new
 reporter, so there is **no field data from real users yet**. Findings:
 
 1. **HTTP 429 (25 rows, `preCacheAudioBatch` / `downloadInBackground`):** storage answers "too many requests"

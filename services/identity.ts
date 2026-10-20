@@ -36,6 +36,14 @@ export interface ResolvedIdentity {
   note?: 'auth_timeout' | 'auth_unreachable';
   /** true = a NEW anonymous account was created (for a returning user this means the old one was lost). */
   createdNew?: boolean;
+  /**
+   * Set when the anonymous sign-in was still running at the deadline. It keeps
+   * running; this resolves with the account it created (or null if it failed).
+   * Its result used to be ignored: the app went on with a local id while auth
+   * held a different, real account (CODEX QA 2026-10-08, Q09). See
+   * services/identityRecovery.ts, which adopts it.
+   */
+  lateSignIn?: Promise<string | null>;
 }
 
 interface AuthLike {
@@ -44,7 +52,11 @@ interface AuthLike {
 }
 
 const SESSION_WAIT_MS = 5_000;    // returning users: the first screen never waits longer
-const SIGN_IN_WAIT_MS = 15_000;   // first launch: a real sign-in is needed, give it time
+// First launch: the first screen waits this long for the anonymous sign-in. It
+// was 15 s; a sign-in that finishes later is no longer lost (it comes back as
+// lateSignIn and services/identityRecovery.ts adopts it), so the learner does
+// not have to wait for it (CODEX QA 2026-10-08, Q10).
+const SIGN_IN_WAIT_MS = 4_000;
 
 /** RFC 4122 v4 UUID — used when there is no Supabase account to use. */
 export function generateUUID(): string {
@@ -88,6 +100,7 @@ export async function resolveUserId(
   waits: { session: number; signIn: number } = { session: SESSION_WAIT_MS, signIn: SIGN_IN_WAIT_MS },
 ): Promise<ResolvedIdentity> {
   const stored = storedId && isUUID(storedId) ? storedId : null;
+  let lateSignIn: Promise<string | null> | undefined;
 
   if (auth) {
     try {
@@ -106,17 +119,26 @@ export async function resolveUserId(
 
       // Nothing saved to resume (or the server clearly said the session is gone):
       // create the anonymous account.
-      const created: any = await raceTimeout(auth.signInAnonymously(), waits.signIn);
+      const signIn = auth.signInAnonymously();
+      const created: any = await raceTimeout(signIn, waits.signIn);
       if (created !== TIMED_OUT && !created?.error && created?.data?.user?.id) {
         return { id: created.data.user.id, fromSupabase: true, createdNew: true };
       }
-      if (stored) return { id: stored, fromSupabase: false, note: created === TIMED_OUT ? 'auth_timeout' : 'auth_unreachable' };
+      if (created === TIMED_OUT) {
+        // Still running: hand its eventual result to the caller instead of
+        // dropping it.
+        lateSignIn = signIn.then(
+          (r: any) => (!r?.error && r?.data?.user?.id) ? String(r.data.user.id) : null,
+          () => null,
+        );
+      }
+      if (stored) return { id: stored, fromSupabase: false, note: created === TIMED_OUT ? 'auth_timeout' : 'auth_unreachable', lateSignIn };
     } catch {
-      if (stored) return { id: stored, fromSupabase: false, note: 'auth_unreachable' };
+      if (stored) return { id: stored, fromSupabase: false, note: 'auth_unreachable', lateSignIn };
     }
   }
 
   // No account available: use the saved id if there is one, otherwise a local one.
-  if (stored) return { id: stored, fromSupabase: false };
-  return { id: generateUUID(), fromSupabase: false };
+  if (stored) return { id: stored, fromSupabase: false, lateSignIn };
+  return { id: generateUUID(), fromSupabase: false, lateSignIn };
 }

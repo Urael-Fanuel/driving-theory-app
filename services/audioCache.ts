@@ -37,6 +37,7 @@
 import * as FileSystem from 'expo-file-system/legacy';
 import { reportError, errorText } from './errorReporter';
 import { BUNDLED_AUDIO_NAMES } from './bundledAudio';
+import { getIsConnected } from '../hooks/useNetworkStatus';
 
 // ─── Config ───────────────────────────────────────────────────────────────────
 
@@ -131,6 +132,14 @@ async function ensureCacheDir(): Promise<void> {
 interface CacheEntry {
   bytes:      number;
   lastAccess: number;
+  /**
+   * true = this copy is known to be complete: written by this version through
+   * downloadAtomic (size checked against the server's), a TTS rendering, or
+   * confirmed afterwards against the server's size (verifyCachedCopy).
+   * Missing = saved by an older version that wrote downloads straight to the
+   * final name: it may be cut short (CODEX QA 2026-10-08, Q08).
+   */
+  verified?:  boolean;
 }
 
 /** filename → entry. Authoritative once _indexLoaded is true. */
@@ -255,7 +264,8 @@ function touch(filename: string): void {
 /** Record a newly downloaded file, then bring the cache back under budget. */
 async function record(filename: string, bytes: number): Promise<void> {
   await loadIndex();
-  _index.set(filename, { bytes, lastAccess: Date.now() });
+  // Every caller hands over a complete file (checked download or TTS rendering).
+  _index.set(filename, { bytes, lastAccess: Date.now(), verified: true });
   scheduleFlush();
   await enforceBudget();
 }
@@ -356,6 +366,68 @@ interface DownloadOutcome { ok: boolean; bytes: number }
 /** One download per final path at a time; later callers share its result. */
 const _inFlight = new Map<string, Promise<DownloadOutcome>>();
 
+// ─── One download line for the whole app (CODEX QA 2026-10-08, Q07) ───────────
+// Every download goes through downloadAtomic(), so the limits live here:
+//   - at most MAX_PARALLEL_DOWNLOADS at once in the whole app. Each caller used
+//     to batch 5 on its own, so two callers (a sign and its topic opening
+//     together) ran 10, and audio storage answered HTTP 429 "too many
+//     requests" (seen on a test phone; whether that caused silence for users
+//     is not proven);
+//   - 'now' (what the user is looking at) goes before 'background' (the rest of
+//     a topic);
+//   - an HTTP 429 pauses ALL downloads for the time the server asks for
+//     (Retry-After) or a growing wait with a little randomness, and the file is
+//     tried once more after the pause.
+// The numbers are a careful starting point, not a measurement: tune them from
+// the diagnostics (category 'download', HTTP 429) once real phones report.
+
+export type DownloadPriority = 'now' | 'background';
+
+const MAX_PARALLEL_DOWNLOADS = 3;
+const COOL_DOWN_BASE_MS      = 5_000;
+const COOL_DOWN_MAX_MS       = 60_000;
+
+let _activeDownloads = 0;
+const _slotQueue: Record<DownloadPriority, Array<() => void>> = { now: [], background: [] };
+let _coolDownUntil = 0;
+let _coolDownTimer: ReturnType<typeof setTimeout> | null = null;
+let _rateLimitedInARow = 0;
+
+/** Starts waiting downloads while there is room and no cool-down. */
+function pumpDownloads(): void {
+  const wait = _coolDownUntil - Date.now();
+  if (wait > 0) {
+    if (!_coolDownTimer) _coolDownTimer = setTimeout(() => { _coolDownTimer = null; pumpDownloads(); }, wait);
+    return;
+  }
+  while (_activeDownloads < MAX_PARALLEL_DOWNLOADS) {
+    const start = _slotQueue.now.shift() ?? _slotQueue.background.shift();
+    if (!start) return;
+    _activeDownloads++;
+    start();
+  }
+}
+
+function acquireDownloadSlot(priority: DownloadPriority): Promise<void> {
+  return new Promise(resolve => { _slotQueue[priority].push(resolve); pumpDownloads(); });
+}
+
+function releaseDownloadSlot(): void {
+  _activeDownloads = Math.max(0, _activeDownloads - 1);
+  pumpDownloads();
+}
+
+/** Pause every download after an HTTP 429. Returns the pause in ms. */
+function startCoolDown(retryAfter: string | undefined): number {
+  _rateLimitedInARow++;
+  const asked = Number(retryAfter);
+  const ms = Number.isFinite(asked) && asked >= 0
+    ? Math.min(asked * 1000, 2 * COOL_DOWN_MAX_MS)
+    : Math.min(COOL_DOWN_BASE_MS * 2 ** (_rateLimitedInARow - 1), COOL_DOWN_MAX_MS) + Math.floor(Math.random() * 1000);
+  _coolDownUntil = Math.max(_coolDownUntil, Date.now() + ms);
+  return ms;
+}
+
 function headerValue(headers: Record<string, string> | undefined, name: string): string | undefined {
   if (!headers) return undefined;
   const key = Object.keys(headers).find(k => k.toLowerCase() === name);
@@ -376,7 +448,11 @@ async function hasUsableCopy(localPath: string): Promise<boolean> {
   return false;
 }
 
-function downloadAtomic(url: string, where: string): Promise<DownloadOutcome> {
+function downloadAtomic(
+  url: string,
+  where: string,
+  priority: DownloadPriority = 'now',
+): Promise<DownloadOutcome> {
   const filename  = urlToFilename(url);
   const finalPath = AUDIO_CACHE_DIR + filename;
 
@@ -393,28 +469,55 @@ function downloadAtomic(url: string, where: string): Promise<DownloadOutcome> {
       return { ok: false, bytes: 0 };
     };
 
-    let task: FileSystem.DownloadResumable | null = null;
-    let timedOut = false;
-    const timer = setTimeout(() => {
-      timedOut = true;
-      task?.cancelAsync().catch(() => {});
-    }, DOWNLOAD_TIMEOUT_MS);
-
     try {
       await ensureCacheDir();
 
-      // The "resumable" download is used on purpose: unlike the plain one, its
-      // promise ALWAYS settles (result, error, or undefined when cancelled), so
-      // a dropped connection cannot leave a caller waiting forever.
-      task = FileSystem.createDownloadResumable(url, tmpPath);
-      const result = await task.downloadAsync();
+      let retriedAfterRateLimit = false;
+      let result: FileSystem.FileSystemDownloadResult | undefined;
+      for (;;) {
+        await acquireDownloadSlot(priority);
+        let task: FileSystem.DownloadResumable | null = null;
+        let timedOut = false;
+        let pauseMs = 0;
+        // The time limit starts when the download really starts, not while it
+        // waits for its turn in the line.
+        const timer = setTimeout(() => {
+          timedOut = true;
+          task?.cancelAsync().catch(() => {});
+        }, DOWNLOAD_TIMEOUT_MS);
+        try {
+          // The "resumable" download is used on purpose: unlike the plain one, its
+          // promise ALWAYS settles (result, error, or undefined when cancelled), so
+          // a dropped connection cannot leave a caller waiting forever.
+          task = FileSystem.createDownloadResumable(url, tmpPath);
+          result = await task.downloadAsync();
+          // Too many requests: start the pause BEFORE this slot is handed on,
+          // or the next download in line starts at once and ignores it. Every
+          // 429 renews the pause, the second one for a file as well
+          // (CODEX QA 2026-10-08, R4).
+          if (result?.status === 429) pauseMs = startCoolDown(headerValue(result.headers, 'retry-after'));
+        } finally {
+          clearTimeout(timer);
+          releaseDownloadSlot();
+        }
 
-      if (!result) {
-        return await fail(timedOut ? 'download timed out after ' + (DOWNLOAD_TIMEOUT_MS / 1000) + 's' : 'download cancelled');
+        if (!result) {
+          return await fail(timedOut ? 'download timed out after ' + (DOWNLOAD_TIMEOUT_MS / 1000) + 's' : 'download cancelled');
+        }
+        if (result.status === 429 && !retriedAfterRateLimit) {
+          // Every download is paused now; try this file once more after it.
+          retriedAfterRateLimit = true;
+          reportError('download', where, 'HTTP 429: all downloads paused', { file: filename, status: 429, pause_ms: pauseMs }, { skipIfOffline: true });
+          await FileSystem.deleteAsync(tmpPath, { idempotent: true }).catch(() => {});
+          continue;
+        }
+        break;
       }
+
       if (result.status !== 200) {
         return await fail('HTTP ' + result.status, { status: result.status });
       }
+      _rateLimitedInARow = 0;
 
       const info: any = await FileSystem.getInfoAsync(tmpPath);
       const bytes = info.exists ? (info.size ?? 0) : 0;
@@ -428,18 +531,86 @@ function downloadAtomic(url: string, where: string): Promise<DownloadOutcome> {
         return await fail('downloaded size differs from the size the server declared', { bytes, declared });
       }
 
-      // Complete. Only now does it get its real name (a rename: one step).
+      // Complete. Only now does it get its real name, in one step. On Android
+      // moveAsync is File.renameTo, which replaces a file already at that name
+      // atomically, so a copy being replaced (verifyCachedCopy) stays intact
+      // until the new one takes its place, and stays if the move fails. It is
+      // never deleted first: that lost the only copy when the move then failed
+      // (CODEX QA 2026-10-08, R3).
       await FileSystem.moveAsync({ from: tmpPath, to: finalPath });
       return { ok: true, bytes };
     } catch (err) {
       return await fail(errorText(err));
-    } finally {
-      clearTimeout(timer);
     }
   })();
 
   _inFlight.set(finalPath, job);
   void job.then(() => { if (_inFlight.get(finalPath) === job) _inFlight.delete(finalPath); });
+  return job;
+}
+
+// ─── Copies saved by older versions (CODEX QA 2026-10-08, Q08) ────────────────
+// Older versions wrote a download straight to its final name, so a download cut
+// off part-way could stay behind looking like a complete clip: over 1 KB, it
+// plays, then stops early with no error. Size alone cannot tell (see
+// hasUsableCopy). Such copies have no `verified` mark in the index. The first
+// time one is played while online, the copy is played as before and, at the
+// same time, checked against the size the server states for the file (a HEAD
+// request, no download). Same size: marked verified. Different: replaced by a
+// fresh, checked download, so the NEXT play is complete. Nothing is deleted in
+// bulk, and the copy on the phone is never skipped: an earlier version played
+// the original from the server instead, which meant silence whenever the phone
+// had a network but the server could not be reached (CODEX QA 2026-10-08, R5).
+// The price: a copy that really is cut short is heard cut short one more time.
+
+/** HEAD requests are tiny; this limit only guards against a server that never answers. */
+const VERIFY_TIMEOUT_MS = 15_000;
+const _verifying = new Map<string, Promise<void>>();
+
+function verifyCachedCopy(url: string, filename: string, localPath: string): Promise<void> {
+  const running = _verifying.get(filename);
+  if (running) return running;
+
+  const job = (async () => {
+    // A request like any other: same line, same pause after an HTTP 429.
+    await acquireDownloadSlot('now');
+    let res: { status: number; headers: { get(name: string): string | null } } | null = null;
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), VERIFY_TIMEOUT_MS);
+    try {
+      res = await fetch(url, { method: 'HEAD', signal: controller.signal });
+      // As in downloadAtomic: pause the line before the slot is handed on (R4).
+      if (res.status === 429) startCoolDown(res.headers.get('retry-after') ?? undefined);
+    } catch {
+      res = null;                       // offline / no answer: check again on a later play
+    } finally {
+      clearTimeout(timer);
+      releaseDownloadSlot();
+    }
+    if (!res) return;
+    if (res.status === 429) return;     // paused above; checked again on a later play
+    if (res.status !== 200) return;     // e.g. no longer on the server: keep the copy as it is
+
+    const declared = Number(res.headers.get('content-length'));
+    if (!Number.isFinite(declared) || declared <= 0) return;   // no size given: cannot judge
+    const info: any = await FileSystem.getInfoAsync(localPath).catch(() => null);
+    const size = info?.exists ? (info.size ?? 0) : 0;
+
+    if (size === declared) {
+      const entry = _index.get(filename);
+      if (entry) { entry.verified = true; scheduleFlush(); }
+      return;
+    }
+    // Cut short (or otherwise not the server's file): replace it. The old copy
+    // stays until a complete new one takes its place in one step (see
+    // downloadAtomic), and stays as it is if the replacement fails.
+    reportError('download', 'verifyCachedCopy', 'saved copy differs from the server file, replacing it',
+      { file: filename, bytes: size, declared }, { skipIfOffline: true });
+    const { ok, bytes } = await downloadAtomic(url, 'verifyCachedCopy', 'now');
+    if (ok) await record(filename, bytes);
+  })().catch(() => {}).finally(() => { _verifying.delete(filename); });
+
+  _verifying.set(filename, job);
   return job;
 }
 
@@ -486,11 +657,24 @@ const STORAGE_AUDIO_BASE =
  * `answer.audio_url || <constructed fallback>`. If this function only collected
  * the stored fields, then every question whose stored URL happens to be empty
  * would be requested from a URL that was never prefetched — cached in theory,
- * silent in practice. So we queue BOTH forms; the constructed one is skipped
- * cheaply if it turns out not to exist on the server.
+ * silent in practice. So we queue BOTH forms for SIGN questions.
+ *
+ * Never for a behavioral question: it has no recorded files at all, it is read
+ * by TTS (see collectTtsTexts in utils/googleTTS.ts), and the screens never
+ * build a file name for it. Inventing one cost five failed requests per
+ * question, each reported as an error, and added to the storage rate limit
+ * (CODEX QA 2026-10-08, Q06; seen on a test phone as HTTP 400 for names like
+ * beh_mind_safety_0_0_0.mp3).
  */
+function isBehavioralQuestion(question: { id?: string; sign_id?: string | null }): boolean {
+  // Same rule as the screens (no sign_id = behavioral). Every such question in
+  // the database has an id of the form beh_<topic>_<level>_<sub>_<q> (backend/api.ts).
+  return !!question.id?.startsWith('beh_') || ('sign_id' in question && !question.sign_id);
+}
+
 function collectQuestionUrls(question: {
   id?: string;
+  sign_id?: string | null;
   question_audio_url?: string;
   explanation_correct_audio_url?: string;
   explanation_wrong_audio_url?: string;
@@ -503,8 +687,9 @@ function collectQuestionUrls(question: {
     ...(question.answers ?? []).map(a => a.audio_url),
   ];
 
-  // Mirror the screens' fallbacks, but only where the stored URL is missing.
-  if (question.id && STORAGE_AUDIO_BASE) {
+  // Mirror the screens' fallbacks, but only where the stored URL is missing,
+  // and only for questions that really have recorded files.
+  if (question.id && STORAGE_AUDIO_BASE && !isBehavioralQuestion(question)) {
     if (!question.question_audio_url) {
       urls.push(`${STORAGE_AUDIO_BASE}/${question.id.toLowerCase()}.mp3`);
     }
@@ -563,6 +748,13 @@ export async function getLocalAudioUri(url: string): Promise<string> {
       return url;
     }
 
+    // A copy saved by an older version, never checked: play it, and check it in
+    // the background (see verifyCachedCopy). It is never skipped for the
+    // original: with the server unreachable that would mean silence (R5).
+    if (_indexLoaded && !_index.get(filename)?.verified && getIsConnected()) {
+      void verifyCachedCopy(url, filename, localPath);
+    }
+
     void loadIndex().then(() => touch(filename));
     return localPath;
   } catch {
@@ -576,7 +768,8 @@ export async function getLocalAudioUri(url: string): Promise<string> {
  */
 export async function preCacheAudioBatch(
   urls: string[],
-  onProgress?: (completed: number, total: number) => void
+  onProgress?: (completed: number, total: number) => void,
+  priority: DownloadPriority = 'now',
 ): Promise<void> {
   // Clips that ship inside the app are never downloaded (services/bundledAudio.ts).
   urls = urls.filter(u => !BUNDLED_AUDIO_NAMES.has(urlToFilename(u)));
@@ -586,7 +779,9 @@ export async function preCacheAudioBatch(
   let completed = 0;
   const total   = urls.length;
 
-  // Download in batches of 5 to avoid overwhelming the network
+  // Download in batches of 5. The real limit on parallel downloads is the
+  // app-wide one in downloadAtomic (MAX_PARALLEL_DOWNLOADS); this only keeps
+  // the list from being handed over all at once.
   const BATCH_SIZE = 5;
 
   for (let i = 0; i < urls.length; i += BATCH_SIZE) {
@@ -606,9 +801,9 @@ export async function preCacheAudioBatch(
         if (usable) {
           touch(filename);
         } else {
-          const { ok, bytes } = await downloadAtomic(url, 'preCacheAudioBatch');
+          const { ok, bytes } = await downloadAtomic(url, 'preCacheAudioBatch', priority);
           // Track without enforcing per file: one sweep after the batch.
-          if (ok) _index.set(filename, { bytes, lastAccess: Date.now() });
+          if (ok) _index.set(filename, { bytes, lastAccess: Date.now(), verified: true });
         }
 
         completed++;
@@ -710,7 +905,8 @@ export async function prefetchTopicAudio(
 
   const filtered = urls.filter(u => !!u && !u.startsWith('assets/'));
   if (!filtered.length) return;
-  await preCacheAudioBatch(filtered);
+  // Behind whatever the user is looking at right now (see the download line).
+  await preCacheAudioBatch(filtered, undefined, 'background');
 }
 
 /**

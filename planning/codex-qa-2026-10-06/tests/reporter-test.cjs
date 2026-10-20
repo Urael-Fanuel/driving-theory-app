@@ -79,6 +79,8 @@ function world(opts = {}) {
     'expo-application': { nativeApplicationVersion: '1.0.0', nativeBuildVersion: '10' },
     '../backend/supabaseClient': { supabase },
     './bundledAudio': { BUNDLED_AUDIO_NAMES: new Set(['number_1.mp3']) },
+    // shared connectivity poll (reports waiting offline are sent on reconnect)
+    '../hooks/useNetworkStatus': { onConnectivityChange: fn => { state.netSubs = (state.netSubs || []).concat(fn); return () => { state.netSubs = state.netSubs.filter(x => x !== fn); }; } },
   };
   const ctx = {
     exports: {}, console: { warn() {}, log() {}, error() {} },
@@ -233,4 +235,18 @@ const baseRow = (id, over = {}) => ({ id, function_name: 'w', error_message: 'm'
     '| went to background while checking ->', JSON.stringify(bg), ok(bg.length === 0),
     '| still buffering at 10 s ->', JSON.stringify(slow), ok(slow.length === 1 && slow[0] === 'audio_slow'),
     '| playing ->', JSON.stringify(playing), ok(playing.length === 0));
-})().catch(e => console.log('TEST ERROR', e));
+
+  // 13. rows waiting on the phone are sent as soon as the connection comes back (CODEX QA 2026-10-08)
+  w = world();
+  w.behaviors.push({ error: { message: 'Network request failed', code: '' }, status: 0 });   // first send fails: kept
+  w.api.reportError('audio', 'w13', 'kept for later', {});
+  await settle();
+  const waiting13   = queueFiles(w).length;
+  const listening13 = (w.state.netSubs || []).length;
+  (w.state.netSubs || []).slice().forEach(fn => fn(true));                                // connection back
+  await settle();
+  console.log('13 reconnect: row kept', waiting13, ok(waiting13 === 1),
+    '| listening only while rows wait', ok(listening13 === 1),
+    '| sent on reconnect', ok(w.inserts.length === 2 && queueFiles(w).length === 0),
+    '| stopped listening', ok((w.state.netSubs || []).length === 0));
+})().catch(e => { console.log('TEST ERROR', e); process.exitCode = 1; });

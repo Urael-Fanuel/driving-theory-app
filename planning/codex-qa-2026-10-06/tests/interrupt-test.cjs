@@ -134,4 +134,4 @@ const ok = (c) => c ? 'OK' : 'FAIL';
   tp.end(); await d5;
   console.log('5 TTS + 1-min call: ⏸ hidden during call', ok(offDuringCall), '| sentence not abandoned after 60s', ok(notFinished),
     '| ⏸ back after call', ok(onAgain), '| result', r5, ok(r5 === true));
-})().catch(e => console.log('TEST ERROR', e));
+})().catch(e => { console.log('TEST ERROR', e); process.exitCode = 1; });

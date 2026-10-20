@@ -64,6 +64,7 @@ function loadModule(p, mods, extra = {}) {
   files.set('file:///docs/audio/try_again.mp3', 57_000);
   const cache = loadModule('services/audioCache.ts', {
     'expo-file-system/legacy': FS, './errorReporter': { reportError() {}, errorText: e => String(e) }, './bundledAudio': bundled,
+    '../hooks/useNetworkStatus': { getIsConnected: () => true },   // audioCache checks connectivity (CODEX QA Q08)
   });
   const got = await cache.getLocalAudioUri(forms.cdn); await settle();
   const noDl1 = downloads.length === 0;
@@ -73,4 +74,4 @@ function loadModule(p, mods, extra = {}) {
     '| only the celebration sound is still downloaded:', JSON.stringify(downloads), ok(downloads.length === 1 && downloads[0] === 'crowd_cheer.mp3'));
   await cache.preCacheAudioBatch([forms.cdn, forms.sign]); await settle();
   console.log('5 a prefetch list that contains a bundled clip skips it:', JSON.stringify(downloads.slice(1)), ok(downloads.slice(1).join() === '814_explanation.mp3'));
-})().catch(e => console.log('TEST ERROR', e));
+})().catch(e => { console.log('TEST ERROR', e); process.exitCode = 1; });

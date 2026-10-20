@@ -48,30 +48,32 @@ const url = 'https://x.invalid/storage/v1/object/public/audio/a.mp3';
 const FINAL = 'file:///docs/audio/a.mp3';
 const finals = t => [...t.files.keys()].filter(k => !k.endsWith('.part'));
 const parts  = t => [...t.files.keys()].filter(k => k.endsWith('.part'));
+let failures = 0;
+const judge = c => { if (!c) failures++; return c ? 'OK' : 'FAIL'; };
 (async () => {
   let t, r;
 
   t = setup({ bodyBytes: 5000, declared: 5000 }); r = await t.api.qa.downloadAtomic(url, 'test');
-  console.log('1 complete download:   ok=%s final=%s partsLeft=%d', r.ok, t.files.get(FINAL), parts(t).length);
+  console.log('1 complete download:   ok=%s final=%s partsLeft=%d', r.ok, t.files.get(FINAL), parts(t).length, judge(r.ok && t.files.get(FINAL) === 5000 && parts(t).length === 0));
 
   t = setup({ bodyBytes: 3000, declared: 5000 }); r = await t.api.qa.downloadAtomic(url, 'test');
-  console.log('2 truncated (3000/5000): ok=%s finalExists=%s partsLeft=%d', r.ok, t.files.has(FINAL), parts(t).length);
+  console.log('2 truncated (3000/5000): ok=%s finalExists=%s partsLeft=%d', r.ok, t.files.has(FINAL), parts(t).length, judge(!r.ok && !t.files.has(FINAL) && parts(t).length === 0));
 
   t = setup({ bodyBytes: 600, status: 404 }); r = await t.api.qa.downloadAtomic(url, 'test');
-  console.log('3 HTTP 404 body:        ok=%s finalExists=%s partsLeft=%d', r.ok, t.files.has(FINAL), parts(t).length);
+  console.log('3 HTTP 404 body:        ok=%s finalExists=%s partsLeft=%d', r.ok, t.files.has(FINAL), parts(t).length, judge(!r.ok && !t.files.has(FINAL) && parts(t).length === 0));
 
   t = setup({ bodyBytes: 100 }); r = await t.api.qa.downloadAtomic(url, 'test');
-  console.log('4 tiny file (100B):     ok=%s finalExists=%s', r.ok, t.files.has(FINAL));
+  console.log('4 tiny file (100B):     ok=%s finalExists=%s', r.ok, t.files.has(FINAL), judge(!r.ok && !t.files.has(FINAL)));
 
   t = setup({ throws: true, existing: 7777 }); r = await t.api.qa.downloadAtomic(url, 'test');
-  console.log('5 network error, GOOD OLD COPY kept: ok=%s final=%s', r.ok, t.files.get(FINAL));
+  console.log('5 network error, GOOD OLD COPY kept: ok=%s final=%s', r.ok, t.files.get(FINAL), judge(!r.ok && t.files.get(FINAL) === 7777));
 
   t = setup({ bodyBytes: 5000, declared: 5000, moveFails: true, existing: 7777 }); r = await t.api.qa.downloadAtomic(url, 'test');
-  console.log('6 rename fails, old copy kept: ok=%s final=%s partsLeft=%d', r.ok, t.files.get(FINAL), parts(t).length);
+  console.log('6 rename fails, old copy kept: ok=%s final=%s partsLeft=%d', r.ok, t.files.get(FINAL), parts(t).length, judge(!r.ok && t.files.get(FINAL) === 7777 && parts(t).length === 0));
 
   t = setup({ bodyBytes: 5000, declared: 5000 });
   const [a, b] = await Promise.all([t.api.qa.downloadAtomic(url, 'one'), t.api.qa.downloadAtomic(url, 'two')]);
-  console.log('7 two callers, same file: downloads started=%d both ok=%s', t.stats().started, a.ok && b.ok);
+  console.log('7 two callers, same file: downloads started=%d both ok=%s', t.stats().started, a.ok && b.ok, judge(t.stats().started === 1 && a.ok && b.ok));
 
   t = setup({ hang: true });
   const pending = t.api.qa.downloadAtomic(url, 'test');
@@ -79,11 +81,14 @@ const parts  = t => [...t.files.keys()].filter(k => k.endsWith('.part'));
   const killer = t.timers.find(x => x.ms === 90000);   // the per-file timeout
   killer.fn();                                          // time passes
   r = await pending;
-  console.log('8 hung download, 90s passes: settled=true ok=%s cancelCalls=%d partsLeft=%d finalExists=%s', r.ok, t.stats().cancelled, parts(t).length, t.files.has(FINAL));
+  console.log('8 hung download, 90s passes: settled=true ok=%s cancelCalls=%d partsLeft=%d finalExists=%s', r.ok, t.stats().cancelled, parts(t).length, t.files.has(FINAL), judge(!r.ok && t.stats().cancelled === 1 && parts(t).length === 0 && !t.files.has(FINAL)));
 
   t = setup({ existing: 0 }); t.api.qa.seedIndex([['a.mp3', { bytes: 0, lastAccess: 0 }]]);
   const usable = await t.api.qa.hasUsableCopy(FINAL);
-  console.log('9 empty leftover file:  usable=%s removed=%s', usable, !t.files.has(FINAL));
+  console.log('9 empty leftover file:  usable=%s removed=%s', usable, !t.files.has(FINAL), judge(!usable && !t.files.has(FINAL)));
 
-  t = setup({ existing: 40000 }); console.log('10 healthy cached file: usable=%s kept=%s', await t.api.qa.hasUsableCopy(FINAL), t.files.has(FINAL));
-})();
+  t = setup({ existing: 40000 }); const usable10 = await t.api.qa.hasUsableCopy(FINAL);
+  console.log('10 healthy cached file: usable=%s kept=%s', usable10, t.files.has(FINAL), judge(usable10 && t.files.has(FINAL)));
+  console.log(failures ? '\n' + failures + ' FAILED' : '\nALL PASSED');
+  process.exitCode = failures ? 1 : 0;
+})().catch(e => { console.log('TEST ERROR', e); process.exitCode = 1; });

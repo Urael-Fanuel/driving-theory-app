@@ -13,6 +13,7 @@ import { supabase, DBTopic, DBSign, DBQuestion, DBExamSession, DBUserProgress, D
 import * as mockData from './mockData';
 import { getIsConnected } from '../hooks/useNetworkStatus';
 import { reportError } from '../services/errorReporter';
+import { looksLikeNetworkFailure } from '../services/identity';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as Application from 'expo-application';
 import { createTopicsLoader } from './topicsLoader';
@@ -925,17 +926,22 @@ export async function userHasLocation(userId: string): Promise<boolean> {
  * before that decision, so a later "no" always wins and getSponsorAd's
  * tier-3 IP fallback stops matching for this user going forward.
  */
-export async function clearUserIpCity(userId: string): Promise<void> {
-  if (USE_MOCK) return;
+export async function clearUserIpCity(userId: string): Promise<boolean> {
+  if (USE_MOCK) return true;
 
+  // Returns whether the server confirmed the wipe, so a failed one (e.g. no
+  // connection) is tried again instead of being taken as done
+  // (CODEX QA 2026-10-08, R7).
   try {
     const { error } = await (supabase
       .from('users') as any)
       .update({ ip_city: null })
       .eq('id', userId);
     if (error) throw error;
+    return true;
   } catch (err) {
     console.error('[api] clearUserIpCity:', err);
+    return false;
   }
 }
 
@@ -981,12 +987,18 @@ const NEARBY_SPONSOR_RADIUS_KM = 30;
  *
  * Returns null (show nothing, never a placeholder) when none of the three
  * match — including when the user has no location data at all yet, or
- * explicitly declined the GPS prompt (in which case `ip_city` is kept
- * cleared by that decline — see hooks/useLocationPrompt.ts).
+ * explicitly declined the GPS prompt.
+ *
+ * Pass `useIpCity: false` for a user who declined: tier 3 is then skipped even
+ * if an `ip_city` is still on the row. The decline wipes it, but that wipe can
+ * fail with no connection, or a lookup already on its way can write it back
+ * afterwards, and the privacy policy promises that after a "no" the estimate
+ * is not used again (CODEX QA 2026-10-08, Q11).
  */
 export async function getSponsorAd(
   userId: string,
-  category: string = 'driving_instructor'
+  category: string = 'driving_instructor',
+  opts: { useIpCity?: boolean } = {},
 ): Promise<SponsorAd | null> {
   if (USE_MOCK || !userId) return null;
 
@@ -999,8 +1011,9 @@ export async function getSponsorAd(
     if (userErr) throw userErr;
     if (!userRow) return null;
 
-    const { city, lat, lon, ip_city: ipCity } = userRow as
+    const { city, lat, lon, ip_city: storedIpCity } = userRow as
       { city: string | null; lat: number | null; lon: number | null; ip_city: string | null };
+    const ipCity = opts.useIpCity === false ? null : storedIpCity;
     if (!city && !ipCity) return null; // nothing to match on at all
 
     const { data: ads, error: adsErr } = await (supabase
@@ -1060,56 +1073,103 @@ export async function getSponsorAd(
  * an answer that was already saved. If omitted, one is generated here so
  * this call's own internal retries are still deduped even by callers that
  * don't have a queue id to pass in.
+ *
+ * Returns what happened, and NEVER throws:
+ *   'saved'       — the server has it,
+ *   'rejected'    — the server answered and refused it (e.g. "not authorized":
+ *                   upsert_user_progress only accepts the signed-in user's own
+ *                   id, so an answer recorded under a local or lost id fails),
+ *   'unreachable' — not saved for a reason that may pass: no connection,
+ *                   timeout, too many requests (429), an expired session,
+ *                   a server outage (5xx). The answer stays queued.
+ * It used to return nothing either way, so utils/answerQueue.ts removed every
+ * answer from the queue even when it had not been saved: an exam answered
+ * offline was lost at once (found with CODEX QA 2026-10-08, Q09).
  */
+export type SaveAnswerResult = 'saved' | 'rejected' | 'unreachable';
+
 export async function saveAnswer(
   userId: string,
   questionId: string,
   isCorrect: boolean,
   retries = 3,
   submissionId?: string
-): Promise<void> {
-  if (USE_MOCK) return;
+): Promise<SaveAnswerResult> {
+  if (USE_MOCK) return 'saved';
 
   const subId = submissionId ?? `${userId}_${questionId}_${Date.now()}_${Math.random().toString(36).slice(2)}`;
 
+  let result: SaveAnswerResult = 'unreachable';
   for (let attempt = 0; attempt < retries; attempt++) {
     try {
-      const { error } = await supabase.rpc('upsert_user_progress', {
+      const { error, status } = await supabase.rpc('upsert_user_progress', {
         p_user_id:        userId,
         p_question_id:    questionId,
         p_is_correct:     isCorrect,
         p_submission_id:  subId,
       } as any);
-      if (error) throw error;
-      return; // success
+      if (error) throw { ...error, message: error.message, status };
+      return 'saved';
     } catch (err) {
       console.warn(`[api] saveAnswer attempt ${attempt + 1}/${retries}:`, err);
+      // A refusal from the server will not change on a retry seconds later;
+      // anything temporary might, and must keep the answer in the queue
+      // (see isTemporaryFailure below).
+      if (!isTemporaryFailure(err)) return 'rejected';
+      result = 'unreachable';
       if (attempt < retries - 1) {
         await new Promise(resolve => setTimeout(resolve, 1000 * (attempt + 1)));
       }
     }
   }
+  return result;
 }
 
 /**
- * Record that a user watched a sign video (Engine A).
+ * A failure that may pass, so the entry must stay queued: no answer, 408
+ * timeout, 425/429 "too many requests", 401 an expired session (it is
+ * refreshed), 5xx an outage. Anything else is a refusal from the server that
+ * will not change on a retry seconds later. 429 used to count as a refusal,
+ * so five of them deleted an unsaved exam answer (CODEX QA 2026-10-08, R6).
+ * Shared by saveAnswer and recordSignView (CODEX QA round 3). It sits right
+ * after saveAnswer so a check that cuts saveAnswer out of this file up to
+ * recordSignView's comment still gets it.
+ */
+function isTemporaryFailure(err: unknown): boolean {
+  const status = (err as any)?.status;
+  const code   = String((err as any)?.code ?? '');
+  return looksLikeNetworkFailure(err)
+    || code === 'PGRST301'                                   // JWT expired
+    || (typeof status === 'number' && (status === 0 || status === 401 || status === 408
+        || status === 425 || status === 429 || status >= 500));
+}
+
+/**
+ * Record that a user watched a sign video (Engine A) or opened a sign (Engine B).
+ *
+ * Returns what happened, like saveAnswer, and NEVER throws. One attempt only:
+ * a view that was not saved stays in utils/answerQueue.ts and is sent again
+ * from there. It used to return nothing either way, so a sign viewed offline
+ * was never counted on the server (CODEX QA round 3, owner's decision).
  */
 export async function recordSignView(
   userId: string,
   signId: string,
   videoCompleted: boolean
-): Promise<void> {
-  if (USE_MOCK) return;
+): Promise<SaveAnswerResult> {
+  if (USE_MOCK) return 'saved';
 
   try {
-    const { error } = await supabase.rpc('upsert_sign_view', {
+    const { error, status } = await supabase.rpc('upsert_sign_view', {
       p_user_id:         userId,
       p_sign_id:         signId,
       p_video_completed: videoCompleted,
     } as any);
-    if (error) throw error;
+    if (error) throw { ...error, message: error.message, status };
+    return 'saved';
   } catch (err) {
     console.warn('[api] recordSignView:', err);
+    return isTemporaryFailure(err) ? 'unreachable' : 'rejected';
   }
 }
 

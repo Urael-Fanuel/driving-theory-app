@@ -31,7 +31,7 @@ import { useExam } from '../../../hooks/useExam';
 import { useNetworkStatus } from '../../../hooks/useNetworkStatus';
 import { isQuestionAudioReady, prefetchQuestionAudio, preCacheAudioBatch } from '../../../services/audioCache';
 import { useAudio, playAndAwaitAudio } from '../../../hooks/useAudio';
-import { speakAndAwait, stopTTS, onTTSSpeakingChange, getIsTTSSpeaking } from '../../../utils/googleTTS';
+import { speakAndAwait, stopTTS, onTTSSpeakingChange, getIsTTSSpeaking, areTtsTextsCached } from '../../../utils/googleTTS';
 import { useAudioInterrupted, resumeInterruptedAudio } from '../../../hooks/useAudioInterrupted';
 import { useVoiceRecognition } from '../../../hooks/useVoiceRecognition';
 import * as api from '../../../backend/api';
@@ -112,7 +112,21 @@ export default function EngineAExamScreen() {
   const prevConnectedRef  = useRef(true);
   const isConnectedRef    = useRef(isConnected);
   const [playingAnswerIndex,       setPlayingAnswerIndex]       = useState<number | null>(null);
-  const playingAnswerIndexRef  = useRef<number | null>(null); // mirror for async callbacks
+  // Index of the answer the AUTO-READING itself is at (null: still on the question,
+  // or finished / failed). Set by the reading only, never by a 🔊 replay, so it says
+  // where the reading was when a tap cut in, also after several quick taps. It used
+  // to be a mirror of the highlighted card, which a replay moves too.
+  const sequenceIndexRef       = useRef<number | null>(null);
+  const markSequenceAt = (i: number | null) => { sequenceIndexRef.current = i; setPlayingAnswerIndex(i); };
+  // Counts 🔊 taps. Only the newest tap may touch the highlight or restart the
+  // reading: a tap whose clip was replaced by a newer tap is let go by the audio
+  // engine as "finished" and used to resume the reading as if it had played out
+  // (it also cleared the newer tap's highlight).
+  const replayPressRef         = useRef(0);
+  // Bumped the moment the learner moves to another question, before anything else
+  // happens: a tap still playing then must not restart the reading of the NEW
+  // question from the middle (its continuation runs before the screen shows it).
+  const questionEpochRef       = useRef(0);
   // true once the answer's own audio clip has STARTED playing (after the number announcement).
   // false while only the number is being announced.
   const answerAudioStartedRef  = useRef(false);
@@ -125,9 +139,6 @@ export default function EngineAExamScreen() {
   // Keep isConnectedRef in sync — lets runSequence read connectivity synchronously
   useEffect(() => { isConnectedRef.current = isConnected; }, [isConnected]);
 
-  // Keep playingAnswerIndexRef in sync — lets handleAnswerAudioPress capture the
-  // answer index the sequence was on at the moment the user tapped 🔊.
-  useEffect(() => { playingAnswerIndexRef.current = playingAnswerIndex; }, [playingAnswerIndex]);
   useEffect(() => onTTSSpeakingChange(setIsTTSPlaying), []);
 
   // Load all signs once on mount (for displaying the sign image per question)
@@ -303,6 +314,7 @@ export default function EngineAExamScreen() {
     if (phase !== 'question' || !currentQuestion || !isTabFocused) return;
     voiceFailedRef.current = false; // Reset for new question
     sequenceCancelledRef.current = false; // Reset reconnect cancellation flag
+    sequenceIndexRef.current = null;   // a new reading starts on the question, not at an answer
     cancelListening();
     setShowFeedback(false);
     let cancelled = false;
@@ -366,28 +378,32 @@ export default function EngineAExamScreen() {
       await new Promise(res => setTimeout(res, 1000));
       if (isCancelled()) return;
 
-      // If offline at this point:
-      //   - Behavioral questions: stop (answers need live TTS — can't be cached).
-      //   - Sign questions: stop only if answer audio is NOT cached locally.
-      //     If everything was pre-cached, the full sequence can play offline.
+      // If offline at this point, go on only if every answer can be heard:
+      //   - Sign questions: their recorded answer files must be cached locally.
+      //   - Behavioral questions: their answers are TTS; the exam saves every
+      //     reading ahead of time (useExam -> prefetchTtsForTexts), so they must
+      //     all be saved. (This used to stop every behavioral question offline,
+      //     even with every reading on the phone. CODEX QA 2026-10-08.)
       if (!isConnectedRef.current && !isBehavioral) {
         const answersReady = await isQuestionAudioReady(currentQuestion!);
         if (!answersReady) return;
       } else if (!isConnectedRef.current && isBehavioral) {
-        return;
+        const answersReady = await areTtsTextsCached(
+          currentQuestion!.answers.slice(0, 4).map(a => a.text_amharic ?? ''));
+        if (!answersReady) return;
       }
       } // end if (resumeFromAnswer === null)
 
       for (let i = resumeFromAnswer ?? 0; i < currentQuestion!.answers.length && i < 4; i++) {
         if (isCancelled()) return;
 
-        setPlayingAnswerIndex(i);
+        markSequenceAt(i);
         // Reset both flags: answer audio not started, not fully read yet.
         answerAudioStartedRef.current = false;
         answerFullyReadRef.current    = false;
 
         if (!await playAndAwaitAudio(NUMBER_URLS[i], isCancelled)) {
-          setPlayingAnswerIndex(null);
+          markSequenceAt(null);
           reportAudioFailure(qId);
           return;
         }
@@ -427,7 +443,7 @@ export default function EngineAExamScreen() {
           const answerUrl = answer?.audio_url
             || `${_AUDIO_BASE}/answer_${qId}_${answer?.id}.mp3`;
           if (!await playAndAwaitAudio(answerUrl, isCancelled)) {
-            setPlayingAnswerIndex(null);
+            markSequenceAt(null);
             reportAudioFailure(qId);
             return;
           }
@@ -440,13 +456,13 @@ export default function EngineAExamScreen() {
         // Yield again before the next number announcement.
         await new Promise<void>(r => setTimeout(r, 0));
       }
-      setPlayingAnswerIndex(null);
+      markSequenceAt(null);
     }
 
     runSequence().catch(() => {});
     return () => {
       cancelled = true;
-      setPlayingAnswerIndex(null);
+      markSequenceAt(null);
     };
   }, [currentQuestion?.id, isTabFocused, audioRestartKey]); // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -515,6 +531,7 @@ export default function EngineAExamScreen() {
 
   const handleNavPrev = async () => {
     if (!canGoPrev) return;
+    questionEpochRef.current++;   // first: see questionEpochRef
     await stopAudio();
     await stopTTS().catch(() => {});
     cancelListening();
@@ -524,6 +541,7 @@ export default function EngineAExamScreen() {
 
   const handleNavNext = async () => {
     if (!canGoNext) return;
+    questionEpochRef.current++;   // first: see questionEpochRef
     await stopAudio();
     await stopTTS().catch(() => {});
     cancelListening();
@@ -549,23 +567,35 @@ export default function EngineAExamScreen() {
   };
 
   // ── 🔊 Answer audio button: cancel sequence, highlight card, replay, then resume ──
+  //
+  // Quick taps on different speakers (same rules as question/[id].tsx): the newest
+  // tap wins. An older tap whose clip a newer tap replaced is let go by the audio
+  // engine as "finished"; it must neither clear the newer tap's highlight nor
+  // resume the reading (it used to do both: the wrong answer started by itself).
   const handleAnswerAudioPress = useCallback(async (audioUrl: string, answerIndex: number) => {
     if (phaseRef.current !== 'question') return;
-    // Capture where the sequence was BEFORE cancelling it.
-    // Example: sequence is reading answer 3 (index 2), user taps 🔊 on answer 1 (index 0)
-    // → after replay we must continue from answer 4 (index 3), not answer 2.
-    const playingAtTime = playingAnswerIndexRef.current;
+    const myPress = ++replayPressRef.current;
+    const epochAtPress = questionEpochRef.current;
     sequenceCancelledRef.current = true;
     await stopTTS();   // stop TTS if a behavioral question was mid-read
+    if (myPress !== replayPressRef.current) return;   // a newer tap arrived while stopping
     setPlayingAnswerIndex(answerIndex); // yellow border on the tapped card
     // playAndAwaitAudio stops the current audio, plays this answer, resolves only
     // when it finishes — no race condition with the sequence.
     const replayed = await playAndAwaitAudio(audioUrl, () => phaseRef.current !== 'question');
+    if (myPress !== replayPressRef.current) return;   // a newer tap replaced this clip
     setPlayingAnswerIndex(null);
     if (phaseRef.current !== 'question') return;
+    // The learner moved to another question meanwhile: nothing to resume here.
+    if (questionEpochRef.current !== epochAtPress) return;
     // Nothing was heard (offline, not cached) — don't resume the sequence, which
     // would just fail again on its first clip.
     if (!replayed) { reportAudioFailure(currentQuestion?.id ?? ''); return; }
+    // Where the sequence was when the tap cut it off. Example: it is reading answer 3
+    // (index 2), the user taps 🔊 on answer 1 (index 0) → after the replay we continue
+    // from answer 4 (index 3), not answer 2. A replay never changes it (only the
+    // reading does), so it is the same after one tap or after several quick ones.
+    const playingAtTime = sequenceIndexRef.current;
     // If the sequence had already finished (playingAtTime === null), just replay —
     // don't restart the cycle (user is reviewing, not in the middle of listening).
     if (playingAtTime === null) return;
@@ -601,14 +631,19 @@ export default function EngineAExamScreen() {
   // nothing, because onAudioPress was never wired up for that case at all.
   const handleBehavioralAnswerAudioPress = useCallback(async (text: string, answerIndex: number) => {
     if (phaseRef.current !== 'question') return;
-    const playingAtTime = playingAnswerIndexRef.current;
+    const myPress = ++replayPressRef.current;
+    const epochAtPress = questionEpochRef.current;
     sequenceCancelledRef.current = true;
     await stopAudio(); // stop the number-clip engine in case it's mid-play
+    if (myPress !== replayPressRef.current) return;   // a newer tap arrived while stopping
     setPlayingAnswerIndex(answerIndex);
     const spoken = await speakAndAwait(text);
+    if (myPress !== replayPressRef.current) return;   // a newer tap replaced this reading
     setPlayingAnswerIndex(null);
     if (phaseRef.current !== 'question') return;
+    if (questionEpochRef.current !== epochAtPress) return;
     if (!spoken) { reportAudioFailure(currentQuestion?.id ?? ''); return; }
+    const playingAtTime = sequenceIndexRef.current;   // see handleAnswerAudioPress
     if (playingAtTime === null) return;
     const resumeFrom = answerFullyReadRef.current
       ? playingAtTime + 1

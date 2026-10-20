@@ -58,11 +58,22 @@ export interface UseAudioReturn {
 // request that cannot happen, and call sites do NOT need to await stopAudio()
 // for overlap-correctness. If you add a new playback path it must follow all
 // three rules.
+//
+// 4. Anything that WAITS for a clip registers a cancel in _waiting, and
+//    _claim() runs them all: a newer request or a stop lets every older waiter
+//    go at once (as "cancelled", i.e. true, which the caller's own isCancelled()
+//    check handles). expo-av did this by itself (unloading a sound sent one last
+//    status update), expo-audio sends nothing once a player is released, so
+//    without this a waiter stayed pending until the 2.5-minute safety clock, and
+//    forever if the clip had been paused, because a pause holds that clock
+//    (CODEX QA 2026-10-08, Q02).
 
 let _sound: Sound | null = null;
 let _currentState: AudioState  = 'idle';
 let _soundId                   = 0;   // Ticket counter; a request owns playback only while its ticket is the latest
 const _listeners = new Set<(state: AudioState) => void>();
+/** Cancels of everything still waiting for a clip (rule 4). */
+const _waiting = new Set<() => void>();
 
 function _emit(state: AudioState) {
   _currentState = state;
@@ -78,6 +89,10 @@ function _claim(): { ticket: number; previous: Sound | null } {
   const ticket   = ++_soundId;
   const previous = _sound;
   _sound = null;
+  // Rule 4: every older waiter is let go now (none can belong to this ticket yet).
+  const older = [..._waiting];
+  _waiting.clear();
+  older.forEach(cancel => cancel());
   return { ticket, previous };
 }
 
@@ -178,15 +193,28 @@ function _startClip(
 
   let done        = false;
   let everPlayed  = false;   // did a status ever say it is actually playing?
+  let lastPosMs   = 0;       // last known position / length (see onSafety)
+  let lastDurMs   = 0;
+  let lastStalled = false;   // the last status said it was stuck (buffering / not playing)
+  let created: Sound | null = null;   // this clip's player, once it exists
   const current   = () => ticket === _soundId && !isCancelled();
 
   const finish = (played: boolean, startResult: 'ok' | 'cancelled' | 'failed') => {
     if (done) return;
     done = true;
+    _waiting.delete(cancel);
     holdSafety();
+    // A clip that failed must not stay loaded, nor in the shared slot, when the
+    // caller goes on to try the original file (CODEX QA Q03).
+    if (!played && created) {
+      if (_sound === created) _sound = null;
+      created.unloadAsync().catch(() => {});
+    }
     resolveStarted(startResult);   // no-op if it already settled
     resolveFinished(played);
   };
+  // Rule 4: a newer request or a stop lets this clip's waiter go at once.
+  const cancel = () => finish(true, 'cancelled');
 
   // The safety clock only runs while the clip is meant to be sounding. While it
   // is paused (by the user, or by Android during a phone call) it is held, and
@@ -196,14 +224,27 @@ function _startClip(
   let safetyTimer: ReturnType<typeof setTimeout> | null = null;
   const onSafety = () => {
     safetyTimer = null;
-    // No finish callback in 2.5 minutes. If the clip was audibly playing the
-    // callback was simply dropped, so count it as heard. If it never played at
-    // all, the user heard nothing: that is a failure, not a success.
-    if (ticket === _soundId) _emit(everPlayed ? 'finished' : 'error');
-    finish(everPlayed, everPlayed ? 'ok' : 'failed');
+    // No finish callback in 2.5 minutes of playing time.
+    //   - Never played: the user heard nothing, a failure.
+    //   - Got (nearly) to its end, or the last word from the player was that it
+    //     was playing (then the callbacks simply stopped arriving, the case
+    //     this clock exists for): count it as heard.
+    //   - The last word was that it was stuck part-way (buffering a stream):
+    //     not heard to the end, a failure (CODEX QA 2026-10-08, R2).
+    const reachedEnd = lastDurMs > 0 && lastDurMs - lastPosMs <= Math.max(3_000, lastDurMs * 0.1);
+    const heard = everPlayed && (reachedEnd || !lastStalled);
+    if (ticket === _soundId) _emit(heard ? 'finished' : 'error');
+    finish(heard, heard ? 'ok' : 'failed');
   };
   function armSafety()  { if (!safetyTimer && !done) safetyTimer = setTimeout(onSafety, CLIP_SAFETY_MS); }
   function holdSafety() { if (safetyTimer) { clearTimeout(safetyTimer); safetyTimer = null; } }
+
+  // Rule 2: a request that lost its place while getting here creates nothing.
+  if (!current()) {
+    finish(true, 'cancelled');
+    return { started, finished };
+  }
+  _waiting.add(cancel);
   armSafety();   // also covers loading
 
   Sound.createAsync(
@@ -222,6 +263,9 @@ function _startClip(
         return;
       }
       if (status.isPlaying || status.positionMillis > 0) everPlayed = true;
+      lastPosMs = status.positionMillis || 0;
+      if (status.durationMillis) lastDurMs = status.durationMillis;
+      lastStalled = !!status.isBuffering || (!status.isPlaying && !!status.shouldPlay && !status.interrupted && !status.didJustFinish);
       opts.onProgress?.(status);
       if (status.didJustFinish) { _emit('finished'); finish(true, 'ok'); return; }
 
@@ -238,9 +282,11 @@ function _startClip(
     },
   )
     .then(({ sound }) => {
+      created = sound;
       // Rule 3: the ticket check and the assignment happen in ONE synchronous
-      // step. A request that lost its place unloads what it created.
-      if (!current()) {
+      // step. A request that lost its place (or a clip already over) unloads
+      // what it created.
+      if (done || !current()) {
         sound.unloadAsync().catch(() => {});
         finish(true, 'cancelled');
         return;
@@ -316,6 +362,9 @@ export async function playAndAwaitAudio(
 
   if (!played && saved && ticket === _soundId && !isCancelled()) {
     await discardCachedCopy(remote).catch(() => {});
+    // Rule 2: a newer request or a cancel may have arrived during the discard
+    // (CODEX QA Q03: the original used to be created and started anyway).
+    if (ticket !== _soundId || isCancelled()) return true;
     played = await _startClip(remote, ticket, isCancelled).finished;
   }
   return played;
@@ -358,16 +407,19 @@ export async function playPreloadedAudio(
   _emit('playing');
 
   return new Promise<void>((resolve) => {
+    // Rule 4: a newer request or a stop lets this waiter go.
+    const done = () => { _waiting.delete(done); resolve(); };
+    _waiting.add(done);
     sound.setOnPlaybackStatusUpdate((status: PlaybackStatus) => {
-      if (ticket !== _soundId || isCancelled()) { resolve(); return; }
+      if (ticket !== _soundId || isCancelled()) { done(); return; }
       if (!status.isLoaded) {
         if (status.error) {
           reportError('audio', 'playPreloadedAudio:status', status.error);
-          _emit('error'); resolve();
+          _emit('error'); done();
         }
         return;
       }
-      if (status.didJustFinish) { _emit('finished'); resolve(); return; }
+      if (status.didJustFinish) { _emit('finished'); done(); return; }
       // Paused by Android (call, another app): show ▶️, not ⏸ over silence.
       if (status.interrupted) { if (_currentState !== 'paused') _emit('paused'); return; }
       if (status.isPlaying) _emit('playing');
@@ -379,7 +431,7 @@ export async function playPreloadedAudio(
         reportError('audio', 'playPreloadedAudio:play', error);
         _emit('error');
       }
-      resolve();
+      done();
     });
   });
 }
@@ -442,6 +494,7 @@ export function useAudio(): UseAudioReturn {
     if (result === 'failed' && saved && ticket === _soundId) {
       // The saved copy could not be played: drop it, use the original once.
       await discardCachedCopy(remote).catch(() => {});
+      if (ticket !== _soundId) return;   // rule 2: replaced during the discard (CODEX QA Q03)
       result = await _startClip(remote, ticket, never, { onProgress }).started;
     }
   }, []);
