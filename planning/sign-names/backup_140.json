@@ -1,0 +1,12 @@
+{
+ "at": "2026-10-23T15:48:02.508Z",
+ "signs_json": {
+  "name_amharic": "ይህ ምልክት ከፊትህ ቁልቁለት ያለው መንገድ መኖሩን ያመለክታል።",
+  "audio_name_filename": "sign_hill_descent_name.mp3"
+ },
+ "db": {
+  "id": "SIGN_HILL_DESCENT",
+  "name_amharic": "ይህ ምልክት ከፊትህ ቁልቁለት ያለው መንገድ መኖሩን ያመለክታል።",
+  "audio_name_url": null
+ }
+}

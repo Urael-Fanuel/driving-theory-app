@@ -1,0 +1,12 @@
+{
+ "at": "2026-10-23T15:47:47.112Z",
+ "signs_json": {
+  "name_amharic": "ከፊት ለፊትህ የክብ ቅርጽ ያለው መንገድ (ዙርያ መዞሪያ) መኖሩን ያመለክታል።",
+  "audio_name_filename": "sign_traffic_light_ahead_name.mp3"
+ },
+ "db": {
+  "id": "SIGN_TRAFFIC_LIGHT_AHEAD",
+  "name_amharic": "ከፊት ለፊትህ የክብ ቅርጽ ያለው መንገድ (ዙርያ መዞሪያ) መኖሩን ያመለክታል።",
+  "audio_name_url": null
+ }
+}

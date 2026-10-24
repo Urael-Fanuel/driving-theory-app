@@ -1,0 +1,12 @@
+{
+ "at": "2026-10-23T15:48:01.828Z",
+ "signs_json": {
+  "name_amharic": "ይህ ምልክት ከፊትህ የማቆሚያ ምልክት (STOP) መኖሩን ያመለክታል።",
+  "audio_name_filename": "sign_139_name.mp3"
+ },
+ "db": {
+  "id": "SIGN_139",
+  "name_amharic": "ይህ ምልክት ከፊትህ የማቆሚያ ምልክት (STOP) መኖሩን ያመለክታል።",
+  "audio_name_url": null
+ }
+}

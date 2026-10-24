@@ -1,0 +1,12 @@
+{
+ "at": "2026-10-23T16:02:28.345Z",
+ "signs_json": {
+  "name_amharic": "ይህ ምልክት አሽከርካሪዎች ከመቀጠላቸው በፊት ሙሉ በሙሉ እንዲቆሙ ያዛል።",
+  "audio_name_filename": "302_name.mp3"
+ },
+ "db": {
+  "id": "ROW_JUNCTION_YIELD",
+  "name_amharic": "ይህ ምልክት አሽከርካሪዎች ከመቀጠላቸው በፊት ሙሉ በሙሉ እንዲቆሙ ያዛል።",
+  "audio_name_url": null
+ }
+}

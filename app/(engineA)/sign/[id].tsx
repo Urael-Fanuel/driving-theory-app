@@ -109,7 +109,7 @@ export default function EngineASignScreen() {
   // ── Auto-play audio; re-runs on replayCount to support replay ────────────────
 
   useEffect(() => {
-    if (!sign?.audio_explanation_url) {
+    if (!sign?.audio_explanation_url && !sign?.audio_name_url) {
       setAudioEnded(true);
       return;
     }
@@ -117,10 +117,18 @@ export default function EngineASignScreen() {
     let cancelled = false;
 
     async function playAndWait() {
-      // ✅ Correct pattern — Promise is tied to THIS specific sound via _soundId.
+      // ✅ Correct pattern — each Promise is tied to THIS specific sound via _soundId.
       // Cannot be resolved prematurely by another audio completing or erroring.
-      await playAndAwaitAudio(sign!.audio_explanation_url!, () => cancelled);
-      if (cancelled) return;
+      // The sign NAME clip (official wording, only for signs that have one) plays
+      // first, then the explanation. The quiz button waits for both.
+      if (sign!.audio_name_url) {
+        await playAndAwaitAudio(sign!.audio_name_url, () => cancelled);
+        if (cancelled) return;
+      }
+      if (sign!.audio_explanation_url) {
+        await playAndAwaitAudio(sign!.audio_explanation_url, () => cancelled);
+        if (cancelled) return;
+      }
       setAudioEnded(true);
     }
 

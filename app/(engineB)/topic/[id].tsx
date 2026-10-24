@@ -113,7 +113,7 @@ export default function EngineBTopicScreen() {
 
         {/* Sign name */}
         <View style={styles.signTextContainer}>
-          <Text style={styles.signName} numberOfLines={2}>
+          <Text style={styles.signName} numberOfLines={4}>
             {item.name_amharic}
           </Text>
           {viewed && (

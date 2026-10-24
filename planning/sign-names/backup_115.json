@@ -1,0 +1,12 @@
+{
+ "at": "2026-10-23T15:46:04.504Z",
+ "signs_json": {
+  "name_amharic": "ከፊትህ ባለው መንገድ ላይ ከቀኝ በኩል የሚቀላቀል የቲ ቅርጽ ያለው መስቀለኛ መንገድ መኖሩን ያመለክታል።",
+  "audio_name_filename": "sign_t_junction_name.mp3"
+ },
+ "db": {
+  "id": "SIGN_T_JUNCTION",
+  "name_amharic": "ከፊትህ ባለው መንገድ ላይ ከቀኝ በኩል የሚቀላቀል የቲ ቅርጽ ያለው መስቀለኛ መንገድ መኖሩን ያመለክታል።",
+  "audio_name_url": null
+ }
+}

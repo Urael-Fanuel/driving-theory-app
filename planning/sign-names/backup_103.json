@@ -1,0 +1,12 @@
+{
+ "at": "2026-10-23T15:43:40.028Z",
+ "signs_json": {
+  "name_amharic": "ከፊትህ ባለው መንገድ ላይ ወደ ግራ የሚታጠፍ ሹል ቀስት መታጠፊያ መኖሩን ያመለክታል።",
+  "audio_name_filename": "sign_curve_left_name.mp3"
+ },
+ "db": {
+  "id": "SIGN_CURVE_LEFT",
+  "name_amharic": "ከፊትህ ባለው መንገድ ላይ ወደ ግራ የሚታጠፍ ሹል ቀስት መታጠፊያ መኖሩን ያመለክታል።",
+  "audio_name_url": null
+ }
+}

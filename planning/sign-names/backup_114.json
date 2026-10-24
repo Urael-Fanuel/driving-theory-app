@@ -1,0 +1,12 @@
+{
+ "at": "2026-10-23T15:46:03.613Z",
+ "signs_json": {
+  "name_amharic": "ከፊትህ ባለው መንገድ ላይ መስቀለኛ መንገድ መኖሩን ያመለክታል።",
+  "audio_name_filename": "sign_crossroads_name.mp3"
+ },
+ "db": {
+  "id": "SIGN_CROSSROADS",
+  "name_amharic": "ከፊትህ ባለው መንገድ ላይ መስቀለኛ መንገድ መኖሩን ያመለክታል።",
+  "audio_name_url": null
+ }
+}

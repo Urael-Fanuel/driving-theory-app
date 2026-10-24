@@ -1,0 +1,12 @@
+{
+ "at": "2026-10-23T15:59:02.101Z",
+ "signs_json": {
+  "name_amharic": "በዚህ መስመር ላይ ቀጥታ ወደፊት ወይም ወደ ቀኝ ብቻ መሄድ እንደሚቻል ያመለክታል።",
+  "audio_name_filename": "sign_201_name.mp3"
+ },
+ "db": {
+  "id": "SIGN_201",
+  "name_amharic": "በዚህ መስመር ላይ ቀጥታ ወደፊት ወይም ወደ ቀኝ ብቻ መሄድ እንደሚቻል ያመለክታል።",
+  "audio_name_url": null
+ }
+}

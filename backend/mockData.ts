@@ -114,7 +114,10 @@ export const signs: DBSign[] = rawSigns.map(s => ({
   explanation_amharic:      s.explanation_amharic,
   image_url:                localImage(s.image_filename),
   video_url:                localVideo(s.video_filename),
-  audio_name_url:           localAudio(s.audio_name_filename),
+  // Name clips are recorded only for signs whose official name was applied
+  // (served from the DB). Older bundled name files say the OLD long text, so the
+  // offline snapshot must not point at them.
+  audio_name_url:           undefined,
   audio_explanation_url:    localAudio(s.audio_explanation_filename),
   difficulty:               1,
 }));

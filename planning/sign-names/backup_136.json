@@ -1,0 +1,12 @@
+{
+ "at": "2026-10-23T15:47:59.638Z",
+ "signs_json": {
+  "name_amharic": "ይህ ምልክት ከፊት ለፊትህ የትምህርት ቤት አካባቢ ወይም ልጆች በመንገድ አቅራቢያ ሊኖሩ እንደሚችሉ ያመለክታል።",
+  "audio_name_filename": "sign_school_zone_name.mp3"
+ },
+ "db": {
+  "id": "SIGN_SCHOOL_ZONE",
+  "name_amharic": "ይህ ምልክት ከፊት ለፊትህ የትምህርት ቤት አካባቢ ወይም ልጆች በመንገድ አቅራቢያ ሊኖሩ እንደሚችሉ ያመለክታል።",
+  "audio_name_url": null
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "at": "2026-10-23T15:47:51.872Z",
+ "signs_json": {
+  "name_amharic": "ከፊትህ ባለው መንገድ ላይ የትራፊክ መጨናነቅ ወይም የመኪና ሰልፍ መኖሩን ያመለክታል።",
+  "audio_name_filename": "sign_127_name.mp3"
+ },
+ "db": {
+  "id": "SIGN_127",
+  "name_amharic": "ከፊትህ ባለው መንገድ ላይ የትራፊክ መጨናነቅ ወይም የመኪና ሰልፍ መኖሩን ያመለክታል።",
+  "audio_name_url": null
+ }
+}

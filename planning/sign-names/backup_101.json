@@ -1,0 +1,12 @@
+{
+ "at": "2026-10-23T15:20:02.672Z",
+ "signs_json": {
+  "name_amharic": "ከፊትህ ባለው መንገድ ላይ የጎደጎደ ወይም የተበላሸ መንገድ መኖሩን ያመለክታል።",
+  "audio_name_filename": "sign_bump_name.mp3"
+ },
+ "db": {
+  "id": "SIGN_BUMP",
+  "name_amharic": "ከፊትህ ባለው መንገድ ላይ የጎደጎደ ወይም የተበላሸ መንገድ መኖሩን ያመለክታል።",
+  "audio_name_url": null
+ }
+}

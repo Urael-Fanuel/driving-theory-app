@@ -1,0 +1,12 @@
+{
+ "at": "2026-10-23T15:45:59.101Z",
+ "signs_json": {
+  "name_amharic": "ይህ ምልክት መንገዱ ከቀኝ በኩል እየጠበበ መሆኑን ያመለክታል።",
+  "audio_name_filename": "sign_110_name.mp3"
+ },
+ "db": {
+  "id": "SIGN_110",
+  "name_amharic": "ይህ ምልክት መንገዱ ከቀኝ በኩል እየጠበበ መሆኑን ያመለክታል።",
+  "audio_name_url": null
+ }
+}

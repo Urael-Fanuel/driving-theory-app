@@ -1,0 +1,12 @@
+{
+ "at": "2026-10-23T16:02:56.161Z",
+ "signs_json": {
+  "name_amharic": "ይህ ምልክት አሽከርካሪዎች ወደፊት እንዲሄዱ የሚፈቅድ መሆኑን ያሳያል።",
+  "audio_name_filename": "305_name.mp3"
+ },
+ "db": {
+  "id": "ROW_PRIORITY_ROAD",
+  "name_amharic": "ይህ ምልክት አሽከርካሪዎች ወደፊት እንዲሄዱ የሚፈቅድ መሆኑን ያሳያል።",
+  "audio_name_url": null
+ }
+}

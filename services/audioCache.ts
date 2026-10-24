@@ -837,10 +837,11 @@ interface PrefetchableQuestion {
  * Fire-and-forget.
  */
 export async function prefetchSignAudio(
-  sign: { audio_explanation_url?: string } | null | undefined,
+  sign: { audio_name_url?: string; audio_explanation_url?: string } | null | undefined,
   questions: PrefetchableQuestion[],
 ): Promise<void> {
   const urls = [
+    sign?.audio_name_url,
     sign?.audio_explanation_url,
     ...questions.flatMap(collectQuestionUrls),
   ].filter((u): u is string => !!u && !u.startsWith('assets/'));
@@ -875,7 +876,7 @@ export async function prefetchSignAudio(
  * Fire-and-forget: never await this from a screen, it can take minutes.
  */
 export async function prefetchTopicAudio(
-  signs: Array<{ id?: string; audio_explanation_url?: string }>,
+  signs: Array<{ id?: string; audio_name_url?: string; audio_explanation_url?: string }>,
   questions: PrefetchableQuestion[],
 ): Promise<void> {
   const bySign = new Map<string, PrefetchableQuestion[]>();
@@ -892,6 +893,7 @@ export async function prefetchTopicAudio(
   for (const sign of signs) {
     const key = sign.id ?? '';
     seenSignKeys.add(key);
+    if (sign.audio_name_url) urls.push(sign.audio_name_url);
     if (sign.audio_explanation_url) urls.push(sign.audio_explanation_url);
     for (const q of bySign.get(key) ?? []) urls.push(...collectQuestionUrls(q));
   }

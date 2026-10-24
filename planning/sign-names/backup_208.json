@@ -1,0 +1,12 @@
+{
+ "at": "2026-10-23T15:59:08.475Z",
+ "signs_json": {
+  "name_amharic": "በዚህ መስቀለኛ መንገድ ላይ ወደ ቀኝ ወይም ወደ ግራ መታጠፍ ግዴታ መሆኑን ያመለክታል።",
+  "audio_name_filename": "sign_208_name.mp3"
+ },
+ "db": {
+  "id": "SIGN_208",
+  "name_amharic": "በዚህ መስቀለኛ መንገድ ላይ ወደ ቀኝ ወይም ወደ ግራ መታጠፍ ግዴታ መሆኑን ያመለክታል።",
+  "audio_name_url": null
+ }
+}

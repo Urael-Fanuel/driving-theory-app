@@ -1,0 +1,12 @@
+{
+ "at": "2026-10-23T15:43:48.148Z",
+ "signs_json": {
+  "name_amharic": "ይህ ምልክት መንገዱ ከሁለቱም አቅጣጫዎች እየጠበበ መሆኑን ያመለክታል።",
+  "audio_name_filename": "sign_narrow_road_name.mp3"
+ },
+ "db": {
+  "id": "SIGN_NARROW_ROAD",
+  "name_amharic": "ይህ ምልክት መንገዱ ከሁለቱም አቅጣጫዎች እየጠበበ መሆኑን ያመለክታል።",
+  "audio_name_url": null
+ }
+}
