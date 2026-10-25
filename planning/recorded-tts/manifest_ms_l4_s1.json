@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:13:41.413Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "ms_l4_s1",
+   "key": "mind_safety_3_0",
+   "sentences": [
+    {
+     "text": "ጠንካራ ስሜቶች እንደ ቁጣ ወይም ጭንቀት ማሽከርከርን እንዴት ይጎዳሉ?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_44_40d193f494165d01.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትኩረትን ይቀንሳሉ፣ ድንገተኛ ምላሾችን ያስከትላሉ፣ እና የአደጋ ስጋትን ይጨምራሉ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_51_dfc559fc61b1d690.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ትኩረትን ይቀንሳሉ፣ ድንገተኛ ምላሾችን ያስከትላሉ፣ እና የአደጋ ስጋትን ይጨምራሉ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_56_302978cc3e3f0712.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የማሽከርከር ችሎታን ያሻሽላሉ እና ፍጥነትን ይጨምራሉ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_33_88136ad0f5264385.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። የማሽከርከር ችሎታን ያሻሽላሉ እና ፍጥነትን ይጨምራሉ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_38_0435452ca821fc1b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ምንም አይነት ተጽዕኖ የላቸውም",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_19_af80c388d4eb247d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ምንም አይነት ተጽዕኖ የላቸውም",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_24_c78e44d0561ccc49.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሽከርካሪው የበለጠ ጥንቃቄ እንዲያደርግ ያደርጋሉ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_31_9f92b6dc93a74b6b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። አሽከርካሪው የበለጠ ጥንቃቄ እንዲያደርግ ያደርጋሉ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_36_d9faeb48cccb4817.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ትኩረትን ይቀንሳሉ፣ ድንገተኛ ምላሾችን ያስከትላሉ፣ እና የአደጋ ስጋትን ይጨምራሉ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_57_f6a5340f2dd64d29.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ትኩረትን ይቀንሳሉ፣ ድንገተኛ ምላሾችን ያስከትላሉ፣ እና የአደጋ ስጋትን ይጨምራሉ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_55_6bb17b4c66e3cabf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ትኩረትን ይቀንሳሉ፣ ድንገተኛ ምላሾችን ያስከትላሉ፣ እና የአደጋ ስጋትን ይጨምራሉ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_56_4e0e0f50908a80d6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ትኩረትን ይቀንሳሉ፣ ድንገተኛ ምላሾችን ያስከትላሉ፣ እና የአደጋ ስጋትን ይጨምራሉ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_55_a6b922874fc96042.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ትኩረትን ይቀንሳሉ፣ ድንገተኛ ምላሾችን ያስከትላሉ፣ እና የአደጋ ስጋትን ይጨምራሉ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_56_6e5ff3143a75f509.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ትኩረትን ይቀንሳሉ፣ ድንገተኛ ምላሾችን ያስከትላሉ፣ እና የአደጋ ስጋትን ይጨምራሉ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_55_c5aed69b46af2537.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ትኩረትን ይቀንሳሉ፣ ድንገተኛ ምላሾችን ያስከትላሉ፣ እና የአደጋ ስጋትን ይጨምራሉ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_56_924e33f405d33462.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ትኩረትን ይቀንሳሉ፣ ድንገተኛ ምላሾችን ያስከትላሉ፣ እና የአደጋ ስጋትን ይጨምራሉ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_59_5bce2d902d8e3123.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ትኩረትን ይቀንሳሉ፣ ድንገተኛ ምላሾችን ያስከትላሉ፣ እና የአደጋ ስጋትን ይጨምራሉ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_60_e1abfd1884eae388.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ትኩረትን ይቀንሳሉ፣ ድንገተኛ ምላሾችን ያስከትላሉ፣ እና የአደጋ ስጋትን ይጨምራሉ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_60_a404d85465b96042.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ትኩረትን ይቀንሳሉ፣ ድንገተኛ ምላሾችን ያስከትላሉ፣ እና የአደጋ ስጋትን ይጨምራሉ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_60_a7b3ae449ed5f7a5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ትኩረትን ይቀንሳሉ፣ ድንገተኛ ምላሾችን ያስከትላሉ፣ እና የአደጋ ስጋትን ይጨምራሉ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_62_538b4617fd8f06c5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ትኩረትን ይቀንሳሉ፣ ድንገተኛ ምላሾችን ያስከትላሉ፣ እና የአደጋ ስጋትን ይጨምራሉ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_63_872d73ac073c9ac6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ትኩረትን ይቀንሳሉ፣ ድንገተኛ ምላሾችን ያስከትላሉ፣ እና የአደጋ ስጋትን ይጨምራሉ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_67_492240e8d0cd0928.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ትኩረትን ይቀንሳሉ፣ ድንገተኛ ምላሾችን ያስከትላሉ፣ እና የአደጋ ስጋትን ይጨምራሉ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_65_28b8c09032bf7810.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ትኩረትን ይቀንሳሉ፣ ድንገተኛ ምላሾችን ያስከትላሉ፣ እና የአደጋ ስጋትን ይጨምራሉ",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_69_ad7e25507f82adf5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ አሽከርካሪ ከመኪናው ከመግባቱ በፊት በጣም ከተናደደ ምን ማድረግ አለበት?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_50_de2c940042e41e9c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ወዲያውኑ መንዳት ይጀምራል",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_16_03bda98310b82215.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ወዲያውኑ መንዳት ይጀምራል",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_21_177817b04513a457.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እስኪረጋጋ ድረስ ይጠብቃል፣ በስሜታዊ ቀውስ ውስጥ እያለ አይነዳም",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_41_b9c60d983b6acd1a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። እስኪረጋጋ ድረስ ይጠብቃል፣ በስሜታዊ ቀውስ ውስጥ እያለ አይነዳም",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_46_5437690022512484.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ቁጣውን ለመርሳት ሙዚቃ ይሰማል",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_19_7c56e68dbd43994f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ቁጣውን ለመርሳት ሙዚቃ ይሰማል",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_24_616bac403da0e4fb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በፍጥነት በመንዳት ቁጣውን ይገልጻል",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_22_5255255fc7c84767.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። በፍጥነት በመንዳት ቁጣውን ይገልጻል",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_27_19c4c9b44064d69b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! እስኪረጋጋ ድረስ ይጠብቃል፣ በስሜታዊ ቀውስ ውስጥ እያለ አይነዳም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_47_03f26e9010c9eb23.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! እስኪረጋጋ ድረስ ይጠብቃል፣ በስሜታዊ ቀውስ ውስጥ እያለ አይነዳም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_45_e0d16194e215dc35.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! እስኪረጋጋ ድረስ ይጠብቃል፣ በስሜታዊ ቀውስ ውስጥ እያለ አይነዳም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_46_46d5d9fcea0bac5c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! እስኪረጋጋ ድረስ ይጠብቃል፣ በስሜታዊ ቀውስ ውስጥ እያለ አይነዳም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_45_4210126c581512c8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! እስኪረጋጋ ድረስ ይጠብቃል፣ በስሜታዊ ቀውስ ውስጥ እያለ አይነዳም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_46_482f6dacf10e5583.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! እስኪረጋጋ ድረስ ይጠብቃል፣ በስሜታዊ ቀውስ ውስጥ እያለ አይነዳም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_45_b5b0e76f4d3158bd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! እስኪረጋጋ ድረስ ይጠብቃል፣ በስሜታዊ ቀውስ ውስጥ እያለ አይነዳም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_46_c36f039b9e2c9e68.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! እስኪረጋጋ ድረስ ይጠብቃል፣ በስሜታዊ ቀውስ ውስጥ እያለ አይነዳም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_49_e96b5c0037fd89a9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! እስኪረጋጋ ድረስ ይጠብቃል፣ በስሜታዊ ቀውስ ውስጥ እያለ አይነዳም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_50_d21fb4b86f144202.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! እስኪረጋጋ ድረስ ይጠብቃል፣ በስሜታዊ ቀውስ ውስጥ እያለ አይነዳም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_50_0b30b098420512c8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! እስኪረጋጋ ድረስ ይጠብቃል፣ በስሜታዊ ቀውስ ውስጥ እያለ አይነዳም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_50_f0f5f390877256af.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! እስኪረጋጋ ድረስ ይጠብቃል፣ በስሜታዊ ቀውስ ውስጥ እያለ አይነዳም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_52_e376aa0f440c95cf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! እስኪረጋጋ ድረስ ይጠብቃል፣ በስሜታዊ ቀውስ ውስጥ እያለ አይነዳም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_53_cf3b101c2de5224c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! እስኪረጋጋ ድረስ ይጠብቃል፣ በስሜታዊ ቀውስ ውስጥ እያለ አይነዳም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_57_6053e2f43cbfdc22.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! እስኪረጋጋ ድረስ ይጠብቃል፣ በስሜታዊ ቀውስ ውስጥ እያለ አይነዳም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_55_8086a9d83399109a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: እስኪረጋጋ ድረስ ይጠብቃል፣ በስሜታዊ ቀውስ ውስጥ እያለ አይነዳም",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_59_3f1175f08b271f7f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ አሽከርካሪ በመንገድ ላይ እያለ በጠንካራ ስሜቶች ከተዋጠ ምን ማድረግ አለበት?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_53_decdd4bc54442a69.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ፍጥነቱን ጨምሮ መንዳት ይቀጥላል",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_20_89e14a0c9d1e8267.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ፍጥነቱን ጨምሮ መንዳት ይቀጥላል",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_25_be1d9ee4cc0fe125.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በአስተማማኝ ቦታ ላይ አቁሞ ለአጭር ጊዜ እረፍት ይወስዳል፣ ሙሉ በሙሉ ሲረጋጋ ብቻ ማሽከርከር ይቀጥላል",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_65_1c5df3c710b9693b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። በአስተማማኝ ቦታ ላይ አቁሞ ለአጭር ጊዜ እረፍት ይወስዳል፣ ሙሉ በሙሉ ሲረጋጋ ብቻ ማሽከርከር ይቀጥላል",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_70_66c6d057d34c2825.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስሜቱን ችላ ብሎ መንዳት ይቀጥላል",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_21_8b1b0ba016173170.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ስሜቱን ችላ ብሎ መንዳት ይቀጥላል",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_26_28dfd714138594c4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከሌሎች አሽከርካሪዎች ጋር ይከራከራል",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_23_2b7a77941f6160be.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ከሌሎች አሽከርካሪዎች ጋር ይከራከራል",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_28_ad9d4ca866a893c2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! በአስተማማኝ ቦታ ላይ አቁሞ ለአጭር ጊዜ እረፍት ይወስዳል፣ ሙሉ በሙሉ ሲረጋጋ ብቻ ማሽከርከር ይቀጥላል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_71_6f328c0018681882.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! በአስተማማኝ ቦታ ላይ አቁሞ ለአጭር ጊዜ እረፍት ይወስዳል፣ ሙሉ በሙሉ ሲረጋጋ ብቻ ማሽከርከር ይቀጥላል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_69_eb73ee1063cd0014.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! በአስተማማኝ ቦታ ላይ አቁሞ ለአጭር ጊዜ እረፍት ይወስዳል፣ ሙሉ በሙሉ ሲረጋጋ ብቻ ማሽከርከር ይቀጥላል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_70_6078771c8ce432fd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! በአስተማማኝ ቦታ ላይ አቁሞ ለአጭር ጊዜ እረፍት ይወስዳል፣ ሙሉ በሙሉ ሲረጋጋ ብቻ ማሽከርከር ይቀጥላል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_69_4c90d89bf471fd69.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! በአስተማማኝ ቦታ ላይ አቁሞ ለአጭር ጊዜ እረፍት ይወስዳል፣ ሙሉ በሙሉ ሲረጋጋ ብቻ ማሽከርከር ይቀጥላል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_70_6d9837a06191e5e2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! በአስተማማኝ ቦታ ላይ አቁሞ ለአጭር ጊዜ እረፍት ይወስዳል፣ ሙሉ በሙሉ ሲረጋጋ ብቻ ማሽከርከር ይቀጥላል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_69_a83c188c55abc89c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! በአስተማማኝ ቦታ ላይ አቁሞ ለአጭር ጊዜ እረፍት ይወስዳል፣ ሙሉ በሙሉ ሲረጋጋ ብቻ ማሽከርከር ይቀጥላል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_70_f0b838506383aa09.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! በአስተማማኝ ቦታ ላይ አቁሞ ለአጭር ጊዜ እረፍት ይወስዳል፣ ሙሉ በሙሉ ሲረጋጋ ብቻ ማሽከርከር ይቀጥላል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_73_b3ee5a4464a2a788.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! በአስተማማኝ ቦታ ላይ አቁሞ ለአጭር ጊዜ እረፍት ይወስዳል፣ ሙሉ በሙሉ ሲረጋጋ ብቻ ማሽከርከር ይቀጥላል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_74_c2922840eeae9823.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! በአስተማማኝ ቦታ ላይ አቁሞ ለአጭር ጊዜ እረፍት ይወስዳል፣ ሙሉ በሙሉ ሲረጋጋ ብቻ ማሽከርከር ይቀጥላል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_74_c4f1e454ae61fd69.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! በአስተማማኝ ቦታ ላይ አቁሞ ለአጭር ጊዜ እረፍት ይወስዳል፣ ሙሉ በሙሉ ሲረጋጋ ብቻ ማሽከርከር ይቀጥላል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_74_a3c368ccd976d40e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! በአስተማማኝ ቦታ ላይ አቁሞ ለአጭር ጊዜ እረፍት ይወስዳል፣ ሙሉ በሙሉ ሲረጋጋ ብቻ ማሽከርከር ይቀጥላል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_76_f54d28ec5c1c612e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! በአስተማማኝ ቦታ ላይ አቁሞ ለአጭር ጊዜ እረፍት ይወስዳል፣ ሙሉ በሙሉ ሲረጋጋ ብቻ ማሽከርከር ይቀጥላል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_77_137a40c3f3ff3ced.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! በአስተማማኝ ቦታ ላይ አቁሞ ለአጭር ጊዜ እረፍት ይወስዳል፣ ሙሉ በሙሉ ሲረጋጋ ብቻ ማሽከርከር ይቀጥላል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_81_4f6adf90d68f8943.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! በአስተማማኝ ቦታ ላይ አቁሞ ለአጭር ጊዜ እረፍት ይወስዳል፣ ሙሉ በሙሉ ሲረጋጋ ብቻ ማሽከርከር ይቀጥላል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_79_16387ce8955684bb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: በአስተማማኝ ቦታ ላይ አቁሞ ለአጭር ጊዜ እረፍት ይወስዳል፣ ሙሉ በሙሉ ሲረጋጋ ብቻ ማሽከርከር ይቀጥላል",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_83_e6c14a7cea32d5de.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

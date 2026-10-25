@@ -965,16 +965,26 @@ function ttsFilename(text: string): string {
 /**
  * Local URI for previously cached TTS of this text, or null if not cached.
  * Marks it as recently used so active content survives eviction.
+ *
+ * Two slots per text: tts_* is written only by a live rendering (storeTtsAudio),
+ * rtts_* only by a recorded clip (fetchRecordedTts). They never overwrite each
+ * other, so a recording that arrives late can never take the place of a live
+ * rendering that is already being played (CODEX QA 2026-10-24, R3). The live
+ * slot wins when both exist; a recording marked bad is ignored.
  */
 export async function getCachedTtsUri(text: string): Promise<string | null> {
   if (!text) return null;
   try {
-    const filename  = ttsFilename(text);
-    const localPath = AUDIO_CACHE_DIR + filename;
-    const info      = await FileSystem.getInfoAsync(localPath);
-    if (!info.exists) return null;
-    void loadIndex().then(() => touch(filename));
-    return localPath;
+    const slots = [ttsFilename(text)];
+    if (!_recordedBad.has(text)) slots.push(recordedTtsFilename(text));
+    for (const filename of slots) {
+      const localPath = AUDIO_CACHE_DIR + filename;
+      const info      = await FileSystem.getInfoAsync(localPath);
+      if (!info.exists) continue;
+      void loadIndex().then(() => touch(filename));
+      return localPath;
+    }
+    return null;
   } catch {
     return null;
   }
@@ -1020,6 +1030,127 @@ export async function storeTtsAudio(text: string, base64: string): Promise<void>
   } catch (err) {
     console.warn('[audioCache] Failed to store TTS audio:', err);
   }
+}
+
+// ─── Recorded TTS ─────────────────────────────────────────────────────────────
+// The sentences the app speaks through live TTS, rendered ahead of time with the
+// SAME voice and settings as the tts Edge Function (scripts/recordTts.mjs) and
+// stored as audio/tts/<recordedTtsFilename(text)>. A clip downloads (atomically,
+// through the one shared download line) into its own rtts_* cache slot, so it
+// is kept, evicted and used offline like any other cached sentence.
+//
+// audio/tts/index.json lists which texts have a recording. A text that is not in
+// it goes to live TTS as before, with no extra request. Any problem with the
+// index or a clip also means live TTS: a recording can never make the app quieter
+// (the fallback itself lives in utils/googleTTS.ts).
+
+const RECORDED_TTS_BASE = (process.env.EXPO_PUBLIC_SUPABASE_URL ?? '') + '/storage/v1/object/public/audio/tts/';
+const RECORDED_INDEX_TIMEOUT_MS = 5_000;
+/**
+ * How long a loaded index (or "nothing published yet") is trusted before it is
+ * read again, so batches published while the app is open are picked up
+ * (CODEX QA 2026-10-24, R4). Also the wait after a failed load.
+ */
+const RECORDED_INDEX_MAX_AGE_MS = 10 * 60 * 1000;
+
+let _recorded: Set<string> | null = null;
+let _recordedAt = 0;              // when _recorded was last loaded
+let _recordedLoading: Promise<void> | null = null;
+let _recordedFailedAt = 0;
+/** Texts whose recording would not play this session: they use live TTS. */
+const _recordedBad = new Set<string>();
+
+/** Cache and Storage name of the recording of this text (never the live slot). */
+function recordedTtsFilename(text: string): string {
+  return 'r' + ttsFilename(text);
+}
+
+function refreshRecordedIndex(): Promise<void> {
+  if (_recordedLoading) return _recordedLoading;
+  _recordedLoading = (async () => {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), RECORDED_INDEX_TIMEOUT_MS);
+    try {
+      // The query value changes every 10 minutes so a stale CDN copy cannot stick.
+      const res = await fetch(RECORDED_TTS_BASE + 'index.json?v=' + Math.floor(Date.now() / RECORDED_INDEX_MAX_AGE_MS),
+        { signal: controller.signal });
+      if (!res.ok) {
+        // Nothing published yet. Supabase Storage answers a missing object with
+        // HTTP 400 and {"statusCode":"404","error":"not_found"} (checked on this
+        // project 2026-10-24), plain 404 kept for safety.
+        const why = await res.json().catch(() => null);
+        const missing = res.status === 404 ||
+          (res.status === 400 && (why?.statusCode === '404' || why?.error === 'not_found' || why?.code === 'NoSuchKey'));
+        if (!missing) throw new Error('HTTP ' + res.status);
+        _recorded = new Set(); _recordedAt = Date.now(); _recordedFailedAt = 0;
+        return;
+      }
+      const body = await res.json();
+      if (!body || !Array.isArray(body.files)) throw new Error('index has no files list');
+      const files: unknown[] = body.files;
+      _recorded = new Set(files.filter((f): f is string => typeof f === 'string'));
+      _recordedAt = Date.now();
+      _recordedFailedAt = 0;
+    } catch (err) {
+      // A previous index (if any) stays in use; it is simply not refreshed.
+      _recordedFailedAt = Date.now();
+      reportError('tts', 'recordedIndex', errorText(err), {}, { skipIfOffline: true });
+    } finally {
+      clearTimeout(timer);
+      _recordedLoading = null;
+    }
+  })();
+  return _recordedLoading;
+}
+
+/** The index to use now: the loaded one (refreshed in the background when old). */
+async function recordedIndex(): Promise<Set<string> | null> {
+  if (!process.env.EXPO_PUBLIC_SUPABASE_URL) return null;
+  const now = Date.now();
+  const mayTry = !_recordedFailedAt || now - _recordedFailedAt >= RECORDED_INDEX_MAX_AGE_MS;
+  if (!_recorded) {
+    if (mayTry) await refreshRecordedIndex();
+    return _recorded;
+  }
+  if (now - _recordedAt >= RECORDED_INDEX_MAX_AGE_MS && mayTry) void refreshRecordedIndex();
+  return _recorded;
+}
+
+/**
+ * Bring the recorded clip for this exact text into the cache.
+ * Returns its local URI, or null when there is no recording or it could not be
+ * downloaded (the download itself reports why); the caller then uses live TTS.
+ */
+export async function fetchRecordedTts(text: string, priority: DownloadPriority = 'now'): Promise<string | null> {
+  if (!text || _recordedBad.has(text)) return null;
+  try {
+    const index = await recordedIndex();
+    const filename = recordedTtsFilename(text);
+    if (!index || !index.has(filename)) return null;
+    const outcome = await downloadAtomic(RECORDED_TTS_BASE + filename, 'fetchRecordedTts', priority);
+    if (!outcome.ok || _recordedBad.has(text)) return null;
+    await record(filename, outcome.bytes);
+    return AUDIO_CACHE_DIR + filename;
+  } catch (err) {
+    reportError('tts', 'fetchRecordedTts', errorText(err), { text_len: text.length }, { skipIfOffline: true });
+    return null;
+  }
+}
+
+/** True when this local URI is a recorded clip (rtts_*), not a live rendering. */
+export function isRecordedTtsUri(uri: string): boolean {
+  return urlToFilename(uri).startsWith('rtts_');
+}
+
+/**
+ * The recording of this text would not play: forget it for this session and
+ * delete the saved copy, so the text is spoken live from now on and the same
+ * bad clip is not downloaded again and again (CODEX QA 2026-10-24, R1).
+ */
+export async function skipRecordedTts(text: string): Promise<void> {
+  if (!text) return;
+  _recordedBad.add(text);
+  await releaseAudioFiles([AUDIO_CACHE_DIR + recordedTtsFilename(text)]).catch(() => {});
 }
 
 /**

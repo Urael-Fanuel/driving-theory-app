@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:11:54.880Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "vk_l8_s1",
+   "key": "vehicle_knowledge_7_0",
+   "sentences": [
+    {
+     "text": "የአየር ከረጢት (SRS) ዋና ዓላማ ምንድነው?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_29_1bb3f05c9e2d64e8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመኪናውን ፍጥነት ለመቀነስ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_17_f0c8ac080d2b19ac.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። የመኪናውን ፍጥነት ለመቀነስ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_22_291fe204945408ae.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ተሳፋሪዎችን ከጠንካራ የመኪና ክፍሎች ለመጠበቅ እና ጉዳትን ለመቀነስ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_43_a7a7abc365a6c4ca.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ተሳፋሪዎችን ከጠንካራ የመኪና ክፍሎች ለመጠበቅ እና ጉዳትን ለመቀነስ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_48_b396f0b83f953c54.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመኪናውን ሞተር ለማቀዝቀዝ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_17_90f4c7a7c0441b44.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የመኪናውን ሞተር ለማቀዝቀዝ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_22_45950d10e23381b0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የነዳጅ ፍጆታን ለመቀነስ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_15_6ecfacd0213a6693.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። የነዳጅ ፍጆታን ለመቀነስ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_20_7955d35b76d98faf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ተሳፋሪዎችን ከጠንካራ የመኪና ክፍሎች ለመጠበቅ እና ጉዳትን ለመቀነስ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_49_09ef7cf0d7de5eb3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ተሳፋሪዎችን ከጠንካራ የመኪና ክፍሎች ለመጠበቅ እና ጉዳትን ለመቀነስ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_47_73fe6204922fefa5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ተሳፋሪዎችን ከጠንካራ የመኪና ክፍሎች ለመጠበቅ እና ጉዳትን ለመቀነስ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_48_ede7d2dc452da70c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ተሳፋሪዎችን ከጠንካራ የመኪና ክፍሎች ለመጠበቅ እና ጉዳትን ለመቀነስ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_47_b18874c736603a98.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ተሳፋሪዎችን ከጠንካራ የመኪና ክፍሎች ለመጠበቅ እና ጉዳትን ለመቀነስ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_48_eb329e98d62d9213.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ተሳፋሪዎችን ከጠንካራ የመኪና ክፍሎች ለመጠበቅ እና ጉዳትን ለመቀነስ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_47_9bfd8b4c88b6ab2d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ተሳፋሪዎችን ከጠንካራ የመኪና ክፍሎች ለመጠበቅ እና ጉዳትን ለመቀነስ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_48_aa0922a0bd091ab8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ተሳፋሪዎችን ከጠንካራ የመኪና ክፍሎች ለመጠበቅ እና ጉዳትን ለመቀነስ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_51_558de3877f7eba39.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ተሳፋሪዎችን ከጠንካራ የመኪና ክፍሎች ለመጠበቅ እና ጉዳትን ለመቀነስ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_52_fe0af11c8c2295d2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ተሳፋሪዎችን ከጠንካራ የመኪና ክፍሎች ለመጠበቅ እና ጉዳትን ለመቀነስ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_52_9e9074ec5c503a98.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ተሳፋሪዎችን ከጠንካራ የመኪና ክፍሎች ለመጠበቅ እና ጉዳትን ለመቀነስ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_52_c9f5fe3017cbd53f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ተሳፋሪዎችን ከጠንካራ የመኪና ክፍሎች ለመጠበቅ እና ጉዳትን ለመቀነስ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_54_75f6d3a8847b685f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ተሳፋሪዎችን ከጠንካራ የመኪና ክፍሎች ለመጠበቅ እና ጉዳትን ለመቀነስ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_55_ede38e1827449d1c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ተሳፋሪዎችን ከጠንካራ የመኪና ክፍሎች ለመጠበቅ እና ጉዳትን ለመቀነስ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_59_aa1f25c815e02b72.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ተሳፋሪዎችን ከጠንካራ የመኪና ክፍሎች ለመጠበቅ እና ጉዳትን ለመቀነስ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_57_515fe5a4bb11694a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ተሳፋሪዎችን ከጠንካራ የመኪና ክፍሎች ለመጠበቅ እና ጉዳትን ለመቀነስ",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_61_3a0be4abb4f9ebef.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የአየር ከረጢት (SRS) የማስጠንቀቂያ መብራት እያሽከረከሩ እያለ ከበራ ወይም መኪናውን ካስነሱ በኋላ ካልጠፋ ምን ማለት ነው?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_80_33a48fe05ed414dd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመኪናው ጎማዎች አየር እንደሌላቸው ያሳያል",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_27_1c9c3ed8f7fa790e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። የመኪናው ጎማዎች አየር እንደሌላቸው ያሳያል",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_32_d7d007bce23ab88c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የአየር ከረጢት ስርዓት ብልሽት እንዳለ ያሳያል",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_29_edd4cbf0c252a0f4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። የአየር ከረጢት ስርዓት ብልሽት እንዳለ ያሳያል",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_34_675de9a07a1dafea.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመኪናው የፊት መብራቶች እንደበሩ ያሳያል",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_26_ee9b1dfb5710fe3c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የመኪናው የፊት መብራቶች እንደበሩ ያሳያል",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_31_a19e22f8c3fbd248.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የነዳጅ ማጠራቀሚያው ባዶ መሆኑን ያሳያል",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_25_8d9043f01e8910f6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። የነዳጅ ማጠራቀሚያው ባዶ መሆኑን ያሳያል",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_30_411c1f5cc0c6948a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! የአየር ከረጢት ስርዓት ብልሽት እንዳለ ያሳያል",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_35_513ca93caa0c188d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! የአየር ከረጢት ስርዓት ብልሽት እንዳለ ያሳያል",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_33_66652e0f51e38d1b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! የአየር ከረጢት ስርዓት ብልሽት እንዳለ ያሳያል",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_34_7333c5e43bd847b2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! የአየር ከረጢት ስርዓት ብልሽት እንዳለ ያሳያል",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_33_1936fe6839a3f226.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! የአየር ከረጢት ስርዓት ብልሽት እንዳለ ያሳያል",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_34_41ac0e342cab9fad.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! የአየር ከረጢት ስርዓት ብልሽት እንዳለ ያሳያል",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_33_513a3f389b418093.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! የአየር ከረጢት ስርዓት ብልሽት እንዳለ ያሳያል",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_34_3406ca08bb311886.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! የአየር ከረጢት ስርዓት ብልሽት እንዳለ ያሳያል",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_37_f6d7f51c6e496687.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! የአየር ከረጢት ስርዓት ብልሽት እንዳለ ያሳያል",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_38_519f7b6051d1e9ec.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! የአየር ከረጢት ስርዓት ብልሽት እንዳለ ያሳያል",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_38_b53ed494bb93f226.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! የአየር ከረጢት ስርዓት ብልሽት እንዳለ ያሳያል",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_38_eb2ce31c5f330c01.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! የአየር ከረጢት ስርዓት ብልሽት እንዳለ ያሳያል",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_40_ebd19370c55f14e1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! የአየር ከረጢት ስርዓት ብልሽት እንዳለ ያሳያል",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_41_b017a5c7962369a2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! የአየር ከረጢት ስርዓት ብልሽት እንዳለ ያሳያል",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_45_8aeefc580e0576cc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! የአየር ከረጢት ስርዓት ብልሽት እንዳለ ያሳያል",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_43_74243794e10d2174.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: የአየር ከረጢት ስርዓት ብልሽት እንዳለ ያሳያል",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_47_0cd1a78cdc8f78d1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ህፃናትን በመኪና ውስጥ ለማስቀመጥ በጣም አስተማማኝ ቦታ የትኛው ነው?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_44_4cb5d939f59c624d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከአሽከርካሪው አጠገብ ባለው የፊት መቀመጫ",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_26_737e3251cf0e9a0e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ከአሽከርካሪው አጠገብ ባለው የፊት መቀመጫ",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_31_01703008d01d4ccc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ንቁ የአየር ከረጢት ፊት ለፊት ባለው የህፃናት መቀመጫ",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_34_003157e419968026.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ንቁ የአየር ከረጢት ፊት ለፊት ባለው የህፃናት መቀመጫ",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_39_9381e4b8dd66cb78.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የኋላ መቀመጫ",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_8_a40655e82927c686.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የኋላ መቀመጫ",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_13_e9be1150379c8e32.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በመኪናው ግንድ ውስጥ",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_13_367251d8bbf77d39.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። በመኪናው ግንድ ውስጥ",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_18_59aecab81aad0085.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! የኋላ መቀመጫ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_14_34dc673827da115f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! የኋላ መቀመጫ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_12_d75b0701f0efb689.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! የኋላ መቀመጫ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_13_ee0c7bfc516d2400.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! የኋላ መቀመጫ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_12_ea9d4cb049482414.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! የኋላ መቀመጫ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_13_3c847ec8bac2f2bf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! የኋላ መቀመጫ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_12_c5a818e5eb64a101.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! የኋላ መቀመጫ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_13_0397b8b04d4e7eb4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! የኋላ መቀመጫ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_16_a4fc5921c398b095.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! የኋላ መቀመጫ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_17_366b74ecbc5e569e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! የኋላ መቀመጫ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_17_a52f2468f5382414.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! የኋላ መቀመጫ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_17_3aeb533c43c74e53.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! የኋላ መቀመጫ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_19_2d48ebeccecc8773.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! የኋላ መቀመጫ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_20_00becb708e108010.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! የኋላ መቀመጫ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_24_1b6f7d7cb872ccbe.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! የኋላ መቀመጫ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_22_1bb77b3012c28506.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: የኋላ መቀመጫ",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_26_35d7be80f4705503.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:18:48.065Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "rd_l3_s3",
+   "key": "road_decisions_2_2",
+   "sentences": [
+    {
+     "text": "ከፊትዎ ያለው መንገድ ምን ይመስላል?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_23_8ee8eb000eab5793.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የከተማ መንገድ ሲሆን መኪኖች ቆመውበታል። እግረኞችም ከመኪኖች መካከል ሊወጡ ይችላሉ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_54_cbb8aa9091b60843.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። የከተማ መንገድ ሲሆን መኪኖች ቆመውበታል። እግረኞችም ከመኪኖች መካከል ሊወጡ ይችላሉ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_59_80efeebbf3a6bc81.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ምንም አደጋ የለም። ሁሉም ነገር ደህና ነው።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_28_d6e8f91e8979474d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ምንም አደጋ የለም። ሁሉም ነገር ደህና ነው።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_33_5401173849f23993.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መንገዱ ሰፊና ምቹ ነው። ምንም አስገራሚ ነገር አይጠበቅም።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_37_0a0dfae87d4661f8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። መንገዱ ሰፊና ምቹ ነው። ምንም አስገራሚ ነገር አይጠበቅም።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_42_1c3b619076ee464c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የተቀላቀለ መንገድ ነው። ፍጥነትዎን ከሰላሳ ኪሎ ሜትር በላይ አያድርጉ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_45_bbd0a2500cb144d9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። የተቀላቀለ መንገድ ነው። ፍጥነትዎን ከሰላሳ ኪሎ ሜትር በላይ አያድርጉ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_50_b06d78588b479b25.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! የከተማ መንገድ ሲሆን መኪኖች ቆመውበታል። እግረኞችም ከመኪኖች መካከል ሊወጡ ይችላሉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_60_ec8738282e68335a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! የከተማ መንገድ ሲሆን መኪኖች ቆመውበታል። እግረኞችም ከመኪኖች መካከል ሊወጡ ይችላሉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_58_89b242fe740f890c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! የከተማ መንገድ ሲሆን መኪኖች ቆመውበታል። እግረኞችም ከመኪኖች መካከል ሊወጡ ይችላሉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_59_2c35d81e1b326fc5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! የከተማ መንገድ ሲሆን መኪኖች ቆመውበታል። እግረኞችም ከመኪኖች መካከል ሊወጡ ይችላሉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_58_c99fe64e01b2ffd1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! የከተማ መንገድ ሲሆን መኪኖች ቆመውበታል። እግረኞችም ከመኪኖች መካከል ሊወጡ ይችላሉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_59_7e168198be0b203a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! የከተማ መንገድ ሲሆን መኪኖች ቆመውበታል። እግረኞችም ከመኪኖች መካከል ሊወጡ ይችላሉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_58_78437628eea15684.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! የከተማ መንገድ ሲሆን መኪኖች ቆመውበታል። እግረኞችም ከመኪኖች መካከል ሊወጡ ይችላሉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_59_c9c609c8338e0571.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! የከተማ መንገድ ሲሆን መኪኖች ቆመውበታል። እግረኞችም ከመኪኖች መካከል ሊወጡ ይችላሉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_62_ed68a8d83675bb10.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! የከተማ መንገድ ሲሆን መኪኖች ቆመውበታል። እግረኞችም ከመኪኖች መካከል ሊወጡ ይችላሉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_63_e9ecb858dc64a25b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! የከተማ መንገድ ሲሆን መኪኖች ቆመውበታል። እግረኞችም ከመኪኖች መካከል ሊወጡ ይችላሉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_63_9d5dd77091a2ffd1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! የከተማ መንገድ ሲሆን መኪኖች ቆመውበታል። እግረኞችም ከመኪኖች መካከል ሊወጡ ይችላሉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_63_24b756b0a5e9e656.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! የከተማ መንገድ ሲሆን መኪኖች ቆመውበታል። እግረኞችም ከመኪኖች መካከል ሊወጡ ይችላሉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_65_4ee132e65b331676.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! የከተማ መንገድ ሲሆን መኪኖች ቆመውበታል። እግረኞችም ከመኪኖች መካከል ሊወጡ ይችላሉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_66_1bee80f24fc96bd5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! የከተማ መንገድ ሲሆን መኪኖች ቆመውበታል። እግረኞችም ከመኪኖች መካከል ሊወጡ ይችላሉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_70_a382d6263116107b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! የከተማ መንገድ ሲሆን መኪኖች ቆመውበታል። እግረኞችም ከመኪኖች መካከል ሊወጡ ይችላሉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_68_1beed516fc8623c3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: የከተማ መንገድ ሲሆን መኪኖች ቆመውበታል። እግረኞችም ከመኪኖች መካከል ሊወጡ ይችላሉ።",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_72_29a192ce5aca4486.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እዚህ እንዴት ማሽከርከር አለብዎት?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_22_84e0f174f3af5381.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በተለመደው ፍጥነትዎ ይቀጥሉ።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_18_1e1531208ac6fdf8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። በተለመደው ፍጥነትዎ ይቀጥሉ።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_23_92b661a66cb5623a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከቆሙት መኪኖች አጠገብ ይለፉ።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_19_ab6d94985859d53d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ከቆሙት መኪኖች አጠገብ ይለፉ።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_24_6a81f1e21f43d2a3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ፍጥነትዎን ይቀንሱ። ከቆሙት መኪኖችም ርቀት ይያዙ። በሰላም ለማቆም እንዲችሉ።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_49_4e3165725fda1d81.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ፍጥነትዎን ይቀንሱ። ከቆሙት መኪኖችም ርቀት ይያዙ። በሰላም ለማቆም እንዲችሉ።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_54_392a7f6800a0cff5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ለአካባቢዎ ትኩረት አይስጡ።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_17_5960f92dd8af4093.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ለአካባቢዎ ትኩረት አይስጡ።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_22_bdd148d0d11e6c6f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ፍጥነትዎን ይቀንሱ። ከቆሙት መኪኖችም ርቀት ይያዙ። በሰላም ለማቆም እንዲችሉ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_55_c118b408027f1778.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ፍጥነትዎን ይቀንሱ። ከቆሙት መኪኖችም ርቀት ይያዙ። በሰላም ለማቆም እንዲችሉ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_53_e8816fe0bc56e06e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ፍጥነትዎን ይቀንሱ። ከቆሙት መኪኖችም ርቀት ይያዙ። በሰላም ለማቆም እንዲችሉ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_54_9f476fa8990285c7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ፍጥነትዎን ይቀንሱ። ከቆሙት መኪኖችም ርቀት ይያዙ። በሰላም ለማቆም እንዲችሉ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_53_0e7025a8158c5b53.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ፍጥነትዎን ይቀንሱ። ከቆሙት መኪኖችም ርቀት ይያዙ። በሰላም ለማቆም እንዲችሉ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_54_919019b2d5d0b198.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ፍጥነትዎን ይቀንሱ። ከቆሙት መኪኖችም ርቀት ይያዙ። በሰላም ለማቆም እንዲችሉ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_53_ba61deeecb7f2fe6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ፍጥነትዎን ይቀንሱ። ከቆሙት መኪኖችም ርቀት ይያዙ። በሰላም ለማቆም እንዲችሉ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_54_bf659db896c3a833.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ፍጥነትዎን ይቀንሱ። ከቆሙት መኪኖችም ርቀት ይያዙ። በሰላም ለማቆም እንዲችሉ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_57_588645e8756360f2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ፍጥነትዎን ይቀንሱ። ከቆሙት መኪኖችም ርቀት ይያዙ። በሰላም ለማቆም እንዲችሉ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_58_52c60a7012730099.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ፍጥነትዎን ይቀንሱ። ከቆሙት መኪኖችም ርቀት ይያዙ። በሰላም ለማቆም እንዲችሉ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_58_fe364f46ef7c5b53.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ፍጥነትዎን ይቀንሱ። ከቆሙት መኪኖችም ርቀት ይያዙ። በሰላም ለማቆም እንዲችሉ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_58_33e908149df053f4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ፍጥነትዎን ይቀንሱ። ከቆሙት መኪኖችም ርቀት ይያዙ። በሰላም ለማቆም እንዲችሉ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_60_db246738723c6bd4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ፍጥነትዎን ይቀንሱ። ከቆሙት መኪኖችም ርቀት ይያዙ። በሰላም ለማቆም እንዲችሉ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_61_68df722c42e037d7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ፍጥነትዎን ይቀንሱ። ከቆሙት መኪኖችም ርቀት ይያዙ። በሰላም ለማቆም እንዲችሉ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_65_ae2fab44e015d0f9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ፍጥነትዎን ይቀንሱ። ከቆሙት መኪኖችም ርቀት ይያዙ። በሰላም ለማቆም እንዲችሉ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_63_9c54df5685141a01.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ፍጥነትዎን ይቀንሱ። ከቆሙት መኪኖችም ርቀት ይያዙ። በሰላም ለማቆም እንዲችሉ።",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_67_c73ddbe819e83ea4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እዚህ ምን አደጋ ሊያጋጥም ይችላል?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_22_363a38d8aefaceb7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ቆመው ያሉት መኪኖች እግረኛ እንዳያልፍ ይዘጋሉ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_30_919747d0801cc2be.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ቆመው ያሉት መኪኖች እግረኛ እንዳያልፍ ይዘጋሉ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_35_8b38c05a6ceef3fc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ምንም አደጋ የለም።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_12_d8b7f3e019198894.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ምንም አደጋ የለም።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_17_eec93b3e1f6056ca.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ፖሊስ ለቆሙት መኪኖች ቅጣት ሊጽፍ ይችላል።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_27_95c73fc85c2e2baa.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ፖሊስ ለቆሙት መኪኖች ቅጣት ሊጽፍ ይችላል።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_32_c425d368f578b1de.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እግረኞች ወይም ልጆች ከመኪኖች መካከል በድንገት ሊወጡ ይችላሉ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_40_6f1a16d8d625c3e1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። እግረኞች ወይም ልጆች ከመኪኖች መካከል በድንገት ሊወጡ ይችላሉ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_45_a395b5136ba7839d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! እግረኞች ወይም ልጆች ከመኪኖች መካከል በድንገት ሊወጡ ይችላሉ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_46_2852285c56a843b8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! እግረኞች ወይም ልጆች ከመኪኖች መካከል በድንገት ሊወጡ ይችላሉ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_44_0f89bb0e71e268ee.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! እግረኞች ወይም ልጆች ከመኪኖች መካከል በድንገት ሊወጡ ይችላሉ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_45_ee1c5fc614142467.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! እግረኞች ወይም ልጆች ከመኪኖች መካከል በድንገት ሊወጡ ይችላሉ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_44_f5869928d94e4c73.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! እግረኞች ወይም ልጆች ከመኪኖች መካከል በድንገት ሊወጡ ይችላሉ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_45_37035e8e37ff4358.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! እግረኞች ወይም ልጆች ከመኪኖች መካከል በድንገት ሊወጡ ይችላሉ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_44_56147b80898ad266.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! እግረኞች ወይም ልጆች ከመኪኖች መካከል በድንገት ሊወጡ ይችላሉ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_45_49e69d92ba323c53.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! እግረኞች ወይም ልጆች ከመኪኖች መካከል በድንገት ሊወጡ ይችላሉ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_48_43fb803ee754daf2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! እግረኞች ወይም ልጆች ከመኪኖች መካከል በድንገት ሊወጡ ይችላሉ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_49_6a44c17285258ff9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! እግረኞች ወይም ልጆች ከመኪኖች መካከል በድንገት ሊወጡ ይችላሉ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_49_c7cc54e2453e4c73.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! እግረኞች ወይም ልጆች ከመኪኖች መካከል በድንገት ሊወጡ ይችላሉ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_49_98c9927c03057ab4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! እግረኞች ወይም ልጆች ከመኪኖች መካከል በድንገት ሊወጡ ይችላሉ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_51_ae2a80e0caea4114.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! እግረኞች ወይም ልጆች ከመኪኖች መካከል በድንገት ሊወጡ ይችላሉ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_52_bd4f076013821077.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! እግረኞች ወይም ልጆች ከመኪኖች መካከል በድንገት ሊወጡ ይችላሉ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_56_4d479d982a55a859.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! እግረኞች ወይም ልጆች ከመኪኖች መካከል በድንገት ሊወጡ ይችላሉ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_54_35bc507f6c204f61.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: እግረኞች ወይም ልጆች ከመኪኖች መካከል በድንገት ሊወጡ ይችላሉ።",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_58_a0b688e652b99264.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

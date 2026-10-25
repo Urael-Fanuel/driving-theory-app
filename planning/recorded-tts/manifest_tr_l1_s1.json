@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:14:22.602Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "tr_l1_s1",
+   "key": "the_road_0_0",
+   "sentences": [
+    {
+     "text": "መገናኛ በመንገድ ላይ በጣም አደገኛ ቦታ የሆነው ለምንድን ነው?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_40_378159b40f24bd72.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መንገዱ ጠባብ ስለሆነ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_13_62d1898a42e8bd9c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። መንገዱ ጠባብ ስለሆነ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_18_ae2b650860bf501e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ተሽከርካሪዎች ከብዙ አቅጣጫዎች በአንድ ጊዜ ስለሚመጡ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_33_6c47f74b55a4b85d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ተሽከርካሪዎች ከብዙ አቅጣጫዎች በአንድ ጊዜ ስለሚመጡ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_38_bbf132448fc847c3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ብዙ ሰዎች ስለሚሻገሩበት",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_15_8f258cb42a1deb12.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ብዙ ሰዎች ስለሚሻገሩበት",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_20_e9457da38fc76de6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ፍጥነትን መቀነስ ስለሚያስፈልግ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_19_dae6c0aca53af831.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ፍጥነትን መቀነስ ስለሚያስፈልግ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_24_98127978ffc6454d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ተሽከርካሪዎች ከብዙ አቅጣጫዎች በአንድ ጊዜ ስለሚመጡ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_39_b06ceaaca6cf8064.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ተሽከርካሪዎች ከብዙ አቅጣጫዎች በአንድ ጊዜ ስለሚመጡ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_37_87c0b56be11acd72.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ተሽከርካሪዎች ከብዙ አቅጣጫዎች በአንድ ጊዜ ስለሚመጡ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_38_56d6004cf257161b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ተሽከርካሪዎች ከብዙ አቅጣጫዎች በአንድ ጊዜ ስለሚመጡ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_37_4ae26dd37064a38f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ተሽከርካሪዎች ከብዙ አቅጣጫዎች በአንድ ጊዜ ስለሚመጡ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_38_61fc657365259144.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ተሽከርካሪዎች ከብዙ አቅጣጫዎች በአንድ ጊዜ ስለሚመጡ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_37_07079c142bec6ffa.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ተሽከርካሪዎች ከብዙ አቅጣጫዎች በአንድ ጊዜ ስለሚመጡ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_38_af8dd89432c6a3af.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ተሽከርካሪዎች ከብዙ አቅጣጫዎች በአንድ ጊዜ ስለሚመጡ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_41_2a4c30ec6f5045ee.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ተሽከርካሪዎች ከብዙ አቅጣጫዎች በአንድ ጊዜ ስለሚመጡ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_42_f35203ac7ff87745.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ተሽከርካሪዎች ከብዙ አቅጣጫዎች በአንድ ጊዜ ስለሚመጡ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_42_7b196fec6a54a38f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ተሽከርካሪዎች ከብዙ አቅጣጫዎች በአንድ ጊዜ ስለሚመጡ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_42_ca88caf3116112e8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ተሽከርካሪዎች ከብዙ አቅጣጫዎች በአንድ ጊዜ ስለሚመጡ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_44_2b5dc53808cd8b08.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ተሽከርካሪዎች ከብዙ አቅጣጫዎች በአንድ ጊዜ ስለሚመጡ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_45_fe1a936b64f2880b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ተሽከርካሪዎች ከብዙ አቅጣጫዎች በአንድ ጊዜ ስለሚመጡ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_49_188e11e4e37268e5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ተሽከርካሪዎች ከብዙ አቅጣጫዎች በአንድ ጊዜ ስለሚመጡ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_47_d98f55618f4fc9dd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ተሽከርካሪዎች ከብዙ አቅጣጫዎች በአንድ ጊዜ ስለሚመጡ",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_51_b60a5cf3f311c238.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ ሹፌር ወደ መገናኛ እንዲገባ የሚፈቀድለት መቼ ነው?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_36_1c5c6ac42b081e60.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የትራፊክ መብራቱ አረንጓዴ ሲሆን",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_20_9115dd60beca5c08.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። የትራፊክ መብራቱ አረንጓዴ ሲሆን",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_25_d81321bf2eef524a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሌሎች ተሽከርካሪዎች ከሌሉ",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_16_e5aa6f00917e72ad.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ሌሎች ተሽከርካሪዎች ከሌሉ",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_21_2114fff3679846f3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መገናኛውን ሙሉ በሙሉ ሳያግድ ማለፍ ሲችል ብቻ",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_29_16f84dd888153327.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። መገናኛውን ሙሉ በሙሉ ሳያግድ ማለፍ ሲችል ብቻ",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_34_1a7764402cffbd93.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በፍጥነት ማለፍ ከቻለ",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_13_8fa27fe02c6f8b4d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። በፍጥነት ማለፍ ከቻለ",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_18_29f83abc66f4ddb1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! መገናኛውን ሙሉ በሙሉ ሳያግድ ማለፍ ሲችል ብቻ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_35_64c353683cf57a5e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! መገናኛውን ሙሉ በሙሉ ሳያግድ ማለፍ ሲችል ብቻ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_33_4d3cf574962d1248.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! መገናኛውን ሙሉ በሙሉ ሳያግድ ማለፍ ሲችል ብቻ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_34_ea6657d16576eb61.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! መገናኛውን ሙሉ በሙሉ ሳያግድ ማለፍ ሲችል ብቻ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_33_b0402630e23425f5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! መገናኛውን ሙሉ በሙሉ ሳያግድ ማለፍ ሲችል ብቻ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_34_87e0da1d31b421fe.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! መገናኛውን ሙሉ በሙሉ ሳያግድ ማለፍ ሲችል ብቻ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_33_71fb35d0bd0f5bc0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! መገናኛውን ሙሉ በሙሉ ሳያግድ ማለፍ ሲችል ብቻ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_34_c9908b393df730d5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! መገናኛውን ሙሉ በሙሉ ሳያግድ ማለፍ ሲችል ብቻ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_37_7e70876005eaafd4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! መገናኛውን ሙሉ በሙሉ ሳያግድ ማለፍ ሲችል ብቻ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_38_ec7cd2552d94603f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! መገናኛውን ሙሉ በሙሉ ሳያግድ ማለፍ ሲችል ብቻ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_38_494a7e9c642425f5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! መገናኛውን ሙሉ በሙሉ ሳያግድ ማለፍ ሲችል ብቻ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_38_cdbd5ea413a9c9d2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! መገናኛውን ሙሉ በሙሉ ሳያግድ ማለፍ ሲችል ብቻ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_40_34df8c2830a18732.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! መገናኛውን ሙሉ በሙሉ ሳያግድ ማለፍ ሲችል ብቻ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_41_809ece918a648971.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! መገናኛውን ሙሉ በሙሉ ሳያግድ ማለፍ ሲችል ብቻ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_45_9c504c98a4dbaf9f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! መገናኛውን ሙሉ በሙሉ ሳያግድ ማለፍ ሲችል ብቻ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_43_9af0625c7ffd7ba7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: መገናኛውን ሙሉ በሙሉ ሳያግድ ማለፍ ሲችል ብቻ",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_47_e82be944ab28f282.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ ሹፌር በመገናኛ ላይ ወደ ግራ እንዴት መታጠፍ አለበት?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_38_f21e4d503c865948.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከመንገዱ ቀኝ ዳርቻ ተጠግቶ በፍጥነት መታጠፍ",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_28_75d615bcb55e4221.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ከመንገዱ ቀኝ ዳርቻ ተጠግቶ በፍጥነት መታጠፍ",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_33_97242ea8def24a63.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከመንገዱ መሃል ተጠግቶ፣ ከፊት ለፊት ከሚመጡ ተሽከርካሪዎች ተጠንቅቆ እና በመገናኛው ውስጥ አጭር ጊዜ በማሳለፍ",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_70_7d12b128634bc2d5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ከመንገዱ መሃል ተጠግቶ፣ ከፊት ለፊት ከሚመጡ ተሽከርካሪዎች ተጠንቅቆ እና በመገናኛው ውስጥ አጭር ጊዜ በማሳለፍ",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_75_bfcea9b446a1280b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የትራፊክ መብራቱ አረንጓዴ እስኪሆን መጠበቅ",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_27_aff04e24dc56a2dd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የትራፊክ መብራቱ አረንጓዴ እስኪሆን መጠበቅ",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_32_f0d82ad3807af069.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሌሎች ተሽከርካሪዎች እስኪያልፉ መጠበቅ",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_24_4f7dee5329524208.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ሌሎች ተሽከርካሪዎች እስኪያልፉ መጠበቅ",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_29_c66a1520366c6ff4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ከመንገዱ መሃል ተጠግቶ፣ ከፊት ለፊት ከሚመጡ ተሽከርካሪዎች ተጠንቅቆ እና በመገናኛው ውስጥ አጭር ጊዜ በማሳለፍ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_76_cf60f458c1a2174c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ከመንገዱ መሃል ተጠግቶ፣ ከፊት ለፊት ከሚመጡ ተሽከርካሪዎች ተጠንቅቆ እና በመገናኛው ውስጥ አጭር ጊዜ በማሳለፍ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_74_1539174c9d31851a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ከመንገዱ መሃል ተጠግቶ፣ ከፊት ለፊት ከሚመጡ ተሽከርካሪዎች ተጠንቅቆ እና በመገናኛው ውስጥ አጭር ጊዜ በማሳለፍ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_75_1cba15e40aaa66d3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ከመንገዱ መሃል ተጠግቶ፣ ከፊት ለፊት ከሚመጡ ተሽከርካሪዎች ተጠንቅቆ እና በመገናኛው ውስጥ አጭር ጊዜ በማሳለፍ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_74_8af7b93070a746c7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ከመንገዱ መሃል ተጠግቶ፣ ከፊት ለፊት ከሚመጡ ተሽከርካሪዎች ተጠንቅቆ እና በመገናኛው ውስጥ አጭር ጊዜ በማሳለፍ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_75_76e6b448ab2986ec.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ከመንገዱ መሃል ተጠግቶ፣ ከፊት ለፊት ከሚመጡ ተሽከርካሪዎች ተጠንቅቆ እና በመገናኛው ውስጥ አጭር ጊዜ በማሳለፍ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_74_9962a4c4da4c8692.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ከመንገዱ መሃል ተጠግቶ፣ ከፊት ለፊት ከሚመጡ ተሽከርካሪዎች ተጠንቅቆ እና በመገናኛው ውስጥ አጭር ጊዜ በማሳለፍ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_75_2f7ff0b0d856d5a7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ከመንገዱ መሃል ተጠግቶ፣ ከፊት ለፊት ከሚመጡ ተሽከርካሪዎች ተጠንቅቆ እና በመገናኛው ውስጥ አጭር ጊዜ በማሳለፍ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_78_66f326f34bfeed06.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ከመንገዱ መሃል ተጠግቶ፣ ከፊት ለፊት ከሚመጡ ተሽከርካሪዎች ተጠንቅቆ እና በመገናኛው ውስጥ አጭር ጊዜ በማሳለፍ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_79_fa4e4b08fe3b82cd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ከመንገዱ መሃል ተጠግቶ፣ ከፊት ለፊት ከሚመጡ ተሽከርካሪዎች ተጠንቅቆ እና በመገናኛው ውስጥ አጭር ጊዜ በማሳለፍ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_79_1df38f00e09746c7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ከመንገዱ መሃል ተጠግቶ፣ ከፊት ለፊት ከሚመጡ ተሽከርካሪዎች ተጠንቅቆ እና በመገናኛው ውስጥ አጭር ጊዜ በማሳለፍ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_79_d28776c4b8c3d240.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ከመንገዱ መሃል ተጠግቶ፣ ከፊት ለፊት ከሚመጡ ተሽከርካሪዎች ተጠንቅቆ እና በመገናኛው ውስጥ አጭር ጊዜ በማሳለፍ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_81_0269407860c529a0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ከመንገዱ መሃል ተጠግቶ፣ ከፊት ለፊት ከሚመጡ ተሽከርካሪዎች ተጠንቅቆ እና በመገናኛው ውስጥ አጭር ጊዜ በማሳለፍ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_82_5fcb3840b0399ec3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ከመንገዱ መሃል ተጠግቶ፣ ከፊት ለፊት ከሚመጡ ተሽከርካሪዎች ተጠንቅቆ እና በመገናኛው ውስጥ አጭር ጊዜ በማሳለፍ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_86_23a7724065352f2d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ከመንገዱ መሃል ተጠግቶ፣ ከፊት ለፊት ከሚመጡ ተሽከርካሪዎች ተጠንቅቆ እና በመገናኛው ውስጥ አጭር ጊዜ በማሳለፍ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_84_3f58e650f8a88a55.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ከመንገዱ መሃል ተጠግቶ፣ ከፊት ለፊት ከሚመጡ ተሽከርካሪዎች ተጠንቅቆ እና በመገናኛው ውስጥ አጭር ጊዜ በማሳለፍ",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_88_f92c891cce973b10.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

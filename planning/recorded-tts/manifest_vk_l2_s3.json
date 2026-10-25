@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:08:21.922Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "vk_l2_s3",
+   "key": "vehicle_knowledge_1_3",
+   "sentences": [
+    {
+     "text": "የመሪው ዋና ተግባር ምንድን ነው?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_21_6bb4a7dc83299c33.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጊር ለመቀየር ነው።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_12_a5112662e5a35468.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ጊር ለመቀየር ነው።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_17_e715908efac5d9aa.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናውን ቀጥ ብሎ ለመንዳት እና ወደ ግራና ቀኝ ለማዞር ነው።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_39_3f074848363d6bc8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። መኪናውን ቀጥ ብሎ ለመንዳት እና ወደ ግራና ቀኝ ለማዞር ነው።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_44_28340246845efa56.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናውን ለማቆም ነው።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_14_6a73f2d3c781f22b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። መኪናውን ለማቆም ነው።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_19_7fd91afc56f8739f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመኪናውን በሮች ለመክፈት ነው።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_20_5b867cf04b0bd438.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። የመኪናውን በሮች ለመክፈት ነው።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_25_a5e7e9f8f2df2d84.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! መኪናውን ቀጥ ብሎ ለመንዳት እና ወደ ግራና ቀኝ ለማዞር ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_45_3d038748462a4431.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! መኪናውን ቀጥ ብሎ ለመንዳት እና ወደ ግራና ቀኝ ለማዞር ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_43_ce42b722045f6c27.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! መኪናውን ቀጥ ብሎ ለመንዳት እና ወደ ግራና ቀኝ ለማዞር ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_44_89a02d929d07b88e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! መኪናውን ቀጥ ብሎ ለመንዳት እና ወደ ግራና ቀኝ ለማዞር ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_43_626c77137877a61a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! መኪናውን ቀጥ ብሎ ለመንዳት እና ወደ ግራና ቀኝ ለማዞር ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_44_651ee080a139bc11.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! መኪናውን ቀጥ ብሎ ለመንዳት እና ወደ ግራና ቀኝ ለማዞር ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_43_24df72a2b32e14af.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! መኪናውን ቀጥ ብሎ ለመንዳት እና ወደ ግራና ቀኝ ለማዞር ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_44_11c22e08315fdd3a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! መኪናውን ቀጥ ብሎ ለመንዳት እና ወደ ግራና ቀኝ ለማዞር ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_47_aa1444f837f710bb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! መኪናውን ቀጥ ብሎ ለመንዳት እና ወደ ግራና ቀኝ ለማዞር ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_48_2ed8f9cef4721ed0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! መኪናውን ቀጥ ብሎ ለመንዳት እና ወደ ግራና ቀኝ ለማዞር ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_48_bbd1b8682667a61a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! መኪናውን ቀጥ ብሎ ለመንዳት እና ወደ ግራና ቀኝ ለማዞር ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_48_d38b8b00f1e98abd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! መኪናውን ቀጥ ብሎ ለመንዳት እና ወደ ግራና ቀኝ ለማዞር ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_50_fe5bea86ca9969dd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! መኪናውን ቀጥ ብሎ ለመንዳት እና ወደ ግራና ቀኝ ለማዞር ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_51_d7e4f53065ef229e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! መኪናውን ቀጥ ብሎ ለመንዳት እና ወደ ግራና ቀኝ ለማዞር ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_55_bf2eed28185cdc70.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! መኪናውን ቀጥ ብሎ ለመንዳት እና ወደ ግራና ቀኝ ለማዞር ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_53_1b03f8d01678db48.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: መኪናውን ቀጥ ብሎ ለመንዳት እና ወደ ግራና ቀኝ ለማዞር ነው።",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_57_6efb0cb87043f7ed.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መሪውን ቀጥ ብሎ በሚያሽከረክሩበት ጊዜ እንዴት መያዝ አለብዎት?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_40_627c8b5460f178dc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በአንድ እጅ ከታች።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_12_d4c2de10b1f87721.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። በአንድ እጅ ከታች።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_17_3572fbfe13ff8e63.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በሁለቱም እጆች በአስር እና በሁለት ሰዓት አቅጣጫ፣ አውራ ጣቶች ከውጭ።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_45_300ef29a5a6fedd0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። በሁለቱም እጆች በአስር እና በሁለት ሰዓት አቅጣጫ፣ አውራ ጣቶች ከውጭ።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_50_47837152b306254e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ክርኖች ቀጥ ብለው።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_12_56c212c8327897c9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ክርኖች ቀጥ ብለው።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_17_5b077127891bfbbd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አውራ ጣቶች ከመሪው ውስጥ ገብተው።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_22_5d0b9cfa74794d93.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። አውራ ጣቶች ከመሪው ውስጥ ገብተው።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_27_4f16c55adc9f90af.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! በሁለቱም እጆች በአስር እና በሁለት ሰዓት አቅጣጫ፣ አውራ ጣቶች ከውጭ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_51_34c09330fb41f269.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! በሁለቱም እጆች በአስር እና በሁለት ሰዓት አቅጣጫ፣ አውራ ጣቶች ከውጭ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_49_9b283166ca9e0b7f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! በሁለቱም እጆች በአስር እና በሁለት ሰዓት አቅጣጫ፣ አውራ ጣቶች ከውጭ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_50_9d7b5580ff15f796.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! በሁለቱም እጆች በአስር እና በሁለት ሰዓት አቅጣጫ፣ አውራ ጣቶች ከውጭ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_49_11f84ab45cf78502.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! በሁለቱም እጆች በአስር እና በሁለት ሰዓት አቅጣጫ፣ አውራ ጣቶች ከውጭ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_50_904533f02e107789.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! በሁለቱም እጆች በአስር እና በሁለት ሰዓት አቅጣጫ፣ አውራ ጣቶች ከውጭ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_49_829cc30235abe2f7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! በሁለቱም እጆች በአስር እና በሁለት ሰዓት አቅጣጫ፣ አውራ ጣቶች ከውጭ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_50_67c44d3f949ccc62.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! በሁለቱም እጆች በአስር እና በሁለት ሰዓት አቅጣጫ፣ አውራ ጣቶች ከውጭ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_53_77bbaf24ddd3b1e3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! በሁለቱም እጆች በአስር እና በሁለት ሰዓት አቅጣጫ፣ አውራ ጣቶች ከውጭ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_54_9801e7a027a2dec8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! በሁለቱም እጆች በአስር እና በሁለት ሰዓት አቅጣጫ፣ አውራ ጣቶች ከውጭ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_54_26276d12bee78502.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! በሁለቱም እጆች በአስር እና በሁለት ሰዓት አቅጣጫ፣ አውራ ጣቶች ከውጭ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_54_7fab77d64c6026e5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! በሁለቱም እጆች በአስር እና በሁለት ሰዓት አቅጣጫ፣ አውራ ጣቶች ከውጭ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_56_b8657450412ed345.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! በሁለቱም እጆች በአስር እና በሁለት ሰዓት አቅጣጫ፣ አውራ ጣቶች ከውጭ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_57_bf82c8d495c44d86.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! በሁለቱም እጆች በአስር እና በሁለት ሰዓት አቅጣጫ፣ አውራ ጣቶች ከውጭ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_61_e9d58068c8ebdca8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! በሁለቱም እጆች በአስር እና በሁለት ሰዓት አቅጣጫ፣ አውራ ጣቶች ከውጭ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_59_845723082968a450.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: በሁለቱም እጆች በአስር እና በሁለት ሰዓት አቅጣጫ፣ አውራ ጣቶች ከውጭ።",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_63_1c2d81c094995135.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በህጉ መሰረት፣ አሽከርካሪው አንድ እጁን ከመሪው ላይ ማንሳት የሚችለው መቼ ነው?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_51_9b234ccc1aa7b32f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በፈለጉት ጊዜ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_9_c2226948309a7acd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። በፈለጉት ጊዜ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_14_afd7d46843cf2dcf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪና ሲያቆሙ ብቻ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_12_471b0ed0fef7d85e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። መኪና ሲያቆሙ ብቻ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_17_55299a2ee17f6780.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ህጉ ሁልጊዜ በሁለት እጆች መያዝን ያስገድዳል፣ ምንም ልዩነት የለም።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_43_088370f77f13223f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ህጉ ሁልጊዜ በሁለት እጆች መያዝን ያስገድዳል፣ ምንም ልዩነት የለም።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_48_71aa3ba68c782b8b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከመንዳት ጋር የተያያዘ ተግባር ለማከናወን ለአጭር ጊዜ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_35_fa872be00b76ccfa.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ከመንዳት ጋር የተያያዘ ተግባር ለማከናወን ለአጭር ጊዜ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_40_a00af5ee14369786.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ከመንዳት ጋር የተያያዘ ተግባር ለማከናወን ለአጭር ጊዜ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_41_af5621006361d843.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ከመንዳት ጋር የተያያዘ ተግባር ለማከናወን ለአጭር ጊዜ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_39_f2be66bce9eae4d5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ከመንዳት ጋር የተያያዘ ተግባር ለማከናወን ለአጭር ጊዜ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_40_21786082c8b881bc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ከመንዳት ጋር የተያያዘ ተግባር ለማከናወን ለአጭር ጊዜ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_39_f341e228716d0a28.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ከመንዳት ጋር የተያያዘ ተግባር ለማከናወን ለአጭር ጊዜ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_40_4d22efce080949e3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ከመንዳት ጋር የተያያዘ ተግባር ለማከናወን ለአጭር ጊዜ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_39_132c0ce856dc875d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ከመንዳት ጋር የተያያዘ ተግባር ለማከናወን ለአጭር ጊዜ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_40_8e540bd2fff47f88.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ከመንዳት ጋር የተያያዘ ተግባር ለማከናወን ለአጭር ጊዜ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_43_4841a028a31ffa49.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ከመንዳት ጋር የተያያዘ ተግባር ለማከናወን ለአጭር ጊዜ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_44_ddae3ef2573a6be2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ከመንዳት ጋር የተያያዘ ተግባር ለማከናወን ለአጭር ጊዜ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_44_bf03eac0a75d0a28.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ከመንዳት ጋር የተያያዘ ተግባር ለማከናወን ለአጭር ጊዜ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_44_d31c1f2053b56dcf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ከመንዳት ጋር የተያያዘ ተግባር ለማከናወን ለአጭር ጊዜ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_46_d5bc8a4e45fd3b2f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ከመንዳት ጋር የተያያዘ ተግባር ለማከናወን ለአጭር ጊዜ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_47_4074e2ce41f6b7ac.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ከመንዳት ጋር የተያያዘ ተግባር ለማከናወን ለአጭር ጊዜ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_51_750f5c90f5d220c2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ከመንዳት ጋር የተያያዘ ተግባር ለማከናወን ለአጭር ጊዜ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_49_9f60d2f22595b07a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ከመንዳት ጋር የተያያዘ ተግባር ለማከናወን ለአጭር ጊዜ።",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_53_4f3e96ead8e4119f.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

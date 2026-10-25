@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:06:56.159Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "vk_l1_s1",
+   "key": "vehicle_knowledge_0_0",
+   "sentences": [
+    {
+     "text": "ከፍተኛ የፊት መብራቶችን (የሩቅ መብራቶችን) መቼ መጠቀም አለብን?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_42_e24895c4c36cc39f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁልጊዜ መጠቀም እንችላለን።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_17_352f9874fc8c6aa3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ሁልጊዜ መጠቀም እንችላለን።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_22_23005c50ce9d3621.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መንገድ በጣም ጨለማ ሲሆን እና ሌላ መኪና ከሌለ ብቻ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_34_177c56fa807bee11.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። መንገድ በጣም ጨለማ ሲሆን እና ሌላ መኪና ከሌለ ብቻ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_39_f4df2c9c3e6899cf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በከተማ ውስጥ ስንነዳ መጠቀም አለብን።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_24_e6c33be8083d5267.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። በከተማ ውስጥ ስንነዳ መጠቀም አለብን።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_29_40b12fba0c377593.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዝናብ በሚዘንብበት ጊዜ መጠቀም አለብን።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_25_1101fcb03e60b8e0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ዝናብ በሚዘንብበት ጊዜ መጠቀም አለብን።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_30_3c1b2a5e70abfadc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! መንገድ በጣም ጨለማ ሲሆን እና ሌላ መኪና ከሌለ ብቻ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_40_3d2297b041f23cc8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! መንገድ በጣም ጨለማ ሲሆን እና ሌላ መኪና ከሌለ ብቻ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_38_ac205b20c8baf81e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! መንገድ በጣም ጨለማ ሲሆን እና ሌላ መኪና ከሌለ ብቻ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_39_6eca65b06d85a717.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! መንገድ በጣም ጨለማ ሲሆን እና ሌላ መኪና ከሌለ ብቻ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_38_6933b9c2f4d97c03.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! መንገድ በጣም ጨለማ ሲሆን እና ሌላ መኪና ከሌለ ብቻ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_39_432ae948d3c65728.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! መንገድ በጣም ጨለማ ሲሆን እና ሌላ መኪና ከሌለ ብቻ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_38_94c941e010edbe96.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! መንገድ በጣም ጨለማ ሲሆን እና ሌላ መኪና ከሌለ ብቻ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_39_3bffb3d071b065a3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! መንገድ በጣም ጨለማ ሲሆን እና ሌላ መኪና ከሌለ ብቻ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_42_0a117f9e27a33502.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! መንገድ በጣም ጨለማ ሲሆን እና ሌላ መኪና ከሌለ ብቻ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_43_22dca99c7a07e609.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! መንገድ በጣም ጨለማ ሲሆን እና ሌላ መኪና ከሌለ ብቻ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_43_6056a2802cc97c03.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! መንገድ በጣም ጨለማ ሲሆን እና ሌላ መኪና ከሌለ ብቻ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_43_c342c8ce3559eac4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! መንገድ በጣም ጨለማ ሲሆን እና ሌላ መኪና ከሌለ ብቻ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_45_3127a0b617cfe764.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! መንገድ በጣም ጨለማ ሲሆን እና ሌላ መኪና ከሌለ ብቻ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_46_4584246871f91307.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! መንገድ በጣም ጨለማ ሲሆን እና ሌላ መኪና ከሌለ ብቻ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_50_ba7ac80239326729.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! መንገድ በጣም ጨለማ ሲሆን እና ሌላ መኪና ከሌለ ብቻ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_48_c57e1b40a83a0c91.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: መንገድ በጣም ጨለማ ሲሆን እና ሌላ መኪና ከሌለ ብቻ።",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_52_00d09f907e3c7e14.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቅጣጫ ጠቋሚዎች (አትቶት) ለምን አስፈላጊ ናቸው?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_32_886640502f90d5d8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናው ቆንጆ እንዲመስል ለማድረግ ነው።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_25_799423b05853f662.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። መኪናው ቆንጆ እንዲመስል ለማድረግ ነው።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_30_ef93d318298062e0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሌሎች አሽከርካሪዎች ምን እንደምናደርግ እንዲያውቁ ለማድረግ ነው።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_41_6ab523b090ab46df.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ሌሎች አሽከርካሪዎች ምን እንደምናደርግ እንዲያውቁ ለማድረግ ነው።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_46_b5e35940d21611c1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መንገዱን ለማብራት ነው።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_15_4095ae72d7a8cd73.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። መንገዱን ለማብራት ነው።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_20_71a49690f18aee07.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመኪናውን ኤሌክትሪክ ለመፈተሽ ነው።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_23_d34e1a40a9093589.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። የመኪናውን ኤሌክትሪክ ለመፈተሽ ነው።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_28_22246c46e8b11675.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ሌሎች አሽከርካሪዎች ምን እንደምናደርግ እንዲያውቁ ለማድረግ ነው።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_47_7b0e960627cfa8a6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ሌሎች አሽከርካሪዎች ምን እንደምናደርግ እንዲያውቁ ለማድረግ ነው።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_45_27510808e3df0830.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ሌሎች አሽከርካሪዎች ምን እንደምናደርግ እንዲያውቁ ለማድረግ ነው።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_46_d5eb54081a3e7f99.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ሌሎች አሽከርካሪዎች ምን እንደምናደርግ እንዲያውቁ ለማድረግ ነው።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_45_7135f5e8a0eede0d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ሌሎች አሽከርካሪዎች ምን እንደምናደርግ እንዲያውቁ ለማድረግ ነው።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_46_4103fafecd8b8046.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ሌሎች አሽከርካሪዎች ምን እንደምናደርግ እንዲያውቁ ለማድረግ ነው።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_45_1065fd98df2fadb8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ሌሎች አሽከርካሪዎች ምን እንደምናደርግ እንዲያውቁ ለማድረግ ነው።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_46_bcd3e53819fba86d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ሌሎች አሽከርካሪዎች ምን እንደምናደርግ እንዲያውቁ ለማድረግ ነው።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_49_dacadd2a068395ac.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ሌሎች አሽከርካሪዎች ምን እንደምናደርግ እንዲያውቁ ለማድረግ ነው።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_50_3e85b0069fc0f9c7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ሌሎች አሽከርካሪዎች ምን እንደምናደርግ እንዲያውቁ ለማድረግ ነው።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_50_39ddae0f8adede0d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ሌሎች አሽከርካሪዎች ምን እንደምናደርግ እንዲያውቁ ለማድረግ ነው።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_50_b5b782e0cfc40a2a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ሌሎች አሽከርካሪዎች ምን እንደምናደርግ እንዲያውቁ ለማድረግ ነው።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_52_c0d8ad4a28cbb88a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ሌሎች አሽከርካሪዎች ምን እንደምናደርግ እንዲያውቁ ለማድረግ ነው።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_53_e273f7f0f3987989.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ሌሎች አሽከርካሪዎች ምን እንደምናደርግ እንዲያውቁ ለማድረግ ነው።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_57_22bec1fb27fea8a7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ሌሎች አሽከርካሪዎች ምን እንደምናደርግ እንዲያውቁ ለማድረግ ነው።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_55_f526c340f9bf615f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ሌሎች አሽከርካሪዎች ምን እንደምናደርግ እንዲያውቁ ለማድረግ ነው።",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_59_c8dce89a098141fa.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመኪናው ታርጋ (ሰሌዳ) ምን አይነት መሆን አለበት?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_33_e10459bc760b7e73.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁልጊዜ ንጹህ እና የሚታይ መሆን አለበት።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_26_4ab001647ff4f838.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ሁልጊዜ ንጹህ እና የሚታይ መሆን አለበት።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_31_c256d53643266f7a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ቆሻሻ ከሆነ መሸፈን ይቻላል።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_18_7a6400cf5d1f2532.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ቆሻሻ ከሆነ መሸፈን ይቻላል።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_23_1203920eaca692ec.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በቀን ብቻ የሚታይ መሆን አለበት።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_21_3774cf661690c456.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። በቀን ብቻ የሚታይ መሆን አለበት።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_26_ec952d8053d3b2a2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሮጌ ከሆነ ሊነሳ ይችላል።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_17_26e97522e4cdaae4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። አሮጌ ከሆነ ሊነሳ ይችላል።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_22_a794a8a056f6f498.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ሁልጊዜ ንጹህ እና የሚታይ መሆን አለበት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_32_3bc6ab2ff3c091e1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ሁልጊዜ ንጹህ እና የሚታይ መሆን አለበት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_30_e34da916470704b7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ሁልጊዜ ንጹህ እና የሚታይ መሆን አለበት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_31_11a169b8190370be.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ሁልጊዜ ንጹህ እና የሚታይ መሆን አለበት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_30_dbdacbe6ce31c4aa.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ሁልጊዜ ንጹህ እና የሚታይ መሆን አለበት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_31_b5334e00fed8ae81.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ሁልጊዜ ንጹህ እና የሚታይ መሆን አለበት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_30_1f92ba1a6e1b333f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ሁልጊዜ ንጹህ እና የሚታይ መሆን አለበት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_31_c4b2c3b3fb3a648a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ሁልጊዜ ንጹህ እና የሚታይ መሆን አለበት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_34_02ea8288540564ab.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ሁልጊዜ ንጹህ እና የሚታይ መሆን አለበት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_35_b6baa518b0f6fa20.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ሁልጊዜ ንጹህ እና የሚታይ መሆን አለበት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_35_5064f4381621c4aa.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ሁልጊዜ ንጹህ እና የሚታይ መሆን አለበት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_35_13efeb08f2ce32ed.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ሁልጊዜ ንጹህ እና የሚታይ መሆን አለበት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_37_c945d5121557c4cd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ሁልጊዜ ንጹህ እና የሚታይ መሆን አለበት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_38_2bb7bff0775aa4ae.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ሁልጊዜ ንጹህ እና የሚታይ መሆን አለበት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_42_2abc7c0492d76580.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ሁልጊዜ ንጹህ እና የሚታይ መሆን አለበት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_40_9ee7f660287ca6b8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ሁልጊዜ ንጹህ እና የሚታይ መሆን አለበት።",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_44_4b1c1650b144c43d.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:10:48.170Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "vk_l5_s4",
+   "key": "vehicle_knowledge_4_3",
+   "sentences": [
+    {
+     "text": "የመኪና ባትሪ ዋና ተግባር ምንድነው?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_23_a336eae5f4f78c64.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመኪናውን ፍጥነት መቆጣጠር",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_17_4bce758f0940dc29.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። የመኪናውን ፍጥነት መቆጣጠር",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_22_87937c6894fb9d2b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሞተሩን ለማስነሳት እና የኤሌክትሪክ ክፍሎችን ለማንቀሳቀስ ኃይል መስጠት",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_45_d323eed875178cf3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ሞተሩን ለማስነሳት እና የኤሌክትሪክ ክፍሎችን ለማንቀሳቀስ ኃይል መስጠት",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_50_51c2c4405654826d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የነዳጅ ፍጆታን መቀነስ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_14_b149296827c85e5b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የነዳጅ ፍጆታን መቀነስ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_19_f7a85d54f70ea7af.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመኪናውን ጎማዎች መፈተሽ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_16_befb90d44eb5eccf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። የመኪናውን ጎማዎች መፈተሽ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_21_0e38ce98f1005e33.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ሞተሩን ለማስነሳት እና የኤሌክትሪክ ክፍሎችን ለማንቀሳቀስ ኃይል መስጠት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_51_40a880fc62892e4a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ሞተሩን ለማስነሳት እና የኤሌክትሪክ ክፍሎችን ለማንቀሳቀስ ኃይል መስጠት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_49_9c20347cec71815c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ሞተሩን ለማስነሳት እና የኤሌክትሪክ ክፍሎችን ለማንቀሳቀስ ኃይል መስጠት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_50_46bff69c1f55fb35.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ሞተሩን ለማስነሳት እና የኤሌክትሪክ ክፍሎችን ለማንቀሳቀስ ኃይል መስጠት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_49_e043fc10392bf8a1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ሞተሩን ለማስነሳት እና የኤሌክትሪክ ክፍሎችን ለማንቀሳቀስ ኃይል መስጠት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_50_f44dfb3bcae1beaa.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ሞተሩን ለማስነሳት እና የኤሌክትሪክ ክፍሎችን ለማንቀሳቀስ ኃይል መስጠት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_49_6c4a7df0657cedd4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ሞተሩን ለማስነሳት እና የኤሌክትሪክ ክፍሎችን ለማንቀሳቀስ ኃይል መስጠት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_50_075b9ed0aa80b2c1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ሞተሩን ለማስነሳት እና የኤሌክትሪክ ክፍሎችን ለማንቀሳቀስ ኃይል መስጠት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_53_262e4bc3cf7aafc0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ሞተሩን ለማስነሳት እና የኤሌክትሪክ ክፍሎችን ለማንቀሳቀስ ኃይል መስጠት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_54_7d5b819036d39beb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ሞተሩን ለማስነሳት እና የኤሌክትሪክ ክፍሎችን ለማንቀሳቀስ ኃይል መስጠት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_54_55f7107c9b1bf8a1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ሞተሩን ለማስነሳት እና የኤሌክትሪክ ክፍሎችን ለማንቀሳቀስ ኃይል መስጠት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_54_60c3ed6886f1aec6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ሞተሩን ለማስነሳት እና የኤሌክትሪክ ክፍሎችን ለማንቀሳቀስ ኃይል መስጠት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_56_fc2c076f660d6ae6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ሞተሩን ለማስነሳት እና የኤሌክትሪክ ክፍሎችን ለማንቀሳቀስ ኃይል መስጠት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_57_0071061891ac1925.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ሞተሩን ለማስነሳት እና የኤሌክትሪክ ክፍሎችን ለማንቀሳቀስ ኃይል መስጠት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_61_fd03c9a4cefcdc8b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ሞተሩን ለማስነሳት እና የኤሌክትሪክ ክፍሎችን ለማንቀሳቀስ ኃይል መስጠት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_59_bb983b6435992e73.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ሞተሩን ለማስነሳት እና የኤሌክትሪክ ክፍሎችን ለማንቀሳቀስ ኃይል መስጠት",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_63_473bf9a39fef0b96.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በዳሽቦርዱ ላይ የሚገኘው የባትሪ መሙላት መለኪያ ምን ያሳያል?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_39_89cb7a083d75150b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመኪናውን የነዳጅ መጠን",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_15_527e7284fee83537.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። የመኪናውን የነዳጅ መጠን",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_20_f274b5b01d1128b5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ባትሪው በትክክል እየተሞላ መሆኑን",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_21_bb3b77fc763598be.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ባትሪው በትክክል እየተሞላ መሆኑን",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_26_fe4b6363cf7b40a0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የሞተሩን የሙቀት መጠን",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_14_e103e80b2b4bd3b6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የሞተሩን የሙቀት መጠን",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_19_96c496386e1d9582.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመኪናውን ፍጥነት",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_11_8e0f0208ecb005f9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። የመኪናውን ፍጥነት",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_16_5f09d09031653ec5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ባትሪው በትክክል እየተሞላ መሆኑን",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_27_2d9a82544d25a487.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ባትሪው በትክክል እየተሞላ መሆኑን",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_25_6dc00390ef937511.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ባትሪው በትክክል እየተሞላ መሆኑን",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_26_94ac02bbcaabb3f8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ባትሪው በትክክል እየተሞላ መሆኑን",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_25_2fecce3cca11556c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ባትሪው በትክክል እየተሞላ መሆኑን",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_26_9786f2cc67550567.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ባትሪው በትክክል እየተሞላ መሆኑን",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_25_bad2ebb43ecec599.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ባትሪው በትክክል እየተሞላ መሆኑን",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_26_d127decb8334848c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ባትሪው በትክክል እየተሞላ መሆኑን",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_29_8d6d09c3ef97f18d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ባትሪው በትክክል እየተሞላ መሆኑን",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_30_e927f703d59fe1a6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ባትሪው በትክክል እየተሞላ መሆኑን",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_30_e44996d85c01556c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ባትሪው በትክክል እየተሞላ መሆኑን",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_30_1caf81c4335e630b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ባትሪው በትክክል እየተሞላ መሆኑን",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_32_748a3722d386f82b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ባትሪው በትክክል እየተሞላ መሆኑን",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_33_d499f403e9e469e8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ባትሪው በትክክል እየተሞላ መሆኑን",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_37_4ab5a07486101946.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ባትሪው በትክክል እየተሞላ መሆኑን",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_35_2acc23d8ad9e783e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ባትሪው በትክክል እየተሞላ መሆኑን",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_39_f71d841c93bd2a5b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሽከርካሪ ከመንዳት በፊት በየቀኑ ከባትሪው ጋር በተያያዘ ምን ዓይነት ምርመራ ማድረግ አለበት?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_60_fd62614467f23617.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የባትሪውን ክብደት መለካት",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_16_3004cf3711b15c2a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። የባትሪውን ክብደት መለካት",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_21_72a8f67c6dbb4be8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የባትሪውን ቀለም መቀየር",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_15_899bccf3439fa281.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። የባትሪውን ቀለም መቀየር",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_20_39a415145947d21f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የባትሪውን ሁኔታ በዓይን መፈተሽ (ዝገት፣ ስንጥቅ ወይም ፍሳሽ አለመኖሩን ማረጋገጥ)",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_53_1564ca2415af96af.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የባትሪውን ሁኔታ በዓይን መፈተሽ (ዝገት፣ ስንጥቅ ወይም ፍሳሽ አለመኖሩን ማረጋገጥ)",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_58_e9b9cdc03ba3e65b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ባትሪውን በየቀኑ መሙላት",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_15_ac89e3f48444fda7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ባትሪውን በየቀኑ መሙላት",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_20_ed8def4079da915b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! የባትሪውን ሁኔታ በዓይን መፈተሽ (ዝገት፣ ስንጥቅ ወይም ፍሳሽ አለመኖሩን ማረጋገጥ)",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_59_e0b603c88e754396.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! የባትሪውን ሁኔታ በዓይን መፈተሽ (ዝገት፣ ስንጥቅ ወይም ፍሳሽ አለመኖሩን ማረጋገጥ)",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_57_c71aaca884a5fa00.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! የባትሪውን ሁኔታ በዓይን መፈተሽ (ዝገት፣ ስንጥቅ ወይም ፍሳሽ አለመኖሩን ማረጋገጥ)",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_58_148fec4449a084e9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! የባትሪውን ሁኔታ በዓይን መፈተሽ (ዝገት፣ ስንጥቅ ወይም ፍሳሽ አለመኖሩን ማረጋገጥ)",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_57_ace29b480e66a67d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! የባትሪውን ሁኔታ በዓይን መፈተሽ (ዝገት፣ ስንጥቅ ወይም ፍሳሽ አለመኖሩን ማረጋገጥ)",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_58_42c7f3dec317bdf6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! የባትሪውን ሁኔታ በዓይን መፈተሽ (ዝገት፣ ስንጥቅ ወይም ፍሳሽ አለመኖሩን ማረጋገጥ)",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_57_0e9254ba82b5d388.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! የባትሪውን ሁኔታ በዓይን መፈተሽ (ዝገት፣ ስንጥቅ ወይም ፍሳሽ አለመኖሩን ማረጋገጥ)",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_58_9076ba6019def49d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! የባትሪውን ሁኔታ በዓይን መፈተሽ (ዝገት፣ ስንጥቅ ወይም ፍሳሽ አለመኖሩን ማረጋገጥ)",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_61_fabb30c67d45069c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! የባትሪውን ሁኔታ በዓይን መፈተሽ (ዝገት፣ ስንጥቅ ወይም ፍሳሽ አለመኖሩን ማረጋገጥ)",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_62_d163d1ffa566d9b7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! የባትሪውን ሁኔታ በዓይን መፈተሽ (ዝገት፣ ስንጥቅ ወይም ፍሳሽ አለመኖሩን ማረጋገጥ)",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_62_88ad587f6056a67d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! የባትሪውን ሁኔታ በዓይን መፈተሽ (ዝገት፣ ስንጥቅ ወይም ፍሳሽ አለመኖሩን ማረጋገጥ)",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_62_62bf427c25288c1a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! የባትሪውን ሁኔታ በዓይን መፈተሽ (ዝገት፣ ስንጥቅ ወይም ፍሳሽ አለመኖሩን ማረጋገጥ)",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_64_9fa35e58560f43ba.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! የባትሪውን ሁኔታ በዓይን መፈተሽ (ዝገት፣ ስንጥቅ ወይም ፍሳሽ አለመኖሩን ማረጋገጥ)",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_65_53d264742f7a56f9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! የባትሪውን ሁኔታ በዓይን መፈተሽ (ዝገት፣ ስንጥቅ ወይም ፍሳሽ አለመኖሩን ማረጋገጥ)",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_69_407b964b9518ef57.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! የባትሪውን ሁኔታ በዓይን መፈተሽ (ዝገት፣ ስንጥቅ ወይም ፍሳሽ አለመኖሩን ማረጋገጥ)",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_67_572fca9b2717fb2f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: የባትሪውን ሁኔታ በዓይን መፈተሽ (ዝገት፣ ስንጥቅ ወይም ፍሳሽ አለመኖሩን ማረጋገጥ)",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_71_57f65a18a9f7364a.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

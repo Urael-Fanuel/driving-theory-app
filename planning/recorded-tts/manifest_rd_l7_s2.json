@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:20:53.573Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "rd_l7_s2",
+   "key": "road_decisions_6_1",
+   "sentences": [
+    {
+     "text": "ባለ ሁለት አቅጣጫ መንገድ ላይ በግራ በኩል ማረፊያ ማድረግ ይፈቀዳል?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_44_2dcdc92c6383cc56.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናው ከመንገዱ ዳርቻ ቅርብ ከሆነ ይፈቀዳል።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_29_4ea17b5ecec8023a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። መኪናው ከመንገዱ ዳርቻ ቅርብ ከሆነ ይፈቀዳል።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_34_903264a82bc027b8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስምንት ሜትር በላይ ሰፊ መንገድ ላይ ይፈቀዳል።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_30_d3aee550cf37b33a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ስምንት ሜትር በላይ ሰፊ መንገድ ላይ ይፈቀዳል።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_35_3b8df12c437fc9e4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ክልክል ነው።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_8_7aefb81789af69fa.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ክልክል ነው።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_13_bdd81518fd9257ce.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሦስት ወይም ከዚያ በላይ መስመሮች ባሉት መንገድ ላይ ይፈቀዳል።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_40_ce585e787ce5e512.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ሦስት ወይም ከዚያ በላይ መስመሮች ባሉት መንገድ ላይ ይፈቀዳል።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_45_faa40daa30fc8e2e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ክልክል ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_14_553ea11034b00aa3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ክልክል ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_12_77affcaebaf3d175.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ክልክል ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_13_ec9646f06b5143fc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ክልክል ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_12_4daebd4ebd711ce8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ክልክል ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_13_97aa42afd5674743.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ክልክል ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_12_e8f5c246a11db9fd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ክልክል ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_13_5c464618b38169c8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ክልክል ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_16_5072ef0cf2d6bc69.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ክልክል ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_17_0f702d9a32b097e2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ክልክል ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_17_a6245dac69611ce8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ክልክል ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_17_3615f80a87cccaaf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ክልክል ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_19_6465aa2cc5be3c0f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ክልክል ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_20_c55661e8962923ec.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ክልክል ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_24_c036c4be474a1342.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ክልክል ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_22_146df23c40fb467a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ክልክል ነው።",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_26_dbd4d70809cff97f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በዚህ ስዕል ላይ ቀዩ መኪና ማረፊያ ያደረገበት መንገድ ምን ስህተት አለበት?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_48_13fea7f44675d16a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከመንገዱ ዳርቻ በጣም ራቅ ብሎ ማረፊያ አድርጓል።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_31_6bf14a4e591f4a71.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ከመንገዱ ዳርቻ በጣም ራቅ ብሎ ማረፊያ አድርጓል።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_36_1bae4fdf47e00873.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በመንገዱ ግራ በኩል ማረፊያ አድርጓል።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_24_199848a870a838c5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። በመንገዱ ግራ በኩል ማረፊያ አድርጓል።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_29_e3e2f40eef20941b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመግቢያ በር ዘግቷል።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_14_e54066c3f02958f1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የመግቢያ በር ዘግቷል።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_19_80ca1daa2a214585.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ለሌሎች መኪኖች በጣም ተጠግቶ ማረፊያ አድርጓል።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_30_f43daec6d93274a8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ለሌሎች መኪኖች በጣም ተጠግቶ ማረፊያ አድርጓል።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_35_79549d664c51c214.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! በመንገዱ ግራ በኩል ማረፊያ አድርጓል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_30_687264feda9da31c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! በመንገዱ ግራ በኩል ማረፊያ አድርጓል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_28_221d4a943b45edca.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! በመንገዱ ግራ በኩል ማረፊያ አድርጓል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_29_7223655251b2b643.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! በመንገዱ ግራ በኩል ማረፊያ አድርጓል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_28_4c1b6e804e048a57.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! በመንገዱ ግራ በኩል ማረፊያ አድርጓል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_29_80d190086137ddfc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! በመንገዱ ግራ በኩል ማረፊያ አድርጓል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_28_85cdae00e6d30042.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! በመንገዱ ግራ በኩል ማረፊያ አድርጓል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_29_f75319a736bc23f7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! በመንገዱ ግራ በኩል ማረፊያ አድርጓል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_32_4e39ce3e90e723d6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! በመንገዱ ግራ በኩል ማረፊያ አድርጓል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_33_8ba1d4f65aaf2edd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! በመንገዱ ግራ በኩል ማረፊያ አድርጓል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_33_de241030d9f48a57.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! በመንገዱ ግራ በኩል ማረፊያ አድርጓል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_33_d79a10384660ea10.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! በመንገዱ ግራ በኩል ማረፊያ አድርጓል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_35_2bda3a18e61da730.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! በመንገዱ ግራ በኩል ማረፊያ አድርጓል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_36_8c34e3d00374d253.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! በመንገዱ ግራ በኩል ማረፊያ አድርጓል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_40_ba8c0bf06e6277fd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! በመንገዱ ግራ በኩል ማረፊያ አድርጓል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_38_7d05811879ac8d45.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: በመንገዱ ግራ በኩል ማረፊያ አድርጓል።",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_42_5af258ec3a966040.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ባለ ሁለት አቅጣጫ መንገድ ላይ በግራ በኩል ማረፊያ ማድረግ ለምን አደገኛ ነው?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_50_f91a77a564e9bad3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናው ለሚመጡ መኪኖች ፊት ለፊት ቆሟልና እንቅፋት ሆኖ ግጭት ሊፈጥር ይችላል።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_50_16cc7732369fd864.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። መኪናው ለሚመጡ መኪኖች ፊት ለፊት ቆሟልና እንቅፋት ሆኖ ግጭት ሊፈጥር ይችላል።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_55_5dbb79082692dba6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት ማረፊያ ቦታዎችን ይይዛል።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_20_1ebd58e833e630ec.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ሁለት ማረፊያ ቦታዎችን ይይዛል።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_25_1fc3abf070d6f232.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመንገዱን ገጽታ ያበላሻል።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_17_683cc0f66795405e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የመንገዱን ገጽታ ያበላሻል።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_22_a1ab7bbe39ca562a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ይህ ችግር የሚሆነው በሌሊት ብቻ ነው።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_24_9cf0963c3cffc36b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ይህ ችግር የሚሆነው በሌሊት ብቻ ነው።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_29_d7df3dda6509a397.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! መኪናው ለሚመጡ መኪኖች ፊት ለፊት ቆሟልና እንቅፋት ሆኖ ግጭት ሊፈጥር ይችላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_56_8b8d82b0bf85cf3d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! መኪናው ለሚመጡ መኪኖች ፊት ለፊት ቆሟልና እንቅፋት ሆኖ ግጭት ሊፈጥር ይችላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_54_6151f09086f766eb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! መኪናው ለሚመጡ መኪኖች ፊት ለፊት ቆሟልና እንቅፋት ሆኖ ግጭት ሊፈጥር ይችላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_55_afe57ef68fc5cbe2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! መኪናው ለሚመጡ መኪኖች ፊት ለፊት ቆሟልና እንቅፋት ሆኖ ግጭት ሊፈጥር ይችላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_54_4bde623aaad397f6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! መኪናው ለሚመጡ መኪኖች ፊት ለፊት ቆሟልና እንቅፋት ሆኖ ግጭት ሊፈጥር ይችላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_55_63b7548e30e22c9d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! መኪናው ለሚመጡ መኪኖች ፊት ለፊት ቆሟልና እንቅፋት ሆኖ ግጭት ሊፈጥር ይችላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_54_16bf72c8b901bd63.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! መኪናው ለሚመጡ መኪኖች ፊት ለፊት ቆሟልና እንቅፋት ሆኖ ግጭት ሊፈጥር ይችላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_55_e3cbca70553a6396.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! መኪናው ለሚመጡ መኪኖች ፊት ለፊት ቆሟልና እንቅፋት ሆኖ ግጭት ሊፈጥር ይችላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_58_8de96f38eeca26f7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! መኪናው ለሚመጡ መኪኖች ፊት ለፊት ቆሟልና እንቅፋት ሆኖ ግጭት ሊፈጥር ይችላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_59_f7d6e628dc4fe27c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! መኪናው ለሚመጡ መኪኖች ፊት ለፊት ቆሟልና እንቅፋት ሆኖ ግጭት ሊፈጥር ይችላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_59_563a5fe2c2c397f6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! መኪናው ለሚመጡ መኪኖች ፊት ለፊት ቆሟልና እንቅፋት ሆኖ ግጭት ሊፈጥር ይችላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_59_aa70101059237631.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! መኪናው ለሚመጡ መኪኖች ፊት ለፊት ቆሟልና እንቅፋት ሆኖ ግጭት ሊፈጥር ይችላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_61_cff80ed0c53fe2d1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! መኪናው ለሚመጡ መኪኖች ፊት ለፊት ቆሟልና እንቅፋት ሆኖ ግጭት ሊፈጥር ይችላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_62_d41405285e349ff2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! መኪናው ለሚመጡ መኪኖች ፊት ለፊት ቆሟልና እንቅፋት ሆኖ ግጭት ሊፈጥር ይችላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_66_ab9c40d0c27eb49c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! መኪናው ለሚመጡ መኪኖች ፊት ለፊት ቆሟልና እንቅፋት ሆኖ ግጭት ሊፈጥር ይችላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_64_3de25d12490244e4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: መኪናው ለሚመጡ መኪኖች ፊት ለፊት ቆሟልና እንቅፋት ሆኖ ግጭት ሊፈጥር ይችላል።",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_68_e7970b764aa7ef61.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

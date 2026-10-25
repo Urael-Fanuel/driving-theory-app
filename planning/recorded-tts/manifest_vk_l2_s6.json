@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:08:42.255Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "vk_l2_s6",
+   "key": "vehicle_knowledge_1_5",
+   "sentences": [
+    {
+     "text": "የማስነሻ ቁልፍ ዋና ተግባር ምንድን ነው?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_26_cc75928160aae6a8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናውን ለማስነሳት ብቻ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_16_c133be7cb8f1c210.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። መኪናውን ለማስነሳት ብቻ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_21_72fd3bd895ed9b52.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሞተሩን ለማስነሳት እና ለማጥፋት፣ የኤሌክትሪክ ስርዓቶችን ለማገናኘት እና መሪውን ለመቆለፍ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_58_33331496bb509218.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ሞተሩን ለማስነሳት እና ለማጥፋት፣ የኤሌክትሪክ ስርዓቶችን ለማገናኘት እና መሪውን ለመቆለፍ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_63_6ce7338ed1a520c6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመኪናውን ፍጥነት ለመቆጣጠር።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_19_f745a8ae0468f3c3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የመኪናውን ፍጥነት ለመቆጣጠር።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_24_ce8ed538cacaf037.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመኪናውን መብራቶች ለማብራት።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_19_87285e48b309ee23.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። የመኪናውን መብራቶች ለማብራት።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_24_c78cee7469bca25f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ሞተሩን ለማስነሳት እና ለማጥፋት፣ የኤሌክትሪክ ስርዓቶችን ለማገናኘት እና መሪውን ለመቆለፍ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_64_a9bc99f811a8aa81.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ሞተሩን ለማስነሳት እና ለማጥፋት፣ የኤሌክትሪክ ስርዓቶችን ለማገናኘት እና መሪውን ለመቆለፍ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_62_4e2503c8e59d6dd7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ሞተሩን ለማስነሳት እና ለማጥፋት፣ የኤሌክትሪክ ስርዓቶችን ለማገናኘት እና መሪውን ለመቆለፍ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_63_1649b4f072b3e11e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ሞተሩን ለማስነሳት እና ለማጥፋት፣ የኤሌክትሪክ ስርዓቶችን ለማገናኘት እና መሪውን ለመቆለፍ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_62_aa9031d07a4e3a0a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ሞተሩን ለማስነሳት እና ለማጥፋት፣ የኤሌክትሪክ ስርዓቶችን ለማገናኘት እና መሪውን ለመቆለፍ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_63_4cf8580846576d21.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ሞተሩን ለማስነሳት እና ለማጥፋት፣ የኤሌክትሪክ ስርዓቶችን ለማገናኘት እና መሪውን ለመቆለፍ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_62_15a3e9aed3d9ae5f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ሞተሩን ለማስነሳት እና ለማጥፋት፣ የኤሌክትሪክ ስርዓቶችን ለማገናኘት እና መሪውን ለመቆለፍ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_63_4c3e18c860db266a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ሞተሩን ለማስነሳት እና ለማጥፋት፣ የኤሌክትሪክ ስርዓቶችን ለማገናኘት እና መሪውን ለመቆለፍ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_66_224174fe48be48cb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ሞተሩን ለማስነሳት እና ለማጥፋት፣ የኤሌክትሪክ ስርዓቶችን ለማገናኘት እና መሪውን ለመቆለፍ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_67_001af76e95421000.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ሞተሩን ለማስነሳት እና ለማጥፋት፣ የኤሌክትሪክ ስርዓቶችን ለማገናኘት እና መሪውን ለመቆለፍ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_67_719f76be823e3a0a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ሞተሩን ለማስነሳት እና ለማጥፋት፣ የኤሌክትሪክ ስርዓቶችን ለማገናኘት እና መሪውን ለመቆለፍ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_67_83a4e086d243768d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ሞተሩን ለማስነሳት እና ለማጥፋት፣ የኤሌክትሪክ ስርዓቶችን ለማገናኘት እና መሪውን ለመቆለፍ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_69_ea86ef7e9812206d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ሞተሩን ለማስነሳት እና ለማጥፋት፣ የኤሌክትሪክ ስርዓቶችን ለማገናኘት እና መሪውን ለመቆለፍ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_70_9e2120a745b5f10e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ሞተሩን ለማስነሳት እና ለማጥፋት፣ የኤሌክትሪክ ስርዓቶችን ለማገናኘት እና መሪውን ለመቆለፍ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_74_c3cc74f23ef6c0e0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ሞተሩን ለማስነሳት እና ለማጥፋት፣ የኤሌክትሪክ ስርዓቶችን ለማገናኘት እና መሪውን ለመቆለፍ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_72_a187f72eca3a3298.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ሞተሩን ለማስነሳት እና ለማጥፋት፣ የኤሌክትሪክ ስርዓቶችን ለማገናኘት እና መሪውን ለመቆለፍ።",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_76_8b955848211c60dd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የማስነሻ ቁልፍ ብዙውን ጊዜ የት ይገኛል?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_26_6561a588b4d6324a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በመኪናው በር ላይ።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_12_f19e865029098140.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። በመኪናው በር ላይ።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_17_51ac7150a8755402.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በመኪናው ወንበሮች መካከል።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_17_ab12e8261be03773.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። በመኪናው ወንበሮች መካከል።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_22_2dade65a58964f6d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከመሪው አምድ አጠገብ ወይም በመኪናው የፊት ዳሽቦርድ ላይ።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_37_0d81a262fdb30640.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ከመሪው አምድ አጠገብ ወይም በመኪናው የፊት ዳሽቦርድ ላይ።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_42_31d4d3984987f1b4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከመኪናው ጎማ ስር።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_12_9aa56690cf217eee.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ከመኪናው ጎማ ስር።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_17_b0685d5ee339e652.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ከመሪው አምድ አጠገብ ወይም በመኪናው የፊት ዳሽቦርድ ላይ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_43_4abb3a7a689ac139.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ከመሪው አምድ አጠገብ ወይም በመኪናው የፊት ዳሽቦርድ ላይ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_41_118ad3a4f7a444af.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ከመሪው አምድ አጠገብ ወይም በመኪናው የፊት ዳሽቦርድ ላይ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_42_38e8710e5a8d1186.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ከመሪው አምድ አጠገብ ወይም በመኪናው የፊት ዳሽቦርድ ላይ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_41_5e04409e24145612.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ከመሪው አምድ አጠገብ ወይም በመኪናው የፊት ዳሽቦርድ ላይ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_42_7a666c4638809659.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ከመሪው አምድ አጠገብ ወይም በመኪናው የፊት ዳሽቦርድ ላይ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_41_8ea07568e2fb8227.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ከመሪው አምድ አጠገብ ወይም በመኪናው የፊት ዳሽቦርድ ላይ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_42_810507f04cbde8f2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ከመሪው አምድ አጠገብ ወይም በመኪናው የፊት ዳሽቦርድ ላይ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_45_3177d8dc3bbefc33.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ከመሪው አምድ አጠገብ ወይም በመኪናው የፊት ዳሽቦርድ ላይ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_46_2bbd627a92bc9358.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ከመሪው አምድ አጠገብ ወይም በመኪናው የፊት ዳሽቦርድ ላይ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_46_7e47184096045612.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ከመሪው አምድ አጠገብ ወይም በመኪናው የፊት ዳሽቦርድ ላይ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_46_3d0156a8ab1e4cb5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ከመሪው አምድ አጠገብ ወይም በመኪናው የፊት ዳሽቦርድ ላይ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_48_6f586a363accbb15.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ከመሪው አምድ አጠገብ ወይም በመኪናው የፊት ዳሽቦርድ ላይ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_49_12ff524274cf9f96.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ከመሪው አምድ አጠገብ ወይም በመኪናው የፊት ዳሽቦርድ ላይ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_53_4dfba04ee6ffb1b8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ከመሪው አምድ አጠገብ ወይም በመኪናው የፊት ዳሽቦርድ ላይ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_51_3706b9c0bd2868c0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ከመሪው አምድ አጠገብ ወይም በመኪናው የፊት ዳሽቦርድ ላይ።",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_55_0b4de02694365de5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የማስነሻ ቁልፍ ለምን ምንጭ ያለው ጫፍ አለው?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_29_6ef4a28cd7ae297e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በቀላሉ እንዲዞር ለማድረግ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_17_6be3730059feb0b7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። በቀላሉ እንዲዞር ለማድረግ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_22_f340e7de77ad85b5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመኪናውን በሮች ለመቆለፍ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_17_5c7a41f816c71df6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። የመኪናውን በሮች ለመቆለፍ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_22_89139b3687589a68.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሞተሩ ሲሰራ ማስነሻውን ወዲያውኑ ለማቆም እና ማስነሻው እንዳይበላሽ ለመከላከል ነው።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_53_578600de3a04ea5c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ሞተሩ ሲሰራ ማስነሻውን ወዲያውኑ ለማቆም እና ማስነሻው እንዳይበላሽ ለመከላከል ነው።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_58_9c0feea8bdf0ee68.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የሙዚቃ ድምጽን ለመቆጣጠር።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_17_833009489061a497.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። የሙዚቃ ድምጽን ለመቆጣጠር።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_22_d32b87aeec4e946b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ሞተሩ ሲሰራ ማስነሻውን ወዲያውኑ ለማቆም እና ማስነሻው እንዳይበላሽ ለመከላከል ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_59_852998b0efd25c65.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ሞተሩ ሲሰራ ማስነሻውን ወዲያውኑ ለማቆም እና ማስነሻው እንዳይበላሽ ለመከላከል ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_57_d44a72300e2ac073.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ሞተሩ ሲሰራ ማስነሻውን ወዲያውኑ ለማቆም እና ማስነሻው እንዳይበላሽ ለመከላከል ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_58_d79919086f57bb1a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ሞተሩ ሲሰራ ማስነሻውን ወዲያውኑ ለማቆም እና ማስነሻው እንዳይበላሽ ለመከላከል ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_57_458f0f8a76a2318e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ሞተሩ ሲሰራ ማስነሻውን ወዲያውኑ ለማቆም እና ማስነሻው እንዳይበላሽ ለመከላከል ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_58_2b4348265faad4c5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ሞተሩ ሲሰራ ማስነሻውን ወዲያውኑ ለማቆም እና ማስነሻው እንዳይበላሽ ለመከላከል ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_57_d25ec3be6f466ffb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ሞተሩ ሲሰራ ማስነሻውን ወዲያውኑ ለማቆም እና ማስነሻው እንዳይበላሽ ለመከላከል ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_58_42ec4fd03dbb052e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ሞተሩ ሲሰራ ማስነሻውን ወዲያውኑ ለማቆም እና ማስነሻው እንዳይበላሽ ለመከላከል ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_61_6c53602018ab97ef.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ሞተሩ ሲሰራ ማስነሻውን ወዲያውኑ ለማቆም እና ማስነሻው እንዳይበላሽ ለመከላከል ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_62_c1f07ffa04e52d44.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ሞተሩ ሲሰራ ማስነሻውን ወዲያውኑ ለማቆም እና ማስነሻው እንዳይበላሽ ለመከላከል ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_62_fdf07708c892318e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ሞተሩ ሲሰራ ማስነሻውን ወዲያውኑ ለማቆም እና ማስነሻው እንዳይበላሽ ለመከላከል ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_62_4641f08041e2f3e9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ሞተሩ ሲሰራ ማስነሻውን ወዲያውኑ ለማቆም እና ማስነሻው እንዳይበላሽ ለመከላከል ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_64_02f0a188b8a1e689.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ሞተሩ ሲሰራ ማስነሻውን ወዲያውኑ ለማቆም እና ማስነሻው እንዳይበላሽ ለመከላከል ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_65_6a0d94e64ea23d0a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ሞተሩ ሲሰራ ማስነሻውን ወዲያውኑ ለማቆም እና ማስነሻው እንዳይበላሽ ለመከላከል ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_69_5b630278bfcb0e64.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ሞተሩ ሲሰራ ማስነሻውን ወዲያውኑ ለማቆም እና ማስነሻው እንዳይበላሽ ለመከላከል ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_67_2c361f30611c66dc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ሞተሩ ሲሰራ ማስነሻውን ወዲያውኑ ለማቆም እና ማስነሻው እንዳይበላሽ ለመከላከል ነው።",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_71_96a5c6848da91739.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

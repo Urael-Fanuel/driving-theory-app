@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:08:07.517Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "vk_l2_s2",
+   "key": "vehicle_knowledge_1_2",
+   "sentences": [
+    {
+     "text": "መኪና ውስጥ እንደገባን፣ ወንበሩን ከማስተካከላችን በፊት መጀመሪያ ምን ማድረግ አለብን?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_55_0af1a160c947e789.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የሬዲዮኑን ድምጽ ማስተካከል አለብን።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_23_cf843e6a5907f486.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። የሬዲዮኑን ድምጽ ማስተካከል አለብን።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_28_bd7f895eed03b984.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የእግር ብሬኩን መጫን እና የእጅ ብሬኩ መሳቡን ማረጋገጥ አለብን።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_41_842f4b2814510d55.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። የእግር ብሬኩን መጫን እና የእጅ ብሬኩ መሳቡን ማረጋገጥ አለብን።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_46_ef4692c25fcd50cb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመቀመጫ ቀበቶውን ማሰር አለብን።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_21_a0b16cbe9a312474.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የመቀመጫ ቀበቶውን ማሰር አለብን።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_26_903ff058b8e01440.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናውን ማስነሳት አለብን።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_17_d17fa1d8e44c125e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። መኪናውን ማስነሳት አለብን።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_22_f9cf8af0497bb622.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! የእግር ብሬኩን መጫን እና የእጅ ብሬኩ መሳቡን ማረጋገጥ አለብን።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_47_22a72194d0f28fac.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! የእግር ብሬኩን መጫን እና የእጅ ብሬኩ መሳቡን ማረጋገጥ አለብን።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_45_fd311652e11078ba.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! የእግር ብሬኩን መጫን እና የእጅ ብሬኩ መሳቡን ማረጋገጥ አለብን።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_46_5c4263d42ae07113.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! የእግር ብሬኩን መጫን እና የእጅ ብሬኩ መሳቡን ማረጋገጥ አለብን።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_45_c97de4707310db87.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! የእግር ብሬኩን መጫን እና የእጅ ብሬኩ መሳቡን ማረጋገጥ አለብን።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_46_ad333a86430409cc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! የእግር ብሬኩን መጫን እና የእጅ ብሬኩ መሳቡን ማረጋገጥ አለብን።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_45_443880680eea0732.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! የእግር ብሬኩን መጫን እና የእጅ ብሬኩ መሳቡን ማረጋገጥ አለብን።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_46_fa4d4ede7d54a9e7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! የእግር ብሬኩን መጫን እና የእጅ ብሬኩ መሳቡን ማረጋገጥ አለብን።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_49_fdbb5d00137d0c26.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! የእግር ብሬኩን መጫን እና የእጅ ብሬኩ መሳቡን ማረጋገጥ አለብን።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_50_77a07f243bd8ce4d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! የእግር ብሬኩን መጫን እና የእጅ ብሬኩ መሳቡን ማረጋገጥ አለብን።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_50_9c423c645d00db87.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! የእግር ብሬኩን መጫን እና የእጅ ብሬኩ መሳቡን ማረጋገጥ አለብን።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_50_bece1d804a551d20.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! የእግር ብሬኩን መጫን እና የእጅ ብሬኩ መሳቡን ማረጋገጥ አለብን።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_52_98d21d985456d880.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! የእግር ብሬኩን መጫን እና የእጅ ብሬኩ መሳቡን ማረጋገጥ አለብን።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_53_5d7ac5e01a1b0703.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! የእግር ብሬኩን መጫን እና የእጅ ብሬኩ መሳቡን ማረጋገጥ አለብን።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_57_7b571ad0d5ec3a2d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! የእግር ብሬኩን መጫን እና የእጅ ብሬኩ መሳቡን ማረጋገጥ አለብን።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_55_a713db6643eb02d5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: የእግር ብሬኩን መጫን እና የእጅ ብሬኩ መሳቡን ማረጋገጥ አለብን።",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_59_f7cbd1b8873c6270.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የሹፌሩን መቀመጫ (የኋላ መደገፊያውን እና የራስ መደገፊያውን ጨምሮ) በትክክል ማስተካከል ለምን ይጠቅማል?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_67_ed6e8300d522ecd4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናው በፍጥነት እንዲሄድ ለማድረግ።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_23_835fda78993c7976.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። መኪናው በፍጥነት እንዲሄድ ለማድረግ።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_28_32e0d546c929b7f4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናው ውስጥ ሙዚቃ ለማዳመጥ ምቹ እንዲሆን።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_28_37010fa8be69425e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። መኪናው ውስጥ ሙዚቃ ለማዳመጥ ምቹ እንዲሆን።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_33_8614381e88f7e880.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናውን በደህና እና ምቾት ለመቆጣጠር፣ በፍጥነት ምላሽ ለመስጠት እና እንዳይደክመን።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_54_b8ac8698c5a87efd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። መኪናውን በደህና እና ምቾት ለመቆጣጠር፣ በፍጥነት ምላሽ ለመስጠት እና እንዳይደክመን።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_59_0f54177e2dae9e89.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመኪናውን ገጽታ ለማሳመር።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_17_d294c5d6b25cf1e5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። የመኪናውን ገጽታ ለማሳመር።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_22_f5f5da38bbdaefd9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! መኪናውን በደህና እና ምቾት ለመቆጣጠር፣ በፍጥነት ምላሽ ለመስጠት እና እንዳይደክመን።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_60_d1f3da90dff67324.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! መኪናውን በደህና እና ምቾት ለመቆጣጠር፣ በፍጥነት ምላሽ ለመስጠት እና እንዳይደክመን።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_58_08144a465e74bd72.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! መኪናውን በደህና እና ምቾት ለመቆጣጠር፣ በፍጥነት ምላሽ ለመስጠት እና እንዳይደክመን።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_59_250ba1fad4620bfb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! መኪናውን በደህና እና ምቾት ለመቆጣጠር፣ በፍጥነት ምላሽ ለመስጠት እና እንዳይደክመን።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_58_93d139c001aacfef.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! መኪናውን በደህና እና ምቾት ለመቆጣጠር፣ በፍጥነት ምላሽ ለመስጠት እና እንዳይደክመን።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_59_158c634062697a84.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! መኪናውን በደህና እና ምቾት ለመቆጣጠር፣ በፍጥነት ምላሽ ለመስጠት እና እንዳይደክመን።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_58_9f67c63207670bfa.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! መኪናውን በደህና እና ምቾት ለመቆጣጠር፣ በፍጥነት ምላሽ ለመስጠት እና እንዳይደክመን።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_59_d609ff223be6188f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! መኪናውን በደህና እና ምቾት ለመቆጣጠር፣ በፍጥነት ምላሽ ለመስጠት እና እንዳይደክመን።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_62_688729e0466af96e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! መኪናውን በደህና እና ምቾት ለመቆጣጠር፣ በፍጥነት ምላሽ ለመስጠት እና እንዳይደክመን።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_63_05604c767e91a2e5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! መኪናውን በደህና እና ምቾት ለመቆጣጠር፣ በፍጥነት ምላሽ ለመስጠት እና እንዳይደክመን።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_63_52ce087c919acfef.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! መኪናውን በደህና እና ምቾት ለመቆጣጠር፣ በፍጥነት ምላሽ ለመስጠት እና እንዳይደክመን።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_63_934cfb7022ccac28.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! መኪናውን በደህና እና ምቾት ለመቆጣጠር፣ በፍጥነት ምላሽ ለመስጠት እና እንዳይደክመን።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_65_f514981a455a22c8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! መኪናውን በደህና እና ምቾት ለመቆጣጠር፣ በፍጥነት ምላሽ ለመስጠት እና እንዳይደክመን።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_66_ca0440c0ffda53eb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! መኪናውን በደህና እና ምቾት ለመቆጣጠር፣ በፍጥነት ምላሽ ለመስጠት እና እንዳይደክመን።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_70_fbdb27c603f6a905.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! መኪናውን በደህና እና ምቾት ለመቆጣጠር፣ በፍጥነት ምላሽ ለመስጠት እና እንዳይደክመን።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_68_1130d5c8933b3b7d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: መኪናውን በደህና እና ምቾት ለመቆጣጠር፣ በፍጥነት ምላሽ ለመስጠት እና እንዳይደክመን።",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_72_f64d29aef48dd178.mp3",
+     "too_long": false
+    },
+    {
+     "text": "\"የሞተ ቦታ\" ምንድነው እና እንዴት መቀነስ እንችላለን?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_35_c3f0c348f72464a8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የሞተ ቦታ በመኪናው ውስጥ የጠፋ ዕቃ ያለበት ቦታ ነው።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_35_469247e88fc9b06e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። የሞተ ቦታ በመኪናው ውስጥ የጠፋ ዕቃ ያለበት ቦታ ነው።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_40_741713261a46bd6c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የሞተ ቦታ መኪናው ላይ የቆሸሸ ቦታ ነው።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_26_84fe20c8eee61b38.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። የሞተ ቦታ መኪናው ላይ የቆሸሸ ቦታ ነው።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_31_36eb569cadd12766.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የሞተ ቦታ በመስተዋትም ቢሆን ሹፌሩ የማያየው ከመኪናው ዙሪያ ያለው ቦታ ሲሆን፣ ጭንቅላትን ወደ ጎን በማዞር መቀነስ ይቻላል።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_79_6f58286eea06edaf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የሞተ ቦታ በመስተዋትም ቢሆን ሹፌሩ የማያየው ከመኪናው ዙሪያ ያለው ቦታ ሲሆን፣ ጭንቅላትን ወደ ጎን በማዞር መቀነስ ይቻላል።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_84_a0c07e16d1547e1b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የሞተ ቦታ የመኪናው የኋላ ጎማ ያለበት ቦታ ነው።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_31_419e1b187b77ba13.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። የሞተ ቦታ የመኪናው የኋላ ጎማ ያለበት ቦታ ነው።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_36_5454c6502d532daf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! የሞተ ቦታ በመስተዋትም ቢሆን ሹፌሩ የማያየው ከመኪናው ዙሪያ ያለው ቦታ ሲሆን፣ ጭንቅላትን ወደ ጎን በማዞር መቀነስ ይቻላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_85_bcca6e385d67d416.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! የሞተ ቦታ በመስተዋትም ቢሆን ሹፌሩ የማያየው ከመኪናው ዙሪያ ያለው ቦታ ሲሆን፣ ጭንቅላትን ወደ ጎን በማዞር መቀነስ ይቻላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_83_764eb992b1f39f80.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! የሞተ ቦታ በመስተዋትም ቢሆን ሹፌሩ የማያየው ከመኪናው ዙሪያ ያለው ቦታ ሲሆን፣ ጭንቅላትን ወደ ጎን በማዞር መቀነስ ይቻላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_84_c0f57aae00c01e69.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! የሞተ ቦታ በመስተዋትም ቢሆን ሹፌሩ የማያየው ከመኪናው ዙሪያ ያለው ቦታ ሲሆን፣ ጭንቅላትን ወደ ጎን በማዞር መቀነስ ይቻላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_83_8626b8c0affb51fd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! የሞተ ቦታ በመስተዋትም ቢሆን ሹፌሩ የማያየው ከመኪናው ዙሪያ ያለው ቦታ ሲሆን፣ ጭንቅላትን ወደ ጎን በማዞር መቀነስ ይቻላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_84_457eaf8ed43ee0b6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! የሞተ ቦታ በመስተዋትም ቢሆን ሹፌሩ የማያየው ከመኪናው ዙሪያ ያለው ቦታ ሲሆን፣ ጭንቅላትን ወደ ጎን በማዞር መቀነስ ይቻላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_83_9c18998eb576dd08.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! የሞተ ቦታ በመስተዋትም ቢሆን ሹፌሩ የማያየው ከመኪናው ዙሪያ ያለው ቦታ ሲሆን፣ ጭንቅላትን ወደ ጎን በማዞር መቀነስ ይቻላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_84_275c7f3a63e730dd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! የሞተ ቦታ በመስተዋትም ቢሆን ሹፌሩ የማያየው ከመኪናው ዙሪያ ያለው ቦታ ሲሆን፣ ጭንቅላትን ወደ ጎን በማዞር መቀነስ ይቻላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_87_5fdc4e8a7b12941c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! የሞተ ቦታ በመስተዋትም ቢሆን ሹፌሩ የማያየው ከመኪናው ዙሪያ ያለው ቦታ ሲሆን፣ ጭንቅላትን ወደ ጎን በማዞር መቀነስ ይቻላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_88_855b2bd04a2d52b7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! የሞተ ቦታ በመስተዋትም ቢሆን ሹፌሩ የማያየው ከመኪናው ዙሪያ ያለው ቦታ ሲሆን፣ ጭንቅላትን ወደ ጎን በማዞር መቀነስ ይቻላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_88_34162c680deb51fd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! የሞተ ቦታ በመስተዋትም ቢሆን ሹፌሩ የማያየው ከመኪናው ዙሪያ ያለው ቦታ ሲሆን፣ ጭንቅላትን ወደ ጎን በማዞር መቀነስ ይቻላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_88_c928a91fe05d7a9a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! የሞተ ቦታ በመስተዋትም ቢሆን ሹፌሩ የማያየው ከመኪናው ዙሪያ ያለው ቦታ ሲሆን፣ ጭንቅላትን ወደ ጎን በማዞር መቀነስ ይቻላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_90_ef101018677077fa.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! የሞተ ቦታ በመስተዋትም ቢሆን ሹፌሩ የማያየው ከመኪናው ዙሪያ ያለው ቦታ ሲሆን፣ ጭንቅላትን ወደ ጎን በማዞር መቀነስ ይቻላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_91_df90fb30b8f89879.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! የሞተ ቦታ በመስተዋትም ቢሆን ሹፌሩ የማያየው ከመኪናው ዙሪያ ያለው ቦታ ሲሆን፣ ጭንቅላትን ወደ ጎን በማዞር መቀነስ ይቻላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_95_70921b208152f317.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! የሞተ ቦታ በመስተዋትም ቢሆን ሹፌሩ የማያየው ከመኪናው ዙሪያ ያለው ቦታ ሲሆን፣ ጭንቅላትን ወደ ጎን በማዞር መቀነስ ይቻላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_93_96c62c6e2b67722f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: የሞተ ቦታ በመስተዋትም ቢሆን ሹፌሩ የማያየው ከመኪናው ዙሪያ ያለው ቦታ ሲሆን፣ ጭንቅላትን ወደ ጎን በማዞር መቀነስ ይቻላል።",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_97_e59be810a97e264a.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

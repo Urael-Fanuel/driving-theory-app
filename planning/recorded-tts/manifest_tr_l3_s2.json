@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:15:23.178Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "tr_l3_s2",
+   "key": "the_road_2_1",
+   "sentences": [
+    {
+     "text": "ከረጅም ደረቅ ጊዜ በኋላ የሚዘንበው የመጀመሪያው ዝናብ በተለይ አደገኛ የሚሆነው ለምንድን ነው?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_60_51d683edac105a96.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መንገዱን በደንብ ስለሚያጥበው።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_19_4d7f5f58be4ea202.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። መንገዱን በደንብ ስለሚያጥበው።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_24_f764f8f41ee1c100.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በመንገድ ላይ የተከማቸውን አቧራና ዘይት ገና ስላላጠበው፣ መንገዱን በጣም የሚያዳልጥ ስለሚያደርገው።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_63_a17d6646dbf6ac8c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። በመንገድ ላይ የተከማቸውን አቧራና ዘይት ገና ስላላጠበው፣ መንገዱን በጣም የሚያዳልጥ ስለሚያደርገው።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_68_7908899874443312.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሽከርካሪዎች ዝናብ ስለማይወዱ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_20_3bae5ae87ed5b414.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። አሽከርካሪዎች ዝናብ ስለማይወዱ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_25_1eab2046fc380960.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዝናቡ በጣም ስለሚቀዘቅዝ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_16_f0a839bc820eb6d1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ዝናቡ በጣም ስለሚቀዘቅዝ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_21_f55d9178c48f1fad.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! በመንገድ ላይ የተከማቸውን አቧራና ዘይት ገና ስላላጠበው፣ መንገዱን በጣም የሚያዳልጥ ስለሚያደርገው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_69_e473bd9869c518f5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! በመንገድ ላይ የተከማቸውን አቧራና ዘይት ገና ስላላጠበው፣ መንገዱን በጣም የሚያዳልጥ ስለሚያደርገው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_67_0151b798ecd59be3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! በመንገድ ላይ የተከማቸውን አቧራና ዘይት ገና ስላላጠበው፣ መንገዱን በጣም የሚያዳልጥ ስለሚያደርገው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_68_7a76c318658c694a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! በመንገድ ላይ የተከማቸውን አቧራና ዘይት ገና ስላላጠበው፣ መንገዱን በጣም የሚያዳልጥ ስለሚያደርገው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_67_b6c9d298c01720de.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! በመንገድ ላይ የተከማቸውን አቧራና ዘይት ገና ስላላጠበው፣ መንገዱን በጣም የሚያዳልጥ ስለሚያደርገው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_68_a599e8e04881ff15.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! በመንገድ ላይ የተከማቸውን አቧራና ዘይት ገና ስላላጠበው፣ መንገዱን በጣም የሚያዳልጥ ስለሚያደርገው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_67_e90896e0ed5ca36b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! በመንገድ ላይ የተከማቸውን አቧራና ዘይት ገና ስላላጠበው፣ መንገዱን በጣም የሚያዳልጥ ስለሚያደርገው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_68_6cbb642e80af8b3e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! በመንገድ ላይ የተከማቸውን አቧራና ዘይት ገና ስላላጠበው፣ መንገዱን በጣም የሚያዳልጥ ስለሚያደርገው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_71_9511c360e79f9a7f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! በመንገድ ላይ የተከማቸውን አቧራና ዘይት ገና ስላላጠበው፣ መንገዱን በጣም የሚያዳልጥ ስለሚያደርገው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_72_0e9862eae4e59b94.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! በመንገድ ላይ የተከማቸውን አቧራና ዘይት ገና ስላላጠበው፣ መንገዱን በጣም የሚያዳልጥ ስለሚያደርገው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_72_266577e23e0720de.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! በመንገድ ላይ የተከማቸውን አቧራና ዘይት ገና ስላላጠበው፣ መንገዱን በጣም የሚያዳልጥ ስለሚያደርገው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_72_e4b533e6279ddb79.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! በመንገድ ላይ የተከማቸውን አቧራና ዘይት ገና ስላላጠበው፣ መንገዱን በጣም የሚያዳልጥ ስለሚያደርገው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_74_e7871b2edcccf1d9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! በመንገድ ላይ የተከማቸውን አቧራና ዘይት ገና ስላላጠበው፣ መንገዱን በጣም የሚያዳልጥ ስለሚያደርገው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_75_5a5ad18ee851bb5a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! በመንገድ ላይ የተከማቸውን አቧራና ዘይት ገና ስላላጠበው፣ መንገዱን በጣም የሚያዳልጥ ስለሚያደርገው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_79_c15d9d16238f3674.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! በመንገድ ላይ የተከማቸውን አቧራና ዘይት ገና ስላላጠበው፣ መንገዱን በጣም የሚያዳልጥ ስለሚያደርገው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_77_d7ad6bca46d3f90c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: በመንገድ ላይ የተከማቸውን አቧራና ዘይት ገና ስላላጠበው፣ መንገዱን በጣም የሚያዳልጥ ስለሚያደርገው።",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_81_70ccbe2ee5fabca9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ከባድ ጭጋግ ሲሆን አሽከርካሪ ምን ማድረግ አለበት?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_36_bbc984b09054ec77.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የሩቅ መብራቱን ማብራት እና በፍጥነት ማሽከርከር።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_31_89cfcbda87731c0c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። የሩቅ መብራቱን ማብራት እና በፍጥነት ማሽከርከር።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_36_d266a970d4226f0e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የጭጋግ መብራቶችን ማብራት፣ በሚያዩት ርቀት ውስጥ ማቆም በሚያስችል ፍጥነት መቀነስ፣ እና ጭጋጉ በጣም ከባድ ከሆነ ከመንገድ ወጥቶ የድንገተኛ አደጋ መብራቶችን አብርቶ መጠበቅ።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_111_130464ae29bc891f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። የጭጋግ መብራቶችን ማብራት፣ በሚያዩት ርቀት ውስጥ ማቆም በሚያስችል ፍጥነት መቀነስ፣ እና ጭጋጉ በጣም ከባድ ከሆነ ከመንገድ ወጥቶ የድንገተኛ አደጋ መብራቶችን አብርቶ መጠበቅ።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_116_420c95129b9c4201.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መብራቶችን ማጥፋት እና መንዳት መቀጠል።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_25_24f8b28478aac2a7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። መብራቶችን ማጥፋት እና መንዳት መቀጠል።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_30_1fcdd6880d4777d3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ምንም ማድረግ አያስፈልግም።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_17_3f0341285b6d8132.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ምንም ማድረግ አያስፈልግም።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_22_f84d75ee0e70e54e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! የጭጋግ መብራቶችን ማብራት፣ በሚያዩት ርቀት ውስጥ ማቆም በሚያስችል ፍጥነት መቀነስ፣ እና ጭጋጉ በጣም ከባድ ከሆነ ከመንገድ ወጥቶ የድንገተኛ አደጋ መብራቶችን አብርቶ መጠበቅ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_117_72572ec667032ea6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! የጭጋግ መብራቶችን ማብራት፣ በሚያዩት ርቀት ውስጥ ማቆም በሚያስችል ፍጥነት መቀነስ፣ እና ጭጋጉ በጣም ከባድ ከሆነ ከመንገድ ወጥቶ የድንገተኛ አደጋ መብራቶችን አብርቶ መጠበቅ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_115_228ab9b806571d30.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! የጭጋግ መብራቶችን ማብራት፣ በሚያዩት ርቀት ውስጥ ማቆም በሚያስችል ፍጥነት መቀነስ፣ እና ጭጋጉ በጣም ከባድ ከሆነ ከመንገድ ወጥቶ የድንገተኛ አደጋ መብራቶችን አብርቶ መጠበቅ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_116_2fa28e167f55f6d9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! የጭጋግ መብራቶችን ማብራት፣ በሚያዩት ርቀት ውስጥ ማቆም በሚያስችል ፍጥነት መቀነስ፣ እና ጭጋጉ በጣም ከባድ ከሆነ ከመንገድ ወጥቶ የድንገተኛ አደጋ መብራቶችን አብርቶ መጠበቅ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_115_635cddd8a8c86c4d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! የጭጋግ መብራቶችን ማብራት፣ በሚያዩት ርቀት ውስጥ ማቆም በሚያስችል ፍጥነት መቀነስ፣ እና ጭጋጉ በጣም ከባድ ከሆነ ከመንገድ ወጥቶ የድንገተኛ አደጋ መብራቶችን አብርቶ መጠበቅ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_116_755b9f301e8f5486.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! የጭጋግ መብራቶችን ማብራት፣ በሚያዩት ርቀት ውስጥ ማቆም በሚያስችል ፍጥነት መቀነስ፣ እና ጭጋጉ በጣም ከባድ ከሆነ ከመንገድ ወጥቶ የድንገተኛ አደጋ መብራቶችን አብርቶ መጠበቅ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_115_d78b49a697f8dab8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! የጭጋግ መብራቶችን ማብራት፣ በሚያዩት ርቀት ውስጥ ማቆም በሚያስችል ፍጥነት መቀነስ፣ እና ጭጋጉ በጣም ከባድ ከሆነ ከመንገድ ወጥቶ የድንገተኛ አደጋ መብራቶችን አብርቶ መጠበቅ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_116_faa5b0803ca9486d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! የጭጋግ መብራቶችን ማብራት፣ በሚያዩት ርቀት ውስጥ ማቆም በሚያስችል ፍጥነት መቀነስ፣ እና ጭጋጉ በጣም ከባድ ከሆነ ከመንገድ ወጥቶ የድንገተኛ አደጋ መብራቶችን አብርቶ መጠበቅ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_119_4b3e267024efc9ac.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! የጭጋግ መብራቶችን ማብራት፣ በሚያዩት ርቀት ውስጥ ማቆም በሚያስችል ፍጥነት መቀነስ፣ እና ጭጋጉ በጣም ከባድ ከሆነ ከመንገድ ወጥቶ የድንገተኛ አደጋ መብራቶችን አብርቶ መጠበቅ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_120_7eb3e520bd77e007.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! የጭጋግ መብራቶችን ማብራት፣ በሚያዩት ርቀት ውስጥ ማቆም በሚያስችል ፍጥነት መቀነስ፣ እና ጭጋጉ በጣም ከባድ ከሆነ ከመንገድ ወጥቶ የድንገተኛ አደጋ መብራቶችን አብርቶ መጠበቅ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_120_35d850cac6b86c4d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! የጭጋግ መብራቶችን ማብራት፣ በሚያዩት ርቀት ውስጥ ማቆም በሚያስችል ፍጥነት መቀነስ፣ እና ጭጋጉ በጣም ከባድ ከሆነ ከመንገድ ወጥቶ የድንገተኛ አደጋ መብራቶችን አብርቶ መጠበቅ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_120_62b8cc98f2e3312a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! የጭጋግ መብራቶችን ማብራት፣ በሚያዩት ርቀት ውስጥ ማቆም በሚያስችል ፍጥነት መቀነስ፣ እና ጭጋጉ በጣም ከባድ ከሆነ ከመንገድ ወጥቶ የድንገተኛ አደጋ መብራቶችን አብርቶ መጠበቅ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_122_cda7b398d5f049ca.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! የጭጋግ መብራቶችን ማብራት፣ በሚያዩት ርቀት ውስጥ ማቆም በሚያስችል ፍጥነት መቀነስ፣ እና ጭጋጉ በጣም ከባድ ከሆነ ከመንገድ ወጥቶ የድንገተኛ አደጋ መብራቶችን አብርቶ መጠበቅ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_123_3f3dfbde3c61ecc9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! የጭጋግ መብራቶችን ማብራት፣ በሚያዩት ርቀት ውስጥ ማቆም በሚያስችል ፍጥነት መቀነስ፣ እና ጭጋጉ በጣም ከባድ ከሆነ ከመንገድ ወጥቶ የድንገተኛ አደጋ መብራቶችን አብርቶ መጠበቅ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_127_916a57de063014a7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! የጭጋግ መብራቶችን ማብራት፣ በሚያዩት ርቀት ውስጥ ማቆም በሚያስችል ፍጥነት መቀነስ፣ እና ጭጋጉ በጣም ከባድ ከሆነ ከመንገድ ወጥቶ የድንገተኛ አደጋ መብራቶችን አብርቶ መጠበቅ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_125_cab49b120f28579f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: የጭጋግ መብራቶችን ማብራት፣ በሚያዩት ርቀት ውስጥ ማቆም በሚያስችል ፍጥነት መቀነስ፣ እና ጭጋጉ በጣም ከባድ ከሆነ ከመንገድ ወጥቶ የድንገተኛ አደጋ መብራቶችን አብርቶ መጠበቅ።",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_129_f4041db8736f04fa.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሽከርካሪ በጭጋግ ውስጥ የሩቅ መብራቱን በፍጹም መጠቀም የሌለበት ለምንድን ነው?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_51_5d53c8507864fe2b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የሩቅ መብራት በጭጋግ ውስጥ ምንም ስለማይጠቅም።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_30_73372af8a6919d70.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። የሩቅ መብራት በጭጋግ ውስጥ ምንም ስለማይጠቅም።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_35_9f6da45222c726b2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መብራቱ ከጭጋጉ ላይ ተመልሶ አሽከርካሪውን የበለጠ ስለሚያሳውር።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_40_0954a65a9df8832c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። መብራቱ ከጭጋጉ ላይ ተመልሶ አሽከርካሪውን የበለጠ ስለሚያሳውር።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_45_a2b08bbed12c26f2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የሩቅ መብራት ባትሪውን ስለሚያባክን።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_23_5cb21f48438c5af3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የሩቅ መብራት ባትሪውን ስለሚያባክን።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_28_f765a8b442e580c7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሌሎች አሽከርካሪዎችን ስለሚያስቆጣ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_22_9b2ddf68f663687b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ሌሎች አሽከርካሪዎችን ስለሚያስቆጣ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_27_55f41cfea57bbf47.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! መብራቱ ከጭጋጉ ላይ ተመልሶ አሽከርካሪውን የበለጠ ስለሚያሳውር።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_46_38ca1d788c0b32b5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! መብራቱ ከጭጋጉ ላይ ተመልሶ አሽከርካሪውን የበለጠ ስለሚያሳውር።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_44_917f973eddea81e3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! መብራቱ ከጭጋጉ ላይ ተመልሶ አሽከርካሪውን የበለጠ ስለሚያሳውር።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_45_7e1271565beec7aa.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! መብራቱ ከጭጋጉ ላይ ተመልሶ አሽከርካሪውን የበለጠ ስለሚያሳውር።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_44_3efa1f5e52a0e7be.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! መብራቱ ከጭጋጉ ላይ ተመልሶ አሽከርካሪውን የበለጠ ስለሚያሳውር።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_45_cb001fb8cd4abe55.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! መብራቱ ከጭጋጉ ላይ ተመልሶ አሽከርካሪውን የበለጠ ስለሚያሳውር።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_44_48dba7d0eeab4c6b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! መብራቱ ከጭጋጉ ላይ ተመልሶ አሽከርካሪውን የበለጠ ስለሚያሳውር።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_45_2aeaf4b82e3aa89e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! መብራቱ ከጭጋጉ ላይ ተመልሶ አሽከርካሪውን የበለጠ ስለሚያሳውር።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_48_9fa28d48f1b7e1ff.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! መብራቱ ከጭጋጉ ላይ ተመልሶ አሽከርካሪውን የበለጠ ስለሚያሳውር።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_49_d41898a05091c334.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! መብራቱ ከጭጋጉ ላይ ተመልሶ አሽከርካሪውን የበለጠ ስለሚያሳውር።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_49_3ab5065cbe90e7be.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! መብራቱ ከጭጋጉ ላይ ተመልሶ አሽከርካሪውን የበለጠ ስለሚያሳውር።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_49_c359d2c85e2cd3b9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! መብራቱ ከጭጋጉ ላይ ተመልሶ አሽከርካሪውን የበለጠ ስለሚያሳውር።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_51_83ec4bf2c95dbf19.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! መብራቱ ከጭጋጉ ላይ ተመልሶ አሽከርካሪውን የበለጠ ስለሚያሳውር።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_52_989cd5009fe81fba.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! መብራቱ ከጭጋጉ ላይ ተመልሶ አሽከርካሪውን የበለጠ ስለሚያሳውር።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_56_7eea108c7caec194.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! መብራቱ ከጭጋጉ ላይ ተመልሶ አሽከርካሪውን የበለጠ ስለሚያሳውር።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_54_d9de8d6cb5221dac.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: መብራቱ ከጭጋጉ ላይ ተመልሶ አሽከርካሪውን የበለጠ ስለሚያሳውር።",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_58_12eab05003e81669.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

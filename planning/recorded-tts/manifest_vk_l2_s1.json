@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:07:55.192Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "vk_l2_s1",
+   "key": "vehicle_knowledge_1_1",
+   "sentences": [
+    {
+     "text": "የደህንነት ቀበቶ ዋና ዓላማ ምንድን ነው?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_26_f452656cff9d79ef.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አደጋ እንዳይደርስ ለመከላከል",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_18_8b8b6e44a62e35ce.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። አደጋ እንዳይደርስ ለመከላከል",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_23_ed5411e8b1ce710c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በአደጋ ጊዜ የሚደርሰውን ጉዳት ለመቀነስ እና ህይወትን ለማዳን",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_39_e5fcf13845225a56.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። በአደጋ ጊዜ የሚደርሰውን ጉዳት ለመቀነስ እና ህይወትን ለማዳን",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_44_d6cf56ff5e915248.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሹፌሩ ቀጥ ብሎ እንዲቀመጥ ለመርዳት",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_22_c436d1186808eb93.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ሹፌሩ ቀጥ ብሎ እንዲቀመጥ ለመርዳት",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_27_e269503f1f32fae7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሹፌሩ ንቁ ሆኖ እንዲቆይ ለመርዳት",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_21_a0cea6241b2e874f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ሹፌሩ ንቁ ሆኖ እንዲቆይ ለመርዳት",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_26_8d61a08c1b40fb73.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! በአደጋ ጊዜ የሚደርሰውን ጉዳት ለመቀነስ እና ህይወትን ለማዳን",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_45_dfe93b3c4b60aaef.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! በአደጋ ጊዜ የሚደርሰውን ጉዳት ለመቀነስ እና ህይወትን ለማዳን",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_43_110f00d8217f5d79.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! በአደጋ ጊዜ የሚደርሰውን ጉዳት ለመቀነስ እና ህይወትን ለማዳን",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_44_8be3bb5184b07f90.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! በአደጋ ጊዜ የሚደርሰውን ጉዳት ለመቀነስ እና ህይወትን ለማዳን",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_43_86836368c9a07204.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! በአደጋ ጊዜ የሚደርሰውን ጉዳት ለመቀነስ እና ህይወትን ለማዳን",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_44_220fc9f09a7356cf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! በአደጋ ጊዜ የሚደርሰውን ጉዳት ለመቀነስ እና ህይወትን ለማዳን",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_43_cb9583306df58af1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! በአደጋ ጊዜ የሚደርሰውን ጉዳት ለመቀነስ እና ህይወትን ለማዳን",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_44_e418c9845bb860a4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! በአደጋ ጊዜ የሚደርሰውን ጉዳት ለመቀነስ እና ህይወትን ለማዳን",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_47_20319548a331c6e5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! በአደጋ ጊዜ የሚደርሰውን ጉዳት ለመቀነስ እና ህይወትን ለማዳን",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_48_27c2c2d0edd5094e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! በአደጋ ጊዜ የሚደርሰውን ጉዳት ለመቀነስ እና ህይወትን ለማዳን",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_48_9544825077907204.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! በአደጋ ጊዜ የሚደርሰውን ጉዳት ለመቀነስ እና ህይወትን ለማዳን",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_48_b916c218aa04fa63.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! በአደጋ ጊዜ የሚደርሰውን ጉዳት ለመቀነስ እና ህይወትን ለማዳን",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_50_1e8c9ca8091cb183.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! በአደጋ ጊዜ የሚደርሰውን ጉዳት ለመቀነስ እና ህይወትን ለማዳን",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_51_a7eb3bc360c2b180.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! በአደጋ ጊዜ የሚደርሰውን ጉዳት ለመቀነስ እና ህይወትን ለማዳን",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_55_270b7b80f464406e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! በአደጋ ጊዜ የሚደርሰውን ጉዳት ለመቀነስ እና ህይወትን ለማዳን",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_53_942879988771dcd6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: በአደጋ ጊዜ የሚደርሰውን ጉዳት ለመቀነስ እና ህይወትን ለማዳን",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_57_a6e6ac202e430db3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በመኪና ውስጥ የደህንነት ቀበቶ ስለማድረግ ህጉ ምን ይላል?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_37_e8c661980df167c4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ረጅም ርቀት ሲጓዙ ብቻ የደህንነት ቀበቶ ማድረግ ግዴታ ነው",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_37_bfe3469ca4219f0c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ረጅም ርቀት ሲጓዙ ብቻ የደህንነት ቀበቶ ማድረግ ግዴታ ነው",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_42_56f5dfbca38fc98e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሹፌሩ እና ከፊት የተቀመጠው ተሳፋሪ ብቻ የደህንነት ቀበቶ ማድረግ አለባቸው",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_47_b7d991bcf4239207.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ሹፌሩ እና ከፊት የተቀመጠው ተሳፋሪ ብቻ የደህንነት ቀበቶ ማድረግ አለባቸው",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_52_910b96fcf4a89299.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁሉም ተሳፋሪዎች፣ በማንኛውም ጉዞ እና በማንኛውም ርቀት፣ የደህንነት ቀበቶ ማድረግ አለባቸው",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_58_dd8921f8f04dbfd6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ሁሉም ተሳፋሪዎች፣ በማንኛውም ጉዞ እና በማንኛውም ርቀት፣ የደህንነት ቀበቶ ማድረግ አለባቸው",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_63_3434a494b7d7c262.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ልጆች ብቻ የደህንነት ቀበቶ ማድረግ አለባቸው",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_28_b4078b90db166203.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ልጆች ብቻ የደህንነት ቀበቶ ማድረግ አለባቸው",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_33_7cbdec0f9929213f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ሁሉም ተሳፋሪዎች፣ በማንኛውም ጉዞ እና በማንኛውም ርቀት፣ የደህንነት ቀበቶ ማድረግ አለባቸው",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_64_d2e466d0428dac4f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ሁሉም ተሳፋሪዎች፣ በማንኛውም ጉዞ እና በማንኛውም ርቀት፣ የደህንነት ቀበቶ ማድረግ አለባቸው",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_62_6a4c2d98f7dffe19.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ሁሉም ተሳፋሪዎች፣ በማንኛውም ጉዞ እና በማንኛውም ርቀት፣ የደህንነት ቀበቶ ማድረግ አለባቸው",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_63_af95c3d3d554c350.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ሁሉም ተሳፋሪዎች፣ በማንኛውም ጉዞ እና በማንኛውም ርቀት፣ የደህንነት ቀበቶ ማድረግ አለባቸው",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_62_43532956fd549b44.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ሁሉም ተሳፋሪዎች፣ በማንኛውም ጉዞ እና በማንኛውም ርቀት፣ የደህንነት ቀበቶ ማድረግ አለባቸው",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_63_51abd9ccbc09e42f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ሁሉም ተሳፋሪዎች፣ በማንኛውም ጉዞ እና በማንኛውም ርቀት፣ የደህንነት ቀበቶ ማድረግ አለባቸው",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_62_1cc341880af2db91.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ሁሉም ተሳፋሪዎች፣ በማንኛውም ጉዞ እና በማንኛውም ርቀት፣ የደህንነት ቀበቶ ማድረግ አለባቸው",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_63_905685d85eeeb6e4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ሁሉም ተሳፋሪዎች፣ በማንኛውም ጉዞ እና በማንኛውም ርቀት፣ የደህንነት ቀበቶ ማድረግ አለባቸው",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_66_8eaef5a8fef44605.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ሁሉም ተሳፋሪዎች፣ በማንኛውም ጉዞ እና በማንኛውም ርቀት፣ የደህንነት ቀበቶ ማድረግ አለባቸው",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_67_3ed23c185bf53bce.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ሁሉም ተሳፋሪዎች፣ በማንኛውም ጉዞ እና በማንኛውም ርቀት፣ የደህንነት ቀበቶ ማድረግ አለባቸው",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_67_0367b57305449b44.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ሁሉም ተሳፋሪዎች፣ በማንኛውም ጉዞ እና በማንኛውም ርቀት፣ የደህንነት ቀበቶ ማድረግ አለባቸው",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_67_75cd5450ee2dcf43.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ሁሉም ተሳፋሪዎች፣ በማንኛውም ጉዞ እና በማንኛውም ርቀት፣ የደህንነት ቀበቶ ማድረግ አለባቸው",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_69_25408bc4bb4dc863.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ሁሉም ተሳፋሪዎች፣ በማንኛውም ጉዞ እና በማንኛውም ርቀት፣ የደህንነት ቀበቶ ማድረግ አለባቸው",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_70_8fd44aa0fbb17f40.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ሁሉም ተሳፋሪዎች፣ በማንኛውም ጉዞ እና በማንኛውም ርቀት፣ የደህንነት ቀበቶ ማድረግ አለባቸው",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_74_c52a4484f18d61ee.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ሁሉም ተሳፋሪዎች፣ በማንኛውም ጉዞ እና በማንኛውም ርቀት፣ የደህንነት ቀበቶ ማድረግ አለባቸው",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_72_1dd8337c41413b56.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ሁሉም ተሳፋሪዎች፣ በማንኛውም ጉዞ እና በማንኛውም ርቀት፣ የደህንነት ቀበቶ ማድረግ አለባቸው",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_76_8c7931387ad23a93.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የአየር ከረጢት ባለበት የፊት መቀመጫ ላይ ልጅን በልዩ መቀመጫ (የህፃናት መቀመጫ ወይም ከፍ የሚያደርግ መቀመጫ) ማስቀመጥ ሲቻል የትኛው ሁኔታ ትክክል ነው?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_99_74561708e4c89974.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የአየር ከረጢቱ ንቁ ከሆነ ምንም ችግር የለውም",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_29_d8fe1bac582f4349.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። የአየር ከረጢቱ ንቁ ከሆነ ምንም ችግር የለውም",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_34_dd7aa78e2e3c18cb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ህፃኑ ከስምንት አመት በላይ ከሆነ ይቻላል",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_26_9c1119d0b790c437.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ህፃኑ ከስምንት አመት በላይ ከሆነ ይቻላል",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_31_68069867b6ac5ce9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ህፃኑ በደንብ ከታሰረ ሁልጊዜም ይቻላል",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_24_703a3a9f9be930e6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ህፃኑ በደንብ ከታሰረ ሁልጊዜም ይቻላል",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_29_b627ac18614ad992.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የአየር ከረጢቱ ንቁ ካልሆነ ወይም ከተቋረጠ ብቻ ይቻላል",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_35_632644c8145e08f2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። የአየር ከረጢቱ ንቁ ካልሆነ ወይም ከተቋረጠ ብቻ ይቻላል",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_40_afa4f60c5a3e854e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! የአየር ከረጢቱ ንቁ ካልሆነ ወይም ከተቋረጠ ብቻ ይቻላል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_41_418bef9b1bd358cb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! የአየር ከረጢቱ ንቁ ካልሆነ ወይም ከተቋረጠ ብቻ ይቻላል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_39_cd9ab658a0d1215d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! የአየር ከረጢቱ ንቁ ካልሆነ ወይም ከተቋረጠ ብቻ ይቻላል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_40_879e9cacac26e9b4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! የአየር ከረጢቱ ንቁ ካልሆነ ወይም ከተቋረጠ ብቻ ይቻላል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_39_5f6d9fd8fb3d8c20.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! የአየር ከረጢቱ ንቁ ካልሆነ ወይም ከተቋረጠ ብቻ ይቻላል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_40_4ec8d89f852c07ab.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! የአየር ከረጢቱ ንቁ ካልሆነ ወይም ከተቋረጠ ብቻ ይቻላል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_39_45acf338fc3eadd5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! የአየር ከረጢቱ ንቁ ካልሆነ ወይም ከተቋረጠ ብቻ ይቻላል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_40_1eebd418f6dc9440.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! የአየር ከረጢቱ ንቁ ካልሆነ ወይም ከተቋረጠ ብቻ ይቻላል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_43_35f900642997ccc1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! የአየር ከረጢቱ ንቁ ካልሆነ ወይም ከተቋረጠ ብቻ ይቻላል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_44_fc95367c15db7fea.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! የአየር ከረጢቱ ንቁ ካልሆነ ወይም ከተቋረጠ ብቻ ይቻላል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_44_7164959c312d8c20.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! የአየር ከረጢቱ ንቁ ካልሆነ ወይም ከተቋረጠ ብቻ ይቻላል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_44_a42dc4806af4c447.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! የአየር ከረጢቱ ንቁ ካልሆነ ወይም ከተቋረጠ ብቻ ይቻላል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_46_8b3e5e7b21f8c2e7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! የአየር ከረጢቱ ንቁ ካልሆነ ወይም ከተቋረጠ ብቻ ይቻላል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_47_b939fad34977a7a4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! የአየር ከረጢቱ ንቁ ካልሆነ ወይም ከተቋረጠ ብቻ ይቻላል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_51_88503cdf433b438a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! የአየር ከረጢቱ ንቁ ካልሆነ ወይም ከተቋረጠ ብቻ ይቻላል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_49_fe20b0194bea6672.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: የአየር ከረጢቱ ንቁ ካልሆነ ወይም ከተቋረጠ ብቻ ይቻላል",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_53_f27f32d00535b517.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

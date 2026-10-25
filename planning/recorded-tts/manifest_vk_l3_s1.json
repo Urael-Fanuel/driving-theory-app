@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:09:05.107Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "vk_l3_s1",
+   "key": "vehicle_knowledge_2_0",
+   "sentences": [
+    {
+     "text": "ትልቁ ሰዓት ሰቅ (የፍጥነት መለኪያ) የት ይቀምጣል?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_33_46b941e023f08b16.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዳሽቦርዱ ቀኝ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_8_0f4e79388d68c7cc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ዳሽቦርዱ ቀኝ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_13_f4ed49a8dae6a58e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዳሽቦርዱ ማዕከል",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_10_ae818ee88ad439da.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ዳሽቦርዱ ማዕከል",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_15_b955a0345dba0f04.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዳሽቦርዱ ግራ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_8_198907988d68afd7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ዳሽቦርዱ ግራ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_13_563761a0df6930e3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከዳሽቦርዱ ውጭ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_9_18f672c8269ca019.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ከዳሽቦርዱ ውጭ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_14_29bed71313a87fa5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ዳሽቦርዱ ማዕከል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_16_df8c37d4533d3a03.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ዳሽቦርዱ ማዕከል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_14_8247a35c16253ed5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ዳሽቦርዱ ማዕከል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_15_395bb37075958cdc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ዳሽቦርዱ ማዕከል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_14_64c7ec506d730cc8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ዳሽቦርዱ ማዕከል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_15_b89629408c5543e3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ዳሽቦርዱ ማዕከል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_14_615f30289987375d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ዳሽቦርዱ ማዕከል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_15_51829b882ee3eb68.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ዳሽቦርዱ ማዕከል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_18_146be8fb491c5cc9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ዳሽቦርዱ ማዕከል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_19_0678d86833dd03c2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ዳሽቦርዱ ማዕከል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_19_b3b13680d5630cc8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ዳሽቦርዱ ማዕከል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_19_cb2fb6606db4970f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ዳሽቦርዱ ማዕከል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_21_ac1ca07fcc5b7aaf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ዳሽቦርዱ ማዕከል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_22_9918b05c624b3ccc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ዳሽቦርዱ ማዕከል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_26_dfa13fc0a36cf3e2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ዳሽቦርዱ ማዕከል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_24_8f8d55806cdd425a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ዳሽቦርዱ ማዕከል",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_28_d128f67f0ce70edf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ታኮሜትር ምን ያሳያል?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_14_7ea9f9802584efb5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ነዳጁ ምን ያህል እንደቀረ",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_16_333dffc0e4237f84.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ነዳጁ ምን ያህል እንደቀረ",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_21_4c5c4340f0d7e6c6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሞተሩ ምን ያህል ፍጥነት ሲሰራ እንደሆነ (RPM)",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_31_1fe7e17c1ea4d6f5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ሞተሩ ምን ያህል ፍጥነት ሲሰራ እንደሆነ (RPM)",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_36_78aa7ce053eb8deb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናው ምን ያህል ፍጥነት እየሄደ እንደሆነ",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_27_8d26faa249991a40.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። መኪናው ምን ያህል ፍጥነት እየሄደ እንደሆነ",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_32_f3d5db48bfdfd234.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሞተሩ ምን ያህል ሙቀት እንደሆነ",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_20_e6a3c410b7e19253.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ሞተሩ ምን ያህል ሙቀት እንደሆነ",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_25_ccd3517ed0df676f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ሞተሩ ምን ያህል ፍጥነት ሲሰራ እንደሆነ (RPM)",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_37_94d503969b19b88c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ሞተሩ ምን ያህል ፍጥነት ሲሰራ እንደሆነ (RPM)",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_35_59f3b0a02152151a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ሞተሩ ምን ያህል ፍጥነት ሲሰራ እንደሆነ (RPM)",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_36_740a80541f79c5b3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ሞተሩ ምን ያህል ፍጥነት ሲሰራ እንደሆነ (RPM)",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_35_ea53f4e87a685127.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ሞተሩ ምን ያህል ፍጥነት ሲሰራ እንደሆነ (RPM)",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_36_1fdee5043264c02c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ሞተሩ ምን ያህል ፍጥነት ሲሰራ እንደሆነ (RPM)",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_35_7c072190ed7c5592.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ሞተሩ ምን ያህል ፍጥነት ሲሰራ እንደሆነ (RPM)",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_36_a994b7049d869f07.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ሞተሩ ምን ያህል ፍጥነት ሲሰራ እንደሆነ (RPM)",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_39_12c48fa8e1f9bd86.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ሞተሩ ምን ያህል ፍጥነት ሲሰራ እንደሆነ (RPM)",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_40_4d6f694cee0d69ed.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ሞተሩ ምን ያህል ፍጥነት ሲሰራ እንደሆነ (RPM)",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_40_fa07a7dc38585127.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ሞተሩ ምን ያህል ፍጥነት ሲሰራ እንደሆነ (RPM)",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_40_cc25c9bc84c9e300.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ሞተሩ ምን ያህል ፍጥነት ሲሰራ እንደሆነ (RPM)",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_42_20772084880b1c60.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ሞተሩ ምን ያህል ፍጥነት ሲሰራ እንደሆነ (RPM)",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_43_67f0c61c5e6f43a3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ሞተሩ ምን ያህል ፍጥነት ሲሰራ እንደሆነ (RPM)",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_47_294587acff6ece4d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ሞተሩ ምን ያህል ፍጥነት ሲሰራ እንደሆነ (RPM)",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_45_0fba4000fb001875.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ሞተሩ ምን ያህል ፍጥነት ሲሰራ እንደሆነ (RPM)",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_49_ad743372b9a868d0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "⛽ ምልክት ያለው ሰዓት ሰቅ ምን ያሳያል?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_26_05ac07d008c564f4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ፍጥነቱ",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_4_74ebffbb7480caec.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ፍጥነቱ",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_9_3f6d440052fe952e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሞተሩ ምን ያህል ሲሰራ",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_14_d310105c7739ec00.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ሞተሩ ምን ያህል ሲሰራ",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_19_49cbbdb1414566de.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ባኩ ውስጥ ምን ያህል ነዳጅ እንደቀረ",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_23_58e42174c372e597.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ባኩ ውስጥ ምን ያህል ነዳጅ እንደቀረ",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_28_f8227c48e757e5e3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሞተሩ ሙቀት",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_7_d550f5e86bd4022e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ሞተሩ ሙቀት",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_12_cac64f1031a297d2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ባኩ ውስጥ ምን ያህል ነዳጅ እንደቀረ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_29_de240bf858901e2e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ባኩ ውስጥ ምን ያህል ነዳጅ እንደቀረ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_27_d5ceff14e6eaf7b8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ባኩ ውስጥ ምን ያህል ነዳጅ እንደቀረ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_28_745b47ac9ee39651.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ባኩ ውስጥ ምን ያህል ነዳጅ እንደቀረ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_27_c9e17e78983be4c5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ባኩ ውስጥ ምን ያህል ነዳጅ እንደቀረ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_28_68d53188e787dd4e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ባኩ ውስጥ ምን ያህል ነዳጅ እንደቀረ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_27_655c12c03cc53230.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ባኩ ውስጥ ምን ያህል ነዳጅ እንደቀረ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_28_1c8a8a40c0bb81a5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ባኩ ውስጥ ምን ያህል ነዳጅ እንደቀረ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_31_96e57a60b2efab24.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ባኩ ውስጥ ምን ያህል ነዳጅ እንደቀረ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_32_087b7d0c149dc28f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ባኩ ውስጥ ምን ያህል ነዳጅ እንደቀረ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_32_859dbfb0662be4c5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ባኩ ውስጥ ምን ያህል ነዳጅ እንደቀረ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_32_9c811c64ff9177a2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ባኩ ውስጥ ምን ያህል ነዳጅ እንደቀረ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_34_8e819f94b82cd082.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ባኩ ውስጥ ምን ያህል ነዳጅ እንደቀረ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_35_d51c9abca9dd7c41.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ባኩ ውስጥ ምን ያህል ነዳጅ እንደቀረ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_39_21085a801f592cef.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ባኩ ውስጥ ምን ያህል ነዳጅ እንደቀረ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_37_ce3b76b81372b317.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ባኩ ውስጥ ምን ያህል ነዳጅ እንደቀረ",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_41_3dd373fc71a67372.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

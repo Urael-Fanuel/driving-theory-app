@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:13:55.089Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "sl_l1_s1",
+   "key": "society_law_0_0",
+   "sentences": [
+    {
+     "text": "እግረኞች ማቋረጫ ላይ መንገዱን ሲያቋርጡ አሽከርካሪ ምን ማድረግ አለበት?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_46_601a33e84e1ee454.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ፍጥነቱን ጨምሮ ማለፍ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_13_f497da78139c349c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ፍጥነቱን ጨምሮ ማለፍ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_18_8626728b3db2b11e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሽከርካሪዎች መኪናውን ሙሉ በሙሉ በማቆም፣ እግረኞች መንገዱን አቋርጠው ማዶው የእግረኛ መንገድ ላይ እስኪደርሱ ድረስ መጠበቅ ግዴታቸው ነው",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_88_f9eca390b38d03b8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። አሽከርካሪዎች መኪናውን ሙሉ በሙሉ በማቆም፣ እግረኞች መንገዱን አቋርጠው ማዶው የእግረኛ መንገድ ላይ እስኪደርሱ ድረስ መጠበቅ ግዴታቸው ነው",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_93_6b3b28f3e1dd8966.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መለከት በመንፋት እንዲጣደፉ ማድረግ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_22_6bd125240e869c88.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። መለከት በመንፋት እንዲጣደፉ ማድረግ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_27_19af16c44d1bf73c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ምንም ሳያደርግ ማለፍ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_13_5506e7e882680a06.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ምንም ሳያደርግ ማለፍ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_18_2e7c28e073808e3a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! አሽከርካሪዎች መኪናውን ሙሉ በሙሉ በማቆም፣ እግረኞች መንገዱን አቋርጠው ማዶው የእግረኛ መንገድ ላይ እስኪደርሱ ድረስ መጠበቅ ግዴታቸው ነው",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_94_1039d088e3b85e61.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! አሽከርካሪዎች መኪናውን ሙሉ በሙሉ በማቆም፣ እግረኞች መንገዱን አቋርጠው ማዶው የእግረኛ መንገድ ላይ እስኪደርሱ ድረስ መጠበቅ ግዴታቸው ነው",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_92_e97a930c53ed50b7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! አሽከርካሪዎች መኪናውን ሙሉ በሙሉ በማቆም፣ እግረኞች መንገዱን አቋርጠው ማዶው የእግረኛ መንገድ ላይ እስኪደርሱ ድረስ መጠበቅ ግዴታቸው ነው",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_93_9f760e07b0e7bdbe.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! አሽከርካሪዎች መኪናውን ሙሉ በሙሉ በማቆም፣ እግረኞች መንገዱን አቋርጠው ማዶው የእግረኛ መንገድ ላይ እስኪደርሱ ድረስ መጠበቅ ግዴታቸው ነው",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_92_e56b38589d3814aa.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! አሽከርካሪዎች መኪናውን ሙሉ በሙሉ በማቆም፣ እግረኞች መንገዱን አቋርጠው ማዶው የእግረኛ መንገድ ላይ እስኪደርሱ ድረስ መጠበቅ ግዴታቸው ነው",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_93_47b5182f3866c201.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! አሽከርካሪዎች መኪናውን ሙሉ በሙሉ በማቆም፣ እግረኞች መንገዱን አቋርጠው ማዶው የእግረኛ መንገድ ላይ እስኪደርሱ ድረስ መጠበቅ ግዴታቸው ነው",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_92_369a7833c75d0c3f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! አሽከርካሪዎች መኪናውን ሙሉ በሙሉ በማቆም፣ እግረኞች መንገዱን አቋርጠው ማዶው የእግረኛ መንገድ ላይ እስኪደርሱ ድረስ መጠበቅ ግዴታቸው ነው",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_93_437bcc20e522648a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! አሽከርካሪዎች መኪናውን ሙሉ በሙሉ በማቆም፣ እግረኞች መንገዱን አቋርጠው ማዶው የእግረኛ መንገድ ላይ እስኪደርሱ ድረስ መጠበቅ ግዴታቸው ነው",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_96_a1dfe4b390abd3ab.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! አሽከርካሪዎች መኪናውን ሙሉ በሙሉ በማቆም፣ እግረኞች መንገዱን አቋርጠው ማዶው የእግረኛ መንገድ ላይ እስኪደርሱ ድረስ መጠበቅ ግዴታቸው ነው",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_97_968354473c2ad7a0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! አሽከርካሪዎች መኪናውን ሙሉ በሙሉ በማቆም፣ እግረኞች መንገዱን አቋርጠው ማዶው የእግረኛ መንገድ ላይ እስኪደርሱ ድረስ መጠበቅ ግዴታቸው ነው",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_97_0d9767a8a92814aa.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! አሽከርካሪዎች መኪናውን ሙሉ በሙሉ በማቆም፣ እግረኞች መንገዱን አቋርጠው ማዶው የእግረኛ መንገድ ላይ እስኪደርሱ ድረስ መጠበቅ ግዴታቸው ነው",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_97_0d484e3f0900dc6d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! አሽከርካሪዎች መኪናውን ሙሉ በሙሉ በማቆም፣ እግረኞች መንገዱን አቋርጠው ማዶው የእግረኛ መንገድ ላይ እስኪደርሱ ድረስ መጠበቅ ግዴታቸው ነው",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_99_dcdf9b1cc87f944d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! አሽከርካሪዎች መኪናውን ሙሉ በሙሉ በማቆም፣ እግረኞች መንገዱን አቋርጠው ማዶው የእግረኛ መንገድ ላይ እስኪደርሱ ድረስ መጠበቅ ግዴታቸው ነው",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_100_dbf250d0395975ae.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! አሽከርካሪዎች መኪናውን ሙሉ በሙሉ በማቆም፣ እግረኞች መንገዱን አቋርጠው ማዶው የእግረኛ መንገድ ላይ እስኪደርሱ ድረስ መጠበቅ ግዴታቸው ነው",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_104_6b8329509865dd00.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! አሽከርካሪዎች መኪናውን ሙሉ በሙሉ በማቆም፣ እግረኞች መንገዱን አቋርጠው ማዶው የእግረኛ መንገድ ላይ እስኪደርሱ ድረስ መጠበቅ ግዴታቸው ነው",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_102_e4b6698422f25338.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: አሽከርካሪዎች መኪናውን ሙሉ በሙሉ በማቆም፣ እግረኞች መንገዱን አቋርጠው ማዶው የእግረኛ መንገድ ላይ እስኪደርሱ ድረስ መጠበቅ ግዴታቸው ነው",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_106_18905bdcd6695fbd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በመንገድ ላይ የእግረኞችን ደህንነት በተመለከተ ሃላፊነት የሚወስደው ማነው?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_47_a435feb0e799ba5c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እግረኞች ራሳቸው",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_10_2a6a3c6477f8970b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። እግረኞች ራሳቸው",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_15_57504b437e09f549.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሽከርካሪው ሙሉ ሃላፊነትን ይወስዳል እንጂ በእግረኞች ጥንቃቄ ላይ መተማመን የለበትም",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_54_cafc18f833aa012b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። አሽከርካሪው ሙሉ ሃላፊነትን ይወስዳል እንጂ በእግረኞች ጥንቃቄ ላይ መተማመን የለበትም",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_59_e726edccb51b5575.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የትራፊክ ፖሊስ",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_9_faab5dd0812531dd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የትራፊክ ፖሊስ",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_14_b561e59825774929.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሽከርካሪውና እግረኛው እኩል ሃላፊነት ይወስዳሉ",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_30_990b254bf19a0a78.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። አሽከርካሪውና እግረኛው እኩል ሃላፊነት ይወስዳሉ",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_35_0b454b5b6e3f1b04.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! አሽከርካሪው ሙሉ ሃላፊነትን ይወስዳል እንጂ በእግረኞች ጥንቃቄ ላይ መተማመን የለበትም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_60_1f16f4bc360da032.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! አሽከርካሪው ሙሉ ሃላፊነትን ይወስዳል እንጂ በእግረኞች ጥንቃቄ ላይ መተማመን የለበትም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_58_36c565d89e4fb5e4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! አሽከርካሪው ሙሉ ሃላፊነትን ይወስዳል እንጂ በእግረኞች ጥንቃቄ ላይ መተማመን የለበትም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_59_28fd4017a16059ad.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! አሽከርካሪው ሙሉ ሃላፊነትን ይወስዳል እንጂ በእግረኞች ጥንቃቄ ላይ መተማመን የለበትም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_58_12d82e98d459e0b9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! አሽከርካሪው ሙሉ ሃላፊነትን ይወስዳል እንጂ በእግረኞች ጥንቃቄ ላይ መተማመን የለበትም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_59_4244ea8f60fa8fd2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! አሽከርካሪው ሙሉ ሃላፊነትን ይወስዳል እንጂ በእግረኞች ጥንቃቄ ላይ መተማመን የለበትም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_58_8e83b988803dc76c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! አሽከርካሪው ሙሉ ሃላፊነትን ይወስዳል እንጂ በእግረኞች ጥንቃቄ ላይ መተማመን የለበትም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_59_e2137800c7669e99.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! አሽከርካሪው ሙሉ ሃላፊነትን ይወስዳል እንጂ በእግረኞች ጥንቃቄ ላይ መተማመን የለበትም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_62_77963d88e9d5b8f8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! አሽከርካሪው ሙሉ ሃላፊነትን ይወስዳል እንጂ በእግረኞች ጥንቃቄ ላይ መተማመን የለበትም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_63_3897dde81fec2333.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! አሽከርካሪው ሙሉ ሃላፊነትን ይወስዳል እንጂ በእግረኞች ጥንቃቄ ላይ መተማመን የለበትም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_63_f7701d286449e0b9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! አሽከርካሪው ሙሉ ሃላፊነትን ይወስዳል እንጂ በእግረኞች ጥንቃቄ ላይ መተማመን የለበትም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_63_448aa8f81c84f83e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! አሽከርካሪው ሙሉ ሃላፊነትን ይወስዳል እንጂ በእግረኞች ጥንቃቄ ላይ መተማመን የለበትም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_65_b9e9f75f9ef5c41e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! አሽከርካሪው ሙሉ ሃላፊነትን ይወስዳል እንጂ በእግረኞች ጥንቃቄ ላይ መተማመን የለበትም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_66_6dc7a334a58489bd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! አሽከርካሪው ሙሉ ሃላፊነትን ይወስዳል እንጂ በእግረኞች ጥንቃቄ ላይ መተማመን የለበትም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_70_0d027248a5073b93.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! አሽከርካሪው ሙሉ ሃላፊነትን ይወስዳል እንጂ በእግረኞች ጥንቃቄ ላይ መተማመን የለበትም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_68_0b2e8e2c72ef72ab.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: አሽከርካሪው ሙሉ ሃላፊነትን ይወስዳል እንጂ በእግረኞች ጥንቃቄ ላይ መተማመን የለበትም",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_72_fd0e453467cca96e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሽከርካሪው ለእግረኞች በተለይ ንቁ መሆን ያለበት የትኞቹ ቦታዎች ላይ ነው?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_48_d49dfb40f9ec261e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ክፍት በሆኑ አውራ ጎዳናዎች ላይ",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_20_193cfad33ca171fa.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ክፍት በሆኑ አውራ ጎዳናዎች ላይ",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_25_3c0be4d40e69a938.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትምህርት ቤቶች፣ የአውቶቡስ ማቆሚያዎች፣ የልጆች መጫወቻ ስፍራዎች አጠገብ እና ለማየት ሲቸግር",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_59_52d8a208c45fb6a6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ትምህርት ቤቶች፣ የአውቶቡስ ማቆሚያዎች፣ የልጆች መጫወቻ ስፍራዎች አጠገብ እና ለማየት ሲቸግር",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_64_5a8198f81f9dd638.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የኢንዱስትሪ ዞኖች ውስጥ",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_15_d68d8e08a95bf129.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የኢንዱስትሪ ዞኖች ውስጥ",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_20_8e9226480b22f9dd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ባዶ የመኪና ማቆሚያ ቦታዎች ላይ",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_20_0ea0bacc3a405e35.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ባዶ የመኪና ማቆሚያ ቦታዎች ላይ",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_25_628c017031b77509.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ትምህርት ቤቶች፣ የአውቶቡስ ማቆሚያዎች፣ የልጆች መጫወቻ ስፍራዎች አጠገብ እና ለማየት ሲቸግር",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_65_7301815079781a5f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ትምህርት ቤቶች፣ የአውቶቡስ ማቆሚያዎች፣ የልጆች መጫወቻ ስፍራዎች አጠገብ እና ለማየት ሲቸግር",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_63_fb81266f41280249.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ትምህርት ቤቶች፣ የአውቶቡስ ማቆሚያዎች፣ የልጆች መጫወቻ ስፍራዎች አጠገብ እና ለማየት ሲቸግር",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_64_50afb7104c6c1ae0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ትምህርት ቤቶች፣ የአውቶቡስ ማቆሚያዎች፣ የልጆች መጫወቻ ስፍራዎች አጠገብ እና ለማየት ሲቸግር",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_63_b733ba2b851aad74.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ትምህርት ቤቶች፣ የአውቶቡስ ማቆሚያዎች፣ የልጆች መጫወቻ ስፍራዎች አጠገብ እና ለማየት ሲቸግር",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_64_fb0bb71438eec8bf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ትምህርት ቤቶች፣ የአውቶቡስ ማቆሚያዎች፣ የልጆች መጫወቻ ስፍራዎች አጠገብ እና ለማየት ሲቸግር",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_63_ecd6da286fb029c1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ትምህርት ቤቶች፣ የአውቶቡስ ማቆሚያዎች፣ የልጆች መጫወቻ ስፍራዎች አጠገብ እና ለማየት ሲቸግር",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_64_de0cb9c6e07d5114.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ትምህርት ቤቶች፣ የአውቶቡስ ማቆሚያዎች፣ የልጆች መጫወቻ ስፍራዎች አጠገብ እና ለማየት ሲቸግር",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_67_6b6b43dfd5a93dd5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ትምህርት ቤቶች፣ የአውቶቡስ ማቆሚያዎች፣ የልጆች መጫወቻ ስፍራዎች አጠገብ እና ለማየት ሲቸግር",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_68_f97c8d34e1436bbe.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ትምህርት ቤቶች፣ የአውቶቡስ ማቆሚያዎች፣ የልጆች መጫወቻ ስፍራዎች አጠገብ እና ለማየት ሲቸግር",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_68_b14a10fe8b0aad74.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ትምህርት ቤቶች፣ የአውቶቡስ ማቆሚያዎች፣ የልጆች መጫወቻ ስፍራዎች አጠገብ እና ለማየት ሲቸግር",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_68_f91ff2f07eee33d3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ትምህርት ቤቶች፣ የአውቶቡስ ማቆሚያዎች፣ የልጆች መጫወቻ ስፍራዎች አጠገብ እና ለማየት ሲቸግር",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_70_c058d1bcae2eb2f3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ትምህርት ቤቶች፣ የአውቶቡስ ማቆሚያዎች፣ የልጆች መጫወቻ ስፍራዎች አጠገብ እና ለማየት ሲቸግር",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_71_7eea4f5f3e73e4f0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ትምህርት ቤቶች፣ የአውቶቡስ ማቆሚያዎች፣ የልጆች መጫወቻ ስፍራዎች አጠገብ እና ለማየት ሲቸግር",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_75_8cd3e0bf7f2e2fde.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ትምህርት ቤቶች፣ የአውቶቡስ ማቆሚያዎች፣ የልጆች መጫወቻ ስፍራዎች አጠገብ እና ለማየት ሲቸግር",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_73_8661f1e843c94326.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ትምህርት ቤቶች፣ የአውቶቡስ ማቆሚያዎች፣ የልጆች መጫወቻ ስፍራዎች አጠገብ እና ለማየት ሲቸግር",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_77_e89d2c74a72c7683.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

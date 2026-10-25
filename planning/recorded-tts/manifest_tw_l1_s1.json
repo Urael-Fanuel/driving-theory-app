@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:16:32.553Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "tw_l1_s1",
+   "key": "two_wheelers_0_0",
+   "sentences": [
+    {
+     "text": "ሁለት ጎማ ያላቸው ተሽከርካሪዎች (ሞተር ሳይክል/ስኩተር) ለሌሎች አሽከርካሪዎች ለማየት ለምን ይከብዳሉ?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_66_202a2ac0c626b707.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ፈጣን ስለሆኑና ሁልጊዜ አቅጣጫ ስለሚቀይሩ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_31_1d14edc0471cc16a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። በጣም ፈጣን ስለሆኑና ሁልጊዜ አቅጣጫ ስለሚቀይሩ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_36_17cb66526c634468.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትንሽ ስለሆኑ፣ ከአካባቢው ጋር በቀላሉ ስለሚዋሃዱና በተለይ በትላልቅ ተሽከርካሪዎች የሞተ ቦታ ውስጥ ብዙ ጊዜ ስለሚያሳልፉ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_78_888cf62694447513.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ትንሽ ስለሆኑ፣ ከአካባቢው ጋር በቀላሉ ስለሚዋሃዱና በተለይ በትላልቅ ተሽከርካሪዎች የሞተ ቦታ ውስጥ ብዙ ጊዜ ስለሚያሳልፉ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_83_4a222df74fa92acd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁልጊዜ የፊት መብራታቸውን ስለማያበሩና ጥቁር ልብስ ስለሚለብሱ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_40_ee52fb7a096215f7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ሁልጊዜ የፊት መብራታቸውን ስለማያበሩና ጥቁር ልብስ ስለሚለብሱ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_45_e20bec2c0800ea43.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሽከርካሪዎቻቸው ሁልጊዜ ጥንቃቄ ስለሌላቸው።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_28_a41be22001d832fc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። አሽከርካሪዎቻቸው ሁልጊዜ ጥንቃቄ ስለሌላቸው።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_33_9d3d76d8a0374cc0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ትንሽ ስለሆኑ፣ ከአካባቢው ጋር በቀላሉ ስለሚዋሃዱና በተለይ በትላልቅ ተሽከርካሪዎች የሞተ ቦታ ውስጥ ብዙ ጊዜ ስለሚያሳልፉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_84_8a59fca47bcc73ca.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ትንሽ ስለሆኑ፣ ከአካባቢው ጋር በቀላሉ ስለሚዋሃዱና በተለይ በትላልቅ ተሽከርካሪዎች የሞተ ቦታ ውስጥ ብዙ ጊዜ ስለሚያሳልፉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_82_d8a4714af005fa1c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ትንሽ ስለሆኑ፣ ከአካባቢው ጋር በቀላሉ ስለሚዋሃዱና በተለይ በትላልቅ ተሽከርካሪዎች የሞተ ቦታ ውስጥ ብዙ ጊዜ ስለሚያሳልፉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_83_be0c561cec456a15.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ትንሽ ስለሆኑ፣ ከአካባቢው ጋር በቀላሉ ስለሚዋሃዱና በተለይ በትላልቅ ተሽከርካሪዎች የሞተ ቦታ ውስጥ ብዙ ጊዜ ስለሚያሳልፉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_82_e417377ee1051801.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ትንሽ ስለሆኑ፣ ከአካባቢው ጋር በቀላሉ ስለሚዋሃዱና በተለይ በትላልቅ ተሽከርካሪዎች የሞተ ቦታ ውስጥ ብዙ ጊዜ ስለሚያሳልፉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_83_2f8784f0d7d167ea.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ትንሽ ስለሆኑ፣ ከአካባቢው ጋር በቀላሉ ስለሚዋሃዱና በተለይ በትላልቅ ተሽከርካሪዎች የሞተ ቦታ ውስጥ ብዙ ጊዜ ስለሚያሳልፉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_82_4ecc3e7817e81094.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ትንሽ ስለሆኑ፣ ከአካባቢው ጋር በቀላሉ ስለሚዋሃዱና በተለይ በትላልቅ ተሽከርካሪዎች የሞተ ቦታ ውስጥ ብዙ ጊዜ ስለሚያሳልፉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_83_62dd58987c7394e1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ትንሽ ስለሆኑ፣ ከአካባቢው ጋር በቀላሉ ስለሚዋሃዱና በተለይ በትላልቅ ተሽከርካሪዎች የሞተ ቦታ ውስጥ ብዙ ጊዜ ስለሚያሳልፉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_86_a43993282e650600.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ትንሽ ስለሆኑ፣ ከአካባቢው ጋር በቀላሉ ስለሚዋሃዱና በተለይ በትላልቅ ተሽከርካሪዎች የሞተ ቦታ ውስጥ ብዙ ጊዜ ስለሚያሳልፉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_87_1abc07e8dff9cf0b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ትንሽ ስለሆኑ፣ ከአካባቢው ጋር በቀላሉ ስለሚዋሃዱና በተለይ በትላልቅ ተሽከርካሪዎች የሞተ ቦታ ውስጥ ብዙ ጊዜ ስለሚያሳልፉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_87_25831d4640f51801.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ትንሽ ስለሆኑ፣ ከአካባቢው ጋር በቀላሉ ስለሚዋሃዱና በተለይ በትላልቅ ተሽከርካሪዎች የሞተ ቦታ ውስጥ ብዙ ጊዜ ስለሚያሳልፉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_87_3b160a2239d40cc6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ትንሽ ስለሆኑ፣ ከአካባቢው ጋር በቀላሉ ስለሚዋሃዱና በተለይ በትላልቅ ተሽከርካሪዎች የሞተ ቦታ ውስጥ ብዙ ጊዜ ስለሚያሳልፉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_89_d31deae88a827d26.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ትንሽ ስለሆኑ፣ ከአካባቢው ጋር በቀላሉ ስለሚዋሃዱና በተለይ በትላልቅ ተሽከርካሪዎች የሞተ ቦታ ውስጥ ብዙ ጊዜ ስለሚያሳልፉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_90_94490e4c01189e05.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ትንሽ ስለሆኑ፣ ከአካባቢው ጋር በቀላሉ ስለሚዋሃዱና በተለይ በትላልቅ ተሽከርካሪዎች የሞተ ቦታ ውስጥ ብዙ ጊዜ ስለሚያሳልፉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_94_47b357e0b37b436b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ትንሽ ስለሆኑ፣ ከአካባቢው ጋር በቀላሉ ስለሚዋሃዱና በተለይ በትላልቅ ተሽከርካሪዎች የሞተ ቦታ ውስጥ ብዙ ጊዜ ስለሚያሳልፉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_92_50d0357a4dc40b93.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ትንሽ ስለሆኑ፣ ከአካባቢው ጋር በቀላሉ ስለሚዋሃዱና በተለይ በትላልቅ ተሽከርካሪዎች የሞተ ቦታ ውስጥ ብዙ ጊዜ ስለሚያሳልፉ።",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_96_e257c5a0b86cb316.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ አሽከርካሪ በራሱ መስመር ውስጥ ሁለት ጎማ ያለው ተሽከርካሪ ሲያይ ምን ማድረግ አለበት?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_59_19676c28bca1a118.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በዚያው መስመር ውስጥ ከጎኑ ሆነው ማሽከርከርና በቅርብ መከተል አለባቸው።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_46_28b815806956f819.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። በዚያው መስመር ውስጥ ከጎኑ ሆነው ማሽከርከርና በቅርብ መከተል አለባቸው።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_51_923eb296fc80715b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ወደ ጎን መስመር በመቀየር ባለአራት ጎማ ተሽከርካሪ እንደሚያልፉት ሁሉ ማለፍ አለባቸው፤ ማለፍ ካልቻሉ ደግሞ በደህና ማለፍ እስከሚችሉበት ጊዜ ድረስ ከኋላው መቆየት ግዴታ ነው።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_111_923d878064cc03f9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ወደ ጎን መስመር በመቀየር ባለአራት ጎማ ተሽከርካሪ እንደሚያልፉት ሁሉ ማለፍ አለባቸው፤ ማለፍ ካልቻሉ ደግሞ በደህና ማለፍ እስከሚችሉበት ጊዜ ድረስ ከኋላው መቆየት ግዴታ ነው።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_116_ded7b906d239b567.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የፊት መብራታቸውን በማብራት እንዲያልፉ ምልክት መስጠት አለባቸው።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_41_b3314812ffc16d76.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የፊት መብራታቸውን በማብራት እንዲያልፉ ምልክት መስጠት አለባቸው።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_46_eed62a8e317fbbc2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ፍጥነታቸውን በመቀነስ ወደ ቀኝ ዳርቻ መቅረብ አለባቸው።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_35_5e4a2aa63aaf439f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ፍጥነታቸውን በመቀነስ ወደ ቀኝ ዳርቻ መቅረብ አለባቸው።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_40_fc2e5ab6d6c8b463.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ወደ ጎን መስመር በመቀየር ባለአራት ጎማ ተሽከርካሪ እንደሚያልፉት ሁሉ ማለፍ አለባቸው፤ ማለፍ ካልቻሉ ደግሞ በደህና ማለፍ እስከሚችሉበት ጊዜ ድረስ ከኋላው መቆየት ግዴታ ነው።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_117_4a50fd1ea1b06640.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ወደ ጎን መስመር በመቀየር ባለአራት ጎማ ተሽከርካሪ እንደሚያልፉት ሁሉ ማለፍ አለባቸው፤ ማለፍ ካልቻሉ ደግሞ በደህና ማለፍ እስከሚችሉበት ጊዜ ድረስ ከኋላው መቆየት ግዴታ ነው።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_115_ff658252e469f556.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ወደ ጎን መስመር በመቀየር ባለአራት ጎማ ተሽከርካሪ እንደሚያልፉት ሁሉ ማለፍ አለባቸው፤ ማለፍ ካልቻሉ ደግሞ በደህና ማለፍ እስከሚችሉበት ጊዜ ድረስ ከኋላው መቆየት ግዴታ ነው።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_116_aad32ff2592cc93f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ወደ ጎን መስመር በመቀየር ባለአራት ጎማ ተሽከርካሪ እንደሚያልፉት ሁሉ ማለፍ አለባቸው፤ ማለፍ ካልቻሉ ደግሞ በደህና ማለፍ እስከሚችሉበት ጊዜ ድረስ ከኋላው መቆየት ግዴታ ነው።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_115_7eb12b42ba512dab.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ወደ ጎን መስመር በመቀየር ባለአራት ጎማ ተሽከርካሪ እንደሚያልፉት ሁሉ ማለፍ አለባቸው፤ ማለፍ ካልቻሉ ደግሞ በደህና ማለፍ እስከሚችሉበት ጊዜ ድረስ ከኋላው መቆየት ግዴታ ነው።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_116_546a6f9ebe9cfd60.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ወደ ጎን መስመር በመቀየር ባለአራት ጎማ ተሽከርካሪ እንደሚያልፉት ሁሉ ማለፍ አለባቸው፤ ማለፍ ካልቻሉ ደግሞ በደህና ማለፍ እስከሚችሉበት ጊዜ ድረስ ከኋላው መቆየት ግዴታ ነው።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_115_7b1119aa3a0002de.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ወደ ጎን መስመር በመቀየር ባለአራት ጎማ ተሽከርካሪ እንደሚያልፉት ሁሉ ማለፍ አለባቸው፤ ማለፍ ካልቻሉ ደግሞ በደህና ማለፍ እስከሚችሉበት ጊዜ ድረስ ከኋላው መቆየት ግዴታ ነው።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_116_0c87f1583b59c20b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ወደ ጎን መስመር በመቀየር ባለአራት ጎማ ተሽከርካሪ እንደሚያልፉት ሁሉ ማለፍ አለባቸው፤ ማለፍ ካልቻሉ ደግሞ በደህና ማለፍ እስከሚችሉበት ጊዜ ድረስ ከኋላው መቆየት ግዴታ ነው።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_119_6810d6e02b54c0ca.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ወደ ጎን መስመር በመቀየር ባለአራት ጎማ ተሽከርካሪ እንደሚያልፉት ሁሉ ማለፍ አለባቸው፤ ማለፍ ካልቻሉ ደግሞ በደህና ማለፍ እስከሚችሉበት ጊዜ ድረስ ከኋላው መቆየት ግዴታ ነው።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_120_b0a915627ae88ae1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ወደ ጎን መስመር በመቀየር ባለአራት ጎማ ተሽከርካሪ እንደሚያልፉት ሁሉ ማለፍ አለባቸው፤ ማለፍ ካልቻሉ ደግሞ በደህና ማለፍ እስከሚችሉበት ጊዜ ድረስ ከኋላው መቆየት ግዴታ ነው።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_120_24f946d0d8412dab.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ወደ ጎን መስመር በመቀየር ባለአራት ጎማ ተሽከርካሪ እንደሚያልፉት ሁሉ ማለፍ አለባቸው፤ ማለፍ ካልቻሉ ደግሞ በደህና ማለፍ እስከሚችሉበት ጊዜ ድረስ ከኋላው መቆየት ግዴታ ነው።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_120_ab380532797595cc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ወደ ጎን መስመር በመቀየር ባለአራት ጎማ ተሽከርካሪ እንደሚያልፉት ሁሉ ማለፍ አለባቸው፤ ማለፍ ካልቻሉ ደግሞ በደህና ማለፍ እስከሚችሉበት ጊዜ ድረስ ከኋላው መቆየት ግዴታ ነው።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_122_5b36c54807cc68ac.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ወደ ጎን መስመር በመቀየር ባለአራት ጎማ ተሽከርካሪ እንደሚያልፉት ሁሉ ማለፍ አለባቸው፤ ማለፍ ካልቻሉ ደግሞ በደህና ማለፍ እስከሚችሉበት ጊዜ ድረስ ከኋላው መቆየት ግዴታ ነው።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_123_b0512230814ec32f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ወደ ጎን መስመር በመቀየር ባለአራት ጎማ ተሽከርካሪ እንደሚያልፉት ሁሉ ማለፍ አለባቸው፤ ማለፍ ካልቻሉ ደግሞ በደህና ማለፍ እስከሚችሉበት ጊዜ ድረስ ከኋላው መቆየት ግዴታ ነው።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_127_1b848038d8e924c1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ወደ ጎን መስመር በመቀየር ባለአራት ጎማ ተሽከርካሪ እንደሚያልፉት ሁሉ ማለፍ አለባቸው፤ ማለፍ ካልቻሉ ደግሞ በደህና ማለፍ እስከሚችሉበት ጊዜ ድረስ ከኋላው መቆየት ግዴታ ነው።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_125_1200c0b69a8e9279.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ወደ ጎን መስመር በመቀየር ባለአራት ጎማ ተሽከርካሪ እንደሚያልፉት ሁሉ ማለፍ አለባቸው፤ ማለፍ ካልቻሉ ደግሞ በደህና ማለፍ እስከሚችሉበት ጊዜ ድረስ ከኋላው መቆየት ግዴታ ነው።",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_129_dc63437056c9729c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሽከርካሪዎች፣ በተለይ ደግሞ የትላልቅ ተሽከርካሪዎች አሽከርካሪዎች፣ ቀጥታ በሚያሽከረክሩበት ጊዜ ወይም ወደ ቀኝ በሚታጠፉበት ጊዜ፣ ወደ መንገዱ ቀኝ ዳርቻ በተቻለ መጠን ለምን መቅረብ አለባቸው?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_123_eb9bddd8014ef7dc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሌሎች ተሽከርካሪዎች በቀላሉ እንዲያልፏቸው ለማስቻል።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_33_b6d5a46262b152ee.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ሌሎች ተሽከርካሪዎች በቀላሉ እንዲያልፏቸው ለማስቻል።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_38_f451070b75d901ec.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የሁለት ጎማ ተሽከርካሪዎች ሕገወጥ ወይም አደገኛ ማለፍ ከቀኝ በኩል እንዳያደርጉ ለመከላከል ነው።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_61_00f52e408808f3cf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። የሁለት ጎማ ተሽከርካሪዎች ሕገወጥ ወይም አደገኛ ማለፍ ከቀኝ በኩል እንዳያደርጉ ለመከላከል ነው።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_66_8286ec7e09148ad1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመንገዱን ሁኔታ በደንብ ለማየት።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_21_4114df00b911fa66.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የመንገዱን ሁኔታ በደንብ ለማየት።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_26_bcefc2d0ec7c6652.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የትራፊክ ፍሰቱን ለማቀላጠፍ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_18_9c59826a8c77723a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። የትራፊክ ፍሰቱን ለማቀላጠፍ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_23_9ef5b822478ecac6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! የሁለት ጎማ ተሽከርካሪዎች ሕገወጥ ወይም አደገኛ ማለፍ ከቀኝ በኩል እንዳያደርጉ ለመከላከል ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_67_b0b6f03636243236.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! የሁለት ጎማ ተሽከርካሪዎች ሕገወጥ ወይም አደገኛ ማለፍ ከቀኝ በኩል እንዳያደርጉ ለመከላከል ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_65_642dacf063aacca0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! የሁለት ጎማ ተሽከርካሪዎች ሕገወጥ ወይም አደገኛ ማለፍ ከቀኝ በኩል እንዳያደርጉ ለመከላከል ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_66_34d26716ab7e3d09.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! የሁለት ጎማ ተሽከርካሪዎች ሕገወጥ ወይም አደገኛ ማለፍ ከቀኝ በኩል እንዳያደርጉ ለመከላከል ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_65_679ec1d03354e09d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! የሁለት ጎማ ተሽከርካሪዎች ሕገወጥ ወይም አደገኛ ማለፍ ከቀኝ በኩል እንዳያደርጉ ለመከላከል ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_66_e9e9e8508cf02916.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! የሁለት ጎማ ተሽከርካሪዎች ሕገወጥ ወይም አደገኛ ማለፍ ከቀኝ በኩል እንዳያደርጉ ለመከላከል ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_65_d305b5883b25e228.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! የሁለት ጎማ ተሽከርካሪዎች ሕገወጥ ወይም አደገኛ ማለፍ ከቀኝ በኩል እንዳያደርጉ ለመከላከል ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_66_0941a9d22f3fd23d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! የሁለት ጎማ ተሽከርካሪዎች ሕገወጥ ወይም አደገኛ ማለፍ ከቀኝ በኩል እንዳያደርጉ ለመከላከል ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_69_a50755d81c71753c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! የሁለት ጎማ ተሽከርካሪዎች ሕገወጥ ወይም አደገኛ ማለፍ ከቀኝ በኩል እንዳያደርጉ ለመከላከል ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_70_8d04ed566c2386d7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! የሁለት ጎማ ተሽከርካሪዎች ሕገወጥ ወይም አደገኛ ማለፍ ከቀኝ በኩል እንዳያደርጉ ለመከላከል ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_70_7f579e1e7544e09d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! የሁለት ጎማ ተሽከርካሪዎች ሕገወጥ ወይም አደገኛ ማለፍ ከቀኝ በኩል እንዳያደርጉ ለመከላከል ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_70_a38b7246ffecccba.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! የሁለት ጎማ ተሽከርካሪዎች ሕገወጥ ወይም አደገኛ ማለፍ ከቀኝ በኩል እንዳያደርጉ ለመከላከል ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_72_00dcdd3ef997ffda.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! የሁለት ጎማ ተሽከርካሪዎች ሕገወጥ ወይም አደገኛ ማለፍ ከቀኝ በኩል እንዳያደርጉ ለመከላከል ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_73_db267dd83dbe9319.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! የሁለት ጎማ ተሽከርካሪዎች ሕገወጥ ወይም አደገኛ ማለፍ ከቀኝ በኩል እንዳያደርጉ ለመከላከል ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_77_5fed67289bcae4f7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! የሁለት ጎማ ተሽከርካሪዎች ሕገወጥ ወይም አደገኛ ማለፍ ከቀኝ በኩል እንዳያደርጉ ለመከላከል ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_75_bdb473cafb881a4f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: የሁለት ጎማ ተሽከርካሪዎች ሕገወጥ ወይም አደገኛ ማለፍ ከቀኝ በኩል እንዳያደርጉ ለመከላከል ነው።",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_79_2f00661ea51f9bea.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:16:48.949Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "tw_l2_s1",
+   "key": "two_wheelers_1_0",
+   "sentences": [
+    {
+     "text": "የኤሌክትሪክ ስኩተሮች እና የኤሌክትሪክ ብስክሌቶች ለአሽከርካሪዎች በቀላሉ የማይታዩት ለምንድን ነው?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_63_3c01e77c52593805.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ፈጣን ስለሆኑ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_13_8d24adaa9f4d59ed.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። በጣም ፈጣን ስለሆኑ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_18_74609f18c13d3def.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁልጊዜም በሌሊት ስለሚያሽከረክሩ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_21_97d438f0a7014246.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ሁልጊዜም በሌሊት ስለሚያሽከረክሩ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_26_b1cfb2980c9de158.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትናንሽ እና ዝም የሚሉ ስለሆኑ፣ አሽከርካሪው ሲመጡ ላያሰማቸው ወይም በመስተዋትና በዓይነ ስውር ቦታ ላያያቸው ስለሚችል ነው።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_79_add6da6855a5d57e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ትናንሽ እና ዝም የሚሉ ስለሆኑ፣ አሽከርካሪው ሲመጡ ላያሰማቸው ወይም በመስተዋትና በዓይነ ስውር ቦታ ላያያቸው ስለሚችል ነው።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_84_aac1daae2731f00a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁልጊዜም በእግረኛ መንገድ ላይ ስለሚሄዱ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_26_449917b88f64fe7f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ሁልጊዜም በእግረኛ መንገድ ላይ ስለሚሄዱ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_31_ade187ae95c56e83.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ትናንሽ እና ዝም የሚሉ ስለሆኑ፣ አሽከርካሪው ሲመጡ ላያሰማቸው ወይም በመስተዋትና በዓይነ ስውር ቦታ ላያያቸው ስለሚችል ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_85_aa29a04042d46c47.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ትናንሽ እና ዝም የሚሉ ስለሆኑ፣ አሽከርካሪው ሲመጡ ላያሰማቸው ወይም በመስተዋትና በዓይነ ስውር ቦታ ላያያቸው ስለሚችል ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_83_12df21f8e0355fd1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ትናንሽ እና ዝም የሚሉ ስለሆኑ፣ አሽከርካሪው ሲመጡ ላያሰማቸው ወይም በመስተዋትና በዓይነ ስውር ቦታ ላያያቸው ስለሚችል ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_84_f8d0def0d4af91b8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ትናንሽ እና ዝም የሚሉ ስለሆኑ፣ አሽከርካሪው ሲመጡ ላያሰማቸው ወይም በመስተዋትና በዓይነ ስውር ቦታ ላያያቸው ስለሚችል ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_83_3f9af218eef7cd2c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ትናንሽ እና ዝም የሚሉ ስለሆኑ፣ አሽከርካሪው ሲመጡ ላያሰማቸው ወይም በመስተዋትና በዓይነ ስውር ቦታ ላያያቸው ስለሚችል ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_84_36ad536ec648e627.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ትናንሽ እና ዝም የሚሉ ስለሆኑ፣ አሽከርካሪው ሲመጡ ላያሰማቸው ወይም በመስተዋትና በዓይነ ስውር ቦታ ላያያቸው ስለሚችል ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_83_60f60076f57cd959.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ትናንሽ እና ዝም የሚሉ ስለሆኑ፣ አሽከርካሪው ሲመጡ ላያሰማቸው ወይም በመስተዋትና በዓይነ ስውር ቦታ ላያያቸው ስለሚችል ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_84_c7b4457ec9d0754c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ትናንሽ እና ዝም የሚሉ ስለሆኑ፣ አሽከርካሪው ሲመጡ ላያሰማቸው ወይም በመስተዋትና በዓይነ ስውር ቦታ ላያያቸው ስለሚችል ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_87_840c1378b87f564d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ትናንሽ እና ዝም የሚሉ ስለሆኑ፣ አሽከርካሪው ሲመጡ ላያሰማቸው ወይም በመስተዋትና በዓይነ ስውር ቦታ ላያያቸው ስለሚችል ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_88_d99e5e0abfc01a66.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ትናንሽ እና ዝም የሚሉ ስለሆኑ፣ አሽከርካሪው ሲመጡ ላያሰማቸው ወይም በመስተዋትና በዓይነ ስውር ቦታ ላያያቸው ስለሚችል ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_88_44cfc9404ce7cd2c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ትናንሽ እና ዝም የሚሉ ስለሆኑ፣ አሽከርካሪው ሲመጡ ላያሰማቸው ወይም በመስተዋትና በዓይነ ስውር ቦታ ላያያቸው ስለሚችል ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_88_c733a98c0e2e2ccb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ትናንሽ እና ዝም የሚሉ ስለሆኑ፣ አሽከርካሪው ሲመጡ ላያሰማቸው ወይም በመስተዋትና በዓይነ ስውር ቦታ ላያያቸው ስለሚችል ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_90_c8af1756338ec8eb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ትናንሽ እና ዝም የሚሉ ስለሆኑ፣ አሽከርካሪው ሲመጡ ላያሰማቸው ወይም በመስተዋትና በዓይነ ስውር ቦታ ላያያቸው ስለሚችል ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_91_e8b8179e14e907a8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ትናንሽ እና ዝም የሚሉ ስለሆኑ፣ አሽከርካሪው ሲመጡ ላያሰማቸው ወይም በመስተዋትና በዓይነ ስውር ቦታ ላያያቸው ስለሚችል ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_95_a254bceea272f306.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ትናንሽ እና ዝም የሚሉ ስለሆኑ፣ አሽከርካሪው ሲመጡ ላያሰማቸው ወይም በመስተዋትና በዓይነ ስውር ቦታ ላያያቸው ስለሚችል ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_93_f6280120b8ad09fe.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ትናንሽ እና ዝም የሚሉ ስለሆኑ፣ አሽከርካሪው ሲመጡ ላያሰማቸው ወይም በመስተዋትና በዓይነ ስውር ቦታ ላያያቸው ስለሚችል ነው።",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_97_a5b90eced64a451b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሽከርካሪው በመስቀለኛ መንገድ ላይ ወደ ቀኝ ከመታጠፉ በፊት፣ አንድ ስኩተረኛ ወይም ብስክሌተኛ አብሮት ሊሄድ በሚችልበት ጊዜ ምን ማድረግ አለበት?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_93_7ea0d910612bb35a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ምንም ነገር ማድረግ የለበትም፣ ምክንያቱም ስኩተረኛው ወይም ብስክሌተኛው ሁልጊዜ መንገድ ይሰጣል።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_61_28340c343f33a2a1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ምንም ነገር ማድረግ የለበትም፣ ምክንያቱም ስኩተረኛው ወይም ብስክሌተኛው ሁልጊዜ መንገድ ይሰጣል።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_66_592335a8e51616a3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ያንን መስመር ለስኩተረኛ ወይም ብስክሌተኛ መፈተሽ እና ቀጥ ብሎ በሚሄድ ስኩተረኛ ወይም ብስክሌተኛ መንገድ ላይ በቀጥታ መታጠፍ የለበትም።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_87_c456f8e40f18741c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ያንን መስመር ለስኩተረኛ ወይም ብስክሌተኛ መፈተሽ እና ቀጥ ብሎ በሚሄድ ስኩተረኛ ወይም ብስክሌተኛ መንገድ ላይ በቀጥታ መታጠፍ የለበትም።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_92_9df3ea1472ee3702.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በፍጥነት መታጠፍ አለበት።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_16_97c47486e67fddd1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። በፍጥነት መታጠፍ አለበት።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_21_ff5d1db02e320365.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መብራቱን ማጥፋት አለበት።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_16_93f8d8f8d55e5bc8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። መብራቱን ማጥፋት አለበት።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_21_4c0270ea4ff567b4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ያንን መስመር ለስኩተረኛ ወይም ብስክሌተኛ መፈተሽ እና ቀጥ ብሎ በሚሄድ ስኩተረኛ ወይም ብስክሌተኛ መንገድ ላይ በቀጥታ መታጠፍ የለበትም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_93_f08098084bcf4da5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ያንን መስመር ለስኩተረኛ ወይም ብስክሌተኛ መፈተሽ እና ቀጥ ብሎ በሚሄድ ስኩተረኛ ወይም ብስክሌተኛ መንገድ ላይ በቀጥታ መታጠፍ የለበትም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_91_fb07a550cc803133.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ያንን መስመር ለስኩተረኛ ወይም ብስክሌተኛ መፈተሽ እና ቀጥ ብሎ በሚሄድ ስኩተረኛ ወይም ብስክሌተኛ መንገድ ላይ በቀጥታ መታጠፍ የለበትም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_92_8d507996bea22bda.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ያንን መስመር ለስኩተረኛ ወይም ብስክሌተኛ መፈተሽ እና ቀጥ ብሎ በሚሄድ ስኩተረኛ ወይም ብስክሌተኛ መንገድ ላይ በቀጥታ መታጠፍ የለበትም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_91_6ea11146a3ac174e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ያንን መስመር ለስኩተረኛ ወይም ብስክሌተኛ መፈተሽ እና ቀጥ ብሎ በሚሄድ ስኩተረኛ ወይም ብስክሌተኛ መንገድ ላይ በቀጥታ መታጠፍ የለበትም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_92_9c4523d0c327cf45.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ያንን መስመር ለስኩተረኛ ወይም ብስክሌተኛ መፈተሽ እና ቀጥ ብሎ በሚሄድ ስኩተረኛ ወይም ብስክሌተኛ መንገድ ላይ በቀጥታ መታጠፍ የለበትም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_91_4ba90484c3763ebb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ያንን መስመር ለስኩተረኛ ወይም ብስክሌተኛ መፈተሽ እና ቀጥ ብሎ በሚሄድ ስኩተረኛ ወይም ብስክሌተኛ መንገድ ላይ በቀጥታ መታጠፍ የለበትም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_92_ba909f8a21eb38ae.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ያንን መስመር ለስኩተረኛ ወይም ብስክሌተኛ መፈተሽ እና ቀጥ ብሎ በሚሄድ ስኩተረኛ ወይም ብስክሌተኛ መንገድ ላይ በቀጥታ መታጠፍ የለበትም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_95_0c2d9bd8086c27af.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ያንን መስመር ለስኩተረኛ ወይም ብስክሌተኛ መፈተሽ እና ቀጥ ብሎ በሚሄድ ስኩተረኛ ወይም ብስክሌተኛ መንገድ ላይ በቀጥታ መታጠፍ የለበትም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_96_1792ab383327d904.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ያንን መስመር ለስኩተረኛ ወይም ብስክሌተኛ መፈተሽ እና ቀጥ ብሎ በሚሄድ ስኩተረኛ ወይም ብስክሌተኛ መንገድ ላይ በቀጥታ መታጠፍ የለበትም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_96_f37c0934f19c174e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ያንን መስመር ለስኩተረኛ ወይም ብስክሌተኛ መፈተሽ እና ቀጥ ብሎ በሚሄድ ስኩተረኛ ወይም ብስክሌተኛ መንገድ ላይ በቀጥታ መታጠፍ የለበትም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_96_8b679b20ea5a6a29.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ያንን መስመር ለስኩተረኛ ወይም ብስክሌተኛ መፈተሽ እና ቀጥ ብሎ በሚሄድ ስኩተረኛ ወይም ብስክሌተኛ መንገድ ላይ በቀጥታ መታጠፍ የለበትም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_98_bd63502419dace89.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ያንን መስመር ለስኩተረኛ ወይም ብስክሌተኛ መፈተሽ እና ቀጥ ብሎ በሚሄድ ስኩተረኛ ወይም ብስክሌተኛ መንገድ ላይ በቀጥታ መታጠፍ የለበትም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_99_0a7e604aa20969ca.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ያንን መስመር ለስኩተረኛ ወይም ብስክሌተኛ መፈተሽ እና ቀጥ ብሎ በሚሄድ ስኩተረኛ ወይም ብስክሌተኛ መንገድ ላይ በቀጥታ መታጠፍ የለበትም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_103_5f91bb300d5287e4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ያንን መስመር ለስኩተረኛ ወይም ብስክሌተኛ መፈተሽ እና ቀጥ ብሎ በሚሄድ ስኩተረኛ ወይም ብስክሌተኛ መንገድ ላይ በቀጥታ መታጠፍ የለበትም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_101_9f0f318a271ffe9c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ያንን መስመር ለስኩተረኛ ወይም ብስክሌተኛ መፈተሽ እና ቀጥ ብሎ በሚሄድ ስኩተረኛ ወይም ብስክሌተኛ መንገድ ላይ በቀጥታ መታጠፍ የለበትም።",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_105_f9569bd8018bc2f9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሽከርካሪው ከስኩተረኛ ወይም ከብስክሌተኛ ኋላ ተጨማሪ ርቀት መተው ያለበት ለምንድን ነው?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_57_e02064c4596007cc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስኩተረኛው ወይም ብስክሌተኛው በፍጥነት እንዲሄድ ለመፍቀድ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_37_eac65e12049134ec.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ስኩተረኛው ወይም ብስክሌተኛው በፍጥነት እንዲሄድ ለመፍቀድ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_42_db28289ed0e56aee.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስኩተረኛው ወይም ብስክሌተኛው በድንገት ፍጥነቱን ሊቀንስ፣ ሊቆም ወይም አቅጣጫውን ሊቀይር ስለሚችል እና ከኋላ ቢመታ እሱ በጣም ትንሽ ጥበቃ ስላለው።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_94_91bfd272f0229e6e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ስኩተረኛው ወይም ብስክሌተኛው በድንገት ፍጥነቱን ሊቀንስ፣ ሊቆም ወይም አቅጣጫውን ሊቀይር ስለሚችል እና ከኋላ ቢመታ እሱ በጣም ትንሽ ጥበቃ ስላለው።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_99_63bc6ddc031f8c30.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስኩተረኛው ወይም ብስክሌተኛው ሁልጊዜም ቀስ ብሎ ስለሚሄድ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_37_db433442a25cbc35.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ስኩተረኛው ወይም ብስክሌተኛው ሁልጊዜም ቀስ ብሎ ስለሚሄድ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_42_ad0ebbacb0217981.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስኩተረኛው ወይም ብስክሌተኛው እንዲያርፍ ጊዜ ለመስጠት።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_35_60ab349c5fc24c35.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ስኩተረኛው ወይም ብስክሌተኛው እንዲያርፍ ጊዜ ለመስጠት።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_40_771b90808b116449.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ስኩተረኛው ወይም ብስክሌተኛው በድንገት ፍጥነቱን ሊቀንስ፣ ሊቆም ወይም አቅጣጫውን ሊቀይር ስለሚችል እና ከኋላ ቢመታ እሱ በጣም ትንሽ ጥበቃ ስላለው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_100_ae700fd83b8239b7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ስኩተረኛው ወይም ብስክሌተኛው በድንገት ፍጥነቱን ሊቀንስ፣ ሊቆም ወይም አቅጣጫውን ሊቀይር ስለሚችል እና ከኋላ ቢመታ እሱ በጣም ትንሽ ጥበቃ ስላለው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_98_355afe2f3ce2eee1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ስኩተረኛው ወይም ብስክሌተኛው በድንገት ፍጥነቱን ሊቀንስ፣ ሊቆም ወይም አቅጣጫውን ሊቀይር ስለሚችል እና ከኋላ ቢመታ እሱ በጣም ትንሽ ጥበቃ ስላለው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_99_44230174866d18e8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ስኩተረኛው ወይም ብስክሌተኛው በድንገት ፍጥነቱን ሊቀንስ፣ ሊቆም ወይም አቅጣጫውን ሊቀይር ስለሚችል እና ከኋላ ቢመታ እሱ በጣም ትንሽ ጥበቃ ስላለው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_98_728ed2800d024cfc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ስኩተረኛው ወይም ብስክሌተኛው በድንገት ፍጥነቱን ሊቀንስ፣ ሊቆም ወይም አቅጣጫውን ሊቀይር ስለሚችል እና ከኋላ ቢመታ እሱ በጣም ትንሽ ጥበቃ ስላለው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_99_5192c12867eb2957.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ስኩተረኛው ወይም ብስክሌተኛው በድንገት ፍጥነቱን ሊቀንስ፣ ሊቆም ወይም አቅጣጫውን ሊቀይር ስለሚችል እና ከኋላ ቢመታ እሱ በጣም ትንሽ ጥበቃ ስላለው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_98_12376b221c8c0969.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ስኩተረኛው ወይም ብስክሌተኛው በድንገት ፍጥነቱን ሊቀንስ፣ ሊቆም ወይም አቅጣጫውን ሊቀይር ስለሚችል እና ከኋላ ቢመታ እሱ በጣም ትንሽ ጥበቃ ስላለው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_99_5c1ee0d8e79e1cdc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ስኩተረኛው ወይም ብስክሌተኛው በድንገት ፍጥነቱን ሊቀንስ፣ ሊቆም ወይም አቅጣጫውን ሊቀይር ስለሚችል እና ከኋላ ቢመታ እሱ በጣም ትንሽ ጥበቃ ስላለው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_102_169d03b01c8c5afd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ስኩተረኛው ወይም ብስክሌተኛው በድንገት ፍጥነቱን ሊቀንስ፣ ሊቆም ወይም አቅጣጫውን ሊቀይር ስለሚችል እና ከኋላ ቢመታ እሱ በጣም ትንሽ ጥበቃ ስላለው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_103_92581277b056ae76.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ስኩተረኛው ወይም ብስክሌተኛው በድንገት ፍጥነቱን ሊቀንስ፣ ሊቆም ወይም አቅጣጫውን ሊቀይር ስለሚችል እና ከኋላ ቢመታ እሱ በጣም ትንሽ ጥበቃ ስላለው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_103_9b1d68044cf24cfc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ስኩተረኛው ወይም ብስክሌተኛው በድንገት ፍጥነቱን ሊቀንስ፣ ሊቆም ወይም አቅጣጫውን ሊቀይር ስለሚችል እና ከኋላ ቢመታ እሱ በጣም ትንሽ ጥበቃ ስላለው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_103_c774bd3c2b3adebb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ስኩተረኛው ወይም ብስክሌተኛው በድንገት ፍጥነቱን ሊቀንስ፣ ሊቆም ወይም አቅጣጫውን ሊቀይር ስለሚችል እና ከኋላ ቢመታ እሱ በጣም ትንሽ ጥበቃ ስላለው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_105_1fcdb8433456981b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ስኩተረኛው ወይም ብስክሌተኛው በድንገት ፍጥነቱን ሊቀንስ፣ ሊቆም ወይም አቅጣጫውን ሊቀይር ስለሚችል እና ከኋላ ቢመታ እሱ በጣም ትንሽ ጥበቃ ስላለው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_106_de64cff01c1cc8f8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ስኩተረኛው ወይም ብስክሌተኛው በድንገት ፍጥነቱን ሊቀንስ፣ ሊቆም ወይም አቅጣጫውን ሊቀይር ስለሚችል እና ከኋላ ቢመታ እሱ በጣም ትንሽ ጥበቃ ስላለው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_110_9153336edf2ca8d6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ስኩተረኛው ወይም ብስክሌተኛው በድንገት ፍጥነቱን ሊቀንስ፣ ሊቆም ወይም አቅጣጫውን ሊቀይር ስለሚችል እና ከኋላ ቢመታ እሱ በጣም ትንሽ ጥበቃ ስላለው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_108_cf5f1566088536ee.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ስኩተረኛው ወይም ብስክሌተኛው በድንገት ፍጥነቱን ሊቀንስ፣ ሊቆም ወይም አቅጣጫውን ሊቀይር ስለሚችል እና ከኋላ ቢመታ እሱ በጣም ትንሽ ጥበቃ ስላለው።",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_112_f56d2c28e5a17b6b.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

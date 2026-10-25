@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:18:08.039Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "rd_l2_s3",
+   "key": "road_decisions_1_2",
+   "sentences": [
+    {
+     "text": "የመኪና ቁጥር አንድ አሽከርካሪ ሞተር ሳይክሉን እንዴት ማለፍ አለበት?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_44_ff06a2284a9e83dd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በተመሳሳይ መስመር ውስጥ ተጠግቶ ማለፍ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_25_d4f88dd22cebddb2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። በተመሳሳይ መስመር ውስጥ ተጠግቶ ማለፍ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_30_bb7240f8270cd530.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በፍጥነት አልፎ ወዲያው ወደ መስመሩ መመለስ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_28_dea5aab8b0cecb0c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። በፍጥነት አልፎ ወዲያው ወደ መስመሩ መመለስ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_33_5c10de407db4e552.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ወደ ሌላኛው መስመር በሰፊው ገብቶ፣ በቂ ክፍተት ትቶ፣ የአሽከርካሪውን እንቅስቃሴ እየተመለከተ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_60_17d544b834518115.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ወደ ሌላኛው መስመር በሰፊው ገብቶ፣ በቂ ክፍተት ትቶ፣ የአሽከርካሪውን እንቅስቃሴ እየተመለከተ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_65_80db62e0aa6079a1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሞተር ሳይክሉ እስኪቆም መጠበቅ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_20_7beec78620e638a2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ሞተር ሳይክሉ እስኪቆም መጠበቅ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_25_a66c7e2cf2f357de.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ወደ ሌላኛው መስመር በሰፊው ገብቶ፣ በቂ ክፍተት ትቶ፣ የአሽከርካሪውን እንቅስቃሴ እየተመለከተ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_66_43fda3b24fe3554c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ወደ ሌላኛው መስመር በሰፊው ገብቶ፣ በቂ ክፍተት ትቶ፣ የአሽከርካሪውን እንቅስቃሴ እየተመለከተ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_64_5d70ef76b3df8a9a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ወደ ሌላኛው መስመር በሰፊው ገብቶ፣ በቂ ክፍተት ትቶ፣ የአሽከርካሪውን እንቅስቃሴ እየተመለከተ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_65_18f602c00b38b913.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ወደ ሌላኛው መስመር በሰፊው ገብቶ፣ በቂ ክፍተት ትቶ፣ የአሽከርካሪውን እንቅስቃሴ እየተመለከተ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_64_46652250d9f27807.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ወደ ሌላኛው መስመር በሰፊው ገብቶ፣ በቂ ክፍተት ትቶ፣ የአሽከርካሪውን እንቅስቃሴ እየተመለከተ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_65_4c30b198bbf4b9ac.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ወደ ሌላኛው መስመር በሰፊው ገብቶ፣ በቂ ክፍተት ትቶ፣ የአሽከርካሪውን እንቅስቃሴ እየተመለከተ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_64_8270d0b27468b412.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ወደ ሌላኛው መስመር በሰፊው ገብቶ፣ በቂ ክፍተት ትቶ፣ የአሽከርካሪውን እንቅስቃሴ እየተመለከተ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_65_f088266e6c13d2a7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ወደ ሌላኛው መስመር በሰፊው ገብቶ፣ በቂ ክፍተት ትቶ፣ የአሽከርካሪውን እንቅስቃሴ እየተመለከተ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_68_c7c467c09f2f4b86.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ወደ ሌላኛው መስመር በሰፊው ገብቶ፣ በቂ ክፍተት ትቶ፣ የአሽከርካሪውን እንቅስቃሴ እየተመለከተ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_69_2a9ed4483e82ef0d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ወደ ሌላኛው መስመር በሰፊው ገብቶ፣ በቂ ክፍተት ትቶ፣ የአሽከርካሪውን እንቅስቃሴ እየተመለከተ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_69_88ed33189de27807.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ወደ ሌላኛው መስመር በሰፊው ገብቶ፣ በቂ ክፍተት ትቶ፣ የአሽከርካሪውን እንቅስቃሴ እየተመለከተ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_69_8a84e142bc0caf40.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ወደ ሌላኛው መስመር በሰፊው ገብቶ፣ በቂ ክፍተት ትቶ፣ የአሽከርካሪውን እንቅስቃሴ እየተመለከተ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_71_ff4ec0b21e0ac6e0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ወደ ሌላኛው መስመር በሰፊው ገብቶ፣ በቂ ክፍተት ትቶ፣ የአሽከርካሪውን እንቅስቃሴ እየተመለከተ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_72_29943a78d57f7103.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ወደ ሌላኛው መስመር በሰፊው ገብቶ፣ በቂ ክፍተት ትቶ፣ የአሽከርካሪውን እንቅስቃሴ እየተመለከተ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_76_682556700865f62d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ወደ ሌላኛው መስመር በሰፊው ገብቶ፣ በቂ ክፍተት ትቶ፣ የአሽከርካሪውን እንቅስቃሴ እየተመለከተ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_74_3830c1104caa2e95.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ወደ ሌላኛው መስመር በሰፊው ገብቶ፣ በቂ ክፍተት ትቶ፣ የአሽከርካሪውን እንቅስቃሴ እየተመለከተ።",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_78_b469e4e840c8b390.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመኪና ቁጥር አንድ አሽከርካሪ ሞተር ሳይክሉን እዚህ ማለፍ ይችላልን?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_44_641f94b59ae67808.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ፣ ወደ መኪናው የቀረበው መስመር የተቆራረጠ ስለሆነ እና የተቃራኒው መስመር ባዶ ስለሆነ።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_58_2e373a6e48de9c02.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። አዎ፣ ወደ መኪናው የቀረበው መስመር የተቆራረጠ ስለሆነ እና የተቃራኒው መስመር ባዶ ስለሆነ።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_63_f450eb38a61cc940.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አይደለም፣ ሞተር ሳይክል ማለፍ ፈጽሞ አይፈቀድም።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_31_d8cb1dd01fde0ec9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። አይደለም፣ ሞተር ሳይክል ማለፍ ፈጽሞ አይፈቀድም።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_36_ededa8f689792457.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አይደለም፣ የተቆራረጠ መስመር ቢሆንም ማለፍ አይቻልም።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_34_8e873dc86032989d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። አይደለም፣ የተቆራረጠ መስመር ቢሆንም ማለፍ አይቻልም።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_39_be686f3292438329.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ፣ ነገር ግን ሞተር ሳይክሉን በቅርብ ማለፍ አለበት።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_35_c467ca1ea38fe0c5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። አዎ፣ ነገር ግን ሞተር ሳይክሉን በቅርብ ማለፍ አለበት።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_40_7228d84eee22c879.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! አዎ፣ ወደ መኪናው የቀረበው መስመር የተቆራረጠ ስለሆነ እና የተቃራኒው መስመር ባዶ ስለሆነ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_64_6e5d5600564a809b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! አዎ፣ ወደ መኪናው የቀረበው መስመር የተቆራረጠ ስለሆነ እና የተቃራኒው መስመር ባዶ ስለሆነ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_62_f2f9eb9e1232c94d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! አዎ፣ ወደ መኪናው የቀረበው መስመር የተቆራረጠ ስለሆነ እና የተቃራኒው መስመር ባዶ ስለሆነ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_63_443ff86c2afeb884.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! አዎ፣ ወደ መኪናው የቀረበው መስመር የተቆራረጠ ስለሆነ እና የተቃራኒው መስመር ባዶ ስለሆነ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_62_502410f0cab32690.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! አዎ፣ ወደ መኪናው የቀረበው መስመር የተቆራረጠ ስለሆነ እና የተቃራኒው መስመር ባዶ ስለሆነ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_63_eecaa6f6797a773b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! አዎ፣ ወደ መኪናው የቀረበው መስመር የተቆራረጠ ስለሆነ እና የተቃራኒው መስመር ባዶ ስለሆነ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_62_9dcd36863a67b7c5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! አዎ፣ ወደ መኪናው የቀረበው መስመር የተቆራረጠ ስለሆነ እና የተቃራኒው መስመር ባዶ ስለሆነ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_63_cdab4fee236bf070.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! አዎ፣ ወደ መኪናው የቀረበው መስመር የተቆራረጠ ስለሆነ እና የተቃራኒው መስመር ባዶ ስለሆነ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_66_c450808458f79751.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! አዎ፣ ወደ መኪናው የቀረበው መስመር የተቆራረጠ ስለሆነ እና የተቃራኒው መስመር ባዶ ስለሆነ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_67_521d8ac0c5cef61a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! አዎ፣ ወደ መኪናው የቀረበው መስመር የተቆራረጠ ስለሆነ እና የተቃራኒው መስመር ባዶ ስለሆነ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_67_2ffdf6aed2a32690.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! አዎ፣ ወደ መኪናው የቀረበው መስመር የተቆራረጠ ስለሆነ እና የተቃራኒው መስመር ባዶ ስለሆነ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_67_2718284056126797.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! አዎ፣ ወደ መኪናው የቀረበው መስመር የተቆራረጠ ስለሆነ እና የተቃራኒው መስመር ባዶ ስለሆነ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_69_ae358c2677208d77.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! አዎ፣ ወደ መኪናው የቀረበው መስመር የተቆራረጠ ስለሆነ እና የተቃራኒው መስመር ባዶ ስለሆነ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_70_2754d800ae439094.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! አዎ፣ ወደ መኪናው የቀረበው መስመር የተቆራረጠ ስለሆነ እና የተቃራኒው መስመር ባዶ ስለሆነ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_74_3a8622c6aad6e07a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! አዎ፣ ወደ መኪናው የቀረበው መስመር የተቆራረጠ ስለሆነ እና የተቃራኒው መስመር ባዶ ስለሆነ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_72_2cf29f90565b3082.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: አዎ፣ ወደ መኪናው የቀረበው መስመር የተቆራረጠ ስለሆነ እና የተቃራኒው መስመር ባዶ ስለሆነ።",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_76_ff468c165d5cf7c7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሞተር ሳይክልን በጣም ተጠግቶ ማለፍ ያለው አደጋ ምንድነው?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_37_84e0b9b8448a148c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሞተር ሳይክሉ ፍጥነቱን ሊጨምር ይችላል።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_25_125c2c4634b88186.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ሞተር ሳይክሉ ፍጥነቱን ሊጨምር ይችላል።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_30_dacbd4c87867b604.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የሞተር ሳይክል አሽከርካሪው ሊናደድ ይችላል።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_28_3e07e2a0cea85fac.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። የሞተር ሳይክል አሽከርካሪው ሊናደድ ይችላል።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_33_d80ae32076f5a0f2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመኪናው መስታወት ሊሰበር ይችላል።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_22_6b231543e66d55e1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የመኪናው መስታወት ሊሰበር ይችላል።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_27_a09923f03f3d11d5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሞተር ሳይክል በድንገት ወደ ጎን ሊንቀሳቀስ ስለሚችል፣ በቂ ቦታ ከሌለ አደጋ ሊፈጠር ይችላል።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_59_166af2f8ae6caf30.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ሞተር ሳይክል በድንገት ወደ ጎን ሊንቀሳቀስ ስለሚችል፣ በቂ ቦታ ከሌለ አደጋ ሊፈጠር ይችላል።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_64_d16669c05163030c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ሞተር ሳይክል በድንገት ወደ ጎን ሊንቀሳቀስ ስለሚችል፣ በቂ ቦታ ከሌለ አደጋ ሊፈጠር ይችላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_65_7a9a85407ddbd749.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ሞተር ሳይክል በድንገት ወደ ጎን ሊንቀሳቀስ ስለሚችል፣ በቂ ቦታ ከሌለ አደጋ ሊፈጠር ይችላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_63_bd948e000aa6345f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ሞተር ሳይክል በድንገት ወደ ጎን ሊንቀሳቀስ ስለሚችል፣ በቂ ቦታ ከሌለ አደጋ ሊፈጠር ይችላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_64_1eb3c44089f6b376.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ሞተር ሳይክል በድንገት ወደ ጎን ሊንቀሳቀስ ስለሚችል፣ በቂ ቦታ ከሌለ አደጋ ሊፈጠር ይችላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_63_784a4e5c9c58e5e2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ሞተር ሳይክል በድንገት ወደ ጎን ሊንቀሳቀስ ስለሚችል፣ በቂ ቦታ ከሌለ አደጋ ሊፈጠር ይችላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_64_eda6f2e0e11689a9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ሞተር ሳይክል በድንገት ወደ ጎን ሊንቀሳቀስ ስለሚችል፣ በቂ ቦታ ከሌለ አደጋ ሊፈጠር ይችላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_63_d1eb53506f1bf5d7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ሞተር ሳይክል በድንገት ወደ ጎን ሊንቀሳቀስ ስለሚችል፣ በቂ ቦታ ከሌለ አደጋ ሊፈጠር ይችላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_64_f24640d036c1b282.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ሞተር ሳይክል በድንገት ወደ ጎን ሊንቀሳቀስ ስለሚችል፣ በቂ ቦታ ከሌለ አደጋ ሊፈጠር ይችላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_67_3272fc58e1fe6bc3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ሞተር ሳይክል በድንገት ወደ ጎን ሊንቀሳቀስ ስለሚችል፣ በቂ ቦታ ከሌለ አደጋ ሊፈጠር ይችላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_68_ef9f63247f16fc28.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ሞተር ሳይክል በድንገት ወደ ጎን ሊንቀሳቀስ ስለሚችል፣ በቂ ቦታ ከሌለ አደጋ ሊፈጠር ይችላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_68_98dd0280a248e5e2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ሞተር ሳይክል በድንገት ወደ ጎን ሊንቀሳቀስ ስለሚችል፣ በቂ ቦታ ከሌለ አደጋ ሊፈጠር ይችላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_68_799367465c712ac5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ሞተር ሳይክል በድንገት ወደ ጎን ሊንቀሳቀስ ስለሚችል፣ በቂ ቦታ ከሌለ አደጋ ሊፈጠር ይችላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_70_310d77981f91eae5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ሞተር ሳይክል በድንገት ወደ ጎን ሊንቀሳቀስ ስለሚችል፣ በቂ ቦታ ከሌለ አደጋ ሊፈጠር ይችላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_71_87c75328bc65b566.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ሞተር ሳይክል በድንገት ወደ ጎን ሊንቀሳቀስ ስለሚችል፣ በቂ ቦታ ከሌለ አደጋ ሊፈጠር ይችላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_75_8cb71730efaf1048.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ሞተር ሳይክል በድንገት ወደ ጎን ሊንቀሳቀስ ስለሚችል፣ በቂ ቦታ ከሌለ አደጋ ሊፈጠር ይችላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_73_2a893b68eddb5fb0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ሞተር ሳይክል በድንገት ወደ ጎን ሊንቀሳቀስ ስለሚችል፣ በቂ ቦታ ከሌለ አደጋ ሊፈጠር ይችላል።",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_77_b9f2cfea1f6e4095.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

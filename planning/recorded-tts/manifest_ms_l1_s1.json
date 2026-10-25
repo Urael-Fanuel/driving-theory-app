@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:12:34.894Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "ms_l1_s1",
+   "key": "mind_safety_0_0",
+   "sentences": [
+    {
+     "text": "በድካም ላይ መኪና መንዳት ምን ተጽዕኖ ያሳድራል?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_31_130c0af94adc6d78.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የምላሽ ጊዜን ያፋጥናል እና ንቃትን ይጨምራል",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_28_ebb3f2ec4bc93fa0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። የምላሽ ጊዜን ያፋጥናል እና ንቃትን ይጨምራል",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_33_9353d1b83ecc8262.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የምላሽ ጊዜን ያዘገያል እና ንቃትን ይቀንሳል",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_28_36573a7c3cdf6bbe.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። የምላሽ ጊዜን ያዘገያል እና ንቃትን ይቀንሳል",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_33_9166d8f00e2702e0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የነዳጅ ፍጆታን ይጨምራል",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_15_3adf86dc20f81d78.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የነዳጅ ፍጆታን ይጨምራል",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_20_4f600924d8cde1cc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመኪናውን ፍጥነት ይጨምራል",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_17_9c9cf7380218d8c7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። የመኪናውን ፍጥነት ይጨምራል",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_22_b690237c2900d5bb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! የምላሽ ጊዜን ያዘገያል እና ንቃትን ይቀንሳል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_34_8415b66ba71b9f67.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! የምላሽ ጊዜን ያዘገያል እና ንቃትን ይቀንሳል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_32_80626e6c50d8bb31.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! የምላሽ ጊዜን ያዘገያል እና ንቃትን ይቀንሳል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_33_ee590258bb102e38.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! የምላሽ ጊዜን ያዘገያል እና ንቃትን ይቀንሳል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_32_96d3aaabb5cb542c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! የምላሽ ጊዜን ያዘገያል እና ንቃትን ይቀንሳል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_33_ec5d52b45b6e49c7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! የምላሽ ጊዜን ያዘገያል እና ንቃትን ይቀንሳል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_32_ba46ef847f3f25b9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! የምላሽ ጊዜን ያዘገያል እና ንቃትን ይቀንሳል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_33_c9d6807c29dc474c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! የምላሽ ጊዜን ያዘገያል እና ንቃትን ይቀንሳል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_36_554024884ab3972d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! የምላሽ ጊዜን ያዘገያል እና ንቃትን ይቀንሳል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_37_f2299c2054f8a1a6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! የምላሽ ጊዜን ያዘገያል እና ንቃትን ይቀንሳል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_37_e1f42328b9bb542c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! የምላሽ ጊዜን ያዘገያል እና ንቃትን ይቀንሳል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_37_b207d40c6e42f66b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! የምላሽ ጊዜን ያዘገያል እና ንቃትን ይቀንሳል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_39_bec970880a06170b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! የምላሽ ጊዜን ያዘገያል እና ንቃትን ይቀንሳል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_40_feac8504d1b55a28.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! የምላሽ ጊዜን ያዘገያል እና ንቃትን ይቀንሳል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_44_39dfcbab0d223446.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! የምላሽ ጊዜን ያዘገያል እና ንቃትን ይቀንሳል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_42_54544ebf153f363e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: የምላሽ ጊዜን ያዘገያል እና ንቃትን ይቀንሳል",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_46_8acc9b4427e6c5bb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሽከርካሪው በሚያሽከረክርበት ጊዜ በጣም ድካም ሲሰማው ምን ማድረግ አለበት?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_48_a7ca4060ea808096.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መስኮቶችን ከፍቶ አየር ማስገባት",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_20_838ccaab7a724fbe.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። መስኮቶችን ከፍቶ አየር ማስገባት",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_25_ea900063b1c22dfc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጮክ ያለ ሙዚቃ ማዳመጥ",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_14_4907ad002241e830.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ጮክ ያለ ሙዚቃ ማዳመጥ",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_19_440ef0ec02787c6e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናውን አስተማማኝ በሆነ ቦታ አቁሞ ማረፍ ወይም አጭር እንቅልፍ መውሰድ",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_46_e613144cd81ae15b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። መኪናውን አስተማማኝ በሆነ ቦታ አቁሞ ማረፍ ወይም አጭር እንቅልፍ መውሰድ",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_51_a9d285f0d82e2eef.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ፍጥነቱን ጨምሮ በፍጥነት ወደ መድረሻው መሄድ",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_28_3577e0cc115c9ead.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ፍጥነቱን ጨምሮ በፍጥነት ወደ መድረሻው መሄድ",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_33_34b99660aed23b91.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! መኪናውን አስተማማኝ በሆነ ቦታ አቁሞ ማረፍ ወይም አጭር እንቅልፍ መውሰድ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_52_bfdad3c45b0f4282.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! መኪናውን አስተማማኝ በሆነ ቦታ አቁሞ ማረፍ ወይም አጭር እንቅልፍ መውሰድ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_50_00e818dcb74108d4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! መኪናውን አስተማማኝ በሆነ ቦታ አቁሞ ማረፍ ወይም አጭር እንቅልፍ መውሰድ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_51_5df5820cfe86b15d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! መኪናውን አስተማማኝ በሆነ ቦታ አቁሞ ማረፍ ወይም አጭር እንቅልፍ መውሰድ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_50_fecf816896fd4f49.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! መኪናውን አስተማማኝ በሆነ ቦታ አቁሞ ማረፍ ወይም አጭር እንቅልፍ መውሰድ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_51_dd42aee44edf1662.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! መኪናውን አስተማማኝ በሆነ ቦታ አቁሞ ማረፍ ወይም አጭር እንቅልፍ መውሰድ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_50_1b1af66488654e5c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! መኪናውን አስተማማኝ በሆነ ቦታ አቁሞ ማረፍ ወይም አጭር እንቅልፍ መውሰድ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_51_a978007f154e8ae9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! መኪናውን አስተማማኝ በሆነ ቦታ አቁሞ ማረፍ ወይም አጭር እንቅልፍ መውሰድ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_54_9665a00c018b30c8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! መኪናውን አስተማማኝ በሆነ ቦታ አቁሞ ማረፍ ወይም አጭር እንቅልፍ መውሰድ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_55_2f697f40677eaf43.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! መኪናውን አስተማማኝ በሆነ ቦታ አቁሞ ማረፍ ወይም አጭር እንቅልፍ መውሰድ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_55_ac564b7336ed4f49.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! መኪናውን አስተማማኝ በሆነ ቦታ አቁሞ ማረፍ ወይም አጭር እንቅልፍ መውሰድ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_55_8ea5f878fb4a118e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! መኪናውን አስተማማኝ በሆነ ቦታ አቁሞ ማረፍ ወይም አጭር እንቅልፍ መውሰድ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_57_5286c3501b1c61ae.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! መኪናውን አስተማማኝ በሆነ ቦታ አቁሞ ማረፍ ወይም አጭር እንቅልፍ መውሰድ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_58_76e7de480d88794d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! መኪናውን አስተማማኝ በሆነ ቦታ አቁሞ ማረፍ ወይም አጭር እንቅልፍ መውሰድ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_62_25fe157b33497063.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! መኪናውን አስተማማኝ በሆነ ቦታ አቁሞ ማረፍ ወይም አጭር እንቅልፍ መውሰድ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_60_b7a93344f64818db.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: መኪናውን አስተማማኝ በሆነ ቦታ አቁሞ ማረፍ ወይም አጭር እንቅልፍ መውሰድ",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_64_1c83a04c2d8c93de.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ለመንዳት በጣም እንደደከመው የመወሰን ኃላፊነት የማን ነው?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_37_e37485346300714b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመንገድ ፖሊስ",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_9_c0f26bd0c427a5b4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። የመንገድ ፖሊስ",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_14_2675309b830b4736.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመንጃ ፈቃድ ሰጪው አካል",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_16_d6dad0a4faa52fcc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። የመንጃ ፈቃድ ሰጪው አካል",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_21_5753a69809c1b892.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የአሽከርካሪው ራሱ",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_11_dbc9404f078f4d03.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የአሽከርካሪው ራሱ",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_16_102294d8655c22f7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የተሳፋሪዎች",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_7_568beb383bea5a3c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። የተሳፋሪዎች",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_12_8946dcfc4c28b200.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! የአሽከርካሪው ራሱ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_17_f577c8940342413a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! የአሽከርካሪው ራሱ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_15_0b0861407b5cdf2c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! የአሽከርካሪው ራሱ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_16_ffd0890cc183b445.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! የአሽከርካሪው ራሱ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_15_b404b07c3d972ad1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! የአሽከርካሪው ራሱ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_16_652c0208f25ed9da.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! የአሽከርካሪው ራሱ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_15_af523544d25057a4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! የአሽከርካሪው ራሱ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_16_994e73c0e91efc31.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! የአሽከርካሪው ራሱ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_19_656e1150a64bf4b0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! የአሽከርካሪው ራሱ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_20_d0616aa40798f21b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! የአሽከርካሪው ራሱ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_20_a8375dbca3872ad1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! የአሽከርካሪው ራሱ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_20_26715a3380fda4b6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! የአሽከርካሪው ራሱ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_22_de540838a27d4c16.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! የአሽከርካሪው ራሱ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_23_a53aa25c5fd2a255.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! የአሽከርካሪው ራሱ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_27_0e234a201a5f39fb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! የአሽከርካሪው ራሱ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_25_02518953f1c72c83.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: የአሽከርካሪው ራሱ",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_29_e2fd83f4bba2f666.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

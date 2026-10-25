@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:09:37.162Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "vk_l4_s2",
+   "key": "vehicle_knowledge_3_1",
+   "sentences": [
+    {
+     "text": "የኋላ መብራቶች ስንት ዓይነት መብራቶችን ያቀፈ ነው?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_33_4a937eeca6d84bd7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሦስት",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_3_7cb360180b4852e3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ሦስት",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_8_0103bdbb218a5f61.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_3_903763200b4a553b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። አራት",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_8_190c5a302826f5a5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስድስት",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_4_57fe3e9f74662245.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ስድስት",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_9_79fd3ce7dc50a631.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_3_0852d13c0b4941d9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ሁለት",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_8_591017ab94d51525.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! አራት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_9_53eb8bbc67ecf142.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! አራት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_7_ed0952505b619154.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! አራት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_8_ae1284f4e7af5bfd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! አራት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_7_bf404ca8e21f3f69.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! አራት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_8_cabd79904e0fe922.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! አራት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_7_8e81f528cb0eefdc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! አራት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_8_3e70fa40b7ebd589.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! አራት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_11_0b07b1947f5c71c8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! አራት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_12_0f14f3e4aaf1c423.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! አራት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_12_88cb9220580f3f69.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! አራት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_12_ab5e4133ff6f99ce.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! አራት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_14_371189509d8d50ee.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! አራት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_15_05eab8a4d3f02ded.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! አራት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_19_c2984074dfe719c3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! አራት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_17_48350463c6f2e4bb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: አራት",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_21_69192cb81b5e441e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የብሬክ መብራት መቼ ይበራል?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_18_05962f5ca13e889a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናው ወደ ኋላ ሲመለስ",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_15_87edd5a8cf856206.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። መኪናው ወደ ኋላ ሲመለስ",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_20_1431157011bd8f04.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሽከርካሪው መስመር ሲቀይር",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_17_99021c58f24cb73b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። አሽከርካሪው መስመር ሲቀይር",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_22_984af5d0df0b8d25.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የብሬክ ፔዳል ሲጫን",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_12_eac84b38be50c82f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የብሬክ ፔዳል ሲጫን",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_17_e2e480d4cd02515b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በሌሊት",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_4_49807fcd750b8f96.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። በሌሊት",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_9_2ad26fe42f66c3aa.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! የብሬክ ፔዳል ሲጫን",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_18_b0547e4c94678a76.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! የብሬክ ፔዳል ሲጫን",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_16_77dad1a0c5befda0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! የብሬክ ፔዳል ሲጫን",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_17_6da3adf034186ba9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! የብሬክ ፔዳል ሲጫን",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_16_0bc0a31acffc25bd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! የብሬክ ፔዳል ሲጫን",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_17_01938524ba50b156.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! የብሬክ ፔዳል ሲጫን",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_16_5f8d0faff7e0aa28.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! የብሬክ ፔዳል ሲጫን",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_17_1fe6e3941bf955dd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! የብሬክ ፔዳል ሲጫን",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_20_84ef00b063e39bbc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! የብሬክ ፔዳል ሲጫን",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_21_3ddf9c6842557837.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! የብሬክ ፔዳል ሲጫን",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_21_62ce9a00f3ec25bd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! የብሬክ ፔዳል ሲጫን",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_21_95eda2b77a8f677a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! የብሬክ ፔዳል ሲጫን",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_23_6683243076a5591a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! የብሬክ ፔዳል ሲጫን",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_24_e31110c4cc57d3b9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! የብሬክ ፔዳል ሲጫን",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_28_44867f481c442dd7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! የብሬክ ፔዳል ሲጫን",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_26_8547473f6e1b84af.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: የብሬክ ፔዳል ሲጫን",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_30_93578b88339cde2a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመኪና መለያ መብራቶች ለምን ያገለግላሉ?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_26_ac1f7444df3de6b1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናው ፍጥነት እንደሚቀንስ ለማሳወቅ",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_23_7a26ae14fcee4fd3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። መኪናው ፍጥነት እንደሚቀንስ ለማሳወቅ",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_28_539eeabee04d1351.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናው ወደ ኋላ እንደሚሄድ ለማሳወቅ",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_23_8fc798ae3f0cd1f7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። መኪናው ወደ ኋላ እንደሚሄድ ለማሳወቅ",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_28_2761d218e3338969.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሽከርካሪው መስመር እንዲቀይር ለማሳወቅ",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_25_f45363cbe98eae86.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። አሽከርካሪው መስመር እንዲቀይር ለማሳወቅ",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_30_85ea2318e79561f2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሌሎች ተሽከርካሪዎች መኪናውን በቀላሉ እንዲለዩ",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_29_eb5e30c48718d6b8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ሌሎች ተሽከርካሪዎች መኪናውን በቀላሉ እንዲለዩ",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_34_b6e0902c1f1ee984.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ሌሎች ተሽከርካሪዎች መኪናውን በቀላሉ እንዲለዩ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_35_67155c541f614a81.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ሌሎች ተሽከርካሪዎች መኪናውን በቀላሉ እንዲለዩ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_33_856b14607a70d797.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ሌሎች ተሽከርካሪዎች መኪናውን በቀላሉ እንዲለዩ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_34_b222f5305d49be7e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ሌሎች ተሽከርካሪዎች መኪናውን በቀላሉ እንዲለዩ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_33_50ae644c7c911fea.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ሌሎች ተሽከርካሪዎች መኪናውን በቀላሉ እንዲለዩ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_34_d154e1a41769ef61.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ሌሎች ተሽከርካሪዎች መኪናውን በቀላሉ እንዲለዩ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_33_8c6739bca6c6c61f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ሌሎች ተሽከርካሪዎች መኪናውን በቀላሉ እንዲለዩ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_34_2fad3eeb0258480a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ሌሎች ተሽከርካሪዎች መኪናውን በቀላሉ እንዲለዩ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_37_1357ee980aee380b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ሌሎች ተሽከርካሪዎች መኪናውን በቀላሉ እንዲለዩ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_38_0e909174f6d33da0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ሌሎች ተሽከርካሪዎች መኪናውን በቀላሉ እንዲለዩ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_38_7cb34cacfe811fea.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ሌሎች ተሽከርካሪዎች መኪናውን በቀላሉ እንዲለዩ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_38_915b10847d760b0d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ሌሎች ተሽከርካሪዎች መኪናውን በቀላሉ እንዲለዩ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_40_7fc01313dbebc92d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ሌሎች ተሽከርካሪዎች መኪናውን በቀላሉ እንዲለዩ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_41_d80eb39c36bf186e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ሌሎች ተሽከርካሪዎች መኪናውን በቀላሉ እንዲለዩ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_45_f9c71331c5114940.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ሌሎች ተሽከርካሪዎች መኪናውን በቀላሉ እንዲለዩ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_43_68fdf449fcea6638.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ሌሎች ተሽከርካሪዎች መኪናውን በቀላሉ እንዲለዩ",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_47_4612f9bcf6c4665d.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

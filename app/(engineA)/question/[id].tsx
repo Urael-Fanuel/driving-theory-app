@@ -35,6 +35,8 @@ import {
   BackHandler,
 } from 'react-native';
 import { useLocalSearchParams, useRouter, useFocusEffect } from 'expo-router';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { useFitImageSize } from '../../../hooks/useFitImageSize';
 import * as Haptics from 'expo-haptics';
 import { Colors } from '../../../constants/colors';
 import { LoadingScreen } from '../../../components/shared/LoadingScreen';
@@ -67,6 +69,14 @@ const NUMBER_URLS = [
 export default function EngineAQuestionScreen() {
   const { id }     = useLocalSearchParams<{ id: string }>();
   const router     = useRouter();
+  // The Android system bar (3-button or gesture) sits over the bottom of the screen
+  // (edge-to-edge): the last item of a scrolling screen needs this much room, or the
+  // bar covers it (the 🎤 button was half hidden, 2026-10-25).
+  const insets = useSafeAreaInsets();
+  // Image sized so the whole question screen (incl. the 🎤 button) fits when the phone can.
+  const fit = useFitImageSize(200);
+
+
   const { playAudio, stopAudio, pauseAudio, resumeAudio, audioState } = useAudio();
   const { recordAnswer } = useProgress();
   const { userId } = useEngine();
@@ -527,14 +537,16 @@ export default function EngineAQuestionScreen() {
       </TouchableOpacity>
 
       <ScrollView
+        onLayout={e => fit.onLayout(e, !!sign?.image_url)}
+        onContentSizeChange={(_w, h) => fit.onContent(h, !!sign?.image_url)}
         style={styles.scrollArea}
-        contentContainerStyle={styles.content}
+        contentContainerStyle={[styles.content, { paddingBottom: 16 + insets.bottom + 12 }]}
         showsVerticalScrollIndicator={false}
         scrollEnabled={!showFeedback}
       >
         {/* Sign image */}
         {sign?.image_url && (
-          <View style={styles.signImageContainer}>
+          <View style={[styles.signImageContainer, fit.style]}>
             <Image
               source={{ uri: sign.image_url }}
               style={styles.signImage}

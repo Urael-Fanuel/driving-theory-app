@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:15:38.437Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "mv_l1_s1",
+   "key": "my_vehicle_0_0",
+   "sentences": [
+    {
+     "text": "ከፊትዎ ካለው ተሽከርካሪ በቂ ርቀት መያዝ ለምን አስፈላጊ ነው?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_40_83003c200ca0e7d1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የነዳጅ ፍጆታን ለመቀነስ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_16_230ac53848872b91.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። የነዳጅ ፍጆታን ለመቀነስ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_21_aa099c3b58faa7d3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሌሎች አሽከርካሪዎች በፍጥነት እንዲያልፉ ለመፍቀድ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_32_8fc600d0580e7a1a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ሌሎች አሽከርካሪዎች በፍጥነት እንዲያልፉ ለመፍቀድ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_37_8de2ac271bebe644.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከፊት ያለው ተሽከርካሪ በድንገት ቢቆም ግጭትን ለመከላከል እና በሰላም ምላሽ ለመስጠት ጊዜ ለመስጠት።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_64_c193ec20d32ebd08.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ከፊት ያለው ተሽከርካሪ በድንገት ቢቆም ግጭትን ለመከላከል እና በሰላም ምላሽ ለመስጠት ጊዜ ለመስጠት።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_69_6285a40e5d79977c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመኪናውን ጎማዎች እንዳይጎዱ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_19_8606fc20390c3381.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። የመኪናውን ጎማዎች እንዳይጎዱ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_24_504530565ac92a3d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ከፊት ያለው ተሽከርካሪ በድንገት ቢቆም ግጭትን ለመከላከል እና በሰላም ምላሽ ለመስጠት ጊዜ ለመስጠት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_70_6cde7878e9608391.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ከፊት ያለው ተሽከርካሪ በድንገት ቢቆም ግጭትን ለመከላከል እና በሰላም ምላሽ ለመስጠት ጊዜ ለመስጠት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_68_0051a010e7ba6847.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ከፊት ያለው ተሽከርካሪ በድንገት ቢቆም ግጭትን ለመከላከል እና በሰላም ምላሽ ለመስጠት ጊዜ ለመስጠት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_69_1433c370401b230e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ከፊት ያለው ተሽከርካሪ በድንገት ቢቆም ግጭትን ለመከላከል እና በሰላም ምላሽ ለመስጠት ጊዜ ለመስጠት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_68_d2fba7886b64781a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ከፊት ያለው ተሽከርካሪ በድንገት ቢቆም ግጭትን ለመከላከል እና በሰላም ምላሽ ለመስጠት ጊዜ ለመስጠት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_69_023f36642cfba5b1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ከፊት ያለው ተሽከርካሪ በድንገት ቢቆም ግጭትን ለመከላከል እና በሰላም ምላሽ ለመስጠት ጊዜ ለመስጠት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_68_d0989b8ea6c355cf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ከፊት ያለው ተሽከርካሪ በድንገት ቢቆም ግጭትን ለመከላከል እና በሰላም ምላሽ ለመስጠት ጊዜ ለመስጠት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_69_3109a84c6b39687a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ከፊት ያለው ተሽከርካሪ በድንገት ቢቆም ግጭትን ለመከላከል እና በሰላም ምላሽ ለመስጠት ጊዜ ለመስጠት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_72_1c3021b69917e15b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ከፊት ያለው ተሽከርካሪ በድንገት ቢቆም ግጭትን ለመከላከል እና በሰላም ምላሽ ለመስጠት ጊዜ ለመስጠት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_73_46f94a50f29d2d10.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ከፊት ያለው ተሽከርካሪ በድንገት ቢቆም ግጭትን ለመከላከል እና በሰላም ምላሽ ለመስጠት ጊዜ ለመስጠት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_73_a5006d28a754781a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ከፊት ያለው ተሽከርካሪ በድንገት ቢቆም ግጭትን ለመከላከል እና በሰላም ምላሽ ለመስጠት ጊዜ ለመስጠት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_73_3ca9abeee417739d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ከፊት ያለው ተሽከርካሪ በድንገት ቢቆም ግጭትን ለመከላከል እና በሰላም ምላሽ ለመስጠት ጊዜ ለመስጠት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_75_f29d00206ed30c7d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ከፊት ያለው ተሽከርካሪ በድንገት ቢቆም ግጭትን ለመከላከል እና በሰላም ምላሽ ለመስጠት ጊዜ ለመስጠት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_76_14eeb20243de871e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ከፊት ያለው ተሽከርካሪ በድንገት ቢቆም ግጭትን ለመከላከል እና በሰላም ምላሽ ለመስጠት ጊዜ ለመስጠት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_80_9ff7a6d804e2eff0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ከፊት ያለው ተሽከርካሪ በድንገት ቢቆም ግጭትን ለመከላከል እና በሰላም ምላሽ ለመስጠት ጊዜ ለመስጠት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_78_42dcacba66f0d488.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ከፊት ያለው ተሽከርካሪ በድንገት ቢቆም ግጭትን ለመከላከል እና በሰላም ምላሽ ለመስጠት ጊዜ ለመስጠት።",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_82_7da6cedc4452664d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመቁጠር ዘዴው ርቀቱ በጣም ትንሽ መሆኑን ካሳየ (ቁጥሩን ሳይጨርሱ ወደ ቋሚው ምልክት ከደረሱ) አሽከርካሪው ምን ማድረግ አለበት?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_82_1f730694bfb961e6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ፍጥነት መጨመር።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_10_ccfff8081112870f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ፍጥነት መጨመር።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_15_b81d00921a27ad4d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከፊት ካለው ተሽከርካሪ ያለውን ርቀት መጨመር።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_29_8d29dd50d49eebd1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ከፊት ካለው ተሽከርካሪ ያለውን ርቀት መጨመር።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_34_bae8eb803386dfcf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ወደ ግራ መታጠፍ።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_11_653d7e70f3517c3f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ወደ ግራ መታጠፍ።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_16_f8103430c9f1e8cb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናውን ወዲያውኑ ማቆም።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_16_8f606a9dcc275813.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። መኪናውን ወዲያውኑ ማቆም።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_21_23d1e63c9cc094af.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ከፊት ካለው ተሽከርካሪ ያለውን ርቀት መጨመር።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_35_c314b374a00f9528.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ከፊት ካለው ተሽከርካሪ ያለውን ርቀት መጨመር።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_33_79dbef0668b1e4be.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ከፊት ካለው ተሽከርካሪ ያለውን ርቀት መጨመር።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_34_f26c1b42698f9c17.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ከፊት ካለው ተሽከርካሪ ያለውን ርቀት መጨመር።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_33_3bec0a38f5d79583.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ከፊት ካለው ተሽከርካሪ ያለውን ርቀት መጨመር።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_34_ab39bfcb5b2a00c8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ከፊት ካለው ተሽከርካሪ ያለውን ርቀት መጨመር።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_33_ee4e3e3e276be036.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ከፊት ካለው ተሽከርካሪ ያለውን ርቀት መጨመር።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_34_11b638ecdf8f4763.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ከፊት ካለው ተሽከርካሪ ያለውን ርቀት መጨመር።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_37_df9489eeb1c63722.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ከፊት ካለው ተሽከርካሪ ያለውን ርቀት መጨመር።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_38_47c05c907656bac9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ከፊት ካለው ተሽከርካሪ ያለውን ርቀት መጨመር።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_38_1959ec2477c79583.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ከፊት ካለው ተሽከርካሪ ያለውን ርቀት መጨመር።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_38_5b0ee79eff8d09a4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ከፊት ካለው ተሽከርካሪ ያለውን ርቀት መጨመር።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_40_5ce2991003d25a84.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ከፊት ካለው ተሽከርካሪ ያለውን ርቀት መጨመር።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_41_a4ada220b7719607.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ከፊት ካለው ተሽከርካሪ ያለውን ርቀት መጨመር።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_45_c807503647af5e29.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ከፊት ካለው ተሽከርካሪ ያለውን ርቀት መጨመር።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_43_383632ba96c11451.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ከፊት ካለው ተሽከርካሪ ያለውን ርቀት መጨመር።",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_47_0936f380301ed2f4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሽከርካሪው ከተለመደው የበለጠ ርቀት መያዝ ያለበት በየትኞቹ ሁኔታዎች ነው?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_48_cec82f18f8901a49.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ፀሐያማ በሆነ ቀን እና ባዶ መንገድ ላይ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_26_56cab810ab1ec111.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ፀሐያማ በሆነ ቀን እና ባዶ መንገድ ላይ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_31_eda2c8387c744753.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አስቸጋሪ ሁኔታዎች ውስጥ እንደሚያዳልጥ መንገድ ወይም ደካማ ታይነት፣ ሲደክሙ ወይም ትኩረቱን ሲስት፣ ወይም በዙሪያው ያሉ ተሽከርካሪዎች ትክክለኛ ርቀት በማይጠብቁበት ጊዜ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_108_beb9383815d3a9ac.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። አስቸጋሪ ሁኔታዎች ውስጥ እንደሚያዳልጥ መንገድ ወይም ደካማ ታይነት፣ ሲደክሙ ወይም ትኩረቱን ሲስት፣ ወይም በዙሪያው ያሉ ተሽከርካሪዎች ትክክለኛ ርቀት በማይጠብቁበት ጊዜ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_113_b4e95e183062a572.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዲስ መኪና በሚያሽከረክሩበት ጊዜ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_22_721e000e91f275aa.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። አዲስ መኪና በሚያሽከረክሩበት ጊዜ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_27_c114cde8b20aaa5e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አጭር ጉዞ ሲያደርጉ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_13_cfa1cf78f35a78fd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። አጭር ጉዞ ሲያደርጉ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_18_47bb49c0875dfa81.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! አስቸጋሪ ሁኔታዎች ውስጥ እንደሚያዳልጥ መንገድ ወይም ደካማ ታይነት፣ ሲደክሙ ወይም ትኩረቱን ሲስት፣ ወይም በዙሪያው ያሉ ተሽከርካሪዎች ትክክለኛ ርቀት በማይጠብቁበት ጊዜ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_114_7f69a32823e90c75.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! አስቸጋሪ ሁኔታዎች ውስጥ እንደሚያዳልጥ መንገድ ወይም ደካማ ታይነት፣ ሲደክሙ ወይም ትኩረቱን ሲስት፣ ወይም በዙሪያው ያሉ ተሽከርካሪዎች ትክክለኛ ርቀት በማይጠብቁበት ጊዜ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_112_891db732f24789a3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! አስቸጋሪ ሁኔታዎች ውስጥ እንደሚያዳልጥ መንገድ ወይም ደካማ ታይነት፣ ሲደክሙ ወይም ትኩረቱን ሲስት፣ ወይም በዙሪያው ያሉ ተሽከርካሪዎች ትክክለኛ ርቀት በማይጠብቁበት ጊዜ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_113_732eb672a1ae822a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! አስቸጋሪ ሁኔታዎች ውስጥ እንደሚያዳልጥ መንገድ ወይም ደካማ ታይነት፣ ሲደክሙ ወይም ትኩረቱን ሲስት፣ ወይም በዙሪያው ያሉ ተሽከርካሪዎች ትክክለኛ ርቀት በማይጠብቁበት ጊዜ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_112_291e8ffccafeb43e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! አስቸጋሪ ሁኔታዎች ውስጥ እንደሚያዳልጥ መንገድ ወይም ደካማ ታይነት፣ ሲደክሙ ወይም ትኩረቱን ሲስት፣ ወይም በዙሪያው ያሉ ተሽከርካሪዎች ትክክለኛ ርቀት በማይጠብቁበት ጊዜ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_113_06c19cfa3f204015.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! አስቸጋሪ ሁኔታዎች ውስጥ እንደሚያዳልጥ መንገድ ወይም ደካማ ታይነት፣ ሲደክሙ ወይም ትኩረቱን ሲስት፣ ወይም በዙሪያው ያሉ ተሽከርካሪዎች ትክክለኛ ርቀት በማይጠብቁበት ጊዜ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_112_baaef41cf88ba12b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! አስቸጋሪ ሁኔታዎች ውስጥ እንደሚያዳልጥ መንገድ ወይም ደካማ ታይነት፣ ሲደክሙ ወይም ትኩረቱን ሲስት፣ ወይም በዙሪያው ያሉ ተሽከርካሪዎች ትክክለኛ ርቀት በማይጠብቁበት ጊዜ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_113_963e1da8a8bf539e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! አስቸጋሪ ሁኔታዎች ውስጥ እንደሚያዳልጥ መንገድ ወይም ደካማ ታይነት፣ ሲደክሙ ወይም ትኩረቱን ሲስት፣ ወይም በዙሪያው ያሉ ተሽከርካሪዎች ትክክለኛ ርቀት በማይጠብቁበት ጊዜ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_116_9764651cf45273bf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! አስቸጋሪ ሁኔታዎች ውስጥ እንደሚያዳልጥ መንገድ ወይም ደካማ ታይነት፣ ሲደክሙ ወይም ትኩረቱን ሲስት፣ ወይም በዙሪያው ያሉ ተሽከርካሪዎች ትክክለኛ ርቀት በማይጠብቁበት ጊዜ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_117_a1b2f3fa06e49bb4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! አስቸጋሪ ሁኔታዎች ውስጥ እንደሚያዳልጥ መንገድ ወይም ደካማ ታይነት፣ ሲደክሙ ወይም ትኩረቱን ሲስት፣ ወይም በዙሪያው ያሉ ተሽከርካሪዎች ትክክለኛ ርቀት በማይጠብቁበት ጊዜ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_117_755ddfe22eeeb43e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! አስቸጋሪ ሁኔታዎች ውስጥ እንደሚያዳልጥ መንገድ ወይም ደካማ ታይነት፣ ሲደክሙ ወይም ትኩረቱን ሲስት፣ ወይም በዙሪያው ያሉ ተሽከርካሪዎች ትክክለኛ ርቀት በማይጠብቁበት ጊዜ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_117_a372e78e071cf779.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! አስቸጋሪ ሁኔታዎች ውስጥ እንደሚያዳልጥ መንገድ ወይም ደካማ ታይነት፣ ሲደክሙ ወይም ትኩረቱን ሲስት፣ ወይም በዙሪያው ያሉ ተሽከርካሪዎች ትክክለኛ ርቀት በማይጠብቁበት ጊዜ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_119_63a1fb92525365d9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! አስቸጋሪ ሁኔታዎች ውስጥ እንደሚያዳልጥ መንገድ ወይም ደካማ ታይነት፣ ሲደክሙ ወይም ትኩረቱን ሲስት፣ ወይም በዙሪያው ያሉ ተሽከርካሪዎች ትክክለኛ ርቀት በማይጠብቁበት ጊዜ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_120_97a6ad684b8d0a3a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! አስቸጋሪ ሁኔታዎች ውስጥ እንደሚያዳልጥ መንገድ ወይም ደካማ ታይነት፣ ሲደክሙ ወይም ትኩረቱን ሲስት፣ ወይም በዙሪያው ያሉ ተሽከርካሪዎች ትክክለኛ ርቀት በማይጠብቁበት ጊዜ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_124_f6858058f254a094.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! አስቸጋሪ ሁኔታዎች ውስጥ እንደሚያዳልጥ መንገድ ወይም ደካማ ታይነት፣ ሲደክሙ ወይም ትኩረቱን ሲስት፣ ወይም በዙሪያው ያሉ ተሽከርካሪዎች ትክክለኛ ርቀት በማይጠብቁበት ጊዜ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_122_b4a5dc3050290d2c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: አስቸጋሪ ሁኔታዎች ውስጥ እንደሚያዳልጥ መንገድ ወይም ደካማ ታይነት፣ ሲደክሙ ወይም ትኩረቱን ሲስት፣ ወይም በዙሪያው ያሉ ተሽከርካሪዎች ትክክለኛ ርቀት በማይጠብቁበት ጊዜ።",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_126_6f99eda0e9b88d29.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

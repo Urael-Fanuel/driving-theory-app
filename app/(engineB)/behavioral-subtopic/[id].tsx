@@ -40,6 +40,7 @@ import {
 } from 'react-native';
 import { useLocalSearchParams, useRouter, useFocusEffect } from 'expo-router';
 import * as Haptics from 'expo-haptics';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Colors } from '../../../constants/colors';
 import { Typography } from '../../../constants/typography';
 import { TextAnswerCard } from '../../../components/engineB/TextAnswerCard';
@@ -65,7 +66,7 @@ import { useEngine } from '../../../contexts/EngineContext';
 interface Answer   { text_amharic: string; is_correct: boolean; }
 interface Question { question_amharic: string; answers: Answer[]; }
 interface Subtopic {
-  id: string; name_hebrew: string; icon: string;
+  id: string; name_hebrew: string; name_amharic?: string; icon: string;
   explanation_amharic?: string;
   narration_audio_url?: string;
   image_url?: string;
@@ -139,6 +140,10 @@ export default function BehavioralSubtopicScreenB() {
   const subtopicIndex = allSubtopics.findIndex(s => s.id === id);
   const prevSubtopic  = subtopicIndex > 0 ? allSubtopics[subtopicIndex - 1] : null;
   const nextSubtopic  = subtopicIndex < allSubtopics.length - 1 ? allSubtopics[subtopicIndex + 1] : null;
+
+  // The Android system bar (3-button or gesture) sits over the bottom of the screen
+  // (edge-to-edge): content that ends at the very bottom needs this much room.
+  const insets = useSafeAreaInsets();
 
   // ── State ─────────────────────────────────────────────────────────────────────
   const [phase,          setPhase]          = useState<Phase>('explanation');
@@ -321,7 +326,7 @@ export default function BehavioralSubtopicScreenB() {
       {/* ════════════════════ PHASE: EXPLANATION ════════════════════ */}
       {phase === 'explanation' && (
         <ScrollView
-          contentContainerStyle={styles.explainContent}
+          contentContainerStyle={[styles.explainContent, { paddingBottom: 16 + insets.bottom + 12 }]}
           showsVerticalScrollIndicator={false}
         >
           {/* Back — left-aligned like every other topic screen, and given a
@@ -570,7 +575,7 @@ export default function BehavioralSubtopicScreenB() {
         <View style={styles.center}>
           <Text style={{ fontSize: 80 }}>✅</Text>
           <Text style={[styles.completeTitle, { color: levelColor }]}>
-            {subtopic.name_hebrew}
+            {subtopic.name_amharic || subtopic.name_hebrew}
           </Text>
           <TouchableOpacity
             style={[styles.continueBtn, { backgroundColor: levelColor, paddingHorizontal: 32 }]}

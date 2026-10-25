@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:08:54.005Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "vk_l2_s7",
+   "key": "vehicle_knowledge_1_6",
+   "sentences": [
+    {
+     "text": "የማርሽ መቀየሪያው ብዙውን ጊዜ በመኪና ውስጥ የት ነው የሚገኘው?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_41_977e3b000ad29744.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከመኪናው ውጭ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_9_d5cf7a6869684003.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ከመኪናው ውጭ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_14_b462a4d01dab4381.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከኋላ መቀመጫዎች ስር።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_14_9f28532884e0534f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ከኋላ መቀመጫዎች ስር።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_19_381d0a90d4d09611.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በፊት መቀመጫዎች መካከል ወይም ከመሪው አጠገብ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_30_c1a4c5d6979ecf74.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። በፊት መቀመጫዎች መካከል ወይም ከመሪው አጠገብ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_35_392647a699b729c0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በመኪናው ጣሪያ ላይ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_13_aefcc9f06fac2dcf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። በመኪናው ጣሪያ ላይ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_18_dd9f76aefdaa7eb3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! በፊት መቀመጫዎች መካከል ወይም ከመሪው አጠገብ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_36_714630ae65633a6d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! በፊት መቀመጫዎች መካከል ወይም ከመሪው አጠገብ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_34_c0d2dee8ed8cb1bb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! በፊት መቀመጫዎች መካከል ወይም ከመሪው አጠገብ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_35_b54116e8d9d08c72.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! በፊት መቀመጫዎች መካከል ወይም ከመሪው አጠገብ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_34_8a12a522c717bd66.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! በፊት መቀመጫዎች መካከል ወይም ከመሪው አጠገብ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_35_fccfc8389dbf9f0d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! በፊት መቀመጫዎች መካከል ወይም ከመሪው አጠገብ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_34_049cbc90c2c2ce33.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! በፊት መቀመጫዎች መካከል ወይም ከመሪው አጠገብ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_35_0ae8650054fd68c6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! በፊት መቀመጫዎች መካከል ወይም ከመሪው አጠገብ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_38_74a66570fdf402a7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! በፊት መቀመጫዎች መካከል ወይም ከመሪው አጠገብ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_39_7c3273d81d35196c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! በፊት መቀመጫዎች መካከል ወይም ከመሪው አጠገብ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_39_26c6fef88707bd66.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! በፊት መቀመጫዎች መካከል ወይም ከመሪው አጠገብ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_39_ae5ebcbee7837861.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! በፊት መቀመጫዎች መካከል ወይም ከመሪው አጠገብ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_41_78c645d87fe43b41.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! በፊት መቀመጫዎች መካከል ወይም ከመሪው አጠገብ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_42_daba12e216a3e862.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! በፊት መቀመጫዎች መካከል ወይም ከመሪው አጠገብ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_46_bc6971e0cc219b4c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! በፊት መቀመጫዎች መካከል ወይም ከመሪው አጠገብ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_44_8b96f50cf0e70df4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: በፊት መቀመጫዎች መካከል ወይም ከመሪው አጠገብ።",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_48_ba76b748f35b2cb1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ማርሽ ለመቀየር ምን ማድረግ ያስፈልጋል?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_25_5e8999b89b7c031a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ብሬክን ብቻ መርገጥ።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_13_faa373ba9be7dab0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ብሬክን ብቻ መርገጥ።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_18_47bd791f345ec932.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ክላቹን መርገጥ እና በተመሳሳይ ጊዜ ነዳጅ መስጠት።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_32_8ca57e6efa1069ae.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ክላቹን መርገጥ እና በተመሳሳይ ጊዜ ነዳጅ መስጠት።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_37_d0a97ea8cb850270.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ክላቹን መርገጥ እና በተመሳሳይ ጊዜ ነዳጅ መስጠትን ማቆም።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_37_0c1f43d01fc577fb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ክላቹን መርገጥ እና በተመሳሳይ ጊዜ ነዳጅ መስጠትን ማቆም።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_42_37b3de78adea914f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መሪውን ብቻ ማዞር።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_12_1a7d8a884c45e23b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። መሪውን ብቻ ማዞር።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_17_0c25f7d8baafe287.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ክላቹን መርገጥ እና በተመሳሳይ ጊዜ ነዳጅ መስጠትን ማቆም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_43_c61a4d36897837c2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ክላቹን መርገጥ እና በተመሳሳይ ጊዜ ነዳጅ መስጠትን ማቆም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_41_3f9c1768836c6dd4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ክላቹን መርገጥ እና በተመሳሳይ ጊዜ ነዳጅ መስጠትን ማቆም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_42_53ce9e9ef02437bd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ክላቹን መርገጥ እና በተመሳሳይ ጊዜ ነዳጅ መስጠትን ማቆም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_41_22822de07aae1c29.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ክላቹን መርገጥ እና በተመሳሳይ ጊዜ ነዳጅ መስጠትን ማቆም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_42_77504050369699e2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ክላቹን መርገጥ እና በተመሳሳይ ጊዜ ነዳጅ መስጠትን ማቆም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_41_436e3bbf2d2dac5c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ክላቹን መርገጥ እና በተመሳሳይ ጊዜ ነዳጅ መስጠትን ማቆም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_42_e27a8678153a4f09.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ክላቹን መርገጥ እና በተመሳሳይ ጊዜ ነዳጅ መስጠትን ማቆም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_45_b3619020d766fd48.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ክላቹን መርገጥ እና በተመሳሳይ ጊዜ ነዳጅ መስጠትን ማቆም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_46_e9e42b4224fa10e3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ክላቹን መርገጥ እና በተመሳሳይ ጊዜ ነዳጅ መስጠትን ማቆም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_46_9d0f82daec9e1c29.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ክላቹን መርገጥ እና በተመሳሳይ ጊዜ ነዳጅ መስጠትን ማቆም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_46_1a05a51859ca774e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ክላቹን መርገጥ እና በተመሳሳይ ጊዜ ነዳጅ መስጠትን ማቆም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_48_8166de609b27eaae.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ክላቹን መርገጥ እና በተመሳሳይ ጊዜ ነዳጅ መስጠትን ማቆም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_49_ed118f081f1089ad.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ክላቹን መርገጥ እና በተመሳሳይ ጊዜ ነዳጅ መስጠትን ማቆም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_53_9cc5a61ebae4ea43.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ክላቹን መርገጥ እና በተመሳሳይ ጊዜ ነዳጅ መስጠትን ማቆም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_51_1b54d0c4dfb1517b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ክላቹን መርገጥ እና በተመሳሳይ ጊዜ ነዳጅ መስጠትን ማቆም።",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_55_a9737daf4e0e739e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የማርሾቹን ቦታዎች እንዴት መለየት እንችላለን?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_29_c541f6b4d8584c77.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በመኪናው ቀለም።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_10_eb16c24ec766749e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። በመኪናው ቀለም።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_15_cb3b26981bccc1dc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በመኪናው ውስጥ በሚሰማው ድምጽ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_20_5c45945ed3b2205f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። በመኪናው ውስጥ በሚሰማው ድምጽ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_25_86575028a1535501.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የማርሽ መቀየሪያው እጀታ ጫፍ ላይ ባለው ስዕል መሰረት።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_35_476ce2e8e2771530.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የማርሽ መቀየሪያው እጀታ ጫፍ ላይ ባለው ስዕል መሰረት።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_40_89e88fc63986c844.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በመኪናው መስኮቶች መጠን።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_16_2d96466ee34fdaae.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። በመኪናው መስኮቶች መጠን።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_21_b65fb4d0c2f050d2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! የማርሽ መቀየሪያው እጀታ ጫፍ ላይ ባለው ስዕል መሰረት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_41_4299705081406f09.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! የማርሽ መቀየሪያው እጀታ ጫፍ ላይ ባለው ስዕል መሰረት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_39_620871a6802cd99f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! የማርሽ መቀየሪያው እጀታ ጫፍ ላይ ባለው ስዕል መሰረት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_40_eb114b70406f5a76.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! የማርሽ መቀየሪያው እጀታ ጫፍ ላይ ባለው ስዕል መሰረት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_39_264f134856eef7e2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! የማርሽ መቀየሪያው እጀታ ጫፍ ላይ ባለው ስዕል መሰረት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_40_19ac254c6f9b0969.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! የማርሽ መቀየሪያው እጀታ ጫፍ ላይ ባለው ስዕል መሰረት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_39_1589293895591117.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! የማርሽ መቀየሪያው እጀታ ጫፍ ላይ ባለው ስዕል መሰረት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_40_fb52a8282a5e8382.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! የማርሽ መቀየሪያው እጀታ ጫፍ ላይ ባለው ስዕል መሰረት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_43_83c55fab3dee6c03.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! የማርሽ መቀየሪያው እጀታ ጫፍ ላይ ባለው ስዕል መሰረት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_44_bcbb95406066be28.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! የማርሽ መቀየሪያው እጀታ ጫፍ ላይ ባለው ስዕል መሰረት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_44_366381308cdef7e2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! የማርሽ መቀየሪያው እጀታ ጫፍ ላይ ባለው ስዕል መሰረት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_44_b145ee5a6da7b585.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! የማርሽ መቀየሪያው እጀታ ጫፍ ላይ ባለው ስዕል መሰረት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_46_3bcd4fc0d780de25.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! የማርሽ መቀየሪያው እጀታ ጫፍ ላይ ባለው ስዕል መሰረት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_47_d728c4cf9f02e466.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! የማርሽ መቀየሪያው እጀታ ጫፍ ላይ ባለው ስዕል መሰረት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_51_4d3ef556628ac948.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! የማርሽ መቀየሪያው እጀታ ጫፍ ላይ ባለው ስዕል መሰረት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_49_e3bf8a66af1965b0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: የማርሽ መቀየሪያው እጀታ ጫፍ ላይ ባለው ስዕል መሰረት።",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_53_547a136ed09d8ad5.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

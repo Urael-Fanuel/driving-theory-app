@@ -19,7 +19,7 @@
  * Zero text shown to Engine A users.
  */
 
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef, useCallback } from 'react';
 
 import {
   View,
@@ -32,7 +32,8 @@ import {
   ScrollView,
 } from 'react-native';
 import { VideoModal } from '../../../components/shared/VideoModal';
-import { useLocalSearchParams, useRouter } from 'expo-router';
+import { useLocalSearchParams, useRouter, useFocusEffect } from 'expo-router';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import * as Haptics from 'expo-haptics';
 import { Colors } from '../../../constants/colors';
 import { LoadingScreen } from '../../../components/shared/LoadingScreen';
@@ -50,6 +51,10 @@ export default function EngineASignScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
 
   const router = useRouter();
+  // The Android system bar sits over the bottom of the screen (edge-to-edge): the
+  // last item needs this much room or the bar covers it (2026-10-25).
+  const insets = useSafeAreaInsets();
+
   const { stopAudio, pauseAudio, resumeAudio, audioState } = useAudio();
   const { markSignViewed } = useProgress();
 
@@ -106,6 +111,21 @@ export default function EngineASignScreen() {
     pulseAnim.setValue(1);
   }, [id]); // eslint-disable-line react-hooks/exhaustive-deps
 
+  // ── Leaving this screen ends its reading ─────────────────────────────────────
+  // The screen stays mounted under the question screen, so its effect is not
+  // cleaned up when the learner moves on. With two clips in a row (name, then
+  // explanation), the question screen stopping the NAME clip let this sequence
+  // go on and start the EXPLANATION, which the question then cut off a second
+  // later (owner's report 2026-10-25: "ይህ ምልክት" heard, then the question).
+  // Once the learner leaves, the next clip must not start.
+  const leavingRef = useRef(false);
+  useFocusEffect(
+    useCallback(() => {
+      leavingRef.current = false;
+      return () => { leavingRef.current = true; };
+    }, [])
+  );
+
   // ── Auto-play audio; re-runs on replayCount to support replay ────────────────
 
   useEffect(() => {
@@ -121,12 +141,16 @@ export default function EngineASignScreen() {
       // Cannot be resolved prematurely by another audio completing or erroring.
       // The sign NAME clip (official wording, only for signs that have one) plays
       // first, then the explanation. The quiz button waits for both.
+      const stop = () => cancelled || leavingRef.current;
       if (sign!.audio_name_url) {
-        await playAndAwaitAudio(sign!.audio_name_url, () => cancelled);
+        await playAndAwaitAudio(sign!.audio_name_url, stop);
         if (cancelled) return;
       }
-      if (sign!.audio_explanation_url) {
-        await playAndAwaitAudio(sign!.audio_explanation_url, () => cancelled);
+      // Left during the name clip (e.g. straight into the questions): do not
+      // start the explanation. The quiz button still counts as reached, as it
+      // did when this screen had one clip and the question screen stopped it.
+      if (sign!.audio_explanation_url && !leavingRef.current) {
+        await playAndAwaitAudio(sign!.audio_explanation_url, stop);
         if (cancelled) return;
       }
       setAudioEnded(true);
@@ -209,6 +233,7 @@ export default function EngineASignScreen() {
 
   const handleStartQuiz = async () => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+    leavingRef.current = true;   // before the question screen can stop the current clip
     navigateToQuiz();
   };
 
@@ -225,7 +250,7 @@ export default function EngineASignScreen() {
     <SafeAreaView style={styles.safeArea}>
       <OfflineBanner />
       <ScrollView
-        contentContainerStyle={styles.scrollContent}
+        contentContainerStyle={[styles.scrollContent, { paddingBottom: 24 + insets.bottom + 12 }]}
         showsVerticalScrollIndicator={false}
       >
         {/* Back button */}

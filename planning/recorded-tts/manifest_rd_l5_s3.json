@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:20:01.322Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "rd_l5_s3",
+   "key": "road_decisions_4_2",
+   "sentences": [
+    {
+     "text": "የባቡር መሻገሪያ ምንድን ነው?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_19_264fb098a0d57ee2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መንገድና የባቡር ሀዲድ በአንድ ደረጃ የሚገናኙበት ቦታ ሲሆን ምልክትም የተተከለበት።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_53_6030af7cf19f7306.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። መንገድና የባቡር ሀዲድ በአንድ ደረጃ የሚገናኙበት ቦታ ሲሆን ምልክትም የተተከለበት።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_58_f934d31ef4b05404.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የባቡር ሀዲድ ማቋረጥ የሚቻልበት ማንኛውም ቦታ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_30_ecff9cca920535fb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። የባቡር ሀዲድ ማቋረጥ የሚቻልበት ማንኛውም ቦታ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_35_dbbbb8683688bca5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በፈጣን መንገድ ላይ መንገድና የባቡር ሀዲድ የሚገናኙበት ቦታ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_39_800dca68b20af13c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። በፈጣን መንገድ ላይ መንገድና የባቡር ሀዲድ የሚገናኙበት ቦታ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_44_b0e057cc0f0b9c08.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መንገድ በድልድይ ከባቡር ሀዲድ በላይ የሚያልፍበት ቦታ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_35_a70b12d8192bdbe8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። መንገድ በድልድይ ከባቡር ሀዲድ በላይ የሚያልፍበት ቦታ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_40_f651762070846994.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! መንገድና የባቡር ሀዲድ በአንድ ደረጃ የሚገናኙበት ቦታ ሲሆን ምልክትም የተተከለበት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_59_152f387ee063223f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! መንገድና የባቡር ሀዲድ በአንድ ደረጃ የሚገናኙበት ቦታ ሲሆን ምልክትም የተተከለበት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_57_bb2a8562b8818329.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! መንገድና የባቡር ሀዲድ በአንድ ደረጃ የሚገናኙበት ቦታ ሲሆን ምልክትም የተተከለበት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_58_b3b73dce4c27a5c0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! መንገድና የባቡር ሀዲድ በአንድ ደረጃ የሚገናኙበት ቦታ ሲሆን ምልክትም የተተከለበት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_57_79894588f0db2c54.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! መንገድና የባቡር ሀዲድ በአንድ ደረጃ የሚገናኙበት ቦታ ሲሆን ምልክትም የተተከለበት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_58_339ff76829e131df.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! መንገድና የባቡር ሀዲድ በአንድ ደረጃ የሚገናኙበት ቦታ ሲሆን ምልክትም የተተከለበት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_57_641a29defb8bd1a1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! መንገድና የባቡር ሀዲድ በአንድ ደረጃ የሚገናኙበት ቦታ ሲሆን ምልክትም የተተከለበት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_58_07659778b2f7a434.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! መንገድና የባቡር ሀዲድ በአንድ ደረጃ የሚገናኙበት ቦታ ሲሆን ምልክትም የተተከለበት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_61_fdfce16e1e5f44b5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! መንገድና የባቡር ሀዲድ በአንድ ደረጃ የሚገናኙበት ቦታ ሲሆን ምልክትም የተተከለበት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_62_34b46380d98e361e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! መንገድና የባቡር ሀዲድ በአንድ ደረጃ የሚገናኙበት ቦታ ሲሆን ምልክትም የተተከለበት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_62_f45c1e1842cb2c54.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! መንገድና የባቡር ሀዲድ በአንድ ደረጃ የሚገናኙበት ቦታ ሲሆን ምልክትም የተተከለበት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_62_6448c190ca6b27b3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! መንገድና የባቡር ሀዲድ በአንድ ደረጃ የሚገናኙበት ቦታ ሲሆን ምልክትም የተተከለበት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_64_64d0d63028ec2e93.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! መንገድና የባቡር ሀዲድ በአንድ ደረጃ የሚገናኙበት ቦታ ሲሆን ምልክትም የተተከለበት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_65_64de7ad84e765fd0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! መንገድና የባቡር ሀዲድ በአንድ ደረጃ የሚገናኙበት ቦታ ሲሆን ምልክትም የተተከለበት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_69_f8936f8093e3617e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! መንገድና የባቡር ሀዲድ በአንድ ደረጃ የሚገናኙበት ቦታ ሲሆን ምልክትም የተተከለበት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_67_260d18a282614286.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: መንገድና የባቡር ሀዲድ በአንድ ደረጃ የሚገናኙበት ቦታ ሲሆን ምልክትም የተተከለበት።",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_71_50acbedc86c4a8e3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መዝጊያ፣ ቀይ መብራት ወይም የማቆሚያ ምልክት ባይኖርም እዚህ ለምን ንቁ መሆን አለብዎት?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_56_a7666d94e5209edc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሌላ አሽከርካሪ ላይቆም ስለሚችል ነው።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_24_1e5c8d6c8889a02e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ሌላ አሽከርካሪ ላይቆም ስለሚችል ነው።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_29_35e57ad201afc16c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መንገዱ ጠባብ ስለሆነ በጥንቃቄ ማለፍ አለብዎት።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_30_20e12270afd66941.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። መንገዱ ጠባብ ስለሆነ በጥንቃቄ ማለፍ አለብዎት።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_35_f82a555e862e001f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ባቡር በድንገት ሊመጣ ስለሚችል ማየትና መስማት አለብዎት።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_36_0e559c7020302253.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ባቡር በድንገት ሊመጣ ስለሚችል ማየትና መስማት አለብዎት።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_41_8cd8b4ffd1dec167.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የፍጥነት ገደብ ደንብ ስላለ ነው።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_21_3929e4c621c7a3d4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። የፍጥነት ገደብ ደንብ ስላለ ነው።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_26_2aae447834131828.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ባቡር በድንገት ሊመጣ ስለሚችል ማየትና መስማት አለብዎት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_42_1f3fc090c9acd08a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ባቡር በድንገት ሊመጣ ስለሚችል ማየትና መስማት አለብዎት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_40_50831fc60647f05c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ባቡር በድንገት ሊመጣ ስለሚችል ማየትና መስማት አለብዎት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_41_1f01e002f6a765d5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ባቡር በድንገት ሊመጣ ስለሚችል ማየትና መስማት አለብዎት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_40_91180ae8d243c4c1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ባቡር በድንገት ሊመጣ ስለሚችል ማየትና መስማት አለብዎት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_41_ffa11c1018e06aea.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ባቡር በድንገት ሊመጣ ስለሚችል ማየትና መስማት አለብዎት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_40_af2c3250113eb8d4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ባቡር በድንገት ሊመጣ ስለሚችል ማየትና መስማት አለብዎት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_41_0ca8c69c203b6be1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ባቡር በድንገት ሊመጣ ስለሚችል ማየትና መስማት አለብዎት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_44_e306de2000950b40.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ባቡር በድንገት ሊመጣ ስለሚችል ማየትና መስማት አለብዎት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_45_0004488a5bf6fe4b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ባቡር በድንገት ሊመጣ ስለሚችል ማየትና መስማት አለብዎት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_45_2dc14077c633c4c1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ባቡር በድንገት ሊመጣ ስለሚችል ማየትና መስማት አለብዎት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_45_abfde84419dcf886.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ባቡር በድንገት ሊመጣ ስለሚችል ማየትና መስማት አለብዎት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_47_f3efb688f53bd826.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ባቡር በድንገት ሊመጣ ስለሚችል ማየትና መስማት አለብዎት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_48_15e3c596903289c5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ባቡር በድንገት ሊመጣ ስለሚችል ማየትና መስማት አለብዎት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_52_95e9391a0c6682eb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ባቡር በድንገት ሊመጣ ስለሚችል ማየትና መስማት አለብዎት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_50_cc072860fc836cd3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ባቡር በድንገት ሊመጣ ስለሚችል ማየትና መስማት አለብዎት።",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_54_fbdded00e117bad6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በዚህ ስዕል ላይ መዝጊያና ማስጠንቀቂያ መብራት የለም። በግልዎ ሳያረጋግጡ ማለፍ ይችላሉ?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_56_15b72d0d87770d82.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ባቡር አይታይምና ማለፍ ይቻላል።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_20_da1eb74a44813a7b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ባቡር አይታይምና ማለፍ ይቻላል።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_25_93928276107bd8b9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አይ፣ ባቡር አለመኖሩን ለማረጋገጥ ማየትና መስማት አለብዎት።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_38_4420c70437f67c21.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። አይ፣ ባቡር አለመኖሩን ለማረጋገጥ ማየትና መስማት አለብዎት።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_43_fe3008963f3aac7f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሌሎች መኪኖች ስለሚያልፉ እርስዎም ማለፍ ይችላሉ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_31_09447fbe46bb816b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ሌሎች መኪኖች ስለሚያልፉ እርስዎም ማለፍ ይችላሉ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_36_04626820060db45f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በቀን ጊዜ ብቻ ማለፍ ይቻላል።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_19_4fdb4e461888e854.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። በቀን ጊዜ ብቻ ማለፍ ይቻላል።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_24_25e8725687b4ab68.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! አይ፣ ባቡር አለመኖሩን ለማረጋገጥ ማየትና መስማት አለብዎት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_44_37b477e0ce27d3b8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! አይ፣ ባቡር አለመኖሩን ለማረጋገጥ ማየትና መስማት አለብዎት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_42_fd020328f388c06e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! አይ፣ ባቡር አለመኖሩን ለማረጋገጥ ማየትና መስማት አለብዎት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_43_e6dbe95e5a76e4a7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! አይ፣ ባቡር አለመኖሩን ለማረጋገጥ ማየትና መስማት አለብዎት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_42_030a959645d00cb3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! አይ፣ ባቡር አለመኖሩን ለማረጋገጥ ማየትና መስማት አለብዎት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_43_97445511117a5ed8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! አይ፣ ባቡር አለመኖሩን ለማረጋገጥ ማየትና መስማት አለብዎት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_42_fd6679b01b843fe6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! አይ፣ ባቡር አለመኖሩን ለማረጋገጥ ማየትና መስማት አለብዎት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_43_4bf7bbf0efbadc13.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! አይ፣ ባቡር አለመኖሩን ለማረጋገጥ ማየትና መስማት አለብዎት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_46_7da41e2640429872.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! አይ፣ ባቡር አለመኖሩን ለማረጋገጥ ማየትና መስማት አለብዎት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_47_591c62c866c56839.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! አይ፣ ባቡር አለመኖሩን ለማረጋገጥ ማየትና መስማት አለብዎት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_47_cd7feea0f5c00cb3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! አይ፣ ባቡር አለመኖሩን ለማረጋገጥ ማየትና መስማት አለብዎት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_47_9263d5a87826f6b4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! አይ፣ ባቡር አለመኖሩን ለማረጋገጥ ማየትና መስማት አለብዎት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_49_100f86c6f6c63514.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! አይ፣ ባቡር አለመኖሩን ለማረጋገጥ ማየትና መስማት አለብዎት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_50_53ac57a012570cb7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! አይ፣ ባቡር አለመኖሩን ለማረጋገጥ ማየትና መስማት አለብዎት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_54_3910cea875a7df19.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! አይ፣ ባቡር አለመኖሩን ለማረጋገጥ ማየትና መስማት አለብዎት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_52_6c2d6a082358c1a1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: አይ፣ ባቡር አለመኖሩን ለማረጋገጥ ማየትና መስማት አለብዎት።",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_56_3543d508e15eb1e4.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

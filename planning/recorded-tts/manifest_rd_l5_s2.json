@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:19:50.987Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "rd_l5_s2",
+   "key": "road_decisions_4_1",
+   "sentences": [
+    {
+     "text": "እዚህ ካቆሙ በኋላ ወዲያው ምን ማድረግ አለብዎት?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_31_8e2ebfc8ea2e06bd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሬዲዮውን አጥፍተው መስኮትዎን ይክፈቱ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_24_2bf0bb28b0071c6e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ሬዲዮውን አጥፍተው መስኮትዎን ይክፈቱ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_29_eb5e3822e5500f2c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መስተዋትዎን ብቻ ይመልከቱ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_17_d24c3f82f4e38b40.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። መስተዋትዎን ብቻ ይመልከቱ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_22_be90fdc028b79fde.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መስኮትዎን ዘግተው ሬዲዮውን ይክፈቱ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_23_66236450a8e465f3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። መስኮትዎን ዘግተው ሬዲዮውን ይክፈቱ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_28_8264193a779139c7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስልክዎን ይመልከቱ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_12_30cabafca1daac28.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ስልክዎን ይመልከቱ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_17_ffa40aaeb9f8a694.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ሬዲዮውን አጥፍተው መስኮትዎን ይክፈቱ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_30_7e9930ac2f1d0037.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ሬዲዮውን አጥፍተው መስኮትዎን ይክፈቱ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_28_54d4d0a07cedda61.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ሬዲዮውን አጥፍተው መስኮትዎን ይክፈቱ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_29_c37eaae8764f2fe8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ሬዲዮውን አጥፍተው መስኮትዎን ይክፈቱ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_28_6b193c1cc5761bfc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ሬዲዮውን አጥፍተው መስኮትዎን ይክፈቱ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_29_65a9b2346afabed7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ሬዲዮውን አጥፍተው መስኮትዎን ይክፈቱ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_28_8f75b4ba70c88fe9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ሬዲዮውን አጥፍተው መስኮትዎን ይክፈቱ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_29_8b9c166c93ad5fdc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ሬዲዮውን አጥፍተው መስኮትዎን ይክፈቱ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_32_9150a1082875327d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ሬዲዮውን አጥፍተው መስኮትዎን ይክፈቱ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_33_34a5559a5d64fa76.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ሬዲዮውን አጥፍተው መስኮትዎን ይክፈቱ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_33_9253f12351661bfc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ሬዲዮውን አጥፍተው መስኮትዎን ይክፈቱ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_33_41a68e205ea9233b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ሬዲዮውን አጥፍተው መስኮትዎን ይክፈቱ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_35_101f7788ad1d2e9b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ሬዲዮውን አጥፍተው መስኮትዎን ይክፈቱ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_36_38fabae2e9d98bf8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ሬዲዮውን አጥፍተው መስኮትዎን ይክፈቱ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_40_4d870de8f1f04fd6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ሬዲዮውን አጥፍተው መስኮትዎን ይክፈቱ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_38_176e5a8ae2b9c9ee.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ሬዲዮውን አጥፍተው መስኮትዎን ይክፈቱ።",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_42_a363ef74ab710beb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ባቡር መኖሩን እንዴት ያረጋግጣሉ?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_21_ebe7d4c40f579099.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ወደፊት ብቻ በመመልከት።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_15_54c33e484c6c3f6e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ወደፊት ብቻ በመመልከት።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_20_f18004524bc6e0ec.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በማዳመጥና በሁለቱም አቅጣጫ በመመልከት።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_25_9d4f7942731c1899.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። በማዳመጥና በሁለቱም አቅጣጫ በመመልከት።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_30_d49f486060b3c287.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሌላ መኪና እስኪያልፍ በመጠበቅ።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_20_f68a391e2e87a20d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ሌላ መኪና እስኪያልፍ በመጠበቅ።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_25_cdbf66fea3cc5f79.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሳያዩ በማዳመጥ ብቻ።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_13_16613aa85f02577d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ሳያዩ በማዳመጥ ብቻ።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_18_4fedf6962f094bc1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! በማዳመጥና በሁለቱም አቅጣጫ በመመልከት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_31_edba9788882aa220.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! በማዳመጥና በሁለቱም አቅጣጫ በመመልከት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_29_73c486406462f8b6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! በማዳመጥና በሁለቱም አቅጣጫ በመመልከት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_30_6c0b40b8b065415f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! በማዳመጥና በሁለቱም አቅጣጫ በመመልከት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_29_c7669dd0ba79d9cb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! በማዳመጥና በሁለቱም አቅጣጫ በመመልከት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_30_decdd8204a893d80.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! በማዳመጥና በሁለቱም አቅጣጫ በመመልከት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_29_c6d43218cd74563e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! በማዳመጥና በሁለቱም አቅጣጫ በመመልከት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_30_3368902825c2576b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! በማዳመጥና በሁለቱም አቅጣጫ በመመልከት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_33_db308a530e74f82a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! በማዳመጥና በሁለቱም አቅጣጫ በመመልከት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_34_07b67b3eb4291181.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! በማዳመጥና በሁለቱም አቅጣጫ በመመልከት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_34_55ee245ec469d9cb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! በማዳመጥና በሁለቱም አቅጣጫ በመመልከት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_34_2a9272685d0745ac.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! በማዳመጥና በሁለቱም አቅጣጫ በመመልከት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_36_c33444d024b3f9cc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! በማዳመጥና በሁለቱም አቅጣጫ በመመልከት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_37_a222392adf991b4f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! በማዳመጥና በሁለቱም አቅጣጫ በመመልከት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_41_35c1328c1f5972a1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! በማዳመጥና በሁለቱም አቅጣጫ በመመልከት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_39_493f2b184f1e3f19.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: በማዳመጥና በሁለቱም አቅጣጫ በመመልከት።",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_43_70d998fea882a07c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መቼ ማሽከርከርዎን መቀጠል ይችላሉ?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_22_dab22818f3527024.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ለአጭር ጊዜ ከጠበቁ በኋላ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_17_63386cfc799c4bf0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ለአጭር ጊዜ ከጠበቁ በኋላ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_22_82b2dc0c98a6c9f2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ባቡር ከቅርብ ጊዜ ወዲህ ካላለፈ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_21_a7e7aef8daf36c44.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ባቡር ከቅርብ ጊዜ ወዲህ ካላለፈ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_26_6a559996df00d7da.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ ጊዜ በፍጥነት ከተመለከቱ በኋላ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_24_50916bf8ca11ae2d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። አንድ ጊዜ በፍጥነት ከተመለከቱ በኋላ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_29_c1ffea68e28aa9d9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ባቡር የመምጣት ምንም ምልክት እንደሌለ እርግጠኛ ሲሆኑ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_35_9866b8102d7df051.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ባቡር የመምጣት ምንም ምልክት እንደሌለ እርግጠኛ ሲሆኑ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_40_a0cedfb45969c72d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ባቡር የመምጣት ምንም ምልክት እንደሌለ እርግጠኛ ሲሆኑ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_41_e1013f502e368ee8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ባቡር የመምጣት ምንም ምልክት እንደሌለ እርግጠኛ ሲሆኑ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_39_51577e60bd3eba7e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ባቡር የመምጣት ምንም ምልክት እንደሌለ እርግጠኛ ሲሆኑ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_40_77e093144cfb3a97.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ባቡር የመምጣት ምንም ምልክት እንደሌለ እርግጠኛ ሲሆኑ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_39_5b905204eaf22803.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ባቡር የመምጣት ምንም ምልክት እንደሌለ እርግጠኛ ሲሆኑ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_40_c4e513406d0d86c8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ባቡር የመምጣት ምንም ምልክት እንደሌለ እርግጠኛ ሲሆኑ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_39_7e6d3602d67224f6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ባቡር የመምጣት ምንም ምልክት እንደሌለ እርግጠኛ ሲሆኑ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_40_f730b44a359dac23.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ባቡር የመምጣት ምንም ምልክት እንደሌለ እርግጠኛ ሲሆኑ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_43_27efb728bde8b2e2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ባቡር የመምጣት ምንም ምልክት እንደሌለ እርግጠኛ ሲሆኑ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_44_5e6324cbb812bb49.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ባቡር የመምጣት ምንም ምልክት እንደሌለ እርግጠኛ ሲሆኑ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_44_35aa2dba20e22803.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ባቡር የመምጣት ምንም ምልክት እንደሌለ እርግጠኛ ሲሆኑ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_44_cde8d2aaab501164.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ባቡር የመምጣት ምንም ምልክት እንደሌለ እርግጠኛ ሲሆኑ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_46_33e387218610ac84.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ባቡር የመምጣት ምንም ምልክት እንደሌለ እርግጠኛ ሲሆኑ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_47_868e92415044cc87.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ባቡር የመምጣት ምንም ምልክት እንደሌለ እርግጠኛ ሲሆኑ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_51_dfd7436009b665e9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ባቡር የመምጣት ምንም ምልክት እንደሌለ እርግጠኛ ሲሆኑ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_49_e46ae948ecc06fd1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ባቡር የመምጣት ምንም ምልክት እንደሌለ እርግጠኛ ሲሆኑ።",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_53_d6d2bcf0f0f329b4.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:10:13.300Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "vk_l5_s1",
+   "key": "vehicle_knowledge_4_0",
+   "sentences": [
+    {
+     "text": "የመኪና ሞተር ዋና ዓላማ ምንድነው?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_22_1a9c7cbc4023d5cb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የነዳጅ እና የአየር ፍንዳታ ድብልቅን ወደ እንቅስቃሴ መለወጥ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_38_76d27abc4f925517.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። የነዳጅ እና የአየር ፍንዳታ ድብልቅን ወደ እንቅስቃሴ መለወጥ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_43_9e6ee63b2ea28b55.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሞተሩን ለማቀዝቀዝ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_11_6b32ea146359c5a4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ሞተሩን ለማቀዝቀዝ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_16_2a5ce8d3e2a6ba3a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ውሃን ወደ ነዳጅ መለወጥ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_15_40022ce802119f7d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ውሃን ወደ ነዳጅ መለወጥ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_20_3c303f18cac929c9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ብሬኩን ለማስሰራ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_10_8e7d618c069be18d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ብሬኩን ለማስሰራ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_15_d9251d9dd4ceb8f1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! የነዳጅ እና የአየር ፍንዳታ ድብልቅን ወደ እንቅስቃሴ መለወጥ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_44_dc957c54c9d4070e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! የነዳጅ እና የአየር ፍንዳታ ድብልቅን ወደ እንቅስቃሴ መለወጥ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_42_2fbe746c811fc0d8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! የነዳጅ እና የአየር ፍንዳታ ድብልቅን ወደ እንቅስቃሴ መለወጥ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_43_d7693bccfa7de391.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! የነዳጅ እና የአየር ፍንዳታ ድብልቅን ወደ እንቅስቃሴ መለወጥ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_42_efa276a053e74f85.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! የነዳጅ እና የአየር ፍንዳታ ድብልቅን ወደ እንቅስቃሴ መለወጥ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_43_b0637fe4ede5766e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! የነዳጅ እና የአየር ፍንዳታ ድብልቅን ወደ እንቅስቃሴ መለወጥ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_42_fc99f664858b2250.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! የነዳጅ እና የአየር ፍንዳታ ድብልቅን ወደ እንቅስቃሴ መለወጥ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_43_3dbfd4e07fa9c725.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! የነዳጅ እና የአየር ፍንዳታ ድብልቅን ወደ እንቅስቃሴ መለወጥ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_46_5f39d160d8ea56c4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! የነዳጅ እና የአየር ፍንዳታ ድብልቅን ወደ እንቅስቃሴ መለወጥ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_47_f82de0274fdb490f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! የነዳጅ እና የአየር ፍንዳታ ድብልቅን ወደ እንቅስቃሴ መለወጥ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_47_34865b8403d74f85.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! የነዳጅ እና የአየር ፍንዳታ ድብልቅን ወደ እንቅስቃሴ መለወጥ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_47_2d43f530fb26c202.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! የነዳጅ እና የአየር ፍንዳታ ድብልቅን ወደ እንቅስቃሴ መለወጥ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_49_9506b2d064f451a2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! የነዳጅ እና የአየር ፍንዳታ ድብልቅን ወደ እንቅስቃሴ መለወጥ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_50_41b47bdc7c586381.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! የነዳጅ እና የአየር ፍንዳታ ድብልቅን ወደ እንቅስቃሴ መለወጥ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_54_1078764877ae9b2f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! የነዳጅ እና የአየር ፍንዳታ ድብልቅን ወደ እንቅስቃሴ መለወጥ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_52_88c1c097cd15e497.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: የነዳጅ እና የአየር ፍንዳታ ድብልቅን ወደ እንቅስቃሴ መለወጥ",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_56_f1b6845ca52f9652.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የሞተሩ ዑደት ስንት ምዕራፎች አሉት?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_23_26df01009d1fd058.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት ምዕራፎች",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_9_e5499e49ddcb6789.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ሁለት ምዕራፎች",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_14_d87bd9b40117d70b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት ምዕራፎች",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_9_6003d5b8804a85e3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ሶስት ምዕራፎች",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_14_cd3238e0b3d473fd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት ምዕራፎች",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_9_7b83fe9b0173ccab.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። አራት ምዕራፎች",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_14_bcdf92808fcf969f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አምስት ምዕራፎች",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_10_9fa6869401ed96c8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። አምስት ምዕራፎች",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_15_318e8080edd2cb74.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! አራት ምዕራፎች",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_15_ac2ec7009cf707d2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! አራት ምዕራፎች",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_13_0eb368489ab68dc4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! አራት ምዕራፎች",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_14_6329a880c2faeced.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! አራት ምዕራፎች",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_13_598f65347e2e7f79.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! አራት ምዕራፎች",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_14_e0b0fd3807d55ff2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! አራት ምዕራፎች",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_13_289994b3305ad74c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! አራት ምዕራፎች",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_14_d65d086c8bf683d9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! አራት ምዕራፎች",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_17_ccf1c7d86df69958.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! አራት ምዕራፎች",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_18_d4824cd0bd989bb3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! አራት ምዕራፎች",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_18_4fef1c0ca81e7f79.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! አራት ምዕራፎች",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_18_cf5a4ebfb0381f5e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! አራት ምዕራፎች",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_20_51d4b3e88a39a43e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! አራት ምዕራፎች",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_21_5fb8f35cd19602fd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! አራት ምዕራፎች",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_25_3a1c994c6e38c093.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! አራት ምዕራፎች",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_23_df9938801becb92b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: አራት ምዕራፎች",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_27_f34d3ef5753b1e0e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ወደላይና ወደታች የሚንቀሳቀሱ ክፍሎች ቀጥተኛ እንቅስቃሴ ወደ ሽክርክር የሚቀይረው ምን ነው?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_58_99a45495568eeac4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሳት የሚለኩስ ክፍል",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_13_e5a5dc7b265de52d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። እሳት የሚለኩስ ክፍል",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_18_5a3d1c51105e3daf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ወደ ሽክርክር የሚቀይር ዘንግ",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_18_897766e4debfff92.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ወደ ሽክርክር የሚቀይር ዘንግ",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_23_d63184bc9e297e4c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ኃይሉን ወደ ጎማ የሚያስተላልፍ ክፍል",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_23_ecde5cf0ac0bd6c0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ኃይሉን ወደ ጎማ የሚያስተላልፍ ክፍል",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_28_896465b8f51c6ef4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ማቀዝቀዣ ስርዓቱ",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_10_74bb8a801e4df29a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ማቀዝቀዣ ስርዓቱ",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_15_0fe8b96cd7df7466.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ወደ ሽክርክር የሚቀይር ዘንግ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_24_c089973878338b8b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ወደ ሽክርክር የሚቀይር ዘንግ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_22_8443ee2f601daedd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ወደ ሽክርክር የሚቀይር ዘንግ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_23_3c939d98ff129414.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ወደ ሽክርክር የሚቀይር ዘንግ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_22_e768849799162500.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ወደ ሽክርክር የሚቀይር ዘንግ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_23_9a4c8100f56a192b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ወደ ሽክርክር የሚቀይር ዘንግ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_22_c7ed311c106e6155.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ወደ ሽክርክር የሚቀይር ዘንግ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_23_877c3c077940dfe0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ወደ ሽክርክር የሚቀይር ዘንግ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_26_a82d93182beba5c1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ወደ ሽክርክር የሚቀይር ዘንግ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_27_1762b9db0f6d938a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ወደ ሽክርክር የሚቀይር ዘንግ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_27_68c579fcf1062500.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ወደ ሽክርክር የሚቀይር ዘንግ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_27_d12e9b67286ee787.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ወደ ሽክርክር የሚቀይር ዘንግ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_29_c04678c7242723e7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ወደ ሽክርክር የሚቀይር ዘንግ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_30_27dba0509a347c04.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ወደ ሽክርክር የሚቀይር ዘንግ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_34_70d440c8b32e68ea.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ወደ ሽክርክር የሚቀይር ዘንግ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_32_9ac8b957a110f412.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ወደ ሽክርክር የሚቀይር ዘንግ",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_36_d9b6c0487f1edf57.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

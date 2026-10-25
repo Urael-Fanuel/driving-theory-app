@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:13:15.614Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "ms_l3_s1",
+   "key": "mind_safety_2_0",
+   "sentences": [
+    {
+     "text": "አልኮል የማሽከርከር ችሎታን እንዴት ይጎዳል?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_28_7d59143414c1e203.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በፍጥነት እንዲያሽከረክሩ ያደርጋል",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_21_4dc41467be7fdb48.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። በፍጥነት እንዲያሽከረክሩ ያደርጋል",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_26_67c4d6d0d9328cca.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የማሰብ ችሎታን፣ ትኩረትን፣ እንቅስቃሴዎችን የማስተባበር ችሎታን እና ምላሽ የመስጠት ጊዜን ይጎዳል",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_62_145e44983c119b4d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። የማሰብ ችሎታን፣ ትኩረትን፣ እንቅስቃሴዎችን የማስተባበር ችሎታን እና ምላሽ የመስጠት ጊዜን ይጎዳል",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_67_6dd88240223c2393.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የበለጠ ንቁ ያደርጋል",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_13_a18f78140dce12e1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የበለጠ ንቁ ያደርጋል",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_18_5bbc9168d3a13b55.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የማየት ችሎታን ያሻሽላል",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_15_a3dde257d66274f5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። የማየት ችሎታን ያሻሽላል",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_20_065f55ef4b218e89.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! የማሰብ ችሎታን፣ ትኩረትን፣ እንቅስቃሴዎችን የማስተባበር ችሎታን እና ምላሽ የመስጠት ጊዜን ይጎዳል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_68_023ad3cb4137b9d4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! የማሰብ ችሎታን፣ ትኩረትን፣ እንቅስቃሴዎችን የማስተባበር ችሎታን እና ምላሽ የመስጠት ጊዜን ይጎዳል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_66_430cdbd857cdc882.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! የማሰብ ችሎታን፣ ትኩረትን፣ እንቅስቃሴዎችን የማስተባበር ችሎታን እና ምላሽ የመስጠት ጊዜን ይጎዳል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_67_89f0bb9043518ecb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! የማሰብ ችሎታን፣ ትኩረትን፣ እንቅስቃሴዎችን የማስተባበር ችሎታን እና ምላሽ የመስጠት ጊዜን ይጎዳል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_66_0ac9dc782e534adf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! የማሰብ ችሎታን፣ ትኩረትን፣ እንቅስቃሴዎችን የማስተባበር ችሎታን እና ምላሽ የመስጠት ጊዜን ይጎዳል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_67_df662f9c4bfc3db4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! የማሰብ ችሎታን፣ ትኩረትን፣ እንቅስቃሴዎችን የማስተባበር ችሎታን እና ምላሽ የመስጠት ጊዜን ይጎዳል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_66_ecb90f302b4d4c0a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! የማሰብ ችሎታን፣ ትኩረትን፣ እንቅስቃሴዎችን የማስተባበር ችሎታን እና ምላሽ የመስጠት ጊዜን ይጎዳል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_67_279e56f09dd215ff.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! የማሰብ ችሎታን፣ ትኩረትን፣ እንቅስቃሴዎችን የማስተባበር ችሎታን እና ምላሽ የመስጠት ጊዜን ይጎዳል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_70_bff125f02ae7089e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! የማሰብ ችሎታን፣ ትኩረትን፣ እንቅስቃሴዎችን የማስተባበር ችሎታን እና ምላሽ የመስጠት ጊዜን ይጎዳል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_71_107268a8cf536555.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! የማሰብ ችሎታን፣ ትኩረትን፣ እንቅስቃሴዎችን የማስተባበር ችሎታን እና ምላሽ የመስጠት ጊዜን ይጎዳል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_71_16756c98ae434adf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! የማሰብ ችሎታን፣ ትኩረትን፣ እንቅስቃሴዎችን የማስተባበር ችሎታን እና ምላሽ የመስጠት ጊዜን ይጎዳል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_71_4189a10c2096c0d8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! የማሰብ ችሎታን፣ ትኩረትን፣ እንቅስቃሴዎችን የማስተባበር ችሎታን እና ምላሽ የመስጠት ጊዜን ይጎዳል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_73_1f43a9a0954cf3f8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! የማሰብ ችሎታን፣ ትኩረትን፣ እንቅስቃሴዎችን የማስተባበር ችሎታን እና ምላሽ የመስጠት ጊዜን ይጎዳል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_74_4ec43a6838e33edb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! የማሰብ ችሎታን፣ ትኩረትን፣ እንቅስቃሴዎችን የማስተባበር ችሎታን እና ምላሽ የመስጠት ጊዜን ይጎዳል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_78_5a88ee787c5131f5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! የማሰብ ችሎታን፣ ትኩረትን፣ እንቅስቃሴዎችን የማስተባበር ችሎታን እና ምላሽ የመስጠት ጊዜን ይጎዳል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_76_c1a865a8f50c64cd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: የማሰብ ችሎታን፣ ትኩረትን፣ እንቅስቃሴዎችን የማስተባበር ችሎታን እና ምላሽ የመስጠት ጊዜን ይጎዳል",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_80_a5e86c243c0aa708.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከማሽከርከርዎ በፊት ለአሽከርካሪ አስተማማኝ የሆነ የአልኮል መጠን ምን ያህል ነው?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_52_fc733d5d929bff8f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አነስተኛ መጠን ብቻ",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_12_3c81e2dc5e2c2758.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። አነስተኛ መጠን ብቻ",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_17_774db8708b59499a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ ብርጭቆ ብቻ",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_11_9b1d82b892fb9738.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። አንድ ብርጭቆ ብቻ",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_16_056cc8c807b0c0a6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በሰውነት ክብደት ይወሰናል",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_16_7c8e8f0c2ccf453b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። በሰውነት ክብደት ይወሰናል",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_21_a6a12ca0523ce34f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ምንም ዓይነት አልኮል አይጠጣ — ዜሮ",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_23_81a86c90cd97354d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ምንም ዓይነት አልኮል አይጠጣ — ዜሮ",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_28_22ad14d63a487c71.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ምንም ዓይነት አልኮል አይጠጣ — ዜሮ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_29_2236b6d2783d5e74.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ምንም ዓይነት አልኮል አይጠጣ — ዜሮ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_27_527c8e2ec33c02e2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ምንም ዓይነት አልኮል አይጠጣ — ዜሮ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_28_df1b83ead5beea8b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ምንም ዓይነት አልኮል አይጠጣ — ዜሮ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_27_198f7ace46d46d1f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ምንም ዓይነት አልኮል አይጠጣ — ዜሮ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_28_822357b0bf73b694.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ምንም ዓይነት አልኮል አይጠጣ — ዜሮ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_27_f7631d9650b92b6a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ምንም ዓይነት አልኮል አይጠጣ — ዜሮ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_28_c3611b28226d1c7f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ምንም ዓይነት አልኮል አይጠጣ — ዜሮ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_31_2149df1e3c36dc7e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ምንም ዓይነት አልኮል አይጠጣ — ዜሮ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_32_5c164b585ebf2455.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ምንም ዓይነት አልኮል አይጠጣ — ዜሮ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_32_18a8edea14c46d1f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ምንም ዓይነት አልኮል አይጠጣ — ዜሮ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_32_993c06daa8f4bff8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ምንም ዓይነት አልኮል አይጠጣ — ዜሮ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_34_61a9bfe6f29a5858.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ምንም ዓይነት አልኮል አይጠጣ — ዜሮ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_35_51e2f436dd79a09b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ምንም ዓይነት አልኮል አይጠጣ — ዜሮ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_39_29bd1818cb2bf135.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ምንም ዓይነት አልኮል አይጠጣ — ዜሮ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_37_2a3a72f209e5bccd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ምንም ዓይነት አልኮል አይጠጣ — ዜሮ",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_41_b59590daab6cbe28.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ለአዲስ አሽከርካሪዎች እና ለሙያዊ አሽከርካሪዎች ምን ያህል አልኮል ይፈቀዳል?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_49_81d7a5598f9b386d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "0.01%",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_5_54c8293c06ce67ff.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። 0.01%",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_10_0da37cb4a79ffc7d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "0.02%",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_5_a3c056d406ce679c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። 0.02%",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_10_35c228a412ecab02.mp3",
+     "too_long": false
+    },
+    {
+     "text": "0.05%",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_5_c4be4c3006ce687b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። 0.05%",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_10_da35b12fb306aa0f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ምንም ዓይነት አልኮል መኖር የለበትም — ዜሮ",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_28_b8e0b61e3975c248.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ምንም ዓይነት አልኮል መኖር የለበትም — ዜሮ",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_33_37f093daed8e7f34.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ምንም ዓይነት አልኮል መኖር የለበትም — ዜሮ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_34_c12168e0ec39d551.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ምንም ዓይነት አልኮል መኖር የለበትም — ዜሮ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_32_169e36e2d4145d87.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ምንም ዓይነት አልኮል መኖር የለበትም — ዜሮ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_33_185e2ee645e58c4e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ምንም ዓይነት አልኮል መኖር የለበትም — ዜሮ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_32_84d1ee98a33df95a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ምንም ዓይነት አልኮል መኖር የለበትም — ዜሮ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_33_807792f044dcdf31.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ምንም ዓይነት አልኮል መኖር የለበትም — ዜሮ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_32_b08293605d6af70f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ምንም ዓይነት አልኮል መኖር የለበትም — ዜሮ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_33_81818b0264c3a8fa.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ምንም ዓይነት አልኮል መኖር የለበትም — ዜሮ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_36_945f6a6094e0ce9b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ምንም ዓይነት አልኮል መኖር የለበትም — ዜሮ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_37_4d5303d0471a4c50.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ምንም ዓይነት አልኮል መኖር የለበትም — ዜሮ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_37_ab058e16a72df95a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ምንም ዓይነት አልኮል መኖር የለበትም — ዜሮ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_37_eaf47f624c88cd5d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ምንም ዓይነት አልኮል መኖር የለበትም — ዜሮ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_39_c84380a2307ffd7d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ምንም ዓይነት አልኮል መኖር የለበትም — ዜሮ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_40_f2723c8c81b1c05e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ምንም ዓይነት አልኮል መኖር የለበትም — ዜሮ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_44_68f06bb28e5edb70.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ምንም ዓይነት አልኮል መኖር የለበትም — ዜሮ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_42_d2178e2a79a49dc8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ምንም ዓይነት አልኮል መኖር የለበትም — ዜሮ",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_46_fa0a413a2a947c8d.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

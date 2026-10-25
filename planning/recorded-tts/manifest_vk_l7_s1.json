@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:11:30.292Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "vk_l7_s1",
+   "key": "vehicle_knowledge_6_0",
+   "sentences": [
+    {
+     "text": "የእጅ ፍሬን ዋና ዋና ዓላማዎች ምንድን ናቸው?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_29_7ab7dd2c7a72f318.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናው ሲቆም እንዳይንቀሳቀስ መከላከል፣ ቁልቁለት ላይ ሲነሳ ወደ ኋላ እንዳይመለስ መርዳት እና እንደ ድንገተኛ ፍሬን ማገልገል",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_80_5887442017576fbd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። መኪናው ሲቆም እንዳይንቀሳቀስ መከላከል፣ ቁልቁለት ላይ ሲነሳ ወደ ኋላ እንዳይመለስ መርዳት እና እንደ ድንገተኛ ፍሬን ማገልገል",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_85_c8ed89d09abed87f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመኪናውን ፍጥነት መጨመር፣ የነዳጅ ፍጆታን መቀነስ እና ጎማዎችን ማቀዝቀዝ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_47_f6729b5c0fdea67f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። የመኪናውን ፍጥነት መጨመር፣ የነዳጅ ፍጆታን መቀነስ እና ጎማዎችን ማቀዝቀዝ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_52_71618d00f2907f61.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የፊት መብራቶችን ማብራት፣ የኋላ መመልከቻ መስታወቶችን ማስተካከል እና የሬዲዮ ድምጽን መቆጣጠር",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_60_0013788cfa5e3ea9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የፊት መብራቶችን ማብራት፣ የኋላ መመልከቻ መስታወቶችን ማስተካከል እና የሬዲዮ ድምጽን መቆጣጠር",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_65_7ccac0b36237d0dd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመኪናውን ቀለም መጠበቅ፣ የውስጥ ክፍሉን ማጽዳት እና የመቀመጫ ቀበቶዎችን ማሰር",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_51_ce74b4743fb10c15.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። የመኪናውን ቀለም መጠበቅ፣ የውስጥ ክፍሉን ማጽዳት እና የመቀመጫ ቀበቶዎችን ማሰር",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_56_22324864d011e869.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! መኪናው ሲቆም እንዳይንቀሳቀስ መከላከል፣ ቁልቁለት ላይ ሲነሳ ወደ ኋላ እንዳይመለስ መርዳት እና እንደ ድንገተኛ ፍሬን ማገልገል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_86_159b7500823c7924.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! መኪናው ሲቆም እንዳይንቀሳቀስ መከላከል፣ ቁልቁለት ላይ ሲነሳ ወደ ኋላ እንዳይመለስ መርዳት እና እንደ ድንገተኛ ፍሬን ማገልገል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_84_bec3c168d78ad672.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! መኪናው ሲቆም እንዳይንቀሳቀስ መከላከል፣ ቁልቁለት ላይ ሲነሳ ወደ ኋላ እንዳይመለስ መርዳት እና እንደ ድንገተኛ ፍሬን ማገልገል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_85_5c7f3edc3529b3bb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! መኪናው ሲቆም እንዳይንቀሳቀስ መከላከል፣ ቁልቁለት ላይ ሲነሳ ወደ ኋላ እንዳይመለስ መርዳት እና እንደ ድንገተኛ ፍሬን ማገልገል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_84_761727846e1dbbaf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! መኪናው ሲቆም እንዳይንቀሳቀስ መከላከል፣ ቁልቁለት ላይ ሲነሳ ወደ ኋላ እንዳይመለስ መርዳት እና እንደ ድንገተኛ ፍሬን ማገልገል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_85_292927fc21b59b84.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! መኪናው ሲቆም እንዳይንቀሳቀስ መከላከል፣ ቁልቁለት ላይ ሲነሳ ወደ ኋላ እንዳይመለስ መርዳት እና እንደ ድንገተኛ ፍሬን ማገልገል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_84_15663eeb8278b1fa.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! መኪናው ሲቆም እንዳይንቀሳቀስ መከላከል፣ ቁልቁለት ላይ ሲነሳ ወደ ኋላ እንዳይመለስ መርዳት እና እንደ ድንገተኛ ፍሬን ማገልገል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_85_d9f87f338fa0664f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! መኪናው ሲቆም እንዳይንቀሳቀስ መከላከል፣ ቁልቁለት ላይ ሲነሳ ወደ ኋላ እንዳይመለስ መርዳት እና እንደ ድንገተኛ ፍሬን ማገልገል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_88_2c0402f4c250066e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! መኪናው ሲቆም እንዳይንቀሳቀስ መከላከል፣ ቁልቁለት ላይ ሲነሳ ወደ ኋላ እንዳይመለስ መርዳት እና እንደ ድንገተኛ ፍሬን ማገልገል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_89_bdd4574faa027da5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! መኪናው ሲቆም እንዳይንቀሳቀስ መከላከል፣ ቁልቁለት ላይ ሲነሳ ወደ ኋላ እንዳይመለስ መርዳት እና እንደ ድንገተኛ ፍሬን ማገልገል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_89_c1797b788a0dbbaf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! መኪናው ሲቆም እንዳይንቀሳቀስ መከላከል፣ ቁልቁለት ላይ ሲነሳ ወደ ኋላ እንዳይመለስ መርዳት እና እንደ ድንገተኛ ፍሬን ማገልገል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_89_47dce6e0e1f98828.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! መኪናው ሲቆም እንዳይንቀሳቀስ መከላከል፣ ቁልቁለት ላይ ሲነሳ ወደ ኋላ እንዳይመለስ መርዳት እና እንደ ድንገተኛ ፍሬን ማገልገል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_91_347e099ff7bf89c8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! መኪናው ሲቆም እንዳይንቀሳቀስ መከላከል፣ ቁልቁለት ላይ ሲነሳ ወደ ኋላ እንዳይመለስ መርዳት እና እንደ ድንገተኛ ፍሬን ማገልገል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_92_e804c2d4f496cfab.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! መኪናው ሲቆም እንዳይንቀሳቀስ መከላከል፣ ቁልቁለት ላይ ሲነሳ ወደ ኋላ እንዳይመለስ መርዳት እና እንደ ድንገተኛ ፍሬን ማገልገል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_96_c3cf556483edc4c5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! መኪናው ሲቆም እንዳይንቀሳቀስ መከላከል፣ ቁልቁለት ላይ ሲነሳ ወደ ኋላ እንዳይመለስ መርዳት እና እንደ ድንገተኛ ፍሬን ማገልገል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_94_d2ed01cca61f9b3d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: መኪናው ሲቆም እንዳይንቀሳቀስ መከላከል፣ ቁልቁለት ላይ ሲነሳ ወደ ኋላ እንዳይመለስ መርዳት እና እንደ ድንገተኛ ፍሬን ማገልገል",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_98_d79b432856b22a78.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የእጅ ፍሬኑን ለመልቀቅ ምን ማድረግ አለብዎት?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_29_93b294fd91f6a49a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እጀታውን ወደ ላይ መሳብ",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_15_ff83261cca23b63b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። እጀታውን ወደ ላይ መሳብ",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_20_4126b040f71b6bb9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በእጀታው ጫፍ ላይ ያለውን ቁልፍ መጫን",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_24_6b1fedc8546013e2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። በእጀታው ጫፍ ላይ ያለውን ቁልፍ መጫን",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_29_0e313db82251c63c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመኪናውን ቁልፍ ማዞር",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_14_4df8fc78d1441afd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የመኪናውን ቁልፍ ማዞር",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_19_af1aa2c036118089.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የእግር ፍሬኑን መርገጥ",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_14_12bd2373adcaf555.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። የእግር ፍሬኑን መርገጥ",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_19_5d4e5a28692cb7e9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! በእጀታው ጫፍ ላይ ያለውን ቁልፍ መጫን",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_30_00878427d86cf0fb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! በእጀታው ጫፍ ላይ ያለውን ቁልፍ መጫን",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_28_2b7bffc4dba924ad.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! በእጀታው ጫፍ ላይ ያለውን ቁልፍ መጫን",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_29_6f0bae0cd39fd464.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! በእጀታው ጫፍ ላይ ያለውን ቁልፍ መጫን",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_28_2a17e54c4e641f70.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! በእጀታው ጫፍ ላይ ያለውን ቁልፍ መጫን",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_29_911870bce837189b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! በእጀታው ጫፍ ላይ ያለውን ቁልፍ መጫን",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_28_2076f5c099081025.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! በእጀታው ጫፍ ላይ ያለውን ቁልፍ መጫን",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_29_5ab527f006c63950.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! በእጀታው ጫፍ ላይ ያለውን ቁልፍ መጫን",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_32_750651735e51f5b1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! በእጀታው ጫፍ ላይ ያለውን ቁልፍ መጫን",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_33_14bb63c402897ffa.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! በእጀታው ጫፍ ላይ ያለውን ቁልፍ መጫን",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_33_ddaf27d0da541f70.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! በእጀታው ጫፍ ላይ ያለውን ቁልፍ መጫን",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_33_3e069f4771e820f7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! በእጀታው ጫፍ ላይ ያለውን ቁልፍ መጫን",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_35_c39626d0cad415d7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! በእጀታው ጫፍ ላይ ያለውን ቁልፍ መጫን",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_36_9ed8f108dc047c74.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! በእጀታው ጫፍ ላይ ያለውን ቁልፍ መጫን",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_40_c51f24903328725a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! በእጀታው ጫፍ ላይ ያለውን ቁልፍ መጫን",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_38_5e59d4f7a883c162.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: በእጀታው ጫፍ ላይ ያለውን ቁልፍ መጫን",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_42_9b770ea0090a6527.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የእጅ ፍሬኑ መቼ ወደ ላይ መሳብ አለበት?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_26_1f28e995ff2fcdcb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናው በፍጥነት በሚነዳበት ጊዜ ብቻ",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_23_78258f4db01daea0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። መኪናው በፍጥነት በሚነዳበት ጊዜ ብቻ",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_28_bbf45a7c78b19d22.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሞተሩን ከማስነሳት በፊት እና መኪናውን አቁሞ ከመውጣት በፊት",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_38_c9e283af79b8247c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ሞተሩን ከማስነሳት በፊት እና መኪናውን አቁሞ ከመውጣት በፊት",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_43_f27bc958f5f9a422.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎማ ሲቀየር ብቻ",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_10_225575406419d539.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ጎማ ሲቀየር ብቻ",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_15_3ba00df8a7b62ecd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሞተሩ ሲጠፋ ብቻ",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_10_9a4379943f189de5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ሞተሩ ሲጠፋ ብቻ",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_15_b5a72e7565c68c99.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ሞተሩን ከማስነሳት በፊት እና መኪናውን አቁሞ ከመውጣት በፊት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_44_546ea260526ae865.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ሞተሩን ከማስነሳት በፊት እና መኪናውን አቁሞ ከመውጣት በፊት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_42_db584745ff38b5b3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ሞተሩን ከማስነሳት በፊት እና መኪናውን አቁሞ ከመውጣት በፊት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_43_950f5f20089e4bfa.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ሞተሩን ከማስነሳት በፊት እና መኪናውን አቁሞ ከመውጣት በፊት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_42_13d4b2c0948c52ee.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ሞተሩን ከማስነሳት በፊት እና መኪናውን አቁሞ ከመውጣት በፊት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_43_ff3075cfb0d076c5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ሞተሩን ከማስነሳት በፊት እና መኪናውን አቁሞ ከመውጣት በፊት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_42_7849ab7878b7e43b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ሞተሩን ከማስነሳት በፊት እና መኪናውን አቁሞ ከመውጣት በፊት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_43_6bdb88b8fea0418e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ሞተሩን ከማስነሳት በፊት እና መኪናውን አቁሞ ከመውጣት በፊት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_46_0f608857f20da2af.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ሞተሩን ከማስነሳት በፊት እና መኪናውን አቁሞ ከመውጣት በፊት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_47_4dd4d978c6042064.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ሞተሩን ከማስነሳት በፊት እና መኪናውን አቁሞ ከመውጣት በፊት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_47_2806effc447c52ee.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ሞተሩን ከማስነሳት በፊት እና መኪናውን አቁሞ ከመውጣት በፊት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_47_15f6394f065baa69.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ሞተሩን ከማስነሳት በፊት እና መኪናውን አቁሞ ከመውጣት በፊት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_49_6969aa4080891489.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ሞተሩን ከማስነሳት በፊት እና መኪናውን አቁሞ ከመውጣት በፊት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_50_3b754d5cd152a3ea.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ሞተሩን ከማስነሳት በፊት እና መኪናውን አቁሞ ከመውጣት በፊት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_54_1d08ea90d6fe8484.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ሞተሩን ከማስነሳት በፊት እና መኪናውን አቁሞ ከመውጣት በፊት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_52_7af6e29f77bbd2fc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ሞተሩን ከማስነሳት በፊት እና መኪናውን አቁሞ ከመውጣት በፊት",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_56_8d6dbc89f1c0c239.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

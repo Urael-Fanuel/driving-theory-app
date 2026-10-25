@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:11:43.310Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "vk_l7_s2",
+   "key": "vehicle_knowledge_6_1",
+   "sentences": [
+    {
+     "text": "የኤቢኤስ የብሬክ ስርዓት ዋና ተግባር ምንድን ነው?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_32_ce2e076cc0ce35c9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናው በፍጥነት እንዲቆም ማድረግ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_21_42d4e9f36dc2ab16.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። መኪናው በፍጥነት እንዲቆም ማድረግ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_26_25310874d0fd0a94.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሞቹ እንዳይቆለፉ መከላከል እና መሪውን መቆጣጠር ማስቻል",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_36_7b7ff6483f80f5ef.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ጎሞቹ እንዳይቆለፉ መከላከል እና መሪውን መቆጣጠር ማስቻል",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_41_fd7a7c685f937d31.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የብሬክ ፔዳሉ እንዲንቀጠቀጥ ማድረግ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_22_2152311cc32cd8fe.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የብሬክ ፔዳሉ እንዲንቀጠቀጥ ማድረግ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_27_4f85dae7377c314a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናው እንዲንሸራተት ማድረግ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_18_d5dd53d744e3c6a3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። መኪናው እንዲንሸራተት ማድረግ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_23_0634c310f722781f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ጎሞቹ እንዳይቆለፉ መከላከል እና መሪውን መቆጣጠር ማስቻል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_42_7d43232472096d76.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ጎሞቹ እንዳይቆለፉ መከላከል እና መሪውን መቆጣጠር ማስቻል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_40_2f7fde481f50bd20.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ጎሞቹ እንዳይቆለፉ መከላከል እና መሪውን መቆጣጠር ማስቻል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_41_e52fddd48c9549e9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ጎሞቹ እንዳይቆለፉ መከላከል እና መሪውን መቆጣጠር ማስቻል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_40_91d90e6477f5c9fd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ጎሞቹ እንዳይቆለፉ መከላከል እና መሪውን መቆጣጠር ማስቻል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_41_a9596a5b00c857d6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ጎሞቹ እንዳይቆለፉ መከላከል እና መሪውን መቆጣጠር ማስቻል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_40_87ce6d9082e415a8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ጎሞቹ እንዳይቆለፉ መከላከል እና መሪውን መቆጣጠር ማስቻል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_41_2b2aff1897cc8b9d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ጎሞቹ እንዳይቆለፉ መከላከል እና መሪውን መቆጣጠር ማስቻል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_44_f8a2d64436c69d3c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ጎሞቹ እንዳይቆለፉ መከላከል እና መሪውን መቆጣጠር ማስቻል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_45_ecd98bf00bd9e5f7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ጎሞቹ እንዳይቆለፉ መከላከል እና መሪውን መቆጣጠር ማስቻል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_45_26a007ab6be5c9fd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ጎሞቹ እንዳይቆለፉ መከላከል እና መሪውን መቆጣጠር ማስቻል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_45_28dda784eb8be87a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ጎሞቹ እንዳይቆለፉ መከላከል እና መሪውን መቆጣጠር ማስቻል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_47_a238d3d4d022b99a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ጎሞቹ እንዳይቆለፉ መከላከል እና መሪውን መቆጣጠር ማስቻል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_48_53390a98479ec5f9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ጎሞቹ እንዳይቆለፉ መከላከል እና መሪውን መቆጣጠር ማስቻል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_52_2d1ad154a41efe17.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ጎሞቹ እንዳይቆለፉ መከላከል እና መሪውን መቆጣጠር ማስቻል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_50_71eee400b071246f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ጎሞቹ እንዳይቆለፉ መከላከል እና መሪውን መቆጣጠር ማስቻል",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_54_5865a5a7c63f162a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በኃይል ብሬክ ሲይዙ የብሬክ ፔዳሉ ሲንቀጠቀጥ ሲሰማዎት ምን ማድረግ አለብዎት?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_49_6c71171cd1c1d7ec.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የብሬክ ፔዳሉን ወዲያውኑ መልቀቅ",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_20_04f9766846baab0f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። የብሬክ ፔዳሉን ወዲያውኑ መልቀቅ",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_25_a74c35ebc937e54d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የብሬክ ፔዳሉን በቀስታ መጫን",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_18_64352e3cc3a1f152.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። የብሬክ ፔዳሉን በቀስታ መጫን",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_23_4edf93cc92a3c18c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናው ሙሉ በሙሉ እስኪቆም ድረስ የብሬክ ፔዳሉን አጥብቆ መያዝዎን መቀጠል",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_47_32da7da424ccc411.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። መኪናው ሙሉ በሙሉ እስኪቆም ድረስ የብሬክ ፔዳሉን አጥብቆ መያዝዎን መቀጠል",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_52_1733619410dde8a5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናውን ማቆም እና እርዳታ መጠየቅ",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_22_5ab15218b66e5077.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። መኪናውን ማቆም እና እርዳታ መጠየቅ",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_27_499ac8744cf0740b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! መኪናው ሙሉ በሙሉ እስኪቆም ድረስ የብሬክ ፔዳሉን አጥብቆ መያዝዎን መቀጠል",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_53_c4e60b73919545a8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! መኪናው ሙሉ በሙሉ እስኪቆም ድረስ የብሬክ ፔዳሉን አጥብቆ መያዝዎን መቀጠል",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_51_4fb5c65fe48ac8be.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! መኪናው ሙሉ በሙሉ እስኪቆም ድረስ የብሬክ ፔዳሉን አጥብቆ መያዝዎን መቀጠል",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_52_58985fb8769a3b57.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! መኪናው ሙሉ በሙሉ እስኪቆም ድረስ የብሬክ ፔዳሉን አጥብቆ መያዝዎን መቀጠል",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_51_3ba03e486288c5c3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! መኪናው ሙሉ በሙሉ እስኪቆም ድረስ የብሬክ ፔዳሉን አጥብቆ መያዝዎን መቀጠል",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_52_1979d0f8af052308.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! መኪናው ሙሉ በሙሉ እስኪቆም ድረስ የብሬክ ፔዳሉን አጥብቆ መያዝዎን መቀጠል",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_51_5dc8970c52839536.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! መኪናው ሙሉ በሙሉ እስኪቆም ድረስ የብሬክ ፔዳሉን አጥብቆ መያዝዎን መቀጠል",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_52_a61e7dc857c09ee3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! መኪናው ሙሉ በሙሉ እስኪቆም ድረስ የብሬክ ፔዳሉን አጥብቆ መያዝዎን መቀጠል",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_55_74d43a34822ff422.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! መኪናው ሙሉ በሙሉ እስኪቆም ድረስ የብሬክ ፔዳሉን አጥብቆ መያዝዎን መቀጠል",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_56_77cbe538642c9109.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! መኪናው ሙሉ በሙሉ እስኪቆም ድረስ የብሬክ ፔዳሉን አጥብቆ መያዝዎን መቀጠል",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_56_0a8ae1200078c5c3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! መኪናው ሙሉ በሙሉ እስኪቆም ድረስ የብሬክ ፔዳሉን አጥብቆ መያዝዎን መቀጠል",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_56_93f51a07101e9b24.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! መኪናው ሙሉ በሙሉ እስኪቆም ድረስ የብሬክ ፔዳሉን አጥብቆ መያዝዎን መቀጠል",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_58_08f79e70cf090f44.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! መኪናው ሙሉ በሙሉ እስኪቆም ድረስ የብሬክ ፔዳሉን አጥብቆ መያዝዎን መቀጠል",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_59_6a288a883cf99547.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! መኪናው ሙሉ በሙሉ እስኪቆም ድረስ የብሬክ ፔዳሉን አጥብቆ መያዝዎን መቀጠል",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_63_c8649e0054d50fa9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! መኪናው ሙሉ በሙሉ እስኪቆም ድረስ የብሬክ ፔዳሉን አጥብቆ መያዝዎን መቀጠል",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_61_fdebb37f1ae62591.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: መኪናው ሙሉ በሙሉ እስኪቆም ድረስ የብሬክ ፔዳሉን አጥብቆ መያዝዎን መቀጠል",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_65_0860f8bb8d215cf4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የኤቢኤስ የማስጠንቀቂያ መብራት መኪናው እየተነዳ ሳለ በርቶ ከቀረ ምን ማለት ነው?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_52_3638b3c4e6f1ecbd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የኤቢኤስ ስርዓት በመደበኛነት እየሰራ ነው",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_26_4eafff23fe90b159.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። የኤቢኤስ ስርዓት በመደበኛነት እየሰራ ነው",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_31_c20300909f94ea9b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በኤቢኤስ ስርዓት ላይ ችግር አለ",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_20_f45ed94ce3d787df.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። በኤቢኤስ ስርዓት ላይ ችግር አለ",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_25_610be960b0e29701.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የተለመደው የብሬክ ስርዓት አይሰራም",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_22_23760f88751daba9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የተለመደው የብሬክ ስርዓት አይሰራም",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_27_dfe54d1f66f9745d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናው ነዳጅ ይፈልጋል",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_14_db5fecfc65eaef41.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። መኪናው ነዳጅ ይፈልጋል",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_19_e2f5bf8cc2d9443d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! በኤቢኤስ ስርዓት ላይ ችግር አለ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_26_febfd4cce7320ec6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! በኤቢኤስ ስርዓት ላይ ችግር አለ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_24_b6c81924abe18190.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! በኤቢኤስ ስርዓት ላይ ችግር አለ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_25_4a00f6d8ac5364d9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! በኤቢኤስ ስርዓት ላይ ችግር አለ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_24_22aac58015df55cd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! በኤቢኤስ ስርዓት ላይ ችግር አለ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_25_c22269b0e09111e6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! በኤቢኤስ ስርዓት ላይ ችግር አለ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_24_12a5d97842c20318.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! በኤቢኤስ ስርዓት ላይ ችግር አለ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_25_6b9432008e94872d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! በኤቢኤስ ስርዓት ላይ ችግር አለ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_28_1bd922e8d1590c8c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! በኤቢኤስ ስርዓት ላይ ችግር አለ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_29_79d82ee8e06701c7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! በኤቢኤስ ስርዓት ላይ ችግር አለ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_29_4732032029cf55cd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! በኤቢኤስ ስርዓት ላይ ችግር አለ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_29_10e4341c30d878ca.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! በኤቢኤስ ስርዓት ላይ ችግር አለ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_31_3706d590c0e12baa.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! በኤቢኤስ ስርዓት ላይ ችግር አለ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_32_30cd1ca0f79714c9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! በኤቢኤስ ስርዓት ላይ ችግር አለ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_36_d0182ac4b08e5ea7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! በኤቢኤስ ስርዓት ላይ ችግር አለ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_34_0a50da00f4344d5f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: በኤቢኤስ ስርዓት ላይ ችግር አለ",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_38_350371f88370049a.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

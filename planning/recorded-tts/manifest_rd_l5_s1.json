@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:19:36.560Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "rd_l5_s1",
+   "key": "road_decisions_4_0",
+   "sentences": [
+    {
+     "text": "መዝጊያው ዝቅ ብሏል። ወደዚህ ሲጠጉ እንዴት ያሽከረክራሉ?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_36_3edf9d488ea7781a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በቀኝ በኩል አልፈው ይሂዱ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_17_6f0e0080ceb4d988.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። በቀኝ በኩል አልፈው ይሂዱ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_22_aed5c9b072afc78a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከመዝጊያው በፊት ይቁሙ። ዝቅ ሲልም ሆነ ሲንቀሳቀስ አያሽከረክሩ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_41_15619c56e116cfb1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ከመዝጊያው በፊት ይቁሙ። ዝቅ ሲልም ሆነ ሲንቀሳቀስ አያሽከረክሩ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_46_ffaa8d8029dae2af.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናውን አቁመው ሞተሩን ያጥፉ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_20_9ab65090db4c06bf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። መኪናውን አቁመው ሞተሩን ያጥፉ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_25_fbfb8548cad3758b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጥንቃቄ ስር ወይም ዙሪያውን አልፈው ያሽከረክሩ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_31_f218bab24276feca.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። በጥንቃቄ ስር ወይም ዙሪያውን አልፈው ያሽከረክሩ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_36_c0b707a088882a76.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ከመዝጊያው በፊት ይቁሙ። ዝቅ ሲልም ሆነ ሲንቀሳቀስ አያሽከረክሩ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_47_33618968cc4c2ac8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ከመዝጊያው በፊት ይቁሙ። ዝቅ ሲልም ሆነ ሲንቀሳቀስ አያሽከረክሩ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_45_2774067a64340e5e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ከመዝጊያው በፊት ይቁሙ። ዝቅ ሲልም ሆነ ሲንቀሳቀስ አያሽከረክሩ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_46_ea71056a09524af7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ከመዝጊያው በፊት ይቁሙ። ዝቅ ሲልም ሆነ ሲንቀሳቀስ አያሽከረክሩ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_45_7021ee18a2b6c963.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ከመዝጊያው በፊት ይቁሙ። ዝቅ ሲልም ሆነ ሲንቀሳቀስ አያሽከረክሩ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_46_46fe2e07c530b8a8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ከመዝጊያው በፊት ይቁሙ። ዝቅ ሲልም ሆነ ሲንቀሳቀስ አያሽከረክሩ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_45_f8a73454db696fd6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ከመዝጊያው በፊት ይቁሙ። ዝቅ ሲልም ሆነ ሲንቀሳቀስ አያሽከረክሩ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_46_e5d072068f2dbb83.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ከመዝጊያው በፊት ይቁሙ። ዝቅ ሲልም ሆነ ሲንቀሳቀስ አያሽከረክሩ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_49_36c1fba04731e9c2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ከመዝጊያው በፊት ይቁሙ። ዝቅ ሲልም ሆነ ሲንቀሳቀስ አያሽከረክሩ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_50_289e3af0669ef6a9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ከመዝጊያው በፊት ይቁሙ። ዝቅ ሲልም ሆነ ሲንቀሳቀስ አያሽከረክሩ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_50_abded7848ca6c963.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ከመዝጊያው በፊት ይቁሙ። ዝቅ ሲልም ሆነ ሲንቀሳቀስ አያሽከረክሩ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_50_dc0bd6f03cc6c844.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ከመዝጊያው በፊት ይቁሙ። ዝቅ ሲልም ሆነ ሲንቀሳቀስ አያሽከረክሩ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_52_88420f50f3a8ac64.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ከመዝጊያው በፊት ይቁሙ። ዝቅ ሲልም ሆነ ሲንቀሳቀስ አያሽከረክሩ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_53_0901861fc0906ce7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ከመዝጊያው በፊት ይቁሙ። ዝቅ ሲልም ሆነ ሲንቀሳቀስ አያሽከረክሩ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_57_3935cc68c80ec449.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ከመዝጊያው በፊት ይቁሙ። ዝቅ ሲልም ሆነ ሲንቀሳቀስ አያሽከረክሩ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_55_26837828e80cae31.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ከመዝጊያው በፊት ይቁሙ። ዝቅ ሲልም ሆነ ሲንቀሳቀስ አያሽከረክሩ።",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_59_13c1bddc9319e694.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ባቡር ሀዲድ ማቋረጫ ላይ ማቆም ካለብዎት፣ መኪናዎን የት ያቆማሉ?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_41_b00ea050d3d5cb81.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከመስመሩ በኋላ፣ ስምንት ሜትር ከአቅራቢያው ሀዲድ በፊት።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_36_0e06c27650d77ca6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ከመስመሩ በኋላ፣ ስምንት ሜትር ከአቅራቢያው ሀዲድ በፊት።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_41_ddc2937656a78d64.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከመዝጊያው በፊት። መዝጊያ ከሌለ ከአቅራቢያው ሀዲድ ስድስት ሜትር በፊት።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_46_6004fe3096fb66ed.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ከመዝጊያው በፊት። መዝጊያ ከሌለ ከአቅራቢያው ሀዲድ ስድስት ሜትር በፊት።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_51_74196a78d3304fb3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከማቆሚያ መስመሩ በፊት። መስመር ከሌለ ከመዝጊያው በፊት። መዝጊያ ከሌለ ከአቅራቢያው ሀዲድ አራት ሜትር በፊት።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_70_8e754a3cc7a2a9c2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ከማቆሚያ መስመሩ በፊት። መስመር ከሌለ ከመዝጊያው በፊት። መዝጊያ ከሌለ ከአቅራቢያው ሀዲድ አራት ሜትር በፊት።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_75_2b0906e81d4d3276.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እይታው ጥሩ በሆነበት ቦታ፣ የባቡሩን እንቅስቃሴ ሳይረብሹ።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_37_20be0d4662dfc7a3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። እይታው ጥሩ በሆነበት ቦታ፣ የባቡሩን እንቅስቃሴ ሳይረብሹ።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_42_5442ad90afab8f5f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ከማቆሚያ መስመሩ በፊት። መስመር ከሌለ ከመዝጊያው በፊት። መዝጊያ ከሌለ ከአቅራቢያው ሀዲድ አራት ሜትር በፊት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_76_adbbf5bedd85345b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ከማቆሚያ መስመሩ በፊት። መስመር ከሌለ ከመዝጊያው በፊት። መዝጊያ ከሌለ ከአቅራቢያው ሀዲድ አራት ሜትር በፊት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_74_2529e9b8bfad5e0d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ከማቆሚያ መስመሩ በፊት። መስመር ከሌለ ከመዝጊያው በፊት። መዝጊያ ከሌለ ከአቅራቢያው ሀዲድ አራት ሜትር በፊት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_75_10887b08a8676844.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ከማቆሚያ መስመሩ በፊት። መስመር ከሌለ ከመዝጊያው በፊት። መዝጊያ ከሌለ ከአቅራቢያው ሀዲድ አራት ሜትር በፊት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_74_5944ef9e1271fa50.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ከማቆሚያ መስመሩ በፊት። መስመር ከሌለ ከመዝጊያው በፊት። መዝጊያ ከሌለ ከአቅራቢያው ሀዲድ አራት ሜትር በፊት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_75_94fa21e6a59290bb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ከማቆሚያ መስመሩ በፊት። መስመር ከሌለ ከመዝጊያው በፊት። መዝጊያ ከሌለ ከአቅራቢያው ሀዲድ አራት ሜትር በፊት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_74_8ec3a89ae14efb85.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ከማቆሚያ መስመሩ በፊት። መስመር ከሌለ ከመዝጊያው በፊት። መዝጊያ ከሌለ ከአቅራቢያው ሀዲድ አራት ሜትር በፊት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_75_cdd7f908959005f0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ከማቆሚያ መስመሩ በፊት። መስመር ከሌለ ከመዝጊያው በፊት። መዝጊያ ከሌለ ከአቅራቢያው ሀዲድ አራት ሜትር በፊት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_78_3173cce65fafc811.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ከማቆሚያ መስመሩ በፊት። መስመር ከሌለ ከመዝጊያው በፊት። መዝጊያ ከሌለ ከአቅራቢያው ሀዲድ አራት ሜትር በፊት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_79_3328f1f6ca2723da.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ከማቆሚያ መስመሩ በፊት። መስመር ከሌለ ከመዝጊያው በፊት። መዝጊያ ከሌለ ከአቅራቢያው ሀዲድ አራት ሜትር በፊት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_79_0c6f1a068261fa50.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ከማቆሚያ መስመሩ በፊት። መስመር ከሌለ ከመዝጊያው በፊት። መዝጊያ ከሌለ ከአቅራቢያው ሀዲድ አራት ሜትር በፊት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_79_5d75017a3d521557.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ከማቆሚያ መስመሩ በፊት። መስመር ከሌለ ከመዝጊያው በፊት። መዝጊያ ከሌለ ከአቅራቢያው ሀዲድ አራት ሜትር በፊት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_81_76ac9e505a2ea5f7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ከማቆሚያ መስመሩ በፊት። መስመር ከሌለ ከመዝጊያው በፊት። መዝጊያ ከሌለ ከአቅራቢያው ሀዲድ አራት ሜትር በፊት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_82_b8e5cfb015f8a054.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ከማቆሚያ መስመሩ በፊት። መስመር ከሌለ ከመዝጊያው በፊት። መዝጊያ ከሌለ ከአቅራቢያው ሀዲድ አራት ሜትር በፊት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_86_cc376f05d7bc45fa.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ከማቆሚያ መስመሩ በፊት። መስመር ከሌለ ከመዝጊያው በፊት። መዝጊያ ከሌለ ከአቅራቢያው ሀዲድ አራት ሜትር በፊት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_84_6407ce56ff16d142.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ከማቆሚያ መስመሩ በፊት። መስመር ከሌለ ከመዝጊያው በፊት። መዝጊያ ከሌለ ከአቅራቢያው ሀዲድ አራት ሜትር በፊት።",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_88_2adc8000be71e387.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዝቅ ያለው መዝጊያና የበራው ቀይ መብራት እዚህ ምን ማለት ነው?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_40_8384d69c21afc5f2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ባቡር እየመጣ ሊሆን ይችላል፤ መዝጊያው እስኪከፈትና ማስጠንቀቂያው እስኪቆም ድረስ አያልፉ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_57_d05d20c70cde0559.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ባቡር እየመጣ ሊሆን ይችላል፤ መዝጊያው እስኪከፈትና ማስጠንቀቂያው እስኪቆም ድረስ አያልፉ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_62_4b2b59987c7ce3db.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መንገዱ ባዶ ከሆነ መዝጊያው ቢወርድም ማለፍ ይቻላል።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_33_72727690cea6d4d0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። መንገዱ ባዶ ከሆነ መዝጊያው ቢወርድም ማለፍ ይቻላል።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_38_a64590a81e4d31ce.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ይህ ማስጠንቀቂያ ለጭነት መኪናዎችና ለአውቶቡሶች ብቻ ነው።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_37_dcaf77f052b42206.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ይህ ማስጠንቀቂያ ለጭነት መኪናዎችና ለአውቶቡሶች ብቻ ነው።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_42_83b934ce0326c0f2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መዝጊያው ዝቅ ቢልም፣ ባቡር የማይታይ ከሆነ ማለፍ ይቻላል።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_37_154db560abc600f8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። መዝጊያው ዝቅ ቢልም፣ ባቡር የማይታይ ከሆነ ማለፍ ይቻላል።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_42_d4fd33587c2d81c4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ባቡር እየመጣ ሊሆን ይችላል፤ መዝጊያው እስኪከፈትና ማስጠንቀቂያው እስኪቆም ድረስ አያልፉ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_63_b4c1ae6aefee0020.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ባቡር እየመጣ ሊሆን ይችላል፤ መዝጊያው እስኪከፈትና ማስጠንቀቂያው እስኪቆም ድረስ አያልፉ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_61_56926f78ec1e42b6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ባቡር እየመጣ ሊሆን ይችላል፤ መዝጊያው እስኪከፈትና ማስጠንቀቂያው እስኪቆም ድረስ አያልፉ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_62_9cfe29102bfc3b1f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ባቡር እየመጣ ሊሆን ይችላል፤ መዝጊያው እስኪከፈትና ማስጠንቀቂያው እስኪቆም ድረስ አያልፉ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_61_a1b99d4e90b7998b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ባቡር እየመጣ ሊሆን ይችላል፤ መዝጊያው እስኪከፈትና ማስጠንቀቂያው እስኪቆም ድረስ አያልፉ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_62_9c4a439817e69b40.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ባቡር እየመጣ ሊሆን ይችላል፤ መዝጊያው እስኪከፈትና ማስጠንቀቂያው እስኪቆም ድረስ አያልፉ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_61_3506e10e90acbf3e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ባቡር እየመጣ ሊሆን ይችላል፤ መዝጊያው እስኪከፈትና ማስጠንቀቂያው እስኪቆም ድረስ አያልፉ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_62_155f985661053f6b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ባቡር እየመጣ ሊሆን ይችላል፤ መዝጊያው እስኪከፈትና ማስጠንቀቂያው እስኪቆም ድረስ አያልፉ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_65_d715c86e5b5e722a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ባቡር እየመጣ ሊሆን ይችላል፤ መዝጊያው እስኪከፈትና ማስጠንቀቂያው እስኪቆም ድረስ አያልፉ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_66_10689e8a809d4241.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ባቡር እየመጣ ሊሆን ይችላል፤ መዝጊያው እስኪከፈትና ማስጠንቀቂያው እስኪቆም ድረስ አያልፉ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_66_9cfad3b45aa7998b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ባቡር እየመጣ ሊሆን ይችላል፤ መዝጊያው እስኪከፈትና ማስጠንቀቂያው እስኪቆም ድረስ አያልፉ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_66_161bc2c0e85adbac.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ባቡር እየመጣ ሊሆን ይችላል፤ መዝጊያው እስኪከፈትና ማስጠንቀቂያው እስኪቆም ድረስ አያልፉ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_68_304978988cb3fd8c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ባቡር እየመጣ ሊሆን ይችላል፤ መዝጊያው እስኪከፈትና ማስጠንቀቂያው እስኪቆም ድረስ አያልፉ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_69_356c25909050a50f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ባቡር እየመጣ ሊሆን ይችላል፤ መዝጊያው እስኪከፈትና ማስጠንቀቂያው እስኪቆም ድረስ አያልፉ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_73_7e41e428d82086a1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ባቡር እየመጣ ሊሆን ይችላል፤ መዝጊያው እስኪከፈትና ማስጠንቀቂያው እስኪቆም ድረስ አያልፉ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_71_a77f7f70fcdcfad9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ባቡር እየመጣ ሊሆን ይችላል፤ መዝጊያው እስኪከፈትና ማስጠንቀቂያው እስኪቆም ድረስ አያልፉ።",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_75_df6e21d0e172d07c.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

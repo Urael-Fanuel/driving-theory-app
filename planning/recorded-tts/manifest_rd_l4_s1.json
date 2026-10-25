@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:19:01.177Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "rd_l4_s1",
+   "key": "road_decisions_3_0",
+   "sentences": [
+    {
+     "text": "መብራቱ አረንጓዴ ቢሆንም መገናኛው በመኪኖች ታግቷል፤ ምን ያደርጋሉ?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_43_eed063ed8766d75b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የታገደ መገናኛ ውስጥ አይገቡም።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_20_091880e00b308d58.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። የታገደ መገናኛ ውስጥ አይገቡም።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_25_8759f5e80752361a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መብራቱ እንደሚያዘው ወደ መገናኛው ይገባሉ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_27_6da4e1dead176c06.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። መብራቱ እንደሚያዘው ወደ መገናኛው ይገባሉ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_32_df477d98dbd88118.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በማንኛውም ሁኔታ ወደ መገናኛው መግባት ይፈቀድልዎታል።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_34_b2f7047eb5b71467.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። በማንኛውም ሁኔታ ወደ መገናኛው መግባት ይፈቀድልዎታል።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_39_eca68ee65235d9d3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ወደ መገናኛው ገብተው በፍጥነት ያልፋሉ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_25_d27ef1d0e01d4613.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ወደ መገናኛው ገብተው በፍጥነት ያልፋሉ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_30_aa8343c8b89ec52f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! የታገደ መገናኛ ውስጥ አይገቡም።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_26_585d429b9b923301.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! የታገደ መገናኛ ውስጥ አይገቡም።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_24_600e9a9a0ab7ea57.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! የታገደ መገናኛ ውስጥ አይገቡም።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_25_d64f9ba07336485e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! የታገደ መገናኛ ውስጥ አይገቡም።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_24_1a6917a83a75e64a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! የታገደ መገናኛ ውስጥ አይገቡም።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_25_ef49923234ec91a1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! የታገደ መገናኛ ውስጥ አይገቡም።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_24_9ec8b9088cb7a1df.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! የታገደ መገናኛ ውስጥ አይገቡም።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_25_95ed63c816853faa.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! የታገደ መገናኛ ውስጥ አይገቡም።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_28_8d4180e08cc0c84b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! የታገደ መገናኛ ውስጥ አይገቡም።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_29_39a8d4b83efcc740.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! የታገደ መገናኛ ውስጥ አይገቡም።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_29_a31fae424e65e64a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! የታገደ መገናኛ ውስጥ አይገቡም።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_29_fa666850457e5e0d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! የታገደ መገናኛ ውስጥ አይገቡም።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_31_9c4cf52a8d6e5ded.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! የታገደ መገናኛ ውስጥ አይገቡም።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_32_8a88733e5431204e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! የታገደ መገናኛ ውስጥ አይገቡም።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_36_72d96a100015d420.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! የታገደ መገናኛ ውስጥ አይገቡም።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_34_dcfec0f2f435a2d8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: የታገደ መገናኛ ውስጥ አይገቡም።",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_38_a26a3e7b919fc95d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ነጻ ያልሆነ መገናኛ ደርሰዋል፤ ምን ያደርጋሉ?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_29_5fef65945f71684a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መብራቱ አረንጓዴ ከሆነ ነጻ ባልሆነ መገናኛም ይገባሉ።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_34_cfa32688bcfac15d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። መብራቱ አረንጓዴ ከሆነ ነጻ ባልሆነ መገናኛም ይገባሉ።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_39_506db6f07b5d7a1f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ነጻ ባልሆነ መገናኛም ቢሆን ወደ ግራ መታጠፍ ይፈቀድልዎታል።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_38_8e30a0dedce910f5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ነጻ ባልሆነ መገናኛም ቢሆን ወደ ግራ መታጠፍ ይፈቀድልዎታል።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_43_acee9e283701fe2b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከመገናኛው በፊት ይቁሙና እስኪለቅ ይጠብቁ።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_27_f90b11db7b6c3bbd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ከመገናኛው በፊት ይቁሙና እስኪለቅ ይጠብቁ።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_32_3baca4cec634a6c9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጥንቃቄ ወደ መገናኛው ገብተው እዚያው እስኪለቅ ይጠብቁ።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_36_59b76a20a946628a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። በጥንቃቄ ወደ መገናኛው ገብተው እዚያው እስኪለቅ ይጠብቁ።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_41_5454263496e25a36.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ከመገናኛው በፊት ይቁሙና እስኪለቅ ይጠብቁ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_33_b6d377a845291d44.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ከመገናኛው በፊት ይቁሙና እስኪለቅ ይጠብቁ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_31_86071446cffabdd2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ከመገናኛው በፊት ይቁሙና እስኪለቅ ይጠብቁ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_32_0fd0e12ea284c5fb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ከመገናኛው በፊት ይቁሙና እስኪለቅ ይጠብቁ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_31_638d22a4ab92446f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ከመገናኛው በፊት ይቁሙና እስኪለቅ ይጠብቁ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_32_535f4cbee08c9224.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ከመገናኛው በፊት ይቁሙና እስኪለቅ ይጠብቁ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_31_e709e1cca5e1c45a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ከመገናኛው በፊት ይቁሙና እስኪለቅ ይጠብቁ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_32_55494a5a317b4b0f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ከመገናኛው በፊት ይቁሙና እስኪለቅ ይጠብቁ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_35_09c8272cb11eb14e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ከመገናኛው በፊት ይቁሙና እስኪለቅ ይጠብቁ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_36_2ab8624eb8df6ca5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ከመገናኛው በፊት ይቁሙና እስኪለቅ ይጠብቁ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_36_2b85a63ef182446f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ከመገናኛው በፊት ይቁሙና እስኪለቅ ይጠብቁ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_36_d75f7c5c620d40c8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ከመገናኛው በፊት ይቁሙና እስኪለቅ ይጠብቁ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_38_ff5ad9d8b78d81e8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ከመገናኛው በፊት ይቁሙና እስኪለቅ ይጠብቁ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_39_181507be2b2323eb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ከመገናኛው በፊት ይቁሙና እስኪለቅ ይጠብቁ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_43_7523338864f551c5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ከመገናኛው በፊት ይቁሙና እስኪለቅ ይጠብቁ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_41_a10719f0026d6b3d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ከመገናኛው በፊት ይቁሙና እስኪለቅ ይጠብቁ።",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_45_a05a31f8b30d3018.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የብር ቀለም መኪናው መብራቱ አረንጓዴ ቢሆንም ለምን መግባት አይችልም?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_44_e0451c9d1e317e31.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናው ገና ሩቅ ስለሆነ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_16_f03abc60142f9c97.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። መኪናው ገና ሩቅ ስለሆነ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_21_0b084ef013b1fbd5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እግረኛው ማቋረጫ ላይ ስላልሆነ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_20_81e872d854d80381.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። እግረኛው ማቋረጫ ላይ ስላልሆነ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_25_76bda788ad536edf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሰማያዊው መኪና ወደ ኋላ እየተመለሰ ስለሆነ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_28_1da9a9f08a3b6bcf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ሰማያዊው መኪና ወደ ኋላ እየተመለሰ ስለሆነ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_33_44e5c09e1bfa5b7b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመገናኛው ማዶ ቢጫው መኪና ለእግረኛው ቆሞ ስለያዘው ነው።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_37_ecdb41b03bcf39ea.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። የመገናኛው ማዶ ቢጫው መኪና ለእግረኛው ቆሞ ስለያዘው ነው።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_42_6f8fabb0915e1256.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! የመገናኛው ማዶ ቢጫው መኪና ለእግረኛው ቆሞ ስለያዘው ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_43_cbc668da1e993153.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! የመገናኛው ማዶ ቢጫው መኪና ለእግረኛው ቆሞ ስለያዘው ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_41_dab22e6a24a01e45.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! የመገናኛው ማዶ ቢጫው መኪና ለእግረኛው ቆሞ ስለያዘው ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_42_4af2df188f16ee2c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! የመገናኛው ማዶ ቢጫው መኪና ለእግረኛው ቆሞ ስለያዘው ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_41_eaddee384258abb8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! የመገናኛው ማዶ ቢጫው መኪና ለእግረኛው ቆሞ ስለያዘው ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_42_059b0b72dd82f9b3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! የመገናኛው ማዶ ቢጫው መኪና ለእግረኛው ቆሞ ስለያዘው ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_41_a91759fa398e5bcd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! የመገናኛው ማዶ ቢጫው መኪና ለእግረኛው ቆሞ ስለያዘው ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_42_c4978c804cf5d6d8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! የመገናኛው ማዶ ቢጫው መኪና ለእግረኛው ቆሞ ስለያዘው ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_45_0f38f1a6f29d12d9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! የመገናኛው ማዶ ቢጫው መኪና ለእግረኛው ቆሞ ስለያዘው ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_46_9fab55e8c24446f2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! የመገናኛው ማዶ ቢጫው መኪና ለእግረኛው ቆሞ ስለያዘው ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_46_bbbd1f78b448abb8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! የመገናኛው ማዶ ቢጫው መኪና ለእግረኛው ቆሞ ስለያዘው ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_46_4d89a3b0df6889df.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! የመገናኛው ማዶ ቢጫው መኪና ለእግረኛው ቆሞ ስለያዘው ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_48_d7ccc49bf8a244ff.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! የመገናኛው ማዶ ቢጫው መኪና ለእግረኛው ቆሞ ስለያዘው ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_49_20c1989e31fea83c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! የመገናኛው ማዶ ቢጫው መኪና ለእግረኛው ቆሞ ስለያዘው ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_53_4c5a046a84eb6d92.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! የመገናኛው ማዶ ቢጫው መኪና ለእግረኛው ቆሞ ስለያዘው ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_51_95cb7cbeb2215e6a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: የመገናኛው ማዶ ቢጫው መኪና ለእግረኛው ቆሞ ስለያዘው ነው።",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_55_e5fb604a2e32988f.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

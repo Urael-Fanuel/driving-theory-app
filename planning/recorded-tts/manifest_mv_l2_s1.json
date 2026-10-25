@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:16:06.088Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "mv_l2_s1",
+   "key": "my_vehicle_1_0",
+   "sentences": [
+    {
+     "text": "መኪናን 'ለአጭር ጊዜ ማቆም' እና 'መኪናን አቁሞ መተው' መካከል ያለው ልዩነት ምንድን ነው?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_59_ee48df8dd8f56624.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ለአጭር ጊዜ ማቆም ማለት ተሳፋሪዎችን ለማውረድ ወይም ለመጫን መኪናን ለአጭር ጊዜ ማቆም ሲሆን፣ መኪናን አቁሞ መተው ደግሞ እነዚህን ነገሮች ሳያደርጉ መኪናን አቁሞ መተው ነው።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_111_acda34b8a7e84240.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ለአጭር ጊዜ ማቆም ማለት ተሳፋሪዎችን ለማውረድ ወይም ለመጫን መኪናን ለአጭር ጊዜ ማቆም ሲሆን፣ መኪናን አቁሞ መተው ደግሞ እነዚህን ነገሮች ሳያደርጉ መኪናን አቁሞ መተው ነው።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_116_4cbc39b0bffa8e42.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ለአጭር ጊዜ ማቆም ማለት ሞተሩን ሳያጠፉ መኪናን ለአጭር ጊዜ ማቆም ሲሆን፣ መኪናን አቁሞ መተው ደግሞ ሞተሩን አጥፍቶ መተው ነው።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_82_08e09fa87e96992d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ለአጭር ጊዜ ማቆም ማለት ሞተሩን ሳያጠፉ መኪናን ለአጭር ጊዜ ማቆም ሲሆን፣ መኪናን አቁሞ መተው ደግሞ ሞተሩን አጥፍቶ መተው ነው።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_87_9cba93107ee2bc73.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ለአጭር ጊዜ ማቆም ማለት በመንገድ ዳር ለአጭር ጊዜ ማቆም ሲሆን፣ መኪናን አቁሞ መተው ደግሞ በመኪና ማቆሚያ ቦታ መኪናን አቁሞ መተው ነው።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_88_49f66726d3a6712b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ለአጭር ጊዜ ማቆም ማለት በመንገድ ዳር ለአጭር ጊዜ ማቆም ሲሆን፣ መኪናን አቁሞ መተው ደግሞ በመኪና ማቆሚያ ቦታ መኪናን አቁሞ መተው ነው።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_93_809e909ebeb0b29f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ለአጭር ጊዜ ማቆም ማለት ተሳፋሪዎች በመኪናው ውስጥ ሲሆኑ ሲሆን፣ መኪናን አቁሞ መተው ደግሞ ተሳፋሪዎች ከሌሉ ነው።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_73_33e3c26e049337f4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ለአጭር ጊዜ ማቆም ማለት ተሳፋሪዎች በመኪናው ውስጥ ሲሆኑ ሲሆን፣ መኪናን አቁሞ መተው ደግሞ ተሳፋሪዎች ከሌሉ ነው።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_78_3c07c32f278fee88.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ለአጭር ጊዜ ማቆም ማለት ተሳፋሪዎችን ለማውረድ ወይም ለመጫን መኪናን ለአጭር ጊዜ ማቆም ሲሆን፣ መኪናን አቁሞ መተው ደግሞ እነዚህን ነገሮች ሳያደርጉ መኪናን አቁሞ መተው ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_117_043b2110bb9b5bf9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ለአጭር ጊዜ ማቆም ማለት ተሳፋሪዎችን ለማውረድ ወይም ለመጫን መኪናን ለአጭር ጊዜ ማቆም ሲሆን፣ መኪናን አቁሞ መተው ደግሞ እነዚህን ነገሮች ሳያደርጉ መኪናን አቁሞ መተው ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_115_db63148ec7b944ef.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ለአጭር ጊዜ ማቆም ማለት ተሳፋሪዎችን ለማውረድ ወይም ለመጫን መኪናን ለአጭር ጊዜ ማቆም ሲሆን፣ መኪናን አቁሞ መተው ደግሞ እነዚህን ነገሮች ሳያደርጉ መኪናን አቁሞ መተው ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_116_6f6f92684e0e2806.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ለአጭር ጊዜ ማቆም ማለት ተሳፋሪዎችን ለማውረድ ወይም ለመጫን መኪናን ለአጭር ጊዜ ማቆም ሲሆን፣ መኪናን አቁሞ መተው ደግሞ እነዚህን ነገሮች ሳያደርጉ መኪናን አቁሞ መተው ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_115_c0a8b67f0b138192.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ለአጭር ጊዜ ማቆም ማለት ተሳፋሪዎችን ለማውረድ ወይም ለመጫን መኪናን ለአጭር ጊዜ ማቆም ሲሆን፣ መኪናን አቁሞ መተው ደግሞ እነዚህን ነገሮች ሳያደርጉ መኪናን አቁሞ መተው ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_116_b2fdf5d870d86719.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ለአጭር ጊዜ ማቆም ማለት ተሳፋሪዎችን ለማውረድ ወይም ለመጫን መኪናን ለአጭር ጊዜ ማቆም ሲሆን፣ መኪናን አቁሞ መተው ደግሞ እነዚህን ነገሮች ሳያደርጉ መኪናን አቁሞ መተው ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_115_19847f3064119767.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ለአጭር ጊዜ ማቆም ማለት ተሳፋሪዎችን ለማውረድ ወይም ለመጫን መኪናን ለአጭር ጊዜ ማቆም ሲሆን፣ መኪናን አቁሞ መተው ደግሞ እነዚህን ነገሮች ሳያደርጉ መኪናን አቁሞ መተው ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_116_6c38105f09aca3f2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ለአጭር ጊዜ ማቆም ማለት ተሳፋሪዎችን ለማውረድ ወይም ለመጫን መኪናን ለአጭር ጊዜ ማቆም ሲሆን፣ መኪናን አቁሞ መተው ደግሞ እነዚህን ነገሮች ሳያደርጉ መኪናን አቁሞ መተው ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_119_e3fcef574e76bf73.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ለአጭር ጊዜ ማቆም ማለት ተሳፋሪዎችን ለማውረድ ወይም ለመጫን መኪናን ለአጭር ጊዜ ማቆም ሲሆን፣ መኪናን አቁሞ መተው ደግሞ እነዚህን ነገሮች ሳያደርጉ መኪናን አቁሞ መተው ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_120_0c60729fbbe1db58.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ለአጭር ጊዜ ማቆም ማለት ተሳፋሪዎችን ለማውረድ ወይም ለመጫን መኪናን ለአጭር ጊዜ ማቆም ሲሆን፣ መኪናን አቁሞ መተው ደግሞ እነዚህን ነገሮች ሳያደርጉ መኪናን አቁሞ መተው ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_120_07223ade29038192.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ለአጭር ጊዜ ማቆም ማለት ተሳፋሪዎችን ለማውረድ ወይም ለመጫን መኪናን ለአጭር ጊዜ ማቆም ሲሆን፣ መኪናን አቁሞ መተው ደግሞ እነዚህን ነገሮች ሳያደርጉ መኪናን አቁሞ መተው ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_120_0b96fcd8397cb675.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ለአጭር ጊዜ ማቆም ማለት ተሳፋሪዎችን ለማውረድ ወይም ለመጫን መኪናን ለአጭር ጊዜ ማቆም ሲሆን፣ መኪናን አቁሞ መተው ደግሞ እነዚህን ነገሮች ሳያደርጉ መኪናን አቁሞ መተው ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_122_526e628027f106d5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ለአጭር ጊዜ ማቆም ማለት ተሳፋሪዎችን ለማውረድ ወይም ለመጫን መኪናን ለአጭር ጊዜ ማቆም ሲሆን፣ መኪናን አቁሞ መተው ደግሞ እነዚህን ነገሮች ሳያደርጉ መኪናን አቁሞ መተው ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_123_a32f2d2878c58e16.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ለአጭር ጊዜ ማቆም ማለት ተሳፋሪዎችን ለማውረድ ወይም ለመጫን መኪናን ለአጭር ጊዜ ማቆም ሲሆን፣ መኪናን አቁሞ መተው ደግሞ እነዚህን ነገሮች ሳያደርጉ መኪናን አቁሞ መተው ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_127_2bcfaeaeb53e3638.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ለአጭር ጊዜ ማቆም ማለት ተሳፋሪዎችን ለማውረድ ወይም ለመጫን መኪናን ለአጭር ጊዜ ማቆም ሲሆን፣ መኪናን አቁሞ መተው ደግሞ እነዚህን ነገሮች ሳያደርጉ መኪናን አቁሞ መተው ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_125_cfb34bd216e483c0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ለአጭር ጊዜ ማቆም ማለት ተሳፋሪዎችን ለማውረድ ወይም ለመጫን መኪናን ለአጭር ጊዜ ማቆም ሲሆን፣ መኪናን አቁሞ መተው ደግሞ እነዚህን ነገሮች ሳያደርጉ መኪናን አቁሞ መተው ነው።",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_129_4d75caa0780c06a5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በመንገድ ዳር ለአጭር ጊዜ በሚያቆሙበት ወይም አቁመው በሚተዉበት ጊዜ፣ ከመንገዱ ዳር ወይም ከእግረኛ መንገዱ ጠርዝ ምን ያህል መራቅ አለብዎት?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_90_8090b0884e2b1938.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከአርባ ሳንቲ ሜትር በላይ መራቅ የለብዎትም።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_28_3e7c8d607b5e5e42.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ከአርባ ሳንቲ ሜትር በላይ መራቅ የለብዎትም።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_33_4e45314ab500aa00.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከአንድ ሜትር በላይ መራቅ የለብዎትም።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_24_a0d3678e5e4def78.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ከአንድ ሜትር በላይ መራቅ የለብዎትም።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_29_d6da5dd85af724a6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከመንገዱ ዳር ጋር መጋጠም አለብዎት።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_23_ae3bf9d631deb43b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ከመንገዱ ዳር ጋር መጋጠም አለብዎት።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_28_5e3498243165b10f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከሃያ ሳንቲ ሜትር በላይ መራቅ የለብዎትም።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_27_f7d490bac2d4d0e4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ከሃያ ሳንቲ ሜትር በላይ መራቅ የለብዎትም።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_32_d57a17a8003b7a98.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ከአርባ ሳንቲ ሜትር በላይ መራቅ የለብዎትም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_34_4659075001cc7c5b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ከአርባ ሳንቲ ሜትር በላይ መራቅ የለብዎትም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_32_7f5401a8446d298d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ከአርባ ሳንቲ ሜትር በላይ መራቅ የለብዎትም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_33_66b410661b67cf44.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ከአርባ ሳንቲ ሜትር በላይ መራቅ የለብዎትም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_32_fe2efb6213c53050.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ከአርባ ሳንቲ ሜትር በላይ መራቅ የለብዎትም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_33_8a3d6638d0eb887b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ከአርባ ሳንቲ ሜትር በላይ መራቅ የለብዎትም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_32_8294f768b893cc05.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ከአርባ ሳንቲ ሜትር በላይ መራቅ የለብዎትም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_33_c5da30b0c72c4bb0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ከአርባ ሳንቲ ሜትር በላይ መራቅ የለብዎትም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_36_3d202a20f4265291.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ከአርባ ሳንቲ ሜትር በላይ መራቅ የለብዎትም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_37_f62ca478e972d45a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ከአርባ ሳንቲ ሜትር በላይ መራቅ የለብዎትም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_37_08c6664217b53050.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ከአርባ ሳንቲ ሜትር በላይ መራቅ የለብዎትም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_37_58b896c246730e57.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ከአርባ ሳንቲ ሜትር በላይ መራቅ የለብዎትም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_39_d393cae8a3a489b7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ከአርባ ሳንቲ ሜትር በላይ መራቅ የለብዎትም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_40_be690e9056624b54.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ከአርባ ሳንቲ ሜትር በላይ መራቅ የለብዎትም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_44_f9f6a1a8ded9813a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ከአርባ ሳንቲ ሜትር በላይ መራቅ የለብዎትም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_42_897ff5962fdc5ec2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ከአርባ ሳንቲ ሜትር በላይ መራቅ የለብዎትም።",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_46_5059eef6c1fc6a87.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከሌላ መኪና ጎን ለጎን መኪናን አቁሞ ለመተው ወደ ኋላ ከመግባትዎ በፊት ምን ማድረግ አለብዎት?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_60_144bb4406569fb6d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መሪውን ወደ መኪና ማቆሚያው ቦታ አቅጣጫ ማዞር።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_30_b53def069b977625.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። መሪውን ወደ መኪና ማቆሚያው ቦታ አቅጣጫ ማዞር።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_35_98c5d68888bc3267.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከትከሻዎ በላይ ወደ ኋላ በደንብ መመልከት።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_27_37b650e02c28b889.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ከትከሻዎ በላይ ወደ ኋላ በደንብ መመልከት።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_32_d2756d40297dee97.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የፍጥነት መቆጣጠሪያውን መጫን።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_19_cea7c65ebc59b280.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የፍጥነት መቆጣጠሪያውን መጫን።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_24_c793b7c2ddc876b4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የፊት መብራቶችን ማብራት።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_16_196abbdeea31f038.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። የፊት መብራቶችን ማብራት።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_21_61554e38ee376e44.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ከትከሻዎ በላይ ወደ ኋላ በደንብ መመልከት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_33_ecd6832ac896b4f0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ከትከሻዎ በላይ ወደ ኋላ በደንብ መመልከት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_31_e9b29a4e2cf27566.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ከትከሻዎ በላይ ወደ ኋላ በደንብ መመልከት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_32_24f645f0d4c278cf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ከትከሻዎ በላይ ወደ ኋላ በደንብ መመልከት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_31_e175cfbf65a21e5b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ከትከሻዎ በላይ ወደ ኋላ በደንብ መመልከት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_32_21cef7c00f9d0790.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ከትከሻዎ በላይ ወደ ኋላ በደንብ መመልከት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_31_a6d47096a87812ee.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ከትከሻዎ በላይ ወደ ኋላ በደንብ መመልከት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_32_b4077b1841bd703b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ከትከሻዎ በላይ ወደ ኋላ በደንብ መመልከት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_35_b9ce36d6b11525fa.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ከትከሻዎ በላይ ወደ ኋላ በደንብ መመልከት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_36_462330a612616d91.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ከትከሻዎ በላይ ወደ ኋላ በደንብ መመልከት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_36_92be68c8ab921e5b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ከትከሻዎ በላይ ወደ ኋላ በደንብ መመልከት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_36_f95c04065baf0d7c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ከትከሻዎ በላይ ወደ ኋላ በደንብ መመልከት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_38_ffad1fd8fb25585c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ከትከሻዎ በላይ ወደ ኋላ በደንብ መመልከት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_39_9f1de7e0e6d82adf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ከትከሻዎ በላይ ወደ ኋላ በደንብ መመልከት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_43_0d8741884c21b8f1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ከትከሻዎ በላይ ወደ ኋላ በደንብ መመልከት።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_41_6ba7d5b2d00fc509.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ከትከሻዎ በላይ ወደ ኋላ በደንብ መመልከት።",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_45_fb13bc7e56da5eac.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

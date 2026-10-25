@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:11:03.787Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "vk_l5_s5",
+   "key": "vehicle_knowledge_4_4",
+   "sentences": [
+    {
+     "text": "የብሬክ ፈሳሽ ዋና ዓላማ ምንድን ነው?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_24_a9f5ac9405dbea9e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሞተሩን ይቀባል",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_9_1fc91b6c11298374.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ሞተሩን ይቀባል",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_14_1e4bb8c8c984fc76.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናው እንዲቆም የእግር ፔዳል ኃይልን ወደ ብሬኮች ያስተላልፋል",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_40_2da3c6eb478ca24d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። መኪናው እንዲቆም የእግር ፔዳል ኃይልን ወደ ብሬኮች ያስተላልፋል",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_45_654b74f880b7aa93.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሞተሩን ያቀዘቅዛል",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_11_7ac48e840efdc0d7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ሞተሩን ያቀዘቅዛል",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_16_39ddabc8dfd32ba3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የፊት መስታወትን ያጸዳል",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_15_e865602429149169.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። የፊት መስታወትን ያጸዳል",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_20_f58932e3e5943895.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! መኪናው እንዲቆም የእግር ፔዳል ኃይልን ወደ ብሬኮች ያስተላልፋል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_46_285d2ebc7ba42ed4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! መኪናው እንዲቆም የእግር ፔዳል ኃይልን ወደ ብሬኮች ያስተላልፋል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_44_d254dc38e8df3d82.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! መኪናው እንዲቆም የእግር ፔዳል ኃይልን ወደ ብሬኮች ያስተላልፋል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_45_d8788d5828e2694b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! መኪናው እንዲቆም የእግር ፔዳል ኃይልን ወደ ብሬኮች ያስተላልፋል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_44_95ec7e548248825f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! መኪናው እንዲቆም የእግር ፔዳል ኃይልን ወደ ብሬኮች ያስተላልፋል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_45_80bff173ff13e534.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! መኪናው እንዲቆም የእግር ፔዳል ኃይልን ወደ ብሬኮች ያስተላልፋል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_44_e150a24f79841e0a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! መኪናው እንዲቆም የእግር ፔዳል ኃይልን ወደ ብሬኮች ያስተላልፋል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_45_489473a068b1de7f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! መኪናው እንዲቆም የእግር ፔዳል ኃይልን ወደ ብሬኮች ያስተላልፋል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_48_b7a35b10f2e8569e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! መኪናው እንዲቆም የእግር ፔዳል ኃይልን ወደ ብሬኮች ያስተላልፋል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_49_1ad6ec4057a8bc55.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! መኪናው እንዲቆም የእግር ፔዳል ኃይልን ወደ ብሬኮች ያስተላልፋል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_49_4fef4ec0ee38825f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! መኪናው እንዲቆም የእግር ፔዳል ኃይልን ወደ ብሬኮች ያስተላልፋል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_49_147fd2fc632766d8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! መኪናው እንዲቆም የእግር ፔዳል ኃይልን ወደ ብሬኮች ያስተላልፋል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_51_b37d3d1c92a97cf8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! መኪናው እንዲቆም የእግር ፔዳል ኃይልን ወደ ብሬኮች ያስተላልፋል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_52_764cf01868ca4d5b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! መኪናው እንዲቆም የእግር ፔዳል ኃይልን ወደ ብሬኮች ያስተላልፋል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_56_e5bc6604a6fa8bf5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! መኪናው እንዲቆም የእግር ፔዳል ኃይልን ወደ ብሬኮች ያስተላልፋል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_54_2f30e517ac64a6cd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: መኪናው እንዲቆም የእግር ፔዳል ኃይልን ወደ ብሬኮች ያስተላልፋል",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_58_2769e3188f01a388.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ አሽከርካሪ የብሬክ ፈሳሽ መጠንን እንዴት መፈተሽ አለበት?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_40_bcc14698fbbd3440.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመኪናውን ክዳን ከፍቶ ግልጽ በሆነው ማጠራቀሚያ ውስጥ ያለውን ፈሳሽ በዝቅተኛና ከፍተኛ መጠን ምልክቶች መካከል መሆኑን በማየት",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_80_d7d3fe84e7465ab4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። የመኪናውን ክዳን ከፍቶ ግልጽ በሆነው ማጠራቀሚያ ውስጥ ያለውን ፈሳሽ በዝቅተኛና ከፍተኛ መጠን ምልክቶች መካከል መሆኑን በማየት",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_85_c425940025c163f6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በመኪናው ዳሽቦርድ ላይ ያለውን መለኪያ ብቻ በመመልከት",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_34_739fe620bf3eb95b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። በመኪናው ዳሽቦርድ ላይ ያለውን መለኪያ ብቻ በመመልከት",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_39_64778c7cce933885.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከመኪናው ስር በመመልከት",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_15_fd1f2ef8ef971a09.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ከመኪናው ስር በመመልከት",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_20_c79c6080c0545bbd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የጎማውን ግፊት በመፈተሽ",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_15_759f8788f9474c6f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። የጎማውን ግፊት በመፈተሽ",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_20_5765ac0064b9dcd3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! የመኪናውን ክዳን ከፍቶ ግልጽ በሆነው ማጠራቀሚያ ውስጥ ያለውን ፈሳሽ በዝቅተኛና ከፍተኛ መጠን ምልክቶች መካከል መሆኑን በማየት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_86_9b8b7b160ab1942d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! የመኪናውን ክዳን ከፍቶ ግልጽ በሆነው ማጠራቀሚያ ውስጥ ያለውን ፈሳሽ በዝቅተኛና ከፍተኛ መጠን ምልክቶች መካከል መሆኑን በማየት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_84_0bdc6f70a346d6fb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! የመኪናውን ክዳን ከፍቶ ግልጽ በሆነው ማጠራቀሚያ ውስጥ ያለውን ፈሳሽ በዝቅተኛና ከፍተኛ መጠን ምልክቶች መካከል መሆኑን በማየት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_85_b8f48f947d68fcb2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! የመኪናውን ክዳን ከፍቶ ግልጽ በሆነው ማጠራቀሚያ ውስጥ ያለውን ፈሳሽ በዝቅተኛና ከፍተኛ መጠን ምልክቶች መካከል መሆኑን በማየት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_84_ed36fc040df33aa6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! የመኪናውን ክዳን ከፍቶ ግልጽ በሆነው ማጠራቀሚያ ውስጥ ያለውን ፈሳሽ በዝቅተኛና ከፍተኛ መጠን ምልክቶች መካከል መሆኑን በማየት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_85_30e957484be547cd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! የመኪናውን ክዳን ከፍቶ ግልጽ በሆነው ማጠራቀሚያ ውስጥ ያለውን ፈሳሽ በዝቅተኛና ከፍተኛ መጠን ምልክቶች መካከል መሆኑን በማየት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_84_467b31c3f0c69f73.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! የመኪናውን ክዳን ከፍቶ ግልጽ በሆነው ማጠራቀሚያ ውስጥ ያለውን ፈሳሽ በዝቅተኛና ከፍተኛ መጠን ምልክቶች መካከል መሆኑን በማየት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_85_e431b2144fcf3786.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! የመኪናውን ክዳን ከፍቶ ግልጽ በሆነው ማጠራቀሚያ ውስጥ ያለውን ፈሳሽ በዝቅተኛና ከፍተኛ መጠን ምልክቶች መካከል መሆኑን በማየት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_88_84d77c88a27f0ee7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! የመኪናውን ክዳን ከፍቶ ግልጽ በሆነው ማጠራቀሚያ ውስጥ ያለውን ፈሳሽ በዝቅተኛና ከፍተኛ መጠን ምልክቶች መካከል መሆኑን በማየት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_89_9bfd2bbb528764ac.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! የመኪናውን ክዳን ከፍቶ ግልጽ በሆነው ማጠራቀሚያ ውስጥ ያለውን ፈሳሽ በዝቅተኛና ከፍተኛ መጠን ምልክቶች መካከል መሆኑን በማየት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_89_e3403cab29e33aa6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! የመኪናውን ክዳን ከፍቶ ግልጽ በሆነው ማጠራቀሚያ ውስጥ ያለውን ፈሳሽ በዝቅተኛና ከፍተኛ መጠን ምልክቶች መካከል መሆኑን በማየት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_89_6e4b0fe4c29fbb21.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! የመኪናውን ክዳን ከፍቶ ግልጽ በሆነው ማጠራቀሚያ ውስጥ ያለውን ፈሳሽ በዝቅተኛና ከፍተኛ መጠን ምልክቶች መካከል መሆኑን በማየት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_91_79080240a7076b81.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! የመኪናውን ክዳን ከፍቶ ግልጽ በሆነው ማጠራቀሚያ ውስጥ ያለውን ፈሳሽ በዝቅተኛና ከፍተኛ መጠን ምልክቶች መካከል መሆኑን በማየት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_92_735d1dafb9e778a2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! የመኪናውን ክዳን ከፍቶ ግልጽ በሆነው ማጠራቀሚያ ውስጥ ያለውን ፈሳሽ በዝቅተኛና ከፍተኛ መጠን ምልክቶች መካከል መሆኑን በማየት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_96_9852d92c0c2f3d0c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! የመኪናውን ክዳን ከፍቶ ግልጽ በሆነው ማጠራቀሚያ ውስጥ ያለውን ፈሳሽ በዝቅተኛና ከፍተኛ መጠን ምልክቶች መካከል መሆኑን በማየት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_94_ee225f3cdc659134.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: የመኪናውን ክዳን ከፍቶ ግልጽ በሆነው ማጠራቀሚያ ውስጥ ያለውን ፈሳሽ በዝቅተኛና ከፍተኛ መጠን ምልክቶች መካከል መሆኑን በማየት",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_98_cc3ee0e83f2d9ff1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ አሽከርካሪ እየነዳ እያለ የብሬክ ማስጠንቀቂያ መብራት ሲበራ ምን ማድረግ አለበት?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_55_6fcc26e5f9c69491.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጥንቃቄ መንዳት መቀጠል",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_15_26c457c8288599cc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። በጥንቃቄ መንዳት መቀጠል",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_20_5a3ee3d449ce42ce.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ወዲያውኑ ወደ ጋራዥ በመሄድ ብሬኮቹን መፈተሽ",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_28_095a2f282c7bf18a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ወዲያውኑ ወደ ጋራዥ በመሄድ ብሬኮቹን መፈተሽ",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_33_469b07844f012854.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በሲስተሙ ውስጥ ውሃ መጨመር",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_17_47a826332c04b1dd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። በሲስተሙ ውስጥ ውሃ መጨመር",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_22_cbb094afdf72c669.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ችላ ብሎ ማለፍ",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_9_e63230981ff144e6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ችላ ብሎ ማለፍ",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_14_b1bfddbac2b5e49a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ወዲያውኑ ወደ ጋራዥ በመሄድ ብሬኮቹን መፈተሽ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_34_0163f8a4e4d06753.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ወዲያውኑ ወደ ጋራዥ በመሄድ ብሬኮቹን መፈተሽ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_32_ccdcb4e8ef745485.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ወዲያውኑ ወደ ጋራዥ በመሄድ ብሬኮቹን መፈተሽ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_33_4fc594131b57378c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ወዲያውኑ ወደ ጋራዥ በመሄድ ብሬኮቹን መፈተሽ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_32_afad4a2c41b85998.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ወዲያውኑ ወደ ጋራዥ በመሄድ ብሬኮቹን መፈተሽ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_33_8bbcab844a91b073.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ወዲያውኑ ወደ ጋራዥ በመሄድ ብሬኮቹን መፈተሽ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_32_003d692c1703fc0d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ወዲያውኑ ወደ ጋራዥ በመሄድ ብሬኮቹን መፈተሽ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_33_cbb5a91472a88378.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ወዲያውኑ ወደ ጋራዥ በመሄድ ብሬኮቹን መፈተሽ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_36_d8d5b56773cce699.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ወዲያውኑ ወደ ጋራዥ በመሄድ ብሬኮቹን መፈተሽ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_37_9325c1ccdccc0b92.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ወዲያውኑ ወደ ጋራዥ በመሄድ ብሬኮቹን መፈተሽ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_37_c587cda445a85998.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ወዲያውኑ ወደ ጋራዥ በመሄድ ብሬኮቹን መፈተሽ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_37_01fd6038ac52285f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ወዲያውኑ ወደ ጋራዥ በመሄድ ብሬኮቹን መፈተሽ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_39_848bfc504dbf28bf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ወዲያውኑ ወደ ጋራዥ በመሄድ ብሬኮቹን መፈተሽ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_40_5cc096bb4508db9c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ወዲያውኑ ወደ ጋራዥ በመሄድ ብሬኮቹን መፈተሽ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_44_e167f87bcd5de8f2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ወዲያውኑ ወደ ጋራዥ በመሄድ ብሬኮቹን መፈተሽ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_42_575ea6c08ce9290a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ወዲያውኑ ወደ ጋራዥ በመሄድ ብሬኮቹን መፈተሽ",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_46_67218b2bb2d7f88f.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

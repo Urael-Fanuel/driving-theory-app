@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:18:23.236Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "rd_l3_s1",
+   "key": "road_decisions_2_0",
+   "sentences": [
+    {
+     "text": "ቢጫውን መኪና የሚያሽከረክረው ሰው እዚህ እንዴት መሆን አለበት?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_40_807db3acb45897e6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በተመሳሳይ ፍጥነት ይቀጥሉ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_17_f675d3128af8e9ae.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። በተመሳሳይ ፍጥነት ይቀጥሉ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_22_b06754b31b0d5c2c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እግረኛው እስኪቆም ይጠብቁ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_17_98735eda9c388559.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። እግረኛው እስኪቆም ይጠብቁ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_22_1e3bf58c9998b6c7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ፍጥነት ይቀንሱ፣ ለማቆም ዝግጁ ይሁኑ፣ እግረኛውን ያሳልፉ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_37_2c196746195a71f8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ፍጥነት ይቀንሱ፣ ለማቆም ዝግጁ ይሁኑ፣ እግረኛውን ያሳልፉ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_42_0699d77862c8e9cc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁልጊዜ ሙሉ በሙሉ ያቁሙ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_16_d1eda75b6d919dee.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ሁልጊዜ ሙሉ በሙሉ ያቁሙ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_21_78901e58af325d12.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ፍጥነት ይቀንሱ፣ ለማቆም ዝግጁ ይሁኑ፣ እግረኛውን ያሳልፉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_43_591862c2ed3e2bc1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ፍጥነት ይቀንሱ፣ ለማቆም ዝግጁ ይሁኑ፣ እግረኛውን ያሳልፉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_41_112a568e31f81357.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ፍጥነት ይቀንሱ፣ ለማቆም ዝግጁ ይሁኑ፣ እግረኛውን ያሳልፉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_42_1cf376f06e6ab33e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ፍጥነት ይቀንሱ፣ ለማቆም ዝግጁ ይሁኑ፣ እግረኛውን ያሳልፉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_41_0685afe083eb25aa.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ፍጥነት ይቀንሱ፣ ለማቆም ዝግጁ ይሁኑ፣ እግረኛውን ያሳልፉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_42_b0a5375a7414ace1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ፍጥነት ይቀንሱ፣ ለማቆም ዝግጁ ይሁኑ፣ እግረኛውን ያሳልፉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_41_c1050598c4ad63df.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ፍጥነት ይቀንሱ፣ ለማቆም ዝግጁ ይሁኑ፣ እግረኛውን ያሳልፉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_42_40846af8327e0d0a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ፍጥነት ይቀንሱ፣ ለማቆም ዝግጁ ይሁኑ፣ እግረኛውን ያሳልፉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_45_2c3c7ee219ad92cb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ፍጥነት ይቀንሱ፣ ለማቆም ዝግጁ ይሁኑ፣ እግረኛውን ያሳልፉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_46_d2807d581661bce0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ፍጥነት ይቀንሱ፣ ለማቆም ዝግጁ ይሁኑ፣ እግረኛውን ያሳልፉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_46_494c9b1cf5db25aa.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ፍጥነት ይቀንሱ፣ ለማቆም ዝግጁ ይሁኑ፣ እግረኛውን ያሳልፉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_46_fcc3adf0506d434d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ፍጥነት ይቀንሱ፣ ለማቆም ዝግጁ ይሁኑ፣ እግረኛውን ያሳልፉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_48_e8d6eb000656aaad.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ፍጥነት ይቀንሱ፣ ለማቆም ዝግጁ ይሁኑ፣ እግረኛውን ያሳልፉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_49_4120fb465017052e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ፍጥነት ይቀንሱ፣ ለማቆም ዝግጁ ይሁኑ፣ እግረኛውን ያሳልፉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_53_819d1136519f7ac0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ፍጥነት ይቀንሱ፣ ለማቆም ዝግጁ ይሁኑ፣ እግረኛውን ያሳልፉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_51_01c5366262268978.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ፍጥነት ይቀንሱ፣ ለማቆም ዝግጁ ይሁኑ፣ እግረኛውን ያሳልፉ።",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_55_c47a3d16cbc2f99d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የሚያሽከረክረው ሰው በተመሳሳይ ፍጥነት መቀጠል ይችላል?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_35_6564e62995ef0a80.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እግረኛው ገና ስላልደረሰ በተመሳሳይ ፍጥነት መቀጠል ይቻላል።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_38_3da4b7e679828c3c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። እግረኛው ገና ስላልደረሰ በተመሳሳይ ፍጥነት መቀጠል ይቻላል።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_43_2bc200d2fd31bffe.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እግረኛው በመንገድ ላይ ስላልሆነ ፍጥነት መቀነስ አያስፈልግም።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_39_51eba9243748a4d9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። እግረኛው በመንገድ ላይ ስላልሆነ ፍጥነት መቀነስ አያስፈልግም።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_44_9cbd1fceb9483bc7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አይ፣ እግረኛው እስኪቆም መጠበቅ አለብዎት።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_27_16f06d404e4cf855.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። አይ፣ እግረኛው እስኪቆም መጠበቅ አለብዎት።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_32_56a90bbcfa455021.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አይ፣ ፍጥነት ይቀንሱ፣ እግረኛው ሲደርስ ይከታተሉ፣ ከደረሰ አቁመው እንዲያቋርጥ ያድርጉ፣ ሙሉ በሙሉ ካቋረጠ በኋላ ብቻ ይቀጥሉ።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_81_594415681cf0ecfe.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። አይ፣ ፍጥነት ይቀንሱ፣ እግረኛው ሲደርስ ይከታተሉ፣ ከደረሰ አቁመው እንዲያቋርጥ ያድርጉ፣ ሙሉ በሙሉ ካቋረጠ በኋላ ብቻ ይቀጥሉ።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_86_ece64f60b7f2c882.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! አይ፣ ፍጥነት ይቀንሱ፣ እግረኛው ሲደርስ ይከታተሉ፣ ከደረሰ አቁመው እንዲያቋርጥ ያድርጉ፣ ሙሉ በሙሉ ካቋረጠ በኋላ ብቻ ይቀጥሉ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_87_106784984b06a247.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! አይ፣ ፍጥነት ይቀንሱ፣ እግረኛው ሲደርስ ይከታተሉ፣ ከደረሰ አቁመው እንዲያቋርጥ ያድርጉ፣ ሙሉ በሙሉ ካቋረጠ በኋላ ብቻ ይቀጥሉ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_85_bdb2698a1360fe51.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! አይ፣ ፍጥነት ይቀንሱ፣ እግረኛው ሲደርስ ይከታተሉ፣ ከደረሰ አቁመው እንዲያቋርጥ ያድርጉ፣ ሙሉ በሙሉ ካቋረጠ በኋላ ብቻ ይቀጥሉ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_86_e157a28c81507a38.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! አይ፣ ፍጥነት ይቀንሱ፣ እግረኛው ሲደርስ ይከታተሉ፣ ከደረሰ አቁመው እንዲያቋርጥ ያድርጉ፣ ሙሉ በሙሉ ካቋረጠ በኋላ ብቻ ይቀጥሉ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_85_85eaf9fc1820d1ac.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! አይ፣ ፍጥነት ይቀንሱ፣ እግረኛው ሲደርስ ይከታተሉ፣ ከደረሰ አቁመው እንዲያቋርጥ ያድርጉ፣ ሙሉ በሙሉ ካቋረጠ በኋላ ብቻ ይቀጥሉ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_86_951fb0d85c0a1567.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! አይ፣ ፍጥነት ይቀንሱ፣ እግረኛው ሲደርስ ይከታተሉ፣ ከደረሰ አቁመው እንዲያቋርጥ ያድርጉ፣ ሙሉ በሙሉ ካቋረጠ በኋላ ብቻ ይቀጥሉ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_85_41da6b56833ce3d9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! አይ፣ ፍጥነት ይቀንሱ፣ እግረኛው ሲደርስ ይከታተሉ፣ ከደረሰ አቁመው እንዲያቋርጥ ያድርጉ፣ ሙሉ በሙሉ ካቋረጠ በኋላ ብቻ ይቀጥሉ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_86_47391a722da3620c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! አይ፣ ፍጥነት ይቀንሱ፣ እግረኛው ሲደርስ ይከታተሉ፣ ከደረሰ አቁመው እንዲያቋርጥ ያድርጉ፣ ሙሉ በሙሉ ካቋረጠ በኋላ ብቻ ይቀጥሉ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_89_4a844faae042fccd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! አይ፣ ፍጥነት ይቀንሱ፣ እግረኛው ሲደርስ ይከታተሉ፣ ከደረሰ አቁመው እንዲያቋርጥ ያድርጉ፣ ሙሉ በሙሉ ካቋረጠ በኋላ ብቻ ይቀጥሉ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_90_147b8140e37415e6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! አይ፣ ፍጥነት ይቀንሱ፣ እግረኛው ሲደርስ ይከታተሉ፣ ከደረሰ አቁመው እንዲያቋርጥ ያድርጉ፣ ሙሉ በሙሉ ካቋረጠ በኋላ ብቻ ይቀጥሉ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_90_187e37f4b210d1ac.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! አይ፣ ፍጥነት ይቀንሱ፣ እግረኛው ሲደርስ ይከታተሉ፣ ከደረሰ አቁመው እንዲያቋርጥ ያድርጉ፣ ሙሉ በሙሉ ካቋረጠ በኋላ ብቻ ይቀጥሉ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_90_c9abb47681ae00cb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! አይ፣ ፍጥነት ይቀንሱ፣ እግረኛው ሲደርስ ይከታተሉ፣ ከደረሰ አቁመው እንዲያቋርጥ ያድርጉ፣ ሙሉ በሙሉ ካቋረጠ በኋላ ብቻ ይቀጥሉ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_92_9f5bbbe2cfa1dfab.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! አይ፣ ፍጥነት ይቀንሱ፣ እግረኛው ሲደርስ ይከታተሉ፣ ከደረሰ አቁመው እንዲያቋርጥ ያድርጉ፣ ሙሉ በሙሉ ካቋረጠ በኋላ ብቻ ይቀጥሉ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_93_ea1e53a0f7886c28.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! አይ፣ ፍጥነት ይቀንሱ፣ እግረኛው ሲደርስ ይከታተሉ፣ ከደረሰ አቁመው እንዲያቋርጥ ያድርጉ፣ ሙሉ በሙሉ ካቋረጠ በኋላ ብቻ ይቀጥሉ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_97_80988708f9f28bc6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! አይ፣ ፍጥነት ይቀንሱ፣ እግረኛው ሲደርስ ይከታተሉ፣ ከደረሰ አቁመው እንዲያቋርጥ ያድርጉ፣ ሙሉ በሙሉ ካቋረጠ በኋላ ብቻ ይቀጥሉ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_95_ab2d251cc171517e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: አይ፣ ፍጥነት ይቀንሱ፣ እግረኛው ሲደርስ ይከታተሉ፣ ከደረሰ አቁመው እንዲያቋርጥ ያድርጉ፣ ሙሉ በሙሉ ካቋረጠ በኋላ ብቻ ይቀጥሉ።",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_99_5d199c8a0185349b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እዚህ ቅድሚያ ያለው ማነው?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_17_4ce27090afe2b3a9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በመጀመሪያ የደረሰው።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_13_010b4ba0a8906b0b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። በመጀመሪያ የደረሰው።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_18_8d49a4e8227a8809.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ወደ ማቋረጫው እየሄደ ያለው ቀይ እግረኛ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_26_88c6d818f910d9c0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ወደ ማቋረጫው እየሄደ ያለው ቀይ እግረኛ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_31_cf62d3589523081e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የቢጫው መኪና አሽከርካሪ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_16_e9366ea45d8f5a53.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የቢጫው መኪና አሽከርካሪ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_21_ef4929380d39bae7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትልቁ ተሽከርካሪ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_11_6cfeebb6afbc6077.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ትልቁ ተሽከርካሪ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_16_e9e4ebfe95b904cb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ወደ ማቋረጫው እየሄደ ያለው ቀይ እግረኛ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_32_5dd3219050948299.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ወደ ማቋረጫው እየሄደ ያለው ቀይ እግረኛ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_30_cfd36898144e464f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ወደ ማቋረጫው እየሄደ ያለው ቀይ እግረኛ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_31_6498f760f02ff946.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ወደ ማቋረጫው እየሄደ ያለው ቀይ እግረኛ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_30_376331b4f5c4ef52.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ወደ ማቋረጫው እየሄደ ያለው ቀይ እግረኛ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_31_ceaae992d9d2cab9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ወደ ማቋረጫው እየሄደ ያለው ቀይ እግረኛ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_30_3cfc52eeeb3ed1c7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ወደ ማቋረጫው እየሄደ ያለው ቀይ እግረኛ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_31_1b9e7268cf0d7732.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ወደ ማቋረጫው እየሄደ ያለው ቀይ እግረኛ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_34_b3d83e007e360253.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ወደ ማቋረጫው እየሄደ ያለው ቀይ እግረኛ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_35_c680d0a84f5517d8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ወደ ማቋረጫው እየሄደ ያለው ቀይ እግረኛ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_35_358924963db4ef52.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ወደ ማቋረጫው እየሄደ ያለው ቀይ እግረኛ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_35_3aa34bc202568395.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ወደ ማቋረጫው እየሄደ ያለው ቀይ እግረኛ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_37_da81b0204a0dacf5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ወደ ማቋረጫው እየሄደ ያለው ቀይ እግረኛ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_38_d46dbc888366a956.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ወደ ማቋረጫው እየሄደ ያለው ቀይ እግረኛ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_42_b28a08caec08ff38.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ወደ ማቋረጫው እየሄደ ያለው ቀይ እግረኛ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_40_9bc44cf56d553b40.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ወደ ማቋረጫው እየሄደ ያለው ቀይ እግረኛ።",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_44_1f547752fc1c8fc5.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

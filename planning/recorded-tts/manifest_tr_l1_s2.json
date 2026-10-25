@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:14:34.847Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "tr_l1_s2",
+   "key": "the_road_0_1",
+   "sentences": [
+    {
+     "text": "ምክንያታዊ ፍጥነት ምንድነው?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_18_d38e8d400c21d260.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በመንገድ ላይ የተፈቀደው ከፍተኛው ፍጥነት።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_27_ec4a837a1d4139b2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። በመንገድ ላይ የተፈቀደው ከፍተኛው ፍጥነት።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_32_457d4b948897ffb0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመንገዱን፣ የአየር ሁኔታን፣ የትራፊክን እና የአሽከርካሪውን ሁኔታ ግምት ውስጥ የሚያስገባ እና ሁልጊዜም ከከፍተኛው ፍጥነት ያነሰ ፍጥነት።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_88_97ac61e706229b43.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። የመንገዱን፣ የአየር ሁኔታን፣ የትራፊክን እና የአሽከርካሪውን ሁኔታ ግምት ውስጥ የሚያስገባ እና ሁልጊዜም ከከፍተኛው ፍጥነት ያነሰ ፍጥነት።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_93_38f6945f1a15de9d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሽከርካሪው በፍጥነት ለመድረስ የሚጠቀምበት ፍጥነት።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_33_4c0b71ce36942df1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። አሽከርካሪው በፍጥነት ለመድረስ የሚጠቀምበት ፍጥነት።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_38_56fe17be0ef7df85.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሌሎች መኪናዎች የሚሄዱበት ፍጥነት።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_22_03211270d43ef795.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ሌሎች መኪናዎች የሚሄዱበት ፍጥነት።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_27_1d00cd782a0502e9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! የመንገዱን፣ የአየር ሁኔታን፣ የትራፊክን እና የአሽከርካሪውን ሁኔታ ግምት ውስጥ የሚያስገባ እና ሁልጊዜም ከከፍተኛው ፍጥነት ያነሰ ፍጥነት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_94_f7b0bd1093b1381a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! የመንገዱን፣ የአየር ሁኔታን፣ የትራፊክን እና የአሽከርካሪውን ሁኔታ ግምት ውስጥ የሚያስገባ እና ሁልጊዜም ከከፍተኛው ፍጥነት ያነሰ ፍጥነት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_92_fba55872fc7ca6cc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! የመንገዱን፣ የአየር ሁኔታን፣ የትራፊክን እና የአሽከርካሪውን ሁኔታ ግምት ውስጥ የሚያስገባ እና ሁልጊዜም ከከፍተኛው ፍጥነት ያነሰ ፍጥነት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_93_3b467f68c59fd345.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! የመንገዱን፣ የአየር ሁኔታን፣ የትራፊክን እና የአሽከርካሪውን ሁኔታ ግምት ውስጥ የሚያስገባ እና ሁልጊዜም ከከፍተኛው ፍጥነት ያነሰ ፍጥነት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_92_0b884958673a7651.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! የመንገዱን፣ የአየር ሁኔታን፣ የትራፊክን እና የአሽከርካሪውን ሁኔታ ግምት ውስጥ የሚያስገባ እና ሁልጊዜም ከከፍተኛው ፍጥነት ያነሰ ፍጥነት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_93_e346ded8efe19ffa.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! የመንገዱን፣ የአየር ሁኔታን፣ የትራፊክን እና የአሽከርካሪውን ሁኔታ ግምት ውስጥ የሚያስገባ እና ሁልጊዜም ከከፍተኛው ፍጥነት ያነሰ ፍጥነት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_92_0d4466408e419844.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! የመንገዱን፣ የአየር ሁኔታን፣ የትራፊክን እና የአሽከርካሪውን ሁኔታ ግምት ውስጥ የሚያስገባ እና ሁልጊዜም ከከፍተኛው ፍጥነት ያነሰ ፍጥነት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_93_cd67c718b0b89df1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! የመንገዱን፣ የአየር ሁኔታን፣ የትራፊክን እና የአሽከርካሪውን ሁኔታ ግምት ውስጥ የሚያስገባ እና ሁልጊዜም ከከፍተኛው ፍጥነት ያነሰ ፍጥነት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_96_17333b58c110a1d0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! የመንገዱን፣ የአየር ሁኔታን፣ የትራፊክን እና የአሽከርካሪውን ሁኔታ ግምት ውስጥ የሚያስገባ እና ሁልጊዜም ከከፍተኛው ፍጥነት ያነሰ ፍጥነት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_97_a5a5035028b6bf5b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! የመንገዱን፣ የአየር ሁኔታን፣ የትራፊክን እና የአሽከርካሪውን ሁኔታ ግምት ውስጥ የሚያስገባ እና ሁልጊዜም ከከፍተኛው ፍጥነት ያነሰ ፍጥነት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_97_0722d6ef732a7651.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! የመንገዱን፣ የአየር ሁኔታን፣ የትራፊክን እና የአሽከርካሪውን ሁኔታ ግምት ውስጥ የሚያስገባ እና ሁልጊዜም ከከፍተኛው ፍጥነት ያነሰ ፍጥነት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_97_e2293212e73c1216.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! የመንገዱን፣ የአየር ሁኔታን፣ የትራፊክን እና የአሽከርካሪውን ሁኔታ ግምት ውስጥ የሚያስገባ እና ሁልጊዜም ከከፍተኛው ፍጥነት ያነሰ ፍጥነት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_99_d9fc1bc204de0bb6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! የመንገዱን፣ የአየር ሁኔታን፣ የትራፊክን እና የአሽከርካሪውን ሁኔታ ግምት ውስጥ የሚያስገባ እና ሁልጊዜም ከከፍተኛው ፍጥነት ያነሰ ፍጥነት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_100_9ccc17da5c3d8355.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! የመንገዱን፣ የአየር ሁኔታን፣ የትራፊክን እና የአሽከርካሪውን ሁኔታ ግምት ውስጥ የሚያስገባ እና ሁልጊዜም ከከፍተኛው ፍጥነት ያነሰ ፍጥነት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_104_36dbf2a82a18827b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! የመንገዱን፣ የአየር ሁኔታን፣ የትራፊክን እና የአሽከርካሪውን ሁኔታ ግምት ውስጥ የሚያስገባ እና ሁልጊዜም ከከፍተኛው ፍጥነት ያነሰ ፍጥነት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_102_37c8ad8884c48ec3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: የመንገዱን፣ የአየር ሁኔታን፣ የትራፊክን እና የአሽከርካሪውን ሁኔታ ግምት ውስጥ የሚያስገባ እና ሁልጊዜም ከከፍተኛው ፍጥነት ያነሰ ፍጥነት።",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_106_4584712ad229d6c6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሽከርካሪው ፍጥነት መቀነስ ያለበት በየትኛው ሁኔታ ነው?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_36_a9095dfc70534598.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መንገዱ ክፍት ሲሆን እና ምንም መኪና ሳይኖር።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_29_e71766a02b556480.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። መንገዱ ክፍት ሲሆን እና ምንም መኪና ሳይኖር።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_34_a157b6f05673aa02.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሹል ኩርባዎች ሲደርሱ፣ የማየት ችሎታ ሲገደብ ወይም መንገዱ ክፍት በማይሆንበት ጊዜ።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_53_418558b2b6e1fac4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ሹል ኩርባዎች ሲደርሱ፣ የማየት ችሎታ ሲገደብ ወይም መንገዱ ክፍት በማይሆንበት ጊዜ።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_58_9b471540a88f095a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ቀጥተኛ እና ሰፊ መንገድ ላይ ሲያሽከረክሩ።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_27_e4a8a6a0deaeb093.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ቀጥተኛ እና ሰፊ መንገድ ላይ ሲያሽከረክሩ።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_32_33dc556e3f09efa7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሽከርካሪው በፍጥነት መሄድ ሲፈልግ።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_23_d5bbe896da1cf7cd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። አሽከርካሪው በፍጥነት መሄድ ሲፈልግ።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_28_c7ecaabcd1f07331.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ሹል ኩርባዎች ሲደርሱ፣ የማየት ችሎታ ሲገደብ ወይም መንገዱ ክፍት በማይሆንበት ጊዜ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_59_2ed0463811ee88fd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ሹል ኩርባዎች ሲደርሱ፣ የማየት ችሎታ ሲገደብ ወይም መንገዱ ክፍት በማይሆንበት ጊዜ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_57_46d3af8860f1b5eb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ሹል ኩርባዎች ሲደርሱ፣ የማየት ችሎታ ሲገደብ ወይም መንገዱ ክፍት በማይሆንበት ጊዜ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_58_8f6699b0609bca82.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ሹል ኩርባዎች ሲደርሱ፣ የማየት ችሎታ ሲገደብ ወይም መንገዱ ክፍት በማይሆንበት ጊዜ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_57_d178970ef199ae16.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ሹል ኩርባዎች ሲደርሱ፣ የማየት ችሎታ ሲገደብ ወይም መንገዱ ክፍት በማይሆንበት ጊዜ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_58_fa21eb1a375a7c5d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ሹል ኩርባዎች ሲደርሱ፣ የማየት ችሎታ ሲገደብ ወይም መንገዱ ክፍት በማይሆንበት ጊዜ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_57_3f21f2fa68830163.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ሹል ኩርባዎች ሲደርሱ፣ የማየት ችሎታ ሲገደብ ወይም መንገዱ ክፍት በማይሆንበት ጊዜ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_58_cb0ad9e0588705b6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ሹል ኩርባዎች ሲደርሱ፣ የማየት ችሎታ ሲገደብ ወይም መንገዱ ክፍት በማይሆንበት ጊዜ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_61_4e7fa12e4047d677.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ሹል ኩርባዎች ሲደርሱ፣ የማየት ችሎታ ሲገደብ ወይም መንገዱ ክፍት በማይሆንበት ጊዜ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_62_675984f0170f8bdc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ሹል ኩርባዎች ሲደርሱ፣ የማየት ችሎታ ሲገደብ ወይም መንገዱ ክፍት በማይሆንበት ጊዜ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_62_cba5ce184389ae16.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ሹል ኩርባዎች ሲደርሱ፣ የማየት ችሎታ ሲገደብ ወይም መንገዱ ክፍት በማይሆንበት ጊዜ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_62_41cfbe88da872f71.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ሹል ኩርባዎች ሲደርሱ፣ የማየት ችሎታ ሲገደብ ወይም መንገዱ ክፍት በማይሆንበት ጊዜ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_64_c16a0298916b5511.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ሹል ኩርባዎች ሲደርሱ፣ የማየት ችሎታ ሲገደብ ወይም መንገዱ ክፍት በማይሆንበት ጊዜ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_65_49e998fa3dfb9092.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ሹል ኩርባዎች ሲደርሱ፣ የማየት ችሎታ ሲገደብ ወይም መንገዱ ክፍት በማይሆንበት ጊዜ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_69_ea64a15278b53cfc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ሹል ኩርባዎች ሲደርሱ፣ የማየት ችሎታ ሲገደብ ወይም መንገዱ ክፍት በማይሆንበት ጊዜ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_67_a23951feb13d5344.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ሹል ኩርባዎች ሲደርሱ፣ የማየት ችሎታ ሲገደብ ወይም መንገዱ ክፍት በማይሆንበት ጊዜ።",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_71_d687ecb2a8b4c5a1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሽከርካሪው መንዳት ያለበትን ፍጥነት የሚወስኑት የትኞቹ ምክንያቶች ናቸው?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_47_609065b42e909339.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመንገዱ ሁኔታ ብቻ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_13_516a98383ea21383.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። የመንገዱ ሁኔታ ብቻ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_18_e1b9ab2ac4818481.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የአየር ሁኔታ እና የትራፊክ መጨናነቅ ብቻ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_27_a0eb7b80a5a1da83.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። የአየር ሁኔታ እና የትራፊክ መጨናነቅ ብቻ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_32_b1c9a3c0304a1e1d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የአሽከርካሪው ሁኔታ ብቻ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_16_e4fd2fc6cc01eb03.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የአሽከርካሪው ሁኔታ ብቻ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_21_a52ca60a98fa59b7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመንገዱ ሁኔታ፣ የአየር ሁኔታ፣ የትራፊክ መጨናነቅ እና የአሽከርካሪው ሁኔታ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_49_a46a876d3c61ba3d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። የመንገዱ ሁኔታ፣ የአየር ሁኔታ፣ የትራፊክ መጨናነቅ እና የአሽከርካሪው ሁኔታ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_54_cb931d08d9b31f81.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! የመንገዱ ሁኔታ፣ የአየር ሁኔታ፣ የትራፊክ መጨናነቅ እና የአሽከርካሪው ሁኔታ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_55_96d9ba16deeef204.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! የመንገዱ ሁኔታ፣ የአየር ሁኔታ፣ የትራፊክ መጨናነቅ እና የአሽከርካሪው ሁኔታ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_53_c311a630dc952112.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! የመንገዱ ሁኔታ፣ የአየር ሁኔታ፣ የትራፊክ መጨናነቅ እና የአሽከርካሪው ሁኔታ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_54_63857ab65c439d7b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! የመንገዱ ሁኔታ፣ የአየር ሁኔታ፣ የትራፊክ መጨናነቅ እና የአሽከርካሪው ሁኔታ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_53_c374ddc0840deeef.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! የመንገዱ ሁኔታ፣ የአየር ሁኔታ፣ የትራፊክ መጨናነቅ እና የአሽከርካሪው ሁኔታ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_54_e54159f6d3a4d2e4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! የመንገዱ ሁኔታ፣ የአየር ሁኔታ፣ የትራፊክ መጨናነቅ እና የአሽከርካሪው ሁኔታ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_53_d0f9205021d09c9a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! የመንገዱ ሁኔታ፣ የአየር ሁኔታ፣ የትራፊክ መጨናነቅ እና የአሽከርካሪው ሁኔታ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_54_00235b80377fd80f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! የመንገዱ ሁኔታ፣ የአየር ሁኔታ፣ የትራፊክ መጨናነቅ እና የአሽከርካሪው ሁኔታ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_57_978ec558cd71cd8e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! የመንገዱ ሁኔታ፣ የአየር ሁኔታ፣ የትራፊክ መጨናነቅ እና የአሽከርካሪው ሁኔታ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_58_8e273a286b72a925.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! የመንገዱ ሁኔታ፣ የአየር ሁኔታ፣ የትራፊክ መጨናነቅ እና የአሽከርካሪው ሁኔታ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_58_0d6298f85dfdeeef.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! የመንገዱ ሁኔታ፣ የአየር ሁኔታ፣ የትራፊክ መጨናነቅ እና የአሽከርካሪው ሁኔታ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_58_5be48732abc77288.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! የመንገዱ ሁኔታ፣ የአየር ሁኔታ፣ የትራፊክ መጨናነቅ እና የአሽከርካሪው ሁኔታ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_60_25fe8ef078078328.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! የመንገዱ ሁኔታ፣ የአየር ሁኔታ፣ የትራፊክ መጨናነቅ እና የአሽከርካሪው ሁኔታ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_61_df693f00e38b1b6b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! የመንገዱ ሁኔታ፣ የአየር ሁኔታ፣ የትራፊክ መጨናነቅ እና የአሽከርካሪው ሁኔታ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_65_09bd4f942bd291c5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! የመንገዱ ሁኔታ፣ የአየር ሁኔታ፣ የትራፊክ መጨናነቅ እና የአሽከርካሪው ሁኔታ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_63_4b6aab727d082abd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: የመንገዱ ሁኔታ፣ የአየር ሁኔታ፣ የትራፊክ መጨናነቅ እና የአሽከርካሪው ሁኔታ።",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_67_e1b792d031623358.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

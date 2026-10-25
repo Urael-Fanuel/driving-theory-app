@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:19:23.829Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "rd_l4_s3",
+   "key": "road_decisions_3_2",
+   "sentences": [
+    {
+     "text": "ወደዚህ መገናኛ መንገድ ሲያሽከረክሩ እንዴት ያደርጋሉ?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_34_37f14959bdaa6cf0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከመገናኛ መንገዱ በፊት ቆመው ወዲያውኑ ይለፉ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_29_43deee5032905b2e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ከመገናኛ መንገዱ በፊት ቆመው ወዲያውኑ ይለፉ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_34_e7541e902ff4b12c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ፖሊሱ እንዲቆሙ ስላዘዘዎት ያቁሙ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_21_de2e934ac26bcd81.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ፖሊሱ እንዲቆሙ ስላዘዘዎት ያቁሙ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_26_7d67e0c8846cf31f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመብራት ምልክቱን መታዘዝ አያስፈልግም።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_25_679ab77a1f0a22f0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የመብራት ምልክቱን መታዘዝ አያስፈልግም።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_30_80212f3924686544.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ለመሻገሪያው መንገድ ተሽከርካሪዎች ቅድሚያ ይስጡ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_31_6a6ad180c5afefda.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ለመሻገሪያው መንገድ ተሽከርካሪዎች ቅድሚያ ይስጡ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_36_7f3c6318aedb3d26.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ፖሊሱ እንዲቆሙ ስላዘዘዎት ያቁሙ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_27_acee910827b6aa78.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ፖሊሱ እንዲቆሙ ስላዘዘዎት ያቁሙ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_25_ee3c42f0a825386e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ፖሊሱ እንዲቆሙ ስላዘዘዎት ያቁሙ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_26_9aaab846d26de6c7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ፖሊሱ እንዲቆሙ ስላዘዘዎት ያቁሙ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_25_425952e2a672af53.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ፖሊሱ እንዲቆሙ ስላዘዘዎት ያቁሙ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_26_027d9ceab9fae898.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ፖሊሱ እንዲቆሙ ስላዘዘዎት ያቁሙ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_25_e222541634269ee6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ፖሊሱ እንዲቆሙ ስላዘዘዎት ያቁሙ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_26_b1c55b8efc3494b3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ፖሊሱ እንዲቆሙ ስላዘዘዎት ያቁሙ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_29_d52cd42473c011f2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ፖሊሱ እንዲቆሙ ስላዘዘዎት ያቁሙ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_30_44bf84d7881ffa99.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ፖሊሱ እንዲቆሙ ስላዘዘዎት ያቁሙ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_30_9f60f5163862af53.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ፖሊሱ እንዲቆሙ ስላዘዘዎት ያቁሙ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_30_2a32926a1f4d4df4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ፖሊሱ እንዲቆሙ ስላዘዘዎት ያቁሙ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_32_14ab076e998972d4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ፖሊሱ እንዲቆሙ ስላዘዘዎት ያቁሙ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_33_d4a79c96e1ccccd7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ፖሊሱ እንዲቆሙ ስላዘዘዎት ያቁሙ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_37_acaf32d09dc11379.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ፖሊሱ እንዲቆሙ ስላዘዘዎት ያቁሙ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_35_f3c7073207d4e301.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ፖሊሱ እንዲቆሙ ስላዘዘዎት ያቁሙ።",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_39_99c141d6c95469a4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የፖሊስ ትዕዛዝ ከመብራት ምልክት ጋር ቢቃረንም መታዘዝ ግዴታ ነው?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_42_3597eaacd9367e60.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የአቁም ምልክት ቢቃረንም የፖሊስ ትዕዛዝ መታዘዝ ግዴታ አይደለም።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_41_d2cc8f8ac1f63971.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። የአቁም ምልክት ቢቃረንም የፖሊስ ትዕዛዝ መታዘዝ ግዴታ አይደለም።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_46_b0e40d1e975c7ef3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የፖሊስ ትዕዛዝ የመግቢያ ክልከላ ምልክትን ቢቃረን መታዘዝ ግዴታ አይደለም።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_47_bdf761182580013a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። የፖሊስ ትዕዛዝ የመግቢያ ክልከላ ምልክትን ቢቃረን መታዘዝ ግዴታ አይደለም።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_52_4ac5ff98218d2924.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ፣ በከፍተኛ ጥንቃቄ መታዘዝ ግዴታ ነው።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_27_5c33d2f254d7b0ca.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። አዎ፣ በከፍተኛ ጥንቃቄ መታዘዝ ግዴታ ነው።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_32_166e92ce8b2c4f7e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አይደለም፣ መታዘዝ ግዴታ አይደለም።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_22_14892b609ade44c0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። አይደለም፣ መታዘዝ ግዴታ አይደለም።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_27_7fc583c006730bfc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! አዎ፣ በከፍተኛ ጥንቃቄ መታዘዝ ግዴታ ነው።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_33_76d7dfd0c981b933.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! አዎ፣ በከፍተኛ ጥንቃቄ መታዘዝ ግዴታ ነው።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_31_b8b83b06064cca25.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! አዎ፣ በከፍተኛ ጥንቃቄ መታዘዝ ግዴታ ነው።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_32_16c084aa8ba2d00c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! አዎ፣ በከፍተኛ ጥንቃቄ መታዘዝ ግዴታ ነው።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_31_877cd9102d122998.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! አዎ፣ በከፍተኛ ጥንቃቄ መታዘዝ ግዴታ ነው።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_32_9b8991a478336413.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! አዎ፣ በከፍተኛ ጥንቃቄ መታዘዝ ግዴታ ነው።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_31_56c4e652c16197ad.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! አዎ፣ በከፍተኛ ጥንቃቄ መታዘዝ ግዴታ ነው።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_32_523fc7cca06f44b8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! አዎ፣ በከፍተኛ ጥንቃቄ መታዘዝ ግዴታ ነው።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_35_fe4c066078535eb9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! አዎ፣ በከፍተኛ ጥንቃቄ መታዘዝ ግዴታ ነው።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_36_a3e28838ea8af1d2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! አዎ፣ በከፍተኛ ጥንቃቄ መታዘዝ ግዴታ ነው።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_36_576f33ac73022998.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! አዎ፣ በከፍተኛ ጥንቃቄ መታዘዝ ግዴታ ነው።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_36_878ad3caa36537bf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! አዎ፣ በከፍተኛ ጥንቃቄ መታዘዝ ግዴታ ነው።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_38_c4d03d28d2b6795f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! አዎ፣ በከፍተኛ ጥንቃቄ መታዘዝ ግዴታ ነው።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_39_641edaac7622fa1c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! አዎ፣ በከፍተኛ ጥንቃቄ መታዘዝ ግዴታ ነው።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_43_eb6ff2005214f272.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! አዎ፣ በከፍተኛ ጥንቃቄ መታዘዝ ግዴታ ነው።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_41_37ffcdd8f618174a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: አዎ፣ በከፍተኛ ጥንቃቄ መታዘዝ ግዴታ ነው።",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_45_cf8c2dbcf55c626f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ብር ቀለም ያለው መኪና ቁጥር ሁለት ቀይ መብራት እያለው ለምን ያልፋል?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_45_d336e45045c578b8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ፖሊሱ እንዲያልፍ ምልክት ስለሰጠው ነው።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_25_4c956a6afa439736.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ፖሊሱ እንዲያልፍ ምልክት ስለሰጠው ነው።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_30_a17b418a8b3407b4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመብራት ምልክቱ ስለተበላሸ ነው።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_21_e1758c684f46cb63.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። የመብራት ምልክቱ ስለተበላሸ ነው።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_26_6c0d4f8a21040a7d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እግረኛ መንገድ ስለሚያቋርጥ ነው።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_21_475dd06fd8f1ff3e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። እግረኛ መንገድ ስለሚያቋርጥ ነው።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_26_01f741a0d03ab24a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ቀይ መብራት ለሌላ አቅጣጫ ብቻ ነው።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_23_3b4a0da0dc303248.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ቀይ መብራት ለሌላ አቅጣጫ ብቻ ነው።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_28_a7cb605c4dcd3fb4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ፖሊሱ እንዲያልፍ ምልክት ስለሰጠው ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_31_075f4ea68041014f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ፖሊሱ እንዲያልፍ ምልክት ስለሰጠው ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_29_9fe86ba0fb153ad9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ፖሊሱ እንዲያልፍ ምልክት ስለሰጠው ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_30_daeaeca8614656f0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ፖሊሱ እንዲያልፍ ምልክት ስለሰጠው ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_29_f2ad56cbfa6a6764.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ፖሊሱ እንዲያልፍ ምልክት ስለሰጠው ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_30_cdd67e88d3126def.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ፖሊሱ እንዲያልፍ ምልክት ስለሰጠው ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_29_7acef6e8c4880251.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ፖሊሱ እንዲያልፍ ምልክት ስለሰጠው ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_30_c9d736a2845d4cc4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ፖሊሱ እንዲያልፍ ምልክት ስለሰጠው ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_33_dfad68baa5895845.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ፖሊሱ እንዲያልፍ ምልክት ስለሰጠው ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_34_6808847840bd402e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ፖሊሱ እንዲያልፍ ምልክት ስለሰጠው ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_34_2fb2035a045a6764.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ፖሊሱ እንዲያልፍ ምልክት ስለሰጠው ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_34_75c4a20e27d1e8c3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ፖሊሱ እንዲያልፍ ምልክት ስለሰጠው ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_36_692bcd4627097123.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ፖሊሱ እንዲያልፍ ምልክት ስለሰጠው ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_37_0e0716285e458ce0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ፖሊሱ እንዲያልፍ ምልክት ስለሰጠው ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_41_62667540937bb30e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ፖሊሱ እንዲያልፍ ምልክት ስለሰጠው ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_39_e1e92590f8203fb6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ፖሊሱ እንዲያልፍ ምልክት ስለሰጠው ነው።",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_43_c2699ed6f9618993.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

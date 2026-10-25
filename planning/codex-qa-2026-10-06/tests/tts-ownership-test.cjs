@@ -23,7 +23,7 @@ function world(opts = {}) {
   const deps = p =>
     p.endsWith('/sound')          ? { Sound, applyAudioMode: async () => {} } :
     p.endsWith('/supabaseClient') ? { supabase: { functions: { invoke: async () => ({ data: { audioContent: 'QUFB' }, error: null }) } } } :
-    p.endsWith('/audioCache')     ? { getCachedTtsUri: async t => (opts.missing && opts.missing.includes(t)) ? null : 'file:///tts/' + t + '.mp3', storeTtsAudio: async () => {}, releaseAudioFiles: async () => {} } :
+    p.endsWith('/audioCache')     ? { getCachedTtsUri: async t => (opts.missing && opts.missing.includes(t)) ? null : 'file:///tts/' + t + '.mp3', storeTtsAudio: async () => {}, releaseAudioFiles: async () => {}, fetchRecordedTts: async () => null, skipRecordedTts: async () => {}, isRecordedTtsUri: () => false } :
     p.endsWith('/errorReporter')  ? { reportError() {}, describeUri: () => ({}), httpStatusOf: () => null } : {};
   const ctx = {
     exports: {}, console: { warn() {}, error() {}, log() {} }, process: { env: {} },
@@ -133,6 +133,10 @@ async function scenario(name, fn) {
     const w = world(); let result = 'pending';
     w.tts.speakAndAwait('x').then(r => result = r);
     await flush();
+    fireTimersUpTo(w, 200_000); await flush();
+    // The saved clip made no sound, so it is dropped and the sentence is tried
+    // live once (CODEX QA 2026-10-24, R1). That one makes no sound either here.
+    assert.strictEqual(w.created.length, 2, 'no live retry after the silent saved clip');
     fireTimersUpTo(w, 200_000); await flush();
     assert.strictEqual(result, false, 'result: ' + result);
   });
@@ -252,6 +256,9 @@ async function scenario(name, fn) {
     w.created[0].cb(ST({ durationMillis: 120_000, positionMillis: 1_000 }));
     w.created[0].cb(ST({ isPlaying: false, isBuffering: true, durationMillis: 120_000, positionMillis: 1_000 }));
     await flush();
+    fireTimersUpTo(w, 1_000_000); await flush();
+    // Stuck part-way = not heard: dropped and tried live once (R1), silent too here.
+    assert.strictEqual(w.created.length, 2, 'no live retry after the stuck saved clip');
     fireTimersUpTo(w, 1_000_000); await flush();
     assert.strictEqual(result, false, 'result: ' + result);
   });

@@ -13,7 +13,7 @@
 
 import { Sound, applyAudioMode } from '../services/sound';
 import { supabase } from '../backend/supabaseClient';
-import { getCachedTtsUri, storeTtsAudio, releaseAudioFiles } from '../services/audioCache';
+import { getCachedTtsUri, storeTtsAudio, releaseAudioFiles, fetchRecordedTts, skipRecordedTts, isRecordedTtsUri } from '../services/audioCache';
 import { reportError, describeUri, httpStatusOf } from '../services/errorReporter';
 
 // TTS requests go through a Supabase Edge Function (supabase/functions/tts) —
@@ -276,8 +276,9 @@ export async function playUrlAndAwait(url: string): Promise<boolean> {
  *  Callers MUST check the return value — if false, the user heard nothing
  *  and the sequence should stop rather than continue to the next step.
  *
- *  ⚠️ OFFLINE: behavioral questions and answers have no pre-recorded files and
- *  are spoken only through here. Every rendering is therefore cached to disk
+ *  ⚠️ OFFLINE: behavioral questions and answers are spoken only through here
+ *  (from a recorded clip of the exact text when one is published, otherwise
+ *  live TTS). Every rendering is therefore cached to disk
  *  keyed by the exact text, so the FIRST read of a given sentence needs a
  *  connection and every read after it works offline. Do not remove the cache
  *  lookup below — without it the whole behavioral side of the app goes silent
@@ -286,107 +287,190 @@ export async function speakAndAwait(text: string): Promise<boolean> {
   const { generation: myGeneration, previous } = _claimTTS();   // FIRST, before any await
   await _releaseTTS(previous);
   if (_ttsGeneration !== myGeneration) return false;   // replaced while the old clip was stopping
-  let fromCache = false;                // declared here so the final catch can report it
   try {
     _emitSpeaking(true);
     await applyAudioMode();
 
     // ── 1. Offline-first: a previous rendering of this exact text ────────────
-    let uri           = await getCachedTtsUri(text);
-    fromCache         = !!uri;
-
+    let uri = await getCachedTtsUri(text);
+    let source: TtsSource = 'cache';
     if (_ttsGeneration !== myGeneration) { _stopSpeakingIfMine(myGeneration); return false; }
 
-    // ── 2. Not cached — ask the Edge Function proxy (not Google directly), so
-    //       the API key stays server-side. Race against a timeout to prevent
-    //       ANR if the function ever hangs.
+    // ── 2. Not cached — a recorded clip of this exact text, when there is one
+    //       (same voice and settings as the live call, see fetchRecordedTts).
+    //       No recording, a failed download, or a slow one all go to live TTS.
     if (!uri) {
-      const invokePromise = supabase.functions.invoke('tts', { body: { text } });
-      const timeoutPromise = new Promise<{ data: null; error: Error }>((resolve) =>
-        setTimeout(() => resolve({ data: null, error: new Error('tts timeout') }), 8_000)
-      );
-      const { data, error } = await Promise.race([invokePromise, timeoutPromise]);
-
-      if (error || !data?.audioContent) {
-        if (error) console.warn('[googleTTS] tts function error:', error);
-        // Only a real failure — a stop/cancel during the fetch is not one.
-        if (_ttsGeneration === myGeneration) {
-          reportError('tts', 'speakAndAwait:invoke', error ?? 'empty audioContent',
-            { status: httpStatusOf(error), text_len: text.length }, { skipIfOffline: true });
-        }
-        _stopSpeakingIfMine(myGeneration);
-        return false;
-      }
-      // Cancelled during fetch — another stopTTS() was called while we were waiting
+      uri = await withRecordedDeadline(fetchRecordedTts(text, 'now'));
+      source = 'recording';
       if (_ttsGeneration !== myGeneration) { _stopSpeakingIfMine(myGeneration); return false; }
-
-      // Save it first and play the saved file. That is exactly the path a cached
-      // sentence takes, so a freshly fetched one behaves like a replay (and the
-      // saved copy is there for offline use either way). The base64 data: URI is
-      // only a last resort if writing to disk fails.
-      await storeTtsAudio(text, data.audioContent);
-      if (_ttsGeneration !== myGeneration) { _stopSpeakingIfMine(myGeneration); return false; }
-      uri = await getCachedTtsUri(text);
-      if (!uri) uri = `data:audio/mp3;base64,${data.audioContent}`;
     }
 
-    // ── 3. Play ──────────────────────────────────────────────────────────────
-    let sound: Sound;
-    try {
-      ({ sound } = await Sound.createAsync({ uri }));
-    } catch (err) {
-      reportError('audio', 'speakAndAwait:load', err,
-        { ...describeUri(uri), from_cache: fromCache, text_len: text.length },
-        { localUri: fromCache ? uri : null });
-      // Only a cached file can fail here in a recoverable way. Drop it and let
-      // the caller retry against the network rather than caching a dud forever.
-      if (uri.startsWith('file:')) {
-        console.warn('[googleTTS] saved TTS unreadable, discarding:', err);
-        await releaseAudioFiles([uri]).catch(() => {});
-      }
-      _stopSpeakingIfMine(myGeneration);
-      return false;
+    let failedUri: string | null = null;
+    if (uri) {
+      const outcome = await _playTtsUri(uri, text, source, myGeneration);
+      if (outcome !== 'failed') return outcome === 'done';
+      failedUri = uri;
+      // The saved clip (a cached rendering or a recording) would not play and
+      // has been thrown away. Say the sentence live instead, once, in this same
+      // request, so a bad file never leaves the user in silence (CODEX QA
+      // 2026-10-24, R1).
+      if (_ttsGeneration !== myGeneration) return false;
+      _emitSpeaking(true);
     }
 
-    if (_ttsGeneration !== myGeneration) { sound.unloadAsync().catch(() => {}); _stopSpeakingIfMine(myGeneration); return false; }
-    currentSound = sound;
-    await sound.playAsync();
-    // stopTTS() can land in the gap between the check above and playback
-    // actually starting. Without this second check the clip would keep
-    // playing with currentSound already nulled — audible, and unstoppable.
-    if (_ttsGeneration !== myGeneration) {
-      sound.stopAsync().catch(() => {});
-      sound.unloadAsync().catch(() => {});
-      if (currentSound === sound) currentSound = null;
-      _stopSpeakingIfMine(myGeneration);
-      return false;
-    }
-    const outcome = await awaitSound(sound);
-    // A newer request owns the speaking state now; don't switch it off.
-    _stopSpeakingIfMine(myGeneration);
-    if (outcome === 'failed') {
-      if (_ttsGeneration === myGeneration) {
-        reportError('audio', 'speakAndAwait:playback', 'stopped by an error or never made a sound',
-          { ...describeUri(uri), from_cache: fromCache, text_len: text.length },
-          { localUri: fromCache ? uri : null });
-        // A saved rendering that cannot be played is a dud: drop it so the next
-        // try fetches a fresh one instead of failing the same way forever.
-        if (uri.startsWith('file:')) await releaseAudioFiles([uri]).catch(() => {});
-      }
-      return false;
-    }
-    return true;
+    // ── 3. Live — ask the Edge Function proxy (not Google directly), so the API
+    //       key stays server-side.
+    const liveUri = await _fetchLiveTts(text, myGeneration, failedUri);
+    if (!liveUri) { _stopSpeakingIfMine(myGeneration); return false; }
+    const heard = (await _playTtsUri(liveUri, text, 'live', myGeneration)) === 'done';
+    // No further try after this one: switch the speaking state off (only if this
+    // request still owns it), or the screens keep showing ⏸ over silence
+    // (CODEX QA 2026-10-24, S1).
+    if (!heard) _stopSpeakingIfMine(myGeneration);
+    return heard;
   } catch (e) {
     console.warn('[googleTTS] speakAndAwait error:', e);
-    // Typically playAsync() refusing to start — e.g. expo-av's "audio focus
-    // could not be acquired" — which means the user heard nothing. Skipped
-    // when stopTTS() ran meanwhile: unloading mid-start is a cancel, not a bug.
     if (_ttsGeneration === myGeneration) {
-      reportError('audio', 'speakAndAwait', e, { from_cache: fromCache, text_len: text.length });
+      reportError('audio', 'speakAndAwait', e, { text_len: text.length });
     }
     _stopSpeakingIfMine(myGeneration);
     return false;
   }
+}
+
+/** Where the clip being played came from (reported with any failure). */
+type TtsSource = 'cache' | 'recording' | 'live';
+
+/**
+ * How long speakAndAwait (and the offline pre-rendering) waits for a recorded
+ * clip before using live TTS instead. The download keeps going and fills the
+ * recording's own cache slot for next time; it can never replace the live
+ * rendering, which has a separate slot (services/audioCache.ts getCachedTtsUri).
+ */
+const RECORDED_WAIT_MS = 8_000;
+
+function withRecordedDeadline(fetching: Promise<string | null>): Promise<string | null> {
+  let timer: ReturnType<typeof setTimeout> | undefined;
+  const deadline = new Promise<null>((resolve) => { timer = setTimeout(() => resolve(null), RECORDED_WAIT_MS); });
+  return Promise.race([fetching.catch(() => null), deadline]).finally(() => { if (timer) clearTimeout(timer); });
+}
+
+/**
+ * Live TTS through the Edge Function, saved to the live cache slot.
+ * Returns the URI to play, or null when the user would hear nothing (reported).
+ * Races a timeout so a hung function can never freeze the app (ANR).
+ */
+async function _fetchLiveTts(text: string, myGeneration: number, failedUri: string | null = null): Promise<string | null> {
+  const invokePromise = supabase.functions.invoke('tts', { body: { text } });
+  const timeoutPromise = new Promise<{ data: null; error: Error }>((resolve) =>
+    setTimeout(() => resolve({ data: null, error: new Error('tts timeout') }), 8_000)
+  );
+  const { data, error } = await Promise.race([invokePromise, timeoutPromise]);
+
+  if (error || !data?.audioContent) {
+    if (error) console.warn('[googleTTS] tts function error:', error);
+    // Only a real failure — a stop/cancel during the fetch is not one.
+    if (_ttsGeneration === myGeneration) {
+      reportError('tts', 'speakAndAwait:invoke', error ?? 'empty audioContent',
+        { status: httpStatusOf(error), text_len: text.length }, { skipIfOffline: true });
+    }
+    return null;
+  }
+  // Cancelled during fetch — another stopTTS() was called while we were waiting
+  if (_ttsGeneration !== myGeneration) return null;
+
+  // Save it first and play the saved file. That is exactly the path a cached
+  // sentence takes, so a freshly fetched one behaves like a replay (and the
+  // saved copy is there for offline use either way). The base64 data: URI is
+  // only a last resort if writing to disk fails.
+  await storeTtsAudio(text, data.audioContent);
+  if (_ttsGeneration !== myGeneration) return null;
+  const saved = await getCachedTtsUri(text);
+  // Play the LIVE rendering just fetched: never a recording in its own slot, and
+  // never the saved file that just failed (if it could not be deleted, the save
+  // above kept it and skipped the fresh audio; CODEX QA 2026-10-24, S2).
+  return saved && !isRecordedTtsUri(saved) && saved !== failedUri ? saved : `data:audio/mp3;base64,${data.audioContent}`;
+}
+
+/**
+ * Play one clip of this request to the end.
+ *   'done'    — heard, or stopped on purpose while it was playing (the old
+ *               behaviour of speakAndAwait: true);
+ *   'stopped' — stopTTS() or a newer request took over BEFORE it played (false);
+ *   'failed'  — not heard: it would not load, start, or play. A saved file that
+ *               would not load, start or play is deleted (and a recording is not
+ *               used again this session), so it is never retried forever.
+ * Leaves the speaking state on after 'failed' so the caller can try live TTS;
+ * the caller MUST switch it off when it does not try again.
+ */
+async function _playTtsUri(uri: string, text: string, source: TtsSource, myGeneration: number): Promise<'done' | 'stopped' | 'failed'> {
+  const recorded = isRecordedTtsUri(uri);
+  const details  = () => ({ ...describeUri(uri), from_cache: source === 'cache', from_recording: recorded, text_len: text.length });
+  const discard  = async () => {
+    if (!uri.startsWith('file:')) return;
+    if (recorded) await skipRecordedTts(text).catch(() => {});
+    else await releaseAudioFiles([uri]).catch(() => {});
+  };
+
+  let sound: Sound;
+  try {
+    ({ sound } = await Sound.createAsync({ uri }));
+  } catch (err) {
+    if (_ttsGeneration !== myGeneration) { _stopSpeakingIfMine(myGeneration); return 'stopped'; }
+    reportError('audio', 'speakAndAwait:load', err, details(), { localUri: uri.startsWith('file:') ? uri : null });
+    // A saved file that cannot be loaded is a dud: drop it rather than failing
+    // the same way on every try.
+    console.warn('[googleTTS] saved TTS unreadable, discarding:', err);
+    await discard();
+    return 'failed';
+  }
+
+  if (_ttsGeneration !== myGeneration) { sound.unloadAsync().catch(() => {}); _stopSpeakingIfMine(myGeneration); return 'stopped'; }
+  currentSound = sound;
+  try {
+    await sound.playAsync();
+  } catch (err) {
+    // playAsync() refused to start, so nothing was heard. The cause cannot be
+    // told apart reliably (audio focus, or a file the player cannot start), so
+    // it is treated like any clip that will not play: the saved file is
+    // dropped and the caller says the sentence live, once (CODEX QA
+    // 2026-10-24, S2). Skipped when stopTTS() ran meanwhile: that is a cancel.
+    sound.unloadAsync().catch(() => {});
+    if (currentSound === sound) currentSound = null;
+    if (_ttsGeneration !== myGeneration) { _stopSpeakingIfMine(myGeneration); return 'stopped'; }
+    console.warn('[googleTTS] speakAndAwait error:', err);
+    reportError('audio', 'speakAndAwait', err, details(), { localUri: uri.startsWith('file:') ? uri : null });
+    await discard();
+    return 'failed';
+  }
+  // stopTTS() can land in the gap between the check above and playback
+  // actually starting. Without this second check the clip would keep
+  // playing with currentSound already nulled — audible, and unstoppable.
+  if (_ttsGeneration !== myGeneration) {
+    sound.stopAsync().catch(() => {});
+    sound.unloadAsync().catch(() => {});
+    if (currentSound === sound) currentSound = null;
+    _stopSpeakingIfMine(myGeneration);
+    return 'stopped';
+  }
+  const outcome = await awaitSound(sound);
+  if (outcome === 'failed') {
+    // Not heard. When a newer request already took over, that one owns the
+    // audio now: no report, no retry, just "not heard" (false, as before).
+    if (_ttsGeneration !== myGeneration) return 'stopped';
+    reportError('audio', 'speakAndAwait:playback', 'stopped by an error or never made a sound',
+      details(), { localUri: uri.startsWith('file:') ? uri : null });
+    // A saved rendering that cannot be played is a dud: drop it so the next
+    // try fetches a fresh one instead of failing the same way forever.
+    await discard();
+    return 'failed';
+  }
+  // A newer request owns the speaking state now; don't switch it off.
+  _stopSpeakingIfMine(myGeneration);
+  // Stopped while it was playing counts as 'done', exactly as before this
+  // function existed: an interrupted reading is not a failure, and callers
+  // must not report one or retry (only a stop BEFORE playback is 'stopped').
+  return 'done';
 }
 
 /** Fire-and-forget TTS — kept for backward compatibility. */
@@ -549,6 +633,10 @@ export async function prefetchTtsForTexts(texts: string[]): Promise<void> {
     await Promise.all(
       pending.slice(i, i + BATCH_SIZE).map(async (text) => {
         try {
+          // A recorded clip, when there is one, is the same sentence at no cost.
+          // Bounded like the foreground path, so a slow recording cannot hold up
+          // the live pre-rendering (CODEX QA 2026-10-24, R5).
+          if (await withRecordedDeadline(fetchRecordedTts(text, 'background'))) return;
           const { data, error } = await supabase.functions.invoke('tts', { body: { text } });
           if (error || !data?.audioContent) {
             reportError('tts', 'prefetchTtsForTexts', error ?? 'empty audioContent',

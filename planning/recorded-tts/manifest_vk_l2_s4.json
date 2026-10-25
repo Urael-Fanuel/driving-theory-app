@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:08:32.640Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "vk_l2_s4",
+   "key": "vehicle_knowledge_1_4",
+   "sentences": [
+    {
+     "text": "ፍጥነትን ለመጨመር ወይም ለመቀነስ የሚያገለግለው ፔዳል የትኛው ነው?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_43_af6f93787b3c0d4f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ክላች",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_3_2db8a3ef0b4ac81e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ክላች",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_8_3496b9c82184211c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ብሬክ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_3_df8beeac0b4959c1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ብሬክ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_8_616c905c282662df.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የነዳጅ ፔዳል",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_8_c442a39405d61cc1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የነዳጅ ፔዳል",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_13_9bc5c8dc1efda6b5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መሪ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_2_59ea0f6600578d77.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። መሪ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_7_80fe2be09fa95e4b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! የነዳጅ ፔዳል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_14_15789aa811108c98.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! የነዳጅ ፔዳል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_12_d657739ca50b5b4e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! የነዳጅ ፔዳል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_13_18d0da4f706ed4c7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! የነዳጅ ፔዳል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_12_a75c1b68817eb2d3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! የነዳጅ ፔዳል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_13_70919dc4805f92b8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! የነዳጅ ፔዳል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_12_9010e2dc198cf9c6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! የነዳጅ ፔዳል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_13_5604bfd3046efdb3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! የነዳጅ ፔዳል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_16_5a480f0045d65f52.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! የነዳጅ ፔዳል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_17_b28b4d40caaf6ed9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! የነዳጅ ፔዳል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_17_57e9b4132d6eb2d3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! የነዳጅ ፔዳል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_17_67d4902b650ca794.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! የነዳጅ ፔዳል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_19_4230d4ac58f30e74.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! የነዳጅ ፔዳል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_20_874b84003de70cd7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! የነዳጅ ፔዳል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_24_6bc317d0beb0bd39.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! የነዳጅ ፔዳል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_22_48b4d62cf604fd41.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: የነዳጅ ፔዳል",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_26_cab38f0c1523dd44.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የብሬክ ፔዳልን ለመጫን የትኛውን እግር መጠቀም አለብዎት?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_36_b7f509bca90a9d4f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የግራ እግር",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_7_c77899ee260ac5ce.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። የግራ እግር",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_12_7479248741942c4c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለቱንም እግሮች",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_10_803a71589eb78e6e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ሁለቱንም እግሮች",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_15_90d95b704d2951b0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የቀኝ እግር",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_7_7098ba0cad191ad5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የቀኝ እግር",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_12_5fad38b85488e0a1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የትኛውንም እግር",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_10_57af524ed567e543.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። የትኛውንም እግር",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_15_d8564f88d8930c3f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! የቀኝ እግር",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_13_3ca070d0631cb62c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! የቀኝ እግር",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_11_03d2f5071bad733a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! የቀኝ እግር",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_12_bf376d6cdf17c813.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! የቀኝ እግር",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_11_47b64618f29b0e87.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! የቀኝ እግር",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_12_ba0afe3c7ed8684c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! የቀኝ እግር",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_11_45b8f8a46590cbb2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! የቀኝ እግር",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_12_fdfc1cea49e533e7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! የቀኝ እግር",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_15_4b3e8f6757a9a8a6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! የቀኝ እግር",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_16_91f89508cca561cd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! የቀኝ እግር",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_16_3d089a20e08b0e87.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! የቀኝ እግር",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_16_abaea908e1de55a0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! የቀኝ እግር",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_18_7262615c0996b680.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! የቀኝ እግር",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_19_9281679cd89f7a03.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! የቀኝ እግር",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_23_4e354ec8d69abfad.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! የቀኝ እግር",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_21_f52f10784d384a55.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: የቀኝ እግር",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_25_8b26fc68aedef670.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የክላች ፔዳል ዋና ተግባር ምንድነው?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_23_9f7f5920833d9568.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የብሬክ መብራቶችን ለማብራት",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_17_b519a9bc8b5d46c9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። የብሬክ መብራቶችን ለማብራት",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_22_34ef89087902364b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናውን በፍጥነት ለማሽከርከር",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_19_ed653043620b1ebf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። መኪናውን በፍጥነት ለማሽከርከር",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_24_797db98cc2205ea1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጊር ለመቀየር እና ሞተሩን ከጊር ሳጥኑ ጋር ለማገናኘት/ለመለያየት",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_41_7b898134094012f9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ጊር ለመቀየር እና ሞተሩን ከጊር ሳጥኑ ጋር ለማገናኘት/ለመለያየት",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_46_b9511274e85c468d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናውን ለመምራት",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_11_5e746cac2a3cc1af.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። መኪናውን ለመምራት",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_16_aecda0bfa930ec53.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ጊር ለመቀየር እና ሞተሩን ከጊር ሳጥኑ ጋር ለማገናኘት/ለመለያየት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_47_1208f38c6584b240.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ጊር ለመቀየር እና ሞተሩን ከጊር ሳጥኑ ጋር ለማገናኘት/ለመለያየት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_45_eb9dfb5826df4256.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ጊር ለመቀየር እና ሞተሩን ከጊር ሳጥኑ ጋር ለማገናኘት/ለመለያየት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_46_2a3369f00ec8b2bf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ጊር ለመቀየር እና ሞተሩን ከጊር ሳጥኑ ጋር ለማገናኘት/ለመለያየት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_45_91e53a37ece16a2b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ጊር ለመቀየር እና ሞተሩን ከጊር ሳጥኑ ጋር ለማገናኘት/ለመለያየት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_46_25f666832d40e620.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ጊር ለመቀየር እና ሞተሩን ከጊር ሳጥኑ ጋር ለማገናኘት/ለመለያየት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_45_41f1412c635e31de.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ጊር ለመቀየር እና ሞተሩን ከጊር ሳጥኑ ጋር ለማገናኘት/ለመለያየት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_46_cddb8a683d48d84b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ጊር ለመቀየር እና ሞተሩን ከጊር ሳጥኑ ጋር ለማገናኘት/ለመለያየት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_49_1d65b544f4013cca.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ጊር ለመቀየር እና ሞተሩን ከጊር ሳጥኑ ጋር ለማገናኘት/ለመለያየት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_50_d9115a242b0d91e1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ጊር ለመቀየር እና ሞተሩን ከጊር ሳጥኑ ጋር ለማገናኘት/ለመለያየት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_50_de47000cd6d16a2b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ጊር ለመቀየር እና ሞተሩን ከጊር ሳጥኑ ጋር ለማገናኘት/ለመለያየት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_50_9f49702861c432cc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ጊር ለመቀየር እና ሞተሩን ከጊር ሳጥኑ ጋር ለማገናኘት/ለመለያየት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_52_47d794706d9e65ec.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ጊር ለመቀየር እና ሞተሩን ከጊር ሳጥኑ ጋር ለማገናኘት/ለመለያየት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_53_dcad5a88ee3a98af.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ጊር ለመቀየር እና ሞተሩን ከጊር ሳጥኑ ጋር ለማገናኘት/ለመለያየት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_57_a0cdc0307a0b9981.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ጊር ለመቀየር እና ሞተሩን ከጊር ሳጥኑ ጋር ለማገናኘት/ለመለያየት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_55_f34f44206387f179.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ጊር ለመቀየር እና ሞተሩን ከጊር ሳጥኑ ጋር ለማገናኘት/ለመለያየት",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_59_e1bd73a4408f6a1c.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

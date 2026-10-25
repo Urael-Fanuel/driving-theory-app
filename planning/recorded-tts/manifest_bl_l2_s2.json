@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:21:46.752Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "bl_l2_s2",
+   "key": "basics_license_1_1",
+   "sentences": [
+    {
+     "text": "የግዴታ ኢንሹራንስ በዋናነት የሚጠብቀው ማንን ነው?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_32_651c7fb90fcd4f3c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የአሽከርካሪውን ተሽከርካሪ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_17_d77c519e6d16d647.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። የአሽከርካሪውን ተሽከርካሪ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_22_1d5e31b63de722c5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አደጋ የደረሰበትን አሽከርካሪ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_19_770dffec86fd86e5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። አደጋ የደረሰበትን አሽከርካሪ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_24_bcd81ab8e2d37cfb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሌሎች ሰዎችን፣ ማለትም በአሽከርካሪው አደጋ የተጎዱትን።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_35_94559520542b05be.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ሌሎች ሰዎችን፣ ማለትም በአሽከርካሪው አደጋ የተጎዱትን።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_40_06fe31409308410a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመንግስትን ንብረት።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_13_0f7714584a950377.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። የመንግስትን ንብረት።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_18_e5a15d1843e41d8b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ሌሎች ሰዎችን፣ ማለትም በአሽከርካሪው አደጋ የተጎዱትን።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_41_7173a976b3d45b47.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ሌሎች ሰዎችን፣ ማለትም በአሽከርካሪው አደጋ የተጎዱትን።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_39_c774917834b76bd1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ሌሎች ሰዎችን፣ ማለትም በአሽከርካሪው አደጋ የተጎዱትን።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_40_6544a2bedddfecf8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ሌሎች ሰዎችን፣ ማለትም በአሽከርካሪው አደጋ የተጎዱትን።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_39_8b19a32e8d4ffe6c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ሌሎች ሰዎችን፣ ማለትም በአሽከርካሪው አደጋ የተጎዱትን።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_40_3ead6740f3b32be7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ሌሎች ሰዎችን፣ ማለትም በአሽከርካሪው አደጋ የተጎዱትን።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_39_03acfa804cf9a059.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ሌሎች ሰዎችን፣ ማለትም በአሽከርካሪው አደጋ የተጎዱትን።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_40_30d0e1f43141364c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ሌሎች ሰዎችን፣ ማለትም በአሽከርካሪው አደጋ የተጎዱትን።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_43_b5faca542c0b784d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ሌሎች ሰዎችን፣ ማለትም በአሽከርካሪው አደጋ የተጎዱትን።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_44_d764f32e6c1444a6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ሌሎች ሰዎችን፣ ማለትም በአሽከርካሪው አደጋ የተጎዱትን።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_44_3c6e1858c33ffe6c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ሌሎች ሰዎችን፣ ማለትም በአሽከርካሪው አደጋ የተጎዱትን።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_44_44c348d02d57d7cb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ሌሎች ሰዎችን፣ ማለትም በአሽከርካሪው አደጋ የተጎዱትን።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_46_4f3fc588cda3a3ab.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ሌሎች ሰዎችን፣ ማለትም በአሽከርካሪው አደጋ የተጎዱትን።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_47_28840d1cb8b3a6e8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ሌሎች ሰዎችን፣ ማለትም በአሽከርካሪው አደጋ የተጎዱትን።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_51_911d4baec6363506.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ሌሎች ሰዎችን፣ ማለትም በአሽከርካሪው አደጋ የተጎዱትን።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_49_c0fc60502b3ad53e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ሌሎች ሰዎችን፣ ማለትም በአሽከርካሪው አደጋ የተጎዱትን።",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_53_398537e69d44431b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የግዴታ ኢንሹራንስ ሳይኖረው አደጋ ያደረሰ አሽከርካሪ ምን ሊገጥመው ይችላል?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_48_0158c5a5979e181d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ምንም አይነት ችግር አይገጥማቸውም።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_22_ea9f34ba45e475f4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ምንም አይነት ችግር አይገጥማቸውም።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_27_cefc0a20fdf370b6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መንግስት ወጪውን ይሸፍንላቸዋል።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_20_a11d3ec8bbf48845.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። መንግስት ወጪውን ይሸፍንላቸዋል።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_25_47290c404ef5871b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ለተጎጂዎች የሚደርሰውን ጉዳት በሙሉ ከራሳቸው ኪስ መክፈል ይኖርባቸዋል፣ ይህም እጅግ ከፍተኛ ሊሆን ይችላል።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_68_d34ecb9215760923.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ለተጎጂዎች የሚደርሰውን ጉዳት በሙሉ ከራሳቸው ኪስ መክፈል ይኖርባቸዋል፣ ይህም እጅግ ከፍተኛ ሊሆን ይችላል።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_73_9e2504e042806217.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ተሽከርካሪያቸው ወዲያውኑ ይሸጣል።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_21_f1ad39b0a633dce6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ተሽከርካሪያቸው ወዲያውኑ ይሸጣል።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_26_7858e6c4f2f76d9a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ለተጎጂዎች የሚደርሰውን ጉዳት በሙሉ ከራሳቸው ኪስ መክፈል ይኖርባቸዋል፣ ይህም እጅግ ከፍተኛ ሊሆን ይችላል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_74_644f5f96464d7c3a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ለተጎጂዎች የሚደርሰውን ጉዳት በሙሉ ከራሳቸው ኪስ መክፈል ይኖርባቸዋል፣ ይህም እጅግ ከፍተኛ ሊሆን ይችላል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_72_3611ffb06301856c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ለተጎጂዎች የሚደርሰውን ጉዳት በሙሉ ከራሳቸው ኪስ መክፈል ይኖርባቸዋል፣ ይህም እጅግ ከፍተኛ ሊሆን ይችላል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_73_5aed601082f9fa25.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ለተጎጂዎች የሚደርሰውን ጉዳት በሙሉ ከራሳቸው ኪስ መክፈል ይኖርባቸዋል፣ ይህም እጅግ ከፍተኛ ሊሆን ይችላል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_72_aa639ba615a13031.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ለተጎጂዎች የሚደርሰውን ጉዳት በሙሉ ከራሳቸው ኪስ መክፈል ይኖርባቸዋል፣ ይህም እጅግ ከፍተኛ ሊሆን ይችላል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_73_b8950ab81061b7da.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ለተጎጂዎች የሚደርሰውን ጉዳት በሙሉ ከራሳቸው ኪስ መክፈል ይኖርባቸዋል፣ ይህም እጅግ ከፍተኛ ሊሆን ይችላል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_72_31d910d8bff3c0e4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ለተጎጂዎች የሚደርሰውን ጉዳት በሙሉ ከራሳቸው ኪስ መክፈል ይኖርባቸዋል፣ ይህም እጅግ ከፍተኛ ሊሆን ይችላል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_73_02798ad86f927311.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ለተጎጂዎች የሚደርሰውን ጉዳት በሙሉ ከራሳቸው ኪስ መክፈል ይኖርባቸዋል፣ ይህም እጅግ ከፍተኛ ሊሆን ይችላል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_76_d8a5918e6ec7e970.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ለተጎጂዎች የሚደርሰውን ጉዳት በሙሉ ከራሳቸው ኪስ መክፈል ይኖርባቸዋል፣ ይህም እጅግ ከፍተኛ ሊሆን ይችላል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_77_1a4681682358ed3b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ለተጎጂዎች የሚደርሰውን ጉዳት በሙሉ ከራሳቸው ኪስ መክፈል ይኖርባቸዋል፣ ይህም እጅግ ከፍተኛ ሊሆን ይችላል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_77_0eeb9e86c9913031.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ለተጎጂዎች የሚደርሰውን ጉዳት በሙሉ ከራሳቸው ኪስ መክፈል ይኖርባቸዋል፣ ይህም እጅግ ከፍተኛ ሊሆን ይችላል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_77_8a9988b86f80b736.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ለተጎጂዎች የሚደርሰውን ጉዳት በሙሉ ከራሳቸው ኪስ መክፈል ይኖርባቸዋል፣ ይህም እጅግ ከፍተኛ ሊሆን ይችላል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_79_2f1f10c69b9e9516.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ለተጎጂዎች የሚደርሰውን ጉዳት በሙሉ ከራሳቸው ኪስ መክፈል ይኖርባቸዋል፣ ይህም እጅግ ከፍተኛ ሊሆን ይችላል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_80_94981aea58339e35.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ለተጎጂዎች የሚደርሰውን ጉዳት በሙሉ ከራሳቸው ኪስ መክፈል ይኖርባቸዋል፣ ይህም እጅግ ከፍተኛ ሊሆን ይችላል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_84_eeccfe9623cf7d9b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ለተጎጂዎች የሚደርሰውን ጉዳት በሙሉ ከራሳቸው ኪስ መክፈል ይኖርባቸዋል፣ ይህም እጅግ ከፍተኛ ሊሆን ይችላል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_82_5a15cb986e79b4a3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ለተጎጂዎች የሚደርሰውን ጉዳት በሙሉ ከራሳቸው ኪስ መክፈል ይኖርባቸዋል፣ ይህም እጅግ ከፍተኛ ሊሆን ይችላል።",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_86_9c16f570ee33f666.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ አሽከርካሪ የግዴታ ኢንሹራንስን በተመለከተ ሁልጊዜ ምን ማረጋገጥ አለበት?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_50_6f900648dc665173.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ኢንሹራንሱ ጊዜው ያለፈበት መሆኑን።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_22_516a30fad9a44819.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ኢንሹራንሱ ጊዜው ያለፈበት መሆኑን።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_27_a2ad8cb0c73a6ddb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ኢንሹራንሱ ትክክለኛና ወቅታዊ መሆኑን እንዲሁም ማስረጃውን በተሽከርካሪው ውስጥ ማስቀመጥ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_56_4d483880ed1d4954.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ኢንሹራንሱ ትክክለኛና ወቅታዊ መሆኑን እንዲሁም ማስረጃውን በተሽከርካሪው ውስጥ ማስቀመጥ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_61_b0ecb672ead9638a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ኢንሹራንስ መኖሩን ለፖሊስ ብቻ ማሳወቅ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_25_81ee2e9e0f5b3daa.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ኢንሹራንስ መኖሩን ለፖሊስ ብቻ ማሳወቅ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_30_e181c2fc7efcb01e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ኢንሹራንስ መግዛት የግል ምርጫ መሆኑን።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_25_dcb986a06c917830.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ኢንሹራንስ መግዛት የግል ምርጫ መሆኑን።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_30_69b701301f44878c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ኢንሹራንሱ ትክክለኛና ወቅታዊ መሆኑን እንዲሁም ማስረጃውን በተሽከርካሪው ውስጥ ማስቀመጥ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_62_f626f0c62a7a384d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ኢንሹራንሱ ትክክለኛና ወቅታዊ መሆኑን እንዲሁም ማስረጃውን በተሽከርካሪው ውስጥ ማስቀመጥ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_60_0d15e12740645c1b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ኢንሹራንሱ ትክክለኛና ወቅታዊ መሆኑን እንዲሁም ማስረጃውን በተሽከርካሪው ውስጥ ማስቀመጥ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_61_6f48868807a253d2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ኢንሹራንሱ ትክክለኛና ወቅታዊ መሆኑን እንዲሁም ማስረጃውን በተሽከርካሪው ውስጥ ማስቀመጥ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_60_bfac0ca2964ea8c6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ኢንሹራንሱ ትክክለኛና ወቅታዊ መሆኑን እንዲሁም ማስረጃውን በተሽከርካሪው ውስጥ ማስቀመጥ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_61_d2f6be004d73f2ed.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ኢንሹራንሱ ትክክለኛና ወቅታዊ መሆኑን እንዲሁም ማስረጃውን በተሽከርካሪው ውስጥ ማስቀመጥ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_60_2cd2183bf4e79693.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ኢንሹራንሱ ትክክለኛና ወቅታዊ መሆኑን እንዲሁም ማስረጃውን በተሽከርካሪው ውስጥ ማስቀመጥ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_61_98ff2f60ab341ba6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ኢንሹራንሱ ትክክለኛና ወቅታዊ መሆኑን እንዲሁም ማስረጃውን በተሽከርካሪው ውስጥ ማስቀመጥ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_64_c5205544e2097f07.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ኢንሹራንሱ ትክክለኛና ወቅታዊ መሆኑን እንዲሁም ማስረጃውን በተሽከርካሪው ውስጥ ማስቀመጥ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_65_30c37d404bee634c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ኢንሹራንሱ ትክክለኛና ወቅታዊ መሆኑን እንዲሁም ማስረጃውን በተሽከርካሪው ውስጥ ማስቀመጥ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_65_f76b573ce23ea8c6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ኢንሹራንሱ ትክክለኛና ወቅታዊ መሆኑን እንዲሁም ማስረጃውን በተሽከርካሪው ውስጥ ማስቀመጥ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_65_6ca3caa09d0b0441.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ኢንሹራንሱ ትክክለኛና ወቅታዊ መሆኑን እንዲሁም ማስረጃውን በተሽከርካሪው ውስጥ ማስቀመጥ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_67_f1fc530041f09621.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ኢንሹራንሱ ትክክለኛና ወቅታዊ መሆኑን እንዲሁም ማስረጃውን በተሽከርካሪው ውስጥ ማስቀመጥ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_68_7572b30a09bc6bc2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ኢንሹራንሱ ትክክለኛና ወቅታዊ መሆኑን እንዲሁም ማስረጃውን በተሽከርካሪው ውስጥ ማስቀመጥ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_72_1b78b34846b82dac.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ኢንሹራንሱ ትክክለኛና ወቅታዊ መሆኑን እንዲሁም ማስረጃውን በተሽከርካሪው ውስጥ ማስቀመጥ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_70_bb5c67960bc8e1d4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ኢንሹራንሱ ትክክለኛና ወቅታዊ መሆኑን እንዲሁም ማስረጃውን በተሽከርካሪው ውስጥ ማስቀመጥ።",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_74_ff47e640b5eadb91.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

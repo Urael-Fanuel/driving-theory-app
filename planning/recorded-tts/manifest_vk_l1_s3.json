@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:07:20.608Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "vk_l1_s3",
+   "key": "vehicle_knowledge_0_2",
+   "sentences": [
+    {
+     "text": "ከመኪናው ኋላ የሚገኘው የብሬክ መብራት ዋና ዓላማ ምንድን ነው?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_40_fe15ad244743d1b0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከኋላ ያለውን መንገድ ለማብራት",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_19_f24ff2105e71a94e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ከኋላ ያለውን መንገድ ለማብራት",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_24_fc42a0f07bfcf64c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናው እየዞረ መሆኑን ለማሳየት",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_20_d345d297de6d15f5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። መኪናው እየዞረ መሆኑን ለማሳየት",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_25_926f53bc6b47812b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናው ፍጥነቱን እየቀነሰ ወይም እየቆመ መሆኑን ከኋላ ላሉ አሽከርካሪዎች ለማስጠንቀቅ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_54_a3b8d6e412b60eff.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። መኪናው ፍጥነቱን እየቀነሰ ወይም እየቆመ መሆኑን ከኋላ ላሉ አሽከርካሪዎች ለማስጠንቀቅ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_59_231162c06226d9cb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናው ቆሞ መሆኑን ለማሳየት",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_18_d223032956af00d6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። መኪናው ቆሞ መሆኑን ለማሳየት",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_23_467232afac57672a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! መኪናው ፍጥነቱን እየቀነሰ ወይም እየቆመ መሆኑን ከኋላ ላሉ አሽከርካሪዎች ለማስጠንቀቅ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_60_60285f0c5e5556a6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! መኪናው ፍጥነቱን እየቀነሰ ወይም እየቆመ መሆኑን ከኋላ ላሉ አሽከርካሪዎች ለማስጠንቀቅ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_58_6342f48864d9b970.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! መኪናው ፍጥነቱን እየቀነሰ ወይም እየቆመ መሆኑን ከኋላ ላሉ አሽከርካሪዎች ለማስጠንቀቅ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_59_832052507647c879.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! መኪናው ፍጥነቱን እየቀነሰ ወይም እየቆመ መሆኑን ከኋላ ላሉ አሽከርካሪዎች ለማስጠንቀቅ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_58_ed6c80802936286d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! መኪናው ፍጥነቱን እየቀነሰ ወይም እየቆመ መሆኑን ከኋላ ላሉ አሽከርካሪዎች ለማስጠንቀቅ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_59_c52eb0843bc17bc6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! መኪናው ፍጥነቱን እየቀነሰ ወይም እየቆመ መሆኑን ከኋላ ላሉ አሽከርካሪዎች ለማስጠንቀቅ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_58_9f32678445da28f8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! መኪናው ፍጥነቱን እየቀነሰ ወይም እየቆመ መሆኑን ከኋላ ላሉ አሽከርካሪዎች ለማስጠንቀቅ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_59_19f7dd930e363f4d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! መኪናው ፍጥነቱን እየቀነሰ ወይም እየቆመ መሆኑን ከኋላ ላሉ አሽከርካሪዎች ለማስጠንቀቅ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_62_f7fa2ec0960e876c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! መኪናው ፍጥነቱን እየቀነሰ ወይም እየቆመ መሆኑን ከኋላ ላሉ አሽከርካሪዎች ለማስጠንቀቅ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_63_68afa390c2cc7ce7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! መኪናው ፍጥነቱን እየቀነሰ ወይም እየቆመ መሆኑን ከኋላ ላሉ አሽከርካሪዎች ለማስጠንቀቅ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_63_e3a414b7b926286d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! መኪናው ፍጥነቱን እየቀነሰ ወይም እየቆመ መሆኑን ከኋላ ላሉ አሽከርካሪዎች ለማስጠንቀቅ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_63_be859a6f071063aa.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! መኪናው ፍጥነቱን እየቀነሰ ወይም እየቆመ መሆኑን ከኋላ ላሉ አሽከርካሪዎች ለማስጠንቀቅ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_65_4af9f0005922c10a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! መኪናው ፍጥነቱን እየቀነሰ ወይም እየቆመ መሆኑን ከኋላ ላሉ አሽከርካሪዎች ለማስጠንቀቅ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_66_b186d0efc9366869.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! መኪናው ፍጥነቱን እየቀነሰ ወይም እየቆመ መሆኑን ከኋላ ላሉ አሽከርካሪዎች ለማስጠንቀቅ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_70_da492dccd8fce747.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! መኪናው ፍጥነቱን እየቀነሰ ወይም እየቆመ መሆኑን ከኋላ ላሉ አሽከርካሪዎች ለማስጠንቀቅ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_68_5c0c5163bb4cc87f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: መኪናው ፍጥነቱን እየቀነሰ ወይም እየቆመ መሆኑን ከኋላ ላሉ አሽከርካሪዎች ለማስጠንቀቅ",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_72_9327a2973a7f12fa.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከመኪናው ኋላ የሚገኘው ነጭ መብራት ምን ማለት ነው?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_33_75670e6cfc6c3adc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናው ብሬክ እየያዘ ነው",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_16_a55f18341b2cdc6e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። መኪናው ብሬክ እየያዘ ነው",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_21_74d985b30c806aac.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናው ወደ ኋላ እየሄደ ነው",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_18_8fdda583d399eff5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። መኪናው ወደ ኋላ እየሄደ ነው",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_23_8ea95d34f27ef6ab.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናው እየዞረ ነው",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_12_08d142406b70faef.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። መኪናው እየዞረ ነው",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_17_12824d788be9835b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናው ቆሞ ነው",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_10_d9fd6c642c0cf1cc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። መኪናው ቆሞ ነው",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_15_a6a601cfd7c82eb0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! መኪናው ወደ ኋላ እየሄደ ነው",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_24_2799455caa51d02c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! መኪናው ወደ ኋላ እየሄደ ነው",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_22_a5cda98845615b7a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! መኪናው ወደ ኋላ እየሄደ ነው",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_23_c2c342cca3cf0b73.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! መኪናው ወደ ኋላ እየሄደ ነው",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_22_4354a5dc0f58e967.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! መኪናው ወደ ኋላ እየሄደ ነው",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_23_0f611fd42bebb20c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! መኪናው ወደ ኋላ እየሄደ ነው",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_22_7fa678acd83166f2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! መኪናው ወደ ኋላ እየሄደ ነው",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_23_aaa2d6139ba09587.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! መኪናው ወደ ኋላ እየሄደ ነው",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_26_4620b8b451f2ad66.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! መኪናው ወደ ኋላ እየሄደ ነው",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_27_f3d86f7c6473ebed.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! መኪናው ወደ ኋላ እየሄደ ነው",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_27_ffde18c46748e967.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! መኪናው ወደ ኋላ እየሄደ ነው",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_27_8a44f34c29821920.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! መኪናው ወደ ኋላ እየሄደ ነው",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_29_223c26889774e9c0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! መኪናው ወደ ኋላ እየሄደ ነው",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_30_43bc6e247a7cd363.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! መኪናው ወደ ኋላ እየሄደ ነው",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_34_0bc229c8b201e88d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! መኪናው ወደ ኋላ እየሄደ ነው",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_32_fe689244d4274575.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: መኪናው ወደ ኋላ እየሄደ ነው",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_36_8cc69860503a95f0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሽከርካሪ ወደ ኋላ ከመሄዱ በፊት ምን ማድረግ አለበት?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_35_df8925c469a0407f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመኪናውን ቀንድ መንፋት",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_15_a3779be49ab6c0e7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። የመኪናውን ቀንድ መንፋት",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_20_c6bcbf6c66a5eae5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የፊት መብራቶችን ማብራት",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_15_2ecea4087b75e01a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። የፊት መብራቶችን ማብራት",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_20_63aadc9411302284.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከቀኝ ትከሻው በላይ ወደ ኋላ ማየት ሁሉንም ሶስት መስተዋቶች መጠቀም እና ከኋላ ምንም እንቅፋት አለመኖሩን ማረጋገጥ",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_73_60dc7750693a2d42.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ከቀኝ ትከሻው በላይ ወደ ኋላ ማየት ሁሉንም ሶስት መስተዋቶች መጠቀም እና ከኋላ ምንም እንቅፋት አለመኖሩን ማረጋገጥ",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_78_6a98cf50b7d9d636.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የሻንጣ ማስቀመጫውን መክፈት",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_17_3784ee8f15ac372d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። የሻንጣ ማስቀመጫውን መክፈት",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_22_1b85305ce74d5811.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ከቀኝ ትከሻው በላይ ወደ ኋላ ማየት ሁሉንም ሶስት መስተዋቶች መጠቀም እና ከኋላ ምንም እንቅፋት አለመኖሩን ማረጋገጥ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_79_7a7c0fa8c185b67b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ከቀኝ ትከሻው በላይ ወደ ኋላ ማየት ሁሉንም ሶስት መስተዋቶች መጠቀም እና ከኋላ ምንም እንቅፋት አለመኖሩን ማረጋገጥ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_77_04cf870cebb2b26d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ከቀኝ ትከሻው በላይ ወደ ኋላ ማየት ሁሉንም ሶስት መስተዋቶች መጠቀም እና ከኋላ ምንም እንቅፋት አለመኖሩን ማረጋገጥ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_78_33b512afc46b9584.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ከቀኝ ትከሻው በላይ ወደ ኋላ ማየት ሁሉንም ሶስት መስተዋቶች መጠቀም እና ከኋላ ምንም እንቅፋት አለመኖሩን ማረጋገጥ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_77_62d9ede0e96e4e10.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ከቀኝ ትከሻው በላይ ወደ ኋላ ማየት ሁሉንም ሶስት መስተዋቶች መጠቀም እና ከኋላ ምንም እንቅፋት አለመኖሩን ማረጋገጥ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_78_37f8e1d454ac7e9b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ከቀኝ ትከሻው በላይ ወደ ኋላ ማየት ሁሉንም ሶስት መስተዋቶች መጠቀም እና ከኋላ ምንም እንቅፋት አለመኖሩን ማረጋገጥ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_77_f3065018f6eaeae5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ከቀኝ ትከሻው በላይ ወደ ኋላ ማየት ሁሉንም ሶስት መስተዋቶች መጠቀም እና ከኋላ ምንም እንቅፋት አለመኖሩን ማረጋገጥ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_78_337924b0268dd270.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ከቀኝ ትከሻው በላይ ወደ ኋላ ማየት ሁሉንም ሶስት መስተዋቶች መጠቀም እና ከኋላ ምንም እንቅፋት አለመኖሩን ማረጋገጥ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_81_e96676f690109ff1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ከቀኝ ትከሻው በላይ ወደ ኋላ ማየት ሁሉንም ሶስት መስተዋቶች መጠቀም እና ከኋላ ምንም እንቅፋት አለመኖሩን ማረጋገጥ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_82_63832db83369c65a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ከቀኝ ትከሻው በላይ ወደ ኋላ ማየት ሁሉንም ሶስት መስተዋቶች መጠቀም እና ከኋላ ምንም እንቅፋት አለመኖሩን ማረጋገጥ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_82_8860b1ec935e4e10.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ከቀኝ ትከሻው በላይ ወደ ኋላ ማየት ሁሉንም ሶስት መስተዋቶች መጠቀም እና ከኋላ ምንም እንቅፋት አለመኖሩን ማረጋገጥ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_82_4f4ccb6867dfa3f7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ከቀኝ ትከሻው በላይ ወደ ኋላ ማየት ሁሉንም ሶስት መስተዋቶች መጠቀም እና ከኋላ ምንም እንቅፋት አለመኖሩን ማረጋገጥ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_84_515349683fffbfd7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ከቀኝ ትከሻው በላይ ወደ ኋላ ማየት ሁሉንም ሶስት መስተዋቶች መጠቀም እና ከኋላ ምንም እንቅፋት አለመኖሩን ማረጋገጥ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_85_ccb1005bf405a394.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ከቀኝ ትከሻው በላይ ወደ ኋላ ማየት ሁሉንም ሶስት መስተዋቶች መጠቀም እና ከኋላ ምንም እንቅፋት አለመኖሩን ማረጋገጥ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_89_04ab8c0403ea293a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ከቀኝ ትከሻው በላይ ወደ ኋላ ማየት ሁሉንም ሶስት መስተዋቶች መጠቀም እና ከኋላ ምንም እንቅፋት አለመኖሩን ማረጋገጥ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_87_ab1149a8bfe516c2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ከቀኝ ትከሻው በላይ ወደ ኋላ ማየት ሁሉንም ሶስት መስተዋቶች መጠቀም እና ከኋላ ምንም እንቅፋት አለመኖሩን ማረጋገጥ",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_91_2f9a52d82c68c6a7.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:14:10.652Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "sl_l2_s1",
+   "key": "society_law_1_0",
+   "sentences": [
+    {
+     "text": "የድንገተኛ ጊዜ የድንገተኛ አደጋ አካላት ተሽከርካሪዎች እንዴት መለየት ይቻላል?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_50_f7ccfc7c90cdb4f4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በቀለሙ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_4_8504ee94750a6c74.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። በቀለሙ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_9_a4a349fb5275deb6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በሚያብረቀርቅ መብራቱና በሳይረን ድምጹ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_24_95649b48a4b15e77.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። በሚያብረቀርቅ መብራቱና በሳይረን ድምጹ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_29_bf08709c2b91f829.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በፍጥነቱ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_5_2f3af99416ff57ac.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። በፍጥነቱ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_10_c43bd80379d75dd8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በአሽከርካሪው ዩኒፎርም",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_14_6f455b6c4fd3ecb4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። በአሽከርካሪው ዩኒፎርም",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_19_9a22b1ee121c72c8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! በሚያብረቀርቅ መብራቱና በሳይረን ድምጹ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_30_4eead2db11c84b6e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! በሚያብረቀርቅ መብራቱና በሳይረን ድምጹ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_28_ecfc2988038aa0b8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! በሚያብረቀርቅ መብራቱና በሳይረን ድምጹ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_29_bd386efffe0db5f1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! በሚያብረቀርቅ መብራቱና በሳይረን ድምጹ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_28_f93df46845a854e5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! በሚያብረቀርቅ መብራቱና በሳይረን ድምጹ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_29_472e54b7eebcbbce.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! በሚያብረቀርቅ መብራቱና በሳይረን ድምጹ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_28_b0adb32ce7edba30.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! በሚያብረቀርቅ መብራቱና በሳይረን ድምጹ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_29_54025c605a188205.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! በሚያብረቀርቅ መብራቱና በሳይረን ድምጹ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_32_fb4905c4895921a4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! በሚያብረቀርቅ መብራቱና በሳይረን ድምጹ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_33_feb979809398c46f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! በሚያብረቀርቅ መብራቱና በሳይረን ድምጹ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_33_4412b7cad19854e5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! በሚያብረቀርቅ መብራቱና በሳይረን ድምጹ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_33_f70384a33b338162.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! በሚያብረቀርቅ መብራቱና በሳይረን ድምጹ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_35_7d4052643f10fc82.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! በሚያብረቀርቅ መብራቱና በሳይረን ድምጹ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_36_2007e170e1b101e1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! በሚያብረቀርቅ መብራቱና በሳይረን ድምጹ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_40_30d323fc0ec87d0f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! በሚያብረቀርቅ መብራቱና በሳይረን ድምጹ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_38_1d69e51c330047f7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: በሚያብረቀርቅ መብራቱና በሳይረን ድምጹ",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_42_1181c79758724032.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የድንገተኛ ጊዜ የድንገተኛ አደጋ አካላት ተሽከርካሪ ከኋላ ሲቃረብ አሽከርካሪ ምን ማድረግ አለበት?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_62_5cc18b4cc10ed398.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ፍጥነቱን ጨምሮ መሄድ",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_13_16b283ac139c3f6b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ፍጥነቱን ጨምሮ መሄድ",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_18_06a518d83db285e9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ወዲያውኑ ወደ መንገዱ ቀኝ ዳርቻ አስጠግቶ እስኪያልፍ ድረስ ማቆም",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_41_629c3ecc9ef5e1eb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ወዲያውኑ ወደ መንገዱ ቀኝ ዳርቻ አስጠግቶ እስኪያልፍ ድረስ ማቆም",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_46_3fd5d77fdb9eebf5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ወደ ግራ አስጠግቶ ማቆም",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_15_08ce6f0895f79d75.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ወደ ግራ አስጠግቶ ማቆም",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_20_c0c5ba9456f1d601.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንደተለመደው መንዳት መቀጠል",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_18_e7c92cc0f604e506.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። እንደተለመደው መንዳት መቀጠል",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_23_2e9026ff7753f17a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ወዲያውኑ ወደ መንገዱ ቀኝ ዳርቻ አስጠግቶ እስኪያልፍ ድረስ ማቆም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_47_0edf7c20ecc79d92.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ወዲያውኑ ወደ መንገዱ ቀኝ ዳርቻ አስጠግቶ እስኪያልፍ ድረስ ማቆም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_45_6f2c96f0731f6f04.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ወዲያውኑ ወደ መንገዱ ቀኝ ዳርቻ አስጠግቶ እስኪያልፍ ድረስ ማቆም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_46_50c04e10e74b292d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ወዲያውኑ ወደ መንገዱ ቀኝ ዳርቻ አስጠግቶ እስኪያልፍ ድረስ ማቆም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_45_aec137b8c70acab9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ወዲያውኑ ወደ መንገዱ ቀኝ ዳርቻ አስጠግቶ እስኪያልፍ ድረስ ማቆም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_46_06ba5008857156b2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ወዲያውኑ ወደ መንገዱ ቀኝ ዳርቻ አስጠግቶ እስኪያልፍ ድረስ ማቆም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_45_3bd3ffe185ff748c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ወዲያውኑ ወደ መንገዱ ቀኝ ዳርቻ አስጠግቶ እስኪያልፍ ድረስ ማቆም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_46_11ea27d4021aa399.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ወዲያውኑ ወደ መንገዱ ቀኝ ዳርቻ አስጠግቶ እስኪያልፍ ድረስ ማቆም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_49_57f269e761831b98.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ወዲያውኑ ወደ መንገዱ ቀኝ ዳርቻ አስጠግቶ እስኪያልፍ ድረስ ማቆም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_50_4199279420d194f3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ወዲያውኑ ወደ መንገዱ ቀኝ ዳርቻ አስጠግቶ እስኪያልፍ ድረስ ማቆም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_50_14602fc4b0facab9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ወዲያውኑ ወደ መንገዱ ቀኝ ዳርቻ አስጠግቶ እስኪያልፍ ድረስ ማቆም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_50_dd75c94029c65c1e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ወዲያውኑ ወደ መንገዱ ቀኝ ዳርቻ አስጠግቶ እስኪያልፍ ድረስ ማቆም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_52_db1abd0062d4c37e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ወዲያውኑ ወደ መንገዱ ቀኝ ዳርቻ አስጠግቶ እስኪያልፍ ድረስ ማቆም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_53_64846a644560ef3d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ወዲያውኑ ወደ መንገዱ ቀኝ ዳርቻ አስጠግቶ እስኪያልፍ ድረስ ማቆም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_57_6c8120bcc8240e53.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ወዲያውኑ ወደ መንገዱ ቀኝ ዳርቻ አስጠግቶ እስኪያልፍ ድረስ ማቆም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_55_ec25ab90a115006b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ወዲያውኑ ወደ መንገዱ ቀኝ ዳርቻ አስጠግቶ እስኪያልፍ ድረስ ማቆም",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_59_236dbcd0e82f004e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የድንገተኛ ጊዜ የድንገተኛ አደጋ አካላት ተሽከርካሪዎችን ተከትሎ መንገዱን ተጠቅሞ መሄድ ይፈቀዳል?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_62_a3804fd106ade516.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ፣ ደህንነቱ የተጠበቀ ከሆነ",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_19_bb1d2d129571454f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። አዎ፣ ደህንነቱ የተጠበቀ ከሆነ",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_24_31ff92a2c4ed6c4d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ፣ ሌሎች መኪናዎች ከሌሉ",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_17_db3ec427a75fe2c8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። አዎ፣ ሌሎች መኪናዎች ከሌሉ",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_22_37cae38fce6b2756.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አይፈቀድም፣ በፍጹም የተከለከለ ነው",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_22_8fd860e06ef8eb87.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። አይፈቀድም፣ በፍጹም የተከለከለ ነው",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_27_ff9fefb0b41230b3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ፣ ይፈቀዳል",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_9_54934900f074c673.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። አዎ፣ ይፈቀዳል",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_14_29a8e3484b02a94f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! አይፈቀድም፣ በፍጹም የተከለከለ ነው",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_28_53416b707442271e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! አይፈቀድም፣ በፍጹም የተከለከለ ነው",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_26_4cd34be35fc496c8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! አይፈቀድም፣ በፍጹም የተከለከለ ነው",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_27_6782fd6ff28bbd81.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! አይፈቀድም፣ በፍጹም የተከለከለ ነው",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_26_79de794061ea3195.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! አይፈቀድም፣ በፍጹም የተከለከለ ነው",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_27_f558a89b237eedfe.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! አይፈቀድም፣ በፍጹም የተከለከለ ነው",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_26_533d7e1f92be6740.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! አይፈቀድም፣ በፍጹም የተከለከለ ነው",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_27_14f67ee8ef4164b5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! አይፈቀድም፣ በፍጹም የተከለከለ ነው",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_30_963ee85b8f6062d4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! አይፈቀድም፣ በፍጹም የተከለከለ ነው",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_31_5be027b4d69b3f9f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! አይፈቀድም፣ በፍጹም የተከለከለ ነው",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_31_50ae6e8031da3195.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! አይፈቀድም፣ በፍጹም የተከለከለ ነው",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_31_802fa06f522bf412.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! አይፈቀድም፣ በፍጹም የተከለከለ ነው",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_33_e0cf6e70e8d7c0b2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! አይፈቀድም፣ በፍጹም የተከለከለ ነው",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_34_430f957424c3cd91.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! አይፈቀድም፣ በፍጹም የተከለከለ ነው",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_38_3eaa12fc58a1533f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! አይፈቀድም፣ በፍጹም የተከለከለ ነው",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_36_0eedb3705c30f207.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: አይፈቀድም፣ በፍጹም የተከለከለ ነው",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_40_0529d357b89e50c2.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

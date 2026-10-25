@@ -42,7 +42,7 @@ function world() {
     if (p === 'expo-audio') return expoAudio;
     if (p === 'react') return { useState: x => [typeof x === 'function' ? x() : x, () => {}], useRef: x => ({ current: x }), useCallback: x => x, useEffect: () => {} };
     if (p.endsWith('services/sound')) return mods.sound;
-    if (p.endsWith('audioCache')) return { getLocalAudioUri: async u => u, discardCachedCopy: async () => {}, getCachedTtsUri: async () => 'file:///tts.mp3', storeTtsAudio: async () => {}, releaseAudioFiles: async () => {} };
+    if (p.endsWith('audioCache')) return { getLocalAudioUri: async u => u, discardCachedCopy: async () => {}, getCachedTtsUri: async () => 'file:///tts.mp3', storeTtsAudio: async () => {}, releaseAudioFiles: async () => {}, fetchRecordedTts: async () => null, skipRecordedTts: async () => {}, isRecordedTtsUri: () => false };
     if (p.endsWith('errorReporter')) return { reportError() {}, watchPlaybackStart() {}, describeUri: () => ({}), httpStatusOf: () => null };
     if (p.endsWith('supabaseClient')) return { getStorageUrl: (b, f) => 'https://cdn/' + f, BUCKETS: { AUDIO: 'audio' }, supabase: {} };
     throw new Error('unexpected require ' + p);

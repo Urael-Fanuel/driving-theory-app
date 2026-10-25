@@ -1,0 +1,440 @@
+{
+ "generated": "2026-10-25T06:07:44.430Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "vk_l2_s5",
+   "key": "vehicle_knowledge_1_0",
+   "sentences": [
+    {
+     "text": "መኪናው እየነዳ ሳለ በሮቹን መክፈት ይፈቀዳል ወይ?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_32_1eb6304c063f2557.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናው ቀስ ብሎ እየሄደ ከሆነ ይፈቀዳል።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_26_6819da3003646209.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። መኪናው ቀስ ብሎ እየሄደ ከሆነ ይፈቀዳል።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_31_919cb81841cc694b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ረጅም ጭነት ሲያጓጉዙ ይፈቀዳል።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_20_ea3370e754645a1e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ረጅም ጭነት ሲያጓጉዙ ይፈቀዳል።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_25_1d4c00732794acc0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በፍጹም አይፈቀድም።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_12_15b27ca68df19d83.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። በፍጹም አይፈቀድም።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_17_496c5ddcbba96bb7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በመኪናው ውስጥ ተሳፋሪዎች ከሌሉ ይፈቀዳል።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_27_9e192de0535f3911.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። በመኪናው ውስጥ ተሳፋሪዎች ከሌሉ ይፈቀዳል።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_32_72bc9b6a07aed72d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! በፍጹም አይፈቀድም።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_18_06d76cc0d770391a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! በፍጹም አይፈቀድም።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_16_8455d44c42a64f4c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! በፍጹም አይፈቀድም።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_17_c78b9ad0d00dbf85.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! በፍጹም አይፈቀድም።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_16_dbabadb6ca131d91.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! በፍጹም አይፈቀድም።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_17_8fde2b48329512fa.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! በፍጹም አይፈቀድም።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_16_c2431216d4ee1ac4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! በፍጹም አይፈቀድም።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_17_d315352819104eb1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! በፍጹም አይፈቀድም።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_20_78fc19101c2b8750.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! በፍጹም አይፈቀድም።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_21_b17cbe98e3c6259b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! በፍጹም አይፈቀድም።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_21_fd73d2d0ee031d91.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! በፍጹም አይፈቀድም።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_21_b75a9fba20fbfc16.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! በፍጹም አይፈቀድም።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_23_4fce1b7e153c6a36.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! በፍጹም አይፈቀድም።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_24_2ab4dc1839e68795.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! በፍጹም አይፈቀድም።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_28_d814b9308454833b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! በፍጹም አይፈቀድም።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_26_0af80a58d587ed03.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: በፍጹም አይፈቀድም።",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_30_2343df8481784a46.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከአሽከርካሪው ጎን ከአንድ በላይ ተሳፋሪ ማጓጓዝ ይፈቀዳል ወይ?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_40_949f9234137cce89.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የፊት ወንበሩ አንድ የተያያዘ ወንበር ከሆነ ይፈቀዳል።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_34_b4a0de96742902f1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። የፊት ወንበሩ አንድ የተያያዘ ወንበር ከሆነ ይፈቀዳል።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_39_38cb69e8588855b3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። በፍጹም አይፈቀድም።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_17_0916c766c3683f5d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከአሽከርካሪው ቀበቶ በተጨማሪ ሁለት የደህንነት ቀበቶዎች ካሉ ይፈቀዳል።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_45_72b33b8a609889c9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ከአሽከርካሪው ቀበቶ በተጨማሪ ሁለት የደህንነት ቀበቶዎች ካሉ ይፈቀዳል።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_50_fe25023ef35719fd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመኪናው ፍቃድ ካልፈቀደ በቀር አይፈቀድም።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_27_c4b87597b623d426.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። የመኪናው ፍቃድ ካልፈቀደ በቀር አይፈቀድም።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_32_a87b10be5af09b1a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሽከርካሪው ወደ መኪናው ከመግባቱ በፊት ከየትኛው ወገን መቅረብ አለበት?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_46_c74d09cc3030ac91.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከመኪናው ኋላ፣ ጀርባው ወደ ትራፊኩ ዞሮ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_26_232ae0fcbfd910f6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ከመኪናው ኋላ፣ ጀርባው ወደ ትራፊኩ ዞሮ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_31_51cb79a6a1adde34.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከመኪናው ፊት ለፊት፣ የአሽከርካሪው ፊት ወደ ትራፊኩ ዞሮ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_37_94fba38e7ad3b2be.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ከመኪናው ፊት ለፊት፣ የአሽከርካሪው ፊት ወደ ትራፊኩ ዞሮ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_42_28a7276ee3d64a20.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሽከርካሪው ወደ መኪናው በሚቀርብበት አቅጣጫ ምንም ለውጥ የለውም፣ ምክንያቱም ሌሎች አሽከርካሪዎች ወደ መኪናው የሚገባውን አሽከርካሪ አደጋ ላይ መጣል አይፈቀድላቸውም።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_106_3f990350bba196a8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። አሽከርካሪው ወደ መኪናው በሚቀርብበት አቅጣጫ ምንም ለውጥ የለውም፣ ምክንያቱም ሌሎች አሽከርካሪዎች ወደ መኪናው የሚገባውን አሽከርካሪ አደጋ ላይ መጣል አይፈቀድላቸውም።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_111_9354538664edd15c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከመኪናው ኋላ፣ የአሽከርካሪው ጀርባ ወደ ትራፊኩ ዞሮ፣ ከቀኝ በር - እዚያ ከመንገድ ትራፊክ ምንም አደጋ የለም።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_71_7f958ef0f73c02d7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ከመኪናው ኋላ፣ የአሽከርካሪው ጀርባ ወደ ትራፊኩ ዞሮ፣ ከቀኝ በር - እዚያ ከመንገድ ትራፊክ ምንም አደጋ የለም።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_76_bb1d99e8244e156b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ከመኪናው ፊት ለፊት፣ የአሽከርካሪው ፊት ወደ ትራፊኩ ዞሮ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_43_4a54d3e80646b2c7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ከመኪናው ፊት ለፊት፣ የአሽከርካሪው ፊት ወደ ትራፊኩ ዞሮ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_41_924df328a4e277d1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ከመኪናው ፊት ለፊት፣ የአሽከርካሪው ፊት ወደ ትራፊኩ ዞሮ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_42_d4501398d60e85f8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ከመኪናው ፊት ለፊት፣ የአሽከርካሪው ፊት ወደ ትራፊኩ ዞሮ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_41_1c6c8640c8b0736c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ከመኪናው ፊት ለፊት፣ የአሽከርካሪው ፊት ወደ ትራፊኩ ዞሮ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_42_1fca075ef20620e7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ከመኪናው ፊት ለፊት፣ የአሽከርካሪው ፊት ወደ ትራፊኩ ዞሮ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_41_35fa5f689ab05859.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ከመኪናው ፊት ለፊት፣ የአሽከርካሪው ፊት ወደ ትራፊኩ ዞሮ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_42_db8792569897854c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ከመኪናው ፊት ለፊት፣ የአሽከርካሪው ፊት ወደ ትራፊኩ ዞሮ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_45_19413ac89dc3464d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ከመኪናው ፊት ለፊት፣ የአሽከርካሪው ፊት ወደ ትራፊኩ ዞሮ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_46_50391a7e442fd5a6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ከመኪናው ፊት ለፊት፣ የአሽከርካሪው ፊት ወደ ትራፊኩ ዞሮ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_46_41fbf1883aa0736c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ከመኪናው ፊት ለፊት፣ የአሽከርካሪው ፊት ወደ ትራፊኩ ዞሮ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_46_9cfb15e25b3a0b4b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ከመኪናው ፊት ለፊት፣ የአሽከርካሪው ፊት ወደ ትራፊኩ ዞሮ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_48_ab135546e36bc52b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ከመኪናው ፊት ለፊት፣ የአሽከርካሪው ፊት ወደ ትራፊኩ ዞሮ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_49_42b5ed985851a3e8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ከመኪናው ፊት ለፊት፣ የአሽከርካሪው ፊት ወደ ትራፊኩ ዞሮ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_53_553958e00421ef06.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ከመኪናው ፊት ለፊት፣ የአሽከርካሪው ፊት ወደ ትራፊኩ ዞሮ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_51_592704d88f246c3e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ከመኪናው ፊት ለፊት፣ የአሽከርካሪው ፊት ወደ ትራፊኩ ዞሮ።",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_55_a5991eaaa08cba1b.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

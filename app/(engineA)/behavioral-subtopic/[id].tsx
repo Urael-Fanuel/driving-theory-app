@@ -36,6 +36,8 @@ import {
   BackHandler,
 } from 'react-native';
 import { useLocalSearchParams, useRouter, useFocusEffect } from 'expo-router';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { useFitImageSize } from '../../../hooks/useFitImageSize';
 import * as Haptics from 'expo-haptics';
 import { Sound, applyAudioMode } from '../../../services/sound';
 import { Colors } from '../../../constants/colors';
@@ -128,6 +130,14 @@ export default function BehavioralSubtopicScreenA() {
     id: string; topicId: string; levelId: string;
   }>();
   const router = useRouter();
+  // The Android system bar (3-button or gesture) sits over the bottom of the screen
+  // (edge-to-edge): the last item of a scrolling screen needs this much room, or the
+  // bar covers it (the 🎤 button was half hidden, 2026-10-25).
+  const insets = useSafeAreaInsets();
+  // Image sized so the whole question screen (incl. the 🎤 button) fits when the phone can.
+  const fit = useFitImageSize(200);
+
+
   const { userId } = useEngine();
   const {
     visible: locationModalVisible,
@@ -501,7 +511,7 @@ export default function BehavioralSubtopicScreenA() {
 
       {/* ════════════════════ PHASE: EXPLANATION ════════════════════ */}
       {phase === 'explanation' && (
-        <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
+        <ScrollView contentContainerStyle={[styles.scrollContent, { paddingBottom: 16 + insets.bottom + 12 }]} showsVerticalScrollIndicator={false}>
 
           <TouchableOpacity
             style={styles.backButtonProminent}
@@ -583,17 +593,19 @@ export default function BehavioralSubtopicScreenA() {
         </TouchableOpacity>
 
         <ScrollView
+          onLayout={e => fit.onLayout(e, true)}
+          onContentSizeChange={(_w, h) => fit.onContent(h, true)}
           style={styles.scrollArea}
-          contentContainerStyle={styles.scrollContentQ}
+          contentContainerStyle={[styles.scrollContentQ, { paddingBottom: 16 + insets.bottom + 12 }]}
           showsVerticalScrollIndicator={false}
           scrollEnabled={!showFeedback}
         >
           {/* Small subtopic image */}
-          <View style={styles.signImageContainer}>
+          <View style={[styles.signImageContainer, fit.style]}>
             {subtopic.image_url ? (
               <Image source={{ uri: subtopic.image_url }} style={styles.signImage} resizeMode="contain" />
             ) : (
-              <View style={[styles.signImageContainer, styles.signImagePlaceholder]}>
+              <View style={[styles.signImageContainer, styles.signImagePlaceholder, fit.style]}>
                 <Text style={{ fontSize: 72 }}>{subtopic.icon}</Text>
               </View>
             )}

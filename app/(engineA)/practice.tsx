@@ -20,6 +20,8 @@ import {
   Image,
 } from 'react-native';
 import { useRouter, useLocalSearchParams, useFocusEffect } from 'expo-router';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { useFitImageSize } from '../../hooks/useFitImageSize';
 import { Colors } from '../../constants/colors';
 import { LoadingScreen } from '../../components/shared/LoadingScreen';
 import { ImageAnswerCard, ANSWER_ROW_MAX_WIDTH, ANSWER_ROW_GAP } from '../../components/engineA/ImageAnswerCard';
@@ -74,6 +76,14 @@ const randomPraise = () => CORRECT_PRAISES[Math.floor(Math.random() * CORRECT_PR
 
 export default function EngineAPracticeScreen() {
   const router = useRouter();
+  // The Android system bar (3-button or gesture) sits over the bottom of the screen
+  // (edge-to-edge): the last item of a scrolling screen needs this much room, or the
+  // bar covers it (the 🎤 button was half hidden, 2026-10-25).
+  const insets = useSafeAreaInsets();
+  // Image sized so the whole question screen (incl. the 🎤 button) fits when the phone can.
+  const fit = useFitImageSize(220);
+
+
   const { ids: idsParam } = useLocalSearchParams<{ ids: string }>();
 
   // Parse comma-separated question IDs from URL
@@ -358,14 +368,16 @@ export default function EngineAPracticeScreen() {
       </View>
 
       <ScrollView
+        onLayout={e => fit.onLayout(e, !!(currentSign?.image_url || currentQuestion?.question_image_url))}
+        onContentSizeChange={(_w, h) => fit.onContent(h, !!(currentSign?.image_url || currentQuestion?.question_image_url))}
         style={styles.scrollArea}
-        contentContainerStyle={styles.content}
+        contentContainerStyle={[styles.content, { paddingBottom: 16 + insets.bottom + 12 }]}
         showsVerticalScrollIndicator={false}
         scrollEnabled={!showFeedback}
       >
         {/* Sign or behavioral question image */}
         {(currentSign?.image_url || currentQuestion.question_image_url) && (
-          <View style={styles.signImageContainer}>
+          <View style={[styles.signImageContainer, fit.style]}>
             <Image
               source={{ uri: currentSign?.image_url ?? currentQuestion.question_image_url! }}
               style={styles.signImage}

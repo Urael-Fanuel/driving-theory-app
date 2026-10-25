@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:07:08.712Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "vk_l1_s2",
+   "key": "vehicle_knowledge_0_1",
+   "sentences": [
+    {
+     "text": "የጎን መስተዋቶች ዋና ዓላማ ምንድን ነው?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_26_5495b54cbe4a7cba.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመኪናውን ውበት ለመጨመር",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_16_289d2090ed7fe8a1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። የመኪናውን ውበት ለመጨመር",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_21_695d43c4934ec0e3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሽከርካሪው ጭንቅላቱን ሳያዞር ከመኪናው ኋላ እና ከጎኖቹ ያለውን ነገር እንዲያይ ለመርዳት",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_57_f24c19d8aa12c322.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። አሽከርካሪው ጭንቅላቱን ሳያዞር ከመኪናው ኋላ እና ከጎኖቹ ያለውን ነገር እንዲያይ ለመርዳት",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_62_6d2a732c1b001cbc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የፊት ለፊቱን መንገድ በግልጽ ለማየት",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_23_f93c66179a71e1d7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የፊት ለፊቱን መንገድ በግልጽ ለማየት",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_28_2a8a184caecd8da3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመኪናውን ፍጥነት ለመቆጣጠር",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_18_08034a38b28ed081.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። የመኪናውን ፍጥነት ለመቆጣጠር",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_23_00d1d0434cbabafd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! አሽከርካሪው ጭንቅላቱን ሳያዞር ከመኪናው ኋላ እና ከጎኖቹ ያለውን ነገር እንዲያይ ለመርዳት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_63_8dfcf0787e099a5b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! አሽከርካሪው ጭንቅላቱን ሳያዞር ከመኪናው ኋላ እና ከጎኖቹ ያለውን ነገር እንዲያይ ለመርዳት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_61_cc72d2f4beddd04d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! አሽከርካሪው ጭንቅላቱን ሳያዞር ከመኪናው ኋላ እና ከጎኖቹ ያለውን ነገር እንዲያይ ለመርዳት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_62_d3d25d8b3ebf6a64.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! አሽከርካሪው ጭንቅላቱን ሳያዞር ከመኪናው ኋላ እና ከጎኖቹ ያለውን ነገር እንዲያይ ለመርዳት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_61_35686b885b7127f0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! አሽከርካሪው ጭንቅላቱን ሳያዞር ከመኪናው ኋላ እና ከጎኖቹ ያለውን ነገር እንዲያይ ለመርዳት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_62_38995a14b2fb793b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! አሽከርካሪው ጭንቅላቱን ሳያዞር ከመኪናው ኋላ እና ከጎኖቹ ያለውን ነገር እንዲያይ ለመርዳት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_61_a8322b5c94b140c5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! አሽከርካሪው ጭንቅላቱን ሳያዞር ከመኪናው ኋላ እና ከጎኖቹ ያለውን ነገር እንዲያይ ለመርዳት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_62_55f3d818b2492790.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! አሽከርካሪው ጭንቅላቱን ሳያዞር ከመኪናው ኋላ እና ከጎኖቹ ያለውን ነገር እንዲያይ ለመርዳት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_65_d6d869fbcddc84d1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! አሽከርካሪው ጭንቅላቱን ሳያዞር ከመኪናው ኋላ እና ከጎኖቹ ያለውን ነገር እንዲያይ ለመርዳት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_66_4cfe7d37e96c883a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! አሽከርካሪው ጭንቅላቱን ሳያዞር ከመኪናው ኋላ እና ከጎኖቹ ያለውን ነገር እንዲያይ ለመርዳት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_66_2918b59c256127f0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! አሽከርካሪው ጭንቅላቱን ሳያዞር ከመኪናው ኋላ እና ከጎኖቹ ያለውን ነገር እንዲያይ ለመርዳት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_66_0a78e6ff214c96d7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! አሽከርካሪው ጭንቅላቱን ሳያዞር ከመኪናው ኋላ እና ከጎኖቹ ያለውን ነገር እንዲያይ ለመርዳት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_68_4ec4d5f071232577.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! አሽከርካሪው ጭንቅላቱን ሳያዞር ከመኪናው ኋላ እና ከጎኖቹ ያለውን ነገር እንዲያይ ለመርዳት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_69_bae21c60378d3474.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! አሽከርካሪው ጭንቅላቱን ሳያዞር ከመኪናው ኋላ እና ከጎኖቹ ያለውን ነገር እንዲያይ ለመርዳት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_73_8b36ad5823fc3d5a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! አሽከርካሪው ጭንቅላቱን ሳያዞር ከመኪናው ኋላ እና ከጎኖቹ ያለውን ነገር እንዲያይ ለመርዳት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_71_945f8608f9a5eca2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: አሽከርካሪው ጭንቅላቱን ሳያዞር ከመኪናው ኋላ እና ከጎኖቹ ያለውን ነገር እንዲያይ ለመርዳት",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_75_c7652f2486a0b487.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመኪናውን በር መክፈት የሚፈቀደው መቼ ነው?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_28_6cf9c50031d77970.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናው በዝግታ እየተንቀሳቀሰ ሲሆን",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_22_792dbf64d7609140.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። መኪናው በዝግታ እየተንቀሳቀሰ ሲሆን",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_27_6c4f88156f958f82.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናው ሙሉ በሙሉ ሲቆም ብቻ",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_18_603c4068bcab7b5e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። መኪናው ሙሉ በሙሉ ሲቆም ብቻ",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_23_5455778973fc7f00.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናው እየታጠፈ ሲሆን",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_14_fe7fccd0b2acef7e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። መኪናው እየታጠፈ ሲሆን",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_19_914527b0a501e0ca.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በማንኛውም ጊዜ",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_9_d6c7becaab06bed6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። በማንኛውም ጊዜ",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_14_bc484ac28eca2dea.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! መኪናው ሙሉ በሙሉ ሲቆም ብቻ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_24_617e9e7017b60107.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! መኪናው ሙሉ በሙሉ ሲቆም ብቻ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_22_622542d05e65c051.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! መኪናው ሙሉ በሙሉ ሲቆም ብቻ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_23_e64d22948bcbfe58.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! መኪናው ሙሉ በሙሉ ሲቆም ብቻ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_22_8f35253839ff5d4c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! መኪናው ሙሉ በሙሉ ሲቆም ብቻ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_23_810af41485724d67.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! መኪናው ሙሉ በሙሉ ሲቆም ብቻ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_22_f40c9db01edf15d9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! መኪናው ሙሉ በሙሉ ሲቆም ብቻ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_23_f0ef4974fec29f6c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! መኪናው ሙሉ በሙሉ ሲቆም ብቻ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_26_a8b0290c4f0ddd4d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! መኪናው ሙሉ በሙሉ ሲቆም ብቻ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_27_bfeab7a43eaa8546.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! መኪናው ሙሉ በሙሉ ሲቆም ብቻ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_27_8ef64fc091ef5d4c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! መኪናው ሙሉ በሙሉ ሲቆም ብቻ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_27_c1e0b008b073f10b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! መኪናው ሙሉ በሙሉ ሲቆም ብቻ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_29_38c453e05e467bab.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! መኪናው ሙሉ በሙሉ ሲቆም ብቻ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_30_1278e128e862f648.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! መኪናው ሙሉ በሙሉ ሲቆም ብቻ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_34_448ff978a87028e6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! መኪናው ሙሉ በሙሉ ሲቆም ብቻ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_32_8e38f8d8fa238ade.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: መኪናው ሙሉ በሙሉ ሲቆም ብቻ",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_36_6e093e5848a8285b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሽከርካሪው ከመታጠፉ ወይም መስመር ከመቀየሩ በፊት ምን ማድረግ አለበት?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_46_3724b3fcb7e9f874.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመኪናውን ቀንድ መምታት",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_15_c1d55e549ab94a57.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። የመኪናውን ቀንድ መምታት",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_20_4b699ee066ac2955.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመታጠፊያ ምልክቶችን መጠቀም",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_18_0d017640cac8abe1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። የመታጠፊያ ምልክቶችን መጠቀም",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_23_d8e6d620006603bf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመኪናውን ፍጥነት መጨመር",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_16_68469fd855a168bc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የመኪናውን ፍጥነት መጨመር",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_21_f18a6dc41c3d3308.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመስኮቱን መስታወት መክፈት",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_17_a6871a106b977d61.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። የመስኮቱን መስታወት መክፈት",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_22_0e45272c02e0035d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! የመታጠፊያ ምልክቶችን መጠቀም",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_24_bef87ba4dfb2cc38.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! የመታጠፊያ ምልክቶችን መጠቀም",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_22_ef06e047545eef6e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! የመታጠፊያ ምልክቶችን መጠቀም",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_23_23566ea8b6dbe1e7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! የመታጠፊያ ምልክቶችን መጠቀም",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_22_c17751178d888cf3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! የመታጠፊያ ምልክቶችን መጠቀም",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_23_5944748433b7c558.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! የመታጠፊያ ምልክቶችን መጠቀም",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_22_ea705764d48acde6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! የመታጠፊያ ምልክቶችን መጠቀም",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_23_dd51f683edd2e953.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! የመታጠፊያ ምልክቶችን መጠቀም",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_26_d396b8d0ca170a72.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! የመታጠፊያ ምልክቶችን መጠቀም",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_27_09de24c48390cbf9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! የመታጠፊያ ምልክቶችን መጠቀም",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_27_f20a9b94e5788cf3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! የመታጠፊያ ምልክቶችን መጠቀም",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_27_b3bdaf27bf364a34.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! የመታጠፊያ ምልክቶችን መጠቀም",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_29_92d299845e8bde94.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! የመታጠፊያ ምልክቶችን መጠቀም",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_30_a250c15cd53f21f7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! የመታጠፊያ ምልክቶችን መጠቀም",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_34_b7729f2ccdb332d9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! የመታጠፊያ ምልክቶችን መጠቀም",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_32_a9a16a2c84b4ac61.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: የመታጠፊያ ምልክቶችን መጠቀም",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_36_70c6c210f2c9b064.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:12:06.025Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "vk_l8_s2",
+   "key": "vehicle_knowledge_7_1",
+   "sentences": [
+    {
+     "text": "የማስጠንቀቂያ ምልክት ከቆመ መኪና ምን ያህል ርቀት ላይ መቀመጥ አለበት?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_46_38f79290a10accf2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "50 ሜትር",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_6_8de50338d8311ea4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። 50 ሜትር",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_11_f0e58bf09301c0e6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "100 ሜትር",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_7_707ed8100bb2c850.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። 100 ሜትር",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_12_bedd2368fa0fe5ce.mp3",
+     "too_long": false
+    },
+    {
+     "text": "200 ሜትር",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_7_f3a2d2275d1ea213.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። 200 ሜትር",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_12_700b85a02bfb5167.mp3",
+     "too_long": false
+    },
+    {
+     "text": "10 ሜትር",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_6_a552a098e109dc20.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። 10 ሜትር",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_11_b8ace8c808d0c99c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! 100 ሜትር",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_13_addab4ac5c9fdda9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! 100 ሜትር",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_11_89622e0ca06186bf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! 100 ሜትር",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_12_58700f18c4219716.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! 100 ሜትር",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_11_a8ff5e30c3f27a82.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! 100 ሜትር",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_12_68b0e988c6209549.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! 100 ሜትር",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_11_14db23f0f16a2037.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! 100 ሜትር",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_12_a3e050fb7df20262.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! 100 ሜትር",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_15_d29133bc2c8a7f23.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! 100 ሜትር",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_16_1c87d5ea61f54d48.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! 100 ሜትር",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_16_d5c7b0a0b1e27a82.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! 100 ሜትር",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_16_07a6c51c30f84425.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! 100 ሜትር",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_18_aa91e90c70daa605.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! 100 ሜትር",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_19_d0e9a6cc24a9e906.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! 100 ሜትር",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_23_aa32055cb5975aa8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! 100 ሜትር",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_21_925af58c80c9d6d0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: 100 ሜትር",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_25_3c874cebb0874b75.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪና በመንገድ ላይ ሲበላሽ አሽከርካሪ ምን ማድረግ አለበት?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_38_b8c25a50fa48606e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የአደጋ ጊዜ መብራቶችን ማብራት፣ አንጸባራቂ ልብስ መልበስ እና የማስጠንቀቂያ ምልክት ማስቀመጥ",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_59_f8e192c0e3c5d766.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። የአደጋ ጊዜ መብራቶችን ማብራት፣ አንጸባራቂ ልብስ መልበስ እና የማስጠንቀቂያ ምልክት ማስቀመጥ",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_64_51a4e250f1a67964.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናውን ትቶ መሄድ",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_12_ccd97c744b023b76.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። መኪናውን ትቶ መሄድ",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_17_c6203af481352828.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የአደጋ ጊዜ መብራቶችን ብቻ ማብራት",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_22_362c15bc6ec05b36.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የአደጋ ጊዜ መብራቶችን ብቻ ማብራት",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_27_2ff490c8f4efb482.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የህግ አስከባሪ አካላትን ሳይደውሉ መኪናውን ለመጠገን መሞከር",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_38_2f41c100db3b4fcc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። የህግ አስከባሪ አካላትን ሳይደውሉ መኪናውን ለመጠገን መሞከር",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_43_e3394c98fd425070.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! የአደጋ ጊዜ መብራቶችን ማብራት፣ አንጸባራቂ ልብስ መልበስ እና የማስጠንቀቂያ ምልክት ማስቀመጥ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_65_b2aa5e9058a013df.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! የአደጋ ጊዜ መብራቶችን ማብራት፣ አንጸባራቂ ልብስ መልበስ እና የማስጠንቀቂያ ምልክት ማስቀመጥ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_63_e14a10b8c1237ac9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! የአደጋ ጊዜ መብራቶችን ማብራት፣ አንጸባራቂ ልብስ መልበስ እና የማስጠንቀቂያ ምልክት ማስቀመጥ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_64_7f7b6298074fec20.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! የአደጋ ጊዜ መብራቶችን ማብራት፣ አንጸባራቂ ልብስ መልበስ እና የማስጠንቀቂያ ምልክት ማስቀመጥ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_63_5c9ffa0cdd77d3b4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! የአደጋ ጊዜ መብራቶችን ማብራት፣ አንጸባራቂ ልብስ መልበስ እና የማስጠንቀቂያ ምልክት ማስቀመጥ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_64_9d8574ec1eef13ff.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! የአደጋ ጊዜ መብራቶችን ማብራት፣ አንጸባራቂ ልብስ መልበስ እና የማስጠንቀቂያ ምልክት ማስቀመጥ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_63_f9bf05dcc0665741.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! የአደጋ ጊዜ መብራቶችን ማብራት፣ አንጸባራቂ ልብስ መልበስ እና የማስጠንቀቂያ ምልክት ማስቀመጥ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_64_22e28d1b0bcf4714.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! የአደጋ ጊዜ መብራቶችን ማብራት፣ አንጸባራቂ ልብስ መልበስ እና የማስጠንቀቂያ ምልክት ማስቀመጥ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_67_87c3752802836b55.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! የአደጋ ጊዜ መብራቶችን ማብራት፣ አንጸባራቂ ልብስ መልበስ እና የማስጠንቀቂያ ምልክት ማስቀመጥ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_68_d59f3a00a4feba7e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! የአደጋ ጊዜ መብራቶችን ማብራት፣ አንጸባራቂ ልብስ መልበስ እና የማስጠንቀቂያ ምልክት ማስቀመጥ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_68_c6ecd2d8e367d3b4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! የአደጋ ጊዜ መብራቶችን ማብራት፣ አንጸባራቂ ልብስ መልበስ እና የማስጠንቀቂያ ምልክት ማስቀመጥ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_68_6008d2a8ba89b053.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! የአደጋ ጊዜ መብራቶችን ማብራት፣ አንጸባራቂ ልብስ መልበስ እና የማስጠንቀቂያ ምልክት ማስቀመጥ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_70_c4e04014507f60b3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! የአደጋ ጊዜ መብራቶችን ማብራት፣ አንጸባራቂ ልብስ መልበስ እና የማስጠንቀቂያ ምልክት ማስቀመጥ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_71_564d75db78fc9630.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! የአደጋ ጊዜ መብራቶችን ማብራት፣ አንጸባራቂ ልብስ መልበስ እና የማስጠንቀቂያ ምልክት ማስቀመጥ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_75_f71d8e5f418dd75e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! የአደጋ ጊዜ መብራቶችን ማብራት፣ አንጸባራቂ ልብስ መልበስ እና የማስጠንቀቂያ ምልክት ማስቀመጥ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_73_64843d4c27915ee6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: የአደጋ ጊዜ መብራቶችን ማብራት፣ አንጸባራቂ ልብስ መልበስ እና የማስጠንቀቂያ ምልክት ማስቀመጥ",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_77_d2f344e871d92683.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሰዎች የተጎዱበት አደጋ ሲያጋጥም አሽከርካሪ ምን ማድረግ አለበት?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_41_98b4b9b9caf5e83d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አደጋውን ችላ ብሎ መሄድ",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_15_869cea34bf163bd2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። አደጋውን ችላ ብሎ መሄድ",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_20_1227991c96e14550.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ወዲያውኑ ማቆም፣ የመጀመሪያ እርዳታ መስጠት እና ለአደጋ ጊዜ አገልግሎቶች መደወል",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_51_217893901adbd921.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ወዲያውኑ ማቆም፣ የመጀመሪያ እርዳታ መስጠት እና ለአደጋ ጊዜ አገልግሎቶች መደወል",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_56_e133341c018469bf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የህግ አስከባሪ አካላት መምጣት ብቻ መጠበቅ",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_27_45103b888627f354.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የህግ አስከባሪ አካላት መምጣት ብቻ መጠበቅ",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_32_3b895d74bed61820.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የግል መረጃዎን ለመስጠት እምቢ ማለት",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_23_776a304c54826e29.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። የግል መረጃዎን ለመስጠት እምቢ ማለት",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_28_74aa99d8cc19ffd5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ወዲያውኑ ማቆም፣ የመጀመሪያ እርዳታ መስጠት እና ለአደጋ ጊዜ አገልግሎቶች መደወል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_57_7818a3c885a05918.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ወዲያውኑ ማቆም፣ የመጀመሪያ እርዳታ መስጠት እና ለአደጋ ጊዜ አገልግሎቶች መደወል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_55_df79b2a449fa0d0e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ወዲያውኑ ማቆም፣ የመጀመሪያ እርዳታ መስጠት እና ለአደጋ ጊዜ አገልግሎቶች መደወል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_56_75ebe7e48bd3d7e7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ወዲያውኑ ማቆም፣ የመጀመሪያ እርዳታ መስጠት እና ለአደጋ ጊዜ አገልግሎቶች መደወል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_55_5cff5d78495b5273.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ወዲያውኑ ማቆም፣ የመጀመሪያ እርዳታ መስጠት እና ለአደጋ ጊዜ አገልግሎቶች መደወል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_56_635f333425221e78.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ወዲያውኑ ማቆም፣ የመጀመሪያ እርዳታ መስጠት እና ለአደጋ ጊዜ አገልግሎቶች መደወል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_55_1bb004b490930f86.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ወዲያውኑ ማቆም፣ የመጀመሪያ እርዳታ መስጠት እና ለአደጋ ጊዜ አገልግሎቶች መደወል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_56_40b6f1c814398193.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ወዲያውኑ ማቆም፣ የመጀመሪያ እርዳታ መስጠት እና ለአደጋ ጊዜ አገልግሎቶች መደወል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_59_9b8068607c069c92.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ወዲያውኑ ማቆም፣ የመጀመሪያ እርዳታ መስጠት እና ለአደጋ ጊዜ አገልግሎቶች መደወል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_60_269ba49043ba7e39.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ወዲያውኑ ማቆም፣ የመጀመሪያ እርዳታ መስጠት እና ለአደጋ ጊዜ አገልግሎቶች መደወል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_60_fdfe19dc5f4b5273.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ወዲያውኑ ማቆም፣ የመጀመሪያ እርዳታ መስጠት እና ለአደጋ ጊዜ አገልግሎቶች መደወል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_60_bddc5058c98ee694.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ወዲያውኑ ማቆም፣ የመጀመሪያ እርዳታ መስጠት እና ለአደጋ ጊዜ አገልግሎቶች መደወል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_62_a298103476f98034.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ወዲያውኑ ማቆም፣ የመጀመሪያ እርዳታ መስጠት እና ለአደጋ ጊዜ አገልግሎቶች መደወል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_63_d91012e013d97df7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ወዲያውኑ ማቆም፣ የመጀመሪያ እርዳታ መስጠት እና ለአደጋ ጊዜ አገልግሎቶች መደወል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_67_1264fe0895540fd9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ወዲያውኑ ማቆም፣ የመጀመሪያ እርዳታ መስጠት እና ለአደጋ ጊዜ አገልግሎቶች መደወል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_65_f446a3249b0b66a1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ወዲያውኑ ማቆም፣ የመጀመሪያ እርዳታ መስጠት እና ለአደጋ ጊዜ አገልግሎቶች መደወል",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_69_f0364e3ca85929c4.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

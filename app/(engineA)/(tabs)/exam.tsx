@@ -32,6 +32,7 @@ import { useNetworkStatus } from '../../../hooks/useNetworkStatus';
 import { isQuestionAudioReady, prefetchQuestionAudio, preCacheAudioBatch } from '../../../services/audioCache';
 import { useAudio, playAndAwaitAudio } from '../../../hooks/useAudio';
 import { speakAndAwait, stopTTS, onTTSSpeakingChange, getIsTTSSpeaking, areTtsTextsCached } from '../../../utils/googleTTS';
+import { useFitImageSize } from '../../../hooks/useFitImageSize';
 import { useAudioInterrupted, resumeInterruptedAudio } from '../../../hooks/useAudioInterrupted';
 import { useVoiceRecognition } from '../../../hooks/useVoiceRecognition';
 import * as api from '../../../backend/api';
@@ -76,6 +77,8 @@ const randomPraise = () => CORRECT_PRAISES[Math.floor(Math.random() * CORRECT_PR
 
 export default function EngineAExamScreen() {
   const router = useRouter();
+  // Image sized so the whole question screen (incl. the 🎤 button) fits when the phone can.
+  const fit = useFitImageSize(220);
   const {
     phase,
     currentQuestion,
@@ -712,6 +715,8 @@ export default function EngineAExamScreen() {
 
       <ScrollView
         ref={scrollRef}
+        onLayout={e => fit.onLayout(e, !!(currentSign?.image_url || currentQuestion?.question_image_url))}
+        onContentSizeChange={(_w, h) => fit.onContent(h, !!(currentSign?.image_url || currentQuestion?.question_image_url))}
         style={styles.scrollArea}
         contentContainerStyle={styles.content}
         showsVerticalScrollIndicator={false}
@@ -719,7 +724,7 @@ export default function EngineAExamScreen() {
       >
         {/* Sign or behavioral question image */}
         {(currentSign?.image_url || currentQuestion.question_image_url) && (
-          <View style={styles.signImageContainer}>
+          <View style={[styles.signImageContainer, fit.style]}>
             <Image
               key={audioRestartKey}
               source={{ uri: currentSign?.image_url ?? currentQuestion.question_image_url! }}

@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:14:50.292Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "tr_l2_s2",
+   "key": "the_road_1_1",
+   "sentences": [
+    {
+     "text": "አንድ አሽከርካሪ መቅደም ከመጀመሩ በፊት ምን ማረጋገጥ እና ማድረግ አለበት?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_48_079cb4d08c231ab0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የፊት መብራቶቹን ማብራት እና ፍጥነት መጨመር",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_28_08b89748370ba920.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። የፊት መብራቶቹን ማብራት እና ፍጥነት መጨመር",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_33_a49cced87dcd0462.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የኋላ መመልከቻ መስታወቶቹን እና የማይታይ ቦታውን ማረጋገጥ፣ ከፊት ያለው መንገድ ክፍት መሆኑን ማረጋገጥ እና ወደ ግራ ምልክት መስጠት",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_85_29e5fe40992278b9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። የኋላ መመልከቻ መስታወቶቹን እና የማይታይ ቦታውን ማረጋገጥ፣ ከፊት ያለው መንገድ ክፍት መሆኑን ማረጋገጥ እና ወደ ግራ ምልክት መስጠት",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_90_05c97fc729e07727.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ወደ ቀኝ መስመር መሻገር እና የጎን ርቀትን መቀነስ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_32_c1d50a1cbbabf88b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ወደ ቀኝ መስመር መሻገር እና የጎን ርቀትን መቀነስ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_37_38f6c898aae2c13f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የሬዲዮን ድምጽ ከፍ ማድረግ እና መስኮቶቹን መክፈት",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_32_5efee114631dba54.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። የሬዲዮን ድምጽ ከፍ ማድረግ እና መስኮቶቹን መክፈት",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_37_bd4dabafa7afcde8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! የኋላ መመልከቻ መስታወቶቹን እና የማይታይ ቦታውን ማረጋገጥ፣ ከፊት ያለው መንገድ ክፍት መሆኑን ማረጋገጥ እና ወደ ግራ ምልክት መስጠት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_91_1465c1ccfb41ad00.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! የኋላ መመልከቻ መስታወቶቹን እና የማይታይ ቦታውን ማረጋገጥ፣ ከፊት ያለው መንገድ ክፍት መሆኑን ማረጋገጥ እና ወደ ግራ ምልክት መስጠት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_89_361875c46ab8b516.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! የኋላ መመልከቻ መስታወቶቹን እና የማይታይ ቦታውን ማረጋገጥ፣ ከፊት ያለው መንገድ ክፍት መሆኑን ማረጋገጥ እና ወደ ግራ ምልክት መስጠት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_90_e400b5ac86fff87f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! የኋላ መመልከቻ መስታወቶቹን እና የማይታይ ቦታውን ማረጋገጥ፣ ከፊት ያለው መንገድ ክፍት መሆኑን ማረጋገጥ እና ወደ ግራ ምልክት መስጠት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_89_abb4ca2fc7d535eb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! የኋላ መመልከቻ መስታወቶቹን እና የማይታይ ቦታውን ማረጋገጥ፣ ከፊት ያለው መንገድ ክፍት መሆኑን ማረጋገጥ እና ወደ ግራ ምልክት መስጠት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_90_8cf1ff50254bf9a0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! የኋላ መመልከቻ መስታወቶቹን እና የማይታይ ቦታውን ማረጋገጥ፣ ከፊት ያለው መንገድ ክፍት መሆኑን ማረጋገጥ እና ወደ ግራ ምልክት መስጠት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_89_ed4c9713941deb9e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! የኋላ መመልከቻ መስታወቶቹን እና የማይታይ ቦታውን ማረጋገጥ፣ ከፊት ያለው መንገድ ክፍት መሆኑን ማረጋገጥ እና ወደ ግራ ምልክት መስጠት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_90_eeaf5df4277f324b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! የኋላ መመልከቻ መስታወቶቹን እና የማይታይ ቦታውን ማረጋገጥ፣ ከፊት ያለው መንገድ ክፍት መሆኑን ማረጋገጥ እና ወደ ግራ ምልክት መስጠት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_93_10cc84a72cf4cf8a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! የኋላ መመልከቻ መስታወቶቹን እና የማይታይ ቦታውን ማረጋገጥ፣ ከፊት ያለው መንገድ ክፍት መሆኑን ማረጋገጥ እና ወደ ግራ ምልክት መስጠት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_94_96efb6bf6c73afa1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! የኋላ መመልከቻ መስታወቶቹን እና የማይታይ ቦታውን ማረጋገጥ፣ ከፊት ያለው መንገድ ክፍት መሆኑን ማረጋገጥ እና ወደ ግራ ምልክት መስጠት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_94_f7266decd9c535eb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! የኋላ መመልከቻ መስታወቶቹን እና የማይታይ ቦታውን ማረጋገጥ፣ ከፊት ያለው መንገድ ክፍት መሆኑን ማረጋገጥ እና ወደ ግራ ምልክት መስጠት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_94_d114acebed6d778c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! የኋላ መመልከቻ መስታወቶቹን እና የማይታይ ቦታውን ማረጋገጥ፣ ከፊት ያለው መንገድ ክፍት መሆኑን ማረጋገጥ እና ወደ ግራ ምልክት መስጠት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_96_50cbfcff8cbab66c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! የኋላ መመልከቻ መስታወቶቹን እና የማይታይ ቦታውን ማረጋገጥ፣ ከፊት ያለው መንገድ ክፍት መሆኑን ማረጋገጥ እና ወደ ግራ ምልክት መስጠት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_97_5b6de300e2e68a6f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! የኋላ መመልከቻ መስታወቶቹን እና የማይታይ ቦታውን ማረጋገጥ፣ ከፊት ያለው መንገድ ክፍት መሆኑን ማረጋገጥ እና ወደ ግራ ምልክት መስጠት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_101_597f0da3a95f6b81.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! የኋላ መመልከቻ መስታወቶቹን እና የማይታይ ቦታውን ማረጋገጥ፣ ከፊት ያለው መንገድ ክፍት መሆኑን ማረጋገጥ እና ወደ ግራ ምልክት መስጠት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_99_863744cbeacf8e39.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: የኋላ መመልከቻ መስታወቶቹን እና የማይታይ ቦታውን ማረጋገጥ፣ ከፊት ያለው መንገድ ክፍት መሆኑን ማረጋገጥ እና ወደ ግራ ምልክት መስጠት",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_103_4a262e646aa895dc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሌላ ተሽከርካሪ እርስዎን እየቀደመ እያለ ከፊት ለፊት የሚመጣ ተሽከርካሪ በድንገት ከታየ አሽከርካሪው ምን ማድረግ አለበት?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_77_0741fa044058f035.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ፍጥነት መጨመር እና ወደ ግራ መሻገር",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_23_ba44ee080c4f8f23.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ፍጥነት መጨመር እና ወደ ግራ መሻገር",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_28_9d3af1dc37aaf3a1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በተቻለ መጠን ወደ ቀኝ መሄድ እና ፍጥነት አለመጨመር",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_33_92b072b89a041ed1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። በተቻለ መጠን ወደ ቀኝ መሄድ እና ፍጥነት አለመጨመር",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_38_2b3a5b6811dc3e4f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የፊት መብራቶቹን ማብራት እና መኪናውን ማቆም",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_28_8cd7edd415055531.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የፊት መብራቶቹን ማብራት እና መኪናውን ማቆም",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_33_e5fb990c0b7b5285.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ምንም ነገር አለማድረግ እና ተሽከርካሪው እንዲያልፍ መጠበቅ",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_37_578d72d72d3ef100.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ምንም ነገር አለማድረግ እና ተሽከርካሪው እንዲያልፍ መጠበቅ",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_42_a72f975b0e3568bc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! በተቻለ መጠን ወደ ቀኝ መሄድ እና ፍጥነት አለመጨመር",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_39_265757d003b7e0a8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! በተቻለ መጠን ወደ ቀኝ መሄድ እና ፍጥነት አለመጨመር",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_37_34da0558cc5b51be.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! በተቻለ መጠን ወደ ቀኝ መሄድ እና ፍጥነት አለመጨመር",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_38_bdd1d5f83afa2797.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! በተቻለ መጠን ወደ ቀኝ መሄድ እና ፍጥነት አለመጨመር",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_37_1f3e54876f2e6203.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! በተቻለ መጠን ወደ ቀኝ መሄድ እና ፍጥነት አለመጨመር",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_38_30663baf947be188.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! በተቻለ መጠን ወደ ቀኝ መሄድ እና ፍጥነት አለመጨመር",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_37_f28685607f68c036.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! በተቻለ መጠን ወደ ቀኝ መሄድ እና ፍጥነት አለመጨመር",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_38_49292bdcb4ac21a3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! በተቻለ መጠን ወደ ቀኝ መሄድ እና ፍጥነት አለመጨመር",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_41_acf05554c4d84722.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! በተቻለ መጠን ወደ ቀኝ መሄድ እና ፍጥነት አለመጨመር",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_42_dff7b870b76e5dc9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! በተቻለ መጠን ወደ ቀኝ መሄድ እና ፍጥነት አለመጨመር",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_42_03207718691e6203.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! በተቻለ መጠን ወደ ቀኝ መሄድ እና ፍጥነት አለመጨመር",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_42_23dc0e8cd809c224.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! በተቻለ መጠን ወደ ቀኝ መሄድ እና ፍጥነት አለመጨመር",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_44_96f6657ff5bbbb44.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! በተቻለ መጠን ወደ ቀኝ መሄድ እና ፍጥነት አለመጨመር",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_45_113898f3690c1987.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! በተቻለ መጠን ወደ ቀኝ መሄድ እና ፍጥነት አለመጨመር",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_49_fe457e2c6c17b9e9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! በተቻለ መጠን ወደ ቀኝ መሄድ እና ፍጥነት አለመጨመር",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_47_5ff2a26c115c7c51.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: በተቻለ መጠን ወደ ቀኝ መሄድ እና ፍጥነት አለመጨመር",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_51_4307bcab2b924374.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መቅደም ስለመቻል ለመወሰን በጣም አስፈላጊው ህግ ምንድነው?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_37_1422391dcc6d91e3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በተቻለ ፍጥነት መቅደም",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_14_2fbb86a004dc3d3b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። በተቻለ ፍጥነት መቅደም",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_19_24a4ad6364fbf879.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከሌሎች አሽከርካሪዎች ጋር የዓይን ግንኙነት መፍጠር",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_32_4aa6818f36035b61.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ከሌሎች አሽከርካሪዎች ጋር የዓይን ግንኙነት መፍጠር",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_37_52f64e386c0e19bf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የደህንነት ጥርጣሬ ካለ፣ አለመቅደም",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_22_80483a40ca647657.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የደህንነት ጥርጣሬ ካለ፣ አለመቅደም",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_27_44a70aac365e8223.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁልጊዜ ከቀኝ በኩል መቅደም",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_17_6254c3540daab1fe.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ሁልጊዜ ከቀኝ በኩል መቅደም",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_22_6b209b589c210342.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! የደህንነት ጥርጣሬ ካለ፣ አለመቅደም",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_28_bc9a1d94885ccbce.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! የደህንነት ጥርጣሬ ካለ፣ አለመቅደም",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_26_c75d6b9fa423de18.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! የደህንነት ጥርጣሬ ካለ፣ አለመቅደም",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_27_83532284a84240d1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! የደህንነት ጥርጣሬ ካለ፣ አለመቅደም",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_26_8ea26f6c9784e6c5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! የደህንነት ጥርጣሬ ካለ፣ አለመቅደም",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_27_68c70460a1a3c8ee.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! የደህንነት ጥርጣሬ ካለ፣ አለመቅደም",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_26_f7278fe4a46c3b90.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! የደህንነት ጥርጣሬ ካለ፣ አለመቅደም",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_27_321bfea4c7ea2aa5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! የደህንነት ጥርጣሬ ካለ፣ አለመቅደም",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_30_3029e8c87e5b4e04.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! የደህንነት ጥርጣሬ ካለ፣ አለመቅደም",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_31_67292c1cd634dc4f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! የደህንነት ጥርጣሬ ካለ፣ አለመቅደም",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_31_41e4008c6774e6c5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! የደህንነት ጥርጣሬ ካለ፣ አለመቅደም",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_31_4c26dfc4da84a6c2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! የደህንነት ጥርጣሬ ካለ፣ አለመቅደም",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_33_d5a870ecce95b3a2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! የደህንነት ጥርጣሬ ካለ፣ አለመቅደም",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_34_002a31bc90cc8cc1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! የደህንነት ጥርጣሬ ካለ፣ አለመቅደም",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_38_e065001c14ba9baf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! የደህንነት ጥርጣሬ ካለ፣ አለመቅደም",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_36_3c963df4cee837d7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: የደህንነት ጥርጣሬ ካለ፣ አለመቅደም",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_40_07c9eaacd3dec592.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:13:28.737Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "ms_l3_s2",
+   "key": "mind_safety_2_1",
+   "sentences": [
+    {
+     "text": "አንዳንድ መድሃኒቶች የመንዳት ችሎታን እንዴት ሊነኩ ይችላሉ?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_38_cfd664486862cccd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንቅልፍ ማጣት፣ የምላሽ ፍጥነት መቀነስ እና ትኩረትን ማዛባት ሊያስከትሉ ይችላሉ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_51_c6ec4ad89621194b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። እንቅልፍ ማጣት፣ የምላሽ ፍጥነት መቀነስ እና ትኩረትን ማዛባት ሊያስከትሉ ይችላሉ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_56_f399c118af724b49.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመኪናውን ፍጥነት ብቻ ይጨምራሉ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_20_edf15384b1b050bd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። የመኪናውን ፍጥነት ብቻ ይጨምራሉ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_25_818031d4973786e3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመንዳት ችሎታ ላይ ምንም ተጽዕኖ የላቸውም",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_27_28e056342d3c8930.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የመንዳት ችሎታ ላይ ምንም ተጽዕኖ የላቸውም",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_32_8dd0357fcd1f8944.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመንዳት ችሎታን ያሻሽላሉ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_16_3c3d0f1cab004b9c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። የመንዳት ችሎታን ያሻሽላሉ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_21_b2b6eeac561dcea0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! እንቅልፍ ማጣት፣ የምላሽ ፍጥነት መቀነስ እና ትኩረትን ማዛባት ሊያስከትሉ ይችላሉ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_57_ae2d1b0acdbbf932.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! እንቅልፍ ማጣት፣ የምላሽ ፍጥነት መቀነስ እና ትኩረትን ማዛባት ሊያስከትሉ ይችላሉ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_55_a4f3134c8f826024.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! እንቅልፍ ማጣት፣ የምላሽ ፍጥነት መቀነስ እና ትኩረትን ማዛባት ሊያስከትሉ ይችላሉ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_56_c326a03fa20a170d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! እንቅልፍ ማጣት፣ የምላሽ ፍጥነት መቀነስ እና ትኩረትን ማዛባት ሊያስከትሉ ይችላሉ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_55_5e47229f1ed4a599.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! እንቅልፍ ማጣት፣ የምላሽ ፍጥነት መቀነስ እና ትኩረትን ማዛባት ሊያስከትሉ ይችላሉ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_56_bfead8845c357892.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! እንቅልፍ ማጣት፣ የምላሽ ፍጥነት መቀነስ እና ትኩረትን ማዛባት ሊያስከትሉ ይችላሉ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_55_9e1ecef8e19ae6ac.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! እንቅልፍ ማጣት፣ የምላሽ ፍጥነት መቀነስ እና ትኩረትን ማዛባት ሊያስከትሉ ይችላሉ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_56_c21620fcdf7bb6b9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! እንቅልፍ ማጣት፣ የምላሽ ፍጥነት መቀነስ እና ትኩረትን ማዛባት ሊያስከትሉ ይችላሉ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_59_acdc429013188bb8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! እንቅልፍ ማጣት፣ የምላሽ ፍጥነት መቀነስ እና ትኩረትን ማዛባት ሊያስከትሉ ይችላሉ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_60_314f7da49bd0b453.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! እንቅልፍ ማጣት፣ የምላሽ ፍጥነት መቀነስ እና ትኩረትን ማዛባት ሊያስከትሉ ይችላሉ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_60_11cf646034c4a599.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! እንቅልፍ ማጣት፣ የምላሽ ፍጥነት መቀነስ እና ትኩረትን ማዛባት ሊያስከትሉ ይችላሉ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_60_594bf21ca03c00be.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! እንቅልፍ ማጣት፣ የምላሽ ፍጥነት መቀነስ እና ትኩረትን ማዛባት ሊያስከትሉ ይችላሉ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_62_459e741306cf785e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! እንቅልፍ ማጣት፣ የምላሽ ፍጥነት መቀነስ እና ትኩረትን ማዛባት ሊያስከትሉ ይችላሉ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_63_4d7d28784a68d51d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! እንቅልፍ ማጣት፣ የምላሽ ፍጥነት መቀነስ እና ትኩረትን ማዛባት ሊያስከትሉ ይችላሉ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_67_aeeedcec19dceaf3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! እንቅልፍ ማጣት፣ የምላሽ ፍጥነት መቀነስ እና ትኩረትን ማዛባት ሊያስከትሉ ይችላሉ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_65_c6069b24ac3334cb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: እንቅልፍ ማጣት፣ የምላሽ ፍጥነት መቀነስ እና ትኩረትን ማዛባት ሊያስከትሉ ይችላሉ",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_69_30befbb4221419ee.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሽከርካሪው መድሃኒት ከወሰደ በኋላ ከመንዳቱ በፊት ምን ማድረግ አለበት?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_46_b0151959f29f0bc1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከሐኪሙ ጋር መማከር እና የመድሃኒቱን የጥቅል ወረቀት ማንበብ አለበት",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_43_a09f4ef3ca77210e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ከሐኪሙ ጋር መማከር እና የመድሃኒቱን የጥቅል ወረቀት ማንበብ አለበት",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_48_80d22f8351bd678c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የጓደኞቹን አስተያየት መጠየቅ አለበት",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_23_cbb5f52888433027.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። የጓደኞቹን አስተያየት መጠየቅ አለበት",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_28_17a54bf854215239.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ምንም ማድረግ አያስፈልገውም",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_17_658586b25b6dea18.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ምንም ማድረግ አያስፈልገውም",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_22_08f8829b9f5dc02c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ወዲያውኑ መንዳት መጀመር ይችላል",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_20_3e34e890aade2dd8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ወዲያውኑ መንዳት መጀመር ይችላል",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_25_89d951aac6cb0ae4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ከሐኪሙ ጋር መማከር እና የመድሃኒቱን የጥቅል ወረቀት ማንበብ አለበት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_49_eaa31068dd1c4377.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ከሐኪሙ ጋር መማከር እና የመድሃኒቱን የጥቅል ወረቀት ማንበብ አለበት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_47_410b1748df652ae1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ከሐኪሙ ጋር መማከር እና የመድሃኒቱን የጥቅል ወረቀት ማንበብ አለበት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_48_8613dd98bfa955c8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ከሐኪሙ ጋር መማከር እና የመድሃኒቱን የጥቅል ወረቀት ማንበብ አለበት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_47_5b5a8204eea0555c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ከሐኪሙ ጋር መማከር እና የመድሃኒቱን የጥቅል ወረቀት ማንበብ አለበት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_48_7968b8c789d99c17.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ከሐኪሙ ጋር መማከር እና የመድሃኒቱን የጥቅል ወረቀት ማንበብ አለበት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_47_03246e1428c19969.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ከሐኪሙ ጋር መማከር እና የመድሃኒቱን የጥቅል ወረቀት ማንበብ አለበት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_48_25dd638c3a84273c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ከሐኪሙ ጋር መማከር እና የመድሃኒቱን የጥቅል ወረቀት ማንበብ አለበት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_51_31cf088f0a7ea17d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ከሐኪሙ ጋር መማከር እና የመድሃኒቱን የጥቅል ወረቀት ማንበብ አለበት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_52_1730c9c44473dc16.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ከሐኪሙ ጋር መማከር እና የመድሃኒቱን የጥቅል ወረቀት ማንበብ አለበት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_52_2f787e741490555c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ከሐኪሙ ጋር መማከር እና የመድሃኒቱን የጥቅል ወረቀት ማንበብ አለበት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_52_f660d413c5da85fb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ከሐኪሙ ጋር መማከር እና የመድሃኒቱን የጥቅል ወረቀት ማንበብ አለበት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_54_da96fb1fe0d6de5b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ከሐኪሙ ጋር መማከር እና የመድሃኒቱን የጥቅል ወረቀት ማንበብ አለበት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_55_abdef738257be7d8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ከሐኪሙ ጋር መማከር እና የመድሃኒቱን የጥቅል ወረቀት ማንበብ አለበት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_59_46917807541a0576.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ከሐኪሙ ጋር መማከር እና የመድሃኒቱን የጥቅል ወረቀት ማንበብ አለበት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_57_c4931ec7079b588e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ከሐኪሙ ጋር መማከር እና የመድሃኒቱን የጥቅል ወረቀት ማንበብ አለበት",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_61_dfe457e80552a3ab.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መድሃኒቶችን ከመንዳት በፊት የማጣራት ህግ በሐኪም የታዘዙ መድሃኒቶችን ብቻ ይመለከታል?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_55_6d8f2574b1d2b428.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ፣ በሐኪም የታዘዙትን ብቻ ይመለከታል",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_25_5aa1e058f97bcc40.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። አዎ፣ በሐኪም የታዘዙትን ብቻ ይመለከታል",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_30_7a09cb2078141542.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አይ፣ በሐኪም የታዘዙትንም ሆነ ያለ ማዘዣ የተገዙትን ሁሉ ይመለከታል",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_43_bb1601a4d85597f4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። አይ፣ በሐኪም የታዘዙትንም ሆነ ያለ ማዘዣ የተገዙትን ሁሉ ይመለከታል",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_48_001028875e41836a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ይህ ህግ ለመድሃኒቶች አይተገበርም",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_21_606b6583ab1edfdf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ይህ ህግ ለመድሃኒቶች አይተገበርም",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_26_8301d968c945972b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ህጉ የሚመለከተው ለአልኮል ብቻ ነው",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_22_38c3144439ba6d7b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ህጉ የሚመለከተው ለአልኮል ብቻ ነው",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_27_2ba040e09ed3f1c7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! አይ፣ በሐኪም የታዘዙትንም ሆነ ያለ ማዘዣ የተገዙትን ሁሉ ይመለከታል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_49_c4f62afc6399628d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! አይ፣ በሐኪም የታዘዙትንም ሆነ ያለ ማዘዣ የተገዙትን ሁሉ ይመለከታል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_47_51d3e578a7b03c9b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! አይ፣ በሐኪም የታዘዙትንም ሆነ ያለ ማዘዣ የተገዙትን ሁሉ ይመለከታል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_48_372a766490f177b2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! አይ፣ በሐኪም የታዘዙትንም ሆነ ያለ ማዘዣ የተገዙትን ሁሉ ይመለከታል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_47_d6a144881dfc3126.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! አይ፣ በሐኪም የታዘዙትንም ሆነ ያለ ማዘዣ የተገዙትን ሁሉ ይመለከታል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_48_881dcc6057625d2d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! አይ፣ በሐኪም የታዘዙትንም ሆነ ያለ ማዘዣ የተገዙትን ሁሉ ይመለከታል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_47_b836afb077d31a13.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! አይ፣ በሐኪም የታዘዙትንም ሆነ ያለ ማዘዣ የተገዙትን ሁሉ ይመለከታል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_48_d76b44df57398b06.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! አይ፣ በሐኪም የታዘዙትንም ሆነ ያለ ማዘዣ የተገዙትን ሁሉ ይመለከታል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_51_3adf9fbfc3768b07.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! አይ፣ በሐኪም የታዘዙትንም ሆነ ያለ ማዘዣ የተገዙትን ሁሉ ይመለከታል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_52_4e65345ffad36eec.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! አይ፣ በሐኪም የታዘዙትንም ሆነ ያለ ማዘዣ የተገዙትን ሁሉ ይመለከታል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_52_5e49700043ec3126.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! አይ፣ በሐኪም የታዘዙትንም ሆነ ያለ ማዘዣ የተገዙትን ሁሉ ይመለከታል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_52_09a1cc8c2b28bd01.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! አይ፣ በሐኪም የታዘዙትንም ሆነ ያለ ማዘዣ የተገዙትን ሁሉ ይመለከታል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_54_93206464f0f6bde1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! አይ፣ በሐኪም የታዘዙትንም ሆነ ያለ ማዘዣ የተገዙትን ሁሉ ይመለከታል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_55_3ea5f0285e9c7da2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! አይ፣ በሐኪም የታዘዙትንም ሆነ ያለ ማዘዣ የተገዙትን ሁሉ ይመለከታል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_59_962917e88780464c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! አይ፣ በሐኪም የታዘዙትንም ሆነ ያለ ማዘዣ የተገዙትን ሁሉ ይመለከታል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_57_d644613097f3a474.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: አይ፣ በሐኪም የታዘዙትንም ሆነ ያለ ማዘዣ የተገዙትን ሁሉ ይመለከታል",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_61_3de707406d0a8a51.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

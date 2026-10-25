@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:21:31.241Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "bl_l2_s1",
+   "key": "basics_license_1_0",
+   "sentences": [
+    {
+     "text": "አንድ አሽከርካሪ ሰዎች የተጎዱበት አደጋ ሲደርስበት መጀመሪያ ምን ማድረግ አለበት?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_52_28864e00476ad879.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ለቤተሰቦቹ መደወል አለበት።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_17_4a43b06ea08a69e4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ለቤተሰቦቹ መደወል አለበት።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_22_4ed042801f97a4e6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የተሽከርካሪውን ጉዳት ማረጋገጥ አለበት።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_25_5e6da658b53750b9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። የተሽከርካሪውን ጉዳት ማረጋገጥ አለበት።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_30_2f0827de9710f927.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ወዲያውኑ በአደጋው ቦታ ወይም ቅርብ በሆነ ቦታ ማቆም እና አስፈላጊ ካልሆነ ወይም ባለስልጣን ካልፈቀደ በስተቀር ተሽከርካሪውን አለማንቀሳቀስ አለበት።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_94_81bf5516878c9cc2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ወዲያውኑ በአደጋው ቦታ ወይም ቅርብ በሆነ ቦታ ማቆም እና አስፈላጊ ካልሆነ ወይም ባለስልጣን ካልፈቀደ በስተቀር ተሽከርካሪውን አለማንቀሳቀስ አለበት።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_99_cd9e928814d02376.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ወደ ቅርብ ሆስፒታል መንዳት አለበት።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_23_aa195c22375c63bb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ወደ ቅርብ ሆስፒታል መንዳት አለበት።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_28_77c9cdf880a08f07.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ወዲያውኑ በአደጋው ቦታ ወይም ቅርብ በሆነ ቦታ ማቆም እና አስፈላጊ ካልሆነ ወይም ባለስልጣን ካልፈቀደ በስተቀር ተሽከርካሪውን አለማንቀሳቀስ አለበት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_100_42af16169c55fa1b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ወዲያውኑ በአደጋው ቦታ ወይም ቅርብ በሆነ ቦታ ማቆም እና አስፈላጊ ካልሆነ ወይም ባለስልጣን ካልፈቀደ በስተቀር ተሽከርካሪውን አለማንቀሳቀስ አለበት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_98_6f70ab98514e754d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ወዲያውኑ በአደጋው ቦታ ወይም ቅርብ በሆነ ቦታ ማቆም እና አስፈላጊ ካልሆነ ወይም ባለስልጣን ካልፈቀደ በስተቀር ተሽከርካሪውን አለማንቀሳቀስ አለበት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_99_9f3b0ae43f5e7144.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ወዲያውኑ በአደጋው ቦታ ወይም ቅርብ በሆነ ቦታ ማቆም እና አስፈላጊ ካልሆነ ወይም ባለስልጣን ካልፈቀደ በስተቀር ተሽከርካሪውን አለማንቀሳቀስ አለበት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_98_1e73ee0e98eefd50.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ወዲያውኑ በአደጋው ቦታ ወይም ቅርብ በሆነ ቦታ ማቆም እና አስፈላጊ ካልሆነ ወይም ባለስልጣን ካልፈቀደ በስተቀር ተሽከርካሪውን አለማንቀሳቀስ አለበት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_99_a2425a068605b1fb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ወዲያውኑ በአደጋው ቦታ ወይም ቅርብ በሆነ ቦታ ማቆም እና አስፈላጊ ካልሆነ ወይም ባለስልጣን ካልፈቀደ በስተቀር ተሽከርካሪውን አለማንቀሳቀስ አለበት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_98_226357387e4949c5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ወዲያውኑ በአደጋው ቦታ ወይም ቅርብ በሆነ ቦታ ማቆም እና አስፈላጊ ካልሆነ ወይም ባለስልጣን ካልፈቀደ በስተቀር ተሽከርካሪውን አለማንቀሳቀስ አለበት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_99_fd25eaf8c2d1b8f0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ወዲያውኑ በአደጋው ቦታ ወይም ቅርብ በሆነ ቦታ ማቆም እና አስፈላጊ ካልሆነ ወይም ባለስልጣን ካልፈቀደ በስተቀር ተሽከርካሪውን አለማንቀሳቀስ አለበት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_102_411365289368b551.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ወዲያውኑ በአደጋው ቦታ ወይም ቅርብ በሆነ ቦታ ማቆም እና አስፈላጊ ካልሆነ ወይም ባለስልጣን ካልፈቀደ በስተቀር ተሽከርካሪውን አለማንቀሳቀስ አለበት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_103_a7c91d83af2db2da.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ወዲያውኑ በአደጋው ቦታ ወይም ቅርብ በሆነ ቦታ ማቆም እና አስፈላጊ ካልሆነ ወይም ባለስልጣን ካልፈቀደ በስተቀር ተሽከርካሪውን አለማንቀሳቀስ አለበት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_103_2804f360d8defd50.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ወዲያውኑ በአደጋው ቦታ ወይም ቅርብ በሆነ ቦታ ማቆም እና አስፈላጊ ካልሆነ ወይም ባለስልጣን ካልፈቀደ በስተቀር ተሽከርካሪውን አለማንቀሳቀስ አለበት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_103_5e3b09a2b1a9f917.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ወዲያውኑ በአደጋው ቦታ ወይም ቅርብ በሆነ ቦታ ማቆም እና አስፈላጊ ካልሆነ ወይም ባለስልጣን ካልፈቀደ በስተቀር ተሽከርካሪውን አለማንቀሳቀስ አለበት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_105_cc11ede64d3952b7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ወዲያውኑ በአደጋው ቦታ ወይም ቅርብ በሆነ ቦታ ማቆም እና አስፈላጊ ካልሆነ ወይም ባለስልጣን ካልፈቀደ በስተቀር ተሽከርካሪውን አለማንቀሳቀስ አለበት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_106_523268c295136d54.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ወዲያውኑ በአደጋው ቦታ ወይም ቅርብ በሆነ ቦታ ማቆም እና አስፈላጊ ካልሆነ ወይም ባለስልጣን ካልፈቀደ በስተቀር ተሽከርካሪውን አለማንቀሳቀስ አለበት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_110_ebcc9120040ff7fa.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ወዲያውኑ በአደጋው ቦታ ወይም ቅርብ በሆነ ቦታ ማቆም እና አስፈላጊ ካልሆነ ወይም ባለስልጣን ካልፈቀደ በስተቀር ተሽከርካሪውን አለማንቀሳቀስ አለበት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_108_daa038b66017c942.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ወዲያውኑ በአደጋው ቦታ ወይም ቅርብ በሆነ ቦታ ማቆም እና አስፈላጊ ካልሆነ ወይም ባለስልጣን ካልፈቀደ በስተቀር ተሽከርካሪውን አለማንቀሳቀስ አለበት።",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_112_15f7327eb21f97c7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ አሽከርካሪ የተጎዳውን ሰው በአምቡላንስ ማስገባት ካልቻለ ምን ማድረግ አለበት?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_53_f6678ac9b2e796cf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ተጎጂውን በቦታው ትቶ መሄድ አለበት።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_23_4488269828276f4c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ተጎጂውን በቦታው ትቶ መሄድ አለበት።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_28_eb5d55723af0bd4e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የድንገተኛ ጊዜ አገልግሎት እስኪመጣ ድረስ ያለገደብ መጠበቅ አለበት።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_43_d005e380c2c26a9e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። የድንገተኛ ጊዜ አገልግሎት እስኪመጣ ድረስ ያለገደብ መጠበቅ አለበት።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_48_95f384265b8c9480.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ተጎጂውን ወደ ህክምና እርዳታ ለመውሰድ ተስማሚ በሆነ ሌላ ተሽከርካሪ እንዲጓጓዝ መርዳት አለበት።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_61_e848e02833572c40.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ተጎጂውን ወደ ህክምና እርዳታ ለመውሰድ ተስማሚ በሆነ ሌላ ተሽከርካሪ እንዲጓጓዝ መርዳት አለበት።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_66_0a1df46e1ed0ffb4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ታክሲ መጥራት አለበት።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_14_2e55ec1008d59675.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ታክሲ መጥራት አለበት።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_19_778765d8a5810589.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ተጎጂውን ወደ ህክምና እርዳታ ለመውሰድ ተስማሚ በሆነ ሌላ ተሽከርካሪ እንዲጓጓዝ መርዳት አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_67_bd662f8042f45739.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ተጎጂውን ወደ ህክምና እርዳታ ለመውሰድ ተስማሚ በሆነ ሌላ ተሽከርካሪ እንዲጓጓዝ መርዳት አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_65_219fd5f063ef902f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ተጎጂውን ወደ ህክምና እርዳታ ለመውሰድ ተስማሚ በሆነ ሌላ ተሽከርካሪ እንዲጓጓዝ መርዳት አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_66_3763d8cec5431b86.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ተጎጂውን ወደ ህክምና እርዳታ ለመውሰድ ተስማሚ በሆነ ሌላ ተሽከርካሪ እንዲጓጓዝ መርዳት አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_65_56329c4e0aeef612.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ተጎጂውን ወደ ህክምና እርዳታ ለመውሰድ ተስማሚ በሆነ ሌላ ተሽከርካሪ እንዲጓጓዝ መርዳት አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_66_019b0738a416f1d9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ተጎጂውን ወደ ህክምና እርዳታ ለመውሰድ ተስማሚ በሆነ ሌላ ተሽከርካሪ እንዲጓጓዝ መርዳት አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_65_f127aab024ae9aa7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ተጎጂውን ወደ ህክምና እርዳታ ለመውሰድ ተስማሚ በሆነ ሌላ ተሽከርካሪ እንዲጓጓዝ መርዳት አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_66_166f2672209c3ef2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ተጎጂውን ወደ ህክምና እርዳታ ለመውሰድ ተስማሚ በሆነ ሌላ ተሽከርካሪ እንዲጓጓዝ መርዳት አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_69_e26f8bd0e005e7b3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ተጎጂውን ወደ ህክምና እርዳታ ለመውሰድ ተስማሚ በሆነ ሌላ ተሽከርካሪ እንዲጓጓዝ መርዳት አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_70_5a2562a0f9882358.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ተጎጂውን ወደ ህክምና እርዳታ ለመውሰድ ተስማሚ በሆነ ሌላ ተሽከርካሪ እንዲጓጓዝ መርዳት አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_70_ccc830204cdef612.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ተጎጂውን ወደ ህክምና እርዳታ ለመውሰድ ተስማሚ በሆነ ሌላ ተሽከርካሪ እንዲጓጓዝ መርዳት አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_70_7f0b36d8898790b5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ተጎጂውን ወደ ህክምና እርዳታ ለመውሰድ ተስማሚ በሆነ ሌላ ተሽከርካሪ እንዲጓጓዝ መርዳት አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_72_9165c2986f92f515.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ተጎጂውን ወደ ህክምና እርዳታ ለመውሰድ ተስማሚ በሆነ ሌላ ተሽከርካሪ እንዲጓጓዝ መርዳት አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_73_9390e080c89ca596.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ተጎጂውን ወደ ህክምና እርዳታ ለመውሰድ ተስማሚ በሆነ ሌላ ተሽከርካሪ እንዲጓጓዝ መርዳት አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_77_57650e70671c92b8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ተጎጂውን ወደ ህክምና እርዳታ ለመውሰድ ተስማሚ በሆነ ሌላ ተሽከርካሪ እንዲጓጓዝ መርዳት አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_75_cfa273e62ec361c0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ተጎጂውን ወደ ህክምና እርዳታ ለመውሰድ ተስማሚ በሆነ ሌላ ተሽከርካሪ እንዲጓጓዝ መርዳት አለበት።",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_79_311fd4dfcbc84865.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ አሽከርካሪ ሰዎች የተጎዱበት የአደጋ ቦታ የሚያልፍ ከሆነ ምን ማድረግ አለበት?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_53_6fcb4a7c7a51236d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በፍጥነት ማሽከርከር አለበት።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_18_b9b3fcf80c7e5b91.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። በፍጥነት ማሽከርከር አለበት።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_23_062a90664a38c8d3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ፎቶግራፍ ማንሳት አለበት።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_16_1a01fbe884580121.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ፎቶግራፍ ማንሳት አለበት።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_21_68b8c1502e0e6d7f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ደህንነቱ በተጠበቀ ቦታ ማቆም እና ምክንያታዊ በሆነ መንገድ መርዳት የሚችለውን ሁሉ ማድረግ አለበት እንጂ ዝም ብሎ ጉዞውን መቀጠል የለበትም።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_89_434ad4ce522a4f9d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ደህንነቱ በተጠበቀ ቦታ ማቆም እና ምክንያታዊ በሆነ መንገድ መርዳት የሚችለውን ሁሉ ማድረግ አለበት እንጂ ዝም ብሎ ጉዞውን መቀጠል የለበትም።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_94_843a96e6adfcf129.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አደጋውን ችላ ብሎ ማለፍ አለበት።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_21_ddd633b81dfe033a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። አደጋውን ችላ ብሎ ማለፍ አለበት።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_26_e8964268d138c346.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ደህንነቱ በተጠበቀ ቦታ ማቆም እና ምክንያታዊ በሆነ መንገድ መርዳት የሚችለውን ሁሉ ማድረግ አለበት እንጂ ዝም ብሎ ጉዞውን መቀጠል የለበትም።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_95_7a346456e8d5f4e4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ደህንነቱ በተጠበቀ ቦታ ማቆም እና ምክንያታዊ በሆነ መንገድ መርዳት የሚችለውን ሁሉ ማድረግ አለበት እንጂ ዝም ብሎ ጉዞውን መቀጠል የለበትም።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_93_490384e2e96b7b72.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ደህንነቱ በተጠበቀ ቦታ ማቆም እና ምክንያታዊ በሆነ መንገድ መርዳት የሚችለውን ሁሉ ማድረግ አለበት እንጂ ዝም ብሎ ጉዞውን መቀጠል የለበትም።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_94_fdad9b7873da55db.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ደህንነቱ በተጠበቀ ቦታ ማቆም እና ምክንያታዊ በሆነ መንገድ መርዳት የሚችለውን ሁሉ ማድረግ አለበት እንጂ ዝም ብሎ ጉዞውን መቀጠል የለበትም።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_93_a19749105cc9634f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ደህንነቱ በተጠበቀ ቦታ ማቆም እና ምክንያታዊ በሆነ መንገድ መርዳት የሚችለውን ሁሉ ማድረግ አለበት እንጂ ዝም ብሎ ጉዞውን መቀጠል የለበትም።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_94_4dcf4f505d282644.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ደህንነቱ በተጠበቀ ቦታ ማቆም እና ምክንያታዊ በሆነ መንገድ መርዳት የሚችለውን ሁሉ ማድረግ አለበት እንጂ ዝም ብሎ ጉዞውን መቀጠል የለበትም።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_93_cfa93666131ed5fa.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ደህንነቱ በተጠበቀ ቦታ ማቆም እና ምክንያታዊ በሆነ መንገድ መርዳት የሚችለውን ሁሉ ማድረግ አለበት እንጂ ዝም ብሎ ጉዞውን መቀጠል የለበትም።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_94_7ac73dd816fe376f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ደህንነቱ በተጠበቀ ቦታ ማቆም እና ምክንያታዊ በሆነ መንገድ መርዳት የሚችለውን ሁሉ ማድረግ አለበት እንጂ ዝም ብሎ ጉዞውን መቀጠል የለበትም።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_97_8f63e3065a3eafee.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ደህንነቱ በተጠበቀ ቦታ ማቆም እና ምክንያታዊ በሆነ መንገድ መርዳት የሚችለውን ሁሉ ማድረግ አለበት እንጂ ዝም ብሎ ጉዞውን መቀጠል የለበትም።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_98_b0fd9e7361a8b685.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ደህንነቱ በተጠበቀ ቦታ ማቆም እና ምክንያታዊ በሆነ መንገድ መርዳት የሚችለውን ሁሉ ማድረግ አለበት እንጂ ዝም ብሎ ጉዞውን መቀጠል የለበትም።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_98_018064b0e6b9634f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ደህንነቱ በተጠበቀ ቦታ ማቆም እና ምክንያታዊ በሆነ መንገድ መርዳት የሚችለውን ሁሉ ማድረግ አለበት እንጂ ዝም ብሎ ጉዞውን መቀጠል የለበትም።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_98_c12bece85b5f7f68.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ደህንነቱ በተጠበቀ ቦታ ማቆም እና ምክንያታዊ በሆነ መንገድ መርዳት የሚችለውን ሁሉ ማድረግ አለበት እንጂ ዝም ብሎ ጉዞውን መቀጠል የለበትም።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_100_dc2e8e26b07f9a08.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ደህንነቱ በተጠበቀ ቦታ ማቆም እና ምክንያታዊ በሆነ መንገድ መርዳት የሚችለውን ሁሉ ማድረግ አለበት እንጂ ዝም ብሎ ጉዞውን መቀጠል የለበትም።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_101_9bc8bd18a087a3cb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ደህንነቱ በተጠበቀ ቦታ ማቆም እና ምክንያታዊ በሆነ መንገድ መርዳት የሚችለውን ሁሉ ማድረግ አለበት እንጂ ዝም ብሎ ጉዞውን መቀጠል የለበትም።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_105_3982a3e6886c1925.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ደህንነቱ በተጠበቀ ቦታ ማቆም እና ምክንያታዊ በሆነ መንገድ መርዳት የሚችለውን ሁሉ ማድረግ አለበት እንጂ ዝም ብሎ ጉዞውን መቀጠል የለበትም።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_103_9efa9da8fff3c11d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ደህንነቱ በተጠበቀ ቦታ ማቆም እና ምክንያታዊ በሆነ መንገድ መርዳት የሚችለውን ሁሉ ማድረግ አለበት እንጂ ዝም ብሎ ጉዞውን መቀጠል የለበትም።",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_107_2967dee06dad9bb8.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

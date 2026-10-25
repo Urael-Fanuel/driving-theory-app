@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:21:16.145Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "bl_l1_s1",
+   "key": "basics_license_0_0",
+   "sentences": [
+    {
+     "text": "አንድ ሰው የመንጃ ፍቃድ ከማውጣቱ በፊት፣ ስለ አካላዊ ብቃቱ ምን ማረጋገጥ አለበት?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_53_fd0e53a9ea69f52a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የአይን ምርመራ ብቻ ማለፍ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_17_cd9d55301bed12f4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። የአይን ምርመራ ብቻ ማለፍ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_22_204119ee2cc56ef6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አጠቃላይ የጤና ምርመራ ብቻ ማለፍ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_22_5af3a8bef7c04f7e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። አጠቃላይ የጤና ምርመራ ብቻ ማለፍ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_27_a78abad8917aa2a0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የአይን ምርመራ እና በአስተማማኝ ሁኔታ ለማሽከርከር ብቁ መሆናቸውን የሚያረጋግጥ አጠቃላይ የጤና ምርመራ ማለፍ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_70_4354945eaaa333ae.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የአይን ምርመራ እና በአስተማማኝ ሁኔታ ለማሽከርከር ብቁ መሆናቸውን የሚያረጋግጥ አጠቃላይ የጤና ምርመራ ማለፍ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_75_48ac07301615229a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ምንም አይነት የጤና ምርመራ አያስፈልግም።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_26_9734b878b3b5180d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ምንም አይነት የጤና ምርመራ አያስፈልግም።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_31_361e2054d1e6cb71.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! የአይን ምርመራ እና በአስተማማኝ ሁኔታ ለማሽከርከር ብቁ መሆናቸውን የሚያረጋግጥ አጠቃላይ የጤና ምርመራ ማለፍ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_76_a140c4189afe2e37.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! የአይን ምርመራ እና በአስተማማኝ ሁኔታ ለማሽከርከር ብቁ መሆናቸውን የሚያረጋግጥ አጠቃላይ የጤና ምርመራ ማለፍ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_74_df7a2d9ce04442e1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! የአይን ምርመራ እና በአስተማማኝ ሁኔታ ለማሽከርከር ብቁ መሆናቸውን የሚያረጋግጥ አጠቃላይ የጤና ምርመራ ማለፍ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_75_2e7f5950868fb0a8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! የአይን ምርመራ እና በአስተማማኝ ሁኔታ ለማሽከርከር ብቁ መሆናቸውን የሚያረጋግጥ አጠቃላይ የጤና ምርመራ ማለፍ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_74_cf91f7d65335bebc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! የአይን ምርመራ እና በአስተማማኝ ሁኔታ ለማሽከርከር ብቁ መሆናቸውን የሚያረጋግጥ አጠቃላይ የጤና ምርመራ ማለፍ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_75_c3842b9c89a9b257.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! የአይን ምርመራ እና በአስተማማኝ ሁኔታ ለማሽከርከር ብቁ መሆናቸውን የሚያረጋግጥ አጠቃላይ የጤና ምርመራ ማለፍ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_74_faa189776e39e769.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! የአይን ምርመራ እና በአስተማማኝ ሁኔታ ለማሽከርከር ብቁ መሆናቸውን የሚያረጋግጥ አጠቃላይ የጤና ምርመራ ማለፍ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_75_b92ef2805dcabb9c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! የአይን ምርመራ እና በአስተማማኝ ሁኔታ ለማሽከርከር ብቁ መሆናቸውን የሚያረጋግጥ አጠቃላይ የጤና ምርመራ ማለፍ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_78_120b197629b184fd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! የአይን ምርመራ እና በአስተማማኝ ሁኔታ ለማሽከርከር ብቁ መሆናቸውን የሚያረጋግጥ አጠቃላይ የጤና ምርመራ ማለፍ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_79_33a01958cbff49b6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! የአይን ምርመራ እና በአስተማማኝ ሁኔታ ለማሽከርከር ብቁ መሆናቸውን የሚያረጋግጥ አጠቃላይ የጤና ምርመራ ማለፍ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_79_2fc76a40c325bebc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! የአይን ምርመራ እና በአስተማማኝ ሁኔታ ለማሽከርከር ብቁ መሆናቸውን የሚያረጋግጥ አጠቃላይ የጤና ምርመራ ማለፍ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_79_f3da6b20e461833b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! የአይን ምርመራ እና በአስተማማኝ ሁኔታ ለማሽከርከር ብቁ መሆናቸውን የሚያረጋግጥ አጠቃላይ የጤና ምርመራ ማለፍ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_81_7985ae20b917161b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! የአይን ምርመራ እና በአስተማማኝ ሁኔታ ለማሽከርከር ብቁ መሆናቸውን የሚያረጋግጥ አጠቃላይ የጤና ምርመራ ማለፍ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_82_e88f57d25a8428b8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! የአይን ምርመራ እና በአስተማማኝ ሁኔታ ለማሽከርከር ብቁ መሆናቸውን የሚያረጋግጥ አጠቃላይ የጤና ምርመራ ማለፍ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_86_f8d96ab057c31516.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! የአይን ምርመራ እና በአስተማማኝ ሁኔታ ለማሽከርከር ብቁ መሆናቸውን የሚያረጋግጥ አጠቃላይ የጤና ምርመራ ማለፍ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_84_d02ec7539ae3e42e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: የአይን ምርመራ እና በአስተማማኝ ሁኔታ ለማሽከርከር ብቁ መሆናቸውን የሚያረጋግጥ አጠቃላይ የጤና ምርመራ ማለፍ።",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_88_fd43120c8576f8eb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመንጃ ፍቃድ ደረጃ ወይም ምድብ ምን ይወስናል?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_30_dc503d44cf4d644f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመንጃ ፍቃዱን ቀለም።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_14_b28bb608ec3eba3e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። የመንጃ ፍቃዱን ቀለም።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_19_ef946e101ea2157c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሽከርካሪው እንዲያሽከረክር የሚፈቀድለትን የተሽከርካሪ አይነቶች፣ ለምሳሌ በመጠን ወይም በክብደት።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_62_72a947fa49469b86.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። አሽከርካሪው እንዲያሽከረክር የሚፈቀድለትን የተሽከርካሪ አይነቶች፣ ለምሳሌ በመጠን ወይም በክብደት።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_67_d2357708c3282ad8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሽከርካሪው መንዳት የሚችለውን የተሽከርካሪ ብዛት።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_32_7a707beaef598f0d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። አሽከርካሪው መንዳት የሚችለውን የተሽከርካሪ ብዛት።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_37_16411a58036aae79.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሽከርካሪው መንዳት የሚችለውን የተሽከርካሪ ሞዴል።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_32_5c1d9fa0ef543bc1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። አሽከርካሪው መንዳት የሚችለውን የተሽከርካሪ ሞዴል።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_37_92f70d021f8d3b3d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! አሽከርካሪው እንዲያሽከረክር የሚፈቀድለትን የተሽከርካሪ አይነቶች፣ ለምሳሌ በመጠን ወይም በክብደት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_68_db91f34e39c942df.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! አሽከርካሪው እንዲያሽከረክር የሚፈቀድለትን የተሽከርካሪ አይነቶች፣ ለምሳሌ በመጠን ወይም በክብደት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_66_0371112e45a65489.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! አሽከርካሪው እንዲያሽከረክር የሚፈቀድለትን የተሽከርካሪ አይነቶች፣ ለምሳሌ በመጠን ወይም በክብደት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_67_38d743c69b95a480.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! አሽከርካሪው እንዲያሽከረክር የሚፈቀድለትን የተሽከርካሪ አይነቶች፣ ለምሳሌ በመጠን ወይም በክብደት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_66_c62fdf2e10266594.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! አሽከርካሪው እንዲያሽከረክር የሚፈቀድለትን የተሽከርካሪ አይነቶች፣ ለምሳሌ በመጠን ወይም በክብደት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_67_3cbacd5ac961fdbf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! አሽከርካሪው እንዲያሽከረክር የሚፈቀድለትን የተሽከርካሪ አይነቶች፣ ለምሳሌ በመጠን ወይም በክብደት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_66_534a36e0bb26ab01.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! አሽከርካሪው እንዲያሽከረክር የሚፈቀድለትን የተሽከርካሪ አይነቶች፣ ለምሳሌ በመጠን ወይም በክብደት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_67_302a9326b8b351b4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! አሽከርካሪው እንዲያሽከረክር የሚፈቀድለትን የተሽከርካሪ አይነቶች፣ ለምሳሌ በመጠን ወይም በክብደት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_70_cc7781d0b6779595.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! አሽከርካሪው እንዲያሽከረክር የሚፈቀድለትን የተሽከርካሪ አይነቶች፣ ለምሳሌ በመጠን ወይም በክብደት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_71_2c9b9fa6133fc39e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! አሽከርካሪው እንዲያሽከረክር የሚፈቀድለትን የተሽከርካሪ አይነቶች፣ ለምሳሌ በመጠን ወይም በክብደት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_71_61f8ff4890166594.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! አሽከርካሪው እንዲያሽከረክር የሚፈቀድለትን የተሽከርካሪ አይነቶች፣ ለምሳሌ በመጠን ወይም በክብደት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_71_3418df60df30a0d3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! አሽከርካሪው እንዲያሽከረክር የሚፈቀድለትን የተሽከርካሪ አይነቶች፣ ለምሳሌ በመጠን ወይም በክብደት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_73_f89a48486c0bd873.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! አሽከርካሪው እንዲያሽከረክር የሚፈቀድለትን የተሽከርካሪ አይነቶች፣ ለምሳሌ በመጠን ወይም በክብደት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_74_77cb7426676b1090.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! አሽከርካሪው እንዲያሽከረክር የሚፈቀድለትን የተሽከርካሪ አይነቶች፣ ለምሳሌ በመጠን ወይም በክብደት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_78_4defd1f62f0fe53e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! አሽከርካሪው እንዲያሽከረክር የሚፈቀድለትን የተሽከርካሪ አይነቶች፣ ለምሳሌ በመጠን ወይም በክብደት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_76_2c211098744cd406.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: አሽከርካሪው እንዲያሽከረክር የሚፈቀድለትን የተሽከርካሪ አይነቶች፣ ለምሳሌ በመጠን ወይም በክብደት።",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_80_7c1804c81fb51783.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በሚያሽከረክሩበት ጊዜ አንድ አሽከርካሪ ሁልጊዜ ከእሱ ጋር ምን ሰነዶች ሊኖሩት ይገባል?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_55_fe7a62949b653760.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመንጃ ፍቃድ እና የተሽከርካሪ ምዝገባ ብቻ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_28_f5c401b8ca6a3e58.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። የመንጃ ፍቃድ እና የተሽከርካሪ ምዝገባ ብቻ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_33_6f23038016623d9a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክለኛ የመንጃ ፍቃድ፣ ትክክለኛ የተሽከርካሪ ምዝገባ እና ትክክለኛ የግዴታ መድን ብቻ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_56_c17ccf2ab6875107.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ትክክለኛ የመንጃ ፍቃድ፣ ትክክለኛ የተሽከርካሪ ምዝገባ እና ትክክለኛ የግዴታ መድን ብቻ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_61_4e987bf8c3c7f1d9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክለኛ የመንጃ ፍቃድ፣ ትክክለኛ የተሽከርካሪ ምዝገባ፣ ትክክለኛ የግዴታ መድን እና በሕግ የሚጠየቁ ሌሎች ሰነዶች።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_73_61aa0190e2b42bcd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ትክክለኛ የመንጃ ፍቃድ፣ ትክክለኛ የተሽከርካሪ ምዝገባ፣ ትክክለኛ የግዴታ መድን እና በሕግ የሚጠየቁ ሌሎች ሰነዶች።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_78_4f87d6405416d239.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ማንኛውንም የፎቶ መታወቂያ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_17_41887f28d477b18d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ማንኛውንም የፎቶ መታወቂያ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_22_a1c86090990a8df1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ትክክለኛ የመንጃ ፍቃድ፣ ትክክለኛ የተሽከርካሪ ምዝገባ፣ ትክክለኛ የግዴታ መድን እና በሕግ የሚጠየቁ ሌሎች ሰነዶች።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_79_a497e9d71ff10734.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ትክክለኛ የመንጃ ፍቃድ፣ ትክክለኛ የተሽከርካሪ ምዝገባ፣ ትክክለኛ የግዴታ መድን እና በሕግ የሚጠየቁ ሌሎች ሰነዶች።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_77_ec42027881e75c22.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ትክክለኛ የመንጃ ፍቃድ፣ ትክክለኛ የተሽከርካሪ ምዝገባ፣ ትክክለኛ የግዴታ መድን እና በሕግ የሚጠየቁ ሌሎች ሰነዶች።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_78_07810d5239ebb08b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ትክክለኛ የመንጃ ፍቃድ፣ ትክክለኛ የተሽከርካሪ ምዝገባ፣ ትክክለኛ የግዴታ መድን እና በሕግ የሚጠየቁ ሌሎች ሰነዶች።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_77_693a4770dc5ac51f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ትክክለኛ የመንጃ ፍቃድ፣ ትክክለኛ የተሽከርካሪ ምዝገባ፣ ትክክለኛ የግዴታ መድን እና በሕግ የሚጠየቁ ሌሎች ሰነዶች።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_78_df55efe6402803d4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ትክክለኛ የመንጃ ፍቃድ፣ ትክክለኛ የተሽከርካሪ ምዝገባ፣ ትክክለኛ የግዴታ መድን እና በሕግ የሚጠየቁ ሌሎች ሰነዶች።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_77_1320959e0e1947aa.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ትክክለኛ የመንጃ ፍቃድ፣ ትክክለኛ የተሽከርካሪ ምዝገባ፣ ትክክለኛ የግዴታ መድን እና በሕግ የሚጠየቁ ሌሎች ሰነዶች።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_78_db4769402f491dff.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ትክክለኛ የመንጃ ፍቃድ፣ ትክክለኛ የተሽከርካሪ ምዝገባ፣ ትክክለኛ የግዴታ መድን እና በሕግ የሚጠየቁ ሌሎች ሰነዶች።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_81_2e11e838648717be.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ትክክለኛ የመንጃ ፍቃድ፣ ትክክለኛ የተሽከርካሪ ምዝገባ፣ ትክክለኛ የግዴታ መድን እና በሕግ የሚጠየቁ ሌሎች ሰነዶች።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_82_3f7cb0521c1b6cd5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ትክክለኛ የመንጃ ፍቃድ፣ ትክክለኛ የተሽከርካሪ ምዝገባ፣ ትክክለኛ የግዴታ መድን እና በሕግ የሚጠየቁ ሌሎች ሰነዶች።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_82_f9a478b6864ac51f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ትክክለኛ የመንጃ ፍቃድ፣ ትክክለኛ የተሽከርካሪ ምዝገባ፣ ትክክለኛ የግዴታ መድን እና በሕግ የሚጠየቁ ሌሎች ሰነዶች።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_82_156a8669e897d2b8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ትክክለኛ የመንጃ ፍቃድ፣ ትክክለኛ የተሽከርካሪ ምዝገባ፣ ትክክለኛ የግዴታ መድን እና በሕግ የሚጠየቁ ሌሎች ሰነዶች።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_84_b749784008fe3998.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ትክክለኛ የመንጃ ፍቃድ፣ ትክክለኛ የተሽከርካሪ ምዝገባ፣ ትክክለኛ የግዴታ መድን እና በሕግ የሚጠየቁ ሌሎች ሰነዶች።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_85_a35857e891512a9b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ትክክለኛ የመንጃ ፍቃድ፣ ትክክለኛ የተሽከርካሪ ምዝገባ፣ ትክክለኛ የግዴታ መድን እና በሕግ የሚጠየቁ ሌሎች ሰነዶች።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_89_3fcfee748bd7a035.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ትክክለኛ የመንጃ ፍቃድ፣ ትክክለኛ የተሽከርካሪ ምዝገባ፣ ትክክለኛ የግዴታ መድን እና በሕግ የሚጠየቁ ሌሎች ሰነዶች።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_87_3241c5002f98aa4d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ትክክለኛ የመንጃ ፍቃድ፣ ትክክለኛ የተሽከርካሪ ምዝገባ፣ ትክክለኛ የግዴታ መድን እና በሕግ የሚጠየቁ ሌሎች ሰነዶች።",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_91_86bb3578d8beb5e8.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

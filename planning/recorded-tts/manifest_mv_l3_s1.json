@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:16:19.659Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "mv_l3_s1",
+   "key": "my_vehicle_2_0",
+   "sentences": [
+    {
+     "text": "ከአንድ አመት በታች የሆነ ህፃን የደህንነት መቀመጫ እንዴት መሆን አለበት?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_47_a3aa3c90fc3b99fd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ወደ ፊት፣ ወደ መኪናው የፊት ክፍል መመልከት አለበት።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_34_9271c41413d2fae0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ወደ ፊት፣ ወደ መኪናው የፊት ክፍል መመልከት አለበት።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_39_8ffc0240400c8522.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ወደ መኪናው የኋላ ክፍል፣ ከጉዞ አቅጣጫ በተቃራኒ መመልከት አለበት።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_43_db199e6062db07c0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ወደ መኪናው የኋላ ክፍል፣ ከጉዞ አቅጣጫ በተቃራኒ መመልከት አለበት።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_48_4f0d6c989d7e93de.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ወደ ጎን መመልከት አለበት።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_17_4cb15008f5e89109.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ወደ ጎን መመልከት አለበት።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_22_26a04ad7268f1f7d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በማንኛውም አቅጣጫ ሊሆን ይችላል።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_21_89c805b2dc4ab960.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። በማንኛውም አቅጣጫ ሊሆን ይችላል።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_26_63eb6ee68b773f1c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ወደ መኪናው የኋላ ክፍል፣ ከጉዞ አቅጣጫ በተቃራኒ መመልከት አለበት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_49_22b6e1c0f0f9bdf9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ወደ መኪናው የኋላ ክፍል፣ ከጉዞ አቅጣጫ በተቃራኒ መመልከት አለበት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_47_4a6cf496153fdb6f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ወደ መኪናው የኋላ ክፍል፣ ከጉዞ አቅጣጫ በተቃራኒ መመልከት አለበት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_48_38a02e981f25a306.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ወደ መኪናው የኋላ ክፍል፣ ከጉዞ አቅጣጫ በተቃራኒ መመልከት አለበት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_47_3b91dbccb2a41b92.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ወደ መኪናው የኋላ ክፍል፣ ከጉዞ አቅጣጫ በተቃራኒ መመልከት አለበት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_48_6ecb76385626ac99.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ወደ መኪናው የኋላ ክፍል፣ ከጉዞ አቅጣጫ በተቃራኒ መመልከት አለበት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_47_aee783be206e2ae7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ወደ መኪናው የኋላ ክፍል፣ ከጉዞ አቅጣጫ በተቃራኒ መመልከት አለበት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_48_a46803e06e89b672.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ወደ መኪናው የኋላ ክፍል፣ ከጉዞ አቅጣጫ በተቃራኒ መመልከት አለበት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_51_62dab61050a694f3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ወደ መኪናው የኋላ ክፍል፣ ከጉዞ አቅጣጫ በተቃራኒ መመልከት አለበት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_52_bf001460bda488d8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ወደ መኪናው የኋላ ክፍል፣ ከጉዞ አቅጣጫ በተቃራኒ መመልከት አለበት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_52_2921be60d8941b92.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ወደ መኪናው የኋላ ክፍል፣ ከጉዞ አቅጣጫ በተቃራኒ መመልከት አለበት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_52_8b37c94845148f75.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ወደ መኪናው የኋላ ክፍል፣ ከጉዞ አቅጣጫ በተቃራኒ መመልከት አለበት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_54_8c80da24000f5155.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ወደ መኪናው የኋላ ክፍል፣ ከጉዞ አቅጣጫ በተቃራኒ መመልከት አለበት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_55_2c07367ed8f84516.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ወደ መኪናው የኋላ ክፍል፣ ከጉዞ አቅጣጫ በተቃራኒ መመልከት አለበት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_59_6305e09850596e38.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ወደ መኪናው የኋላ ክፍል፣ ከጉዞ አቅጣጫ በተቃራኒ መመልከት አለበት።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_57_0cfa6b0051b16240.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ወደ መኪናው የኋላ ክፍል፣ ከጉዞ አቅጣጫ በተቃራኒ መመልከት አለበት።",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_61_77f3f1d0cab5e0a5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ ህፃን ከስንት አመት ጀምሮ እስከ ስንት አመት ድረስ በቡስተር መቀመጫ ውስጥ መታሰር አለበት (ቁመቱና ክብደቱ የሚመጥነው ከሆነ)?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_85_1aa633e4858e2209.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከአንድ አመት ጀምሮ እስከ ሶስት አመት።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_25_64234bac443f8252.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ከአንድ አመት ጀምሮ እስከ ሶስት አመት።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_30_e10e7258cbdb5550.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከሶስት አመት ጀምሮ እስከ ስምንት አመት።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_26_15719ab0fd04561a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ከሶስት አመት ጀምሮ እስከ ስምንት አመት።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_31_6a76e93058bb5cc4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከስምንት አመት ጀምሮ እስከ አስራ ሁለት አመት።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_30_07292548651493ce.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ከስምንት አመት ጀምሮ እስከ አስራ ሁለት አመት።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_35_b87a9b00b27ec6ba.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከስድስት ወር ጀምሮ እስከ ሁለት አመት።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_25_1a890a9a23eb6570.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ከስድስት ወር ጀምሮ እስከ ሁለት አመት።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_30_fdd267280e6506cc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ከሶስት አመት ጀምሮ እስከ ስምንት አመት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_32_d101cb3a45b0c103.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ከሶስት አመት ጀምሮ እስከ ስምንት አመት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_30_33699e50e2274555.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ከሶስት አመት ጀምሮ እስከ ስምንት አመት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_31_503d2fe87b23a81c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ከሶስት አመት ጀምሮ እስከ ስምንት አመት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_30_1ce07ab80516f808.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ከሶስት አመት ጀምሮ እስከ ስምንት አመት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_31_44ca1feaf514d923.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ከሶስት አመት ጀምሮ እስከ ስምንት አመት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_30_553e28c07db6a5dd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ከሶስት አመት ጀምሮ እስከ ስምንት አመት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_31_798adcc6707b70e8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ከሶስት አመት ጀምሮ እስከ ስምንት አመት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_34_d484b72836f25f49.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ከሶስት አመት ጀምሮ እስከ ስምንት አመት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_35_84b9ac542808a802.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ከሶስት አመት ጀምሮ እስከ ስምንት አመት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_35_60b08b464d06f808.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ከሶስት አመት ጀምሮ እስከ ስምንት አመት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_35_7d70996e443a840f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ከሶስት አመት ጀምሮ እስከ ስምንት አመት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_37_5ac90e18d9a48d6f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ከሶስት አመት ጀምሮ እስከ ስምንት አመት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_38_510b68887729f00c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ከሶስት አመት ጀምሮ እስከ ስምንት አመት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_42_6fd20ece26417562.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ከሶስት አመት ጀምሮ እስከ ስምንት አመት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_40_2b4dde782750da9a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ከሶስት አመት ጀምሮ እስከ ስምንት አመት።",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_44_a23e5ca89ebc565f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ አሽከርካሪ መኪናውን ማሽከርከር የሚፈቀድለት መቼ ነው?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_38_8148c6d4edfaa0d7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሽከርካሪው ብቻ ቀበቶውን ሲያደርግ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_23_ea3545b0a5e1b54a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። አሽከርካሪው ብቻ ቀበቶውን ሲያደርግ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_28_5e189e78280ac5c8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁሉም ተሳፋሪዎች ቀበቶአቸውን ሲያደርጉ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_25_e3363156cac04758.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ሁሉም ተሳፋሪዎች ቀበቶአቸውን ሲያደርጉ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_30_393d55e8a9b92d46.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሽከርካሪውና ሁሉም ተሳፋሪዎች ቀበቶአቸውን ሲያደርጉ፣ ወይም ህፃናት በሚመጥን የደህንነት መቀመጫ ውስጥ በትክክል ሲታሰሩ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_77_731f10b67932c94d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። አሽከርካሪውና ሁሉም ተሳፋሪዎች ቀበቶአቸውን ሲያደርጉ፣ ወይም ህፃናት በሚመጥን የደህንነት መቀመጫ ውስጥ በትክክል ሲታሰሩ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_82_bda3bf3a19df8a39.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በማንኛውም ጊዜ፣ ቀበቶ ማድረግ ግዴታ አይደለም።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_30_ceacb0e09d03a9c8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። በማንኛውም ጊዜ፣ ቀበቶ ማድረግ ግዴታ አይደለም።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_35_6776600059cdf1b4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! አሽከርካሪውና ሁሉም ተሳፋሪዎች ቀበቶአቸውን ሲያደርጉ፣ ወይም ህፃናት በሚመጥን የደህንነት መቀመጫ ውስጥ በትክክል ሲታሰሩ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_83_c33e618074fb9ab4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! አሽከርካሪውና ሁሉም ተሳፋሪዎች ቀበቶአቸውን ሲያደርጉ፣ ወይም ህፃናት በሚመጥን የደህንነት መቀመጫ ውስጥ በትክክል ሲታሰሩ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_81_099c66668cbadc22.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! አሽከርካሪውና ሁሉም ተሳፋሪዎች ቀበቶአቸውን ሲያደርጉ፣ ወይም ህፃናት በሚመጥን የደህንነት መቀመጫ ውስጥ በትክክል ሲታሰሩ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_82_030134f033b55b8b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! አሽከርካሪውና ሁሉም ተሳፋሪዎች ቀበቶአቸውን ሲያደርጉ፣ ወይም ህፃናት በሚመጥን የደህንነት መቀመጫ ውስጥ በትክክል ሲታሰሩ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_81_3866f730575a6f1f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! አሽከርካሪውና ሁሉም ተሳፋሪዎች ቀበቶአቸውን ሲያደርጉ፣ ወይም ህፃናት በሚመጥን የደህንነት መቀመጫ ውስጥ በትክክል ሲታሰሩ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_82_b7c9a4b2e20e76d4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! አሽከርካሪውና ሁሉም ተሳፋሪዎች ቀበቶአቸውን ሲያደርጉ፣ ወይም ህፃናት በሚመጥን የደህንነት መቀመጫ ውስጥ በትክክል ሲታሰሩ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_81_f2848238aabbe7aa.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! አሽከርካሪውና ሁሉም ተሳፋሪዎች ቀበቶአቸውን ሲያደርጉ፣ ወይም ህፃናት በሚመጥን የደህንነት መቀመጫ ውስጥ በትክክል ሲታሰሩ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_82_0d27984845a9977f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! አሽከርካሪውና ሁሉም ተሳፋሪዎች ቀበቶአቸውን ሲያደርጉ፣ ወይም ህፃናት በሚመጥን የደህንነት መቀመጫ ውስጥ በትክክል ሲታሰሩ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_85_63174c02d8e2d2be.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! አሽከርካሪውና ሁሉም ተሳፋሪዎች ቀበቶአቸውን ሲያደርጉ፣ ወይም ህፃናት በሚመጥን የደህንነት መቀመጫ ውስጥ በትክክል ሲታሰሩ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_86_32e31dce9a347e55.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! አሽከርካሪውና ሁሉም ተሳፋሪዎች ቀበቶአቸውን ሲያደርጉ፣ ወይም ህፃናት በሚመጥን የደህንነት መቀመጫ ውስጥ በትክክል ሲታሰሩ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_86_a9260fa8794a6f1f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! አሽከርካሪውና ሁሉም ተሳፋሪዎች ቀበቶአቸውን ሲያደርጉ፣ ወይም ህፃናት በሚመጥን የደህንነት መቀመጫ ውስጥ በትክክል ሲታሰሩ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_86_314517b068e46538.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! አሽከርካሪውና ሁሉም ተሳፋሪዎች ቀበቶአቸውን ሲያደርጉ፣ ወይም ህፃናት በሚመጥን የደህንነት መቀመጫ ውስጥ በትክክል ሲታሰሩ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_88_25991af21216fe98.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! አሽከርካሪውና ሁሉም ተሳፋሪዎች ቀበቶአቸውን ሲያደርጉ፣ ወይም ህፃናት በሚመጥን የደህንነት መቀመጫ ውስጥ በትክክል ሲታሰሩ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_89_836a66c84878159b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! አሽከርካሪውና ሁሉም ተሳፋሪዎች ቀበቶአቸውን ሲያደርጉ፣ ወይም ህፃናት በሚመጥን የደህንነት መቀመጫ ውስጥ በትክክል ሲታሰሩ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_93_437674a2dc2bab35.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! አሽከርካሪውና ሁሉም ተሳፋሪዎች ቀበቶአቸውን ሲያደርጉ፣ ወይም ህፃናት በሚመጥን የደህንነት መቀመጫ ውስጥ በትክክል ሲታሰሩ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_91_ef6aafa89f39f5cd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: አሽከርካሪውና ሁሉም ተሳፋሪዎች ቀበቶአቸውን ሲያደርጉ፣ ወይም ህፃናት በሚመጥን የደህንነት መቀመጫ ውስጥ በትክክል ሲታሰሩ።",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_95_35dd410e4ee37068.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

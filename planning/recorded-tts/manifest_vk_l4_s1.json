@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:09:26.227Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "vk_l4_s1",
+   "key": "vehicle_knowledge_3_0",
+   "sentences": [
+    {
+     "text": "ረጅም የፊት መብራቶች ሲጠቀሙ ከፊት አሽከርካሪዎች ሲቀርቡ ምን ማድረግ አለበት?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_50_393a7ed416aca3b6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ወዲያውኑ ወደ አጭር የፊት መብራቶች መቀየር አለበት",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_32_156f8e933de4b1da.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ወዲያውኑ ወደ አጭር የፊት መብራቶች መቀየር አለበት",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_37_92e950e01a2d5c18.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ቀጥ ብሎ ረጅሙን መብራት ጠብቅ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_19_9de749b371757669.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ቀጥ ብሎ ረጅሙን መብራት ጠብቅ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_24_b9f9e7861fbf9ef7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መብራት ሙሉ ለሙሉ አጥፋ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_15_70c33c01a7465140.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። መብራት ሙሉ ለሙሉ አጥፋ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_20_cdee296c49f8b7b4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የጭጋግ መብራት ብቻ ተጠቀም",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_17_780a5c708dcfb736.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። የጭጋግ መብራት ብቻ ተጠቀም",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_22_ada875084ff26eca.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ወዲያውኑ ወደ አጭር የፊት መብራቶች መቀየር አለበት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_38_0216593302a94783.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ወዲያውኑ ወደ አጭር የፊት መብራቶች መቀየር አለበት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_36_4b4855b717c81a55.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ወዲያውኑ ወደ አጭር የፊት መብራቶች መቀየር አለበት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_37_96a487543e8737dc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ወዲያውኑ ወደ አጭር የፊት መብራቶች መቀየር አለበት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_36_b13129fbc38809c8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ወዲያውኑ ወደ አጭር የፊት መብራቶች መቀየር አለበት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_37_d083bf6b06e8f0e3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ወዲያውኑ ወደ አጭር የፊት መብራቶች መቀየር አለበት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_36_14d06c6fff999fdd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ወዲያውኑ ወደ አጭር የፊት መብራቶች መቀየር አለበት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_37_942bb568558c7de8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ወዲያውኑ ወደ አጭር የፊት መብራቶች መቀየር አለበት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_40_b409f1b8b9949249.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ወዲያውኑ ወደ አጭር የፊት መብራቶች መቀየር አለበት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_41_e1ac43635a1015c2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ወዲያውኑ ወደ አጭር የፊት መብራቶች መቀየር አለበት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_41_a26968c83f7809c8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ወዲያውኑ ወደ አጭር የፊት መብራቶች መቀየር አለበት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_41_aa49eea352cad48f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ወዲያውኑ ወደ አጭር የፊት መብራቶች መቀየር አለበት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_43_5890aedb96113eaf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ወዲያውኑ ወደ አጭር የፊት መብራቶች መቀየር አለበት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_44_2af07fb42d8efbcc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ወዲያውኑ ወደ አጭር የፊት መብራቶች መቀየር አለበት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_48_bc2ac80ca5e8d362.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ወዲያውኑ ወደ አጭር የፊት መብራቶች መቀየር አለበት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_46_7a934df00bd5775a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ወዲያውኑ ወደ አጭር የፊት መብራቶች መቀየር አለበት",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_50_b184e453ca34545f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የጭጋግ መብራቶች መቼ ይጠቀማሉ?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_20_aa4c57d596ad3e7f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሌሊት ብቻ",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_6_5a8820547302d488.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ሌሊት ብቻ",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_11_d911191869c7f54a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁልጊዜ",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_4_764dd38074715a7f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ሁልጊዜ",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_9_17936fd82ccdbc21.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጭጋግ፣ በኃይለኛ ዝናብ ወይም በበረዶ ጊዜ ብቻ",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_30_fc31ebe05ec71ab5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። በጭጋግ፣ በኃይለኛ ዝናብ ወይም በበረዶ ጊዜ ብቻ",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_35_ea494b6c16c8d541.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ክፍት ጎዳና ላይ ብቻ",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_13_77b6ab602255dbc6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ክፍት ጎዳና ላይ ብቻ",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_18_135b0e9cb764b8ba.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! በጭጋግ፣ በኃይለኛ ዝናብ ወይም በበረዶ ጊዜ ብቻ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_36_a5e21d12e9e2f2ec.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! በጭጋግ፣ በኃይለኛ ዝናብ ወይም በበረዶ ጊዜ ብቻ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_34_7ea9e458f83ecd3a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! በጭጋግ፣ በኃይለኛ ዝናብ ወይም በበረዶ ጊዜ ብቻ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_35_cb4bafeca5d5d133.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! በጭጋግ፣ በኃይለኛ ዝናብ ወይም በበረዶ ጊዜ ብቻ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_34_9b76430884035627.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! በጭጋግ፣ በኃይለኛ ዝናብ ወይም በበረዶ ጊዜ ብቻ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_35_c6939bc41bd8ddcc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! በጭጋግ፣ በኃይለኛ ዝናብ ወይም በበረዶ ጊዜ ብቻ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_34_eaca99e03d7af8b2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! በጭጋግ፣ በኃይለኛ ዝናብ ወይም በበረዶ ጊዜ ብቻ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_35_a47b8eec86af7dc7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! በጭጋግ፣ በኃይለኛ ዝናብ ወይም በበረዶ ጊዜ ብቻ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_38_2d4e175c339cb626.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! በጭጋግ፣ በኃይለኛ ዝናብ ወይም በበረዶ ጊዜ ብቻ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_39_fd9d3279d4c338ad.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! በጭጋግ፣ በኃይለኛ ዝናብ ወይም በበረዶ ጊዜ ብቻ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_39_c59bded443f35627.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! በጭጋግ፣ በኃይለኛ ዝናብ ወይም በበረዶ ጊዜ ብቻ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_39_23aad020bcebd2e0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! በጭጋግ፣ በኃይለኛ ዝናብ ወይም በበረዶ ጊዜ ብቻ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_41_2ce870088892b580.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! በጭጋግ፣ በኃይለኛ ዝናብ ወይም በበረዶ ጊዜ ብቻ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_42_7d4e6c58396e4923.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! በጭጋግ፣ በኃይለኛ ዝናብ ወይም በበረዶ ጊዜ ብቻ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_46_3af98d8898f96fcd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! በጭጋግ፣ በኃይለኛ ዝናብ ወይም በበረዶ ጊዜ ብቻ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_44_c8429878e0b5f635.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: በጭጋግ፣ በኃይለኛ ዝናብ ወይም በበረዶ ጊዜ ብቻ",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_48_2e1c980996d4fdb0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አጭር የፊት መብራቶች ምን ያደርጋሉ?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_23_39839fe8d71c22cc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ለሚመጡ አሽከርካሪዎች ያምባርቃቸዋል",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_22_9d7e177c00df9c21.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ለሚመጡ አሽከርካሪዎች ያምባርቃቸዋል",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_27_dcbcf3cc2c5dd6e3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ለአጭር ርቀት ያበራሉ፣ ለሚመጡ አሽከርካሪዎች አያምባርቅም",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_36_163fffe4000c483e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ለአጭር ርቀት ያበራሉ፣ ለሚመጡ አሽከርካሪዎች አያምባርቅም",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_41_4ffcfcdbac5d8860.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጭጋግ ሲኖር ብቻ ይሰራሉ",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_15_72960203cde01786.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ጭጋግ ሲኖር ብቻ ይሰራሉ",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_20_1931e9aca32d4b32.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ለረጅም ርቀት ያበራሉ",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_13_54ebae5f6ced2fcc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ለረጅም ርቀት ያበራሉ",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_18_df21143478d6a4f0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ለአጭር ርቀት ያበራሉ፣ ለሚመጡ አሽከርካሪዎች አያምባርቅም",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_42_d53d9d744a1d9527.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ለአጭር ርቀት ያበራሉ፣ ለሚመጡ አሽከርካሪዎች አያምባርቅም",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_40_dc5a6912d85948f1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ለአጭር ርቀት ያበራሉ፣ ለሚመጡ አሽከርካሪዎች አያምባርቅም",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_41_75cc2a20704a3438.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ለአጭር ርቀት ያበራሉ፣ ለሚመጡ አሽከርካሪዎች አያምባርቅም",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_40_e15a38836d828b2c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ለአጭር ርቀት ያበራሉ፣ ለሚመጡ አሽከርካሪዎች አያምባርቅም",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_41_b60a1c08c926c0c7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ለአጭር ርቀት ያበራሉ፣ ለሚመጡ አሽከርካሪዎች አያምባርቅም",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_40_f8fb8babdaa48b79.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ለአጭር ርቀት ያበራሉ፣ ለሚመጡ አሽከርካሪዎች አያምባርቅም",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_41_3eac585ad248040c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ለአጭር ርቀት ያበራሉ፣ ለሚመጡ አሽከርካሪዎች አያምባርቅም",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_44_f0587966368c09ed.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ለአጭር ርቀት ያበራሉ፣ ለሚመጡ አሽከርካሪዎች አያምባርቅም",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_45_53718cd74f180c26.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ለአጭር ርቀት ያበራሉ፣ ለሚመጡ አሽከርካሪዎች አያምባርቅም",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_45_5766dfcc61728b2c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ለአጭር ርቀት ያበራሉ፣ ለሚመጡ አሽከርካሪዎች አያምባርቅም",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_45_1ace97104204632b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ለአጭር ርቀት ያበራሉ፣ ለሚመጡ አሽከርካሪዎች አያምባርቅም",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_47_7a13216eb452ac8b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ለአጭር ርቀት ያበራሉ፣ ለሚመጡ አሽከርካሪዎች አያምባርቅም",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_48_c90cf9e60379a428.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ለአጭር ርቀት ያበራሉ፣ ለሚመጡ አሽከርካሪዎች አያምባርቅም",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_52_74407168c35dc086.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ለአጭር ርቀት ያበራሉ፣ ለሚመጡ አሽከርካሪዎች አያምባርቅም",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_50_9993ef2b4e9ad2be.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ለአጭር ርቀት ያበራሉ፣ ለሚመጡ አሽከርካሪዎች አያምባርቅም",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_54_7566a2acd7f993fb.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

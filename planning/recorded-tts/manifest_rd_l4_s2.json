@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:19:12.550Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "rd_l4_s2",
+   "key": "road_decisions_3_1",
+   "sentences": [
+    {
+     "text": "በዚህ መስቀለኛ መንገድ ሲቃረቡ እንዴት ያሽከረክራሉ?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_33_407c5d8cace72c5b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በእግረኛ ማቋረጫው ላይ ያሉ እግረኞች ቢኖሩም ቅድሚያ ለርሶ ነው።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_41_b5948d763edda00a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። በእግረኛ ማቋረጫው ላይ ያሉ እግረኞች ቢኖሩም ቅድሚያ ለርሶ ነው።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_46_8cfc7f4efde6a788.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ፍጥነትዎን ይቀንሱ፤ የመስጠት ህጎችን እና ምልክቶችን ይከተሉ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_39_e0750d9033d84566.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ፍጥነትዎን ይቀንሱ፤ የመስጠት ህጎችን እና ምልክቶችን ይከተሉ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_44_02295ba8d9903e78.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ለሚመጣው መኪና ብቻ ቅድሚያ ይስጡ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_22_ad12bb6e18040c64.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ለሚመጣው መኪና ብቻ ቅድሚያ ይስጡ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_27_c7860ac006aab8d0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አረንጓዴ መብራት እስኪበራ ድረስ ሙሉ በሙሉ ያቁሙ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_32_7a3c1778451e1ad4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። አረንጓዴ መብራት እስኪበራ ድረስ ሙሉ በሙሉ ያቁሙ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_37_9ae04936ad84fa28.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ፍጥነትዎን ይቀንሱ፤ የመስጠት ህጎችን እና ምልክቶችን ይከተሉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_45_32a614d65b1fe19f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ፍጥነትዎን ይቀንሱ፤ የመስጠት ህጎችን እና ምልክቶችን ይከተሉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_43_8fc47c78d8bda209.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ፍጥነትዎን ይቀንሱ፤ የመስጠት ህጎችን እና ምልክቶችን ይከተሉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_44_95874b488f4f3f20.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ፍጥነትዎን ይቀንሱ፤ የመስጠት ህጎችን እና ምልክቶችን ይከተሉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_43_948629f2bedb4eb4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ፍጥነትዎን ይቀንሱ፤ የመስጠት ህጎችን እና ምልክቶችን ይከተሉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_44_f5ec2c582705b63f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ፍጥነትዎን ይቀንሱ፤ የመስጠት ህጎችን እና ምልክቶችን ይከተሉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_43_22d801c0fb1f4481.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ፍጥነትዎን ይቀንሱ፤ የመስጠት ህጎችን እና ምልክቶችን ይከተሉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_44_3878e4c8790a1894.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ፍጥነትዎን ይቀንሱ፤ የመስጠት ህጎችን እና ምልክቶችን ይከተሉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_47_449e048a1e68bc95.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ፍጥነትዎን ይቀንሱ፤ የመስጠት ህጎችን እና ምልክቶችን ይከተሉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_48_a2a51a0825f6567e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ፍጥነትዎን ይቀንሱ፤ የመስጠት ህጎችን እና ምልክቶችን ይከተሉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_48_79dd1b506ccb4eb4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ፍጥነትዎን ይቀንሱ፤ የመስጠት ህጎችን እና ምልክቶችን ይከተሉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_48_556fb9a24bf66613.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ፍጥነትዎን ይቀንሱ፤ የመስጠት ህጎችን እና ምልክቶችን ይከተሉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_50_d235c87ad0233773.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ፍጥነትዎን ይቀንሱ፤ የመስጠት ህጎችን እና ምልክቶችን ይከተሉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_51_dc79f9fef273cd30.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ፍጥነትዎን ይቀንሱ፤ የመስጠት ህጎችን እና ምልክቶችን ይከተሉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_55_cd4f2560b38315de.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ፍጥነትዎን ይቀንሱ፤ የመስጠት ህጎችን እና ምልክቶችን ይከተሉ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_53_dccddb784dfe30e6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ፍጥነትዎን ይቀንሱ፤ የመስጠት ህጎችን እና ምልክቶችን ይከተሉ።",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_57_7c2e5c4f74be27c3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እግረኛው ሲያቋርጥ እንዴት ያሽከረክራሉ?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_25_ed49a794ea20b7fe.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ቢጫው መብራት እስኪጠፋ ድረስ ሙሉ በሙሉ ያቁሙ።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_30_eeae01aab453faca.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ቢጫው መብራት እስኪጠፋ ድረስ ሙሉ በሙሉ ያቁሙ።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_35_ff380db841030788.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እግረኛውን ችላ ይበሉ፤ መብራቱ ለእግረኞች ብቻ ነው።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_33_b43dee36a2bb403d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። እግረኛውን ችላ ይበሉ፤ መብራቱ ለእግረኞች ብቻ ነው።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_38_6d844fb2d59231a3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጥንቃቄ ያሽከረክሩ፤ እግረኛው በሰላም እንዲያልፍ ይፍቀዱ።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_37_64cd5372f5d6e20e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። በጥንቃቄ ያሽከረክሩ፤ እግረኛው በሰላም እንዲያልፍ ይፍቀዱ።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_42_178130e2a9017dfa.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ማንም ባይኖርም ሁልጊዜ በእግረኛ ማቋረጫው ፊት ለፊት ያቁሙ።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_38_167ac457d32ba738.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ማንም ባይኖርም ሁልጊዜ በእግረኛ ማቋረጫው ፊት ለፊት ያቁሙ።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_43_99e7ff98cef1eb04.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! በጥንቃቄ ያሽከረክሩ፤ እግረኛው በሰላም እንዲያልፍ ይፍቀዱ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_43_e6980fbee7acd377.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! በጥንቃቄ ያሽከረክሩ፤ እግረኛው በሰላም እንዲያልፍ ይፍቀዱ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_41_53111430684c22e1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! በጥንቃቄ ያሽከረክሩ፤ እግረኛው በሰላም እንዲያልፍ ይፍቀዱ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_42_c54834a6e8dc0548.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! በጥንቃቄ ያሽከረክሩ፤ እግረኛው በሰላም እንዲያልፍ ይፍቀዱ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_41_2497bd9aeee8b6dc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! በጥንቃቄ ያሽከረክሩ፤ እግረኛው በሰላም እንዲያልፍ ይፍቀዱ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_42_9f51ed9a2daed497.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! በጥንቃቄ ያሽከረክሩ፤ እግረኛው በሰላም እንዲያልፍ ይፍቀዱ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_41_4715b0f01ef91969.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! በጥንቃቄ ያሽከረክሩ፤ እግረኛው በሰላም እንዲያልፍ ይፍቀዱ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_42_0b7fb4f63fea263c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! በጥንቃቄ ያሽከረክሩ፤ እግረኛው በሰላም እንዲያልፍ ይፍቀዱ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_45_7c97677e2c02c77d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! በጥንቃቄ ያሽከረክሩ፤ እግረኛው በሰላም እንዲያልፍ ይፍቀዱ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_46_2e1642bc7a9e1716.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! በጥንቃቄ ያሽከረክሩ፤ እግረኛው በሰላም እንዲያልፍ ይፍቀዱ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_46_6db0242e60d8b6dc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! በጥንቃቄ ያሽከረክሩ፤ እግረኛው በሰላም እንዲያልፍ ይፍቀዱ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_46_c0fc20d0a0a753fb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! በጥንቃቄ ያሽከረክሩ፤ እግረኛው በሰላም እንዲያልፍ ይፍቀዱ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_48_c81cb130f724eb5b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! በጥንቃቄ ያሽከረክሩ፤ እግረኛው በሰላም እንዲያልፍ ይፍቀዱ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_49_e1b59b7ac0b0cb58.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! በጥንቃቄ ያሽከረክሩ፤ እግረኛው በሰላም እንዲያልፍ ይፍቀዱ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_53_3f3f76e421b0b7f6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! በጥንቃቄ ያሽከረክሩ፤ እግረኛው በሰላም እንዲያልፍ ይፍቀዱ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_51_f34bc41879307b8e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: በጥንቃቄ ያሽከረክሩ፤ እግረኛው በሰላም እንዲያልፍ ይፍቀዱ።",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_55_88c0970af30a422b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እዚህ ሙሉ በሙሉ ማቆም ያለበት ማነው?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_24_c7f3b5e57b65de90.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ነጭው መኪና።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_8_7aba9cf834bf5b16.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ነጭው መኪና።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_13_85c6861f085bb0d4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አረንጓዴው መኪና ብቻ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_14_66f492303eca7e2f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። አረንጓዴው መኪና ብቻ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_19_ca88f1483dc781f1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ቢጫው መኪና ብቻ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_11_43fcea26e6c55fbc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ቢጫው መኪና ብቻ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_16_beb2c488fe618508.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለቱም አረንጓዴው መኪና እና ቢጫው መኪና።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_27_8dab232894c019e7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ሁለቱም አረንጓዴው መኪና እና ቢጫው መኪና።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_32_7dc9f7ccc564d15b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ሁለቱም አረንጓዴው መኪና እና ቢጫው መኪና።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_33_c21fdc20a53b725e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ሁለቱም አረንጓዴው መኪና እና ቢጫው መኪና።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_31_0598301893f19748.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ሁለቱም አረንጓዴው መኪና እና ቢጫው መኪና።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_32_3d408d3e57642d21.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ሁለቱም አረንጓዴው መኪና እና ቢጫው መኪና።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_31_5cf9dae846b58db5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ሁለቱም አረንጓዴው መኪና እና ቢጫው መኪና።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_32_25029636dc4a4d3e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ሁለቱም አረንጓዴው መኪና እና ቢጫው መኪና።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_31_841fc24a273f83c0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ሁለቱም አረንጓዴው መኪና እና ቢጫው መኪና።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_32_3cf74fc8fef20ed5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ሁለቱም አረንጓዴው መኪና እና ቢጫው መኪና።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_35_6ca97d399e53f0d4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ሁለቱም አረንጓዴው መኪና እና ቢጫው መኪና።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_36_1957291ea81a2eff.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ሁለቱም አረንጓዴው መኪና እና ቢጫው መኪና።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_36_1a44cb988ca58db5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ሁለቱም አረንጓዴው መኪና እና ቢጫው መኪና።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_36_e866b100d21b23d2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ሁለቱም አረንጓዴው መኪና እና ቢጫው መኪና።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_38_55062bda293e9972.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ሁለቱም አረንጓዴው መኪና እና ቢጫው መኪና።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_39_1835627068f1eb31.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ሁለቱም አረንጓዴው መኪና እና ቢጫው መኪና።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_43_940574383780939f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ሁለቱም አረንጓዴው መኪና እና ቢጫው መኪና።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_41_8410f9162451b167.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ሁለቱም አረንጓዴው መኪና እና ቢጫው መኪና።",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_45_1c0c3adebe239a82.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

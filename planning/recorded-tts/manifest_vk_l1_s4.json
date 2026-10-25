@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:07:33.604Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "vk_l1_s4",
+   "key": "vehicle_knowledge_0_3",
+   "sentences": [
+    {
+     "text": "የጎማ አየር ግፊትን መቼ መፈተሽ ይመከራል?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_27_4f14fa9567f48cc7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከረጅም ጉዞ በኋላ ጎማዎቹ ሲሞቁ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_20_7a299f8bf645b3e5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ከረጅም ጉዞ በኋላ ጎማዎቹ ሲሞቁ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_25_357a6b80e50e5f27.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከመንዳት በፊት ጎማዎቹ ቀዝቃዛ ሲሆኑ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_23_ec84fae848b73a9b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ከመንዳት በፊት ጎማዎቹ ቀዝቃዛ ሲሆኑ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_28_c2046b04f468ca85.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በየወሩ አንድ ጊዜ ብቻ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_14_6f1612e0165f5c44.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። በየወሩ አንድ ጊዜ ብቻ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_19_252057c4393e3e30.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናው ሲቆም በማንኛውም ጊዜ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_18_006c78b8568b8153.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። መኪናው ሲቆም በማንኛውም ጊዜ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_23_89d10c8a2298556f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ከመንዳት በፊት ጎማዎቹ ቀዝቃዛ ሲሆኑ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_29_be8d73043a69c462.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ከመንዳት በፊት ጎማዎቹ ቀዝቃዛ ሲሆኑ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_27_a68dcb7065511ef4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ከመንዳት በፊት ጎማዎቹ ቀዝቃዛ ሲሆኑ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_28_4abf10e017c890dd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ከመንዳት በፊት ጎማዎቹ ቀዝቃዛ ሲሆኑ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_27_b5f736cc946a2c49.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ከመንዳት በፊት ጎማዎቹ ቀዝቃዛ ሲሆኑ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_28_72a214e432ddcac2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ከመንዳት በፊት ጎማዎቹ ቀዝቃዛ ሲሆኑ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_27_1fd9895e0ff3477c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ከመንዳት በፊት ጎማዎቹ ቀዝቃዛ ሲሆኑ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_28_abeb1e188f559b69.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ከመንዳት በፊት ጎማዎቹ ቀዝቃዛ ሲሆኑ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_31_0bf35b59e8288968.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ከመንዳት በፊት ጎማዎቹ ቀዝቃዛ ሲሆኑ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_32_cb6cce8c7cfdf983.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ከመንዳት በፊት ጎማዎቹ ቀዝቃዛ ሲሆኑ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_32_93cc9883625a2c49.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ከመንዳት በፊት ጎማዎቹ ቀዝቃዛ ሲሆኑ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_32_c144e98c1e9724ee.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ከመንዳት በፊት ጎማዎቹ ቀዝቃዛ ሲሆኑ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_34_790b34e4e846ba8e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ከመንዳት በፊት ጎማዎቹ ቀዝቃዛ ሲሆኑ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_35_25960d706d3b26cd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ከመንዳት በፊት ጎማዎቹ ቀዝቃዛ ሲሆኑ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_39_7fa59aa0ef9c0423.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ከመንዳት በፊት ጎማዎቹ ቀዝቃዛ ሲሆኑ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_37_de4625e069ef4c1b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ከመንዳት በፊት ጎማዎቹ ቀዝቃዛ ሲሆኑ",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_41_a8aceba1d559173e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጎማው ስር ያሉት ስንጥቆች ዋና ዓላማ ምንድን ነው?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_33_f25f21f80b080d1d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የጎማውን ውበት ለመጨመር",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_15_3999b2c86de7b075.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። የጎማውን ውበት ለመጨመር",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_20_c5e4ff7076950d77.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎማው እንዳይሞቅ ለመከላከል",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_17_c07e26176ec1d2de.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ጎማው እንዳይሞቅ ለመከላከል",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_22_ec007eb4daff4dc0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጎማው እና በእርጥብ መንገድ መካከል ያለውን ውሃ በብቃት ለማፍሰስ",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_42_f7bec9988728d938.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። በጎማው እና በእርጥብ መንገድ መካከል ያለውን ውሃ በብቃት ለማፍሰስ",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_47_89ed3fdc3956ce8c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመኪናውን ፍጥነት ለመጨመር",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_17_a6ec16b00d26a7d4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። የመኪናውን ፍጥነት ለመጨመር",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_22_0b48432738a31768.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! በጎማው እና በእርጥብ መንገድ መካከል ያለውን ውሃ በብቃት ለማፍሰስ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_48_a8d06aa420367ae1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! በጎማው እና በእርጥብ መንገድ መካከል ያለውን ውሃ በብቃት ለማፍሰስ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_46_8ef5c27724f87337.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! በጎማው እና በእርጥብ መንገድ መካከል ያለውን ውሃ በብቃት ለማፍሰስ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_47_fcc64ca0cc2ba43e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! በጎማው እና በእርጥብ መንገድ መካከል ያለውን ውሃ በብቃት ለማፍሰስ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_46_2dfe71c058b9602a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! በጎማው እና በእርጥብ መንገድ መካከል ያለውን ውሃ በብቃት ለማፍሰስ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_47_689b852ced02f801.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! በጎማው እና በእርጥብ መንገድ መካከል ያለውን ውሃ በብቃት ለማፍሰስ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_46_f41369bffa3957bf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! በጎማው እና በእርጥብ መንገድ መካከል ያለውን ውሃ በብቃት ለማፍሰስ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_47_1cb0f04c9a70138a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! በጎማው እና በእርጥብ መንገድ መካከል ያለውን ውሃ በብቃት ለማፍሰስ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_50_578f221cf3963b2b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! በጎማው እና በእርጥብ መንገድ መካከል ያለውን ውሃ በብቃት ለማፍሰስ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_51_f433af0864e39720.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! በጎማው እና በእርጥብ መንገድ መካከል ያለውን ውሃ በብቃት ለማፍሰስ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_51_4f52410380a9602a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! በጎማው እና በእርጥብ መንገድ መካከል ያለውን ውሃ በብቃት ለማፍሰስ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_51_4c3c60bca911f9ed.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! በጎማው እና በእርጥብ መንገድ መካከል ያለውን ውሃ በብቃት ለማፍሰስ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_53_39f50a087508a24d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! በጎማው እና በእርጥብ መንገድ መካከል ያለውን ውሃ በብቃት ለማፍሰስ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_54_6b89837f1478242e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! በጎማው እና በእርጥብ መንገድ መካከል ያለውን ውሃ በብቃት ለማፍሰስ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_58_062b4a3cba1d7900.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! በጎማው እና በእርጥብ መንገድ መካከል ያለውን ውሃ በብቃት ለማፍሰስ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_56_a4e43c048206d3b8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: በጎማው እና በእርጥብ መንገድ መካከል ያለውን ውሃ በብቃት ለማፍሰስ",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_60_3c8709a02cdb5c3d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎማ መለወጥ ያለበት በየትኛው ጊዜ ነው?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_25_deab0d9441a07fa4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የጎማው ስር ጥልቀት ከሁለት ሚሊሜትር በታች ሲሆን",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_31_50edee78d554825f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። የጎማው ስር ጥልቀት ከሁለት ሚሊሜትር በታች ሲሆን",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_36_9fb60a40f783ffdd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎማው አዲስ ሲሆን",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_11_65911aa008e22f9b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ጎማው አዲስ ሲሆን",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_16_a4f4b468b6f9dd85.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የጎማው ቀለም ሲደበዝዝ",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_14_5cd05e48f1f851c2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የጎማው ቀለም ሲደበዝዝ",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_19_9d1c421c2169e536.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በየሁለት ዓመቱ አንድ ጊዜ",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_16_95fc7ad0be92011d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። በየሁለት ዓመቱ አንድ ጊዜ",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_21_e9160d2c1e2127e1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! የጎማው ስር ጥልቀት ከሁለት ሚሊሜትር በታች ሲሆን",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_37_8729337ca6079026.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! የጎማው ስር ጥልቀት ከሁለት ሚሊሜትር በታች ሲሆን",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_35_a4ebadf4eb1806b0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! የጎማው ስር ጥልቀት ከሁለት ሚሊሜትር በታች ሲሆን",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_36_5d488aa88754da99.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! የጎማው ስር ጥልቀት ከሁለት ሚሊሜትር በታች ሲሆን",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_35_8e9d835bf6a8600d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! የጎማው ስር ጥልቀት ከሁለት ሚሊሜትር በታች ሲሆን",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_36_2e20db08be4f3106.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! የጎማው ስር ጥልቀት ከሁለት ሚሊሜትር በታች ሲሆን",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_35_f8b8435400174438.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! የጎማው ስር ጥልቀት ከሁለት ሚሊሜትር በታች ሲሆን",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_36_e89276b41cfdf22d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! የጎማው ስር ጥልቀት ከሁለት ሚሊሜትር በታች ሲሆን",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_39_1f135df04f2fe92c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! የጎማው ስር ጥልቀት ከሁለት ሚሊሜትር በታች ሲሆን",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_40_db650f9fdc9bf147.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! የጎማው ስር ጥልቀት ከሁለት ሚሊሜትር በታች ሲሆን",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_40_1c2e0a9cb498600d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! የጎማው ስር ጥልቀት ከሁለት ሚሊሜትር በታች ሲሆን",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_40_1148ffdf12ef04aa.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! የጎማው ስር ጥልቀት ከሁለት ሚሊሜትር በታች ሲሆን",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_42_9ce5145f784ef8ca.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! የጎማው ስር ጥልቀት ከሁለት ሚሊሜትር በታች ሲሆን",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_43_7615d78c9e065c89.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! የጎማው ስር ጥልቀት ከሁለት ሚሊሜትር በታች ሲሆን",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_47_3e5176f7d1696ce7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! የጎማው ስር ጥልቀት ከሁለት ሚሊሜትር በታች ሲሆን",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_45_764f7240db3360df.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: የጎማው ስር ጥልቀት ከሁለት ሚሊሜትር በታች ሲሆን",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_49_9bce6ed0753614fa.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

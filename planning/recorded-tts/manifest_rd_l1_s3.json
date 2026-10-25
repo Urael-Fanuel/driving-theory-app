@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:17:28.095Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "rd_l1_s3",
+   "key": "road_decisions_0_2",
+   "sentences": [
+    {
+     "text": "በዚህ መገናኛ ላይ ቅድሚያ የማሽከርከር መብት ያለው ማነው?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_37_94a5bbd8a8868f94.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ነጩ መኪና ቁጥር ሁለት",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_14_b0e09acbba9af6a8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ነጩ መኪና ቁጥር ሁለት",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_19_06599d33062f756a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አረንጓዴው መኪና ቁጥር አንድ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_18_dabaa672c88e145a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። አረንጓዴው መኪና ቁጥር አንድ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_23_2267e11accf43d84.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለቱም መኪኖች በተመሳሳይ ጊዜ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_19_cbcc8a5cf374042a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ሁለቱም መኪኖች በተመሳሳይ ጊዜ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_24_8eafd78c87cb915e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የትኛውም መኪና አይደለም",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_15_fdd468007a9c0fda.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። የትኛውም መኪና አይደለም",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_20_5570e998f36a1be6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ነጩ መኪና ቁጥር ሁለት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_20_7af8e3a09cca3931.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ነጩ መኪና ቁጥር ሁለት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_18_2d810fd420e4c367.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ነጩ መኪና ቁጥር ሁለት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_19_eaa978db936ee72e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ነጩ መኪና ቁጥር ሁለት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_18_1cfe016b969ed63a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ነጩ መኪና ቁጥር ሁለት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_19_07a89fd85633d751.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ነጩ መኪና ቁጥር ሁለት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_18_c97e92b079a994ef.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ነጩ መኪና ቁጥር ሁለት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_19_a02c5ae002eee31a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ነጩ መኪና ቁጥር ሁለት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_22_9c15335c9444107b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ነጩ መኪና ቁጥር ሁለት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_23_0aa67208256a42b0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ነጩ መኪና ቁጥር ሁለት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_23_512f55fb768ed63a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ነጩ መኪና ቁጥር ሁለት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_23_1b0f4e941c45dd3d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ነጩ መኪና ቁጥር ሁለት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_25_f2deb6bccf383f1d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ነጩ መኪና ቁጥር ሁለት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_26_d0ff4eb8f9c7eb3e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ነጩ መኪና ቁጥር ሁለት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_30_f806bbc8c06a3f10.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ነጩ መኪና ቁጥር ሁለት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_28_e5cebb881b52f828.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ነጩ መኪና ቁጥር ሁለት",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_32_de0ec5d8ec7f6aed.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የአረንጓዴው መኪና ቁጥር አንድ አሽከርካሪ እንዴት ማድረግ አለበት?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_42_482e30b0020487d3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ወዲያውኑ ወደ ቀኝ ታጥፎ ወደ ዋናው መንገድ መግባት አለበት።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_38_40a360f04781a694.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ወዲያውኑ ወደ ቀኝ ታጥፎ ወደ ዋናው መንገድ መግባት አለበት።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_43_7308be0af5e0fa56.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ነጩ መኪና ቁጥር ሁለት እንዲጠብቅ ምልክት መስጠት አለበት።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_37_02921bb28b2368a5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ነጩ መኪና ቁጥር ሁለት እንዲጠብቅ ምልክት መስጠት አለበት።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_42_247a812eaad2173b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ነጩ መኪና ቁጥር ሁለት እስኪያልፍ መጠበቅ እና ከዚያ ወደ ቀኝ ታጥፎ ወደ ዋናው መንገድ መግባት አለበት።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_66_e376b7d834c5db37.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ነጩ መኪና ቁጥር ሁለት እስኪያልፍ መጠበቅ እና ከዚያ ወደ ቀኝ ታጥፎ ወደ ዋናው መንገድ መግባት አለበት።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_71_b06462b0194f9203.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ወደ ግራ ታጥፎ ወደ ዋናው መንገድ መግባት አለበት።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_32_63c9f85a884b8042.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ወደ ግራ ታጥፎ ወደ ዋናው መንገድ መግባት አለበት።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_37_d50dbd4834cb6d3e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ነጩ መኪና ቁጥር ሁለት እስኪያልፍ መጠበቅ እና ከዚያ ወደ ቀኝ ታጥፎ ወደ ዋናው መንገድ መግባት አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_72_f637c8484f1e4d6e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ነጩ መኪና ቁጥር ሁለት እስኪያልፍ መጠበቅ እና ከዚያ ወደ ቀኝ ታጥፎ ወደ ዋናው መንገድ መግባት አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_70_5c72654067b35338.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ነጩ መኪና ቁጥር ሁለት እስኪያልፍ መጠበቅ እና ከዚያ ወደ ቀኝ ታጥፎ ወደ ዋናው መንገድ መግባት አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_71_813d31973d5a01b1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ነጩ መኪና ቁጥር ሁለት እስኪያልፍ መጠበቅ እና ከዚያ ወደ ቀኝ ታጥፎ ወደ ዋናው መንገድ መግባት አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_70_fe77d4123a2945a5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ነጩ መኪና ቁጥር ሁለት እስኪያልፍ መጠበቅ እና ከዚያ ወደ ቀኝ ታጥፎ ወደ ዋናው መንገድ መግባት አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_71_0e94c90a91eff90e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ነጩ መኪና ቁጥር ሁለት እስኪያልፍ መጠበቅ እና ከዚያ ወደ ቀኝ ታጥፎ ወደ ዋናው መንገድ መግባት አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_70_7b59c37bd164b9b0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ነጩ መኪና ቁጥር ሁለት እስኪያልፍ መጠበቅ እና ከዚያ ወደ ቀኝ ታጥፎ ወደ ዋናው መንገድ መግባት አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_71_fb5cec005dc26785.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ነጩ መኪና ቁጥር ሁለት እስኪያልፍ መጠበቅ እና ከዚያ ወደ ቀኝ ታጥፎ ወደ ዋናው መንገድ መግባት አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_74_b077dae2bfae2d24.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ነጩ መኪና ቁጥር ሁለት እስኪያልፍ መጠበቅ እና ከዚያ ወደ ቀኝ ታጥፎ ወደ ዋናው መንገድ መግባት አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_75_c38334a20568892f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ነጩ መኪና ቁጥር ሁለት እስኪያልፍ መጠበቅ እና ከዚያ ወደ ቀኝ ታጥፎ ወደ ዋናው መንገድ መግባት አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_75_a81176d0321945a5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ነጩ መኪና ቁጥር ሁለት እስኪያልፍ መጠበቅ እና ከዚያ ወደ ቀኝ ታጥፎ ወደ ዋናው መንገድ መግባት አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_75_fa953700380fcc62.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ነጩ መኪና ቁጥር ሁለት እስኪያልፍ መጠበቅ እና ከዚያ ወደ ቀኝ ታጥፎ ወደ ዋናው መንገድ መግባት አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_77_64a59816cf4ee642.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ነጩ መኪና ቁጥር ሁለት እስኪያልፍ መጠበቅ እና ከዚያ ወደ ቀኝ ታጥፎ ወደ ዋናው መንገድ መግባት አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_78_be296468eb9b0da1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ነጩ መኪና ቁጥር ሁለት እስኪያልፍ መጠበቅ እና ከዚያ ወደ ቀኝ ታጥፎ ወደ ዋናው መንገድ መግባት አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_82_9b270fd0e6673e8f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ነጩ መኪና ቁጥር ሁለት እስኪያልፍ መጠበቅ እና ከዚያ ወደ ቀኝ ታጥፎ ወደ ዋናው መንገድ መግባት አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_80_ac733c78ea0f3bb7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ነጩ መኪና ቁጥር ሁለት እስኪያልፍ መጠበቅ እና ከዚያ ወደ ቀኝ ታጥፎ ወደ ዋናው መንገድ መግባት አለበት።",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_84_1bb8cda8a838ffb2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አረንጓዴው መኪና ቁጥር አንድ ለነጩ መኪና ቁጥር ሁለት ቅድሚያ መስጠት አለበት ወይ?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_53_2908847054c85021.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አይ፣ ነጩ መኪና ከግራ በኩል ስለሚመጣ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_25_f32d3f5427c22be7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። አይ፣ ነጩ መኪና ከግራ በኩል ስለሚመጣ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_30_27581fbe599d6ce5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ፣ ምክንያቱም የሚመለከተው ምልክት ቅድሚያ እንዲሰጥ ስለሚያዝ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_41_eec075a03adef350.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። አዎ፣ ምክንያቱም የሚመለከተው ምልክት ቅድሚያ እንዲሰጥ ስለሚያዝ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_46_42e5c02eebc72e4e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አይ፣ አረንጓዴው መኪና መጀመሪያ ስለደረሰ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_27_5e0e5c4ea0a5d76b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። አይ፣ አረንጓዴው መኪና መጀመሪያ ስለደረሰ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_32_67b66baebb6fc9df.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ፣ ሁለቱም መኪኖች ወደ አንድ መስመር ስለሚገቡ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_32_0c3d9e0036095658.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። አዎ፣ ሁለቱም መኪኖች ወደ አንድ መስመር ስለሚገቡ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_37_9ef9321821fbbda4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! አዎ፣ ምክንያቱም የሚመለከተው ምልክት ቅድሚያ እንዲሰጥ ስለሚያዝ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_47_38d60e26708ea969.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! አዎ፣ ምክንያቱም የሚመለከተው ምልክት ቅድሚያ እንዲሰጥ ስለሚያዝ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_45_c5c45c383346bfff.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! አዎ፣ ምክንያቱም የሚመለከተው ምልክት ቅድሚያ እንዲሰጥ ስለሚያዝ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_46_06267428217f3d96.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! አዎ፣ ምክንያቱም የሚመለከተው ምልክት ቅድሚያ እንዲሰጥ ስለሚያዝ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_45_ca4656cb32e5e402.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! አዎ፣ ምክንያቱም የሚመለከተው ምልክት ቅድሚያ እንዲሰጥ ስለሚያዝ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_46_8780ff4a2df5fd49.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! አዎ፣ ምክንያቱም የሚመለከተው ምልክት ቅድሚያ እንዲሰጥ ስለሚያዝ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_45_dad8018e29b7df77.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! አዎ፣ ምክንያቱም የሚመለከተው ምልክት ቅድሚያ እንዲሰጥ ስለሚያዝ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_46_be9d7034c62c8e22.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! አዎ፣ ምክንያቱም የሚመለከተው ምልክት ቅድሚያ እንዲሰጥ ስለሚያዝ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_49_8493cdde73093963.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! አዎ፣ ምክንያቱም የሚመለከተው ምልክት ቅድሚያ እንዲሰጥ ስለሚያዝ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_50_a12606a800f04848.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! አዎ፣ ምክንያቱም የሚመለከተው ምልክት ቅድሚያ እንዲሰጥ ስለሚያዝ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_50_46f287c61cd5e402.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! አዎ፣ ምክንያቱም የሚመለከተው ምልክት ቅድሚያ እንዲሰጥ ስለሚያዝ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_50_2e19c95e15bd7ce5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! አዎ፣ ምክንያቱም የሚመለከተው ምልክት ቅድሚያ እንዲሰጥ ስለሚያዝ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_52_fda4f1afff2f4705.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! አዎ፣ ምክንያቱም የሚመለከተው ምልክት ቅድሚያ እንዲሰጥ ስለሚያዝ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_53_765e3b1c4f14a786.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! አዎ፣ ምክንያቱም የሚመለከተው ምልክት ቅድሚያ እንዲሰጥ ስለሚያዝ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_57_0021208e9cdfb8e8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! አዎ፣ ምክንያቱም የሚመለከተው ምልክት ቅድሚያ እንዲሰጥ ስለሚያዝ።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_55_fc17d1e820bf9bd0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: አዎ፣ ምክንያቱም የሚመለከተው ምልክት ቅድሚያ እንዲሰጥ ስለሚያዝ።",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_59_f7e0c5b6b8df3c35.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

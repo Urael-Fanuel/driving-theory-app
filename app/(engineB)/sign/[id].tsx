@@ -25,6 +25,7 @@ import {
   SafeAreaView,
 } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import * as Haptics from 'expo-haptics';
 import { Colors } from '../../../constants/colors';
 import { Typography } from '../../../constants/typography';
@@ -42,6 +43,10 @@ import { prefetchSignAudio } from '../../../services/audioCache';
 export default function EngineBSignScreen() {
   const { id }  = useLocalSearchParams<{ id: string }>();
   const router  = useRouter();
+  // The Android system bar sits over the bottom of the screen (edge-to-edge): the
+  // bottom controls need this much room or the bar covers them (2026-10-25).
+  const insets = useSafeAreaInsets();
+
   const { markSignViewed } = useProgress();
   const { stopAudio } = useAudio();
 
@@ -151,7 +156,7 @@ export default function EngineBSignScreen() {
       <SignTextDetail sign={sign} style={styles.detail} />
 
       {/* Bottom controls */}
-      <View style={styles.bottomContainer}>
+      <View style={[styles.bottomContainer, { paddingBottom: 14 + insets.bottom + 8 }]}>
 
         {/* Prev / Next sign navigation */}
         <View style={styles.navRow}>

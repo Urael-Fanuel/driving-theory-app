@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:17:06.520Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "rd_l1_s1",
+   "key": "road_decisions_0_0",
+   "sentences": [
+    {
+     "text": "በዚህ ምስል ላይ መጀመሪያ የሚያልፈው የትኛው መኪና ነው?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_36_77357545bd6b7ac1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ቢጫው መኪና ቁጥር አንድ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_15_c10dff8b3eabcfc9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ቢጫው መኪና ቁጥር አንድ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_20_d9b295c362ff224b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሰማያዊው መኪና ቁጥር ሁለት",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_17_13dd43c4e5c26996.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ሰማያዊው መኪና ቁጥር ሁለት",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_22_24ef50147f46a008.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለቱም በአንድ ጊዜ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_12_670205f072c83576.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ሁለቱም በአንድ ጊዜ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_17_7aacc0dc3ce522c2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የትኛውም መኪና ማለፍ አይችልም",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_19_aceb642f07d4fe0c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። የትኛውም መኪና ማለፍ አይችልም",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_24_2a3a87d001a400f0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ሰማያዊው መኪና ቁጥር ሁለት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_23_ce650167ae1eca2f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ሰማያዊው መኪና ቁጥር ሁለት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_21_2f22ed178b9c7339.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ሰማያዊው መኪና ቁጥር ሁለት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_22_4140892fc90d3750.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ሰማያዊው መኪና ቁጥር ሁለት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_21_8e7aa3142e2e6ac4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ሰማያዊው መኪና ቁጥር ሁለት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_22_535b8cccf68c0b8f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ሰማያዊው መኪና ቁጥር ሁለት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_21_04536a489328efb1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ሰማያዊው መኪና ቁጥር ሁለት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_22_1fdac06c97a1a4e4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ሰማያዊው መኪና ቁጥር ሁለት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_25_ba18acb0dc89b1a5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ሰማያዊው መኪና ቁጥር ሁለት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_26_66d6f0c4c160fc8e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ሰማያዊው መኪና ቁጥር ሁለት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_26_d41e8fac481e6ac4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ሰማያዊው መኪና ቁጥር ሁለት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_26_94b252b8f03ed8a3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ሰማያዊው መኪና ቁጥር ሁለት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_28_b5e7276c4c933b43.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ሰማያዊው መኪና ቁጥር ሁለት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_29_d491de94d4fbb540.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ሰማያዊው መኪና ቁጥር ሁለት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_33_dd8e588cfe52ab2e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ሰማያዊው መኪና ቁጥር ሁለት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_31_00712af883c9e516.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ሰማያዊው መኪና ቁጥር ሁለት",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_35_11c762249ecee7f3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ቢጫው መኪና ምን ማድረግ አለበት?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_21_d01017b0cabf8c01.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በፍጥነት ወደ ግራ መታጠፍ",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_16_90742348b525b270.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። በፍጥነት ወደ ግራ መታጠፍ",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_21_e590c64786081bb2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሰማያዊውን መኪና አስቀድሞ ማለፍ",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_20_5a1145f0c3e78df6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ሰማያዊውን መኪና አስቀድሞ ማለፍ",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_25_e136d06fe4951228.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ቀጥታ ማሽከርከር",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_10_9e2c430c29f07d55.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ቀጥታ ማሽከርከር",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_15_e4f9af83f94d5721.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ቆሞ ሰማያዊውን መኪና ማሳለፍ",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_18_ba26384c7ed380e3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ቆሞ ሰማያዊውን መኪና ማሳለፍ",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_23_280a9770dc8e04df.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ቆሞ ሰማያዊውን መኪና ማሳለፍ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_24_056557a0f20fbbba.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ቆሞ ሰማያዊውን መኪና ማሳለፍ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_22_12dcbd38a831f76c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ቆሞ ሰማያዊውን መኪና ማሳለፍ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_23_600b612575fd5665.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ቆሞ ሰማያዊውን መኪና ማሳለፍ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_22_e482e26f4222ef71.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ቆሞ ሰማያዊውን መኪና ማሳለፍ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_23_8f0d8df006c68d1a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ቆሞ ሰማያዊውን መኪና ማሳለፍ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_22_2240a744efdc2be4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ቆሞ ሰማያዊውን መኪና ማሳለፍ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_23_e45a07f04973d011.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ቆሞ ሰማያዊውን መኪና ማሳለፍ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_26_4e3d79b8bb832870.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ቆሞ ሰማያዊውን መኪና ማሳለፍ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_27_91e77dbf616158fb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ቆሞ ሰማያዊውን መኪና ማሳለፍ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_27_9139986f9a12ef71.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ቆሞ ሰማያዊውን መኪና ማሳለፍ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_27_9fd9785cd07bffb6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ቆሞ ሰማያዊውን መኪና ማሳለፍ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_29_f0f5a278636e2256.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ቆሞ ሰማያዊውን መኪና ማሳለፍ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_30_c983ab70f8056a75.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ቆሞ ሰማያዊውን መኪና ማሳለፍ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_34_3d83e41c1c0f991b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ቆሞ ሰማያዊውን መኪና ማሳለፍ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_32_6c479267b12fdb63.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ቆሞ ሰማያዊውን መኪና ማሳለፍ",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_36_7774d254a95c20e6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ቢጫ መኪና ቁጥር አንድ ለሰማያዊ መኪና ቁጥር ሁለት መንገድ መልቀቅ አለበት?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_48_32f675004613a7b0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ፣ ምክንያቱም ወደ ግራ የሚታጠፍ አሽከርካሪ ከፊት ለፊት ለሚመጣ መኪና መንገድ ይለቃልና።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_58_f835f022ab7f7963.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። አዎ፣ ምክንያቱም ወደ ግራ የሚታጠፍ አሽከርካሪ ከፊት ለፊት ለሚመጣ መኪና መንገድ ይለቃልና።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_63_4ddbc1681681be21.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አይደለም፣ ምክንያቱም ቢጫ መኪና ቁጥር አንድ መጀመሪያ ስለደረሰ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_41_9ef95b00a729ddfb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። አይደለም፣ ምክንያቱም ቢጫ መኪና ቁጥር አንድ መጀመሪያ ስለደረሰ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_46_314192e85b93afe5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አይደለም፣ ምክንያቱም ሰማያዊ መኪና ቁጥር ሁለት በዋናው መንገድ ላይ ስለሆነ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_49_d5f65f56a78727b8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። አይደለም፣ ምክንያቱም ሰማያዊ መኪና ቁጥር ሁለት በዋናው መንገድ ላይ ስለሆነ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_54_c4892100bd931bcc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አይደለም፣ ምክንያቱም ቢጫ መኪና ቁጥር አንድ ትልቅ ስለሆነ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_38_b9c5515888cc7439.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። አይደለም፣ ምክንያቱም ቢጫ መኪና ቁጥር አንድ ትልቅ ስለሆነ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_43_4c9694f670bd6dc5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! አዎ፣ ምክንያቱም ወደ ግራ የሚታጠፍ አሽከርካሪ ከፊት ለፊት ለሚመጣ መኪና መንገድ ይለቃልና።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_64_1d712b5e7a1115ba.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! አዎ፣ ምክንያቱም ወደ ግራ የሚታጠፍ አሽከርካሪ ከፊት ለፊት ለሚመጣ መኪና መንገድ ይለቃልና።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_62_bda1ec30c2b98bec.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! አዎ፣ ምክንያቱም ወደ ግራ የሚታጠፍ አሽከርካሪ ከፊት ለፊት ለሚመጣ መኪና መንገድ ይለቃልና።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_63_a17f86b09ddf6065.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! አዎ፣ ምክንያቱም ወደ ግራ የሚታጠፍ አሽከርካሪ ከፊት ለፊት ለሚመጣ መኪና መንገድ ይለቃልና።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_62_60ff3138ba38d171.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! አዎ፣ ምክንያቱም ወደ ግራ የሚታጠፍ አሽከርካሪ ከፊት ለፊት ለሚመጣ መኪና መንገድ ይለቃልና።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_63_baa49a106f51869a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! አዎ፣ ምክንያቱም ወደ ግራ የሚታጠፍ አሽከርካሪ ከፊት ለፊት ለሚመጣ መኪና መንገድ ይለቃልና።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_62_f635e8d4c053b264.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! አዎ፣ ምክንያቱም ወደ ግራ የሚታጠፍ አሽከርካሪ ከፊት ለፊት ለሚመጣ መኪና መንገድ ይለቃልና።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_63_bf74eb20ff8fb591.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! አዎ፣ ምክንያቱም ወደ ግራ የሚታጠፍ አሽከርካሪ ከፊት ለፊት ለሚመጣ መኪና መንገድ ይለቃልና።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_66_a8552b6e07d1c4f0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! አዎ፣ ምክንያቱም ወደ ግራ የሚታጠፍ አሽከርካሪ ከፊት ለፊት ለሚመጣ መኪና መንገድ ይለቃልና።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_67_399820207c7f217b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! አዎ፣ ምክንያቱም ወደ ግራ የሚታጠፍ አሽከርካሪ ከፊት ለፊት ለሚመጣ መኪና መንገድ ይለቃልና።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_67_bafa4510c228d171.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! አዎ፣ ምክንያቱም ወደ ግራ የሚታጠፍ አሽከርካሪ ከፊት ለፊት ለሚመጣ መኪና መንገድ ይለቃልና።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_67_ff5787a6ee8231b6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! አዎ፣ ምክንያቱም ወደ ግራ የሚታጠፍ አሽከርካሪ ከፊት ለፊት ለሚመጣ መኪና መንገድ ይለቃልና።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_69_ba1f194841b911d6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! አዎ፣ ምክንያቱም ወደ ግራ የሚታጠፍ አሽከርካሪ ከፊት ለፊት ለሚመጣ መኪና መንገድ ይለቃልና።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_70_2650f348de722075.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! አዎ፣ ምክንያቱም ወደ ግራ የሚታጠፍ አሽከርካሪ ከፊት ለፊት ለሚመጣ መኪና መንገድ ይለቃልና።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_74_492a8722a1b54d1b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! አዎ፣ ምክንያቱም ወደ ግራ የሚታጠፍ አሽከርካሪ ከፊት ለፊት ለሚመጣ መኪና መንገድ ይለቃልና።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_72_38a4c0e640608de3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: አዎ፣ ምክንያቱም ወደ ግራ የሚታጠፍ አሽከርካሪ ከፊት ለፊት ለሚመጣ መኪና መንገድ ይለቃልና።",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_76_57eda920380eb2e6.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

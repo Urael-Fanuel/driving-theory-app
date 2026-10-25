@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:17:40.910Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "rd_l2_s1",
+   "key": "road_decisions_1_0",
+   "sentences": [
+    {
+     "text": "የብርማ ግራጫው ቁጥር አንድ መኪና አሽከርካሪ እዚህ ማለፍ ይችላልን?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_43_615d11f803a48817.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አይችልም፤ ምክንያቱም መስመሩ ያልተቆራረጠ ነው።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_30_dc2affc0092a6b53.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። አይችልም፤ ምክንያቱም መስመሩ ያልተቆራረጠ ነው።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_35_667299283e7bff91.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ይችላል፤ ነገር ግን ቀዩ መኪና ምልክት ካሳየ ብቻ ነው።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_35_fd879a0806760fab.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ይችላል፤ ነገር ግን ቀዩ መኪና ምልክት ካሳየ ብቻ ነው።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_40_200e6ed0de017fb5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አይችልም፤ ምክንያቱም ሁለት መስመሮች አሉ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_27_5b86d8ac2dc3a832.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። አይችልም፤ ምክንያቱም ሁለት መስመሮች አሉ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_32_221700d0d7593846.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ይችላል፤ ምክንያቱም ቅርብ ያለው መስመር የተቆራረጠ ሲሆን ከፊት ያለው መንገድም ክፍት ነው",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_57_838d7a9be4c8cc8e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ይችላል፤ ምክንያቱም ቅርብ ያለው መስመር የተቆራረጠ ሲሆን ከፊት ያለው መንገድም ክፍት ነው",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_62_034bb880ea879532.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ይችላል፤ ምክንያቱም ቅርብ ያለው መስመር የተቆራረጠ ሲሆን ከፊት ያለው መንገድም ክፍት ነው",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_63_0e6327c4f04d8bf7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ይችላል፤ ምክንያቱም ቅርብ ያለው መስመር የተቆራረጠ ሲሆን ከፊት ያለው መንገድም ክፍት ነው",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_61_baaad8475c183de1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ይችላል፤ ምክንያቱም ቅርብ ያለው መስመር የተቆራረጠ ሲሆን ከፊት ያለው መንገድም ክፍት ነው",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_62_1f8eac8bac930bc8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ይችላል፤ ምክንያቱም ቅርብ ያለው መስመር የተቆራረጠ ሲሆን ከፊት ያለው መንገድም ክፍት ነው",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_61_f53be59c5d373c5c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ይችላል፤ ምክንያቱም ቅርብ ያለው መስመር የተቆራረጠ ሲሆን ከፊት ያለው መንገድም ክፍት ነው",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_62_5f5df3743c634597.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ይችላል፤ ምክንያቱም ቅርብ ያለው መስመር የተቆራረጠ ሲሆን ከፊት ያለው መንገድም ክፍት ነው",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_61_6a3836d0cec6fb69.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ይችላል፤ ምክንያቱም ቅርብ ያለው መስመር የተቆራረጠ ሲሆን ከፊት ያለው መንገድም ክፍት ነው",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_62_17d06da414a60cbc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ይችላል፤ ምክንያቱም ቅርብ ያለው መስመር የተቆራረጠ ሲሆን ከፊት ያለው መንገድም ክፍት ነው",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_65_8a69510811fed17d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ይችላል፤ ምክንያቱም ቅርብ ያለው መስመር የተቆራረጠ ሲሆን ከፊት ያለው መንገድም ክፍት ነው",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_66_d1f963e064d2e796.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ይችላል፤ ምክንያቱም ቅርብ ያለው መስመር የተቆራረጠ ሲሆን ከፊት ያለው መንገድም ክፍት ነው",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_66_c51060c827273c5c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ይችላል፤ ምክንያቱም ቅርብ ያለው መስመር የተቆራረጠ ሲሆን ከፊት ያለው መንገድም ክፍት ነው",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_66_0b03a2d04789417b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ይችላል፤ ምክንያቱም ቅርብ ያለው መስመር የተቆራረጠ ሲሆን ከፊት ያለው መንገድም ክፍት ነው",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_68_8085842c00d9f4db.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ይችላል፤ ምክንያቱም ቅርብ ያለው መስመር የተቆራረጠ ሲሆን ከፊት ያለው መንገድም ክፍት ነው",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_69_0ec6b91bda7019d8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ይችላል፤ ምክንያቱም ቅርብ ያለው መስመር የተቆራረጠ ሲሆን ከፊት ያለው መንገድም ክፍት ነው",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_73_a423ffbc24165676.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ይችላል፤ ምክንያቱም ቅርብ ያለው መስመር የተቆራረጠ ሲሆን ከፊት ያለው መንገድም ክፍት ነው",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_71_7b1e3380a5d6fb0e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ይችላል፤ ምክንያቱም ቅርብ ያለው መስመር የተቆራረጠ ሲሆን ከፊት ያለው መንገድም ክፍት ነው",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_75_238f1e68b364512b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የብርማ ግራጫው ቁጥር አንድ መኪና አሽከርካሪ ማለፉን እንዴት ማከናወን አለበት?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_50_f2a8f420ae69f20e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ምልክት አሳይቶ ቀዩን መኪና በፍጥነት ማለፍ አለበት።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_33_4d400fc0bf5f64d4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ምልክት አሳይቶ ቀዩን መኪና በፍጥነት ማለፍ አለበት።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_38_8970605814fe86d6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሩቅ ወደፊት አይቶ፣ ምልክት አሳይቶ፣ ወደ ባዶው መስመር ገብቶ፣ ቀዩን መኪና አልፎ፣ በደንብ ካለፈ በኋላ ወደ መስመሩ መመለስ አለበት።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_85_68eee42235a1a885.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ሩቅ ወደፊት አይቶ፣ ምልክት አሳይቶ፣ ወደ ባዶው መስመር ገብቶ፣ ቀዩን መኪና አልፎ፣ በደንብ ካለፈ በኋላ ወደ መስመሩ መመለስ አለበት።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_90_ff893af04f63b49b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አረንጓዴውን ቀስት ብቻ መከተል አለበት።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_25_b735c6c07510cf2b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። አረንጓዴውን ቀስት ብቻ መከተል አለበት።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_30_7e27673ad7df6ddf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ቀዩ መኪና እስኪፈጥን መጠበቅ አለበት።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_24_9b1c77ce639528ad.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ቀዩ መኪና እስኪፈጥን መጠበቅ አለበት።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_29_93c0787e89cc99d1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ሩቅ ወደፊት አይቶ፣ ምልክት አሳይቶ፣ ወደ ባዶው መስመር ገብቶ፣ ቀዩን መኪና አልፎ፣ በደንብ ካለፈ በኋላ ወደ መስመሩ መመለስ አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_91_93edf1ccd3b0f8fc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ሩቅ ወደፊት አይቶ፣ ምልክት አሳይቶ፣ ወደ ባዶው መስመር ገብቶ፣ ቀዩን መኪና አልፎ፣ በደንብ ካለፈ በኋላ ወደ መስመሩ መመለስ አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_89_5e92f274c3e78d6a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ሩቅ ወደፊት አይቶ፣ ምልክት አሳይቶ፣ ወደ ባዶው መስመር ገብቶ፣ ቀዩን መኪና አልፎ፣ በደንብ ካለፈ በኋላ ወደ መስመሩ መመለስ አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_90_cb982ac8e528c143.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ሩቅ ወደፊት አይቶ፣ ምልክት አሳይቶ፣ ወደ ባዶው መስመር ገብቶ፣ ቀዩን መኪና አልፎ፣ በደንብ ካለፈ በኋላ ወደ መስመሩ መመለስ አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_89_a44d10d8d393d0d7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ሩቅ ወደፊት አይቶ፣ ምልክት አሳይቶ፣ ወደ ባዶው መስመር ገብቶ፣ ቀዩን መኪና አልፎ፣ በደንብ ካለፈ በኋላ ወደ መስመሩ መመለስ አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_90_23a1ee3b6b4b835c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ሩቅ ወደፊት አይቶ፣ ምልክት አሳይቶ፣ ወደ ባዶው መስመር ገብቶ፣ ቀዩን መኪና አልፎ፣ በደንብ ካለፈ በኋላ ወደ መስመሩ መመለስ አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_89_d2466dd0319061e2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ሩቅ ወደፊት አይቶ፣ ምልክት አሳይቶ፣ ወደ ባዶው መስመር ገብቶ፣ ቀዩን መኪና አልፎ፣ በደንብ ካለፈ በኋላ ወደ መስመሩ መመለስ አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_90_1e9bfa0064174777.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ሩቅ ወደፊት አይቶ፣ ምልክት አሳይቶ፣ ወደ ባዶው መስመር ገብቶ፣ ቀዩን መኪና አልፎ፣ በደንብ ካለፈ በኋላ ወደ መስመሩ መመለስ አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_93_63c2ad7a8e987ff6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ሩቅ ወደፊት አይቶ፣ ምልክት አሳይቶ፣ ወደ ባዶው መስመር ገብቶ፣ ቀዩን መኪና አልፎ፣ በደንብ ካለፈ በኋላ ወደ መስመሩ መመለስ አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_94_b6201aaa51884b9d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ሩቅ ወደፊት አይቶ፣ ምልክት አሳይቶ፣ ወደ ባዶው መስመር ገብቶ፣ ቀዩን መኪና አልፎ፣ በደንብ ካለፈ በኋላ ወደ መስመሩ መመለስ አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_94_bacc1efce583d0d7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ሩቅ ወደፊት አይቶ፣ ምልክት አሳይቶ፣ ወደ ባዶው መስመር ገብቶ፣ ቀዩን መኪና አልፎ፣ በደንብ ካለፈ በኋላ ወደ መስመሩ መመለስ አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_94_b7301e305d907770.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ሩቅ ወደፊት አይቶ፣ ምልክት አሳይቶ፣ ወደ ባዶው መስመር ገብቶ፣ ቀዩን መኪና አልፎ፣ በደንብ ካለፈ በኋላ ወደ መስመሩ መመለስ አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_96_1b67c848f8a69790.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ሩቅ ወደፊት አይቶ፣ ምልክት አሳይቶ፣ ወደ ባዶው መስመር ገብቶ፣ ቀዩን መኪና አልፎ፣ በደንብ ካለፈ በኋላ ወደ መስመሩ መመለስ አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_97_bcd44c305fa42353.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ሩቅ ወደፊት አይቶ፣ ምልክት አሳይቶ፣ ወደ ባዶው መስመር ገብቶ፣ ቀዩን መኪና አልፎ፣ በደንብ ካለፈ በኋላ ወደ መስመሩ መመለስ አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_101_a442abc0398564bd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ሩቅ ወደፊት አይቶ፣ ምልክት አሳይቶ፣ ወደ ባዶው መስመር ገብቶ፣ ቀዩን መኪና አልፎ፣ በደንብ ካለፈ በኋላ ወደ መስመሩ መመለስ አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_99_0544637e969adc05.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ሩቅ ወደፊት አይቶ፣ ምልክት አሳይቶ፣ ወደ ባዶው መስመር ገብቶ፣ ቀዩን መኪና አልፎ፣ በደንብ ካለፈ በኋላ ወደ መስመሩ መመለስ አለበት።",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_103_08655a8074fbea20.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በመንገዱ መሃል ያሉት ሁለቱ መስመሮች ምን ማለት ናቸው?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_35_64092d04d2101af9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ማንም ማለፍ እንደማይችል ያመለክታሉ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_23_25e46db0e2b22d00.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ማንም ማለፍ እንደማይችል ያመለክታሉ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_28_dfe2ff264c153782.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለቱም መስመሮች ማለፍ እንደሚችሉ ያመለክታሉ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_29_54472b48a8b77d98.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ሁለቱም መስመሮች ማለፍ እንደሚችሉ ያመለክታሉ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_34_6596d60e58222686.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ለአሽከርካሪው ቅርብ የሆነው መስመር ነው የሚወስነው፤ እዚህ ደግሞ የተቆራረጠ ነው።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_52_f5895d544ea3546f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ለአሽከርካሪው ቅርብ የሆነው መስመር ነው የሚወስነው፤ እዚህ ደግሞ የተቆራረጠ ነው።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_57_4bfa27dacad2f69b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ለመንገድ ማስዋቢያ ብቻ ናቸው።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_19_c743de30d7cc144b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ለመንገድ ማስዋቢያ ብቻ ናቸው።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_24_abae4974fbc37337.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ለአሽከርካሪው ቅርብ የሆነው መስመር ነው የሚወስነው፤ እዚህ ደግሞ የተቆራረጠ ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_58_c405a3a85af800b6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ለአሽከርካሪው ቅርብ የሆነው መስመር ነው የሚወስነው፤ እዚህ ደግሞ የተቆራረጠ ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_56_7d9c5d0876a8e9e0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ለአሽከርካሪው ቅርብ የሆነው መስመር ነው የሚወስነው፤ እዚህ ደግሞ የተቆራረጠ ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_57_0168c990e3d4d469.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ለአሽከርካሪው ቅርብ የሆነው መስመር ነው የሚወስነው፤ እዚህ ደግሞ የተቆራረጠ ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_56_2151b0e8ec0d2e7d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ለአሽከርካሪው ቅርብ የሆነው መስመር ነው የሚወስነው፤ እዚህ ደግሞ የተቆራረጠ ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_57_ea41e60282196796.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ለአሽከርካሪው ቅርብ የሆነው መስመር ነው የሚወስነው፤ እዚህ ደግሞ የተቆራረጠ ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_56_568ed3f0925f3568.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ለአሽከርካሪው ቅርብ የሆነው መስመር ነው የሚወስነው፤ እዚህ ደግሞ የተቆራረጠ ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_57_c68228c842d1879d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ለአሽከርካሪው ቅርብ የሆነው መስመር ነው የሚወስነው፤ እዚህ ደግሞ የተቆራረጠ ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_60_24f77ed21113d1fc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ለአሽከርካሪው ቅርብ የሆነው መስመር ነው የሚወስነው፤ እዚህ ደግሞ የተቆራረጠ ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_61_6515c0789e5a7077.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ለአሽከርካሪው ቅርብ የሆነው መስመር ነው የሚወስነው፤ እዚህ ደግሞ የተቆራረጠ ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_61_6736a1c8bffd2e7d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ለአሽከርካሪው ቅርብ የሆነው መስመር ነው የሚወስነው፤ እዚህ ደግሞ የተቆራረጠ ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_61_58543c10383eefba.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ለአሽከርካሪው ቅርብ የሆነው መስመር ነው የሚወስነው፤ እዚህ ደግሞ የተቆራረጠ ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_63_e793292a45dc86da.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ለአሽከርካሪው ቅርብ የሆነው መስመር ነው የሚወስነው፤ እዚህ ደግሞ የተቆራረጠ ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_64_88fcabaf7a181879.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ለአሽከርካሪው ቅርብ የሆነው መስመር ነው የሚወስነው፤ እዚህ ደግሞ የተቆራረጠ ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_68_12ef574894488e17.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ለአሽከርካሪው ቅርብ የሆነው መስመር ነው የሚወስነው፤ እዚህ ደግሞ የተቆራረጠ ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_66_d44cb263b5c303ef.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ለአሽከርካሪው ቅርብ የሆነው መስመር ነው የሚወስነው፤ እዚህ ደግሞ የተቆራረጠ ነው።",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_70_da53d0c210ee7cea.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:10:38.374Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "vk_l5_s3",
+   "key": "vehicle_knowledge_4_2",
+   "sentences": [
+    {
+     "text": "የሞተር ማቀዝቀዣ ፈሳሽ ዋና ተግባር ምንድን ነው?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_31_9d624c2818d4e1ac.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሞተሩን ማጽዳት",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_9_a4d71ae01143f497.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ሞተሩን ማጽዳት",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_14_1445c2d0ca4d4b95.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የሞተር ክፍሎችን መቀባት",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_15_2f0056f822c05f86.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። የሞተር ክፍሎችን መቀባት",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_20_7aec83e8c578bf98.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሞተሩ ከመጠን በላይ እንዳይሞቅ መከላከል",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_25_888b43945f0c414a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ሞተሩ ከመጠን በላይ እንዳይሞቅ መከላከል",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_30_a7c4900c8bfdd6fe.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናው በፍጥነት እንዲሄድ ማድረግ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_21_b6ff9228909c443c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። መኪናው በፍጥነት እንዲሄድ ማድረግ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_26_dd672db08ebd1c40.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ሞተሩ ከመጠን በላይ እንዳይሞቅ መከላከል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_31_2eabd3ff392694f3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ሞተሩ ከመጠን በላይ እንዳይሞቅ መከላከል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_29_d80fc843d8cb45e5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ሞተሩ ከመጠን በላይ እንዳይሞቅ መከላከል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_30_f9f3b1bf481a4c8c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ሞተሩ ከመጠን በላይ እንዳይሞቅ መከላከል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_29_bb94bd204d66cf18.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ሞተሩ ከመጠን በላይ እንዳይሞቅ መከላከል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_30_9159de043b0cbdd3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ሞተሩ ከመጠን በላይ እንዳይሞቅ መከላከል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_29_e08203dc87c0246d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ሞተሩ ከመጠን በላይ እንዳይሞቅ መከላከል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_30_d712bbab3cb4c938.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ሞተሩ ከመጠን በላይ እንዳይሞቅ መከላከል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_33_447830e7d86aeb79.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ሞተሩ ከመጠን በላይ እንዳይሞቅ መከላከል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_34_3a7e9ea8804a5052.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ሞተሩ ከመጠን በላይ እንዳይሞቅ መከላከል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_34_7241a5b85756cf18.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ሞተሩ ከመጠን በላይ እንዳይሞቅ መከላከል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_34_eb072c28cea2087f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ሞተሩ ከመጠን በላይ እንዳይሞቅ መከላከል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_36_a7d2b7c88642c51f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ሞተሩ ከመጠን በላይ እንዳይሞቅ መከላከል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_37_150427b06a646a9c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ሞተሩ ከመጠን በላይ እንዳይሞቅ መከላከል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_41_46f68e5fa42c77f2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ሞተሩ ከመጠን በላይ እንዳይሞቅ መከላከል",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_39_6ecd927c0ab7b4ca.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ሞተሩ ከመጠን በላይ እንዳይሞቅ መከላከል",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_43_dae7834c76a5d82f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እያሽከረከሩ ሳሉ የሞተር ሙቀት ማስጠንቀቂያ መብራት ከበራ ምን ማድረግ አለብዎት?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_51_de66b81862797f72.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ወደ ቅርብ ጋራዥ መንዳትዎን መቀጠል",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_22_d3e3dff8f81b28f0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ወደ ቅርብ ጋራዥ መንዳትዎን መቀጠል",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_27_66302f7056e2de32.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ወዲያውኑ ማቆም እና ሞተሩን ማጥፋት",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_22_47186dccdd9f8fac.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ወዲያውኑ ማቆም እና ሞተሩን ማጥፋት",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_27_56474db843098bf2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሙቀትን ለመልቀቅ የማቀዝቀዣውን ክዳን መክፈት",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_28_bfb9f61ba56b4432.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ሙቀትን ለመልቀቅ የማቀዝቀዣውን ክዳን መክፈት",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_33_0f90ead88d36e3c6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ተጨማሪ ነዳጅ መጨመር",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_13_ec0b39cff45ddf4f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ተጨማሪ ነዳጅ መጨመር",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_18_6a60dddcd9742bf3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ወዲያውኑ ማቆም እና ሞተሩን ማጥፋት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_28_b56feec05ab8ec35.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ወዲያውኑ ማቆም እና ሞተሩን ማጥፋት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_26_36e24e48371dece3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ወዲያውኑ ማቆም እና ሞተሩን ማጥፋት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_27_b5ffad28291c49aa.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ወዲያውኑ ማቆም እና ሞተሩን ማጥፋት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_26_0a268b68e5303dbe.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ወዲያውኑ ማቆም እና ሞተሩን ማጥፋት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_27_97cc2c64b0437395.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ወዲያውኑ ማቆም እና ሞተሩን ማጥፋት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_26_d5b74188e82daf6b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ወዲያውኑ ማቆም እና ሞተሩን ማጥፋት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_27_670ce258f3554b5e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ወዲያውኑ ማቆም እና ሞተሩን ማጥፋት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_30_51f2f4e0b2d1beff.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ወዲያውኑ ማቆም እና ሞተሩን ማጥፋት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_31_38b43be054ffdfb4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ወዲያውኑ ማቆም እና ሞተሩን ማጥፋት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_31_b4616068b5203dbe.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ወዲያውኑ ማቆም እና ሞተሩን ማጥፋት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_31_8f899b3c5fdf3539.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ወዲያውኑ ማቆም እና ሞተሩን ማጥፋት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_33_a6c9cf570cc4de59.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ወዲያውኑ ማቆም እና ሞተሩን ማጥፋት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_34_188d970095bd09ba.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ወዲያውኑ ማቆም እና ሞተሩን ማጥፋት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_38_05a587184d8a4bd4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ወዲያውኑ ማቆም እና ሞተሩን ማጥፋት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_36_07f8b804d22d7c2c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ወዲያውኑ ማቆም እና ሞተሩን ማጥፋት",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_40_bb9180d4adb6b7e9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የማቀዝቀዣውን ክዳን መክፈት አደገኛ የሚሆነው መቼ ነው?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_35_b687dabccf6e877f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሞተሩ ሲቀዘቅዝ",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_9_50824b68b44aa690.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ሞተሩ ሲቀዘቅዝ",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_14_49b7950827d40612.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናው ሲቆም ሲሆን",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_12_184ef7443b1d6901.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። መኪናው ሲቆም ሲሆን",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_17_cf6c61bd65a2dcdf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሞተሩ ሲሞቅ",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_7_c77a3a346bd4f76b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ሞተሩ ሲሞቅ",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_12_57b05a80620bdd5f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናው ቀስ ብሎ ሲሄድ",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_14_65c21d64a71a3eb4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። መኪናው ቀስ ብሎ ሲሄድ",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_19_04180f8bf998ab48.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ሞተሩ ሲሞቅ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_13_4a18990c0e7b6dd2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ሞተሩ ሲሞቅ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_11_a905a93c821ddb44.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ሞተሩ ሲሞቅ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_12_5f4e3c7c3fd9872d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ሞተሩ ሲሞቅ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_11_5b89a73ce95deab9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ሞተሩ ሲሞቅ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_12_413911d466142672.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ሞተሩ ሲሞቅ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_11_cb2b0f64f21a9acc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ሞተሩ ሲሞቅ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_12_df19e4d31e970d19.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ሞተሩ ሲሞቅ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_15_2135cd442e9119d8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ሞተሩ ሲሞቅ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_16_967166c49a671e73.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ሞተሩ ሲሞቅ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_16_a8144d85d74deab9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ሞተሩ ሲሞቅ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_16_4eefa318bc40865e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ሞተሩ ሲሞቅ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_18_8198ce0bcb98dcbe.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ሞተሩ ሲሞቅ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_19_f0f927d0a501593d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ሞተሩ ሲሞቅ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_23_dadd57c0074a9e53.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ሞተሩ ሲሞቅ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_21_85fa8574088781eb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ሞተሩ ሲሞቅ",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_25_9e16521fb000d40e.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

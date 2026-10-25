@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:15:53.344Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "mv_l1_s2",
+   "key": "my_vehicle_0_1",
+   "sentences": [
+    {
+     "text": "ድንገተኛ ብሬክ መጫን የሚፈቀደው መቼ ነው?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_27_7f9764c0f2b3d3c5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በማንኛውም ጊዜ ብሬክ መጫን ሲፈልጉ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_23_cf6ec480d19d4a28.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። በማንኛውም ጊዜ ብሬክ መጫን ሲፈልጉ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_28_0162ea9ee6bac82a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አደጋን በሌላ መንገድ መከላከል በማይቻልበት ጊዜ ብቻ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_34_9eb220c81f86157d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። አደጋን በሌላ መንገድ መከላከል በማይቻልበት ጊዜ ብቻ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_39_9bce213894419023.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከኋላዎ ያለውን መኪና ለማስጠንቀቅ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_22_8872257e762cacad.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ከኋላዎ ያለውን መኪና ለማስጠንቀቅ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_27_4d2d13eecef05a59.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ፍጥነትዎን ለመቀነስ ሲፈልጉ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_18_492ec56ee2a8eefa.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ፍጥነትዎን ለመቀነስ ሲፈልጉ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_23_2806d1c22cadc7c6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! አደጋን በሌላ መንገድ መከላከል በማይቻልበት ጊዜ ብቻ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_40_ff7ea8886918cae4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! አደጋን በሌላ መንገድ መከላከል በማይቻልበት ጊዜ ብቻ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_38_3b628c68ece41d32.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! አደጋን በሌላ መንገድ መከላከል በማይቻልበት ጊዜ ብቻ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_39_ad1f5a09a8e851fb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! አደጋን በሌላ መንገድ መከላከል በማይቻልበት ጊዜ ብቻ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_38_aff2b220cafd72ef.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! አደጋን በሌላ መንገድ መከላከል በማይቻልበት ጊዜ ብቻ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_39_eb4617e0e34bd604.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! አደጋን በሌላ መንገድ መከላከል በማይቻልበት ጊዜ ብቻ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_38_bc6b7b400fb26aba.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! አደጋን በሌላ መንገድ መከላከል በማይቻልበት ጊዜ ብቻ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_39_7e4203ea544d144f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! አደጋን በሌላ መንገድ መከላከል በማይቻልበት ጊዜ ብቻ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_42_08bf8e4866c2d22e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! አደጋን በሌላ መንገድ መከላከል በማይቻልበት ጊዜ ብቻ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_43_423dafee9bc07565.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! አደጋን በሌላ መንገድ መከላከል በማይቻልበት ጊዜ ብቻ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_43_cac8dde202ed72ef.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! አደጋን በሌላ መንገድ መከላከል በማይቻልበት ጊዜ ብቻ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_43_91d7e906fd42fae8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! አደጋን በሌላ መንገድ መከላከል በማይቻልበት ጊዜ ብቻ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_45_d33cb080b29764c8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! አደጋን በሌላ መንገድ መከላከል በማይቻልበት ጊዜ ብቻ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_46_880e2b6875ea8deb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! አደጋን በሌላ መንገድ መከላከል በማይቻልበት ጊዜ ብቻ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_50_2adddcf044836245.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! አደጋን በሌላ መንገድ መከላከል በማይቻልበት ጊዜ ብቻ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_48_571c2040c15e26fd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: አደጋን በሌላ መንገድ መከላከል በማይቻልበት ጊዜ ብቻ።",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_52_c7e84fe6da07d5b8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪና በድንገት ብሬክ ሲጫን ጎማዎቹ ሲቆለፉ አደገኛ የሚሆነው ለምንድን ነው?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_48_66adf05cf97ea56e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎማዎቹ ስለሚሞቁ።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_11_a1cf592039b3f53d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ጎማዎቹ ስለሚሞቁ።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_16_547a39b866cb01bf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናው ስለሚንሸራተት እና መሪውን መቆጣጠር ስለማይቻል አደጋውን ማስወገድ አይቻልም።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_53_a7f4d15a4e1e5a60.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። መኪናው ስለሚንሸራተት እና መሪውን መቆጣጠር ስለማይቻል አደጋውን ማስወገድ አይቻልም።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_58_675a837c9aa28f7e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የብሬክ ሲስተሙ ስለሚበላሽ።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_17_bc0352fa0d93e434.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የብሬክ ሲስተሙ ስለሚበላሽ።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_22_238c521aca4219c0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ነዳጅ ስለሚያልቅ።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_11_5817177061a99825.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ነዳጅ ስለሚያልቅ።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_16_cc13e3382167b599.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! መኪናው ስለሚንሸራተት እና መሪውን መቆጣጠር ስለማይቻል አደጋውን ማስወገድ አይቻልም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_59_06d8216a236d95d9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! መኪናው ስለሚንሸራተት እና መሪውን መቆጣጠር ስለማይቻል አደጋውን ማስወገድ አይቻልም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_57_30ad4bf8cbea1a4f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! መኪናው ስለሚንሸራተት እና መሪውን መቆጣጠር ስለማይቻል አደጋውን ማስወገድ አይቻልም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_58_8f396fca3c016426.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! መኪናው ስለሚንሸራተት እና መሪውን መቆጣጠር ስለማይቻል አደጋውን ማስወገድ አይቻልም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_57_9bd25b405eaa61b2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! መኪናው ስለሚንሸራተት እና መሪውን መቆጣጠር ስለማይቻል አደጋውን ማስወገድ አይቻልም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_58_314da0bfcfd15ff9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! መኪናው ስለሚንሸራተት እና መሪውን መቆጣጠር ስለማይቻል አደጋውን ማስወገድ አይቻልም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_57_a645efc098ae54c7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! መኪናው ስለሚንሸራተት እና መሪውን መቆጣጠር ስለማይቻል አደጋውን ማስወገድ አይቻልም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_58_3f195370c95bea92.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! መኪናው ስለሚንሸራተት እና መሪውን መቆጣጠር ስለማይቻል አደጋውን ማስወገድ አይቻልም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_61_92dcdba0dc6e24d3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! መኪናው ስለሚንሸራተት እና መሪውን መቆጣጠር ስለማይቻል አደጋውን ማስወገድ አይቻልም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_62_d6e405eb473c1378.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! መኪናው ስለሚንሸራተት እና መሪውን መቆጣጠር ስለማይቻል አደጋውን ማስወገድ አይቻልም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_62_8b235d76b09a61b2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! መኪናው ስለሚንሸራተት እና መሪውን መቆጣጠር ስለማይቻል አደጋውን ማስወገድ አይቻልም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_62_77ff627a89005455.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! መኪናው ስለሚንሸራተት እና መሪውን መቆጣጠር ስለማይቻል አደጋውን ማስወገድ አይቻልም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_64_a1c1a6a820e69035.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! መኪናው ስለሚንሸራተት እና መሪውን መቆጣጠር ስለማይቻል አደጋውን ማስወገድ አይቻልም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_65_2f6d8e5eea575636.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! መኪናው ስለሚንሸራተት እና መሪውን መቆጣጠር ስለማይቻል አደጋውን ማስወገድ አይቻልም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_69_b2b2eaf8a8accdd8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! መኪናው ስለሚንሸራተት እና መሪውን መቆጣጠር ስለማይቻል አደጋውን ማስወገድ አይቻልም።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_67_cb6d17384a9b79e0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: መኪናው ስለሚንሸራተት እና መሪውን መቆጣጠር ስለማይቻል አደጋውን ማስወገድ አይቻልም።",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_71_814127f05cd38705.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ አሽከርካሪ በድንገተኛ ሁኔታ ብሬክ መጫን ሲኖርበት ወዲያውኑ ምን ማድረግ አለበት?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_55_d18f92d4cb84944b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የብሬክ ፔዳሉን ቀስ ብለው ይጫኑ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_21_9933f040531dfe32.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። የብሬክ ፔዳሉን ቀስ ብለው ይጫኑ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_26_eec060daa95004b0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የብሬክ ፔዳሉን አጥብቀው ይጫኑ እና አይለቁትም።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_30_f12ea146ffd08510.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። የብሬክ ፔዳሉን አጥብቀው ይጫኑ እና አይለቁትም።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_35_7db779789c81eb4e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መሪውን ብቻ ያዙሩ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_12_f9f2deba4ccf53c8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። መሪውን ብቻ ያዙሩ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_17_22df99fec6c3193c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናውን ያቁሙና እርዳታ ይጠብቁ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_21_99cb4da266636f9f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። መኪናውን ያቁሙና እርዳታ ይጠብቁ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_26_de44cd3e386e77e3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! የብሬክ ፔዳሉን አጥብቀው ይጫኑ እና አይለቁትም።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_36_006a8f6aa74d8709.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! የብሬክ ፔዳሉን አጥብቀው ይጫኑ እና አይለቁትም።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_34_9381cb96b6d002df.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! የብሬክ ፔዳሉን አጥብቀው ይጫኑ እና አይለቁትም።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_35_6a7381a0a01fbf16.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! የብሬክ ፔዳሉን አጥብቀው ይጫኑ እና አይለቁትም።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_34_55b92894ffd33602.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! የብሬክ ፔዳሉን አጥብቀው ይጫኑ እና አይለቁትም።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_35_9b338f06624b6329.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! የብሬክ ፔዳሉን አጥብቀው ይጫኑ እና አይለቁትም።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_34_1aa035a80f0a1157.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! የብሬክ ፔዳሉን አጥብቀው ይጫኑ እና አይለቁትም።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_35_398a5140a01cf7e2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! የብሬክ ፔዳሉን አጥብቀው ይጫኑ እና አይለቁትም።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_38_6d731898445ed5c3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! የብሬክ ፔዳሉን አጥብቀው ይጫኑ እና አይለቁትም።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_39_66784ec8abfff708.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! የብሬክ ፔዳሉን አጥብቀው ይጫኑ እና አይለቁትም።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_39_04242228bfc33602.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! የብሬክ ፔዳሉን አጥብቀው ይጫኑ እና አይለቁትም።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_39_a3297878c3c13305.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! የብሬክ ፔዳሉን አጥብቀው ይጫኑ እና አይለቁትም።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_41_c953b524f4bc9ee5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! የብሬክ ፔዳሉን አጥብቀው ይጫኑ እና አይለቁትም።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_42_7e3dcf9889e7c306.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! የብሬክ ፔዳሉን አጥብቀው ይጫኑ እና አይለቁትም።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_46_d517007876295268.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! የብሬክ ፔዳሉን አጥብቀው ይጫኑ እና አይለቁትም።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_44_8d0e4f68ee4cf390.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: የብሬክ ፔዳሉን አጥብቀው ይጫኑ እና አይለቁትም።",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_48_505137480bf41cd5.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

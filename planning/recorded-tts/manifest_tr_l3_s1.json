@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:15:03.427Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "tr_l3_s1",
+   "key": "the_road_2_0",
+   "sentences": [
+    {
+     "text": "አሽከርካሪ ከከፍተኛ መብራት ወደ ዝቅተኛ መብራት መቀየር ያለበት በየትኞቹ ሁኔታዎች ነው?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_56_3847a80823041217.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሌላ መኪና ከፊት ለፊት ሲመጣ፣ ከሌላ መኪና ኋላ በሚያሽከረክሩበት ጊዜ ከፍተኛ መብራትዎ ከፊትዎ ባለው መኪና ኋላ ላይ ሲያርፍ፣ መኪናውን ሲያቆሙ እና በደንብ ብርሃን ባለበት የከተማ መንገድ ላይ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_123_c9e2eda2cc0e5dbb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ሌላ መኪና ከፊት ለፊት ሲመጣ፣ ከሌላ መኪና ኋላ በሚያሽከረክሩበት ጊዜ ከፍተኛ መብራትዎ ከፊትዎ ባለው መኪና ኋላ ላይ ሲያርፍ፣ መኪናውን ሲያቆሙ እና በደንብ ብርሃን ባለበት የከተማ መንገድ ላይ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_128_c568c3f831544939.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁልጊዜ በከተማ ውስጥ በሚያሽከረክሩበት ጊዜ ብቻ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_31_7360b6d86b15c076.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ሁልጊዜ በከተማ ውስጥ በሚያሽከረክሩበት ጊዜ ብቻ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_36_63e1a306afd7e968.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከፊትዎ ያለው መኪና በጣም ቀርፋፋ ሲሆን።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_26_30a56c18bfce15a3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ከፊትዎ ያለው መኪና በጣም ቀርፋፋ ሲሆን።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_31_d526a022a9bf1197.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጠራራ ፀሐይ በሚያሽከረክሩበት ጊዜ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_23_9260b8d09aba20b1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። በጠራራ ፀሐይ በሚያሽከረክሩበት ጊዜ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_28_836c868ee47058cd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ሌላ መኪና ከፊት ለፊት ሲመጣ፣ ከሌላ መኪና ኋላ በሚያሽከረክሩበት ጊዜ ከፍተኛ መብራትዎ ከፊትዎ ባለው መኪና ኋላ ላይ ሲያርፍ፣ መኪናውን ሲያቆሙ እና በደንብ ብርሃን ባለበት የከተማ መንገድ ላይ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_129_4677029678055382.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ሌላ መኪና ከፊት ለፊት ሲመጣ፣ ከሌላ መኪና ኋላ በሚያሽከረክሩበት ጊዜ ከፍተኛ መብራትዎ ከፊትዎ ባለው መኪና ኋላ ላይ ሲያርፍ፣ መኪናውን ሲያቆሙ እና በደንብ ብርሃን ባለበት የከተማ መንገድ ላይ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_127_558606c80cee8414.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ሌላ መኪና ከፊት ለፊት ሲመጣ፣ ከሌላ መኪና ኋላ በሚያሽከረክሩበት ጊዜ ከፍተኛ መብራትዎ ከፊትዎ ባለው መኪና ኋላ ላይ ሲያርፍ፣ መኪናውን ሲያቆሙ እና በደንብ ብርሃን ባለበት የከተማ መንገድ ላይ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_128_39feab56dd23c8fd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ሌላ መኪና ከፊት ለፊት ሲመጣ፣ ከሌላ መኪና ኋላ በሚያሽከረክሩበት ጊዜ ከፍተኛ መብራትዎ ከፊትዎ ባለው መኪና ኋላ ላይ ሲያርፍ፣ መኪናውን ሲያቆሙ እና በደንብ ብርሃን ባለበት የከተማ መንገድ ላይ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_127_2b67cfef6be6f569.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ሌላ መኪና ከፊት ለፊት ሲመጣ፣ ከሌላ መኪና ኋላ በሚያሽከረክሩበት ጊዜ ከፍተኛ መብራትዎ ከፊትዎ ባለው መኪና ኋላ ላይ ሲያርፍ፣ መኪናውን ሲያቆሙ እና በደንብ ብርሃን ባለበት የከተማ መንገድ ላይ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_128_afc0041e241f53a2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ሌላ መኪና ከፊት ለፊት ሲመጣ፣ ከሌላ መኪና ኋላ በሚያሽከረክሩበት ጊዜ ከፍተኛ መብራትዎ ከፊትዎ ባለው መኪና ኋላ ላይ ሲያርፍ፣ መኪናውን ሲያቆሙ እና በደንብ ብርሃን ባለበት የከተማ መንገድ ላይ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_127_75f0a5b096f2d09c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ሌላ መኪና ከፊት ለፊት ሲመጣ፣ ከሌላ መኪና ኋላ በሚያሽከረክሩበት ጊዜ ከፍተኛ መብራትዎ ከፊትዎ ባለው መኪና ኋላ ላይ ሲያርፍ፣ መኪናውን ሲያቆሙ እና በደንብ ብርሃን ባለበት የከተማ መንገድ ላይ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_128_406ae2767bfe14c9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ሌላ መኪና ከፊት ለፊት ሲመጣ፣ ከሌላ መኪና ኋላ በሚያሽከረክሩበት ጊዜ ከፍተኛ መብራትዎ ከፊትዎ ባለው መኪና ኋላ ላይ ሲያርፍ፣ መኪናውን ሲያቆሙ እና በደንብ ብርሃን ባለበት የከተማ መንገድ ላይ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_131_f874036e3099f388.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ሌላ መኪና ከፊት ለፊት ሲመጣ፣ ከሌላ መኪና ኋላ በሚያሽከረክሩበት ጊዜ ከፍተኛ መብራትዎ ከፊትዎ ባለው መኪና ኋላ ላይ ሲያርፍ፣ መኪናውን ሲያቆሙ እና በደንብ ብርሃን ባለበት የከተማ መንገድ ላይ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_132_a4f058aedc61c0a3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ሌላ መኪና ከፊት ለፊት ሲመጣ፣ ከሌላ መኪና ኋላ በሚያሽከረክሩበት ጊዜ ከፍተኛ መብራትዎ ከፊትዎ ባለው መኪና ኋላ ላይ ሲያርፍ፣ መኪናውን ሲያቆሙ እና በደንብ ብርሃን ባለበት የከተማ መንገድ ላይ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_132_c4dc25d2f1d6f569.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ሌላ መኪና ከፊት ለፊት ሲመጣ፣ ከሌላ መኪና ኋላ በሚያሽከረክሩበት ጊዜ ከፍተኛ መብራትዎ ከፊትዎ ባለው መኪና ኋላ ላይ ሲያርፍ፣ መኪናውን ሲያቆሙ እና በደንብ ብርሃን ባለበት የከተማ መንገድ ላይ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_132_4b22cf72491a8f0e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ሌላ መኪና ከፊት ለፊት ሲመጣ፣ ከሌላ መኪና ኋላ በሚያሽከረክሩበት ጊዜ ከፍተኛ መብራትዎ ከፊትዎ ባለው መኪና ኋላ ላይ ሲያርፍ፣ መኪናውን ሲያቆሙ እና በደንብ ብርሃን ባለበት የከተማ መንገድ ላይ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_134_564ac850570d806e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ሌላ መኪና ከፊት ለፊት ሲመጣ፣ ከሌላ መኪና ኋላ በሚያሽከረክሩበት ጊዜ ከፍተኛ መብራትዎ ከፊትዎ ባለው መኪና ኋላ ላይ ሲያርፍ፣ መኪናውን ሲያቆሙ እና በደንብ ብርሃን ባለበት የከተማ መንገድ ላይ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_135_dd531e68c41b66ed.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ሌላ መኪና ከፊት ለፊት ሲመጣ፣ ከሌላ መኪና ኋላ በሚያሽከረክሩበት ጊዜ ከፍተኛ መብራትዎ ከፊትዎ ባለው መኪና ኋላ ላይ ሲያርፍ፣ መኪናውን ሲያቆሙ እና በደንብ ብርሃን ባለበት የከተማ መንገድ ላይ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_139_6a0d9bd02b433583.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ሌላ መኪና ከፊት ለፊት ሲመጣ፣ ከሌላ መኪና ኋላ በሚያሽከረክሩበት ጊዜ ከፍተኛ መብራትዎ ከፊትዎ ባለው መኪና ኋላ ላይ ሲያርፍ፣ መኪናውን ሲያቆሙ እና በደንብ ብርሃን ባለበት የከተማ መንገድ ላይ።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_137_f2e9e608ac84ef3b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ሌላ መኪና ከፊት ለፊት ሲመጣ፣ ከሌላ መኪና ኋላ በሚያሽከረክሩበት ጊዜ ከፍተኛ መብራትዎ ከፊትዎ ባለው መኪና ኋላ ላይ ሲያርፍ፣ መኪናውን ሲያቆሙ እና በደንብ ብርሃን ባለበት የከተማ መንገድ ላይ።",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_141_96440f08e47f035e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከፊት ለፊትዎ የሚመጣ አሽከርካሪ በከፍተኛ መብራቱ ካሳወረዎት ምን ማድረግ አለብዎት?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_53_636e11f0f51b9dbb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ፍጥነትዎን ይጨምሩ እና ወደ መብራቱ በቀጥታ ይመልከቱ።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_34_42bebdc05958dd3e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ፍጥነትዎን ይጨምሩ እና ወደ መብራቱ በቀጥታ ይመልከቱ።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_39_d3ea24cb8923857c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ፍጥነትዎን ይቀንሱ እና በቀጥታ ወደሚያሳውረው መብራት ከማየት ይልቅ ወደ መንገዱ ቀኝ ዳርቻ ይመልከቱ፣ አይኖችዎ እስኪስተካከሉ ድረስ።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_84_3cd0311806fe19e1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ፍጥነትዎን ይቀንሱ እና በቀጥታ ወደሚያሳውረው መብራት ከማየት ይልቅ ወደ መንገዱ ቀኝ ዳርቻ ይመልከቱ፣ አይኖችዎ እስኪስተካከሉ ድረስ።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_89_67b30aa67442e5bf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መብራቱን መልሰው በማብራት አሽከርካሪውን ያሳውሩ።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_31_d35d1e528e34a160.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። መብራቱን መልሰው በማብራት አሽከርካሪውን ያሳውሩ።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_36_c8d97c6ecc0b5cd4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናውን ወዲያውኑ ያቁሙ።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_16_43d3fe8ecbef8220.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። መኪናውን ወዲያውኑ ያቁሙ።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_21_842020b49d00899c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ፍጥነትዎን ይቀንሱ እና በቀጥታ ወደሚያሳውረው መብራት ከማየት ይልቅ ወደ መንገዱ ቀኝ ዳርቻ ይመልከቱ፣ አይኖችዎ እስኪስተካከሉ ድረስ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_90_8c3798423c597578.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ፍጥነትዎን ይቀንሱ እና በቀጥታ ወደሚያሳውረው መብራት ከማየት ይልቅ ወደ መንገዱ ቀኝ ዳርቻ ይመልከቱ፣ አይኖችዎ እስኪስተካከሉ ድረስ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_88_cceaa7f3fc7e52ae.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ፍጥነትዎን ይቀንሱ እና በቀጥታ ወደሚያሳውረው መብራት ከማየት ይልቅ ወደ መንገዱ ቀኝ ዳርቻ ይመልከቱ፣ አይኖችዎ እስኪስተካከሉ ድረስ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_89_3f13757ceabc9567.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ፍጥነትዎን ይቀንሱ እና በቀጥታ ወደሚያሳውረው መብራት ከማየት ይልቅ ወደ መንገዱ ቀኝ ዳርቻ ይመልከቱ፣ አይኖችዎ እስኪስተካከሉ ድረስ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_88_44c86de49cbef073.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ፍጥነትዎን ይቀንሱ እና በቀጥታ ወደሚያሳውረው መብራት ከማየት ይልቅ ወደ መንገዱ ቀኝ ዳርቻ ይመልከቱ፣ አይኖችዎ እስኪስተካከሉ ድረስ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_89_8fd56c781ce59458.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ፍጥነትዎን ይቀንሱ እና በቀጥታ ወደሚያሳውረው መብራት ከማየት ይልቅ ወደ መንገዱ ቀኝ ዳርቻ ይመልከቱ፣ አይኖችዎ እስኪስተካከሉ ድረስ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_88_5886f79066d70126.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ፍጥነትዎን ይቀንሱ እና በቀጥታ ወደሚያሳውረው መብራት ከማየት ይልቅ ወደ መንገዱ ቀኝ ዳርቻ ይመልከቱ፣ አይኖችዎ እስኪስተካከሉ ድረስ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_89_5acc4964be279193.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ፍጥነትዎን ይቀንሱ እና በቀጥታ ወደሚያሳውረው መብራት ከማየት ይልቅ ወደ መንገዱ ቀኝ ዳርቻ ይመልከቱ፣ አይኖችዎ እስኪስተካከሉ ድረስ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_92_160b5f62140e01b2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ፍጥነትዎን ይቀንሱ እና በቀጥታ ወደሚያሳውረው መብራት ከማየት ይልቅ ወደ መንገዱ ቀኝ ዳርቻ ይመልከቱ፣ አይኖችዎ እስኪስተካከሉ ድረስ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_93_b0dfb9502427a5f9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ፍጥነትዎን ይቀንሱ እና በቀጥታ ወደሚያሳውረው መብራት ከማየት ይልቅ ወደ መንገዱ ቀኝ ዳርቻ ይመልከቱ፣ አይኖችዎ እስኪስተካከሉ ድረስ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_93_633170e830aef073.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ፍጥነትዎን ይቀንሱ እና በቀጥታ ወደሚያሳውረው መብራት ከማየት ይልቅ ወደ መንገዱ ቀኝ ዳርቻ ይመልከቱ፣ አይኖችዎ እስኪስተካከሉ ድረስ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_93_ce4b982caf498974.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ፍጥነትዎን ይቀንሱ እና በቀጥታ ወደሚያሳውረው መብራት ከማየት ይልቅ ወደ መንገዱ ቀኝ ዳርቻ ይመልከቱ፣ አይኖችዎ እስኪስተካከሉ ድረስ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_95_4b9cf18c21226614.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ፍጥነትዎን ይቀንሱ እና በቀጥታ ወደሚያሳውረው መብራት ከማየት ይልቅ ወደ መንገዱ ቀኝ ዳርቻ ይመልከቱ፣ አይኖችዎ እስኪስተካከሉ ድረስ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_96_260f3e567489bd77.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ፍጥነትዎን ይቀንሱ እና በቀጥታ ወደሚያሳውረው መብራት ከማየት ይልቅ ወደ መንገዱ ቀኝ ዳርቻ ይመልከቱ፣ አይኖችዎ እስኪስተካከሉ ድረስ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_100_36694136b12aa999.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ፍጥነትዎን ይቀንሱ እና በቀጥታ ወደሚያሳውረው መብራት ከማየት ይልቅ ወደ መንገዱ ቀኝ ዳርቻ ይመልከቱ፣ አይኖችዎ እስኪስተካከሉ ድረስ።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_98_e2fcb1bee9ab8261.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ፍጥነትዎን ይቀንሱ እና በቀጥታ ወደሚያሳውረው መብራት ከማየት ይልቅ ወደ መንገዱ ቀኝ ዳርቻ ይመልከቱ፣ አይኖችዎ እስኪስተካከሉ ድረስ።",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_102_d683420a966a1824.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በሌሊት ፍጥነትዎን ከመብራቶችዎ ብርሃን ጋር በማስተካከል ረገድ በጣም አስፈላጊው ህግ ምንድነው?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_60_c744e2457eea167e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መብራቶችዎ ከሚያበሩት ርቀት በላይ ማየት እንደሚችሉ ማሰብ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_37_31d27314a7e77509.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። መብራቶችዎ ከሚያበሩት ርቀት በላይ ማየት እንደሚችሉ ማሰብ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_42_3f8bba8042189e8b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በሚበራው ርቀት ውስጥ በደህና ማቆም እንዲችሉ ፍጥነትዎን ማስተካከል አለብዎት፣ መብራቱ ከሚደርስበት በላይ ማየት እንደሚችሉ በፍጹም ማሰብ የለብዎትም።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_94_b30d5400affaa31f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። በሚበራው ርቀት ውስጥ በደህና ማቆም እንዲችሉ ፍጥነትዎን ማስተካከል አለብዎት፣ መብራቱ ከሚደርስበት በላይ ማየት እንደሚችሉ በፍጹም ማሰብ የለብዎትም።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_99_89c9ba4a04a1fbc1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁልጊዜ በተቻለ መጠን በፍጥነት ማሽከርከር።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_27_6ef614f88b1b43d8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ሁልጊዜ በተቻለ መጠን በፍጥነት ማሽከርከር።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_32_2ddd9c303ed924ec.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የሌሎች መኪናዎችን መብራት በመጠቀም የራስዎን ፍጥነት ማስተካከል።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_41_4bbd3d20b8590a01.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። የሌሎች መኪናዎችን መብራት በመጠቀም የራስዎን ፍጥነት ማስተካከል።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_46_c7ad0b409d9837fd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! በሚበራው ርቀት ውስጥ በደህና ማቆም እንዲችሉ ፍጥነትዎን ማስተካከል አለብዎት፣ መብራቱ ከሚደርስበት በላይ ማየት እንደሚችሉ በፍጹም ማሰብ የለብዎትም።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_100_a2296e568af5b7c6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! በሚበራው ርቀት ውስጥ በደህና ማቆም እንዲችሉ ፍጥነትዎን ማስተካከል አለብዎት፣ መብራቱ ከሚደርስበት በላይ ማየት እንደሚችሉ በፍጹም ማሰብ የለብዎትም።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_98_61b42f4e696c8b10.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! በሚበራው ርቀት ውስጥ በደህና ማቆም እንዲችሉ ፍጥነትዎን ማስተካከል አለብዎት፣ መብራቱ ከሚደርስበት በላይ ማየት እንደሚችሉ በፍጹም ማሰብ የለብዎትም።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_99_99811aabccd5eb99.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! በሚበራው ርቀት ውስጥ በደህና ማቆም እንዲችሉ ፍጥነትዎን ማስተካከል አለብዎት፣ መብራቱ ከሚደርስበት በላይ ማየት እንደሚችሉ በፍጹም ማሰብ የለብዎትም።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_98_cfb673ded842258d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! በሚበራው ርቀት ውስጥ በደህና ማቆም እንዲችሉ ፍጥነትዎን ማስተካከል አለብዎት፣ መብራቱ ከሚደርስበት በላይ ማየት እንደሚችሉ በፍጹም ማሰብ የለብዎትም።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_99_6826dfc8cb19d666.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! በሚበራው ርቀት ውስጥ በደህና ማቆም እንዲችሉ ፍጥነትዎን ማስተካከል አለብዎት፣ መብራቱ ከሚደርስበት በላይ ማየት እንደሚችሉ በፍጹም ማሰብ የለብዎትም።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_98_0b8070c602141898.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! በሚበራው ርቀት ውስጥ በደህና ማቆም እንዲችሉ ፍጥነትዎን ማስተካከል አለብዎት፣ መብራቱ ከሚደርስበት በላይ ማየት እንደሚችሉ በፍጹም ማሰብ የለብዎትም።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_99_64299838d0ec9aed.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! በሚበራው ርቀት ውስጥ በደህና ማቆም እንዲችሉ ፍጥነትዎን ማስተካከል አለብዎት፣ መብራቱ ከሚደርስበት በላይ ማየት እንደሚችሉ በፍጹም ማሰብ የለብዎትም።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_102_e1ec4ee0f912850c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! በሚበራው ርቀት ውስጥ በደህና ማቆም እንዲችሉ ፍጥነትዎን ማስተካከል አለብዎት፣ መብራቱ ከሚደርስበት በላይ ማየት እንደሚችሉ በፍጹም ማሰብ የለብዎትም።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_103_490964c6fe359d07.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! በሚበራው ርቀት ውስጥ በደህና ማቆም እንዲችሉ ፍጥነትዎን ማስተካከል አለብዎት፣ መብራቱ ከሚደርስበት በላይ ማየት እንደሚችሉ በፍጹም ማሰብ የለብዎትም።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_103_6a51568c1832258d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! በሚበራው ርቀት ውስጥ በደህና ማቆም እንዲችሉ ፍጥነትዎን ማስተካከል አለብዎት፣ መብራቱ ከሚደርስበት በላይ ማየት እንደሚችሉ በፍጹም ማሰብ የለብዎትም።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_103_9ec59d8e0a7e5aca.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! በሚበራው ርቀት ውስጥ በደህና ማቆም እንዲችሉ ፍጥነትዎን ማስተካከል አለብዎት፣ መብራቱ ከሚደርስበት በላይ ማየት እንደሚችሉ በፍጹም ማሰብ የለብዎትም።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_105_ac7a11204db0392a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! በሚበራው ርቀት ውስጥ በደህና ማቆም እንዲችሉ ፍጥነትዎን ማስተካከል አለብዎት፣ መብራቱ ከሚደርስበት በላይ ማየት እንደሚችሉ በፍጹም ማሰብ የለብዎትም።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_106_b0d960b8b324bf89.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! በሚበራው ርቀት ውስጥ በደህና ማቆም እንዲችሉ ፍጥነትዎን ማስተካከል አለብዎት፣ መብራቱ ከሚደርስበት በላይ ማየት እንደሚችሉ በፍጹም ማሰብ የለብዎትም።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_110_1bc4852686038ae7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! በሚበራው ርቀት ውስጥ በደህና ማቆም እንዲችሉ ፍጥነትዎን ማስተካከል አለብዎት፣ መብራቱ ከሚደርስበት በላይ ማየት እንደሚችሉ በፍጹም ማሰብ የለብዎትም።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_108_58bdba467b9e4e9f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: በሚበራው ርቀት ውስጥ በደህና ማቆም እንዲችሉ ፍጥነትዎን ማስተካከል አለብዎት፣ መብራቱ ከሚደርስበት በላይ ማየት እንደሚችሉ በፍጹም ማሰብ የለብዎትም።",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_112_a886acfa54274a9a.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

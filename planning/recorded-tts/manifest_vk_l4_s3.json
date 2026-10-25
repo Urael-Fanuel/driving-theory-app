@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:09:47.512Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "vk_l4_s3",
+   "key": "vehicle_knowledge_3_2",
+   "sentences": [
+    {
+     "text": "የአቅጣጫ አመልካች መብራቶች ለምን ያገለግላሉ?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_29_4f58274c46a60d05.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ለመኪናው ውበት",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_9_ab23b4d88f13b799.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ለመኪናው ውበት",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_14_503659502c7e6d9b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከሌሎች አሽከርካሪዎች ጋር ለመነጋገር",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_23_ffc5a8bb09f11b10.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ከሌሎች አሽከርካሪዎች ጋር ለመነጋገር",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_28_368042cc73e3a80e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ለሙዚቃ ማጫወቻ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_9_8660e5d0c622feae.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ለሙዚቃ ማጫወቻ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_14_eabaa5a12be46f5a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ለሞባይል ስልክ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_9_2531041d206ef8c5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ለሞባይል ስልክ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_14_370cf600a32ca0b9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ከሌሎች አሽከርካሪዎች ጋር ለመነጋገር",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_29_25dae21c9688b7a9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ከሌሎች አሽከርካሪዎች ጋር ለመነጋገር",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_27_306ca3ff02397a3f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ከሌሎች አሽከርካሪዎች ጋር ለመነጋገር",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_28_85f38b64df237b56.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ከሌሎች አሽከርካሪዎች ጋር ለመነጋገር",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_27_48bd94dc227dc4c2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ከሌሎች አሽከርካሪዎች ጋር ለመነጋገር",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_28_5e16396034c39249.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ከሌሎች አሽከርካሪዎች ጋር ለመነጋገር",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_27_e87c8cf7d50b77b7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ከሌሎች አሽከርካሪዎች ጋር ለመነጋገር",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_28_eb24d5b2ec02b6a2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ከሌሎች አሽከርካሪዎች ጋር ለመነጋገር",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_31_0acc3fdb19bd14a3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ከሌሎች አሽከርካሪዎች ጋር ለመነጋገር",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_32_902ee003e5f95008.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ከሌሎች አሽከርካሪዎች ጋር ለመነጋገር",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_32_b3e8f4d4f06dc4c2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ከሌሎች አሽከርካሪዎች ጋር ለመነጋገር",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_32_57846878ad587225.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ከሌሎች አሽከርካሪዎች ጋር ለመነጋገር",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_34_b95ec5186b38f705.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ከሌሎች አሽከርካሪዎች ጋር ለመነጋገር",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_35_0afb942c4a7b7546.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ከሌሎች አሽከርካሪዎች ጋር ለመነጋገር",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_39_f5d309c639cf6d68.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ከሌሎች አሽከርካሪዎች ጋር ለመነጋገር",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_37_b0110e0875ed2190.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ከሌሎች አሽከርካሪዎች ጋር ለመነጋገር",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_41_8d0decc4eb6d4375.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የአቅጣጫ አመልካች መብራቶችን መቼ ማብራት አለብዎት?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_33_c7c469b585b524e6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በሌሊት ብቻ",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_7_ea9e8bc9abe63fc8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። በሌሊት ብቻ",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_12_58cfc3d0e212604a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዝናብ በሚዘንብበት ጊዜ ብቻ",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_17_1ae1021012cf2481.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ዝናብ በሚዘንብበት ጊዜ ብቻ",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_22_11cd4d808ab4929f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጭራሽ ማብራት አያስፈልግም",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_17_ccd6c74feb1d5eb5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። በጭራሽ ማብራት አያስፈልግም",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_22_27b400802d99a901.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከመታጠፍዎ በፊት፣ መስመርዎን ከመቀየርዎ በፊት፣ ከማቆምዎ በፊት ወይም ከመጀመርዎ በፊት",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_55_d99f5350b40e7fa8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ከመታጠፍዎ በፊት፣ መስመርዎን ከመቀየርዎ በፊት፣ ከማቆምዎ በፊት ወይም ከመጀመርዎ በፊት",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_60_ae2084304dc39c94.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ከመታጠፍዎ በፊት፣ መስመርዎን ከመቀየርዎ በፊት፣ ከማቆምዎ በፊት ወይም ከመጀመርዎ በፊት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_61_0d7c7718fd748f91.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ከመታጠፍዎ በፊት፣ መስመርዎን ከመቀየርዎ በፊት፣ ከማቆምዎ በፊት ወይም ከመጀመርዎ በፊት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_59_21ec04104b4a4307.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ከመታጠፍዎ በፊት፣ መስመርዎን ከመቀየርዎ በፊት፣ ከማቆምዎ በፊት ወይም ከመጀመርዎ በፊት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_60_ccd70fe895baae6e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ከመታጠፍዎ በፊት፣ መስመርዎን ከመቀየርዎ በፊት፣ ከማቆምዎ በፊት ወይም ከመጀመርዎ በፊት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_59_aa766c28f74eb5fa.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ከመታጠፍዎ በፊት፣ መስመርዎን ከመቀየርዎ በፊት፣ ከማቆምዎ በፊት ወይም ከመጀመርዎ በፊት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_60_14aa9bf0c4860571.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ከመታጠፍዎ በፊት፣ መስመርዎን ከመቀየርዎ በፊት፣ ከማቆምዎ በፊት ወይም ከመጀመርዎ በፊት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_59_6176ca6fd311ed8f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ከመታጠፍዎ በፊት፣ መስመርዎን ከመቀየርዎ በፊት፣ ከማቆምዎ በፊት ወይም ከመጀመርዎ በፊት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_60_2cee82b833effe9a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ከመታጠፍዎ በፊት፣ መስመርዎን ከመቀየርዎ በፊት፣ ከማቆምዎ በፊት ወይም ከመጀመርዎ በፊት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_63_579528b5ee64959b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ከመታጠፍዎ በፊት፣ መስመርዎን ከመቀየርዎ በፊት፣ ከማቆምዎ በፊት ወይም ከመጀመርዎ በፊት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_64_b4aa81e0b70f8eb0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ከመታጠፍዎ በፊት፣ መስመርዎን ከመቀየርዎ በፊት፣ ከማቆምዎ በፊት ወይም ከመጀመርዎ በፊት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_64_0a787568853eb5fa.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ከመታጠፍዎ በፊት፣ መስመርዎን ከመቀየርዎ በፊት፣ ከማቆምዎ በፊት ወይም ከመጀመርዎ በፊት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_64_14db1430a589521d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ከመታጠፍዎ በፊት፣ መስመርዎን ከመቀየርዎ በፊት፣ ከማቆምዎ በፊት ወይም ከመጀመርዎ በፊት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_66_e4cf4a19a486a4bd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ከመታጠፍዎ በፊት፣ መስመርዎን ከመቀየርዎ በፊት፣ ከማቆምዎ በፊት ወይም ከመጀመርዎ በፊት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_67_97dd9117b0a5c07e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ከመታጠፍዎ በፊት፣ መስመርዎን ከመቀየርዎ በፊት፣ ከማቆምዎ በፊት ወይም ከመጀመርዎ በፊት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_71_b16f6520d21efad0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ከመታጠፍዎ በፊት፣ መስመርዎን ከመቀየርዎ በፊት፣ ከማቆምዎ በፊት ወይም ከመጀመርዎ በፊት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_69_3f68275084a4c328.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ከመታጠፍዎ በፊት፣ መስመርዎን ከመቀየርዎ በፊት፣ ከማቆምዎ በፊት ወይም ከመጀመርዎ በፊት",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_73_e88038e86c107acd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የአቅጣጫ አመልካች መብራቶችዎ የማይሰሩ ከሆነ ምን ማድረግ አለብዎት?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_43_d387adf4b18b7e03.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናውን መሸጥ",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_9_0c819db7f40d0999.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። መኪናውን መሸጥ",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_14_38d49afc2427ce9b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ችግሩን ወዲያውኑ መጠገን",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_15_3be226a47b6e8cc1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ችግሩን ወዲያውኑ መጠገን",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_20_f4c404fceae1ff5f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከሌሎች አሽከርካሪዎች ጋር መጮህ",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_20_5d2419402487c9cd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ከሌሎች አሽከርካሪዎች ጋር መጮህ",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_25_9777f4304481e0b9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናውን መንዳት ማቆም",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_14_39643c132cb2d057.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። መኪናውን መንዳት ማቆም",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_19_9c0ff780aca1292b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ችግሩን ወዲያውኑ መጠገን",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_21_918cdfb34dda3eb8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ችግሩን ወዲያውኑ መጠገን",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_19_13e293736739c6ae.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ችግሩን ወዲያውኑ መጠገን",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_20_0ee9c9689fe4d287.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ችግሩን ወዲያውኑ መጠገን",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_19_5a84ed00f9cdb013.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ችግሩን ወዲያውኑ መጠገን",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_20_2ecbd900b2bf6098.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ችግሩን ወዲያውኑ መጠገን",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_19_be48b853565fe526.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ችግሩን ወዲያውኑ መጠገን",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_20_6a76e090a4b40c33.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ችግሩን ወዲያውኑ መጠገን",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_23_0fe80cff4732bd32.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ችግሩን ወዲያውኑ መጠገን",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_24_681490a8a8a881d9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ችግሩን ወዲያውኑ መጠገን",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_24_84a6d3dbd7bdb013.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ችግሩን ወዲያውኑ መጠገን",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_24_47ac44fcee0a7134.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ችግሩን ወዲያውኑ መጠገን",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_26_48724e189ac5cd54.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ችግሩን ወዲያውኑ መጠገን",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_27_ae1899c012fb5897.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ችግሩን ወዲያውኑ መጠገን",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_31_b1e71d30a6fdf679.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ችግሩን ወዲያውኑ መጠገን",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_29_48dcb1c8b4445641.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ችግሩን ወዲያውኑ መጠገን",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_33_ae266c0c85779a64.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

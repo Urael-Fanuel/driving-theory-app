@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:10:24.282Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "vk_l5_s2",
+   "key": "vehicle_knowledge_4_1",
+   "sentences": [
+    {
+     "text": "የሞተር ዘይት ዋና ዓላማ ምንድነው?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_22_34253888f0efe44a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመኪናውን ፍጥነት ለመጨመር",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_17_a6ec16b00d26a7d4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። የመኪናውን ፍጥነት ለመጨመር",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_22_cc9c046c9453b0d6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የሞተርን ክፍሎች ለመቀባት እና ግጭትን ለመቀነስ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_30_7df869109d3ea38d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። የሞተርን ክፍሎች ለመቀባት እና ግጭትን ለመቀነስ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_35_eaf969c4890b66d3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎማዎችን ለማጽዳት",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_11_8a4801e87cc3f61e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ጎማዎችን ለማጽዳት",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_16_a798d4036d5bac2a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመብራት ስርዓቱን ለማብራት",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_17_078d172f4d03d3c9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። የመብራት ስርዓቱን ለማብራት",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_22_fa1d19c84bf35475.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! የሞተርን ክፍሎች ለመቀባት እና ግጭትን ለመቀነስ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_36_85f4212faa4f8014.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! የሞተርን ክፍሎች ለመቀባት እና ግጭትን ለመቀነስ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_34_35a70fec06fd25c2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! የሞተርን ክፍሎች ለመቀባት እና ግጭትን ለመቀነስ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_35_aecee06057e6290b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! የሞተርን ክፍሎች ለመቀባት እና ግጭትን ለመቀነስ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_34_f11c4a703f911b1f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! የሞተርን ክፍሎች ለመቀባት እና ግጭትን ለመቀነስ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_35_2a0df8b4f71d3e34.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! የሞተርን ክፍሎች ለመቀባት እና ግጭትን ለመቀነስ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_34_d151b03b02a50f4a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! የሞተርን ክፍሎች ለመቀባት እና ግጭትን ለመቀነስ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_35_79aaafc8845e40ff.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! የሞተርን ክፍሎች ለመቀባት እና ግጭትን ለመቀነስ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_38_802ead40dfffb7de.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! የሞተርን ክፍሎች ለመቀባት እና ግጭትን ለመቀነስ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_39_b4bf3bb036195795.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! የሞተርን ክፍሎች ለመቀባት እና ግጭትን ለመቀነስ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_39_6152b69fff811b1f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! የሞተርን ክፍሎች ለመቀባት እና ግጭትን ለመቀነስ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_39_383d5e2830b42b18.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! የሞተርን ክፍሎች ለመቀባት እና ግጭትን ለመቀነስ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_41_73c3ca38c0115378.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! የሞተርን ክፍሎች ለመቀባት እና ግጭትን ለመቀነስ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_42_a838458427cd951b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! የሞተርን ክፍሎች ለመቀባት እና ግጭትን ለመቀነስ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_46_d02b35eb444b1cf5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! የሞተርን ክፍሎች ለመቀባት እና ግጭትን ለመቀነስ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_44_be89ce9bbdcea70d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: የሞተርን ክፍሎች ለመቀባት እና ግጭትን ለመቀነስ",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_48_e59abed39e9aca48.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በሚያሽከረክሩበት ጊዜ የዘይት ግፊት ማስጠንቀቂያ መብራት ከበራ ምን ማድረግ አለብዎት?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_54_11e0b484b0efb98c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጉዞዎን መቀጠል ይችላሉ",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_14_803a607841504e6e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ጉዞዎን መቀጠል ይችላሉ",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_19_af022813c5c3d1ac.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ወዲያውኑ መኪናውን ማቆም አለብዎት",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_21_c864327fe63516c7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ወዲያውኑ መኪናውን ማቆም አለብዎት",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_26_e4198a980f81d4d9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመኪናውን መስኮቶች መክፈት አለብዎት",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_23_14e29f6888eb9542.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የመኪናውን መስኮቶች መክፈት አለብዎት",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_28_d6343f775b8ade36.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ፍጥነትዎን ቀስ በቀስ ይቀንሱና ጉዞ ይቀጥሉ",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_27_144bb4c87708e77f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ፍጥነትዎን ቀስ በቀስ ይቀንሱና ጉዞ ይቀጥሉ",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_32_9149a366817dc983.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ወዲያውኑ መኪናውን ማቆም አለብዎት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_27_5b7bd2c7a675fcfe.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ወዲያውኑ መኪናውን ማቆም አለብዎት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_25_d6369cbef4647668.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ወዲያውኑ መኪናውን ማቆም አለብዎት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_26_a4f83038f4b3db01.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ወዲያውኑ መኪናውን ማቆም አለብዎት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_25_6d2bdd18956c7895.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ወዲያውኑ መኪናውን ማቆም አለብዎት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_26_b1140620fca9c6de.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ወዲያውኑ መኪናውን ማቆም አለብዎት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_25_60afa234ad762ae0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ወዲያውኑ መኪናውን ማቆም አለብዎት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_26_8af6f2cca9f89135.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ወዲያውኑ መኪናውን ማቆም አለብዎት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_29_f12f11b8553046f4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ወዲያውኑ መኪናውን ማቆም አለብዎት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_30_f2e8aad0e49c03df.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ወዲያውኑ መኪናውን ማቆም አለብዎት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_30_28979cf0275c7895.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ወዲያውኑ መኪናውን ማቆም አለብዎት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_30_7589cef0471cd972.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ወዲያውኑ መኪናውን ማቆም አለብዎት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_32_8c89e0933c8c6e92.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ወዲያውኑ መኪናውን ማቆም አለብዎት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_33_8d8e6b6f5124e111.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ወዲያውኑ መኪናውን ማቆም አለብዎት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_37_d220da6c298aeaff.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ወዲያውኑ መኪናውን ማቆም አለብዎት",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_35_d74caa4097fe2447.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ወዲያውኑ መኪናውን ማቆም አለብዎት",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_39_b42e2f4880ba15a2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የዘይት መጠንን በዘይት መለኪያ በትክክል እንዴት ይፈትሻሉ?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_37_08f218256e9403b0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የዘይት መለኪያውን አንድ ጊዜ ብቻ አውጥቶ ማየት",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_30_9e469f4c00c13c94.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። የዘይት መለኪያውን አንድ ጊዜ ብቻ አውጥቶ ማየት",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_35_cc8428743f279b56.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሞተሩን አጥፍቶ፣ የዘይት መለኪያውን አውጥቶ አጽድቶ፣ መልሶ አስገብቶ፣ እንደገና አውጥቶ ደረጃውን ማየት",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_65_13091ab45b8fad46.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ሞተሩን አጥፍቶ፣ የዘይት መለኪያውን አውጥቶ አጽድቶ፣ መልሶ አስገብቶ፣ እንደገና አውጥቶ ደረጃውን ማየት",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_70_a5804838d4584858.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመኪናውን ሞተር ሳያጠፉ ወዲያውኑ ዘይት መጨመር",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_30_531ed453628f02ce.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የመኪናውን ሞተር ሳያጠፉ ወዲያውኑ ዘይት መጨመር",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_35_2b85416045bf7f3a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዘይቱ ቀለም ጥቁር ከሆነ ብቻ ዘይት ይጨምሩ",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_27_8c08682c912de56c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ዘይቱ ቀለም ጥቁር ከሆነ ብቻ ዘይት ይጨምሩ",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_32_f3962024c5de0910.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ሞተሩን አጥፍቶ፣ የዘይት መለኪያውን አውጥቶ አጽድቶ፣ መልሶ አስገብቶ፣ እንደገና አውጥቶ ደረጃውን ማየት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_71_a33b5503d7e2287f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ሞተሩን አጥፍቶ፣ የዘይት መለኪያውን አውጥቶ አጽድቶ፣ መልሶ አስገብቶ፣ እንደገና አውጥቶ ደረጃውን ማየት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_69_4db1a374a0aea0e9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ሞተሩን አጥፍቶ፣ የዘይት መለኪያውን አውጥቶ አጽድቶ፣ መልሶ አስገብቶ፣ እንደገና አውጥቶ ደረጃውን ማየት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_70_12aa0fb798534080.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ሞተሩን አጥፍቶ፣ የዘይት መለኪያውን አውጥቶ አጽድቶ፣ መልሶ አስገብቶ፣ እንደገና አውጥቶ ደረጃውን ማየት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_69_3cc47a14026ada14.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ሞተሩን አጥፍቶ፣ የዘይት መለኪያውን አውጥቶ አጽድቶ፣ መልሶ አስገብቶ፣ እንደገና አውጥቶ ደረጃውን ማየት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_70_7a1c23e05e41a8df.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ሞተሩን አጥፍቶ፣ የዘይት መለኪያውን አውጥቶ አጽድቶ፣ መልሶ አስገብቶ፣ እንደገና አውጥቶ ደረጃውን ማየት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_69_d2d2ebeb93946661.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ሞተሩን አጥፍቶ፣ የዘይት መለኪያውን አውጥቶ አጽድቶ፣ መልሶ አስገብቶ፣ እንደገና አውጥቶ ደረጃውን ማየት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_70_c449867819365cb4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ሞተሩን አጥፍቶ፣ የዘይት መለኪያውን አውጥቶ አጽድቶ፣ መልሶ አስገብቶ፣ እንደገና አውጥቶ ደረጃውን ማየት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_73_6bb1e6fc85606f75.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ሞተሩን አጥፍቶ፣ የዘይት መለኪያውን አውጥቶ አጽድቶ፣ መልሶ አስገብቶ፣ እንደገና አውጥቶ ደረጃውን ማየት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_74_0b73d370a83cae5e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ሞተሩን አጥፍቶ፣ የዘይት መለኪያውን አውጥቶ አጽድቶ፣ መልሶ አስገብቶ፣ እንደገና አውጥቶ ደረጃውን ማየት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_74_ffdcec7cbc5ada14.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ሞተሩን አጥፍቶ፣ የዘይት መለኪያውን አውጥቶ አጽድቶ፣ መልሶ አስገብቶ፣ እንደገና አውጥቶ ደረጃውን ማየት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_74_9d48f304e68e12f3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ሞተሩን አጥፍቶ፣ የዘይት መለኪያውን አውጥቶ አጽድቶ፣ መልሶ አስገብቶ፣ እንደገና አውጥቶ ደረጃውን ማየት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_76_ed49bb78a163ee93.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ሞተሩን አጥፍቶ፣ የዘይት መለኪያውን አውጥቶ አጽድቶ፣ መልሶ አስገብቶ፣ እንደገና አውጥቶ ደረጃውን ማየት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_77_96b4ff201f515e90.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ሞተሩን አጥፍቶ፣ የዘይት መለኪያውን አውጥቶ አጽድቶ፣ መልሶ አስገብቶ፣ እንደገና አውጥቶ ደረጃውን ማየት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_81_82f59f94bd191e7e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ሞተሩን አጥፍቶ፣ የዘይት መለኪያውን አውጥቶ አጽድቶ፣ መልሶ አስገብቶ፣ እንደገና አውጥቶ ደረጃውን ማየት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_79_ff7be6d8f2e561c6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ሞተሩን አጥፍቶ፣ የዘይት መለኪያውን አውጥቶ አጽድቶ፣ መልሶ አስገብቶ፣ እንደገና አውጥቶ ደረጃውን ማየት",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_83_54f2ce18353e1b23.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

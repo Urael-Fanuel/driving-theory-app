@@ -1,0 +1,552 @@
+{
+ "generated": "2026-10-25T06:09:15.844Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "vk_l3_s2",
+   "key": "vehicle_knowledge_2_1",
+   "sentences": [
+    {
+     "text": "ቀይ ምልክት ሲበራ ምን ማድረግ አለብን?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_25_e90da3cd90d9ca7d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ወዲያውኑ ሲቆም ምን እንደሆነ ማጣራት አለብን",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_28_9a5e244684d8bbe1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ወዲያውኑ ሲቆም ምን እንደሆነ ማጣራት አለብን",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_33_7352f5ec5a0ee4a3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ምንም ልዩ ነገር አናደርግም — ቀጥ ብለን እንቀጥላለን",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_34_4888cd17b78b6455.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ምንም ልዩ ነገር አናደርግም — ቀጥ ብለን እንቀጥላለን",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_39_530d73183c90f00b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ወደ ቤት ደርሰን ሜካኒክ እናሳያለን",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_22_4d71ed38e5fbbccf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ወደ ቤት ደርሰን ሜካኒክ እናሳያለን",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_27_63e16fa004522a7b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሙዚቃ ዝቅ አድርጎ መቀጠል ይቻላል",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_21_db4f454377c7a70e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ሙዚቃ ዝቅ አድርጎ መቀጠል ይቻላል",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_26_471c51ef46df63b2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ወዲያውኑ ሲቆም ምን እንደሆነ ማጣራት አለብን",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_34_d75edd28d50de138.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ወዲያውኑ ሲቆም ምን እንደሆነ ማጣራት አለብን",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_32_c8e6783e44873d6e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ወዲያውኑ ሲቆም ምን እንደሆነ ማጣራት አለብን",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_33_a31be5181daa9167.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ወዲያውኑ ሲቆም ምን እንደሆነ ማጣራት አለብን",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_32_7c5a8d884cd05f73.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ወዲያውኑ ሲቆም ምን እንደሆነ ማጣራት አለብን",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_33_224574a017bf6d18.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ወዲያውኑ ሲቆም ምን እንደሆነ ማጣራት አለብን",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_32_899fe2f6f59947e6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ወዲያውኑ ሲቆም ምን እንደሆነ ማጣራት አለብን",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_33_cbe954884698a393.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ወዲያውኑ ሲቆም ምን እንደሆነ ማጣራት አለብን",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_36_5fc4a0d09f8b2772.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ወዲያውኑ ሲቆም ምን እንደሆነ ማጣራት አለብን",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_37_4f15de20b78471f9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ወዲያውኑ ሲቆም ምን እንደሆነ ማጣራት አለብን",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_37_1fe87bd750c05f73.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ወዲያውኑ ሲቆም ምን እንደሆነ ማጣራት አለብን",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_37_3f121d288492a634.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ወዲያውኑ ሲቆም ምን እንደሆነ ማጣራት አለብን",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_39_05eddf4a633917d4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ወዲያውኑ ሲቆም ምን እንደሆነ ማጣራት አለብን",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_40_dd887d04f4e52577.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ወዲያውኑ ሲቆም ምን እንደሆነ ማጣራት አለብን",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_44_98a5b9cc16f41499.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ወዲያውኑ ሲቆም ምን እንደሆነ ማጣራት አለብን",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_42_4ad4d7739aa88661.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ወዲያውኑ ሲቆም ምን እንደሆነ ማጣራት አለብን",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_46_cba41938be358be4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "TPMS ቢጫ ምልክት ሲበራ ምን ማለት ነው?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_27_3bd9bcdd1db1654b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሞተሩ ሞቃ ነው",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_9_c946deefb0e4ca42.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ሞተሩ ሞቃ ነው",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_14_00d84df823e761c0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ነዳጅ ዝቅ ብሏል",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_10_74dcce24fdfc6b3c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ነዳጅ ዝቅ ብሏል",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_15_6eb08060520d7562.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የጎማ ግፊት ዝቅ ብሏል",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_14_e6ac67d89975f475.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የጎማ ግፊት ዝቅ ብሏል",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_19_22f759f8438b6141.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ቀበቶ አልታሠረም",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_10_31facb1454cd3918.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ቀበቶ አልታሠረም",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_15_4b5feb380c4f2a64.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! የጎማ ግፊት ዝቅ ብሏል",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_20_f11a34b7196f646c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! የጎማ ግፊት ዝቅ ብሏል",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_18_72fd28e4f1be93ba.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! የጎማ ግፊት ዝቅ ብሏል",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_19_a8ed6ee83d149af3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! የጎማ ግፊት ዝቅ ብሏል",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_18_2b7e93605763f2e7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! የጎማ ግፊት ዝቅ ብሏል",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_19_1b9c11c805f5560c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! የጎማ ግፊት ዝቅ ብሏል",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_18_85cb94cc24357a32.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! የጎማ ግፊት ዝቅ ብሏል",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_19_ddd97048799ce6c7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! የጎማ ግፊት ዝቅ ብሏል",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_22_cab49daf680feda6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! የጎማ ግፊት ዝቅ ብሏል",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_23_f29ff65c038d466d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! የጎማ ግፊት ዝቅ ብሏል",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_23_85d1267c3753f2e7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! የጎማ ግፊት ዝቅ ብሏል",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_23_d9adf4a80affe160.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! የጎማ ግፊት ዝቅ ብሏል",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_25_f4f5d5a80c53b2c0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! የጎማ ግፊት ዝቅ ብሏል",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_26_7d04fb6cde914ee3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! የጎማ ግፊት ዝቅ ብሏል",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_30_0337ab78e04675cd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! የጎማ ግፊት ዝቅ ብሏል",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_28_cb7b19d4d27008f5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: የጎማ ግፊት ዝቅ ብሏል",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_32_df015b48b82f8930.mp3",
+     "too_long": false
+    },
+    {
+     "text": "SRS ምልክት ምን ያሳያል?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_17_dce508acf0962a36.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ነዳጅ ዝቅ ብሏል",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_15_cd0f440819a13a7e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የአየር ከረጢት ስርዓት ችግር አለበት",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_23_b4854810ee0358c1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። የአየር ከረጢት ስርዓት ችግር አለበት",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_28_1c845e5cf62947df.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ብሬኩ ደህና ነው",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_10_3c50702493db6b3e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ብሬኩ ደህና ነው",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_15_d382d31bcc78a10a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሞተሩ ቀዝቃዛ ነው",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_11_50f501742d3a917a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ሞተሩ ቀዝቃዛ ነው",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_16_804811ec60bf6606.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! የአየር ከረጢት ስርዓት ችግር አለበት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_29_79f005833fea2138.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! የአየር ከረጢት ስርዓት ችግር አለበት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_27_ecb2bdc8acd1d3ae.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! የአየር ከረጢት ስርዓት ችግር አለበት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_28_00824d57d5688e87.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! የአየር ከረጢት ስርዓት ችግር አለበት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_27_d6eaa3876aaa9113.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! የአየር ከረጢት ስርዓት ችግር አለበት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_28_e4321354a1006e58.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! የአየር ከረጢት ስርዓት ችግር አለበት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_27_7b52f5d791c74d26.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! የአየር ከረጢት ስርዓት ችግር አለበት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_28_4d3c0cc4bea6f573.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! የአየር ከረጢት ስርዓት ችግር አለበት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_31_e6c1e9a089e49332.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! የአየር ከረጢት ስርዓት ችግር አለበት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_32_dc1cee1ccba20dd9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! የአየር ከረጢት ስርዓት ችግር አለበት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_32_d6abab9f389a9113.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! የአየር ከረጢት ስርዓት ችግር አለበት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_32_2480a3804c5ea2b4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! የአየር ከረጢት ስርዓት ችግር አለበት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_34_299fc50492817594.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! የአየር ከረጢት ስርዓት ችግር አለበት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_35_19f376789990dc97.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! የአየር ከረጢት ስርዓት ችግር አለበት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_39_62432d871bb447b9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! የአየር ከረጢት ስርዓት ችግር አለበት",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_37_6bad10503619a341.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: የአየር ከረጢት ስርዓት ችግር አለበት",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_41_cad844f8f9cb9264.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

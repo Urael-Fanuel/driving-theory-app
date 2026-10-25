@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:21:04.565Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "rd_l7_s3",
+   "key": "road_decisions_6_2",
+   "sentences": [
+    {
+     "text": "በእግረኛ ማቋረጫ ዙሪያ ማረፊያ የት ክልክል ነው?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_31_521acac4f7db0b38.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከማቋረጫው በኋላ አስራ ሁለት ሜትርና በማቋረጫው ላይ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_34_0b4c52202453341c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ከማቋረጫው በኋላ አስራ ሁለት ሜትርና በማቋረጫው ላይ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_39_67d72583263b77de.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሃያ ሜትር በፊትና ሃያ ሜትር በኋላ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_23_40fa8abc65bcc64b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ሃያ ሜትር በፊትና ሃያ ሜትር በኋላ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_28_ed8f753862d16a55.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አስራ ሁለት ሜትር በፊትና አስራ ሁለት ሜትር በኋላ።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_33_36a89be8b38dd44b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። አስራ ሁለት ሜትር በፊትና አስራ ሁለት ሜትር በኋላ።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_38_3035bdf4fe68627f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በማቋረጫው ላይ እንዲሁም ከሱ በፊት አስራ ሁለት ሜትር።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_35_1f880f3cea871581.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። በማቋረጫው ላይ እንዲሁም ከሱ በፊት አስራ ሁለት ሜትር።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_40_30fd7194c0a13fbd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! በማቋረጫው ላይ እንዲሁም ከሱ በፊት አስራ ሁለት ሜትር።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_41_54840f6241826c38.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! በማቋረጫው ላይ እንዲሁም ከሱ በፊት አስራ ሁለት ሜትር።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_39_741a5820c721072e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! በማቋረጫው ላይ እንዲሁም ከሱ በፊት አስራ ሁለት ሜትር።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_40_907e0f8ace4cc747.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! በማቋረጫው ላይ እንዲሁም ከሱ በፊት አስራ ሁለት ሜትር።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_39_bde78028e6542bd3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! በማቋረጫው ላይ እንዲሁም ከሱ በፊት አስራ ሁለት ሜትር።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_40_4cc693f032171f58.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! በማቋረጫው ላይ እንዲሁም ከሱ በፊት አስራ ሁለት ሜትር።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_39_fd46f540b218dba6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! በማቋረጫው ላይ እንዲሁም ከሱ በፊት አስራ ሁለት ሜትር።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_40_989c3e10f67c1c33.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! በማቋረጫው ላይ እንዲሁም ከሱ በፊት አስራ ሁለት ሜትር።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_43_9732b673ab5c46b2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! በማቋረጫው ላይ እንዲሁም ከሱ በፊት አስራ ሁለት ሜትር።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_44_d5ff2e7802616a99.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! በማቋረጫው ላይ እንዲሁም ከሱ በፊት አስራ ሁለት ሜትር።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_44_2feb79aa1c442bd3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! በማቋረጫው ላይ እንዲሁም ከሱ በፊት አስራ ሁለት ሜትር።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_44_76d3a376f4773fb4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! በማቋረጫው ላይ እንዲሁም ከሱ በፊት አስራ ሁለት ሜትር።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_46_575df7d619d77214.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! በማቋረጫው ላይ እንዲሁም ከሱ በፊት አስራ ሁለት ሜትር።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_47_71fd0f38e3ad3557.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! በማቋረጫው ላይ እንዲሁም ከሱ በፊት አስራ ሁለት ሜትር።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_51_be4cb84adaa13779.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! በማቋረጫው ላይ እንዲሁም ከሱ በፊት አስራ ሁለት ሜትር።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_49_c3bb79fc065ab301.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: በማቋረጫው ላይ እንዲሁም ከሱ በፊት አስራ ሁለት ሜትር።",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_53_38dd6e704b2697e4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በዚህ ስዕል ውስጥ ቀዩ መኪና ማረፊያ ያደረገው ምን ስህተት አለው?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_42_88d7c1d829b0e1e1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከመንገዱ ዳር በጣም ራቅ ብሎ አርፏል።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_24_4cb0038a101c3ad1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ከመንገዱ ዳር በጣም ራቅ ብሎ አርፏል።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_29_3f43144030bd7813.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከእግረኛ ማቋረጫው በፊት በጣም ቅርብ አርፏል።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_29_8d2789b8a9a5f529.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ከእግረኛ ማቋረጫው በፊት በጣም ቅርብ አርፏል።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_34_447f7868a78342b7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመኪና መግቢያ በር ዘግቷል።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_18_ad3d06fa6a8e9c70.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የመኪና መግቢያ በር ዘግቷል።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_23_a0451dce3a609e04.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በተቃራኒ አቅጣጫ አርፏል።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_16_f3bd2e26f2dfca2f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። በተቃራኒ አቅጣጫ አርፏል።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_21_e1e82d26dffbeb13.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ከእግረኛ ማቋረጫው በፊት በጣም ቅርብ አርፏል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_35_cbb818e6f1c11010.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ከእግረኛ ማቋረጫው በፊት በጣም ቅርብ አርፏል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_33_2b8ecd202fbb2606.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ከእግረኛ ማቋረጫው በፊት በጣም ቅርብ አርፏል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_34_7c79fe36c0724e6f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ከእግረኛ ማቋረጫው በፊት በጣም ቅርብ አርፏል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_33_89872ffa33e4dffb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ከእግረኛ ማቋረጫው በፊት በጣም ቅርብ አርፏል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_34_206488ee4022caf0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ከእግረኛ ማቋረጫው በፊት በጣም ቅርብ አርፏል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_33_41d6fcd0fb60fa8e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ከእግረኛ ማቋረጫው በፊት በጣም ቅርብ አርፏል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_34_bdacc0a8a99b0d1b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ከእግረኛ ማቋረጫው በፊት በጣም ቅርብ አርፏል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_37_bacddb98504b289a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ከእግረኛ ማቋረጫው በፊት በጣም ቅርብ አርፏል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_38_2669727e6f672c31.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ከእግረኛ ማቋረጫው በፊት በጣም ቅርብ አርፏል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_38_745a0728b5d4dffb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ከእግረኛ ማቋረጫው በፊት በጣም ቅርብ አርፏል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_38_dbf8f5f0699a529c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ከእግረኛ ማቋረጫው በፊት በጣም ቅርብ አርፏል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_40_8479ffccd0750b3c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ከእግረኛ ማቋረጫው በፊት በጣም ቅርብ አርፏል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_41_d39bd5d0bc33a07f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ከእግረኛ ማቋረጫው በፊት በጣም ቅርብ አርፏል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_45_90b6aad8a7b358d1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ከእግረኛ ማቋረጫው በፊት በጣም ቅርብ አርፏል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_43_5e69d0c8f56486a9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ከእግረኛ ማቋረጫው በፊት በጣም ቅርብ አርፏል።",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_47_0e80e528a027464c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከማቋረጫው በፊት ይህ ርቀት ለምን ባዶ መሆን አለበት?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_34_0910c19ca6048ba0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የአሽከርካሪዎችና የእግረኞች ሁለቱም የእይታ መስመር ሙሉ በሙሉ ግልጽ እንዲሆን።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_50_68a1dc463c43cdbf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። የአሽከርካሪዎችና የእግረኞች ሁለቱም የእይታ መስመር ሙሉ በሙሉ ግልጽ እንዲሆን።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_55_377c447617373bfd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሌሎች መኪኖች እዚያ እንዲያርፉ።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_20_61c507e29d1d40f8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ሌሎች መኪኖች እዚያ እንዲያርፉ።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_25_b5d94e6c9b857126.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ይህ ሰፊ መንገድ ላይ ብቻ የሚሰራ ህግ ነው።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_28_f5ac71d031d5cfe1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ይህ ሰፊ መንገድ ላይ ብቻ የሚሰራ ህግ ነው።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_33_a1fc79e07f080915.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ማቋረጫው ስራ ሲበዛ ብቻ አስፈላጊ ነው።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_25_2b507fc83e5edd31.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ማቋረጫው ስራ ሲበዛ ብቻ አስፈላጊ ነው።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_30_513163a84d558b4d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! የአሽከርካሪዎችና የእግረኞች ሁለቱም የእይታ መስመር ሙሉ በሙሉ ግልጽ እንዲሆን።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_56_f97b14003a319d66.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! የአሽከርካሪዎችና የእግረኞች ሁለቱም የእይታ መስመር ሙሉ በሙሉ ግልጽ እንዲሆን።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_54_a685eeae77345c30.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! የአሽከርካሪዎችና የእግረኞች ሁለቱም የእይታ መስመር ሙሉ በሙሉ ግልጽ እንዲሆን።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_55_8fc222749975e9b9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! የአሽከርካሪዎችና የእግረኞች ሁለቱም የእይታ መስመር ሙሉ በሙሉ ግልጽ እንዲሆን።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_54_c1d5954420f78fad.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! የአሽከርካሪዎችና የእግረኞች ሁለቱም የእይታ መስመር ሙሉ በሙሉ ግልጽ እንዲሆን።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_55_f7d166b0f6cb8286.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! የአሽከርካሪዎችና የእግረኞች ሁለቱም የእይታ መስመር ሙሉ በሙሉ ግልጽ እንዲሆን።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_54_e9517440a9e438b8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! የአሽከርካሪዎችና የእግረኞች ሁለቱም የእይታ መስመር ሙሉ በሙሉ ግልጽ እንዲሆን።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_55_787a10be1256778d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! የአሽከርካሪዎችና የእግረኞች ሁለቱም የእይታ መስመር ሙሉ በሙሉ ግልጽ እንዲሆን።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_58_67a4a4085edb4c2c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! የአሽከርካሪዎችና የእግረኞች ሁለቱም የእይታ መስመር ሙሉ በሙሉ ግልጽ እንዲሆን።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_59_9482f34e885305a7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! የአሽከርካሪዎችና የእግረኞች ሁለቱም የእይታ መስመር ሙሉ በሙሉ ግልጽ እንዲሆን።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_59_8a4ac2b638e78fad.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! የአሽከርካሪዎችና የእግረኞች ሁለቱም የእይታ መስመር ሙሉ በሙሉ ግልጽ እንዲሆን።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_59_5852eb784eb3566a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! የአሽከርካሪዎችና የእግረኞች ሁለቱም የእይታ መስመር ሙሉ በሙሉ ግልጽ እንዲሆን።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_61_9f8169786a699c4a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! የአሽከርካሪዎችና የእግረኞች ሁለቱም የእይታ መስመር ሙሉ በሙሉ ግልጽ እንዲሆን።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_62_9da46fe0dfc9e1a9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! የአሽከርካሪዎችና የእግረኞች ሁለቱም የእይታ መስመር ሙሉ በሙሉ ግልጽ እንዲሆን።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_66_8192ba30624ed007.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! የአሽከርካሪዎችና የእግረኞች ሁለቱም የእይታ መስመር ሙሉ በሙሉ ግልጽ እንዲሆን።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_64_bfd43370b70dae3f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: የአሽከርካሪዎችና የእግረኞች ሁለቱም የእይታ መስመር ሙሉ በሙሉ ግልጽ እንዲሆን።",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_68_7f9294045660513a.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

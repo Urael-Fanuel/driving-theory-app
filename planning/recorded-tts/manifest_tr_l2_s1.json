@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T05:53:51.572Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "tr_l2_s1",
+   "key": "the_road_1_0",
+   "sentences": [
+    {
+     "text": "በፈጣን መንገድ ላይ የመስመሮች ህግ ምንድነው?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_29_a5645e1cce41cbf4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁልጊዜ በግራ መስመር መንዳት",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_18_731b1e98ea70f30a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ሁልጊዜ በግራ መስመር መንዳት",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_23_6b22f44c365b59c8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በማንኛውም መስመር መንዳት ይፈቀዳል",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_22_71c6c3079a261f88.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። በማንኛውም መስመር መንዳት ይፈቀዳል",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_27_3bb55458884d9256.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁልጊዜ በቀኝ መስመር መንዳት፣ ለመቅደም ብቻ ግራ መጠቀም፣ ከዚያ ወደ ቀኝ መመለስ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_52_b675303019241135.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ሁልጊዜ በቀኝ መስመር መንዳት፣ ለመቅደም ብቻ ግራ መጠቀም፣ ከዚያ ወደ ቀኝ መመለስ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_57_488e2520621dd4c1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የአደጋ ጊዜ መስመር ላይ ሁልጊዜ መንዳት",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_25_fb9264c88848958f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። የአደጋ ጊዜ መስመር ላይ ሁልጊዜ መንዳት",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_30_ceaa2ff024e8e073.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ሁልጊዜ በቀኝ መስመር መንዳት፣ ለመቅደም ብቻ ግራ መጠቀም፣ ከዚያ ወደ ቀኝ መመለስ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_58_14e8e2b4ba3de32c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ሁልጊዜ በቀኝ መስመር መንዳት፣ ለመቅደም ብቻ ግራ መጠቀም፣ ከዚያ ወደ ቀኝ መመለስ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_56_7c7e8cfc9216e17a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ሁልጊዜ በቀኝ መስመር መንዳት፣ ለመቅደም ብቻ ግራ መጠቀም፣ ከዚያ ወደ ቀኝ መመለስ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_57_7e68aa2777f36b33.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ሁልጊዜ በቀኝ መስመር መንዳት፣ ለመቅደም ብቻ ግራ መጠቀም፣ ከዚያ ወደ ቀኝ መመለስ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_56_7b9f7f187a5e8d27.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ሁልጊዜ በቀኝ መስመር መንዳት፣ ለመቅደም ብቻ ግራ መጠቀም፣ ከዚያ ወደ ቀኝ መመለስ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_57_4568def30551ff0c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ሁልጊዜ በቀኝ መስመር መንዳት፣ ለመቅደም ብቻ ግራ መጠቀም፣ ከዚያ ወደ ቀኝ መመለስ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_56_bdb646841fa898f2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ሁልጊዜ በቀኝ መስመር መንዳት፣ ለመቅደም ብቻ ግራ መጠቀም፣ ከዚያ ወደ ቀኝ መመለስ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_57_64aacfc8ffb2e7c7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ሁልጊዜ በቀኝ መስመር መንዳት፣ ለመቅደም ብቻ ግራ መጠቀም፣ ከዚያ ወደ ቀኝ መመለስ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_60_b402db93788da366.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ሁልጊዜ በቀኝ መስመር መንዳት፣ ለመቅደም ብቻ ግራ መጠቀም፣ ከዚያ ወደ ቀኝ መመለስ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_61_ffc9f3fc2010d52d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ሁልጊዜ በቀኝ መስመር መንዳት፣ ለመቅደም ብቻ ግራ መጠቀም፣ ከዚያ ወደ ቀኝ መመለስ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_61_b8a562744e4e8d27.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ሁልጊዜ በቀኝ መስመር መንዳት፣ ለመቅደም ብቻ ግራ መጠቀም፣ ከዚያ ወደ ቀኝ መመለስ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_61_3a919f40a00d4620.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ሁልጊዜ በቀኝ መስመር መንዳት፣ ለመቅደም ብቻ ግራ መጠቀም፣ ከዚያ ወደ ቀኝ መመለስ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_63_c38592e85fe9ae40.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ሁልጊዜ በቀኝ መስመር መንዳት፣ ለመቅደም ብቻ ግራ መጠቀም፣ ከዚያ ወደ ቀኝ መመለስ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_64_ebf021cf4c4cab23.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ሁልጊዜ በቀኝ መስመር መንዳት፣ ለመቅደም ብቻ ግራ መጠቀም፣ ከዚያ ወደ ቀኝ መመለስ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_68_591fccb439620c4d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ሁልጊዜ በቀኝ መስመር መንዳት፣ ለመቅደም ብቻ ግራ መጠቀም፣ ከዚያ ወደ ቀኝ መመለስ",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_66_bd3d5500fe53d2b5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ሁልጊዜ በቀኝ መስመር መንዳት፣ ለመቅደም ብቻ ግራ መጠቀም፣ ከዚያ ወደ ቀኝ መመለስ",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_70_ed142af0998b4670.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናዎ በፈጣን መንገድ ላይ ከተበላሸ ምን ማድረግ አለብዎት?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_38_27d58e899a52dac3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከመኪናው ውስጥ ተቀምጦ እርዳታ መጠበቅ",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_24_74b700901089f302.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ከመኪናው ውስጥ ተቀምጦ እርዳታ መጠበቅ",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_29_2e58e080a31daf40.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የአደጋ መብራቶችን ማብራት፣ የማስጠንቀቂያ ትሪያንግል ማስቀመጥ፣ ከትራፊክ ርቆ መውጣት፣ ከአጥር ጀርባ መቆም",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_68_f34865c079945141.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። የአደጋ መብራቶችን ማብራት፣ የማስጠንቀቂያ ትሪያንግል ማስቀመጥ፣ ከትራፊክ ርቆ መውጣት፣ ከአጥር ጀርባ መቆም",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_73_7b3550789cf8ef9f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናውን ትቶ መሄድ",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_12_ccd97c744b023b76.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። መኪናውን ትቶ መሄድ",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_17_10d8207418f08942.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በግራ መስመር ላይ ቆሞ እርዳታ መጠየቅ",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_24_6790780813bb5798.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። በግራ መስመር ላይ ቆሞ እርዳታ መጠየቅ",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_29_a6f2fd90981db524.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! የአደጋ መብራቶችን ማብራት፣ የማስጠንቀቂያ ትሪያንግል ማስቀመጥ፣ ከትራፊክ ርቆ መውጣት፣ ከአጥር ጀርባ መቆም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_74_ad8519cffd5d5e98.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! የአደጋ መብራቶችን ማብራት፣ የማስጠንቀቂያ ትሪያንግል ማስቀመጥ፣ ከትራፊክ ርቆ መውጣት፣ ከአጥር ጀርባ መቆም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_72_e2c02f00d91a8e4e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! የአደጋ መብራቶችን ማብራት፣ የማስጠንቀቂያ ትሪያንግል ማስቀመጥ፣ ከትራፊክ ርቆ መውጣት፣ ከአጥር ጀርባ መቆም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_73_3443a7e8d778bd47.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! የአደጋ መብራቶችን ማብራት፣ የማስጠንቀቂያ ትሪያንግል ማስቀመጥ፣ ከትራፊክ ርቆ መውጣት፣ ከአጥር ጀርባ መቆም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_72_fe67659809173c53.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! የአደጋ መብራቶችን ማብራት፣ የማስጠንቀቂያ ትሪያንግል ማስቀመጥ፣ ከትራፊክ ርቆ መውጣት፣ ከአጥር ጀርባ መቆም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_73_2bf9d5491a216ab8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! የአደጋ መብራቶችን ማብራት፣ የማስጠንቀቂያ ትሪያንግል ማስቀመጥ፣ ከትራፊክ ርቆ መውጣት፣ ከአጥር ጀርባ መቆም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_72_07dc8ac7fe2000c6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! የአደጋ መብራቶችን ማብራት፣ የማስጠንቀቂያ ትሪያንግል ማስቀመጥ፣ ከትራፊክ ርቆ መውጣት፣ ከአጥር ጀርባ መቆም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_73_de78c44849937833.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! የአደጋ መብራቶችን ማብራት፣ የማስጠንቀቂያ ትሪያንግል ማስቀመጥ፣ ከትራፊክ ርቆ መውጣት፣ ከአጥር ጀርባ መቆም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_76_23ea4a6d68b77952.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! የአደጋ መብራቶችን ማብራት፣ የማስጠንቀቂያ ትሪያንግል ማስቀመጥ፣ ከትራፊክ ርቆ መውጣት፣ ከአጥር ጀርባ መቆም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_77_9942eb0f00ce2f59.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! የአደጋ መብራቶችን ማብራት፣ የማስጠንቀቂያ ትሪያንግል ማስቀመጥ፣ ከትራፊክ ርቆ መውጣት፣ ከአጥር ጀርባ መቆም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_77_30e11fc8bd073c53.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! የአደጋ መብራቶችን ማብራት፣ የማስጠንቀቂያ ትሪያንግል ማስቀመጥ፣ ከትራፊክ ርቆ መውጣት፣ ከአጥር ጀርባ መቆም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_77_f9ec9c3867371094.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! የአደጋ መብራቶችን ማብራት፣ የማስጠንቀቂያ ትሪያንግል ማስቀመጥ፣ ከትራፊክ ርቆ መውጣት፣ ከአጥር ጀርባ መቆም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_79_6f01a5df1547cb74.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! የአደጋ መብራቶችን ማብራት፣ የማስጠንቀቂያ ትሪያንግል ማስቀመጥ፣ ከትራፊክ ርቆ መውጣት፣ ከአጥር ጀርባ መቆም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_80_44d99d0876daa157.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! የአደጋ መብራቶችን ማብራት፣ የማስጠንቀቂያ ትሪያንግል ማስቀመጥ፣ ከትራፊክ ርቆ መውጣት፣ ከአጥር ጀርባ መቆም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_84_81ab242c37d532b9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! የአደጋ መብራቶችን ማብራት፣ የማስጠንቀቂያ ትሪያንግል ማስቀመጥ፣ ከትራፊክ ርቆ መውጣት፣ ከአጥር ጀርባ መቆም",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_82_fb32cca079ca99c1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: የአደጋ መብራቶችን ማብራት፣ የማስጠንቀቂያ ትሪያንግል ማስቀመጥ፣ ከትራፊክ ርቆ መውጣት፣ ከአጥር ጀርባ መቆም",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_86_52fc19e8e5c92a44.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ወደ ፈጣን መንገድ ሲገቡ አሽከርካሪው ምን ማድረግ አለበት?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_37_68e4e78c4f3d9b7d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ወዲያውኑ ወደ ትራፊክ መቀላቀል",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_19_110c661e3e4ab017.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ወዲያውኑ ወደ ትራፊክ መቀላቀል",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_24_f975aedff2b6e915.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በፍጥነት መግቢያ መስመር ላይ ፍጥነት መቀነስ",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_28_466265d8bb714f3a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። በፍጥነት መግቢያ መስመር ላይ ፍጥነት መቀነስ",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_33_aca05170f7380c64.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በፍጥነት መግቢያ መስመር ላይ ፍጥነት መጨመር እና ወደ ትራፊክ ከመቀላቀልዎ በፊት ተስማሚ ክፍተት መጠበቅ",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_66_c8fea130c375634e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። በፍጥነት መግቢያ መስመር ላይ ፍጥነት መጨመር እና ወደ ትራፊክ ከመቀላቀልዎ በፊት ተስማሚ ክፍተት መጠበቅ",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_71_1d385b80a8f775ba.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከግራ መስመር ወደ ፈጣን መንገድ መግባት",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_25_608bdc740b61e246.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ከግራ መስመር ወደ ፈጣን መንገድ መግባት",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_30_c23fdbb44589d9fa.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! በፍጥነት መግቢያ መስመር ላይ ፍጥነት መጨመር እና ወደ ትራፊክ ከመቀላቀልዎ በፊት ተስማሚ ክፍተት መጠበቅ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_72_4e60e98c10bd1017.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! በፍጥነት መግቢያ መስመር ላይ ፍጥነት መጨመር እና ወደ ትራፊክ ከመቀላቀልዎ በፊት ተስማሚ ክፍተት መጠበቅ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_70_a6f633d83d6eb8c1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! በፍጥነት መግቢያ መስመር ላይ ፍጥነት መጨመር እና ወደ ትራፊክ ከመቀላቀልዎ በፊት ተስማሚ ክፍተት መጠበቅ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_71_f873ba67b1192d48.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! በፍጥነት መግቢያ መስመር ላይ ፍጥነት መጨመር እና ወደ ትራፊክ ከመቀላቀልዎ በፊት ተስማሚ ክፍተት መጠበቅ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_70_dc4f55783f4d475c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! በፍጥነት መግቢያ መስመር ላይ ፍጥነት መጨመር እና ወደ ትራፊክ ከመቀላቀልዎ በፊት ተስማሚ ክፍተት መጠበቅ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_71_c43b090f1d8f45b7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! በፍጥነት መግቢያ መስመር ላይ ፍጥነት መጨመር እና ወደ ትራፊክ ከመቀላቀልዎ በፊት ተስማሚ ክፍተት መጠበቅ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_70_14bcdf5882d39549.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! በፍጥነት መግቢያ መስመር ላይ ፍጥነት መጨመር እና ወደ ትራፊክ ከመቀላቀልዎ በፊት ተስማሚ ክፍተት መጠበቅ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_71_d4aede30399590bc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! በፍጥነት መግቢያ መስመር ላይ ፍጥነት መጨመር እና ወደ ትራፊክ ከመቀላቀልዎ በፊት ተስማሚ ክፍተት መጠበቅ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_74_34b2c83cd77442dd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! በፍጥነት መግቢያ መስመር ላይ ፍጥነት መጨመር እና ወደ ትራፊክ ከመቀላቀልዎ በፊት ተስማሚ ክፍተት መጠበቅ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_75_cf0e82c472907956.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! በፍጥነት መግቢያ መስመር ላይ ፍጥነት መጨመር እና ወደ ትራፊክ ከመቀላቀልዎ በፊት ተስማሚ ክፍተት መጠበቅ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_75_85c0b2b3373d475c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! በፍጥነት መግቢያ መስመር ላይ ፍጥነት መጨመር እና ወደ ትራፊክ ከመቀላቀልዎ በፊት ተስማሚ ክፍተት መጠበቅ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_75_30355428db70a91b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! በፍጥነት መግቢያ መስመር ላይ ፍጥነት መጨመር እና ወደ ትራፊክ ከመቀላቀልዎ በፊት ተስማሚ ክፍተት መጠበቅ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_77_4cc415bc650a697b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! በፍጥነት መግቢያ መስመር ላይ ፍጥነት መጨመር እና ወደ ትራፊክ ከመቀላቀልዎ በፊት ተስማሚ ክፍተት መጠበቅ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_78_0f539d0411242d58.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! በፍጥነት መግቢያ መስመር ላይ ፍጥነት መጨመር እና ወደ ትራፊክ ከመቀላቀልዎ በፊት ተስማሚ ክፍተት መጠበቅ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_82_58f424643ad26c36.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! በፍጥነት መግቢያ መስመር ላይ ፍጥነት መጨመር እና ወደ ትራፊክ ከመቀላቀልዎ በፊት ተስማሚ ክፍተት መጠበቅ",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_80_ba50fe175b8f43ce.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: በፍጥነት መግቢያ መስመር ላይ ፍጥነት መጨመር እና ወደ ትራፊክ ከመቀላቀልዎ በፊት ተስማሚ ክፍተት መጠበቅ",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_84_a93d1b68546e9ccb.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:17:54.596Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "rd_l2_s2",
+   "key": "road_decisions_1_1",
+   "sentences": [
+    {
+     "text": "የመኪና ቁጥር አንድ አሽከርካሪ እዚህ ማለፍ ይችላልን?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_34_bbeeb4a4d14ce264.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አይችልም፤ ምክንያቱም ወደ እሱ ቅርብ ያለው መስመር ቀጣይ ነው።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_40_8e2b7f3ad0362e45.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። አይችልም፤ ምክንያቱም ወደ እሱ ቅርብ ያለው መስመር ቀጣይ ነው።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_45_c55a6ab040255807.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ይችላል፤ ምክንያቱም የሌላኛው አቅጣጫ መስመር ባዶ ነው።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_35_cd2d6d98f7772e93.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ይችላል፤ ምክንያቱም የሌላኛው አቅጣጫ መስመር ባዶ ነው።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_40_1fbb41aec888618d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ይችላል፤ ምክንያቱም ቢጫው መኪና ቀርፋፋ ነው።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_29_47b246f025d3a542.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ይችላል፤ ምክንያቱም ቢጫው መኪና ቀርፋፋ ነው።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_34_b6d841f81f103eb6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አይችልም፤ ምክንያቱም ከፊት ለፊት ያለው መንገድ ጠባብ ነው።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_38_4a9343b068fe8644.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። አይችልም፤ ምክንያቱም ከፊት ለፊት ያለው መንገድ ጠባብ ነው።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_43_a37b8fe0f4e37fb8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! አይችልም፤ ምክንያቱም ወደ እሱ ቅርብ ያለው መስመር ቀጣይ ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_46_2afd16061cae229c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! አይችልም፤ ምክንያቱም ወደ እሱ ቅርብ ያለው መስመር ቀጣይ ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_44_34b6c90a599d7eca.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! አይችልም፤ ምክንያቱም ወደ እሱ ቅርብ ያለው መስመር ቀጣይ ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_45_315eb380a580e543.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! አይችልም፤ ምክንያቱም ወደ እሱ ቅርብ ያለው መስመር ቀጣይ ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_44_68ffce3c8c6f6f57.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! አይችልም፤ ምክንያቱም ወደ እሱ ቅርብ ያለው መስመር ቀጣይ ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_45_72b3be2a46ef9a3c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! አይችልም፤ ምክንያቱም ወደ እሱ ቅርብ ያለው መስመር ቀጣይ ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_44_6b3c7a4a8e45d442.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! አይችልም፤ ምክንያቱም ወደ እሱ ቅርብ ያለው መስመር ቀጣይ ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_45_4659d460571e31b7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! አይችልም፤ ምክንያቱም ወደ እሱ ቅርብ ያለው መስመር ቀጣይ ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_48_f6438c5a8528b4d6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! አይችልም፤ ምክንያቱም ወደ እሱ ቅርብ ያለው መስመር ቀጣይ ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_49_e1ec522ed96d8a5d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! አይችልም፤ ምክንያቱም ወደ እሱ ቅርብ ያለው መስመር ቀጣይ ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_49_29497c88f85f6f57.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! አይችልም፤ ምክንያቱም ወደ እሱ ቅርብ ያለው መስመር ቀጣይ ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_49_5d71bcf8bc1c1b90.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! አይችልም፤ ምክንያቱም ወደ እሱ ቅርብ ያለው መስመር ቀጣይ ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_51_68883f52a0db0770.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! አይችልም፤ ምክንያቱም ወደ እሱ ቅርብ ያለው መስመር ቀጣይ ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_52_7102a04898666153.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! አይችልም፤ ምክንያቱም ወደ እሱ ቅርብ ያለው መስመር ቀጣይ ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_56_15bf69986f7b303d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! አይችልም፤ ምክንያቱም ወደ እሱ ቅርብ ያለው መስመር ቀጣይ ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_54_171a9d1ed73187c5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: አይችልም፤ ምክንያቱም ወደ እሱ ቅርብ ያለው መስመር ቀጣይ ነው።",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_58_34f14e9ac5be41c0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመኪና ቁጥር አንድ አሽከርካሪ እንዴት መሆን አለበት?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_34_6d7ad750d4e75d24.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ቢጫውን መኪና በፍጥነት ማለፍ አለበት።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_24_b21277e02858b4f9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ቢጫውን መኪና በፍጥነት ማለፍ አለበት።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_29_b4624a84a40d8f3b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ወደ ግራ መስመር ገብቶ ቀጥ ብሎ መሄድ አለበት።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_30_df70e7bebaaa5360.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ወደ ግራ መስመር ገብቶ ቀጥ ብሎ መሄድ አለበት።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_35_db1a1eb24f5b3f3e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ቢጫውን መኪና ተከትሎ መቅረብ አለበት።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_24_375d7a00763b7099.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ቢጫውን መኪና ተከትሎ መቅረብ አለበት።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_29_84a1390f3360ed6d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከመኪና ቁጥር ሁለት ኋላ መቆየት፣ አስተማማኝ ርቀት መጠበቅ እና ማለፍ የሚፈቀድበት ቦታ መጠበቅ አለበት።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_66_65d4f7cf91e7e0a1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ከመኪና ቁጥር ሁለት ኋላ መቆየት፣ አስተማማኝ ርቀት መጠበቅ እና ማለፍ የሚፈቀድበት ቦታ መጠበቅ አለበት።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_71_a4c91c98ff0f7f1d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ከመኪና ቁጥር ሁለት ኋላ መቆየት፣ አስተማማኝ ርቀት መጠበቅ እና ማለፍ የሚፈቀድበት ቦታ መጠበቅ አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_72_698c3d80ec8b4738.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ከመኪና ቁጥር ሁለት ኋላ መቆየት፣ አስተማማኝ ርቀት መጠበቅ እና ማለፍ የሚፈቀድበት ቦታ መጠበቅ አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_70_556d8a303c3c9b6e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ከመኪና ቁጥር ሁለት ኋላ መቆየት፣ አስተማማኝ ርቀት መጠበቅ እና ማለፍ የሚፈቀድበት ቦታ መጠበቅ አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_71_7be185ef24f15da7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ከመኪና ቁጥር ሁለት ኋላ መቆየት፣ አስተማማኝ ርቀት መጠበቅ እና ማለፍ የሚፈቀድበት ቦታ መጠበቅ አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_70_d2a182607ed8a2b3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ከመኪና ቁጥር ሁለት ኋላ መቆየት፣ አስተማማኝ ርቀት መጠበቅ እና ማለፍ የሚፈቀድበት ቦታ መጠበቅ አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_71_42d974274d016898.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ከመኪና ቁጥር ሁለት ኋላ መቆየት፣ አስተማማኝ ርቀት መጠበቅ እና ማለፍ የሚፈቀድበት ቦታ መጠበቅ አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_70_cd3654f8125455e6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ከመኪና ቁጥር ሁለት ኋላ መቆየት፣ አስተማማኝ ርቀት መጠበቅ እና ማለፍ የሚፈቀድበት ቦታ መጠበቅ አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_71_ae22a110029014d3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ከመኪና ቁጥር ሁለት ኋላ መቆየት፣ አስተማማኝ ርቀት መጠበቅ እና ማለፍ የሚፈቀድበት ቦታ መጠበቅ አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_74_eb8f490e81a5fa72.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ከመኪና ቁጥር ሁለት ኋላ መቆየት፣ አስተማማኝ ርቀት መጠበቅ እና ማለፍ የሚፈቀድበት ቦታ መጠበቅ አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_75_e6e7e1107090beb9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ከመኪና ቁጥር ሁለት ኋላ መቆየት፣ አስተማማኝ ርቀት መጠበቅ እና ማለፍ የሚፈቀድበት ቦታ መጠበቅ አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_75_c2b658d676c8a2b3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ከመኪና ቁጥር ሁለት ኋላ መቆየት፣ አስተማማኝ ርቀት መጠበቅ እና ማለፍ የሚፈቀድበት ቦታ መጠበቅ አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_75_3da47be0da883734.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ከመኪና ቁጥር ሁለት ኋላ መቆየት፣ አስተማማኝ ርቀት መጠበቅ እና ማለፍ የሚፈቀድበት ቦታ መጠበቅ አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_77_14c4b9a4c68c7ad4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ከመኪና ቁጥር ሁለት ኋላ መቆየት፣ አስተማማኝ ርቀት መጠበቅ እና ማለፍ የሚፈቀድበት ቦታ መጠበቅ አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_78_c931bd762b7fa9b7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ከመኪና ቁጥር ሁለት ኋላ መቆየት፣ አስተማማኝ ርቀት መጠበቅ እና ማለፍ የሚፈቀድበት ቦታ መጠበቅ አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_82_32edb410131b0659.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ከመኪና ቁጥር ሁለት ኋላ መቆየት፣ አስተማማኝ ርቀት መጠበቅ እና ማለፍ የሚፈቀድበት ቦታ መጠበቅ አለበት።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_80_633693988107d321.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ከመኪና ቁጥር ሁለት ኋላ መቆየት፣ አስተማማኝ ርቀት መጠበቅ እና ማለፍ የሚፈቀድበት ቦታ መጠበቅ አለበት።",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_84_dc655122504f5c64.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የሌላኛው አቅጣጫ መስመር ባዶ ነው። ይህ ማለፍን ይፈቅዳልን?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_38_442c7ccc86d3c114.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ፣ ባዶ ስለሆነ ማለፍ ይፈቀዳል።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_22_4dea52beed3f0351.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። አዎ፣ ባዶ ስለሆነ ማለፍ ይፈቀዳል።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_27_5c56dba0c29db293.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አይፈቅድም፤ የቅርቡ ቀጣይ መስመር ባዶ ቢሆንም ማለፍን ይከለክላል።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_42_10b75998f1fdf248.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። አይፈቅድም፤ የቅርቡ ቀጣይ መስመር ባዶ ቢሆንም ማለፍን ይከለክላል።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_47_bafb7ca8f8942a96.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ፣ የቢጫው መኪና ቀርፋፋ ስለሆነ ማለፍ ይፈቀዳል።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_33_fedfc8aa515f46e4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። አዎ፣ የቢጫው መኪና ቀርፋፋ ስለሆነ ማለፍ ይፈቀዳል።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_38_0d64037070a54e10.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አይፈቅድም፤ ምክንያቱም ከፊት ለፊት ያለው መንገድ ጠባብ ነው።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_39_62e849c87fc2678c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። አይፈቅድም፤ ምክንያቱም ከፊት ለፊት ያለው መንገድ ጠባብ ነው።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_44_435db86041299e70.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! አይፈቅድም፤ የቅርቡ ቀጣይ መስመር ባዶ ቢሆንም ማለፍን ይከለክላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_48_e087deee66fdacd1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! አይፈቅድም፤ የቅርቡ ቀጣይ መስመር ባዶ ቢሆንም ማለፍን ይከለክላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_46_3167c2d882632c87.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! አይፈቅድም፤ የቅርቡ ቀጣይ መስመር ባዶ ቢሆንም ማለፍን ይከለክላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_47_d68279b03f24984e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! አይፈቅድም፤ የቅርቡ ቀጣይ መስመር ባዶ ቢሆንም ማለፍን ይከለክላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_46_52fb6782c4cf035a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! አይፈቅድም፤ የቅርቡ ቀጣይ መስመር ባዶ ቢሆንም ማለፍን ይከለክላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_47_c5d58e80bdc6b1b1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! አይፈቅድም፤ የቅርቡ ቀጣይ መስመር ባዶ ቢሆንም ማለፍን ይከለክላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_46_20b0fb3bf1e07e0f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! አይፈቅድም፤ የቅርቡ ቀጣይ መስመር ባዶ ቢሆንም ማለፍን ይከለክላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_47_2045420e2f80d8fa.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! አይፈቅድም፤ የቅርቡ ቀጣይ መስመር ባዶ ቢሆንም ማለፍን ይከለክላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_50_1600f8662a3da59b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! አይፈቅድም፤ የቅርቡ ቀጣይ መስመር ባዶ ቢሆንም ማለፍን ይከለክላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_51_3e8b90a857b96450.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! አይፈቅድም፤ የቅርቡ ቀጣይ መስመር ባዶ ቢሆንም ማለፍን ይከለክላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_51_82bd182aecbf035a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! አይፈቅድም፤ የቅርቡ ቀጣይ መስመር ባዶ ቢሆንም ማለፍን ይከለክላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_51_c9fd80201c7e1add.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! አይፈቅድም፤ የቅርቡ ቀጣይ መስመር ባዶ ቢሆንም ማለፍን ይከለክላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_53_04748b141eabf97d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! አይፈቅድም፤ የቅርቡ ቀጣይ መስመር ባዶ ቢሆንም ማለፍን ይከለክላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_54_9146034a2a96fc5e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! አይፈቅድም፤ የቅርቡ ቀጣይ መስመር ባዶ ቢሆንም ማለፍን ይከለክላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_58_bf4b909a6f83a370.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! አይፈቅድም፤ የቅርቡ ቀጣይ መስመር ባዶ ቢሆንም ማለፍን ይከለክላል።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_56_6ec7f032834debc8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: አይፈቅድም፤ የቅርቡ ቀጣይ መስመር ባዶ ቢሆንም ማለፍን ይከለክላል።",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_60_9a57d970ed9e448d.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

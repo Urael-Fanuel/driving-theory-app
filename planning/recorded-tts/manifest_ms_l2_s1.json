@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:13:01.969Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "ms_l2_s1",
+   "key": "mind_safety_1_0",
+   "sentences": [
+    {
+     "text": "በሌሊት በሚያሽከረክሩበት ጊዜ ከሚያጋጥሙ ልዩ አደጋዎች ዋናው ምንድን ነው?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_47_30caf96d430b41c0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመንገድ ምልክቶች በግልጽ አለመታየት",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_23_3ca2b0105e6c49c8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። የመንገድ ምልክቶች በግልጽ አለመታየት",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_28_f59303e05233adca.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የማየት ችሎታ ውስን መሆን እና የመኪናው መብራቶች የመንገዱን ክፍል ብቻ ማብራት",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_50_07c4697c05b8fe18.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። የማየት ችሎታ ውስን መሆን እና የመኪናው መብራቶች የመንገዱን ክፍል ብቻ ማብራት",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_55_8fb596c4b4e16ac6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የነዳጅ ፍጆታ መጨመር",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_13_1569c55f3e7838f6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የነዳጅ ፍጆታ መጨመር",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_18_1f8d0f6ba8c02902.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የትራፊክ መጨናነቅ",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_11_312b51b7733b0ac2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። የትራፊክ መጨናነቅ",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_16_73b583f337fc24fe.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! የማየት ችሎታ ውስን መሆን እና የመኪናው መብራቶች የመንገዱን ክፍል ብቻ ማብራት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_56_cb6cedcb11d4c101.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! የማየት ችሎታ ውስን መሆን እና የመኪናው መብራቶች የመንገዱን ክፍል ብቻ ማብራት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_54_1185fb5ce5982457.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! የማየት ችሎታ ውስን መሆን እና የመኪናው መብራቶች የመንገዱን ክፍል ብቻ ማብራት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_55_0a034ee82440a29e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! የማየት ችሎታ ውስን መሆን እና የመኪናው መብራቶች የመንገዱን ክፍል ብቻ ማብራት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_54_782c7cd0f01f488a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! የማየት ችሎታ ውስን መሆን እና የመኪናው መብራቶች የመንገዱን ክፍል ብቻ ማብራት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_55_2bbdc77b94c91d61.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! የማየት ችሎታ ውስን መሆን እና የመኪናው መብራቶች የመንገዱን ክፍል ብቻ ማብራት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_54_520cfa8881ed44df.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! የማየት ችሎታ ውስን መሆን እና የመኪናው መብራቶች የመንገዱን ክፍል ብቻ ማብራት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_55_dbbd3680a9d5fa2a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! የማየት ችሎታ ውስን መሆን እና የመኪናው መብራቶች የመንገዱን ክፍል ብቻ ማብራት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_58_8675d28c1d6fb24b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! የማየት ችሎታ ውስን መሆን እና የመኪናው መብራቶች የመንገዱን ክፍል ብቻ ማብራት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_59_e1ce8628bf7b0a00.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! የማየት ችሎታ ውስን መሆን እና የመኪናው መብራቶች የመንገዱን ክፍል ብቻ ማብራት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_59_98f79e6f080f488a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! የማየት ችሎታ ውስን መሆን እና የመኪናው መብራቶች የመንገዱን ክፍል ብቻ ማብራት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_59_12af57d4c6d0620d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! የማየት ችሎታ ውስን መሆን እና የመኪናው መብራቶች የመንገዱን ክፍል ብቻ ማብራት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_61_0ca0c88cb71ff22d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! የማየት ችሎታ ውስን መሆን እና የመኪናው መብራቶች የመንገዱን ክፍል ብቻ ማብራት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_62_8a8727077adb368e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! የማየት ችሎታ ውስን መሆን እና የመኪናው መብራቶች የመንገዱን ክፍል ብቻ ማብራት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_66_4712ae0caaaa7b20.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! የማየት ችሎታ ውስን መሆን እና የመኪናው መብራቶች የመንገዱን ክፍል ብቻ ማብራት",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_64_3d8f2be3d820f498.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: የማየት ችሎታ ውስን መሆን እና የመኪናው መብራቶች የመንገዱን ክፍል ብቻ ማብራት",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_68_3dd56b98f1aabedd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከፊት ለፊት ከሚመጡ ተሽከርካሪዎች መብራት በሚመጣው ብርሃን ዓይንዎ ሲታወር ምን ማድረግ አለብዎት?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_62_e14d6450d9a7284e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመኪናዎን መብራት ከፍ ማድረግ",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_19_d31afa10aafdd6ba.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። የመኪናዎን መብራት ከፍ ማድረግ",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_24_ec6ad9c07cd9b038.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እይታዎን ወደ መንገዱ ቀኝ ዳርቻ በማዞር ፍጥነትዎን መቀነስ",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_37_4b2fdb447b61eb12.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። እይታዎን ወደ መንገዱ ቀኝ ዳርቻ በማዞር ፍጥነትዎን መቀነስ",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_42_fa01c2e0e3d2678c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የመኪናውን ፍጥነት መጨመር",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_16_68469fd855a168bc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። የመኪናውን ፍጥነት መጨመር",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_21_f18a6dc41c3d3308.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዓይኖችዎን ሙሉ በሙሉ መዝጋት",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_18_efc860381c64fe70.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ዓይኖችዎን ሙሉ በሙሉ መዝጋት",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_23_c78beeccc49ea94c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! እይታዎን ወደ መንገዱ ቀኝ ዳርቻ በማዞር ፍጥነትዎን መቀነስ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_43_129a3fb3d37c73eb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! እይታዎን ወደ መንገዱ ቀኝ ዳርቻ በማዞር ፍጥነትዎን መቀነስ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_41_6e5a6f74489f5bfd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! እይታዎን ወደ መንገዱ ቀኝ ዳርቻ በማዞር ፍጥነትዎን መቀነስ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_42_076c6890db2fffd4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! እይታዎን ወደ መንገዱ ቀኝ ዳርቻ በማዞር ፍጥነትዎን መቀነስ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_41_e4efaf1c1ed30940.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! እይታዎን ወደ መንገዱ ቀኝ ዳርቻ በማዞር ፍጥነትዎን መቀነስ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_42_edfccefc41c9c58b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! እይታዎን ወደ መንገዱ ቀኝ ዳርቻ በማዞር ፍጥነትዎን መቀነስ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_41_1ac6eb3805997875.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! እይታዎን ወደ መንገዱ ቀኝ ዳርቻ በማዞር ፍጥነትዎን መቀነስ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_42_7e3e9b076cb1d020.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! እይታዎን ወደ መንገዱ ቀኝ ዳርቻ በማዞር ፍጥነትዎን መቀነስ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_45_22b2710c8bba4261.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! እይታዎን ወደ መንገዱ ቀኝ ዳርቻ በማዞር ፍጥነትዎን መቀነስ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_46_137dfa8c67b4880a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! እይታዎን ወደ መንገዱ ቀኝ ዳርቻ በማዞር ፍጥነትዎን መቀነስ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_46_e184a4f090c30940.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! እይታዎን ወደ መንገዱ ቀኝ ዳርቻ በማዞር ፍጥነትዎን መቀነስ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_46_b2bcc51b22b5d267.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! እይታዎን ወደ መንገዱ ቀኝ ዳርቻ በማዞር ፍጥነትዎን መቀነስ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_48_f4a723785f151d47.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! እይታዎን ወደ መንገዱ ቀኝ ዳርቻ በማዞር ፍጥነትዎን መቀነስ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_49_993008d8cafb01c4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! እይታዎን ወደ መንገዱ ቀኝ ዳርቻ በማዞር ፍጥነትዎን መቀነስ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_53_67797ad0afe2196a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! እይታዎን ወደ መንገዱ ቀኝ ዳርቻ በማዞር ፍጥነትዎን መቀነስ",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_51_b1e880c800aedc92.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: እይታዎን ወደ መንገዱ ቀኝ ዳርቻ በማዞር ፍጥነትዎን መቀነስ",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_55_d0ea31a4861ccfb7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በሌሊት በሚያሽከረክሩበት ጊዜ ፍጥነትዎን እንዴት ማስተካከል አለብዎት?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_44_fb084fd82520fe43.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ፍጥነትዎን ሳይቀይሩ ማሽከርከር",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_19_5d5acf7424954b0f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ፍጥነትዎን ሳይቀይሩ ማሽከርከር",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_24_35bee0d3eee4eb8d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ፍጥነትዎን ከመኪናው መብራት የማብራት አቅም ጋር ማስተካከል",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_37_1421c80cf1dceb52.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ፍጥነትዎን ከመኪናው መብራት የማብራት አቅም ጋር ማስተካከል",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_42_f01bb2209886004c.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁልጊዜ ከፍተኛ ፍጥነት መጠቀም",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_19_d8c4ce432d5df659.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ሁልጊዜ ከፍተኛ ፍጥነት መጠቀም",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_24_cbab1f5ce0dad8ad.mp3",
+     "too_long": false
+    },
+    {
+     "text": "የሌሎች ተሽከርካሪዎችን ፍጥነት መከተል",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_24_4998d47f3751abfd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። የሌሎች ተሽከርካሪዎችን ፍጥነት መከተል",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_29_97257cd0fa47e601.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ፍጥነትዎን ከመኪናው መብራት የማብራት አቅም ጋር ማስተካከል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_43_676a882cd23f902b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ፍጥነትዎን ከመኪናው መብራት የማብራት አቅም ጋር ማስተካከል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_41_ec44f0c854f1f3bd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ፍጥነትዎን ከመኪናው መብራት የማብራት አቅም ጋር ማስተካከል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_42_111663e0b3d4ee94.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ፍጥነትዎን ከመኪናው መብራት የማብራት አቅም ጋር ማስተካከል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_41_8fb61bd00c2c6600.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ፍጥነትዎን ከመኪናው መብራት የማብራት አቅም ጋር ማስተካከል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_42_fc68cbc2f45c408b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ፍጥነትዎን ከመኪናው መብራት የማብራት አቅም ጋር ማስተካከል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_41_2056aea0b1129c35.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ፍጥነትዎን ከመኪናው መብራት የማብራት አቅም ጋር ማስተካከል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_42_fe7cc0dfd0824920.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ፍጥነትዎን ከመኪናው መብራት የማብራት አቅም ጋር ማስተካከል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_45_9b8eb1e83dcb4621.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ፍጥነትዎን ከመኪናው መብራት የማብራት አቅም ጋር ማስተካከል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_46_b68017d8bfd2a64a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ፍጥነትዎን ከመኪናው መብራት የማብራት አቅም ጋር ማስተካከል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_46_258104c47e1c6600.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ፍጥነትዎን ከመኪናው መብራት የማብራት አቅም ጋር ማስተካከል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_46_4fa4ce9b68b25ca7.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ፍጥነትዎን ከመኪናው መብራት የማብራት አቅም ጋር ማስተካከል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_48_2c26af538c411147.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ፍጥነትዎን ከመኪናው መብራት የማብራት አቅም ጋር ማስተካከል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_49_9dba542f6ebe4484.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ፍጥነትዎን ከመኪናው መብራት የማብራት አቅም ጋር ማስተካከል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_53_e3b001687778beea.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ፍጥነትዎን ከመኪናው መብራት የማብራት አቅም ጋር ማስተካከል",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_51_2403c54c89643ed2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ፍጥነትዎን ከመኪናው መብራት የማብራት አቅም ጋር ማስተካከል",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_55_3adf9b30c7a2e0f7.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}

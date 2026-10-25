@@ -1,0 +1,559 @@
+{
+ "generated": "2026-10-25T06:20:40.714Z",
+ "praises": [
+  "ትክክል!",
+  "አዎ!",
+  "አሪፍ!",
+  "ጎሽ!",
+  "እሰይ!",
+  "ዋው!",
+  "ጎበዝ!",
+  "በጣም ጥሩ!",
+  "በጣም አሪፍ!",
+  "እንድያ ነው!",
+  "እንዲያ ነው!",
+  "ዋው በጣም ጥሩ!",
+  "እሰይ የኔ ጎበዝ!",
+  "ትክክል፥ አቬት እውቀት!",
+  "አቬት ችሎታ ትክክል!"
+ ],
+ "numbers": [
+  "አንድ",
+  "ሁለት",
+  "ሶስት",
+  "አራት"
+ ],
+ "subtopics": [
+  {
+   "id": "rd_l7_s1",
+   "key": "road_decisions_6_0",
+   "sentences": [
+    {
+     "text": "ማረፊያ እንዴት ይገለጻል?",
+     "kind": "question",
+     "question": 0,
+     "file": "rtts_16_254e4524fcdf1422.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ለተወሰነ ጊዜ ጭነት ለማውረድ ማቆም ነው።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_26_1f2dd110b3ee4997.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ለተወሰነ ጊዜ ጭነት ለማውረድ ማቆም ነው።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_31_1387877229095d55.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሰዎችን ለማስገባት ወይም ለማውረድ ካልሆነ መኪናን ማቆም ነው።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_39_9d95fc9c5cbb79ab.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። ሰዎችን ለማስገባት ወይም ለማውረድ ካልሆነ መኪናን ማቆም ነው።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_44_ce3e433087bb11b5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጭነት ለማስገባት ብቻ ማቆም ነው።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_21_a2bd086a654515b4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ጭነት ለማስገባት ብቻ ማቆም ነው።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_26_39ac4a7e3070e800.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ከሠላሳ ሰከንድ በላይ ማቆም ነው።",
+     "kind": "answer_A",
+     "question": 0,
+     "file": "rtts_21_d4a123006b6636d4.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ከሠላሳ ሰከንድ በላይ ማቆም ነው።",
+     "kind": "answer_B",
+     "question": 0,
+     "file": "rtts_26_1c51b386a178d528.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ሰዎችን ለማስገባት ወይም ለማውረድ ካልሆነ መኪናን ማቆም ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_45_c1fb3aa8422d21d2.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ሰዎችን ለማስገባት ወይም ለማውረድ ካልሆነ መኪናን ማቆም ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_43_4196675ee4ae6b44.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ሰዎችን ለማስገባት ወይም ለማውረድ ካልሆነ መኪናን ማቆም ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_44_c215288893fecfed.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ሰዎችን ለማስገባት ወይም ለማውረድ ካልሆነ መኪናን ማቆም ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_43_449bafc677ab7679.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ሰዎችን ለማስገባት ወይም ለማውረድ ካልሆነ መኪናን ማቆም ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_44_031156e80da9aa72.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ሰዎችን ለማስገባት ወይም ለማውረድ ካልሆነ መኪናን ማቆም ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_43_b3bc1c5608dfd1cc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ሰዎችን ለማስገባት ወይም ለማውረድ ካልሆነ መኪናን ማቆም ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_44_fc3b7dde156c4759.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ሰዎችን ለማስገባት ወይም ለማውረድ ካልሆነ መኪናን ማቆም ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_47_5ca7ca8687167cd8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ሰዎችን ለማስገባት ወይም ለማውረድ ካልሆነ መኪናን ማቆም ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_48_68ba24c076a642b3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ሰዎችን ለማስገባት ወይም ለማውረድ ካልሆነ መኪናን ማቆም ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_48_96715f3e259b7679.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ሰዎችን ለማስገባት ወይም ለማውረድ ካልሆነ መኪናን ማቆም ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_48_f5f3611021d55d5e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ሰዎችን ለማስገባት ወይም ለማውረድ ካልሆነ መኪናን ማቆም ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_50_f2fb4213e1c9123e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ሰዎችን ለማስገባት ወይም ለማውረድ ካልሆነ መኪናን ማቆም ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_51_fe0507a63a4fe1fd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ሰዎችን ለማስገባት ወይም ለማውረድ ካልሆነ መኪናን ማቆም ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_55_0a1a293088d91013.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ሰዎችን ለማስገባት ወይም ለማውረድ ካልሆነ መኪናን ማቆም ነው።",
+     "kind": "feedback_correct",
+     "question": 0,
+     "file": "rtts_53_ff3670e46084bb2b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ሰዎችን ለማስገባት ወይም ለማውረድ ካልሆነ መኪናን ማቆም ነው።",
+     "kind": "feedback_wrong",
+     "question": 0,
+     "file": "rtts_57_ecace5824c245f8e.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በዚህ ስዕል ላይ ሰማያዊው መኪና ምን እያደረገ ነው?",
+     "kind": "question",
+     "question": 1,
+     "file": "rtts_33_7cbc80a07c7382e3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ማንም ሳይወርድ ወይም ሳይገባ ማረፊያ አድርጓል።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_30_a2b968f82d4d3d43.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። ማንም ሳይወርድ ወይም ሳይገባ ማረፊያ አድርጓል።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_35_b0f14fee1a9e6b01.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ ተሳፋሪ ለመውረድ እየተዘጋጀ ነው።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_25_8b7128a03f8ea736.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። አንድ ተሳፋሪ ለመውረድ እየተዘጋጀ ነው።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_30_6e98e232ff6b2128.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሽከርካሪው ጭነት እያወረደ ነው።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_21_260b1fd8256a91f8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። አሽከርካሪው ጭነት እያወረደ ነው።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_26_d26de818237b32cc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናው ተበላሽቶ ቆሟል።",
+     "kind": "answer_A",
+     "question": 1,
+     "file": "rtts_15_c7e225c0e595e4cf.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። መኪናው ተበላሽቶ ቆሟል።",
+     "kind": "answer_B",
+     "question": 1,
+     "file": "rtts_20_678377f2b7ce36f3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ማንም ሳይወርድ ወይም ሳይገባ ማረፊያ አድርጓል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_36_78542096e3e84a9a.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ማንም ሳይወርድ ወይም ሳይገባ ማረፊያ አድርጓል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_34_f82aed4842d749cc.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ማንም ሳይወርድ ወይም ሳይገባ ማረፊያ አድርጓል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_35_566e9b60dd02a145.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ማንም ሳይወርድ ወይም ሳይገባ ማረፊያ አድርጓል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_34_c93d19586a694151.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ማንም ሳይወርድ ወይም ሳይገባ ማረፊያ አድርጓል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_35_7b00bb901d2de0fa.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ማንም ሳይወርድ ወይም ሳይገባ ማረፊያ አድርጓል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_34_94cb565446b35444.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ማንም ሳይወርድ ወይም ሳይገባ ማረፊያ አድርጓል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_35_47263b765493eb71.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ማንም ሳይወርድ ወይም ሳይገባ ማረፊያ አድርጓል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_38_2f06ef0fc8a8f1d0.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ማንም ሳይወርድ ወይም ሳይገባ ማረፊያ አድርጓል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_39_b6c43ad2b587395b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ማንም ሳይወርድ ወይም ሳይገባ ማረፊያ አድርጓል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_39_68632df02a594151.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ማንም ሳይወርድ ወይም ሳይገባ ማረፊያ አድርጓል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_39_424163b00b7e0796.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ማንም ሳይወርድ ወይም ሳይገባ ማረፊያ አድርጓል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_41_7a6eb9402fa27e36.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ማንም ሳይወርድ ወይም ሳይገባ ማረፊያ አድርጓል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_42_2d3f75b8f86e0155.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ማንም ሳይወርድ ወይም ሳይገባ ማረፊያ አድርጓል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_46_6082a59e2fc817fb.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ማንም ሳይወርድ ወይም ሳይገባ ማረፊያ አድርጓል።",
+     "kind": "feedback_correct",
+     "question": 1,
+     "file": "rtts_44_1a532578508defc3.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ማንም ሳይወርድ ወይም ሳይገባ ማረፊያ አድርጓል።",
+     "kind": "feedback_wrong",
+     "question": 1,
+     "file": "rtts_48_bf34da1086785ac6.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሽከርካሪው ተሳፋሪ ለማውረድ ቆሞ ውስጥ ቢቀመጥ ይህ ማረፊያ ነው ወይስ ማቆም?",
+     "kind": "question",
+     "question": 2,
+     "file": "rtts_50_cd7467acf86e2962.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሽከርካሪው ስላልወረደ ማረፊያ ነው።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_23_797bb6ae625f32ff.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አንድ። አሽከርካሪው ስላልወረደ ማረፊያ ነው።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_28_7d4b1d283a05257d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "መኪናው የቆመበት ጊዜ ይወስነዋል።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_21_242e49226909a998.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሁለት። መኪናው የቆመበት ጊዜ ይወስነዋል።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_26_bd75e65c39e8d406.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ተሳፋሪ ስለወረደ ይህ ማቆም ነው።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_21_1cdc84927fa61efd.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ሶስት። ተሳፋሪ ስለወረደ ይህ ማቆም ነው።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_26_aad85a60c2d71ec9.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ማረፊያም ማቆምም አይደለም።",
+     "kind": "answer_A",
+     "question": 2,
+     "file": "rtts_17_c5cc34182a60515d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አራት። ማረፊያም ማቆምም አይደለም።",
+     "kind": "answer_B",
+     "question": 2,
+     "file": "rtts_22_d87181964974c5e1.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል! ተሳፋሪ ስለወረደ ይህ ማቆም ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_27_ada49bd647907444.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አዎ! ተሳፋሪ ስለወረደ ይህ ማቆም ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_25_4d145bc0df04eb52.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አሪፍ! ተሳፋሪ ስለወረደ ይህ ማቆም ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_26_623d244ad3b37b3b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎሽ! ተሳፋሪ ስለወረደ ይህ ማቆም ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_25_c9980138593c29af.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ! ተሳፋሪ ስለወረደ ይህ ማቆም ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_26_35be0d421b874864.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው! ተሳፋሪ ስለወረደ ይህ ማቆም ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_25_aeec9b68f1802bda.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ጎበዝ! ተሳፋሪ ስለወረደ ይህ ማቆም ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_26_9bd1fdd0f315e70f.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም ጥሩ! ተሳፋሪ ስለወረደ ይህ ማቆም ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_29_fd4a1a28cd0862ce.mp3",
+     "too_long": false
+    },
+    {
+     "text": "በጣም አሪፍ! ተሳፋሪ ስለወረደ ይህ ማቆም ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_30_df80fbc0ea9655e5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንድያ ነው! ተሳፋሪ ስለወረደ ይህ ማቆም ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_30_5e34079eeb2c29af.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እንዲያ ነው! ተሳፋሪ ስለወረደ ይህ ማቆም ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_30_69684ad899a8b5c8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ዋው በጣም ጥሩ! ተሳፋሪ ስለወረደ ይህ ማቆም ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_32_5c2959ceccbfffa8.mp3",
+     "too_long": false
+    },
+    {
+     "text": "እሰይ የኔ ጎበዝ! ተሳፋሪ ስለወረደ ይህ ማቆም ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_33_b44255a8ec0b192b.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ትክክል፥ አቬት እውቀት! ተሳፋሪ ስለወረደ ይህ ማቆም ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_37_a19507d8b545e5c5.mp3",
+     "too_long": false
+    },
+    {
+     "text": "አቬት ችሎታ ትክክል! ተሳፋሪ ስለወረደ ይህ ማቆም ነው።",
+     "kind": "feedback_correct",
+     "question": 2,
+     "file": "rtts_35_483593a82876d07d.mp3",
+     "too_long": false
+    },
+    {
+     "text": "ስህተት! ትክክለኛው መልስ: ተሳፋሪ ስለወረደ ይህ ማቆም ነው።",
+     "kind": "feedback_wrong",
+     "question": 2,
+     "file": "rtts_39_1e8219a001d2b898.mp3",
+     "too_long": false
+    }
+   ]
+  }
+ ]
+}
