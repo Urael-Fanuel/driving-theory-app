@@ -34,7 +34,7 @@ const BANNER_AD_UNIT_ID = IS_EXPO_GO
   ? ''
   : __DEV__
     ? require('react-native-google-mobile-ads').TestIds.ADAPTIVE_BANNER
-    : 'ca-app-pub-8758594752714631/6072135007';
+    : 'ca-app-pub-8758594752714631/3110707977';
 
 // Amharic text approved by the app owner directly (see conversation
 // history, not machine-translated). Engine A hears

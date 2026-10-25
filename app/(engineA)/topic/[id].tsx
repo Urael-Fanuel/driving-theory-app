@@ -35,7 +35,7 @@ const BANNER_AD_UNIT_ID = IS_EXPO_GO
   ? ''
   : __DEV__
     ? require('react-native-google-mobile-ads').TestIds.ADAPTIVE_BANNER
-    : 'ca-app-pub-8758594752714631/6072135007';
+    : 'ca-app-pub-8758594752714631/5845304640';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 const CARD_SIZE = (SCREEN_WIDTH - 48 - 16) / 3; // 3 columns

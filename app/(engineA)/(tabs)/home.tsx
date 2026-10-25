@@ -57,7 +57,7 @@ const BANNER_AD_UNIT_ID = IS_EXPO_GO
   ? ''
   : __DEV__
     ? require('react-native-google-mobile-ads').TestIds.ADAPTIVE_BANNER
-    : 'ca-app-pub-8758594752714631/6072135007';
+    : 'ca-app-pub-8758594752714631/5981036016';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
