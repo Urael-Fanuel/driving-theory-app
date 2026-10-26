@@ -14,6 +14,8 @@ import { EngineProvider } from '../contexts/EngineContext';
 import { Colors } from '../constants/colors';
 import { preCacheSystemAudio, reportCacheHealth } from '../services/audioCache';
 import { installGlobalErrorReporting, flushPendingReports } from '../services/errorReporter';
+import { ensureAdsReady } from '../services/adsConsent';
+import { startInterstitial } from '../services/interstitial';
 
 // Force LTR layout — Amharic is written left-to-right
 if (I18nManager.isRTL) {
@@ -36,6 +38,10 @@ export default function RootLayout() {
   // themselves were cached. Fire-and-forget; failures are retried next launch.
   useEffect(() => {
     preCacheSystemAudio(STORAGE_BASE).catch(() => {});
+
+    // Ask for ad consent (EU / UK users) at launch, never in the middle of a lesson.
+    ensureAdsReady().catch(() => {});
+    startInterstitial().catch(() => {});   // counts this launch; prepares a full-screen ad from the 3rd launch on
 
     // Diagnostics, deliberately delayed so they never compete with the first
     // screen and its audio: send reports saved by an earlier launch, then

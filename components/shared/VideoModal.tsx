@@ -15,6 +15,7 @@ import {
   StatusBar,
 } from 'react-native';
 import { useVideoPlayer, VideoView } from 'expo-video';
+import { useCoversAds } from '../../hooks/useSponsorAdTracking';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -68,6 +69,7 @@ function ModalPlayer({
 export function VideoModal({ visible, videoUri, onClose }: VideoModalProps) {
   const [loading, setLoading] = useState(true);
   const [error,   setError]   = useState(false);
+  useCoversAds(visible);   // an ad card under this video is not "seen"
 
   // Start fresh each time the modal opens.
   useEffect(() => {

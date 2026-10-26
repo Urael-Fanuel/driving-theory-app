@@ -8,8 +8,9 @@
  * outside of Expo Go.
  */
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Constants, { ExecutionEnvironment } from 'expo-constants';
+import { ensureAdsReady, onAdsReadyChange } from '../../services/adsConsent';
 
 export const IS_EXPO_GO = Constants.executionEnvironment === ExecutionEnvironment.StoreClient;
 
@@ -28,10 +29,27 @@ interface SafeBannerAdProps {
 }
 
 export function SafeBannerAd({ unitId }: SafeBannerAdProps) {
-  if (IS_EXPO_GO || !BannerAd) return null;
+  // No ad is requested before Google's consent step has answered (services/adsConsent.ts).
+  const [ready, setReady] = useState(false);
+  // Bumped when the user changes the ad choice: the banner is recreated, so its next
+  // request already carries the new choice.
+  const [generation, setGeneration] = useState(0);
+  useEffect(() => {
+    let alive = true;
+    ensureAdsReady().then(ok => { if (alive) setReady(ok); }).catch(() => {});
+    const off = onAdsReadyChange(ok => {
+      if (!alive) return;
+      setReady(ok);
+      setGeneration(g => g + 1);
+    });
+    return () => { alive = false; off(); };
+  }, []);
+
+  if (IS_EXPO_GO || !BannerAd || !ready) return null;
 
   return (
     <BannerAd
+      key={generation}
       unitId={unitId}
       size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
       requestOptions={{ requestNonPersonalizedAdsOnly: false }}

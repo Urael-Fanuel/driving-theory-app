@@ -20,6 +20,7 @@ import {
   Image,
   Animated,
   Dimensions,
+  BackHandler,
 } from 'react-native';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
@@ -33,6 +34,7 @@ import { VoiceAnswerButton } from '../../../components/engineA/VoiceAnswerButton
 import { AudioFeedback } from '../../../components/engineA/AudioFeedback';
 import { ProgressBar } from '../../../components/shared/ProgressBar';
 import { AdCard } from '../../../components/shared/AdCard';
+import { AdClip } from '../../../components/shared/AdClip';
 import { useTopicQuiz } from '../../../hooks/useTopicQuiz';
 import { useAudio, playAndAwaitAudio } from '../../../hooks/useAudio';
 import { useSponsorAd } from '../../../hooks/useSponsorAd';
@@ -51,6 +53,7 @@ import { speakAndAwait, stopTTS, onTTSSpeakingChange, getIsTTSSpeaking } from '.
 import { useAudioInterrupted, resumeInterruptedAudio } from '../../../hooks/useAudioInterrupted';
 import ConfettiCannon from 'react-native-confetti-cannon';
 import { isQuestionAudioReady } from '../../../services/audioCache';
+import { maybeShowInterstitial } from '../../../services/interstitial';
 import * as api from '../../../backend/api';
 import { DBSign } from '../../../backend/supabaseClient';
 import { OfflineBanner } from '../../../components/shared/OfflineBanner';
@@ -83,6 +86,7 @@ const NUMBER_URLS = [
 export default function EngineATopicQuizScreen() {
   const { topicId, levelId } = useLocalSearchParams<{ topicId: string; levelId?: string }>();
   const router               = useRouter();
+  const adClipRef = useRef<any>(null);   // the scroll area holding the ad card (components/shared/AdClip.tsx)
   // The Android system bar (3-button or gesture) sits over the bottom of the screen
   // (edge-to-edge): the last item of a scrolling screen needs this much room, or the
   // bar covers it (the 🎤 button was half hidden, 2026-10-25).
@@ -121,6 +125,7 @@ export default function EngineATopicQuizScreen() {
 
   // Refs for sequence control (same pattern as exam.tsx)
   const phaseRef               = useRef(phase);
+  const leavingRef             = useRef(false);   // handleBack runs once (CODEX round 3, C1)
   phaseRef.current             = phase;
   const sequenceCancelledRef   = useRef(false);
   const confettiRef            = useRef<any>(null);
@@ -420,11 +425,40 @@ export default function EngineATopicQuizScreen() {
   };
 
   const handleBack = async () => {
-    cancelListening();
-    await stopAudio();
-    await stopTTS().catch(() => {});
-    router.back();
+    if (leavingRef.current) return;   // one exit only: a double tap must not count twice or go back twice
+    leavingRef.current = true;
+    try {
+      cancelListening();
+      await stopAudio();
+      await stopTTS().catch(() => {});
+      // End point: a full-screen ad may run here (never mid-lesson). See services/interstitial.ts.
+      if (phase === 'result') await maybeShowInterstitial();
+      // Success keeps the guard on: the screen is leaving. Only when there is nowhere
+      // to go back to (the screen stays) is it released (CODEX round 4, R4-1).
+      const canLeave = typeof router.canGoBack !== 'function' || router.canGoBack();
+      router.back();
+      if (!canLeave) leavingRef.current = false;
+    } catch (err) {
+      // The exit failed (an audio stop or the navigation threw): release the guard so
+      // the next tap can try again, instead of leaving the back button dead.
+      leavingRef.current = false;
+      console.warn('[handleBack] leaving failed:', err);
+    }
   };
+
+  // Android hardware back takes the same way out as the ← button: audio stopped, and on
+  // the result screen the end point is counted (CODEX round 3, C2). Mirrors the
+  // behavioral screens.
+  const handleBackRef = useRef(handleBack);
+  handleBackRef.current = handleBack;
+  useFocusEffect(
+    useCallback(() => {
+      const sub = BackHandler.addEventListener('hardwareBackPress', () => {
+        handleBackRef.current(); return true;
+      });
+      return () => sub.remove();
+    }, [])
+  );
 
   const canGoPrev = currentIndex > 0;
   const canGoNext = currentIndex < questions.length - 1;
@@ -494,7 +528,8 @@ export default function EngineATopicQuizScreen() {
             />
           </View>
         )}
-        <ScrollView contentContainerStyle={styles.resultContent}>
+        <AdClip target={adClipRef}>
+        <ScrollView ref={adClipRef} contentContainerStyle={styles.resultContent}>
           {/* Score circle */}
           <View style={[styles.resultCircle, { borderColor: passed ? Colors.correct : Colors.wrong }]}>
             <Text style={styles.resultEmoji}>{scoreEmoji}</Text>
@@ -520,6 +555,7 @@ export default function EngineATopicQuizScreen() {
               <View style={styles.adWrapper}>
                 <AdCard
                   variant="instructor"
+                  adId={sponsorAd.id}
                   name={sponsorAd.name}
                   tagline={sponsorAd.taglineAmharic}
                   phone={sponsorAd.phone}
@@ -551,6 +587,7 @@ export default function EngineATopicQuizScreen() {
             </TouchableOpacity>
           </View>
         </ScrollView>
+        </AdClip>
       </SafeAreaView>
     );
   }

@@ -36,6 +36,7 @@ import { DBSign } from '../../backend/supabaseClient';
 // ─── Global result storage (passed from useExam) ──────────────────────────────
 import { ResultData, WrongQuestion, getExamResult, preloadExamResult } from '../../utils/examResult';
 import { SponsorAdBanner } from '../../components/shared/SponsorAdBanner';
+import { AdClip } from '../../components/shared/AdClip';
 import { useSponsorAd } from '../../hooks/useSponsorAd';
 import { SafeBannerAd, IS_EXPO_GO } from '../../components/shared/SafeBannerAd';
 
@@ -95,6 +96,7 @@ export { storeExamResult } from '../../utils/examResult';
 export default function ResultScreen() {
   const { sessionId } = useLocalSearchParams<{ sessionId: string }>();
   const router        = useRouter();
+  const adClipRef = useRef<any>(null);   // the scroll area holding the ad card (components/shared/AdClip.tsx)
   const { engineType, userId } = useEngine();
   const sponsorAd = useSponsorAd(userId);
   const { playAudio, stopAudio } = useAudio();
@@ -294,7 +296,8 @@ export default function ResultScreen() {
           />
         </View>
       )}
-      <ScrollView contentContainerStyle={styles.content}>
+      <AdClip target={adClipRef}>
+      <ScrollView ref={adClipRef} contentContainerStyle={styles.content}>
 
         {/* Result icon + score */}
         <Animated.View
@@ -531,6 +534,7 @@ export default function ResultScreen() {
         </Animated.View>
 
       </ScrollView>
+      </AdClip>
     </SafeAreaView>
   );
 }

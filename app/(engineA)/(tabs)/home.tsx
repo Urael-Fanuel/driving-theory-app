@@ -44,6 +44,7 @@ import * as api from '../../../backend/api';
 import { useAudio } from '../../../hooks/useAudio';
 import { useProgress } from '../../../hooks/useProgress';
 import { AdCard } from '../../../components/shared/AdCard';
+import { AdClip } from '../../../components/shared/AdClip';
 import { useSponsorAd } from '../../../hooks/useSponsorAd';
 import { speakAndAwait } from '../../../utils/googleTTS';
 import { SafeBannerAd, IS_EXPO_GO } from '../../../components/shared/SafeBannerAd';
@@ -67,6 +68,7 @@ const CARD_SIZE = (SCREEN_WIDTH - 48 - 12) / 2; // 2 columns with gap
 
 export default function EngineAHomeScreen() {
   const router   = useRouter();
+  const adClipRef = useRef<any>(null);   // the scroll area holding the ad card (components/shared/AdClip.tsx)
   const { playAudio } = useAudio();
   const { isSignViewed } = useProgress();
   const { userId } = useEngine();
@@ -199,7 +201,9 @@ export default function EngineAHomeScreen() {
         </View>
 
         {/* Topics grid */}
+        <AdClip target={adClipRef}>
         <FlatList
+          ref={adClipRef}
           data={topics}
           keyExtractor={t => t.id}
           renderItem={renderTopic}
@@ -212,6 +216,7 @@ export default function EngineAHomeScreen() {
               <View style={styles.adFooter}>
                 <AdCard
                   variant="instructor"
+                  adId={sponsorAd.id}
                   name={sponsorAd.name}
                   tagline={sponsorAd.taglineAmharic}
                   phone={sponsorAd.phone}
@@ -222,6 +227,7 @@ export default function EngineAHomeScreen() {
             ) : null
           }
         />
+        </AdClip>
 
         {/* AdMob Banner */}
         <View style={styles.bannerContainer}>

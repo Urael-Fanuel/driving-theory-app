@@ -35,13 +35,13 @@ const DISCLAIMER_TEXT = `
 ወደ አማርኛ የንድፈ ሃሳብ ፈተና ዝግጅት አፕሊኬሽን እንኳን ደህና መጡ። ይህን አፕሊኬሽን በመጠቀምዎ የሚከተሉትን ውሎች ይስማሙ።
 
 አንድ፥ የአፕሊኬሽኑ ዓላማ።
-ይህ አፕሊኬሽን ተጠቃሚዎች የንድፈ ሃሳብ ፈተናዎችን እንዲዘጋጁ ለመርዳት የተዘጋጀ ነው። ይዘቱ በእስራኤል የትራፊክ ደንቦች እና በቪየና ዓለም አቀፍ ስምምነት ላይ የተመሰረተ ነው። ይህ አፕሊኬሽን በአገርዎ ውስጥ ላለው ኦፊሴላዊ የፍቃድ ባለሥልጣን ቁሳቁስ ምትክ አይደለም።
+ይህ አፕሊኬሽን ተጠቃሚዎች የንድፈ ሃሳብ ፈተናዎችን እንዲዘጋጁ ለመርዳት የተዘጋጀ ነው። ይዘቱ በቪየና ዓለም አቀፍ ስምምነት እና በትራንስፖርት ሚኒስቴሮች ይፋዊ ሰነዶች ላይ የተመሰረተ ነው እስራኤልን ጨምሮ። ይህ አፕሊኬሽን በአገርዎ ውስጥ ላለው ኦፊሴላዊ የፍቃድ ባለሥልጣን ቁሳቁስ ምትክ አይደለም።
 
 ሁለት፥ የተጠያቂነት ገደብ።
-ገንቢው ይህን አፕሊኬሽን ብቻ ተመርኩዞ ፈተናው ያልተሳካ ከሆነ ተጠያቂ አይሆንም። በእስራኤል የትራፊክ ደንቦች እና በሌሎች አገሮች ደንቦች መካከል ልዩነቶች ሊኖሩ ይችላሉ። አፕሊኬሽኑን መጠቀም ሙሉ በሙሉ የተጠቃሚው ኃላፊነት ነው።
+ገንቢው ይህን አፕሊኬሽን ብቻ ተመርኩዞ ፈተናው ያልተሳካ ከሆነ ተጠያቂ አይሆንም። የአፕሊኬሽኑ ደንቦች ከአገርዎ ደንቦች የተለዩ ሊሆኑ ይችላሉ። አፕሊኬሽኑን መጠቀም ሙሉ በሙሉ የተጠቃሚው ኃላፊነት ነው።
 
 ሶስት፥ ክፍያ እና መሰረዝ።
-ክፍያ ለተመረጠው የምዝገባ ጊዜ አስቀድሞ ይፈጸማል። ምዝገባ ከተካሄደ በኋላ ገንዘብ አይመለስም። በአፕሊኬሽኑ በኩል የተረጋገጠ ቴክኒካዊ ብልሽት ከተከሰተ ገንቢው እያንዳንዱን ጉዳይ በተናጠል ይገመግማል።
+በአሁኑ ጊዜ አፕሊኬሽኑ ለተጠቃሚዎች ነጻ ሲሆን፣ ክፍያ የሚፈጸመው በአፕሊኬሽኑ ውስጥ ለሚያስተዋውቁ የንግድ ድርጅቶች ብቻ ነው። ክፍያ ለተመረጠው የምዝገባ ጊዜ አስቀድሞ ይፈጸማል። ምዝገባ ከተካሄደ በኋላ ገንዘብ አይመለስም። በአፕሊኬሽኑ በኩል የተረጋገጠ ቴክኒካዊ ብልሽት ከተከሰተ ገንቢው እያንዳንዱን ጉዳይ በተናጠል ይገመግማል።
 
 አራት፥ የፍቃድ አጠቃቀም።
 ይህ አፕሊኬሽን ለግል አጠቃቀም ብቻ የታሰበ ነው። ከገንቢው የጽሁፍ ፈቃድ ሳይኖር የአፕሊኬሽኑን ይዘት መቅዳት፣ ማሰራጨት፣ መሸጥ ወይም ማሻሻያ ማድረግ ጥብቅ ክልከላ ነው። ይህን ውል መጣስ ህጋዊ ሂደቶችን ሊያስከትል ይችላል።
@@ -88,12 +88,13 @@ function ttsRequest(text) {
 }
 
 const OUT = path.join(ROOT, 'assets', 'audio', 'disclaimer.mp3');
-if (fs.existsSync(OUT)) {
-  fs.unlinkSync(OUT);
-  console.log('🗑  Deleted old disclaimer.mp3');
-}
+const TMP = OUT + '.new';
 
 console.log('🎙  Generating disclaimer.mp3...');
 const audioB64 = await ttsRequest(DISCLAIMER_TEXT);
-fs.writeFileSync(OUT, Buffer.from(audioB64, 'base64'));
+// Written to a temporary file first and swapped in only when complete, so a failed
+// request can never leave the app without its disclaimer audio.
+fs.writeFileSync(TMP, Buffer.from(audioB64, 'base64'));
+if (fs.statSync(TMP).size < 50_000) { fs.unlinkSync(TMP); throw new Error('Generated audio is suspiciously small, old file kept'); }
+fs.renameSync(TMP, OUT);
 console.log(`✅  Saved: ${OUT}`);

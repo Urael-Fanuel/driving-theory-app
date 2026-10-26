@@ -948,6 +948,8 @@ export async function clearUserIpCity(userId: string): Promise<boolean> {
 // ─── SPONSOR ADS ────────────────────────────────────────────────────────────
 
 export interface SponsorAd {
+  /** sponsor_ads.id: lets views and presses be counted (services/adEvents.ts). */
+  id:             string;
   name:           string;
   taglineAmharic: string;
   /** Recorded Amharic narration of this sponsor's pitch — Engine A only.
@@ -1018,7 +1020,7 @@ export async function getSponsorAd(
 
     const { data: ads, error: adsErr } = await (supabase
       .from('sponsor_ads') as any)
-      .select('name, tagline_amharic, audio_url, phone, avatar_url, city, lat, lon')
+      .select('id, name, tagline_amharic, audio_url, phone, avatar_url, city, lat, lon')
       .eq('category', category)
       .eq('is_active', true);
     if (adsErr) throw adsErr;
@@ -1047,6 +1049,7 @@ export async function getSponsorAd(
 
     const pick = pickRandom(candidates);
     return {
+      id:             pick.id,
       name:           pick.name,
       taglineAmharic: pick.tagline_amharic,
       audioUrl:       pick.audio_url ?? null,

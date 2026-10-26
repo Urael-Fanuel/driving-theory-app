@@ -26,7 +26,10 @@ import { LocationPermissionModal } from '../../../components/shared/LocationPerm
 import { useLocationPrompt } from '../../../hooks/useLocationPrompt';
 import { useEngine } from '../../../contexts/EngineContext';
 import { useSponsorAd } from '../../../hooks/useSponsorAd';
+import { usePrivacyOptions } from '../../../hooks/usePrivacyOptions';
+import { UiStrings } from '../../../constants/strings';
 import { SponsorAdBanner } from '../../../components/shared/SponsorAdBanner';
+import { AdClip } from '../../../components/shared/AdClip';
 import { SafeBannerAd, IS_EXPO_GO } from '../../../components/shared/SafeBannerAd';
 
 // react-native-google-mobile-ads has no native module in Expo Go — avoid
@@ -48,8 +51,10 @@ const PROGRESS_READY_AD_AUDIO    =
 
 export default function EngineAProgressScreen() {
   const router = useRouter();
+  const adClipRef = useRef<any>(null);   // the scroll area holding the ad card (components/shared/AdClip.tsx)
   const { userId } = useEngine();
   const sponsorAd = useSponsorAd(userId);
+  const privacyOptions = usePrivacyOptions();
   const {
     visible: locationModalVisible,
     approved: locationApproved,
@@ -91,7 +96,8 @@ export default function EngineAProgressScreen() {
         onApprove={handleLocationApprove}
         onNotNow={handleLocationNotNow}
       />
-      <ScrollView contentContainerStyle={styles.content}>
+      <AdClip target={adClipRef}>
+      <ScrollView ref={adClipRef} contentContainerStyle={styles.content}>
         {/* Large circular progress indicator */}
         <View style={styles.circleContainer}>
           <View style={[
@@ -169,6 +175,19 @@ export default function EngineAProgressScreen() {
           </Animated.View>
         )}
 
+        {/* Ad privacy choices — only for users in the EU / UK / Switzerland, where Google
+            says it is required (services/adsConsent.ts). Everyone else never sees it. */}
+        {privacyOptions.required && (
+          <TouchableOpacity
+            style={styles.privacyButton}
+            onPress={privacyOptions.open}
+            activeOpacity={0.8}
+            accessibilityLabel={UiStrings.privacyOptions || undefined}
+          >
+            <MaterialCommunityIcons name="shield-account" size={36} color="#ffffff" />
+          </TouchableOpacity>
+        )}
+
         {/* Start exam button */}
         <TouchableOpacity
           style={styles.examButton}
@@ -178,6 +197,7 @@ export default function EngineAProgressScreen() {
           <Text style={styles.examIcon}>📝</Text>
         </TouchableOpacity>
       </ScrollView>
+      </AdClip>
     </SafeAreaView>
   );
 }
@@ -251,6 +271,16 @@ const styles = StyleSheet.create({
     shadowOpacity:   0.4,
     shadowRadius:    10,
     elevation:       6,
+  },
+  privacyButton: {
+    width:           80,
+    height:          80,
+    borderRadius:    40,
+    backgroundColor: '#607D8B',
+    justifyContent:  'center',
+    alignItems:      'center',
+    borderWidth:     3,
+    borderColor:     '#CFD8DC',
   },
   locationButton: {
     width:           80,

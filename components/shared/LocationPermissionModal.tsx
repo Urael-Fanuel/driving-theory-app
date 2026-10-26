@@ -20,6 +20,7 @@ import React from 'react';
 import { Modal, View, Text, TouchableOpacity, StyleSheet, SafeAreaView } from 'react-native';
 import { speakAndAwait, stopTTS } from '../../utils/googleTTS';
 import { useAudioInterrupted, resumeInterruptedAudio } from '../../hooks/useAudioInterrupted';
+import { useCoversAds } from '../../hooks/useSponsorAdTracking';
 
 const PRIMER_TITLE = 'ለእርስዎ የተመረጡ ጥቆማዎች';
 const PRIMER_BODY = 'ታጋሽ ና ታማኝ አስተማሪዎችን፣ የመኪና አገልግሎቶችን እና ጠቃሚ ቦታዎችን በአካባቢዎ ለማግኘት አካባቢዎን ይፍቀዱ።';
@@ -42,6 +43,7 @@ export function LocationPermissionModal({ visible, onApprove, onNotNow }: Props)
   const [speaking, setSpeaking] = React.useState(false);
   const speakRunRef = React.useRef(0);
   const audioInterrupted = useAudioInterrupted();   // Android paused our audio (call, other app)
+  useCoversAds(visible);   // an ad card under this dialog is not "seen"
 
   React.useEffect(() => {
     if (!visible) {

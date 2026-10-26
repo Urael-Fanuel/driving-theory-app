@@ -61,6 +61,7 @@ import { OfflineBanner } from '../../../components/shared/OfflineBanner';
 import { LocationPermissionModal } from '../../../components/shared/LocationPermissionModal';
 import { useLocationPrompt } from '../../../hooks/useLocationPrompt';
 import { useEngine } from '../../../contexts/EngineContext';
+import { maybeShowInterstitial } from '../../../services/interstitial';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 interface Answer   { text_amharic: string; is_correct: boolean; }
@@ -154,6 +155,7 @@ export default function BehavioralSubtopicScreenB() {
   const [feedbackText,   setFeedbackText]   = useState('');
   const [ttsSpeaking,    setTtsSpeaking]    = useState(false);
   const ttsSpeakingRef = useRef(false); // sync ref for use inside async handlers
+  const leavingRef = useRef(false);   // handleBack runs once (CODEX round 3, C1)
   const audioInterrupted = useAudioInterrupted();   // Android paused our audio (call, other app)
 
   const currentQ   = questions[qIndex] ?? null;
@@ -186,12 +188,27 @@ export default function BehavioralSubtopicScreenB() {
   // same order on every render (React rules-of-hooks).
 
   const handleBack = useCallback(async () => {
-    ttsSpeakingRef.current = false;   // cancel the read-aloud sequence, not just the current clip
-    setTtsSpeaking(false);
-    await stopAudio();
-    await stopTTS().catch(() => {});
-    router.back();
-  }, [stopAudio, router]);
+    if (leavingRef.current) return;   // one exit only: a double tap must not count twice or go back twice
+    leavingRef.current = true;
+    try {
+      ttsSpeakingRef.current = false;   // cancel the read-aloud sequence, not just the current clip
+      setTtsSpeaking(false);
+      await stopAudio();
+      await stopTTS().catch(() => {});
+      // End point: a full-screen ad may run here (never mid-lesson). See services/interstitial.ts.
+      if (phase === 'complete') await maybeShowInterstitial();
+      // Success keeps the guard on: the screen is leaving. Only when there is nowhere
+      // to go back to (the screen stays) is it released (CODEX round 4, R4-1).
+      const canLeave = typeof router.canGoBack !== 'function' || router.canGoBack();
+      router.back();
+      if (!canLeave) leavingRef.current = false;
+    } catch (err) {
+      // The exit failed (an audio stop or the navigation threw): release the guard so
+      // the next tap can try again, instead of leaving the back button dead.
+      leavingRef.current = false;
+      console.warn('[handleBack] leaving failed:', err);
+    }
+  }, [stopAudio, router, phase]);
 
   // Android hardware back button must stop the audio too, exactly like the
   // in-app ← button. Without this the screen simply unmounts while the

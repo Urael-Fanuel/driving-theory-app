@@ -107,4 +107,7 @@ export const UiStrings = {
   a11yShare:     "ማጋራት",
   a11yLevel:     (n: number | string) => "ደረጃ " + n + "",
   a11yTopicQuiz: "የርዕሰ ጉዳዩ ፈተና",
+  /** Label of the "ad privacy choices" button (EU / UK / CH users only). Gemini option 1, picked by the owner 2026-10-25
+   *  (scripts/translatePrivacyOptionsLabel.mjs). If ever emptied, the button shows the icon only. */
+  privacyOptions: "ማስታወቂያ ምርጫ",
 } as const;

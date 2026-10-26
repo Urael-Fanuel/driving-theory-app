@@ -8,7 +8,7 @@
  * Pass threshold: 7/10 (70%)
  */
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import {
   View,
   Text,
@@ -18,10 +18,11 @@ import {
   SafeAreaView,
   ScrollView,
   Dimensions,
+  BackHandler,
 } from 'react-native';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
-import { useLocalSearchParams, useRouter } from 'expo-router';
+import { useLocalSearchParams, useRouter, useFocusEffect } from 'expo-router';
 import { Colors } from '../../../constants/colors';
 import { Typography } from '../../../constants/typography';
 import { LoadingScreen } from '../../../components/shared/LoadingScreen';
@@ -30,6 +31,7 @@ import { TextFeedback } from '../../../components/engineB/TextFeedback';
 import { AudioButton } from '../../../components/shared/AudioButton';
 import { ProgressBar } from '../../../components/shared/ProgressBar';
 import { AdCard } from '../../../components/shared/AdCard';
+import { AdClip } from '../../../components/shared/AdClip';
 import { useTopicQuiz } from '../../../hooks/useTopicQuiz';
 import { useAudio, playAndAwaitAudio } from '../../../hooks/useAudio';
 import { useSponsorAd } from '../../../hooks/useSponsorAd';
@@ -50,6 +52,7 @@ import * as api from '../../../backend/api';
 import { DBSign } from '../../../backend/supabaseClient';
 import { OfflineBanner } from '../../../components/shared/OfflineBanner';
 import { extractSignNumber, shouldShowSignBadge } from '../../../utils/signNumber';
+import { maybeShowInterstitial } from '../../../services/interstitial';
 
 
 // ─── Audio base URL ────────────────────────────────────────────────────────────
@@ -63,6 +66,7 @@ const AMHARIC_NUMBERS = ['አንድ', 'ሁለት', 'ሶስት', 'አራት'];
 export default function EngineBTopicQuizScreen() {
   const { topicId, levelId } = useLocalSearchParams<{ topicId: string; levelId?: string }>();
   const router               = useRouter();
+  const adClipRef = useRef<any>(null);   // the scroll area holding the ad card (components/shared/AdClip.tsx)
 
   const {
     phase,
@@ -83,6 +87,7 @@ export default function EngineBTopicQuizScreen() {
   const [signs,        setSigns]        = useState<DBSign[]>([]);
   const [ttsSpeaking,  setTtsSpeaking]  = useState(false);
   const ttsSpeakingRef = useRef(false);
+  const leavingRef = useRef(false);   // handleBack runs once (CODEX round 3, C1)
   const audioInterrupted = useAudioInterrupted();   // Android paused our audio (call, other app)
   const confettiRef    = useRef<any>(null);
   const scrollRef      = useRef<any>(null);
@@ -140,12 +145,41 @@ export default function EngineBTopicQuizScreen() {
   };
 
   const handleBack = async () => {
-    ttsSpeakingRef.current = false;   // cancel the read-aloud sequence, not just the current clip
-    setTtsSpeaking(false);
-    await stopAudio();
-    await stopTTS().catch(() => {});
-    router.back();
+    if (leavingRef.current) return;   // one exit only: a double tap must not count twice or go back twice
+    leavingRef.current = true;
+    try {
+      ttsSpeakingRef.current = false;   // cancel the read-aloud sequence, not just the current clip
+      setTtsSpeaking(false);
+      await stopAudio();
+      await stopTTS().catch(() => {});
+      // End point: a full-screen ad may run here (never mid-lesson). See services/interstitial.ts.
+      if (phase === 'result') await maybeShowInterstitial();
+      // Success keeps the guard on: the screen is leaving. Only when there is nowhere
+      // to go back to (the screen stays) is it released (CODEX round 4, R4-1).
+      const canLeave = typeof router.canGoBack !== 'function' || router.canGoBack();
+      router.back();
+      if (!canLeave) leavingRef.current = false;
+    } catch (err) {
+      // The exit failed (an audio stop or the navigation threw): release the guard so
+      // the next tap can try again, instead of leaving the back button dead.
+      leavingRef.current = false;
+      console.warn('[handleBack] leaving failed:', err);
+    }
   };
+
+  // Android hardware back takes the same way out as the ← button: audio stopped, and on
+  // the result screen the end point is counted (CODEX round 3, C2). Mirrors the
+  // behavioral screens.
+  const handleBackRef = useRef(handleBack);
+  handleBackRef.current = handleBack;
+  useFocusEffect(
+    useCallback(() => {
+      const sub = BackHandler.addEventListener('hardwareBackPress', () => {
+        handleBackRef.current(); return true;
+      });
+      return () => sub.remove();
+    }, [])
+  );
 
   const canGoPrev = currentIndex > 0;
   const canGoNext = currentIndex < questions.length - 1;
@@ -209,7 +243,8 @@ export default function EngineBTopicQuizScreen() {
             />
           </View>
         )}
-        <ScrollView contentContainerStyle={styles.resultContent}>
+        <AdClip target={adClipRef}>
+        <ScrollView ref={adClipRef} contentContainerStyle={styles.resultContent}>
           {/* Score circle */}
           <View style={[styles.resultCircle, { borderColor: statusColor }]}>
             <Text style={styles.resultEmoji}>{scoreEmoji}</Text>
@@ -239,6 +274,7 @@ export default function EngineBTopicQuizScreen() {
               <View style={styles.adWrapper}>
                 <AdCard
                   variant="instructor"
+                  adId={sponsorAd.id}
                   name={sponsorAd.name}
                   tagline={sponsorAd.taglineAmharic}
                   phone={sponsorAd.phone}
@@ -279,6 +315,7 @@ export default function EngineBTopicQuizScreen() {
             <Text style={styles.fullExamText}>📝  ወደ ሙሉ ፈተና</Text>
           </TouchableOpacity>
         </ScrollView>
+        </AdClip>
       </SafeAreaView>
     );
   }

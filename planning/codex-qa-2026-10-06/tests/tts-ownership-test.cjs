@@ -24,7 +24,8 @@ function world(opts = {}) {
     p.endsWith('/sound')          ? { Sound, applyAudioMode: async () => {} } :
     p.endsWith('/supabaseClient') ? { supabase: { functions: { invoke: async () => ({ data: { audioContent: 'QUFB' }, error: null }) } } } :
     p.endsWith('/audioCache')     ? { getCachedTtsUri: async t => (opts.missing && opts.missing.includes(t)) ? null : 'file:///tts/' + t + '.mp3', storeTtsAudio: async () => {}, releaseAudioFiles: async () => {}, fetchRecordedTts: async () => null, skipRecordedTts: async () => {}, isRecordedTtsUri: () => false } :
-    p.endsWith('/errorReporter')  ? { reportError() {}, describeUri: () => ({}), httpStatusOf: () => null } : {};
+    p.endsWith('/errorReporter')  ? { reportError() {}, describeUri: () => ({}), httpStatusOf: () => null } :
+    p.endsWith('/ttsStats')       ? { countTts() {} } : {};
   const ctx = {
     exports: {}, console: { warn() {}, error() {}, log() {} }, process: { env: {} },
     setTimeout: (fn, ms) => { const id = nextTimer++; timers.set(id, { fn, ms }); return id; },

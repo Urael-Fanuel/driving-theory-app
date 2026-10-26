@@ -1,0 +1,69 @@
+{
+  "_note": "English source of the 2026-10-25 privacy policy update. Each snippet says where it goes (section = the emoji heading of that section; where = how to place it). Amharic is produced by scripts/translatePrivacyUpdate.mjs (Gemini), never by hand.",
+  "snippets": [
+    {
+      "id": "adEvents",
+      "section": "📦",
+      "where": "before-li-containing:Speech-to-Text",
+      "html": "<li><strong>Ad views, taps and calls (driving-instructor ads)</strong> — When a driving instructor’s ad is on your screen (at least half of it visible for one second), when you tap it, or when you press its “call” button, the app saves a short record: which ad, which of these three events, which screen of the app and which learning mode (audio-based or text-based), the time (set by our server), your anonymous ID, and a city. The city is added by our server from the city already stored for you (from your location if you allowed it, or the estimate described above if you have not been asked yet); if you declined location, no city is saved with these records. We use them only to show instructors totals: how many people saw and tapped their ad, per day and per city. The instructors do not receive your anonymous ID or any other personal data, and we do not record the phone call itself, only the press of the button.</li>"
+    },
+    {
+      "id": "voiceStats",
+      "section": "📦",
+      "where": "before-li-containing:Speech-to-Text",
+      "html": "<li><strong>Voice statistics</strong> — To check that our recorded voices work, the app counts, per day, how many sentences were read from a recording, how many with the live voice, and how many recordings could not be played. Only these counts are sent, together with the app version and whether your phone is Android or iOS. They are not linked to your anonymous ID and contain no text, no recordings and no location.</li>"
+    },
+    {
+      "id": "locationUse",
+      "section": "📦",
+      "where": "replace-sentence-in-li-containing:Location (optional)",
+      "sentenceIndex": 1,
+      "oldContains": "We use this only to choose which nearby driving instructors’ ads to show you",
+      "html": "We use this only to choose which nearby driving instructors’ ads to show you and to count, per city, how many people saw or tapped each ad."
+    },
+    {
+      "id": "adsEurope",
+      "section": "📢",
+      "where": "end-of-section",
+      "html": "<p><strong>Your choices in Europe.</strong> If you are in the European Economic Area, the United Kingdom or Switzerland, Google’s consent form asks for your choice when you open the app, before any ad is requested. If you refuse, Google may still show limited ads. These are not personalised with your data, but Google still uses some data, such as your IP address, to deliver the ad and to prevent fraud (<a href=\"https://support.google.com/admob/answer/10105530\" target=\"_blank\">Google’s explanation of limited ads</a>). You can change your choice at any time with the “ad privacy choices” button on the Progress screen, which is shown only where this applies.</p>",
+      "translationNote": "Limited ads are NOT PERSONALISED with the user's data. Never write that they 'do not use personal data' or 'do not use your data': Google still uses some data (the IP address) to deliver the ad and prevent fraud. Keep 'may still show' (not a promise that an ad is shown). Write \"the United Kingdom\" as the full country name (the United Kingdom), never as England.",
+      "mustNotMean": [
+        "do(es)? not use (your |any )?(personal )?(data|information)",
+        "without (using )?(your |any )?(personal )?(data|information)",
+        "no (personal )?data is used",
+        "will (always )?show",
+        "England"
+      ]
+    },
+    {
+      "id": "adsFullScreen",
+      "section": "📢",
+      "where": "end-of-section",
+      "html": "<p>Besides banners, the app may show a full-screen Google ad when you finish a subtopic or a topic quiz, never during a lesson, a question or an exam.</p>"
+    },
+    {
+      "id": "instructorCounts",
+      "section": "🚗",
+      "where": "end-of-section",
+      "html": "<p>The app counts how often each instructor ad is seen, tapped or called (see “Data We Collect”), so that instructors can be shown totals per day and per city.</p>"
+    },
+    {
+      "id": "internetCounts",
+      "section": "🌐",
+      "where": "end-of-ul",
+      "html": "<li>Saving ad view, tap and call records and the anonymous voice counts described above</li>"
+    },
+    {
+      "id": "keepEvents",
+      "section": "🗓️",
+      "where": "end-of-ul",
+      "html": "<li>Ad view, tap and call records are linked to your anonymous ID, are kept only as long as needed to report totals to instructors, and are deleted on request. The voice counts cannot be linked to you and are kept as totals.</li>"
+    },
+    {
+      "id": "rightsEurope",
+      "section": "🗑️",
+      "where": "end-of-ul",
+      "html": "<li><strong>Change your ad choices (Europe)</strong> — If you are in the European Economic Area, the United Kingdom or Switzerland, use the “ad privacy choices” button on the Progress screen at any time.</li>"
+    }
+  ]
+}

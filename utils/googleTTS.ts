@@ -15,6 +15,7 @@ import { Sound, applyAudioMode } from '../services/sound';
 import { supabase } from '../backend/supabaseClient';
 import { getCachedTtsUri, storeTtsAudio, releaseAudioFiles, fetchRecordedTts, skipRecordedTts, isRecordedTtsUri } from '../services/audioCache';
 import { reportError, describeUri, httpStatusOf } from '../services/errorReporter';
+import { countTts } from '../services/ttsStats';
 
 // TTS requests go through a Supabase Edge Function (supabase/functions/tts) —
 // the Google API key lives server-side only and is never shipped in the app.
@@ -307,8 +308,15 @@ export async function speakAndAwait(text: string): Promise<boolean> {
 
     let failedUri: string | null = null;
     if (uri) {
-      const outcome = await _playTtsUri(uri, text, source, myGeneration);
-      if (outcome !== 'failed') return outcome === 'done';
+      const toEnd = { value: false };
+      const outcome = await _playTtsUri(uri, text, source, myGeneration, toEnd);
+      if (outcome !== 'failed') {
+        // Anonymous counter (services/ttsStats.ts): only a clip heard to the end, never one
+        // that was stopped or replaced while playing (that still returns 'done', see below).
+        if (toEnd.value) countTts(isRecordedTtsUri(uri) ? 'recorded' : 'live');
+        return outcome === 'done';
+      }
+      if (isRecordedTtsUri(uri) && _ttsGeneration === myGeneration) countTts('recorded_failed');
       failedUri = uri;
       // The saved clip (a cached rendering or a recording) would not play and
       // has been thrown away. Say the sentence live instead, once, in this same
@@ -322,7 +330,9 @@ export async function speakAndAwait(text: string): Promise<boolean> {
     //       key stays server-side.
     const liveUri = await _fetchLiveTts(text, myGeneration, failedUri);
     if (!liveUri) { _stopSpeakingIfMine(myGeneration); return false; }
-    const heard = (await _playTtsUri(liveUri, text, 'live', myGeneration)) === 'done';
+    const liveToEnd = { value: false };
+    const heard = (await _playTtsUri(liveUri, text, 'live', myGeneration, liveToEnd)) === 'done';
+    if (liveToEnd.value) countTts('live');
     // No further try after this one: switch the speaking state off (only if this
     // request still owns it), or the screens keep showing ⏸ over silence
     // (CODEX QA 2026-10-24, S1).
@@ -403,7 +413,11 @@ async function _fetchLiveTts(text: string, myGeneration: number, failedUri: stri
  * Leaves the speaking state on after 'failed' so the caller can try live TTS;
  * the caller MUST switch it off when it does not try again.
  */
-async function _playTtsUri(uri: string, text: string, source: TtsSource, myGeneration: number): Promise<'done' | 'stopped' | 'failed'> {
+async function _playTtsUri(
+  uri: string, text: string, source: TtsSource, myGeneration: number,
+  /** Set to true only when the clip really played to its end (for the anonymous counters). */
+  heardToEnd?: { value: boolean },
+): Promise<'done' | 'stopped' | 'failed'> {
   const recorded = isRecordedTtsUri(uri);
   const details  = () => ({ ...describeUri(uri), from_cache: source === 'cache', from_recording: recorded, text_len: text.length });
   const discard  = async () => {
@@ -465,6 +479,7 @@ async function _playTtsUri(uri: string, text: string, source: TtsSource, myGener
     await discard();
     return 'failed';
   }
+  if (heardToEnd) heardToEnd.value = outcome === 'done' && _ttsGeneration === myGeneration;
   // A newer request owns the speaking state now; don't switch it off.
   _stopSpeakingIfMine(myGeneration);
   // Stopped while it was playing counts as 'done', exactly as before this

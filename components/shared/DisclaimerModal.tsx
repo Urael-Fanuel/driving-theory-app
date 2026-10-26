@@ -28,6 +28,7 @@ import {
 // measure — a documented react-native-safe-area-context gotcha.
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { useAudio } from '../../hooks/useAudio';
+import { useCoversAds } from '../../hooks/useSponsorAdTracking';
 
 // ⚠️ UPDATE THIS URL before submitting to Google Play —
 // must be a live, publicly accessible Privacy Policy page.
@@ -60,21 +61,21 @@ const SECTIONS: { num: string; title: string; body: string; color: string; title
   {
     num:        '1',
     title:      'የአፕሊኬሽኑ ዓላማ',
-    body:       'ይህ አፕሊኬሽን ተጠቃሚዎች የንድፈ ሃሳብ ፈተናዎችን እንዲዘጋጁ ለመርዳት የተዘጋጀ ነው። ይዘቱ በእስራኤል የትራፊክ ደንቦች እና በቪየና ዓለም አቀፍ ስምምነት ላይ የተመሰረተ ነው። ይህ አፕሊኬሽን በአገርዎ ውስጥ ላለው ኦፊሴላዊ የፍቃድ ባለሥልጣን ቁሳቁስ ምትክ አይደለም።',
+    body:       'ይህ አፕሊኬሽን ተጠቃሚዎች የንድፈ ሃሳብ ፈተናዎችን እንዲዘጋጁ ለመርዳት የተዘጋጀ ነው። ይዘቱ በቪየና ዓለም አቀፍ ስምምነት እና በትራንስፖርት ሚኒስቴሮች ይፋዊ ሰነዶች ላይ የተመሰረተ ነው እስራኤልን ጨምሮ። ይህ አፕሊኬሽን በአገርዎ ውስጥ ላለው ኦፊሴላዊ የፍቃድ ባለሥልጣን ቁሳቁስ ምትክ አይደለም።',
     color:      C.green,
     titleColor: C.green,
   },
   {
     num:        '2',
     title:      'የተጠያቂነት ገደብ',
-    body:       'ገንቢው ይህን አፕሊኬሽን ብቻ ተመርኩዞ ፈተናው ያልተሳካ ከሆነ ተጠያቂ አይሆንም። በእስራኤል የትራፊክ ደንቦች እና በሌሎች አገሮች ደንቦች መካከል ልዩነቶች ሊኖሩ ይችላሉ። አፕሊኬሽኑን መጠቀም ሙሉ በሙሉ የተጠቃሚው ኃላፊነት ነው።',
+    body:       'ገንቢው ይህን አፕሊኬሽን ብቻ ተመርኩዞ ፈተናው ያልተሳካ ከሆነ ተጠያቂ አይሆንም። የአፕሊኬሽኑ ደንቦች ከአገርዎ ደንቦች የተለዩ ሊሆኑ ይችላሉ። አፕሊኬሽኑን መጠቀም ሙሉ በሙሉ የተጠቃሚው ኃላፊነት ነው።',
     color:      C.yellow,
     titleColor: '#7a5800',
   },
   {
     num:        '3',
     title:      'ክፍያ እና መሰረዝ',
-    body:       'ክፍያ ለተመረጠው የምዝገባ ጊዜ አስቀድሞ ይፈጸማል። ምዝገባ ከተካሄደ በኋላ ገንዘብ አይመለስም። በአፕሊኬሽኑ በኩል የተረጋገጠ ቴክኒካዊ ብልሽት ከተከሰተ ገንቢው እያንዳንዱን ጉዳይ በተናጠል ይገምግማል።',
+    body:       'በአሁኑ ጊዜ አፕሊኬሽኑ ለተጠቃሚዎች ነጻ ሲሆን፣ ክፍያ የሚፈጸመው በአፕሊኬሽኑ ውስጥ ለሚያስተዋውቁ የንግድ ድርጅቶች ብቻ ነው። ክፍያ ለተመረጠው የምዝገባ ጊዜ አስቀድሞ ይፈጸማል። ምዝገባ ከተካሄደ በኋላ ገንዘብ አይመለስም። በአፕሊኬሽኑ በኩል የተረጋገጠ ቴክኒካዊ ብልሽት ከተከሰተ ገንቢው እያንዳንዱን ጉዳይ በተናጠል ይገመግማል።',
     color:      C.red,
     titleColor: C.red,
   },
@@ -104,6 +105,7 @@ const SECTIONS: { num: string; title: string; body: string; color: string; title
 export default function DisclaimerModal({ visible, onAccept }: Props) {
   const { playAudio, stopAudio, pauseAudio, resumeAudio, audioState } = useAudio();
   const hasAutoPlayed = useRef(false);
+  useCoversAds(visible);   // an ad card under this dialog is not "seen"
 
   useEffect(() => {
     if (visible && !hasAutoPlayed.current) {

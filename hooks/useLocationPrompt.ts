@@ -70,15 +70,27 @@ interface LocationPrefs {
   quizzesSincePrompt?: number;
 }
 
-async function readPrefs(): Promise<LocationPrefs> {
+/**
+ * The answer given in THIS session, held in memory and set the moment the user
+ * taps, before anything is saved (CODEX round 3, A2): a "no" counts at once, even
+ * while the file is still being written or if writing it fails.
+ */
+let _sessionAnswer: 'approved' | 'declined' | null = null;
+
+/** Prefs plus whether they could really be read ("unreadable" is not "never asked"). */
+async function readPrefsChecked(): Promise<{ prefs: LocationPrefs; readable: boolean }> {
   try {
     const info = await FileSystem.getInfoAsync(PREFS_PATH);
-    if (!info.exists) return {};
+    if (!info.exists) return { prefs: {}, readable: true };
     const content = await FileSystem.readAsStringAsync(PREFS_PATH);
-    return JSON.parse(content) as LocationPrefs;
+    return { prefs: JSON.parse(content) as LocationPrefs, readable: true };
   } catch {
-    return {};
+    return { prefs: {}, readable: false };
   }
+}
+
+async function readPrefs(): Promise<LocationPrefs> {
+  return (await readPrefsChecked()).prefs;
 }
 
 async function writePrefs(prefs: LocationPrefs): Promise<void> {
@@ -151,6 +163,7 @@ export function useLocationPrompt(userId: string | null): UseLocationPromptRetur
   }, []);
 
   const handleApprove = useCallback(() => {
+    _sessionAnswer = 'approved';
     setVisible(false);
     setApproved(true);
     // Fire-and-forget: the quiz navigation the caller does right after this
@@ -182,6 +195,7 @@ export function useLocationPrompt(userId: string | null): UseLocationPromptRetur
   }, [userId]);
 
   const handleNotNow = useCallback(() => {
+    _sessionAnswer = 'declined';   // first, before the dialog closes and before any save
     setVisible(false);
     (async () => {
       const prefs = await readPrefs();
@@ -215,7 +229,12 @@ export function useLocationPrompt(userId: string | null): UseLocationPromptRetur
  *                has been given.
  */
 export async function getLocationConsentState(): Promise<'approved' | 'declined' | 'unknown'> {
-  const prefs = await readPrefs();
+  if (_sessionAnswer) return _sessionAnswer;   // this session's tap wins over a save in progress
+  const { prefs, readable } = await readPrefsChecked();
+  if (_sessionAnswer) return _sessionAnswer;   // answered while the file was being read
+  // A file that exists but cannot be read is NOT "never asked": the safe answer is
+  // "declined", so no IP-based city is used for this user (CODEX round 3, A2).
+  if (!readable) return 'declined';
   if (prefs.approved) return 'approved';
   if ((prefs.notNowCount ?? 0) > 0) return 'declined';
   return 'unknown';

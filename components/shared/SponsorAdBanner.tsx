@@ -23,6 +23,7 @@ import { playAndAwaitAudio } from '../../hooks/useAudio';
 import { useAudioInterrupted, resumeInterruptedAudio } from '../../hooks/useAudioInterrupted';
 import { SponsorAd } from '../../backend/api';
 import { EngineType } from '../../contexts/EngineContext';
+import { useSponsorAdTracking } from '../../hooks/useSponsorAdTracking';
 
 interface SponsorAdBannerProps {
   headline:        string;
@@ -37,6 +38,8 @@ export function SponsorAdBanner({ headline, body, wrapperAudioUrl, ad, engineTyp
   const [isPlaying, setIsPlaying] = useState(false);
   const cancelledRef = useRef(false);
   const audioInterrupted = useAudioInterrupted();   // Android paused our audio (call, other app)
+  // Taps only: the AdCard inside counts the view (one card, one view tracker).
+  const tracking = useSponsorAdTracking(ad.id, { views: false });
 
   useEffect(() => () => { cancelledRef.current = true; }, []);
 
@@ -46,6 +49,8 @@ export function SponsorAdBanner({ headline, body, wrapperAudioUrl, ad, engineTyp
     if (isPlaying) { cancelledRef.current = true; setIsPlaying(false); return; }
     cancelledRef.current = false;
     setIsPlaying(true);
+    // Starting to play the sponsor is a tap on the ad; stop and resume are not new taps.
+    tracking.onClick();
     await playAndAwaitAudio(wrapperAudioUrl, () => cancelledRef.current);
     if (!cancelledRef.current && ad.audioUrl) {
       await playAndAwaitAudio(ad.audioUrl, () => cancelledRef.current);
@@ -72,6 +77,7 @@ export function SponsorAdBanner({ headline, body, wrapperAudioUrl, ad, engineTyp
 
       <AdCard
         variant="instructor"
+        adId={ad.id}
         name={ad.name}
         tagline={ad.taglineAmharic}
         phone={ad.phone}

@@ -34,6 +34,7 @@ import * as api from '../../../backend/api';
 import { useAudio } from '../../../hooks/useAudio';
 import { useProgress } from '../../../hooks/useProgress';
 import { AdCard } from '../../../components/shared/AdCard';
+import { AdClip } from '../../../components/shared/AdClip';
 import { useSponsorAd } from '../../../hooks/useSponsorAd';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import { SafeBannerAd, IS_EXPO_GO } from '../../../components/shared/SafeBannerAd';
@@ -53,6 +54,7 @@ const BANNER_AD_UNIT_ID = IS_EXPO_GO
 
 export default function EngineBHomeScreen() {
   const router   = useRouter();
+  const adClipRef = useRef<any>(null);   // the scroll area holding the ad card (components/shared/AdClip.tsx)
   const { playAudio } = useAudio();
   const { topicsProgress } = useProgress();
   const { userId } = useEngine();
@@ -162,7 +164,9 @@ export default function EngineBHomeScreen() {
       </View>
 
       {/* Topics list */}
+      <AdClip target={adClipRef}>
       <FlatList
+        ref={adClipRef}
         data={topics}
         keyExtractor={t => t.id}
         renderItem={({ item, index }) => (
@@ -184,6 +188,7 @@ export default function EngineBHomeScreen() {
             <View style={styles.adFooter}>
               <AdCard
                 variant="instructor"
+                adId={sponsorAd.id}
                 name={sponsorAd.name}
                 tagline={sponsorAd.taglineAmharic}
                 phone={sponsorAd.phone}
@@ -193,6 +198,7 @@ export default function EngineBHomeScreen() {
           ) : null
         }
       />
+      </AdClip>
 
       {/* AdMob Banner */}
       <View style={styles.bannerContainer}>

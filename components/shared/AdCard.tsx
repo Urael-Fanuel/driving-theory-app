@@ -16,17 +16,22 @@ import {
   View,
   Text,
   TouchableOpacity,
+  Pressable,
   StyleSheet,
   Linking,
   Image,
 } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import { useAudio } from '../../hooks/useAudio';
+import { useSponsorAdTracking } from '../../hooks/useSponsorAdTracking';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
 export interface InstructorAd {
   variant:    'instructor';
+  /** sponsor_ads.id: when given, views and "call now" presses are counted
+   *  (services/adEvents.ts). Without it nothing is recorded. */
+  adId?:      string;
   /** Instructor's name (any language) */
   name:       string;
   /** Short tagline — in Amharic */
@@ -67,16 +72,19 @@ export function AdCard(props: AdCardProps) {
 
 // ─── Instructor card ──────────────────────────────────────────────────────────
 
-function InstructorAdCard({ name, tagline, location, phone, avatarUri, audioUri }: InstructorAd) {
+function InstructorAdCard({ adId, name, tagline, location, phone, avatarUri, audioUri }: InstructorAd) {
   const { playAudio, stopAudio, audioState } = useAudio();
+  const tracking = useSponsorAdTracking(adId);
 
   const handleCall = async () => {
+    tracking.onCall();   // counted first: the dialer may take the app to the background
     await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
     Linking.openURL(`tel:${phone}`);
   };
 
   const handleAudio = async () => {
     if (!audioUri) return;
+    tracking.onClick();   // a tap on the card's own 🔊 button is a click on the ad
     await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
     if (audioState === 'playing') {
       stopAudio();
@@ -88,7 +96,7 @@ function InstructorAdCard({ name, tagline, location, phone, avatarUri, audioUri 
   const isPlaying = audioState === 'playing' || audioState === 'loading';
 
   return (
-    <View style={styles.instructorCard}>
+    <Pressable ref={tracking.ref} collapsable={false} accessible={false} onPress={tracking.onClick} style={styles.instructorCard}>
       {/* Header row: badge + optional audio button */}
       <View style={styles.cardHeader}>
         <Text style={styles.sponsoredBadge}>ማስታወቂያ</Text>
@@ -132,7 +140,7 @@ function InstructorAdCard({ name, tagline, location, phone, avatarUri, audioUri 
         <Text style={styles.callBtnIcon}>📞</Text>
         <Text style={styles.callBtnText}>አሁን ይደውሉ</Text>
       </TouchableOpacity>
-    </View>
+    </Pressable>
   );
 }
 

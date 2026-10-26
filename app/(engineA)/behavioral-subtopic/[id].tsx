@@ -47,6 +47,7 @@ import { AudioFeedback } from '../../../components/engineA/AudioFeedback';
 import { useVoiceRecognition } from '../../../hooks/useVoiceRecognition';
 import { useAudioInterrupted, resumeInterruptedAudio } from '../../../hooks/useAudioInterrupted';
 import { reportError, describeUri } from '../../../services/errorReporter';
+import { maybeShowInterstitial } from '../../../services/interstitial';
 import {
   speakAndAwait,
   playUrlAndAwait,
@@ -172,6 +173,7 @@ export default function BehavioralSubtopicScreenA() {
   // ── Refs ──────────────────────────────────────────────────────────────────────
   const soundRef             = useRef<Sound | null>(null);   // narration sound
   const answeredIndexRef     = useRef<number | null>(null);
+  const leavingRef           = useRef(false);   // handleBack runs once (CODEX round 3, C1)
   const voiceFailedRef       = useRef(false);
   const sequenceCancelledRef = useRef(false);  // set true when ⏸ pressed
   const manualRestartRef     = useRef(false);  // set true when ▶️ pressed — skips 1s delay
@@ -330,12 +332,27 @@ export default function BehavioralSubtopicScreenA() {
   // ── Handlers ──────────────────────────────────────────────────────────────────
 
   const handleBack = useCallback(async () => {
-    await stopTTS().catch(() => {});
-    await soundRef.current?.stopAsync().catch(() => {});
-    soundRef.current = null;
-    cancelListening();
-    router.back();
-  }, [cancelListening, router]); // eslint-disable-line react-hooks/exhaustive-deps
+    if (leavingRef.current) return;   // one exit only: a double tap must not count twice or go back twice
+    leavingRef.current = true;
+    try {
+      await stopTTS().catch(() => {});
+      await soundRef.current?.stopAsync().catch(() => {});
+      soundRef.current = null;
+      cancelListening();
+      // End point: a full-screen ad may run here (never mid-lesson). See services/interstitial.ts.
+      if (phase === 'complete') await maybeShowInterstitial();
+      // Success keeps the guard on: the screen is leaving. Only when there is nowhere
+      // to go back to (the screen stays) is it released (CODEX round 4, R4-1).
+      const canLeave = typeof router.canGoBack !== 'function' || router.canGoBack();
+      router.back();
+      if (!canLeave) leavingRef.current = false;
+    } catch (err) {
+      // The exit failed (an audio stop or the navigation threw): release the guard so
+      // the next tap can try again, instead of leaving the back button dead.
+      leavingRef.current = false;
+      console.warn('[handleBack] leaving failed:', err);
+    }
+  }, [cancelListening, router, phase]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useFocusEffect(
     useCallback(() => {

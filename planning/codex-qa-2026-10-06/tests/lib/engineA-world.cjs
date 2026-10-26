@@ -43,6 +43,7 @@ function setup({ screen, kind, root, projectRoot }) {
       isQuestionAudioReady: async () => true, prefetchQuestionAudio() {}, preCacheAudioBatch: async () => {},
       getCachedTtsUri: async t => 'file:///tts/' + t + '.mp3', storeTtsAudio: async () => {}, releaseAudioFiles: async () => {}, fetchRecordedTts: async () => null, skipRecordedTts: async () => {}, isRecordedTtsUri: () => false };
     if (rel === 'services/errorReporter') return { reportError() {}, watchPlaybackStart() {}, describeUri: () => ({}), httpStatusOf: () => null };
+    if (rel === 'services/ttsStats') return { countTts() {} };
     if (rel === 'backend/api') return { getAllSigns: async () => [{ id: '301', topic_id: 't', image_url: 'x' }] };
     if (rel === 'hooks/useVoiceRecognition') return { useVoiceRecognition: () => VOICE };
     if (rel === 'hooks/useAudioInterrupted') return { useAudioInterrupted: () => false, resumeInterruptedAudio() {} };

@@ -42,7 +42,7 @@ function makeClock() {
 function world(opts = {}) {
   const clock = makeClock();
   class FakeDate extends Date { static now() { return clock.now(); } }
-  const files = new Map(), downloads = [], invoked = [], reports = [], indexFetches = [], played = [];
+  const files = new Map(), downloads = [], invoked = [], reports = [], indexFetches = [], played = [], stats = [];
   let index = opts.index ?? { status: 200, body: { files: [] } };
   const clips = opts.clips ?? {};          // file name -> { kind, status, hold }
   const FS = {
@@ -118,6 +118,7 @@ function world(opts = {}) {
       p.endsWith('/sound')          ? { Sound, applyAudioMode: async () => {} } :
       p.endsWith('/audioCache')     ? cache :
       p.endsWith('/errorReporter')  ? { reportError: (...a) => reports.push(a), describeUri: () => ({}), httpStatusOf: () => null } :
+      p.endsWith('/ttsStats')       ? { countTts: (k) => stats.push(k) } :
       p.endsWith('/supabaseClient') ? { supabase: { functions: { invoke: async (_n, { body }) => {
         invoked.push(body.text);
         if (opts.liveHold) await opts.liveHold;
@@ -130,7 +131,7 @@ function world(opts = {}) {
   const recName = t => cache.qa.recordedTtsFilename(t);
   const liveName = t => cache.qa.ttsFilename(t);
   return {
-    tts: ttsCtx.exports, cache, clock, files, downloads, invoked, reports, indexFetches, played, recName, liveName, speakingEvents,
+    tts: ttsCtx.exports, cache, clock, files, downloads, invoked, reports, indexFetches, played, stats, recName, liveName, speakingEvents,
     speaking: () => ttsCtx.exports.getIsTTSSpeaking(),
     setIndex: v => { index = v; },
     // speak and drive the clock until the call settles (or the limit)
@@ -474,6 +475,44 @@ async function scenario(name, fn) {
     assert.ok(mut('app/(engineA)/practice.tsx', 'ስህተት! ትክክለኛው መልስ: ', 'ስህተት!  ትክክለኛው መልስ: ').length > 0, 'doubled space in the wrong-answer line accepted');
     assert.deepStrictEqual(mut('app/(engineA)/(tabs)/exam.tsx', "speakAndAwait(currentQuestion!.question_amharic ?? '')",
       "speakAndAwait(\n  currentQuestion!.question_amharic\n  ?? '' // q\n)"), [], 'layout outside quotes must not count');
+  });
+
+  await scenario('T1 anonymous counters: a recording heard counts "recorded", live voice counts "live", a failed recording counts "recorded_failed" then "live"', async () => {
+    let w = world(); w.setIndex(listed(w.recName('hello')));
+    assert.strictEqual(await w.speak('hello'), true);
+    assert.deepStrictEqual(w.stats, ['recorded']);
+    w = world(); assert.strictEqual(await w.speak('hello'), true);
+    assert.deepStrictEqual(w.stats, ['live']);
+    w = world({ clips: { [probe.cache.qa.recordedTtsFilename('hello')]: { kind: 'loadfail' } } });
+    w.setIndex(listed(w.recName('hello')));
+    assert.strictEqual(await w.speak('hello'), true);
+    assert.deepStrictEqual(w.stats, ['recorded_failed', 'live']);
+    w = world({ liveBad: true }); assert.strictEqual(await w.speak('x'), false);
+    assert.deepStrictEqual(w.stats, [], 'a sentence nobody heard must not be counted');
+  });
+
+  await scenario('T2 CODEX round 3 D1: a clip stopped while playing, or replaced by a newer one, is NOT counted', async () => {
+    // recorded clip, stopped at about 100 ms of its 500 ms
+    let w = world(); w.setIndex(listed(w.recName('hello')));
+    let result = 'pending';
+    w.tts.speakAndAwait('hello').then(r => { result = r; });
+    for (let t = 0; t < 10_000 && w.played.length === 0; t += 50) await w.clock.advance(50);
+    assert.strictEqual(w.played.length, 1, 'the recording never started');
+    await w.clock.advance(100);
+    await w.tts.stopTTS();
+    for (let t = 0; t < 5_000 && result === 'pending'; t += 250) await w.clock.advance(250);
+    assert.strictEqual(result, true, 'old semantics: a stop while playing still returns true');
+    assert.deepStrictEqual(w.stats, [], 'a stopped clip was counted');
+    // live clip replaced by a newer request at about 100 ms: only the newer one counts
+    w = world();
+    let first = 'pending', second = 'pending';
+    w.tts.speakAndAwait('aaa').then(r => { first = r; });
+    for (let t = 0; t < 10_000 && w.played.length === 0; t += 50) await w.clock.advance(50);
+    await w.clock.advance(100);
+    w.tts.speakAndAwait('bbb').then(r => { second = r; });
+    for (let t = 0; t < 30_000 && (first === 'pending' || second === 'pending'); t += 250) await w.clock.advance(250);
+    assert.strictEqual(second, true);
+    assert.deepStrictEqual(w.stats, ['live'], 'the replaced clip was counted too: ' + JSON.stringify(w.stats));
   });
 
   for (const [s, n] of results) console.log(s, n);
