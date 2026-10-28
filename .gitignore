@@ -67,3 +67,4 @@ supabase/.temp/
 
 # local safety copies made by the content scripts (not part of the app)
 planning/*/backup/
+temp_play_upload/

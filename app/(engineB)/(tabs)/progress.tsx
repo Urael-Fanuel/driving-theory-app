@@ -9,12 +9,13 @@ import {
   View,
   Text,
   StyleSheet,
-  SafeAreaView,
   ScrollView,
   TouchableOpacity,
   Animated,
   Share,
 } from 'react-native';
+import { ScreenSafeArea as SafeAreaView } from '../../../components/shared/ScreenSafeArea';   // top inset on Android (edge to edge)
+import { topicName } from '../../../constants/topicNames';
 import { useRouter } from 'expo-router';
 import { Colors } from '../../../constants/colors';
 import { Typography } from '../../../constants/typography';
@@ -169,7 +170,7 @@ export default function EngineBProgressScreen() {
             {topicsProgress.map(t => (
               <View key={t.topicId} style={styles.topicRow}>
                 <View style={styles.topicInfo}>
-                  <Text style={styles.topicId}>{t.topicId}</Text>
+                  <Text style={styles.topicId}>{topicName(t.topicId)}</Text>
                   <Text style={styles.topicStat}>
                     {t.questionsCorrect}/{t.totalQuestions}
                   </Text>

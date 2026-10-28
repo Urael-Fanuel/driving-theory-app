@@ -8,18 +8,21 @@
  * Pass threshold: 7/10 (70%)
  */
 
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState, useMemo } from 'react';
 import {
   View,
   Text,
   Image,
   TouchableOpacity,
   StyleSheet,
-  SafeAreaView,
   ScrollView,
   Dimensions,
   BackHandler,
 } from 'react-native';
+import { ScreenSafeArea as SafeAreaView } from '../../../components/shared/ScreenSafeArea';   // top inset on Android (edge to edge)
+import { QuizReview } from '../../../components/shared/QuizReview';
+import { buildQuizReview } from '../../../utils/quizReview';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 import { useLocalSearchParams, useRouter, useFocusEffect } from 'expo-router';
@@ -53,6 +56,7 @@ import { DBSign } from '../../../backend/supabaseClient';
 import { OfflineBanner } from '../../../components/shared/OfflineBanner';
 import { extractSignNumber, shouldShowSignBadge } from '../../../utils/signNumber';
 import { maybeShowInterstitial } from '../../../services/interstitial';
+import { useScreenActive } from '../../../hooks/useScreenActive';
 
 
 // ─── Audio base URL ────────────────────────────────────────────────────────────
@@ -66,6 +70,10 @@ const AMHARIC_NUMBERS = ['አንድ', 'ሁለት', 'ሶስት', 'አራት'];
 export default function EngineBTopicQuizScreen() {
   const { topicId, levelId } = useLocalSearchParams<{ topicId: string; levelId?: string }>();
   const router               = useRouter();
+  // The Android navigation bar sits over the bottom of the screen (edge to edge): the last
+  // buttons need this much room, or the bar covers them (owner's testing, 2026-10-27).
+  const insets = useSafeAreaInsets();
+  const activeRef = useScreenActive();   // false once the learner has left this screen (ads, R6-4)
   const adClipRef = useRef<any>(null);   // the scroll area holding the ad card (components/shared/AdClip.tsx)
 
   const {
@@ -78,6 +86,7 @@ export default function EngineBTopicQuizScreen() {
     nextQuestion,
     goToQuestion,
     result,
+    answers,
     lastAnswerCorrect,
     selectedAnswerId,
     restart,
@@ -124,9 +133,11 @@ export default function EngineBTopicQuizScreen() {
   // Show feedback after answer
   useEffect(() => {
     if (phase === 'feedback_correct' || phase === 'feedback_wrong') {
-      setTimeout(() => setShowFeedback(true), 200);
+      setShowFeedback(true);   // at once: the Next button must already be there when the learner reaches for it
     }
-  }, [phase]);
+  // Keyed on the question too: moving between two answered questions keeps the same phase, and the panel
+  // (hidden by the move) never came back, so there was no Next (QA round 8, R8-B).
+  }, [phase, currentIndex]);
 
   // ── Confetti + crowd cheer when quiz is passed ────────────────────────────
   useEffect(() => {
@@ -138,10 +149,47 @@ export default function EngineBTopicQuizScreen() {
     }
   }, [phase, result?.passed]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const handleNext = () => {
+  // The step between "answer given" and "next question": the feedback is closed and its speech stopped FIRST
+  // (nothing may speak during an ad), then the due full-screen ad runs (services/interstitial.ts), and only if
+  // the learner is still on this screen does the move go on. Returns false when the screen was left meanwhile.
+  const advancingRef = useRef(false);   // the whole move, ad included, runs once: every entry point shares it
+  const passAdGate = async (): Promise<boolean> => {
     setShowFeedback(false);
-    scrollRef.current?.scrollTo({ y: 0, animated: false });
-    nextQuestion();
+    ttsSpeakingRef.current = false;
+    setTtsSpeaking(false);
+    await stopAudio();
+    await stopTTS().catch(() => {});
+    await maybeShowInterstitial(() => activeRef.current);
+    return activeRef.current;
+  };
+
+  const handleNext = async () => {
+    if (advancingRef.current) return;
+    advancingRef.current = true;
+    try {
+      // Between questions nothing is shown; the end of the quiz is the only place for the full-screen ad.
+      const isLast = currentIndex >= questions.length - 1;
+      if (isLast && !(await passAdGate())) return;
+      setShowFeedback(false);
+      scrollRef.current?.scrollTo({ y: 0, animated: false });
+      nextQuestion();
+    } finally {
+      advancingRef.current = false;
+    }
+  };
+
+  // Daily quiz review (see the result screen below)
+  const isDaily = topicId === 'daily';
+  const dailyReview = useMemo(
+    () => (isDaily && phase === 'result' ? buildQuizReview(questions, answers) : null),
+    [isDaily, phase, questions, answers],
+  );
+  // Before leaving for a sign or for practice from the review: stop both audio engines.
+  const stopAllAudio = async () => {
+    ttsSpeakingRef.current = false;
+    setTtsSpeaking(false);
+    await stopAudio();
+    await stopTTS().catch(() => {});
   };
 
   const handleBack = async () => {
@@ -152,8 +200,6 @@ export default function EngineBTopicQuizScreen() {
       setTtsSpeaking(false);
       await stopAudio();
       await stopTTS().catch(() => {});
-      // End point: a full-screen ad may run here (never mid-lesson). See services/interstitial.ts.
-      if (phase === 'result') await maybeShowInterstitial();
       // Success keeps the guard on: the screen is leaving. Only when there is nowhere
       // to go back to (the screen stays) is it released (CODEX round 4, R4-1).
       const canLeave = typeof router.canGoBack !== 'function' || router.canGoBack();
@@ -167,15 +213,21 @@ export default function EngineBTopicQuizScreen() {
     }
   };
 
-  // Android hardware back takes the same way out as the ← button: audio stopped, and on
-  // the result screen the end point is counted (CODEX round 3, C2). Mirrors the
-  // behavioral screens.
-  const handleBackRef = useRef(handleBack);
-  handleBackRef.current = handleBack;
+  // The phone's own back button keeps its normal Android behaviour (one screen back,
+  // however fast it is pressed); this only stops the audio first and lets the press carry
+  // on (returns false = not handled here). Mirrors the behavioral screens.
+  const stopForBackRef = useRef(() => {});
+  stopForBackRef.current = () => {
+    ttsSpeakingRef.current = false;   // cancel the read-aloud sequence, not just the current clip
+    setTtsSpeaking(false);
+    stopAudio().catch(() => {});
+    stopTTS().catch(() => {});
+  };
   useFocusEffect(
     useCallback(() => {
       const sub = BackHandler.addEventListener('hardwareBackPress', () => {
-        handleBackRef.current(); return true;
+        stopForBackRef.current();
+        return false;
       });
       return () => sub.remove();
     }, [])
@@ -193,11 +245,16 @@ export default function EngineBTopicQuizScreen() {
   };
 
   const handleNavNext = async () => {
-    if (!canGoNext) return;
-    await stopAudio();
-    await stopTTS().catch(() => {});
-    setShowFeedback(false);
-    goToQuestion(currentIndex + 1);
+    if (!canGoNext || advancingRef.current) return;
+    advancingRef.current = true;
+    try {
+      await stopAudio();
+      await stopTTS().catch(() => {});
+      setShowFeedback(false);
+      goToQuestion(currentIndex + 1);
+    } finally {
+      advancingRef.current = false;
+    }
   };
 
   // ── Card state (keyed by answer ID, not index — matches TextAnswerCard API) ──
@@ -244,7 +301,7 @@ export default function EngineBTopicQuizScreen() {
           </View>
         )}
         <AdClip target={adClipRef}>
-        <ScrollView ref={adClipRef} contentContainerStyle={styles.resultContent}>
+        <ScrollView ref={adClipRef} contentContainerStyle={[styles.resultContent, { paddingBottom: 32 + insets.bottom + 12 }]}>
           {/* Score circle */}
           <View style={[styles.resultCircle, { borderColor: statusColor }]}>
             <Text style={styles.resultEmoji}>{scoreEmoji}</Text>
@@ -286,6 +343,17 @@ export default function EngineBTopicQuizScreen() {
             <View style={styles.adWrapper}>
               <SafeBannerAd unitId={BANNER_AD_UNIT_ID} />
             </View>
+          )}
+
+          {/* Daily quiz: the same review as at the end of the 30-question exam (owner's request 2026-10-27):
+              score per topic, the questions answered wrong, and "practise them". */}
+          {isDaily && dailyReview && (
+            <QuizReview
+              isEngineA={false}
+              topicBreakdown={dailyReview.topicBreakdown}
+              wrongQuestions={dailyReview.wrongQuestions}
+              beforeLeave={stopAllAudio}
+            />
           )}
 
           {/* Buttons */}
@@ -364,7 +432,7 @@ export default function EngineBTopicQuizScreen() {
 
       <ScrollView
         ref={scrollRef}
-        contentContainerStyle={styles.content}
+        contentContainerStyle={[styles.content, { paddingBottom: 24 + insets.bottom + 12 }]}
         showsVerticalScrollIndicator={false}
       >
         {/* Visual above question: behavioral subtopic image / sign image / nothing */}

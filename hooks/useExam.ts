@@ -18,6 +18,7 @@ import { DBQuestion } from '../backend/supabaseClient';
 import * as api from '../backend/api';
 import { useEngine } from '../contexts/EngineContext';
 import { saveAnswerKept } from '../utils/answerQueue';
+import { countAnsweredQuestion } from '../services/interstitial';
 import { prefetchQuestionAudio, releaseQuestionAudio } from '../services/audioCache';
 import { collectTtsTexts, prefetchTtsForTexts } from '../utils/googleTTS';
 
@@ -116,6 +117,9 @@ export function useExam(): UseExamReturn {
   const timerRef     = useRef<ReturnType<typeof setInterval> | null>(null);
   // Ref for synchronous access in nextQuestion — avoids stale closure over answers state
   const answersRef   = useRef<ExamAnswer[]>([]);
+  // The exam is finished and saved ONCE: while the last answer's save was slow, ‹ then Next, Next could finish it twice
+  // (QA round 8, R8-C). Opens again when a new exam is loaded.
+  const finishingRef = useRef(false);
 
   // ── Load questions on mount ──────────────────────────────────────────────────
   useEffect(() => {
@@ -126,6 +130,7 @@ export function useExam(): UseExamReturn {
   }, []);
 
   async function loadQuestions() {
+    finishingRef.current = false;
     setPhase('loading');
     try {
       const qs = await api.getRandomExamQuestions(EXAM_QUESTION_COUNT);
@@ -164,6 +169,9 @@ export function useExam(): UseExamReturn {
   const submitAnswer = useCallback((answerId: string) => {
     const question = questions[currentIndex];
     if (!question || phase !== 'question') return;
+    // Exactly one answer per question, checked on the ref (updated at once), not on the phase state:
+    // two taps before the re-render must not record, send or count toward the ad twice (CODEX round 6, R6-1).
+    if (answersRef.current.some(a => a.questionId === question.id)) return;
 
     const correctAnswer = question.answers.find(a => a.is_correct);
     const isCorrect = correctAnswer?.id === answerId;
@@ -180,6 +188,7 @@ export function useExam(): UseExamReturn {
     setLastAnswerCorrect(isCorrect);
     setSelectedAnswerId(answerId);
     setPhase(isCorrect ? 'feedback_correct' : 'feedback_wrong');
+    countAnsweredQuestion();   // counts toward the next full-screen ad; the exam shows it only when it ends
 
     // Save locally first, then sync to Supabase
     if (__DEV__) console.log('[useExam] userId:', userId);
@@ -206,15 +215,26 @@ export function useExam(): UseExamReturn {
 
     if (nextIndex >= questions.length) {
       // Exam complete — compute results
+      if (finishingRef.current) return;
+      finishingRef.current = true;
       await finishExam([...answersRef.current]);
     } else {
+      // The next question may already be answered (the learner went back with ‹): show it in its answered
+      // state, as the arrows do, instead of a question that looks open but refuses a second answer (QA round 8, R8-B).
+      const existing = answersRef.current.find(a => a.questionId === questions[nextIndex].id);
       setCurrentIndex(nextIndex);
-      setPhase('question');
+      if (existing) {
+        setSelectedAnswerId(existing.selectedAnswerId);
+        setLastAnswerCorrect(existing.isCorrect);
+        setPhase(existing.isCorrect ? 'feedback_correct' : 'feedback_wrong');
+      } else {
+        setPhase('question');
+      }
 
       // Prefetch audio for next 3 questions in background
       questions.slice(nextIndex + 1, nextIndex + 4).forEach(q => prefetchQuestionAudio(q));
     }
-  }, [currentIndex, questions.length]);
+  }, [currentIndex, questions]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // ── Finish and save exam ─────────────────────────────────────────────────────
   async function finishExam(finalAnswers: ExamAnswer[]) {

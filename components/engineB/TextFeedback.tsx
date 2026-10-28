@@ -33,7 +33,8 @@ interface TextFeedbackProps {
   isCorrect: boolean;
   explanationText: string;
   explanationAudioUri?: string;
-  /** Amharic text to auto-play via TTS on mount (used by behavioral subtopics) */
+  /** Amharic feedback text that can be HEARD (behavioral subtopics). Engine B is for readers, so it is
+   *  never played by itself: a ▶️ button plays it on demand (owner's decision, 2026-10-27). */
   ttsText?: string;
   /** When provided on a wrong answer — shows a "ለምን?" button that fetches a
    *  RAG-grounded explanation of why the chosen answer is wrong. */
@@ -56,7 +57,6 @@ export function TextFeedback({
   bottomOffset = 0,
   onNext,
 }: TextFeedbackProps) {
-  const slideAnim = useRef(new Animated.Value(100)).current;
   const fadeAnim  = useRef(new Animated.Value(0)).current;
   const insets    = useSafeAreaInsets();
 
@@ -69,12 +69,60 @@ export function TextFeedback({
   const mountedRef     = useRef(true);
   const audioInterrupted = useAudioInterrupted();   // Android paused our audio (call, other app)
 
+  // ── The feedback read aloud, on demand only (▶️ / ⏸) ──────────────────────────
+  const [ttsSpeaking, setTtsSpeaking] = useState(false);
+  const ttsSpeakingRef = useRef(false);
+
+  // One reading at a time (there is one speech engine). Every start, stop, Next and unmount takes a new
+  // number here; a reading that finishes late may only clear the flags if its number is still the
+  // current one, so an OLD reading finishing can never clear the flags of a NEWER one (CODEX round 7, R7-3).
+  const readingOp = useRef(0);
+
+  /** Ends whatever this panel is reading in the flags (its late completion becomes a no-op). */
+  const endReading = () => {
+    readingOp.current++;
+    ttsSpeakingRef.current = false;
+    ragSpeakingRef.current = false;
+    if (mountedRef.current) { setTtsSpeaking(false); setRagSpeaking(false); }
+  };
+
   useEffect(() => {
     return () => {
       mountedRef.current = false;
-      if (ragSpeakingRef.current) stopTTS().catch(() => {});
+      if (ragSpeakingRef.current || ttsSpeakingRef.current) {
+        readingOp.current++;
+        stopTTS().catch(() => {});
+      }
     };
   }, []);
+
+  const handleTtsSpeak = async () => {
+    if (!ttsText) return;
+    // Android paused it (call, another app): this tap continues it.
+    if (ttsSpeakingRef.current && audioInterrupted) { resumeInterruptedAudio(); return; }
+    if (ttsSpeakingRef.current) {
+      endReading();
+      await stopTTS();
+      return;
+    }
+    endReading();                       // a "why?" reading in progress ends: one engine
+    const op = readingOp.current;
+    ttsSpeakingRef.current = true;
+    setTtsSpeaking(true);
+    await speakAndAwait(ttsText).catch(() => {});
+    if (readingOp.current !== op) return;   // stopped or replaced meanwhile: not mine to clear
+    ttsSpeakingRef.current = false;
+    if (mountedRef.current) setTtsSpeaking(false);
+  };
+
+  // Next answers at once: whatever is being read stops now, not when the next screen cleans up.
+  const handleNext = () => {
+    if (ttsSpeakingRef.current || ragSpeakingRef.current) {
+      endReading();
+      stopTTS().catch(() => {});
+    }
+    onNext();
+  };
 
   const handleExplainWhy = async () => {
     if (!ragQuery || ragLoading) return;
@@ -92,15 +140,17 @@ export function TextFeedback({
     // Android paused the explanation (call, another app): this tap continues it.
     if (ragSpeakingRef.current && audioInterrupted) { resumeInterruptedAudio(); return; }
     if (ragSpeakingRef.current) {
-      ragSpeakingRef.current = false;
-      setRagSpeaking(false);
+      endReading();
       await stopTTS();
       return;
     }
+    endReading();                       // the feedback reading in progress ends: one engine
+    const op = readingOp.current;
     ragSpeakingRef.current = true;
     setRagSpeaking(true);
     // The whole explanation, however long (it used to stop at 950 characters).
     await speakLongAndAwait(ragExplanation);
+    if (readingOp.current !== op) return;   // stopped or replaced meanwhile: not mine to clear
     ragSpeakingRef.current = false;
     if (mountedRef.current) setRagSpeaking(false);
   };
@@ -113,20 +163,12 @@ export function TextFeedback({
         : Haptics.NotificationFeedbackType.Error
     );
 
-    // Slide up animation
-    Animated.parallel([
-      Animated.spring(slideAnim, { toValue: 0, useNativeDriver: true, speed: 15 }),
-      Animated.timing(fadeAnim,  { toValue: 1, duration: 250, useNativeDriver: true }),
-    ]).start();
+    // Short fade only. The panel used to slide up with a spring (~0.5 s) after a 200 ms delay: its Next
+    // button was not where the learner's finger went for a moment, so the first tap(s) were lost
+    // (owner's testing of builds 10 and 11). It now sits at its final place from the first frame.
+    Animated.timing(fadeAnim, { toValue: 1, duration: 120, useNativeDriver: true }).start();
 
-    // Auto-play TTS feedback (behavioral subtopics)
-    if (ttsText) {
-      speakAndAwait(ttsText).catch(() => {});
-    }
-
-    return () => {
-      if (ttsText) stopTTS().catch(() => {});
-    };
+    // No automatic reading in Engine B: the ▶️ button below plays the feedback when the learner asks.
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const bgColor       = isCorrect ? Colors.correctDark  : Colors.wrongDark;
@@ -142,7 +184,6 @@ export function TextFeedback({
           backgroundColor: bgColor,
           borderTopColor:  borderColor,
           bottom:          bottomOffset,
-          transform:       [{ translateY: slideAnim }],
           opacity:         fadeAnim,
         },
       ]}
@@ -161,6 +202,21 @@ export function TextFeedback({
           <Text style={styles.explanationText}>
             {explanationText}
           </Text>
+        )}
+
+        {/* The feedback read aloud, on demand (same look as the sign quiz's ▶️ button) */}
+        {!!ttsText && !explanationAudioUri && (
+          <View style={styles.audioRow}>
+            <TouchableOpacity
+              style={[styles.ttsBtn, { backgroundColor: ttsSpeaking && !audioInterrupted ? Colors.primary : Colors.secondary }]}
+              onPress={handleTtsSpeak}
+              activeOpacity={0.8}
+              accessibilityLabel="ማብራሪያ ድምጽ"
+              accessibilityRole="button"
+            >
+              <Text style={styles.ttsIcon}>{ttsSpeaking && !audioInterrupted ? '⏸' : '▶️'}</Text>
+            </TouchableOpacity>
+          </View>
         )}
 
         {/* Audio button */}
@@ -208,12 +264,14 @@ export function TextFeedback({
         {/* Next button */}
         <TouchableOpacity
           style={[styles.nextButton, { borderColor }]}
-          onPress={onNext}
+          onPress={handleNext}
           activeOpacity={0.8}
           accessibilityLabel="ቀጣይ ጥያቄ"
           accessibilityRole="button"
         >
-          <Text style={[styles.nextButtonText, { color: borderColor }]}>
+          {/* White label: it used to take the border colour, red on dark red / green on dark green (contrast 1.5 to 2.4),
+              which the owner could hardly read (testing of build 11). The button keeps its coloured border. */}
+          <Text style={styles.nextButtonText}>
             ቀጣይ ›
           </Text>
         </TouchableOpacity>
@@ -283,7 +341,9 @@ const styles = StyleSheet.create({
   },
   ragText: {
     ...Typography.body,
-    color:      Colors.textPrimary,
+    // Dark text: the card is light blue (#E3F2FD). Colors.textPrimary is WHITE (made for the dark panel
+    // around it), which left the "why?" explanation unreadable (owner's testing of build 11, 2026-10-28).
+    color:      '#191c1e',
     textAlign:  'center',
     lineHeight: 30,
   },
@@ -298,6 +358,22 @@ const styles = StyleSheet.create({
   ragSpeakIcon: {
     fontSize: 22,
   },
+  ttsBtn: {
+    width:          52,
+    height:         52,
+    borderRadius:   26,
+    justifyContent: 'center',
+    alignItems:     'center',
+    shadowColor:    '#000',
+    shadowOffset:   { width: 0, height: 4 },
+    shadowOpacity:  0.3,
+    shadowRadius:   8,
+    elevation:      6,
+  },
+  ttsIcon: {
+    fontSize:  23,
+    textAlign: 'center',
+  },
   nextButton: {
     borderWidth:     2,
     borderRadius:    16,
@@ -309,6 +385,7 @@ const styles = StyleSheet.create({
   },
   nextButtonText: {
     ...Typography.answer,
+    color:      '#FFFFFF',
     fontWeight: '700',
   },
 });

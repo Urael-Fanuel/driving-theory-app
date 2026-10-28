@@ -116,7 +116,9 @@ export interface UseLocationPromptReturn {
    * and permanently silent after the re-ask is also dismissed — see
    * showManually() for how a user can still turn it on later.
    */
-  maybeShow: () => Promise<boolean>;
+  /** `canShow` (CODEX round 7, R7-4): the screen says whether the learner is still on it; once they
+   *  left, no primer is shown and nothing is counted as a quiz that showed it. */
+  maybeShow: (canShow?: () => boolean) => Promise<boolean>;
   /** Force-show the primer regardless of the auto-ask state. For a
    *  permanent, low-friction entry point (e.g. a Progress-tab button) so a
    *  user who dismissed the auto-prompts can still change their mind later. */
@@ -135,9 +137,10 @@ export function useLocationPrompt(userId: string | null): UseLocationPromptRetur
     readPrefs().then(prefs => { if (prefs.approved) setApproved(true); });
   }, []);
 
-  const maybeShow = useCallback(async (): Promise<boolean> => {
+  const maybeShow = useCallback(async (canShow?: () => boolean): Promise<boolean> => {
     const prefs = await readPrefs();
     if (prefs.approved) return false;
+    if (canShow && !canShow()) return false;   // left the screen while the preferences were read
 
     const notNowCount = prefs.notNowCount ?? 0;
 
@@ -151,6 +154,7 @@ export function useLocationPrompt(userId: string | null): UseLocationPromptRetur
     const seen = (prefs.quizzesSincePrompt ?? 0) + 1;
     if (seen >= RE_ASK_AFTER_QUIZZES) {
       await writePrefs({ ...prefs, quizzesSincePrompt: 0 });
+      if (canShow && !canShow()) return false;   // left while the preferences were written
       setVisible(true);
       return true;
     }

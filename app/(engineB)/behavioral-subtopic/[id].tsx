@@ -33,11 +33,11 @@ import {
   Image,
   TouchableOpacity,
   StyleSheet,
-  SafeAreaView,
   ScrollView,
   Platform,
   BackHandler,
 } from 'react-native';
+import { ScreenSafeArea as SafeAreaView } from '../../../components/shared/ScreenSafeArea';   // top inset on Android (edge to edge)
 import { useLocalSearchParams, useRouter, useFocusEffect } from 'expo-router';
 import * as Haptics from 'expo-haptics';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -61,7 +61,8 @@ import { OfflineBanner } from '../../../components/shared/OfflineBanner';
 import { LocationPermissionModal } from '../../../components/shared/LocationPermissionModal';
 import { useLocationPrompt } from '../../../hooks/useLocationPrompt';
 import { useEngine } from '../../../contexts/EngineContext';
-import { maybeShowInterstitial } from '../../../services/interstitial';
+import { countAnsweredQuestion, maybeShowInterstitial } from '../../../services/interstitial';
+import { useScreenActive } from '../../../hooks/useScreenActive';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 interface Answer   { text_amharic: string; is_correct: boolean; }
@@ -120,10 +121,13 @@ const randomPraise = () => CORRECT_PRAISES[Math.floor(Math.random() * CORRECT_PR
 
 // ─── Component ────────────────────────────────────────────────────────────────
 export default function BehavioralSubtopicScreenB() {
-  const { id, topicId, levelId } = useLocalSearchParams<{
-    id: string; topicId: string; levelId: string;
+  // start=quiz: opened from the ‹ › arrows of a quiz or of the end screen, so it opens on the quiz
+  // (the arrows keep the learner in the step they are in; owner's decision 2026-10-27).
+  const { id, topicId, levelId, start } = useLocalSearchParams<{
+    id: string; topicId: string; levelId: string; start?: string;
   }>();
   const router = useRouter();
+  const activeRef = useScreenActive();   // false once the learner has left this screen (ads, R6-4)
   const { userId } = useEngine();
   const {
     visible: locationModalVisible,
@@ -147,7 +151,7 @@ export default function BehavioralSubtopicScreenB() {
   const insets = useSafeAreaInsets();
 
   // ── State ─────────────────────────────────────────────────────────────────────
-  const [phase,          setPhase]          = useState<Phase>('explanation');
+  const [phase,          setPhase]          = useState<Phase>(() => (start === 'quiz' && questions.length > 0 ? 'questions' : 'explanation'));
   const [qIndex,         setQIndex]         = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [showFeedback,   setShowFeedback]   = useState(false);
@@ -156,6 +160,10 @@ export default function BehavioralSubtopicScreenB() {
   const [ttsSpeaking,    setTtsSpeaking]    = useState(false);
   const ttsSpeakingRef = useRef(false); // sync ref for use inside async handlers
   const leavingRef = useRef(false);   // handleBack runs once (CODEX round 3, C1)
+  // One answer per question: set at the very first tap, BEFORE any state update or await, so two taps (or a tap
+  // and the voice answer) before the re-render cannot both count toward the ad (CODEX round 6, R6-1).
+  const answerLockedRef = useRef(false);
+  const advancingRef = useRef(false);   // the ad can take a while: a second tap must not move on twice
   const audioInterrupted = useAudioInterrupted();   // Android paused our audio (call, other app)
 
   const currentQ   = questions[qIndex] ?? null;
@@ -164,6 +172,7 @@ export default function BehavioralSubtopicScreenB() {
 
   // Reset answer + TTS state when question index changes
   useEffect(() => {
+    answerLockedRef.current = false;
     setSelectedAnswer(null);
     setShowFeedback(false);
     setFeedbackText('');
@@ -195,8 +204,6 @@ export default function BehavioralSubtopicScreenB() {
       setTtsSpeaking(false);
       await stopAudio();
       await stopTTS().catch(() => {});
-      // End point: a full-screen ad may run here (never mid-lesson). See services/interstitial.ts.
-      if (phase === 'complete') await maybeShowInterstitial();
       // Success keeps the guard on: the screen is leaving. Only when there is nowhere
       // to go back to (the screen stays) is it released (CODEX round 4, R4-1).
       const canLeave = typeof router.canGoBack !== 'function' || router.canGoBack();
@@ -210,19 +217,23 @@ export default function BehavioralSubtopicScreenB() {
     }
   }, [stopAudio, router, phase]);
 
-  // Android hardware back button must stop the audio too, exactly like the
-  // in-app ← button. Without this the screen simply unmounts while the
-  // narration keeps playing: the useAudio sound lives in a module-level
-  // singleton that deliberately survives unmount (another screen may own it),
-  // and the unmount cleanup above only stops TTS. Mirrors Engine A.
+  // Android hardware back button must stop the audio too. Without this the screen simply
+  // unmounts while the narration keeps playing: the useAudio sound lives in a module-level
+  // singleton that deliberately survives unmount (another screen may own it), and the
+  // unmount cleanup above only stops TTS. The press itself keeps its normal Android
+  // behaviour (one screen back, however fast it is pressed): this only stops the audio
+  // first and lets it carry on (returns false = not handled here). Mirrors Engine A.
   useFocusEffect(
     useCallback(() => {
       const sub = BackHandler.addEventListener('hardwareBackPress', () => {
-        handleBack();
-        return true;   // we handled it — don't let the default pop run
+        ttsSpeakingRef.current = false;
+        setTtsSpeaking(false);
+        stopAudio().catch(() => {});
+        stopTTS().catch(() => {});
+        return false;
       });
       return () => sub.remove();
-    }, [handleBack])
+    }, [stopAudio])
   );
 
   // ── 404 fallback ──────────────────────────────────────────────────────────────
@@ -258,14 +269,19 @@ export default function BehavioralSubtopicScreenB() {
   const handleAnswerSelect = async (answerIndex: number) => {
     if (selectedAnswer !== null) return;
     if (!currentQ) return;
+    if (!currentQ.answers[answerIndex]) return;
+    if (answerLockedRef.current) return;
+    answerLockedRef.current = true;
 
-    // Stop TTS immediately — user already read the question
+    // Stop TTS immediately — user already read the question. Nothing is awaited before the answer is shown:
+    // an await here left a moment in which a ‹ tap showed this feedback on the previous question (QA round 8, N5).
     ttsSpeakingRef.current = false;
     setTtsSpeaking(false);
-    await stopTTS();
+    stopTTS().catch(() => {});
 
-    await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light).catch(() => {});
     setSelectedAnswer(answerIndex);
+    countAnsweredQuestion();   // counts toward the next full-screen ad (services/interstitial.ts)
 
     // Build feedback text once (same pattern as Engine A + signs)
     const selected    = currentQ.answers[answerIndex];
@@ -276,18 +292,41 @@ export default function BehavioralSubtopicScreenB() {
         : `ስህተት! ትክክለኛው መልስ: ${correctText}`
     );
 
-    setTimeout(() => setShowFeedback(true), 200);
+    setShowFeedback(true);   // at once: the Next button must already be there when the learner reaches for it
+  };
+
+  // The step between "answer given" and "next question": the feedback is closed and its speech stopped FIRST
+  // (nothing may speak during an ad), then the due full-screen ad runs (services/interstitial.ts), and only if
+  // the learner is still on this screen does the move go on. Returns false when the screen was left meanwhile.
+  const passAdGate = async (): Promise<boolean> => {
+    setShowFeedback(false);
+    ttsSpeakingRef.current = false;
+    setTtsSpeaking(false);
+    await stopAudio();
+    await stopTTS().catch(() => {});
+    await maybeShowInterstitial(() => activeRef.current);
+    return activeRef.current;
   };
 
   const handleNext = async () => {
-    setShowFeedback(false);
-    setSelectedAnswer(null);
-    setFeedbackText('');
-    if (qIndex < questions.length - 1) { setQIndex(q => q + 1); return; }
-    // Just finished the last question — the "delighted moment" for the
-    // location-permission primer, then complete.
-    const shown = await maybeShowLocationPrompt();
-    if (!shown) setPhase('complete');
+    if (advancingRef.current) return;
+    advancingRef.current = true;
+    try {
+      // Between questions nothing is shown; the end of the quiz is the only place for the full-screen ad.
+      const isLast = qIndex >= questions.length - 1;
+      if (isLast && !(await passAdGate())) return;
+      setShowFeedback(false);
+      setSelectedAnswer(null);
+      setFeedbackText('');
+      if (!isLast) { setQIndex(q => q + 1); return; }
+      // Just finished the last question — the "delighted moment" for the
+      // location-permission primer, then complete.
+      const shown = await maybeShowLocationPrompt(() => activeRef.current);
+      if (!activeRef.current) return;   // left the screen during the preferences read: no old move on
+      if (!shown) setPhase('complete');
+    } finally {
+      advancingRef.current = false;
+    }
   };
 
   // Question navigation (prev/next within same subtopic)
@@ -300,11 +339,18 @@ export default function BehavioralSubtopicScreenB() {
     setQIndex(q => q - 1);
   }, [canGoPrevQ]);
 
-  const handleNextQuestion = useCallback(() => {
-    if (!canGoNextQ) return;
-    Haptics.selectionAsync();
-    setQIndex(q => q + 1);
-  }, [canGoNextQ]);
+  // The › arrow after an answer (never shows an ad: only the end of a quiz does).
+  const handleNextQuestion = async () => {
+    if (!canGoNextQ || advancingRef.current) return;
+    advancingRef.current = true;
+    try {
+      Haptics.selectionAsync();
+      setShowFeedback(false);
+      setQIndex(q => q + 1);
+    } finally {
+      advancingRef.current = false;
+    }
+  };
 
   // Subtopic navigation
   const navToSubtopic = async (sub: typeof prevSubtopic) => {
@@ -314,8 +360,10 @@ export default function BehavioralSubtopicScreenB() {
     setTtsSpeaking(false);
     await stopAudio();
     await stopTTS().catch(() => {});
+    // From the lesson the arrows open the next lesson; from the quiz or the end screen, the next quiz.
+    const toQuiz = phase !== 'explanation' ? '&start=quiz' : '';
     router.replace(
-      `/(engineB)/behavioral-subtopic/${sub.id}?topicId=${topicId}&levelId=${levelId}` as any
+      `/(engineB)/behavioral-subtopic/${sub.id}?topicId=${topicId}&levelId=${levelId}${toQuiz}` as any
     );
   };
 
@@ -521,7 +569,7 @@ export default function BehavioralSubtopicScreenB() {
 
           {/* ── Bottom navigation ── */}
           <View
-            style={styles.bottomNav}
+            style={[styles.bottomNav, { paddingBottom: 16 + insets.bottom }]}
             onLayout={(e) => setBottomNavHeight(e.nativeEvent.layout.height)}
           >
 
@@ -591,16 +639,36 @@ export default function BehavioralSubtopicScreenB() {
       {phase === 'complete' && (
         <View style={styles.center}>
           <Text style={{ fontSize: 80 }}>✅</Text>
-          <Text style={[styles.completeTitle, { color: levelColor }]}>
+          <Text style={[styles.completeTitle, { color: levelColor, paddingHorizontal: 24 }]}>
             {subtopic.name_amharic || subtopic.name_hebrew}
           </Text>
-          <TouchableOpacity
-            style={[styles.continueBtn, { backgroundColor: levelColor, paddingHorizontal: 32 }]}
-            onPress={handleBack}
-            activeOpacity={0.85}
-          >
-            <Text style={styles.continueBtnText}>← {UiStrings.backToList}</Text>
-          </TouchableOpacity>
+          {/* ‹ previous subtopic | ← back to the list | › next subtopic (same arrows as the lesson screen) */}
+          <View style={styles.completeNavRow}>
+            <TouchableOpacity
+              style={[styles.signNavBtn, !prevSubtopic && styles.navBtnDisabled]}
+              onPress={() => navToSubtopic(prevSubtopic)}
+              disabled={!prevSubtopic}
+            >
+              <Text style={[styles.signNavArrow, !prevSubtopic && styles.navArrowDisabled]}>‹</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              style={[styles.completeBackBtn, { backgroundColor: levelColor }]}
+              onPress={handleBack}
+              activeOpacity={0.85}
+              accessibilityLabel={UiStrings.backToList}
+            >
+              <Text style={styles.completeBackIcon}>←</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              style={[styles.signNavBtn, !nextSubtopic && styles.navBtnDisabled]}
+              onPress={() => navToSubtopic(nextSubtopic)}
+              disabled={!nextSubtopic}
+            >
+              <Text style={[styles.signNavArrow, !nextSubtopic && styles.navArrowDisabled]}>›</Text>
+            </TouchableOpacity>
+          </View>
         </View>
       )}
 
@@ -824,5 +892,8 @@ const styles = StyleSheet.create({
 
   // Shared disabled
   navBtnDisabled:   { opacity: 0.25 },
+  completeNavRow:   { flexDirection: 'row', alignItems: 'center', gap: 20 },
+  completeBackBtn:  { width: 72, height: 72, borderRadius: 36, alignItems: 'center', justifyContent: 'center' },
+  completeBackIcon: { fontSize: 36, color: '#FFFFFF', lineHeight: 42 },
   navArrowDisabled: { color: '#9e9e9e' },
 });

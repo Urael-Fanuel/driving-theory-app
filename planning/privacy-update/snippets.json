@@ -39,7 +39,15 @@
       "id": "adsFullScreen",
       "section": "📢",
       "where": "end-of-section",
-      "html": "<p>Besides banners, the app may show a full-screen Google ad when you finish a subtopic or a topic quiz, never during a lesson, a question or an exam.</p>"
+      "html": "<p>After the first two app launches, the app may show a full-screen Google ad at the end of a quiz or after an exam, once you have answered several questions since the last one. It does not appear while a question, its spoken feedback or an exam is in progress.</p>",
+      "mustNotMean": [
+        "subtopic",
+        "finish(es|ed)? (a|the) (sub)?topic",
+        "between (two )?questions",
+        "never during a lesson",
+        "nine"
+      ],
+      "translationNote": "This text REPLACES an older sentence about full-screen ads shown when a subtopic or topic quiz is finished: its meaning has changed, do not reuse the old wording. Say that the full-screen ad can appear at the end of a quiz or after an exam, only once the learner has answered several questions since the previous ad, and that it does not appear while a question, its spoken feedback, or an exam is in progress."
     },
     {
       "id": "instructorCounts",

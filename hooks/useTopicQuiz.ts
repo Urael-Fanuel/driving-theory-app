@@ -18,6 +18,7 @@ import * as api from '../backend/api';
 import { prefetchQuestionAudio, releaseQuestionAudio } from '../services/audioCache';
 import { collectTtsTexts, prefetchTtsForTexts } from '../utils/googleTTS';
 import { useEngine } from '../contexts/EngineContext';
+import { countAnsweredQuestion } from '../services/interstitial';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -51,6 +52,8 @@ export interface UseTopicQuizReturn {
   lastAnswerCorrect: boolean | null;
   selectedAnswerId:  string | null;
   result:            TopicQuizResult | null;
+  /** The answers given so far (for the end-of-quiz review) */
+  answers:           TopicQuizAnswer[];
   submitAnswer:      (answerId: string) => void;
   nextQuestion:      () => void;
   /** Jump to any question by index — shows answered state if already answered */
@@ -115,6 +118,9 @@ export function useTopicQuiz(topicId: string, levelId?: string): UseTopicQuizRet
   const submitAnswer = useCallback((answerId: string) => {
     const question = questions[currentIndex];
     if (!question || phase !== 'question') return;
+    // Exactly one answer per question, checked on the ref (updated at once), not on the phase state:
+    // two taps before the re-render must not record, or count toward the ad, twice (CODEX round 6, R6-1).
+    if (answersRef.current.some(a => a.questionId === question.id)) return;
 
     const correctAnswer = question.answers.find(a => a.is_correct);
     const isCorrect     = correctAnswer?.id === answerId;
@@ -130,6 +136,7 @@ export function useTopicQuiz(topicId: string, levelId?: string): UseTopicQuizRet
     setLastAnswerCorrect(isCorrect);
     setSelectedAnswerId(answerId);
     setPhase(isCorrect ? 'feedback_correct' : 'feedback_wrong');
+    countAnsweredQuestion();   // counts toward the next full-screen ad (services/interstitial.ts)
   }, [questions, currentIndex, phase]);
 
   // ── Next question ──────────────────────────────────────────────────────────
@@ -156,8 +163,18 @@ export function useTopicQuiz(topicId: string, levelId?: string): UseTopicQuizRet
       const wrongSet = new Set(wrongIds);
       releaseQuestionAudio(questions.filter(q => !wrongSet.has(q.id))).catch(() => {});
     } else {
+      // The next question may already be answered (the learner went back with ‹): show it in its answered
+      // state, as the arrows do. Opening it as unanswered left a question that looks open but refuses a
+      // second answer, a dead end on the last question (QA round 8, R8-B).
+      const existing = answersRef.current.find(a => a.questionId === questions[nextIndex].id);
       setCurrentIndex(nextIndex);
-      setPhase('question');
+      if (existing) {
+        setSelectedAnswerId(existing.selectedAnswerId);
+        setLastAnswerCorrect(existing.isCorrect);
+        setPhase(existing.isCorrect ? 'feedback_correct' : 'feedback_wrong');
+      } else {
+        setPhase('question');
+      }
       // Prefetch audio for next 3 questions
       questions.slice(nextIndex + 1, nextIndex + 4).forEach(q => prefetchQuestionAudio(q));
     }
@@ -198,6 +215,7 @@ export function useTopicQuiz(topicId: string, levelId?: string): UseTopicQuizRet
     lastAnswerCorrect,
     selectedAnswerId,
     result,
+    answers,
     submitAnswer,
     nextQuestion,
     goToQuestion,

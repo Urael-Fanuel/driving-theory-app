@@ -23,6 +23,7 @@ function load(file, useState) {
                                          getUserProgress: async () => [], getUserSignViews: async () => [],
                                          getQuestionsByIds: async () => [], getRandomExamQuestions: async () => [] } :
     p.endsWith('/audioCache')        ? { prefetchQuestionAudio() {}, releaseQuestionAudio() {} } :
+    p.endsWith('/interstitial')      ? { countAnsweredQuestion() { calls.counted = (calls.counted || 0) + 1; } } :
     p.endsWith('/googleTTS')         ? { collectTtsTexts: () => [], prefetchTtsForTexts: async () => {} } :
     p.endsWith('.json')              ? [] : {};
   const ctx = { exports: {}, console: { warn() {}, error() {}, log() {} }, process: { env: {} }, require: deps,
@@ -74,10 +75,15 @@ async function scenario(name, fn) {
     // selectedAnswerId, elapsedSeconds, isSaving
     const preset = ['question', [question], 0, [], null, null, null, 0, false]; let n = 0; const saving = [];
     const w = load('hooks/useExam.ts', () => { const i = n++; return [preset[i], i === 8 ? v => saving.push(v) : () => {}]; });
-    w.mod.useExam().submitAnswer('B');
+    const hk = w.mod.useExam(); hk.submitAnswer('B');
     await new Promise(r => setImmediate(r));
     assert.deepStrictEqual(w.calls.kept, [[USER, 'q-1', false]], 'kept: ' + JSON.stringify(w.calls.kept));
     assert.deepStrictEqual(w.calls.direct, [], 'still sent without the shared keeping');
+    assert.strictEqual(w.calls.counted, 1, 'the exam answer must be counted once for the full-screen ad');
+    // CODEX round 6, R6-1: a second tap before the re-render must not record, send or count the same question again
+    const before = w.calls.counted;
+    hk.submitAnswer('B'); hk.submitAnswer('A');
+    assert.strictEqual(w.calls.counted, before, 'a second answer to the same question was counted');
     assert.deepStrictEqual(saving, [true, false], 'the "saving" mark did not go back off: ' + JSON.stringify(saving));
   });
 

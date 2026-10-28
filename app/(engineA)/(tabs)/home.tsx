@@ -27,11 +27,11 @@ import {
   TouchableOpacity,
   StyleSheet,
   FlatList,
-  SafeAreaView,
   Dimensions,
   Animated,
   Share,
 } from 'react-native';
+import { ScreenSafeArea as SafeAreaView } from '../../../components/shared/ScreenSafeArea';   // top inset on Android (edge to edge)
 import { useRouter } from 'expo-router';
 import * as Haptics from 'expo-haptics';
 import { TrafficSignIcon, TOPIC_ICON_COLOR, TOPIC_SUBTOPIC_COUNT } from '../../../components/shared/TrafficSignIcon';

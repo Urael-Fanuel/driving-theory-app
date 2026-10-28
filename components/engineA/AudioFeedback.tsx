@@ -32,6 +32,14 @@ import { speakAndAwait, speakLongAndAwait, stopTTS } from '../../utils/googleTTS
 import { useAudioInterrupted, resumeInterruptedAudio } from '../../hooks/useAudioInterrupted';
 import { fetchWrongAnswerExplanation, RagQuery } from '../../utils/ragExplain';
 
+// A weak connection must never leave a learner who cannot read stuck on this overlay with no Next
+// button (owner's testing, 2026-10-27): the button normally appears when the clip ENDS, so a clip
+// that never starts would hide it forever.
+/** A recorded clip that has not STARTED playing by then: Next is offered anyway (the clip still plays if it arrives). */
+const CLIP_START_TIMEOUT_MS = 6_000;
+/** Spoken (TTS) feedback that has not finished by then: Next is offered anyway. */
+const SPEECH_TIMEOUT_MS = 15_000;
+
 // ─── Types ────────────────────────────────────────────────────────────────────
 
 interface AudioFeedbackProps {
@@ -68,6 +76,10 @@ export function AudioFeedback({
   const [ragSpeaking, setRagSpeaking] = useState(false);
   const ragTextRef     = useRef<string | null>(null);
   const ragSpeakingRef = useRef(false);
+  // Number of the CURRENT "why?" reading: a reading that finishes late may only clear the flag if it is still
+  // the current one, so an old reading can never clear the flag of a newer one (QA round 8, R8-A; same as R7-3).
+  const ragOp          = useRef(0);
+  const ttsActiveRef   = useRef(false);   // the feedback speech (ttsText) is loading or playing
   const mountedRef     = useRef(true);
   const audioInterrupted = useAudioInterrupted();   // Android paused our audio (call, other app)
 
@@ -77,7 +89,9 @@ export function AudioFeedback({
   useEffect(() => {
     return () => {
       mountedRef.current = false;
-      if (ragSpeakingRef.current) stopTTS().catch(() => {});
+      // Going away (Next, back) cancels BOTH readings, also one still being fetched: the 15 s escape can
+      // offer Next while the feedback speech has not finished (CODEX round 7, R7-2).
+      if (ragSpeakingRef.current || ttsActiveRef.current) stopTTS().catch(() => {});
     };
   }, []);
 
@@ -87,6 +101,7 @@ export function AudioFeedback({
     if (ragSpeakingRef.current && audioInterrupted) { resumeInterruptedAudio(); return; }
     // Second tap while speaking — stop
     if (ragSpeakingRef.current) {
+      ragOp.current++;
       ragSpeakingRef.current = false;
       setRagSpeaking(false);
       await stopTTS();
@@ -102,10 +117,12 @@ export function AudioFeedback({
       if (!text) return;
       ragTextRef.current = text;
     }
+    const op = ++ragOp.current;
     ragSpeakingRef.current = true;
     setRagSpeaking(true);
     // The whole explanation, however long (it used to stop at 950 characters).
     await speakLongAndAwait(text);
+    if (ragOp.current !== op) return;   // stopped or replaced meanwhile: not mine to clear
     ragSpeakingRef.current = false;
     if (mountedRef.current) setRagSpeaking(false);
   };
@@ -133,12 +150,17 @@ export function AudioFeedback({
     if (ttsText) {
       // TTS mode — speak the text, show next button when done
       setTtsPlaying(true);
+      ttsActiveRef.current = true;
+      const stalled = setTimeout(() => setShowNext(true), SPEECH_TIMEOUT_MS);
       speakAndAwait(ttsText)
         .catch(() => {})
         .finally(() => {
+          ttsActiveRef.current = false;
+          clearTimeout(stalled);
           setTtsPlaying(false);
           setTimeout(() => setShowNext(true), 800);
         });
+      return () => clearTimeout(stalled);
     } else {
       // URL mode — play pre-recorded audio (sign behaviour)
       playAudio(explanationAudioUri).catch(() => {});
@@ -153,6 +175,15 @@ export function AudioFeedback({
       return () => clearTimeout(t);
     }
   }, [audioState, ttsText]);
+
+  // ── URL mode: the clip never started (weak connection) → offer Next anyway ──
+  // Once it plays, this waits for its end as before (the timer is cleared on 'playing').
+  useEffect(() => {
+    if (ttsText || autoAdvanceMs || showNext) return;
+    if (audioState === 'playing' || audioState === 'paused') return;
+    const t = setTimeout(() => setShowNext(true), CLIP_START_TIMEOUT_MS);
+    return () => clearTimeout(t);
+  }, [audioState, ttsText, autoAdvanceMs, showNext]);
 
   const bgColor    = isCorrect ? Colors.overlayCorrect : Colors.overlayWrong;
   const icon       = isCorrect ? '✅' : '❌';

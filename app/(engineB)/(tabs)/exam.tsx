@@ -3,17 +3,19 @@
  * Engine B Exam Screen — 30 questions, text answers, time tracking.
  */
 
-import React, { useEffect, useCallback, useState } from 'react';
+import React, { useEffect, useCallback, useRef, useState } from 'react';
 import {
   View,
   Text,
   Image,
   StyleSheet,
-  SafeAreaView,
   ScrollView,
   TouchableOpacity,
 } from 'react-native';
+import { ScreenSafeArea as SafeAreaView } from '../../../components/shared/ScreenSafeArea';   // top inset on Android (edge to edge)
 import { useRouter } from 'expo-router';
+import { maybeShowInterstitial } from '../../../services/interstitial';
+import { useScreenActive } from '../../../hooks/useScreenActive';
 import { storeExamResult } from '../../../utils/examResult';
 import { Typography } from '../../../constants/typography';
 import { LoadingScreen } from '../../../components/shared/LoadingScreen';
@@ -33,6 +35,7 @@ import { extractSignNumber, shouldShowSignBadge } from '../../../utils/signNumbe
 
 export default function EngineBExamScreen() {
   const router = useRouter();
+  const activeRef = useScreenActive();   // false once the learner has left this screen (ads, R6-4)
   const {
     phase,
     currentQuestion,
@@ -72,9 +75,11 @@ export default function EngineBExamScreen() {
   // Show feedback after answer
   useEffect(() => {
     if (phase === 'feedback_correct' || phase === 'feedback_wrong') {
-      setTimeout(() => setShowFeedback(true), 200);
+      setShowFeedback(true);   // at once: the Next button must already be there when the learner reaches for it
     }
-  }, [phase]);
+  // Keyed on the question too: moving between two answered questions keeps the same phase, and the panel
+  // (hidden by the move) never came back, so there was no Next (QA round 8, R8-B).
+  }, [phase, currentIndex]);
 
   // Navigate to results
   useEffect(() => {
@@ -88,7 +93,14 @@ export default function EngineBExamScreen() {
         wrongQuestions:  result.wrongQuestions,
       });
       const params = `score=${result.score}&total=${result.total}&passed=${result.passed ? '1' : '0'}&duration=${result.durationSeconds}`;
-      router.replace(`/result/${result.sessionId}?${params}` as any);
+      // The exam counts its answered questions, but never interrupts itself: the due full-screen
+      // ad (if any) is shown here, when it is over, before the result (services/interstitial.ts).
+      const sessionId = result.sessionId;
+      // Left the exam meanwhile: no ad over the other screen (it stays due); the result is still opened.
+      // The last feedback may still be speaking: stop it first (its panel also stops its own reading on unmount).
+      Promise.resolve().then(() => stopAudio()).catch(() => {})
+        .then(() => maybeShowInterstitial(() => activeRef.current))
+        .finally(() => router.replace(`/result/${sessionId}?${params}` as any));
     }
   }, [phase, result]);
 
@@ -97,9 +109,16 @@ export default function EngineBExamScreen() {
     submitAnswer(answerId);
   }, [phase, submitAnswer]);
 
-  const handleNext = async () => {
-    await stopAudio();          // stop explanation audio before moving to next question
+  // One "Next" per question. The panel used to close only AFTER the audio had been stopped (awaited), so a
+  // slow stop made the button look dead, the learner tapped again, and nextQuestion ran twice (a question
+  // was skipped). Now the panel closes on the tap itself and the audio is stopped without waiting.
+  const advancedRef = useRef(false);
+  useEffect(() => { advancedRef.current = false; }, [phase, currentIndex]);   // open again once the move happened
+  const handleNext = () => {
+    if (advancedRef.current) return;
+    advancedRef.current = true;
     setShowFeedback(false);
+    stopAudio().catch(() => {});   // explanation audio stops; nothing waits for it
     nextQuestion();
   };
 

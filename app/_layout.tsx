@@ -55,7 +55,10 @@ export default function RootLayout() {
     <GestureHandlerRootView style={styles.container}>
       <SafeAreaProvider>
         <EngineProvider>
-          <StatusBar style="light" />
+          {/* Dark icons: almost every screen is light (#f7f9fb), and since the screens no longer draw
+              under the status bar (ScreenSafeArea) white icons were unreadable there. The two practice
+              screens, the only dark ones, switch it back to light themselves. */}
+          <StatusBar style="dark" />
           <Stack
             screenOptions={{
               headerShown:       false,

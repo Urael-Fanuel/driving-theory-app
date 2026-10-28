@@ -9,12 +9,11 @@
  * Pass threshold: 7/10 (70%)
  */
 
-import React, { useEffect, useCallback, useRef, useState } from 'react';
+import React, { useEffect, useCallback, useRef, useState, useMemo } from 'react';
 import {
   View,
   TouchableOpacity,
   StyleSheet,
-  SafeAreaView,
   Text,
   ScrollView,
   Image,
@@ -22,6 +21,9 @@ import {
   Dimensions,
   BackHandler,
 } from 'react-native';
+import { ScreenSafeArea as SafeAreaView } from '../../../components/shared/ScreenSafeArea';   // top inset on Android (edge to edge)
+import { QuizReview } from '../../../components/shared/QuizReview';
+import { buildQuizReview } from '../../../utils/quizReview';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 import { useLocalSearchParams, useRouter, useFocusEffect } from 'expo-router';
@@ -54,6 +56,7 @@ import { useAudioInterrupted, resumeInterruptedAudio } from '../../../hooks/useA
 import ConfettiCannon from 'react-native-confetti-cannon';
 import { isQuestionAudioReady } from '../../../services/audioCache';
 import { maybeShowInterstitial } from '../../../services/interstitial';
+import { useScreenActive } from '../../../hooks/useScreenActive';
 import * as api from '../../../backend/api';
 import { DBSign } from '../../../backend/supabaseClient';
 import { OfflineBanner } from '../../../components/shared/OfflineBanner';
@@ -86,6 +89,7 @@ const NUMBER_URLS = [
 export default function EngineATopicQuizScreen() {
   const { topicId, levelId } = useLocalSearchParams<{ topicId: string; levelId?: string }>();
   const router               = useRouter();
+  const activeRef = useScreenActive();   // false once the learner has left this screen (ads, R6-4)
   const adClipRef = useRef<any>(null);   // the scroll area holding the ad card (components/shared/AdClip.tsx)
   // The Android system bar (3-button or gesture) sits over the bottom of the screen
   // (edge-to-edge): the last item of a scrolling screen needs this much room, or the
@@ -106,6 +110,7 @@ export default function EngineATopicQuizScreen() {
     nextQuestion,
     goToQuestion,
     result,
+    answers,
     lastAnswerCorrect,
     selectedAnswerId,
     restart,
@@ -318,9 +323,23 @@ export default function EngineATopicQuizScreen() {
   // ── Show feedback overlay ────────────────────────────────────────────────────
   useEffect(() => {
     if (phase === 'feedback_correct' || phase === 'feedback_wrong') {
-      setTimeout(() => setShowFeedback(true), 300);
+      // The spoken feedback of a behavioral question is built HERE from the question on screen and its result,
+      // not only when an answer is given: opening an already answered question (arrows, Next) used to speak the
+      // text of the last answer given somewhere else (QA round 8, R8-D).
+      if (currentQuestion && !currentQuestion.sign_id) {
+        const correctText = currentQuestion.answers.find(a => a.is_correct)?.text_amharic ?? '';
+        // the answer given on THIS question (the form the speech guard of scripts/recordTts.mjs accepts)
+        const selected = currentQuestion.answers.find(a => a.id === selectedAnswerId);
+        setFeedbackTTSText(
+          selected?.is_correct ? `${randomPraise()} ${correctText}` : `ስህተት! ትክክለኛው መልስ: ${correctText}`
+        );
+      }
+      const t = setTimeout(() => setShowFeedback(true), 300);
+      return () => clearTimeout(t);   // a move before the 300 ms must not show the panel later (QA round 8, N4)
     }
-  }, [phase]);
+  // Keyed on the question too: moving between two answered questions keeps the same phase, and the panel
+  // (hidden by the move) never came back, so there was no Next (QA round 8, R8-B).
+  }, [phase, currentIndex]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // ── Confetti + crowd cheer when quiz is passed ────────────────────────────
   useEffect(() => {
@@ -417,11 +436,48 @@ export default function EngineATopicQuizScreen() {
     }
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const handleNext = () => {
+  // The step between "answer given" and "next question": the feedback is closed and its speech stopped FIRST
+  // (nothing may speak during an ad), then the due full-screen ad runs (services/interstitial.ts), and only if
+  // the learner is still on this screen does the move go on. Returns false when the screen was left meanwhile.
+  const advancingRef = useRef(false);   // the whole move, ad included, runs once: every entry point shares it
+  const passAdGate = async (): Promise<boolean> => {
     setShowFeedback(false);
+    sequenceCancelledRef.current = true;   // cancel a running read-aloud
     cancelListening();
-    scrollRef.current?.scrollTo({ y: 0, animated: false });
-    nextQuestion();
+    await stopAudio();
+    await stopTTS().catch(() => {});
+    await maybeShowInterstitial(() => activeRef.current);
+    return activeRef.current;
+  };
+
+  const handleNext = async () => {
+    if (advancingRef.current) return;
+    advancingRef.current = true;
+    try {
+      // Between questions nothing is shown; the end of the quiz is the only place for the full-screen ad.
+      const isLast = currentIndex >= questions.length - 1;
+      if (isLast && !(await passAdGate())) return;
+      setShowFeedback(false);
+      cancelListening();
+      scrollRef.current?.scrollTo({ y: 0, animated: false });
+      nextQuestion();
+    } finally {
+      advancingRef.current = false;
+    }
+  };
+
+  // Daily quiz review (see the result screen below)
+  const isDaily = topicId === 'daily';
+  const dailyReview = useMemo(
+    () => (isDaily && phase === 'result' ? buildQuizReview(questions, answers) : null),
+    [isDaily, phase, questions, answers],
+  );
+  // Before leaving for a sign or for practice from the review: stop both audio engines.
+  const stopAllAudio = async () => {
+    sequenceCancelledRef.current = true;
+    cancelListening();
+    await stopAudio();
+    await stopTTS().catch(() => {});
   };
 
   const handleBack = async () => {
@@ -431,8 +487,6 @@ export default function EngineATopicQuizScreen() {
       cancelListening();
       await stopAudio();
       await stopTTS().catch(() => {});
-      // End point: a full-screen ad may run here (never mid-lesson). See services/interstitial.ts.
-      if (phase === 'result') await maybeShowInterstitial();
       // Success keeps the guard on: the screen is leaving. Only when there is nowhere
       // to go back to (the screen stays) is it released (CODEX round 4, R4-1).
       const canLeave = typeof router.canGoBack !== 'function' || router.canGoBack();
@@ -446,15 +500,20 @@ export default function EngineATopicQuizScreen() {
     }
   };
 
-  // Android hardware back takes the same way out as the ← button: audio stopped, and on
-  // the result screen the end point is counted (CODEX round 3, C2). Mirrors the
-  // behavioral screens.
-  const handleBackRef = useRef(handleBack);
-  handleBackRef.current = handleBack;
+  // The phone's own back button keeps its normal Android behaviour (one screen back,
+  // however fast it is pressed); this only stops the audio and the microphone first and
+  // lets the press carry on (returns false = not handled here). Mirrors the behavioral screens.
+  const stopForBackRef = useRef(() => {});
+  stopForBackRef.current = () => {
+    cancelListening();
+    stopAudio().catch(() => {});
+    stopTTS().catch(() => {});
+  };
   useFocusEffect(
     useCallback(() => {
       const sub = BackHandler.addEventListener('hardwareBackPress', () => {
-        handleBackRef.current(); return true;
+        stopForBackRef.current();
+        return false;
       });
       return () => sub.remove();
     }, [])
@@ -475,14 +534,19 @@ export default function EngineATopicQuizScreen() {
   };
 
   const handleNavNext = async () => {
-    if (!canGoNext) return;
-    questionEpochRef.current++;           // first: see questionEpochRef
-    sequenceCancelledRef.current = true;  // cancel running sequence immediately
-    await stopAudio();
-    await stopTTS().catch(() => {});
-    cancelListening();
-    setShowFeedback(false);
-    goToQuestion(currentIndex + 1);
+    if (!canGoNext || advancingRef.current) return;
+    advancingRef.current = true;
+    try {
+      questionEpochRef.current++;           // first: see questionEpochRef
+      sequenceCancelledRef.current = true;  // cancel running sequence immediately
+      await stopAudio();
+      await stopTTS().catch(() => {});
+      cancelListening();
+      setShowFeedback(false);
+      goToQuestion(currentIndex + 1);
+    } finally {
+      advancingRef.current = false;
+    }
   };
 
   // ── Answer card state ────────────────────────────────────────────────────────
@@ -529,7 +593,7 @@ export default function EngineATopicQuizScreen() {
           </View>
         )}
         <AdClip target={adClipRef}>
-        <ScrollView ref={adClipRef} contentContainerStyle={styles.resultContent}>
+        <ScrollView ref={adClipRef} contentContainerStyle={[styles.resultContent, { paddingBottom: 32 + insets.bottom + 12 }]}>
           {/* Score circle */}
           <View style={[styles.resultCircle, { borderColor: passed ? Colors.correct : Colors.wrong }]}>
             <Text style={styles.resultEmoji}>{scoreEmoji}</Text>
@@ -568,6 +632,17 @@ export default function EngineATopicQuizScreen() {
             <View style={styles.adWrapper}>
               <SafeBannerAd unitId={BANNER_AD_UNIT_ID} />
             </View>
+          )}
+
+          {/* Daily quiz: the same review as at the end of the 30-question exam (owner's request 2026-10-27):
+              score per topic, the questions answered wrong, and "practise them". */}
+          {isDaily && dailyReview && (
+            <QuizReview
+              isEngineA={true}
+              topicBreakdown={dailyReview.topicBreakdown}
+              wrongQuestions={dailyReview.wrongQuestions}
+              beforeLeave={stopAllAudio}
+            />
           )}
 
           {/* Buttons */}

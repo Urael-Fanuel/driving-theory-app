@@ -29,11 +29,11 @@ import {
   Image,
   TouchableOpacity,
   StyleSheet,
-  SafeAreaView,
   Text,
   ScrollView,
   BackHandler,
 } from 'react-native';
+import { ScreenSafeArea as SafeAreaView } from '../../../components/shared/ScreenSafeArea';   // top inset on Android (edge to edge)
 import { useLocalSearchParams, useRouter, useFocusEffect } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useFitImageSize } from '../../../hooks/useFitImageSize';
@@ -53,6 +53,8 @@ import { OfflineBanner } from '../../../components/shared/OfflineBanner';
 import { prefetchSignAudio } from '../../../services/audioCache';
 import { LocationPermissionModal } from '../../../components/shared/LocationPermissionModal';
 import { useLocationPrompt } from '../../../hooks/useLocationPrompt';
+import { countAnsweredQuestion, maybeShowInterstitial } from '../../../services/interstitial';
+import { useScreenActive } from '../../../hooks/useScreenActive';
 import { useEngine } from '../../../contexts/EngineContext';
 
 // ─── Number announcement URLs (played before each answer) ─────────────────────
@@ -67,8 +69,11 @@ const NUMBER_URLS = [
 // ─── Component ────────────────────────────────────────────────────────────────
 
 export default function EngineAQuestionScreen() {
-  const { id }     = useLocalSearchParams<{ id: string }>();
+  // origin: the sign whose page is right below this quiz in the back stack, set only after the
+  // learner moved to another sign with the ‹ › arrows (see handleBack).
+  const { id, origin } = useLocalSearchParams<{ id: string; origin?: string }>();
   const router     = useRouter();
+  const activeRef = useScreenActive();   // false once the learner has left this screen (ads, R6-4)
   // The Android system bar (3-button or gesture) sits over the bottom of the screen
   // (edge-to-edge): the last item of a scrolling screen needs this much room, or the
   // bar covers it (the 🎤 button was half hidden, 2026-10-25).
@@ -347,12 +352,17 @@ export default function EngineAQuestionScreen() {
   }, [currentQuestion?.answers.length]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // ── Answer selection (via tap OR voice) ────────────────────────────────────
+  // One answer per question: set at the very first tap, BEFORE any state update or await, so two taps (or a tap
+  // and the voice answer) before the re-render cannot both count toward the ad (CODEX round 6, R6-1).
+  const answerLockedRef = useRef(false);
   const handleAnswerSelect = useCallback((answerIndex: number) => {
     if (answeredIndex !== null) return; // Already answered
     if (!currentQuestion) return;
 
     const selectedAnswer = currentQuestion.answers[answerIndex];
     if (!selectedAnswer) return;
+    if (answerLockedRef.current) return;
+    answerLockedRef.current = true;
 
     // Stop any ongoing recording when answer is selected
     cancelListening();
@@ -360,6 +370,7 @@ export default function EngineAQuestionScreen() {
     setPlayingAnswerIndex(null);
 
     setAnsweredIndex(answerIndex);
+    countAnsweredQuestion();   // counts toward the next full-screen ad (services/interstitial.ts)
 
     const isCorrect = selectedAnswer.is_correct;
     recordAnswer(
@@ -404,7 +415,7 @@ export default function EngineAQuestionScreen() {
     Haptics.selectionAsync();
     await stopAudio();
     cancelListening();
-    router.replace(`/(engineA)/question/${prevSign.id}` as any);
+    router.replace(`/(engineA)/question/${prevSign.id}?origin=${origin || signId}` as any);
   };
 
   const handleNextSign = async () => {
@@ -412,7 +423,7 @@ export default function EngineAQuestionScreen() {
     Haptics.selectionAsync();
     await stopAudio();
     cancelListening();
-    router.replace(`/(engineA)/question/${nextSign.id}` as any);
+    router.replace(`/(engineA)/question/${nextSign.id}?origin=${origin || signId}` as any);
   };
 
   // ── Audio Pause/Resume button ────────────────────────────────────────────────
@@ -439,6 +450,7 @@ export default function EngineAQuestionScreen() {
     questionEpochRef.current++;   // first, before stopAudio lets a playing 🔊 tap go (see its comment)
     await stopAudio();
     cancelListening();
+    answerLockedRef.current = false;
     setAnsweredIndex(null);
     setShowFeedback(false);
     setPlayingAnswerIndex(null);
@@ -447,40 +459,91 @@ export default function EngineAQuestionScreen() {
     setQIndex(newIndex);
   }, [questions.length, stopAudio, cancelListening]);
 
-  // ── Back — always go to the CURRENT sign's explanation screen ───────────────
-  // Using router.back() is wrong: if user navigated prev/next sign, back would
-  // return to the original sign (the one they entered from), not the current one.
+  // ── Back (the ← button) — always go to the CURRENT sign's explanation screen ──
+  // The quiz was opened from that sign's page, which is still right below it in the back
+  // stack: go back to it (replacing the quiz with a second copy of the same page left a
+  // duplicate that cost an extra press). Only after the learner moved to ANOTHER sign with
+  // the ‹ › arrows is the page below a different sign, so then the current sign's page is
+  // opened instead.
+  const leavingRef = useRef(false);   // one exit at a time: two overlapping exits would pop two pages (CODEX round 6, R6-3)
   const handleBack = useCallback(async () => {
-    await stopAudio();
-    cancelListening();
-    router.replace(`/(engineA)/sign/${signId}` as any);
-  }, [signId, router, stopAudio, cancelListening]);
+    if (leavingRef.current) return;
+    leavingRef.current = true;
+    try {
+      await stopAudio();
+      cancelListening();
+      const pageBelowIsThisSign = !origin || origin === signId;
+      if (pageBelowIsThisSign && typeof router.canGoBack === 'function' && router.canGoBack()) {
+        router.back();
+      } else {
+        router.replace(`/(engineA)/sign/${signId}` as any);
+      }
+      // Success keeps the guard on: the screen is leaving.
+    } catch (err) {
+      leavingRef.current = false;   // the exit failed: the next tap can try again
+      console.warn('[handleBack] leaving failed:', err);
+    }
+  }, [signId, origin, router, stopAudio, cancelListening]);
 
-  // Intercept Android hardware back button so it also goes to current sign
+  // The phone's own back button keeps its normal Android behaviour (one screen back,
+  // however fast it is pressed); this only stops the audio and the microphone first and
+  // lets the press carry on (returns false = not handled here).
   useFocusEffect(
     useCallback(() => {
       const sub = BackHandler.addEventListener('hardwareBackPress', () => {
-        handleBack();
-        return true; // prevent default (which would call router.back())
+        stopAudio().catch(() => {});
+        cancelListening();
+        return false;
       });
       return () => sub.remove();
-    }, [handleBack])
+    }, [stopAudio, cancelListening])
   );
 
   // ── Navigate to next question (after feedback) ──────────────────────────────
+  // The step between "answer given" and "next question": the feedback is closed and its speech stopped FIRST
+  // (nothing may speak during an ad), then the due full-screen ad runs (services/interstitial.ts), and only if
+  // the learner is still on this screen does the move go on. Returns false when the screen was left meanwhile.
+  const advancingRef = useRef(false);   // the whole move, ad included, runs once: a second tap or arrow is ignored
+  const passAdGate = async (): Promise<boolean> => {
+    setShowFeedback(false);
+    await stopAudio();
+    await maybeShowInterstitial(() => activeRef.current);
+    return activeRef.current;
+  };
+
   const handleNext = useCallback(async () => {
-    const nextIndex = qIndex + 1;
-    if (nextIndex < questions.length) {
-      navigateToQuestion(nextIndex);
-      return;
+    if (advancingRef.current) return;
+    advancingRef.current = true;
+    try {
+      const nextIndex = qIndex + 1;
+      if (nextIndex < questions.length) {
+        await navigateToQuestion(nextIndex);   // between questions nothing is shown
+        return;
+      }
+      // The end of the quiz is the only place for the full-screen ad.
+      if (!(await passAdGate())) return;
+      // Just finished the last question of this sign's quiz — the "delighted
+      // moment" the app owner chose for the location-permission primer, right
+      // before returning to the sign's explanation screen.
+      const shown = await maybeShowLocationPrompt(() => activeRef.current);
+      if (!activeRef.current) return;   // left the screen during the preferences read: no old Back
+      if (!shown) await handleBack();
+      // else: wait for the modal's approve/not-now, which itself calls handleBack.
+    } finally {
+      advancingRef.current = false;
     }
-    // Just finished the last question of this sign's quiz — the "delighted
-    // moment" the app owner chose for the location-permission primer, right
-    // before returning to the sign's explanation screen.
-    const shown = await maybeShowLocationPrompt();
-    if (!shown) handleBack();
-    // else: wait for the modal's approve/not-now, which itself calls handleBack.
-  }, [qIndex, questions.length, navigateToQuestion, handleBack, maybeShowLocationPrompt]);
+  }, [qIndex, questions.length, navigateToQuestion, handleBack, maybeShowLocationPrompt]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // The › arrow (never shows an ad: only the end of a quiz does).
+  const handleQNext = async () => {
+    if (advancingRef.current) return;
+    advancingRef.current = true;
+    try {
+      await navigateToQuestion(qIndex + 1);
+    } finally {
+      advancingRef.current = false;
+    }
+  };
 
   const handleLocationApprove = () => {
     handleLocationApproveBase();
@@ -529,7 +592,7 @@ export default function EngineAQuestionScreen() {
           scrolled down to reach answers 3-4. content's paddingTop reserves
           the space it would otherwise cover. */}
       <TouchableOpacity
-        style={styles.backButton}
+        style={[styles.backButton, { top: 12 + insets.top }]}
         onPress={handleBack}
         accessibilityLabel="ወደ ኋላ ተመለስ"
       >
@@ -586,7 +649,7 @@ export default function EngineAQuestionScreen() {
 
           <TouchableOpacity
             style={[styles.qNavBtn, qIndex === questions.length - 1 && styles.navBtnDisabled]}
-            onPress={() => navigateToQuestion(qIndex + 1)}
+            onPress={handleQNext}
             disabled={qIndex === questions.length - 1}
             accessibilityLabel="ወደ ቀጣይ ጥያቄ"
           >

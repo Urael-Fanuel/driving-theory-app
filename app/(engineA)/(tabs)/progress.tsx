@@ -11,12 +11,12 @@ import {
   View,
   Text,
   StyleSheet,
-  SafeAreaView,
   ScrollView,
   TouchableOpacity,
   Animated,
   Share,
 } from 'react-native';
+import { ScreenSafeArea as SafeAreaView } from '../../../components/shared/ScreenSafeArea';   // top inset on Android (edge to edge)
 import { useRouter } from 'expo-router';
 import { Colors } from '../../../constants/colors';
 import { ProgressBar } from '../../../components/shared/ProgressBar';

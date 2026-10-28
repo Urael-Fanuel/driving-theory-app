@@ -14,11 +14,12 @@ import {
   View,
   TouchableOpacity,
   StyleSheet,
-  SafeAreaView,
   Text,
   ScrollView,
   Image,
 } from 'react-native';
+import { ScreenSafeArea as SafeAreaView } from '../../components/shared/ScreenSafeArea';   // top inset on Android (edge to edge)
+import { StatusBar } from 'expo-status-bar';
 import { useRouter, useLocalSearchParams, useFocusEffect } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useFitImageSize } from '../../hooks/useFitImageSize';
@@ -316,6 +317,7 @@ export default function EngineAPracticeScreen() {
   if (phase === 'done') {
     return (
       <SafeAreaView style={[styles.safeArea, styles.doneScreen]}>
+        <StatusBar style="light" />{/* dark screen: light status bar icons */}
         <Text style={styles.doneEmoji}>🎉</Text>
         <Text style={styles.doneScore}>{total}/{total}</Text>
         <TouchableOpacity style={styles.doneBtn} onPress={handleBack}>
@@ -350,6 +352,7 @@ export default function EngineAPracticeScreen() {
 
   return (
     <SafeAreaView style={styles.safeArea}>
+      <StatusBar style="light" />{/* dark screen: light status bar icons */}
       <OfflineBanner />
 
       {/* Fixed top bar */}

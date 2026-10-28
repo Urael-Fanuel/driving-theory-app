@@ -18,17 +18,18 @@
  * └─────────────────────────┘
  */
 
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState, useCallback, useRef } from 'react';
 import {
   View,
   Text,
   Image,
   StyleSheet,
-  SafeAreaView,
   ScrollView,
   TouchableOpacity,
   Platform,
 } from 'react-native';
+import { ScreenSafeArea as SafeAreaView } from '../../../components/shared/ScreenSafeArea';   // top inset on Android (edge to edge)
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import * as Haptics from 'expo-haptics';
 import { Colors } from '../../../constants/colors';
@@ -46,6 +47,8 @@ import { OfflineBanner } from '../../../components/shared/OfflineBanner';
 import { prefetchSignAudio } from '../../../services/audioCache';
 import { LocationPermissionModal } from '../../../components/shared/LocationPermissionModal';
 import { useLocationPrompt } from '../../../hooks/useLocationPrompt';
+import { countAnsweredQuestion, maybeShowInterstitial } from '../../../services/interstitial';
+import { useScreenActive } from '../../../hooks/useScreenActive';
 import { useEngine } from '../../../contexts/EngineContext';
 
 // ─── Component ────────────────────────────────────────────────────────────────
@@ -53,6 +56,10 @@ import { useEngine } from '../../../contexts/EngineContext';
 export default function EngineBQuestionScreen() {
   const { id }   = useLocalSearchParams<{ id: string }>();
   const router   = useRouter();
+  // The Android navigation bar sits over the bottom of the screen (edge to edge): the last
+  // buttons need this much room, or the bar covers them (owner's testing, 2026-10-27).
+  const insets = useSafeAreaInsets();
+  const activeRef = useScreenActive();   // false once the learner has left this screen (ads, R6-4)
   const { recordAnswer } = useProgress();
   const { stopAudio } = useAudio();
   const { userId } = useEngine();
@@ -113,21 +120,28 @@ export default function EngineBQuestionScreen() {
 
   // Reset state when question index changes
   useEffect(() => {
+    answerLockedRef.current = false;
     setSelectedId(null);
     setShowFeedback(false);
   }, [questionIndex]);
 
   // ── Answer selection ─────────────────────────────────────────────────────────
 
+  // One answer per question: set at the very first tap, BEFORE any state update or await, so two taps (or a tap
+  // and the voice answer) before the re-render cannot both count toward the ad (CODEX round 6, R6-1).
+  const answerLockedRef = useRef(false);
   const handleAnswerSelect = useCallback((answerId: string) => {
     if (selectedId !== null) return;
     if (!currentQuestion) return;
+    if (answerLockedRef.current) return;
+    answerLockedRef.current = true;
 
     setSelectedId(answerId);
+    countAnsweredQuestion();   // counts toward the next full-screen ad (services/interstitial.ts)
     const answer    = currentQuestion.answers.find(a => a.id === answerId);
     const isCorrect = answer?.is_correct ?? false;
     recordAnswer(currentQuestion.id, signId, sign?.topic_id ?? '', isCorrect);
-    setTimeout(() => setShowFeedback(true), 200);
+    setShowFeedback(true);   // at once: the Next button must already be there when the learner reaches for it
   }, [selectedId, currentQuestion, signId, sign?.topic_id, recordAnswer]);
 
   // ── Question navigation ──────────────────────────────────────────────────────
@@ -144,14 +158,31 @@ export default function EngineBQuestionScreen() {
     router.replace(`/(engineB)/question/${signId}_q${questionIndex - 1}`);
   }, [canGoPrevQ, questionIndex, signId, router, stopAudio]);
 
-  const handleNextQuestion = useCallback(async () => {
-    if (!canGoNextQ) return;
-    Haptics.selectionAsync();
-    await stopAudio();
+  // The step between "answer given" and "next question": the feedback is closed and its speech stopped FIRST
+  // (nothing may speak during an ad), then the due full-screen ad runs (services/interstitial.ts), and only if
+  // the learner is still on this screen does the move go on. Returns false when the screen was left meanwhile.
+  const advancingRef = useRef(false);   // the whole move, ad included, runs once: every entry point shares it
+  const passAdGate = async (): Promise<boolean> => {
     setShowFeedback(false);
-    setSelectedId(null);
-    router.replace(`/(engineB)/question/${signId}_q${questionIndex + 1}`);
-  }, [canGoNextQ, questionIndex, questions.length, signId, router, stopAudio]);
+    await stopAudio();
+    await maybeShowInterstitial(() => activeRef.current);
+    return activeRef.current;
+  };
+
+  // The › question arrow (also what the feedback's Next does, below). Never shows an ad.
+  const handleNextQuestion = useCallback(async () => {
+    if (!canGoNextQ || advancingRef.current) return;
+    advancingRef.current = true;
+    try {
+      Haptics.selectionAsync();
+      setShowFeedback(false);
+      stopAudio().catch(() => {});   // stops at once; nothing waits for it (a slow stop made Next look dead)
+      setSelectedId(null);
+      router.replace(`/(engineB)/question/${signId}_q${questionIndex + 1}`);
+    } finally {
+      advancingRef.current = false;
+    }
+  }, [canGoNextQ, questionIndex, questions.length, signId, router, stopAudio]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // ── Feedback overlay's "Next" — distinct from the bottom-nav question
   // arrows above. On the last question canGoNextQ is (correctly) false, since
@@ -164,9 +195,21 @@ export default function EngineBQuestionScreen() {
       await handleNextQuestion();
       return;
     }
-    const shown = await maybeShowLocationPrompt();
-    if (!shown) { await stopAudio(); router.back(); }
-  }, [canGoNextQ, handleNextQuestion, maybeShowLocationPrompt, stopAudio, router]);
+    if (advancingRef.current) return;
+    advancingRef.current = true;
+    try {
+      if (!(await passAdGate())) return;
+      const shown = await maybeShowLocationPrompt(() => activeRef.current);
+      if (!activeRef.current) return;   // left the screen during the preferences read: no old Back
+      if (!shown) {
+        await stopAudio();
+        if (!activeRef.current) return;   // ... or while the audio was being stopped
+        router.back();
+      }
+    } finally {
+      advancingRef.current = false;
+    }
+  }, [canGoNextQ, handleNextQuestion, maybeShowLocationPrompt, stopAudio, router]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleLocationApprove = () => {
     handleLocationApproveBase();
@@ -330,7 +373,7 @@ export default function EngineBQuestionScreen() {
 
       {/* ── Bottom navigation ── */}
       <View
-        style={styles.bottomNav}
+        style={[styles.bottomNav, { paddingBottom: 16 + insets.bottom }]}
         onLayout={(e) => setBottomNavHeight(e.nativeEvent.layout.height)}
       >
 

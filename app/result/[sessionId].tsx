@@ -15,13 +15,15 @@ import {
   Text,
   TouchableOpacity,
   StyleSheet,
-  SafeAreaView,
   ScrollView,
   Animated,
   Image,
   Share,
   Dimensions,
 } from 'react-native';
+import { ScreenSafeArea as SafeAreaView } from '../../components/shared/ScreenSafeArea';   // top inset on Android (edge to edge)
+import { QuizReview } from '../../components/shared/QuizReview';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 import { useLocalSearchParams, useRouter } from 'expo-router';
@@ -69,25 +71,6 @@ const EXAM_PASS_AD_BODY     = 'ወደመኪና አስተማሪ ይደውሉ እ�
 const EXAM_PASS_AD_AUDIO    = `${_AUDIO_BASE}/sponsor_ad_exam_pass_wrapper.mp3`;
 
 // ─── Topic ID → Amharic name mapping ─────────────────────────────────────────
-const TOPIC_NAMES: Record<string, string> = {
-  regulatory:           'አስገዳጅ ምልክቶች',
-  warning:              'የማስጠንቀቂያ ምልክቶች',
-  right_of_way:         'የቅድሚያ መብት',
-  prohibitions:         'የክልከላ ምልክቶች',
-  information_guidance: 'የመረጃ ምልክቶች',
-  public_transport:     'የህዝብ ማመላለሻ',
-  traffic_lights:       'የትራፊክ መብራቶች',
-  road_markings:        'የመንገድ ምልክቶች',
-  work_site:            'የሥራ ቦታ ምልክቶች',
-  vehicle_knowledge:    'መኪናን ማወቅ',
-  mind_safety:          'አዕምሮ እና ደህንነት',
-  society_law:          'ማህበረሰብ እና ህግ',
-  the_road:             'የመንገድ ሁኔታዎች',
-  my_vehicle:           'ትክክለኛ አነዳድ',
-  two_wheelers:         'ሁለት ጎማ ተሽከርካሪ',
-  road_decisions:       'የመንገድ ላይ ውሳኔዎች',
-  basics_license:       'መሠረቶች እና ፍቃድ',
-};
 export type { ResultData };
 export { storeExamResult } from '../../utils/examResult';
 
@@ -96,6 +79,9 @@ export { storeExamResult } from '../../utils/examResult';
 export default function ResultScreen() {
   const { sessionId } = useLocalSearchParams<{ sessionId: string }>();
   const router        = useRouter();
+  // The Android navigation bar sits over the bottom of the screen (edge to edge): the last
+  // buttons need this much room, or the bar covers them (owner's testing, 2026-10-27).
+  const insets = useSafeAreaInsets();
   const adClipRef = useRef<any>(null);   // the scroll area holding the ad card (components/shared/AdClip.tsx)
   const { engineType, userId } = useEngine();
   const sponsorAd = useSponsorAd(userId);
@@ -129,25 +115,6 @@ export default function ResultScreen() {
   const percent   = total > 0 ? Math.round((score / total) * 100) : 0;
   const isEngineA = engineType === 'A';
 
-  // ── Load sign images for wrong questions ───────────────────────────────────
-  const [weakSigns, setWeakSigns] = useState<DBSign[]>([]);
-
-  // Wrong questions split by type
-  const signWrongQuestions       = wrongQuestions.filter(q => q.signId);
-  const behavioralWrongQuestions = wrongQuestions.filter(q => !q.signId);
-
-  useEffect(() => {
-    if (!signWrongQuestions.length) return;
-    api.getAllSigns()
-      .then(allSigns => {
-        const signIds = [...new Set(signWrongQuestions.map(q => q.signId))];
-        const found   = signIds
-          .map(id => allSigns.find(s => s.id === id))
-          .filter(Boolean) as DBSign[];
-        setWeakSigns(found);
-      })
-      .catch(() => {});
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   // ── Animations ─────────────────────────────────────────────────────────────
   const scaleAnim    = useRef(new Animated.Value(0)).current;
@@ -219,28 +186,12 @@ export default function ResultScreen() {
     }
   };
 
-  const handleSignPress = async (signId: string) => {
-    await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-    await stopAudio();
-    await stopTTS().catch(() => {});
-    if (isEngineA) {
-      router.push(`/(engineA)/sign/${signId}` as any);
-    } else {
-      router.push(`/(engineB)/sign/${signId}` as any);
-    }
-  };
 
-  const handlePracticeWeak = async () => {
-    await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+
+  // Before leaving for a sign or for practice (QuizReview): stop both audio engines.
+  const stopAllAudio = async () => {
     await stopAudio();
     await stopTTS().catch(() => {});
-    // Pass wrong question IDs as a comma-separated URL param
-    const ids = wrongQuestions.map(q => q.questionId).join(',');
-    if (isEngineA) {
-      router.push(`/(engineA)/practice?ids=${ids}` as any);
-    } else {
-      router.push(`/(engineB)/practice?ids=${ids}` as any);
-    }
   };
 
   const minutes = Math.floor(duration / 60);
@@ -297,7 +248,7 @@ export default function ResultScreen() {
         </View>
       )}
       <AdClip target={adClipRef}>
-      <ScrollView ref={adClipRef} contentContainerStyle={styles.content}>
+      <ScrollView ref={adClipRef} contentContainerStyle={[styles.content, { paddingBottom: 24 + insets.bottom + 12 }]}>
 
         {/* Result icon + score */}
         <Animated.View
@@ -390,107 +341,14 @@ export default function ResultScreen() {
           </View>
         </Animated.View>
 
-        {/* Topic breakdown — Engine B only */}
-        {!isEngineA && result?.topicBreakdown && (
-          <Animated.View style={[styles.breakdownContainer, { opacity: fadeAnim }]}>
-            <Text style={styles.breakdownTitle}>በርዕስ ጉዳይ</Text>
-            {Object.entries(result.topicBreakdown).map(([topicId, stats]) => (
-              <View key={topicId} style={styles.breakdownRow}>
-                <Text style={styles.breakdownTopic}>{TOPIC_NAMES[topicId] ?? topicId}</Text>
-                <View style={styles.breakdownScoreRow}>
-                  <Text style={[styles.breakdownScore, { color: '#2E7D32' }]}>
-                    {stats.correct}
-                  </Text>
-                  <Text style={[styles.breakdownScore, {
-                    color: stats.correct < stats.total ? '#C62828' : '#2E7D32',
-                  }]}>
-                    /{stats.total}
-                  </Text>
-                </View>
-              </View>
-            ))}
-          </Animated.View>
-        )}
-
-        {/* ── Weak signs section — shown when user got questions wrong ── */}
-        {(weakSigns.length > 0 || behavioralWrongQuestions.length > 0) && (
-          <Animated.View style={[styles.weakContainer, { opacity: fadeAnim }]}>
-            {/* Header */}
-            <View style={styles.weakHeader}>
-              <Text style={styles.weakIcon}>⚠️</Text>
-              <View style={{ flex: 1 }}>
-                {!isEngineA && (
-                  <Text style={styles.weakTitle}>የተሳሳቱ ምልክቶች</Text>
-                )}
-                {!isEngineA && (
-                  <Text style={styles.weakHint}>ምልክቱን ይጫኑ ለመማር</Text>
-                )}
-              </View>
-            </View>
-
-            {/* Sign thumbnails grid — each card is tappable → navigates to sign detail */}
-            <View style={styles.weakGrid}>
-              {weakSigns.map(sign => (
-                <TouchableOpacity
-                  key={sign.id}
-                  style={styles.weakSignCard}
-                  onPress={() => handleSignPress(sign.id)}
-                  activeOpacity={0.75}
-                >
-                  {sign.image_url ? (
-                    <Image
-                      source={{ uri: sign.image_url }}
-                      style={styles.weakSignImage}
-                      resizeMode="contain"
-                    />
-                  ) : (
-                    <View style={[styles.weakSignImage, styles.weakSignPlaceholder]}>
-                      <Text style={styles.weakSignPlaceholderText}>🚦</Text>
-                    </View>
-                  )}
-                  {!isEngineA && (
-                    <Text style={styles.weakSignName} numberOfLines={2}>
-                      {sign.name_amharic}
-                    </Text>
-                  )}
-                </TouchableOpacity>
-              ))}
-              {/* Behavioral wrong questions — shown with question image or topic name */}
-              {behavioralWrongQuestions.map(q => (
-                <View key={q.questionId} style={styles.weakSignCard}>
-                  {q.questionImageUrl ? (
-                    <Image
-                      source={{ uri: q.questionImageUrl }}
-                      style={styles.weakSignImage}
-                      resizeMode="contain"
-                    />
-                  ) : (
-                    <View style={[styles.weakSignImage, styles.weakSignPlaceholder]}>
-                      <Text style={styles.weakSignPlaceholderText}>📖</Text>
-                    </View>
-                  )}
-                  {!isEngineA && (
-                    <Text style={styles.weakSignName} numberOfLines={2}>
-                      {TOPIC_NAMES[q.topicId] ?? q.topicId}
-                    </Text>
-                  )}
-                </View>
-              ))}
-            </View>
-
-            {/* Practice weak button */}
-            <TouchableOpacity
-              style={styles.practiceBtn}
-              onPress={handlePracticeWeak}
-              activeOpacity={0.85}
-            >
-              <Text style={styles.practiceIcon}>🔁</Text>
-              {!isEngineA && (
-                <Text style={styles.practiceText}>የተሳሳቱትን ለማሻሻል ይለማመዱ</Text>
-              )}
-            </TouchableOpacity>
-          </Animated.View>
-        )}
+        {/* Per-topic breakdown, wrong questions and "practise them" (shared with the daily quiz) */}
+        <QuizReview
+          isEngineA={isEngineA}
+          topicBreakdown={result?.topicBreakdown}
+          wrongQuestions={wrongQuestions}
+          opacity={fadeAnim}
+          beforeLeave={stopAllAudio}
+        />
 
         {/* Share button — only on pass */}
         {passed && (
@@ -616,131 +474,8 @@ const styles = StyleSheet.create({
     ...Typography.caption,
     color: '#404943',
   },
-  breakdownContainer: {
-    alignSelf:       'stretch',
-    backgroundColor: '#ffffff',
-    borderRadius:    16,
-    padding:         16,
-    gap:             10,
-    shadowColor:     '#000',
-    shadowOffset:    { width: 0, height: 2 },
-    shadowOpacity:   0.08,
-    shadowRadius:    6,
-    elevation:       3,
-  },
-  breakdownTitle: {
-    ...Typography.body,
-    color:        '#191c1e',
-    fontWeight:   '700',
-    marginBottom: 4,
-  },
-  breakdownRow: {
-    flexDirection:  'row',
-    justifyContent: 'space-between',
-    alignItems:     'center',
-  },
-  breakdownTopic: {
-    ...Typography.bodySmall,
-    color: '#404943',
-    flex:  1,
-  },
-  breakdownScoreRow: {
-    flexDirection: 'row',
-    alignItems:    'center',
-    flexShrink:    0,
-  },
-  breakdownScore: {
-    ...Typography.body,
-    fontWeight: '700',
-  },
 
   // ── Weak signs section ─────────────────────────────────────────────────────
-  weakContainer: {
-    alignSelf:       'stretch',
-    backgroundColor: '#ffffff',
-    borderRadius:    20,
-    padding:         16,
-    gap:             14,
-    borderWidth:     1,
-    borderColor:     '#FFCDD2',
-    shadowColor:     '#000',
-    shadowOffset:    { width: 0, height: 2 },
-    shadowOpacity:   0.08,
-    shadowRadius:    6,
-    elevation:       3,
-  },
-  weakHeader: {
-    flexDirection: 'row',
-    alignItems:    'center',
-    gap:           8,
-  },
-  weakIcon: {
-    fontSize: 22,
-  },
-  weakTitle: {
-    ...Typography.body,
-    color:      '#191c1e',
-    fontWeight: '700',
-  },
-  weakGrid: {
-    flexDirection:  'row',
-    flexWrap:       'wrap',
-    gap:            10,
-    justifyContent: 'flex-start',
-  },
-  weakSignCard: {
-    alignItems:      'center',
-    gap:             4,
-    padding:         6,
-    backgroundColor: '#ffffff',
-    borderRadius:    14,
-    shadowColor:     '#000',
-    shadowOffset:    { width: 0, height: 4 },
-    shadowOpacity:   0.14,
-    shadowRadius:    8,
-    elevation:       5,
-  },
-  weakHint: {
-    fontSize:  11,
-    color:     '#9e9e9e',
-    marginTop: 2,
-  },
-  weakSignImage: {
-    width:        90,
-    height:       90,
-    borderRadius: 12,
-  },
-  weakSignPlaceholder: {
-    justifyContent: 'center',
-    alignItems:     'center',
-  },
-  weakSignPlaceholderText: {
-    fontSize: 32,
-  },
-  weakSignName: {
-    fontSize:   15,
-    lineHeight: 22,
-    color:      '#404943',
-    textAlign:  'center',
-    maxWidth:   102,
-  },
-  practiceBtn: {
-    flexDirection:   'row',
-    alignItems:      'center',
-    justifyContent:  'center',
-    backgroundColor: Colors.wrong,
-    borderRadius:    14,
-    paddingVertical: 14,
-    gap:             10,
-  },
-  practiceIcon: {
-    fontSize: 22,
-  },
-  practiceText: {
-    ...Typography.body,
-    color:      '#FFFFFF',
-    fontWeight: '700',
-  },
 
   // ── Share button ───────────────────────────────────────────────────────────
   shareBtn: {

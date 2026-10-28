@@ -1,20 +1,26 @@
 /**
  * services/interstitial.ts
  *
- * Full-screen Google ads at natural END POINTS only: when the learner leaves the
- * "subtopic finished" screen or the "topic quiz result" screen (the handleBack of
- * those screens). Never during a lesson, while audio plays, after a wrong answer,
- * or on the way into an exam. Same policy in Engine A and Engine B.
+ * Full-screen Google ads, counted in ANSWERED QUESTIONS (not in finished quizzes), so
+ * a learner who answers 9 questions spread over several topics gets the same ad as one
+ * who finishes 3 whole quizzes. Same policy in Engine A and Engine B: signs and
+ * behavioral topics, topic quizzes, the daily quiz and the exam.
  *
- * Rules agreed with the owner (2026-10-25):
+ * Rules agreed with the owner (2026-10-27, replacing the 2026-10-25 "every 2nd end point"):
  *   - none in the first 2 times the app is opened
- *   - then one ad for every 2nd finished subtopic / topic quiz (a count, never a timer)
+ *   - then one ad for every 9 answered questions (a count, never a timer)
+ *   - the answer itself only COUNTS (countAnsweredQuestion); the ad is shown only at the END of a
+ *     quiz, after the feedback of its last answer (the move to the end screen / the result), never
+ *     between two questions (owner's decision 2026-10-27). Never while a question is open, audio
+ *     plays or a lesson runs, and never on a back button. An ad that falls due in the middle of a
+ *     quiz waits for the end of it (or of the next one)
+ *   - the exam counts its questions too, but shows the ad only when it ends
  *   - an ad that is not loaded is skipped silently; it never makes the learner wait
- *     and it stays "due" for the next end point
+ *     and it stays "due" for the next transition
  *   - only after Google's consent step allows ads (services/adsConsent.ts)
  *
  * Everything here is fire-and-forget safe: maybeShowInterstitial() never throws and
- * always resolves, so the caller can simply `await` it and then navigate.
+ * always resolves, so the caller can simply `await` it and then move on.
  */
 import * as FileSystem from 'expo-file-system/legacy';
 import { ensureAdsReady, onAdsReadyChange } from './adsConsent';
@@ -22,7 +28,7 @@ import { ensureAdsReady, onAdsReadyChange } from './adsConsent';
 export const INTERSTITIAL_UNIT_ID = 'ca-app-pub-8758594752714631/8327375631';
 
 export const OPENS_WITHOUT_ADS = 2;     // the first 2 launches show no full-screen ad
-export const END_POINTS_PER_AD = 2;     // one ad for every 2nd end point
+export const QUESTIONS_PER_AD = 9;      // one ad for every 9 answered questions
 const SHOW_TIMEOUT_MS = 90_000;         // safety: never hold the screen forever
 
 const PREFS_PATH = (FileSystem.documentDirectory ?? '') + 'interstitial_prefs.json';
@@ -30,31 +36,36 @@ const PREFS_PATH = (FileSystem.documentDirectory ?? '') + 'interstitial_prefs.js
 export interface InterstitialPrefs {
   /** How many times the app was opened (counted once per launch). */
   opens: number;
-  /** End points reached since the last ad (only counted from the 3rd launch on). */
-  sinceShown: number;
+  /** Questions answered since the last ad (only counted from the 3rd launch on). */
+  answersSinceShown: number;
 }
 
-/** Pure decision: what happens at an end point. */
+/** Pure: one more answered question (nothing is counted in the first launches). */
+export function countAnswer(prefs: InterstitialPrefs): InterstitialPrefs {
+  if (prefs.opens <= OPENS_WITHOUT_ADS) return prefs;
+  return { ...prefs, answersSinceShown: Math.min(prefs.answersSinceShown + 1, 10_000) };
+}
+
+/** Pure decision: what happens at a transition. Nothing is counted here. */
 export function decide(prefs: InterstitialPrefs, adLoaded: boolean): { show: boolean; next: InterstitialPrefs } {
   if (prefs.opens <= OPENS_WITHOUT_ADS) return { show: false, next: prefs };
-  const sinceShown = prefs.sinceShown + 1;
-  if (sinceShown >= END_POINTS_PER_AD && adLoaded) {
-    return { show: true, next: { ...prefs, sinceShown: 0 } };
+  if (prefs.answersSinceShown >= QUESTIONS_PER_AD && adLoaded) {
+    return { show: true, next: { ...prefs, answersSinceShown: 0 } };
   }
-  return { show: false, next: { ...prefs, sinceShown } };
+  return { show: false, next: prefs };
 }
 
 async function readPrefs(): Promise<InterstitialPrefs> {
   try {
     const info = await FileSystem.getInfoAsync(PREFS_PATH);
-    if (!info.exists) return { opens: 0, sinceShown: 0 };
+    if (!info.exists) return { opens: 0, answersSinceShown: 0 };
     const p = JSON.parse(await FileSystem.readAsStringAsync(PREFS_PATH));
     return {
       opens: Number.isFinite(p?.opens) ? Math.max(0, Math.floor(p.opens)) : 0,
-      sinceShown: Number.isFinite(p?.sinceShown) ? Math.max(0, Math.floor(p.sinceShown)) : 0,
+      answersSinceShown: Number.isFinite(p?.answersSinceShown) ? Math.max(0, Math.floor(p.answersSinceShown)) : 0,
     };
   } catch {
-    return { opens: 0, sinceShown: 0 };
+    return { opens: 0, answersSinceShown: 0 };
   }
 }
 
@@ -140,11 +151,18 @@ export async function startInterstitial(): Promise<void> {
   } catch { /* an ad is never worth a crash */ }
 }
 
-async function showOnce(): Promise<void> {
+async function showOnce(canShow?: () => boolean): Promise<void> {
   const { show, opens } = await serial(async () => {
     const prefs = await readPrefs();
     const r = decide(prefs, adLoaded && !!ad);
-    if (r.next.sinceShown !== prefs.sinceShown) await writePrefs(r.next);
+    if (r.next.answersSinceShown !== prefs.answersSinceShown) await writePrefs(r.next);
+    // The learner may have left the screen while the disk was read or written (CODEX round 6,
+    // R6-4): then no ad is shown over another screen, and the ad stays due. Checked here, after
+    // the last disk access and with no waiting between this check and show().
+    if (r.show && canShow && !canShow()) {
+      await writePrefs(prefs);
+      return { show: false, opens: prefs.opens };
+    }
     return { show: r.show, opens: prefs.opens };
   });
   if (!show) {
@@ -178,6 +196,9 @@ async function showOnce(): Promise<void> {
       timer = setTimeout(done, SHOW_TIMEOUT_MS);
       Promise.resolve(inst.show()).catch(done);
     });
+  } catch {
+    // show() threw at once (a destroyed ad, a lifecycle error): nothing was seen, so it is
+    // handled below like any ad that never appeared and stays due (CODEX round 6).
   } finally {
     uncover();
     showing = false;
@@ -185,26 +206,48 @@ async function showOnce(): Promise<void> {
   }
   if (!opened) {
     // It never appeared (show refused or an error): the learner saw nothing, so the
-    // ad stays due for the next end point instead of being used up.
+    // ad stays due for the next transition instead of being used up.
     await serial(async () => {
       const prefs = await readPrefs();
-      await writePrefs({ ...prefs, sinceShown: Math.max(prefs.sinceShown, END_POINTS_PER_AD - 1) });
+      await writePrefs({ ...prefs, answersSinceShown: Math.max(prefs.answersSinceShown, QUESTIONS_PER_AD) });
     });
   }
   prepareInBackground();
 }
 
 /**
- * At an end point: shows an ad when one is due and loaded, and resolves when it
- * is closed (or at once when nothing is shown). Never throws.
+ * Call once per ANSWERED question (at the moment the learner answers). Only counts:
+ * never shows anything, never throws, never makes the caller wait.
+ */
+export function countAnsweredQuestion(): void {
+  serial(async () => {
+    const prefs = await readPrefs();
+    const next = countAnswer(prefs);
+    if (next.answersSinceShown !== prefs.answersSinceShown) await writePrefs(next);
+    // Get the ad ready a few answers ahead, so it is loaded when it becomes due.
+    if (next.opens > OPENS_WITHOUT_ADS && next.answersSinceShown >= QUESTIONS_PER_AD - 3 && !ad && !showing) {
+      prepareInBackground();
+    }
+  }).catch(() => {});
+}
+
+/**
+ * At a transition AFTER an answer's feedback (next question, end screen, end of the exam):
+ * shows an ad when 9 answers have been counted and one is loaded, and resolves when it
+ * is closed (or at once when nothing is shown). Never throws, never counts.
  *
  * Single flight (CODEX round 3, C1): a second call while one is still being decided
- * or shown does NOT count another end point; it gets the same promise, so a caller
- * that navigates after awaiting it navigates only after the ad is closed.
+ * or shown gets the same promise, so a caller that moves on after awaiting it moves
+ * on only after the ad is closed.
+ *
+ * `canShow` (CODEX round 6, R6-4): the screen that asks passes a check that is false once
+ * the learner has left it. It is evaluated right before the ad would be shown; when it is
+ * false nothing is shown and the ad stays due. After the await the caller must also check
+ * that its screen is still the active one before it moves on.
  */
-export function maybeShowInterstitial(): Promise<void> {
+export function maybeShowInterstitial(canShow?: () => boolean): Promise<void> {
   if (inFlight) return inFlight;
-  inFlight = showOnce()
+  inFlight = showOnce(canShow)
     .catch(() => { showing = false; })
     .finally(() => { inFlight = null; });
   return inFlight;

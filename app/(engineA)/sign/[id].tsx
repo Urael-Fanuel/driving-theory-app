@@ -25,12 +25,12 @@ import {
   View,
   TouchableOpacity,
   StyleSheet,
-  SafeAreaView,
   Text,
   Animated,
   Image,
   ScrollView,
 } from 'react-native';
+import { ScreenSafeArea as SafeAreaView } from '../../../components/shared/ScreenSafeArea';   // top inset on Android (edge to edge)
 import { VideoModal } from '../../../components/shared/VideoModal';
 import { useLocalSearchParams, useRouter, useFocusEffect } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';

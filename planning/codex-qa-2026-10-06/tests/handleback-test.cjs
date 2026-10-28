@@ -99,14 +99,11 @@ async function scenario(name, fn) {
       assert.strictEqual(t.env.leavingRef.current, true);
     });
 
-    await scenario(`${short}: C1 two taps while the ad is open -> one ad decision, one navigation`, async () => {
-      let release; const hold = new Promise(r => { release = r; });
-      const t = make(file, phase, { adHold: hold });
+    await scenario(`${short}: two taps at the same moment -> one navigation, and NO ad (ads belong to the transition after an answer, never to an exit)`, async () => {
+      const t = make(file, phase);
       const p1 = t.fn(); const p2 = t.fn();
-      for (let i = 0; i < 20; i++) await Promise.resolve();
-      assert.strictEqual(t.calls.back, 0, 'left before the ad closed');
-      release(); await Promise.all([p1, p2]);
-      assert.strictEqual(t.calls.ads, 1);
+      await Promise.all([p1, p2]);
+      assert.strictEqual(t.calls.ads, 0, 'an ad was asked for from handleBack');
       assert.strictEqual(t.calls.back, 1);
     });
 

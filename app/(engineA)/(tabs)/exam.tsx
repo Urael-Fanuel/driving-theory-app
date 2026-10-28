@@ -13,12 +13,14 @@ import {
   View,
   TouchableOpacity,
   StyleSheet,
-  SafeAreaView,
   Text,
   ScrollView,
   Image,
 } from 'react-native';
+import { ScreenSafeArea as SafeAreaView } from '../../../components/shared/ScreenSafeArea';   // top inset on Android (edge to edge)
 import { useRouter, useFocusEffect } from 'expo-router';
+import { maybeShowInterstitial } from '../../../services/interstitial';
+import { useScreenActive } from '../../../hooks/useScreenActive';
 import { storeExamResult } from '../../../utils/examResult';
 import { Colors } from '../../../constants/colors';
 import { LoadingScreen } from '../../../components/shared/LoadingScreen';
@@ -77,6 +79,7 @@ const randomPraise = () => CORRECT_PRAISES[Math.floor(Math.random() * CORRECT_PR
 
 export default function EngineAExamScreen() {
   const router = useRouter();
+  const activeRef = useScreenActive();   // false once the learner has left this screen (ads, R6-4)
   // Image sized so the whole question screen (incl. the 🎤 button) fits when the phone can.
   const fit = useFitImageSize(220);
   const {
@@ -493,9 +496,23 @@ export default function EngineAExamScreen() {
   // Show feedback overlay when answer submitted
   useEffect(() => {
     if (phase === 'feedback_correct' || phase === 'feedback_wrong') {
-      setTimeout(() => setShowFeedback(true), 300);
+      // The spoken feedback of a behavioral question is built HERE from the question on screen and its result,
+      // not only when an answer is given: opening an already answered question (arrows, Next) used to speak the
+      // text of the last answer given somewhere else (QA round 8, R8-D).
+      if (currentQuestion && !currentQuestion.sign_id) {
+        const correctText = currentQuestion.answers.find(a => a.is_correct)?.text_amharic ?? '';
+        // the answer given on THIS question (the form the speech guard of scripts/recordTts.mjs accepts)
+        const selected = currentQuestion.answers.find(a => a.id === selectedAnswerId);
+        setFeedbackTTSText(
+          selected?.is_correct ? `${randomPraise()} ${correctText}` : `ስህተት! ትክክለኛው መልስ: ${correctText}`
+        );
+      }
+      const t = setTimeout(() => setShowFeedback(true), 300);
+      return () => clearTimeout(t);   // a move before the 300 ms must not show the panel later (QA round 8, N4)
     }
-  }, [phase]);
+  // Keyed on the question too: moving between two answered questions keeps the same phase, and the panel
+  // (hidden by the move) never came back, so there was no Next (QA round 8, R8-B).
+  }, [phase, currentIndex]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Navigate to results when done
   // Score/total/passed/duration are passed as URL params (reliable across navigation)
@@ -511,7 +528,14 @@ export default function EngineAExamScreen() {
         wrongQuestions:  result.wrongQuestions,
       });
       const params = `score=${result.score}&total=${result.total}&passed=${result.passed ? '1' : '0'}&duration=${result.durationSeconds}`;
-      router.replace(`/result/${result.sessionId}?${params}` as any);
+      // The exam counts its answered questions, but never interrupts itself: the due full-screen
+      // ad (if any) is shown here, when it is over, before the result (services/interstitial.ts).
+      const sessionId = result.sessionId;
+      // Left the exam meanwhile: no ad over the other screen (it stays due); the result is still opened.
+      // The last feedback may still be speaking (the 15 s escape offers Next before it ends): stop it first.
+      Promise.resolve().then(() => stopAudio()).catch(() => {}).then(() => stopTTS()).catch(() => {})
+        .then(() => maybeShowInterstitial(() => activeRef.current))
+        .finally(() => router.replace(`/result/${sessionId}?${params}` as any));
     }
   }, [phase, result]);
 

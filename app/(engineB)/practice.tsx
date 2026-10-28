@@ -9,16 +9,19 @@
  * Session ends when all questions answered correctly at least once.
  */
 
-import React, { useEffect, useCallback } from 'react';
+import React, { useEffect, useCallback, useRef } from 'react';
 import {
   View,
   Text,
   StyleSheet,
-  SafeAreaView,
   ScrollView,
   TouchableOpacity,
   Image,
 } from 'react-native';
+import { ScreenSafeArea as SafeAreaView } from '../../components/shared/ScreenSafeArea';   // top inset on Android (edge to edge)
+import { useAudio } from '../../hooks/useAudio';
+import { StatusBar } from 'expo-status-bar';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useRouter, useLocalSearchParams } from 'expo-router';
 import { Colors } from '../../constants/colors';
 import { Typography } from '../../constants/typography';
@@ -37,6 +40,10 @@ import { extractSignNumber, shouldShowSignBadge } from '../../utils/signNumber';
 
 export default function EngineBPracticeScreen() {
   const router = useRouter();
+  const { stopAudio } = useAudio();   // the explanation clip of the feedback panel
+  // The Android navigation bar sits over the bottom of the screen (edge to edge): the last
+  // buttons need this much room, or the bar covers them (owner's testing, 2026-10-27).
+  const insets = useSafeAreaInsets();
   const { ids: idsParam } = useLocalSearchParams<{ ids: string }>();
 
   // Parse comma-separated question IDs from URL
@@ -70,7 +77,7 @@ export default function EngineBPracticeScreen() {
   // Show feedback after answer
   useEffect(() => {
     if (phase === 'feedback_correct' || phase === 'feedback_wrong') {
-      setTimeout(() => setShowFeedback(true), 200);
+      setShowFeedback(true);   // at once: the Next button must already be there when the learner reaches for it
     }
   }, [phase]);
 
@@ -79,8 +86,15 @@ export default function EngineBPracticeScreen() {
     submitAnswer(answerId);
   }, [phase, submitAnswer]);
 
+  // One "Next" per question: nextQuestion works on the current position, so a double tap used to take a
+  // second question out of the queue. The guard opens again when the next question is shown.
+  const advancedRef = useRef(false);
+  useEffect(() => { if (phase === 'question' || phase === 'done') advancedRef.current = false; }, [phase]);
   const handleNext = () => {
+    if (advancedRef.current) return;
+    advancedRef.current = true;
     setShowFeedback(false);
+    stopAudio().catch(() => {});   // the explanation clip must not run on into the next question
     nextQuestion();
   };
 
@@ -92,6 +106,7 @@ export default function EngineBPracticeScreen() {
   if (phase === 'done') {
     return (
       <SafeAreaView style={[styles.safeArea, styles.doneScreen]}>
+        <StatusBar style="light" />{/* dark screen: light status bar icons */}
         <Text style={styles.doneEmoji}>🎉</Text>
         <Text style={styles.doneTitle}>ሁሉንም ስህተቶች አስተካከልክ!</Text>
         <Text style={styles.doneScore}>{total}/{total}</Text>
@@ -125,6 +140,7 @@ export default function EngineBPracticeScreen() {
 
   return (
     <SafeAreaView style={styles.safeArea}>
+      <StatusBar style="light" />{/* dark screen: light status bar icons */}
       <OfflineBanner />
 
       {/* Header */}
@@ -147,7 +163,7 @@ export default function EngineBPracticeScreen() {
       </View>
 
       <ScrollView
-        contentContainerStyle={styles.content}
+        contentContainerStyle={[styles.content, { paddingBottom: 16 + insets.bottom + 12 }]}
         showsVerticalScrollIndicator={false}
         scrollEnabled={!showFeedback}
       >
