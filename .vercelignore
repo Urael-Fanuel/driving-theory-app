@@ -1,23 +1,8 @@
-node_modules
-.expo
-android
-ios
-assets
-components
-hooks
-contexts
-backend
-constants
-utils
-scripts
-content
-temp_behavioral
-app
-.git
-*.ts
-*.tsx
-*.json
-!vercel.json
-*.mjs
-*.js
-!docs
+# What the Vercel deploy is allowed to upload: ONLY the website (docs), the small server functions (api) and vercel.json.
+# Everything else in this folder (the app's source code, .env and other secrets, planning documents, PDFs, scripts) stays on
+# this computer. Rewritten 2026-11-16: the old file excluded by FILE TYPE (*.json, *.js, *.ts ...), which also swallowed
+# docs/app-version.json and api/sponsors.js, and it did not exclude .env or the planning folder at all.
+/*
+!/docs
+!/api
+!/vercel.json

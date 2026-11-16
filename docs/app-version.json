@@ -1,0 +1,4 @@
+{
+  "latest_build": 12,
+  "note": "Android versionCode of the newest build that is LIVE on Google Play production. Change this number only AFTER a new build is live in production, never before."
+}

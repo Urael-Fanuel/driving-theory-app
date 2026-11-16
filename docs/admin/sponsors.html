@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>ספונסרים | אפליקציית תיאוריית הנהיגה באמהרית</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:Arial,Heebo,sans-serif;background:#f3f4f6;color:#111827;padding:16px;}
+  .wrap{max-width:1100px;margin:0 auto;}
+  .card{background:#fff;border-radius:12px;padding:16px;margin-bottom:16px;box-shadow:0 2px 6px rgba(0,0,0,.06);}
+  h1{font-size:1.4rem;margin-bottom:12px;} h2{font-size:1.1rem;margin-bottom:10px;}
+  input,select{width:100%;padding:9px;border:1px solid #d1d5db;border-radius:8px;font-size:14px;}
+  button{background:#1e3a8a;color:#fff;border:0;border-radius:8px;padding:9px 14px;font-weight:700;cursor:pointer;font-size:14px;}
+  button.green{background:#16a34a;} button.gray{background:#6b7280;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin-bottom:16px;}
+  .stat{background:#fff;border-radius:12px;padding:14px;border-right:5px solid #1e3a8a;}
+  .stat b{display:block;font-size:1.6rem;margin-top:4px;}
+  table{width:100%;border-collapse:collapse;font-size:13px;} th,td{text-align:right;padding:9px;border-bottom:1px solid #e5e7eb;vertical-align:top;}
+  th{background:#f9fafb;} .tag{padding:3px 8px;border-radius:6px;font-size:12px;font-weight:700;}
+  .on{background:#dcfce7;color:#166534;} .off{background:#fee2e2;color:#991b1b;}
+  .hidden{display:none;} .scroll{overflow-x:auto;} .note{color:#6b7280;font-size:12px;margin-top:6px;}
+  #msg{margin:8px 0;font-weight:700;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div id="login" class="card" style="max-width:380px;margin:60px auto;">
+    <h1>כניסה: ניהול ספונסרים של אפליקציית תיאוריית הנהיגה באמהרית</h1>
+    <input type="text" id="un" placeholder="שם משתמש" autocomplete="username" style="margin-bottom:8px;" />
+    <input type="password" id="pw" placeholder="סיסמה" autocomplete="current-password" />
+    <div style="margin-top:10px;"><button onclick="enter()">כניסה</button></div>
+    <p id="loginErr" style="color:#b91c1c;margin-top:8px;"></p>
+  </div>
+
+  <div id="app" class="hidden">
+    <h1>אפליקציית תיאוריית הנהיגה באמהרית: ניהול ספונסרים והכנסות</h1>
+    <p id="msg"></p>
+    <div class="stats">
+      <div class="stat">ספונסרים פעילים<b id="sActive">0</b></div>
+      <div class="stat">פניות החודש (שיחה + וואטסאפ)<b id="sLeads">0</b></div>
+      <div class="stat">צפיות החודש<b id="sViews">0</b></div>
+      <div class="stat">הכנסה חודשית<b id="sMrr">-</b></div>
+    </div>
+
+    <div class="card">
+      <h2>הוספת ספונסר</h2>
+      <div class="grid">
+        <input id="aName" placeholder="שם (מורה או עסק)" />
+        <input id="aTag" placeholder="משפט שיווקי באמהרית (חובה)" />
+        <input id="aTagLocal" placeholder="משפט בשפה מקומית (לא חובה)" />
+        <input id="aPhone" placeholder="טלפון לחיוג, עם קידומת (+972...)" />
+        <input id="aWa" placeholder="וואטסאפ: ספרות בלבד, בלי פלוס (972...)" />
+        <input id="aCity" placeholder="עיר, בכתיב של האפליקציה" />
+        <input id="aCountry" placeholder="מדינה, 2 אותיות (IL, DE, SE...)" value="IL" maxlength="2" />
+        <select id="aLang"><option value="he">הודעת וואטסאפ בעברית</option><option value="en">באנגלית</option><option value="de">בגרמנית</option><option value="sv">בשוודית</option><option value="am">באמהרית</option></select>
+        <input id="aLat" placeholder="קו רוחב של העיר (לא חובה)" />
+        <input id="aLon" placeholder="קו אורך של העיר (לא חובה)" />
+        <input id="aPrice" type="number" placeholder="מחיר חודשי (0 = ניסיון)" value="0" />
+        <select id="aCur"><option>ILS</option><option>EUR</option><option>USD</option><option>GBP</option><option>SEK</option><option>NOK</option><option>CHF</option><option>ETB</option></select>
+        <input id="aDays" type="number" placeholder="ימי מנוי ראשונים" value="14" />
+        <label style="display:flex;gap:6px;align-items:center;"><input type="checkbox" id="aFeat" style="width:auto;" /> מומלץ (בראש)</label>
+      </div>
+      <p class="note">לפני שהספונסר מופיע במנוע A (למי שלא קורא) צריך גם הקלטה קולית באמהרית, שנוצרת בנפרד. בלעדיה הוא יופיע רק במנוע B.</p>
+      <div style="margin-top:10px;"><button class="green" onclick="addSponsor()">הוסף</button></div>
+    </div>
+
+    <div class="card">
+      <h2>הספונסרים</h2>
+      <div class="scroll"><table>
+        <thead><tr><th>שם</th><th>עיר / מדינה</th><th>מחיר</th><th>תוקף מנוי</th><th>סטטוס</th><th>החודש: צפיות / פניות</th><th>פעולות</th></tr></thead>
+        <tbody id="rows"></tbody>
+      </table></div>
+    </div>
+
+    <div class="card">
+      <h2>הכנסה חודשית לפי מדינה ומטבע</h2>
+      <div class="scroll"><table><thead><tr><th>מדינה</th><th>מטבע</th><th>ספונסרים פעילים</th><th>הכנסה חודשית</th></tr></thead><tbody id="mrrRows"></tbody></table></div>
+    </div>
+
+    <div class="card">
+      <h2>דוח חודשי לכל ספונסר (לשליחה למפרסם)</h2>
+      <div class="scroll"><table><thead><tr><th>חודש</th><th>ספונסר</th><th>צפיות</th><th>צופים שונים</th><th>לחיצות</th><th>שיחות</th><th>וואטסאפ</th></tr></thead><tbody id="monRows"></tbody></table></div>
+    </div>
+  </div>
+</div>
+
+<script>
+var PW = '', UN = '';
+function el(id){return document.getElementById(id);}
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+async function api(body){
+  var r = await fetch('/api/sponsors',{method:'POST',headers:{'Content-Type':'application/json','x-admin-user':UN,'x-admin-password':PW},body:JSON.stringify(body)});
+  var j = await r.json().catch(function(){return {error:'תשובה לא תקינה'};});
+  if(!r.ok) throw new Error(j.error||('שגיאה '+r.status));
+  return j;
+}
+async function enter(){
+  UN = el('un').value.trim(); PW = el('pw').value; el('loginErr').textContent='';
+  try{ await load(); el('login').classList.add('hidden'); el('app').classList.remove('hidden'); try{sessionStorage.setItem('adminpw',PW);sessionStorage.setItem('adminun',UN);}catch(e){} }
+  catch(e){ el('loginErr').textContent = e.message; }
+}
+function say(t,ok){ var m=el('msg'); m.textContent=t; m.style.color=ok?'#166534':'#b91c1c'; }
+async function load(){
+  var d = await api({action:'list'});
+  var now = new Date(), ym = now.toISOString().slice(0,7);
+  var byAd = {}; var viewsM=0, leadsM=0;
+  d.monthly.forEach(function(m){ if(String(m.month).slice(0,7)===ym){ byAd[m.ad_id]={v:m.views,l:m.leads+m.clicks}; viewsM+=m.views; leadsM+=m.leads; } });
+  var active = d.sponsors.filter(function(s){return s.is_active && (!s.expires_at || new Date(s.expires_at)>now);}).length;
+  el('sActive').textContent=active; el('sLeads').textContent=leadsM; el('sViews').textContent=viewsM;
+  el('sMrr').textContent = d.mrr.length ? d.mrr.map(function(x){return Number(x.monthly_income).toLocaleString()+' '+x.currency_code;}).join(' + ') : '-';
+  el('rows').innerHTML = d.sponsors.map(function(s){
+    var exp = s.expires_at ? new Date(s.expires_at) : null, live = s.is_active && (!exp || exp>now);
+    var st = byAd[s.id]||{v:0,l:0};
+    return '<tr><td><b>'+esc(s.name)+'</b>'+(s.is_featured?' ⭐':'')+'<br><span class="note">'+esc(s.phone)+'</span></td>'
+      +'<td>'+esc(s.city)+' / '+esc(s.country_code)+'</td>'
+      +'<td>'+esc(s.monthly_price)+' '+esc(s.currency_code)+'</td>'
+      +'<td>'+(exp?exp.toLocaleDateString('he-IL'):'ללא')+'</td>'
+      +'<td><span class="tag '+(live?'on':'off')+'">'+(live?'פעיל':'כבוי / פג')+'</span></td>'
+      +'<td>'+st.v+' / '+st.l+'</td>'
+      +'<td><button class="green" data-act="ext" data-id="'+esc(s.id)+'">+30 יום</button> <button class="gray" data-act="tog" data-id="'+esc(s.id)+'" data-on="'+(s.is_active?1:0)+'">'+(s.is_active?'כבה':'הפעל')+'</button></td></tr>';
+  }).join('') || '<tr><td colspan="7">אין ספונסרים עדיין</td></tr>';
+  el('mrrRows').innerHTML = d.mrr.map(function(x){return '<tr><td>'+esc(x.country_code)+'</td><td>'+esc(x.currency_code)+'</td><td>'+esc(x.active_sponsors)+'</td><td>'+esc(x.monthly_income)+'</td></tr>';}).join('') || '<tr><td colspan="4">אין</td></tr>';
+  var nameOf = {}; d.sponsors.forEach(function(s){nameOf[s.id]=s.name;});
+  el('monRows').innerHTML = d.monthly.map(function(m){return '<tr><td>'+esc(String(m.month).slice(0,7))+'</td><td>'+esc(m.sponsor_name)+'</td><td>'+m.views+'</td><td>'+m.unique_viewers+'</td><td>'+m.clicks+'</td><td>'+m.calls+'</td><td>'+m.whatsapps+'</td></tr>';}).join('') || '<tr><td colspan="7">עדיין אין נתונים</td></tr>';
+}
+el('rows').addEventListener('click', async function(ev){
+  var b = ev.target.closest('button'); if(!b) return;
+  try{
+    if(b.dataset.act==='ext'){ await api({action:'extend',id:b.dataset.id,days:30}); say('המנוי הוארך ב-30 יום',true); }
+    if(b.dataset.act==='tog'){ await api({action:'toggle',id:b.dataset.id,is_active:b.dataset.on!=='1'}); say('עודכן',true); }
+    await load();
+  }catch(e){ say(e.message,false); }
+});
+async function addSponsor(){
+  function v(id){return el(id).value.trim();}
+  var body={action:'add',name:v('aName'),tagline_amharic:v('aTag'),tagline_local:v('aTagLocal'),phone:v('aPhone'),whatsapp_number:v('aWa'),
+    city:v('aCity'),country_code:v('aCountry').toUpperCase(),contact_lang:v('aLang'),monthly_price:Number(v('aPrice'))||0,currency_code:v('aCur'),
+    trial_days:Number(v('aDays'))||14,is_featured:el('aFeat').checked};
+  if(v('aLat')) body.lat=Number(v('aLat')); if(v('aLon')) body.lon=Number(v('aLon'));
+  try{ await api(body); say('הספונסר נוסף',true); ['aName','aTag','aTagLocal','aPhone','aWa','aCity','aLat','aLon'].forEach(function(i){el(i).value='';}); await load(); }
+  catch(e){ say(e.message,false); }
+}
+try{ var saved=sessionStorage.getItem('adminpw'); if(saved){ el('pw').value=saved; el('un').value=sessionStorage.getItem('adminun')||''; enter(); } }catch(e){}
+el('pw').addEventListener('keydown',function(e){ if(e.key==='Enter') enter(); });
+</script>
+</body>
+</html>
