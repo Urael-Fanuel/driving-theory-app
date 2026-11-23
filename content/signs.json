@@ -11431,9 +11431,9 @@
         "id": "403_q3",
         "question_amharic": "ይህ ዝግ መንገድ ምልክት (403) ከሌላ አቅጣጫ የሚያሳይ ምልክት ጋር አብሮ ከተቀመጠ፣ አሽከርካሪው ምን ማድረግ አለበት?",
         "question_audio": "403_q3_question.mp3",
-        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። ሌላ አቅጣጫ የሚያሳይ ምልክት ካለ፣ አሽከርካሪው በህግ በተጠቀሰው አቅጣጫ ብቻ እንዲሄድ ይጠበቅበታል።",
+        "explanation_correct_amharic": "እንዲያ ነው የኔ ጎቨዝ። ሌላ አቅጣጫ የሚያሳይ ምልክት ካለ፣ አሽከርካሪው በህግ በተጠቀሰው አቅጣጫ ብቻ እንዲሄድ ይጠበቅበታል።",
         "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የአቅጣጫ ምልክትን አለመከተል የትራፊክ ፍሰትን ሊያስተጓጉል እና የትራፊክ ደንብ ጥሰት ቅጣት ሊያስከትል ይችላል።",
-        "explanation_correct_audio": "403_q3_correct.mp3",
+        "explanation_correct_audio": "403_q3_correct_v2.mp3",
         "explanation_wrong_audio": "403_q3_wrong.mp3",
         "answers": [
           {
@@ -13181,9 +13181,9 @@
         "id": "418_q2",
         "question_amharic": "የመንዳት አስተማሪ ይህንን ምልክት ሲያይ ምን ማድረግ አለበት?",
         "question_audio": "418_q2_question.mp3",
-        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። ምልክቱ የመንዳት ትምህርት የተከለከለ መሆኑን ስለሚያመለክት አስተማሪው ትምህርቱን ማቆም አለበት።",
+        "explanation_correct_amharic": "እንዲያ ነው የኔ ጎቨዝ። ምልክቱ የመንዳት ትምህርት የተከለከለ መሆኑን ስለሚያመለክት አስተማሪው ትምህርቱን ማቆም አለበት።",
         "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ትምህርቱን መቀጠል የትራፊክ ህግን መጣስ እና ደህንነትን አደጋ ላይ መጣል ነው።",
-        "explanation_correct_audio": "418_q2_correct.mp3",
+        "explanation_correct_audio": "418_q2_correct_v2.mp3",
         "explanation_wrong_audio": "418_q2_wrong.mp3",
         "answers": [
           {
@@ -13895,9 +13895,9 @@
         "id": "424_q2",
         "question_amharic": "በዚህ ምልክት መሰረት እንዴት ይነዳሉ?",
         "question_audio": "424_q2_question.mp3",
-        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። ትክክል! በዚህ አካባቢ ሁሉም የከተማ ትራፊክ ደንቦች ተፈጻሚ ይሆናሉ እና ፍጥነቱ ካልተገለጸ ከፍተኛው ፍጥነት 50 ኪሎሚቴር በሰዓት ነው።",
+        "explanation_correct_amharic": "እንዲያ ነው የኔ ጎቨዝ። ትክክል! በዚህ አካባቢ ሁሉም የከተማ ትራፊክ ደንቦች ተፈጻሚ ይሆናሉ እና ፍጥነቱ ካልተገለጸ ከፍተኛው ፍጥነት 50 ኪሎሚቴር በሰዓት ነው።",
         "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በከተማ የትራፊክ ደንቦች መሰረት መንዳት እና ፍጥነቱ ካልተገለጸ ከፍተኛው ፍጥነት 50 ኪሎሚቴር በሰዓት ነው።",
-        "explanation_correct_audio": "424_q2_correct.mp3",
+        "explanation_correct_audio": "424_q2_correct_v2.mp3",
         "explanation_wrong_audio": "424_q2_wrong.mp3",
         "answers": [
           {

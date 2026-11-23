@@ -249,7 +249,7 @@ async function generateAll(): Promise<void> {
       await generateAudio(q.explanation_correct_amharic,  q.explanation_correct_audio);
       await generateAudio(q.explanation_wrong_amharic,    q.explanation_wrong_audio);
       for (const a of q.answers) {
-        await generateAudio(a.text_amharic, `answer_${q.id}_${a.id}.mp3`);
+        await generateAudio(a.text_amharic, a.audio_filename || `answer_${q.id}_${a.id}.mp3`);
       }
     }
   }
