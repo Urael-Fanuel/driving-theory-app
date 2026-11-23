@@ -29756,9 +29756,9 @@
         "id": "910_q3",
         "question_amharic": "የዚህ ምልክት የብርቱካናማ ቀለም ዳራ ምን ያመለክታል?",
         "question_audio": "910_q3_question.mp3",
-        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። የብርቱካናማው ቀለም ዳራ ምልክቱ በጊዜያዊ የስራ ቦታ ላይ መሆኑን እና የመንገድ ለውጦች ጊዜያዊ መሆናቸውን ያሳያል።",
+        "explanation_correct_amharic": "እንዲያ ነው የኔ ጎቨዝ። የብርቱካናማው ቀለም ዳራ ምልክቱ በጊዜያዊ የስራ ቦታ ላይ መሆኑን እና የመንገድ ለውጦች ጊዜያዊ መሆናቸውን ያሳያል።",
         "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የብርቱካናማውን ዳራ ትርጉም አለመረዳት በስራ ቦታዎች ላይ ለሚፈጠሩ አደጋዎች ሊያጋልጥ ይችላል።",
-        "explanation_correct_audio": "910_q3_correct.mp3",
+        "explanation_correct_audio": "910_q3_correct_v2.mp3",
         "explanation_wrong_audio": "910_q3_wrong.mp3",
         "answers": [
           {
@@ -29959,9 +29959,9 @@
         "id": "912_q2",
         "question_amharic": "ይህንን ምልክት ሲያዩ በቀኝ በኩል ባለው የመዋሃጃ መስመር ላይ ያለ አሽከርካሪ ምን ማድረግ አለበት?",
         "question_audio": "912_q2_question.mp3",
-        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። በቀኝ መስመር ላይ ያለ አሽከርካሪ በዋናው መስመር ላይ ላሉ ተሽከርካሪዎች ቅድሚያ በመስጠት በጥንቃቄ መዋሃድ አለበት።",
+        "explanation_correct_amharic": "እንዲያ ነው የኔ ጎቨዝ። በቀኝ መስመር ላይ ያለ አሽከርካሪ በዋናው መስመር ላይ ላሉ ተሽከርካሪዎች ቅድሚያ በመስጠት በጥንቃቄ መዋሃድ አለበት።",
         "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህንን ህግ አለማክበር ከሌሎች ተሽከርካሪዎች ጋር ግጭት ወይም የትራፊክ ፍሰት መስተጓጎል ሊያስከትል ይችላል።",
-        "explanation_correct_audio": "912_q2_correct.mp3",
+        "explanation_correct_audio": "912_q2_correct_v2.mp3",
         "explanation_wrong_audio": "912_q2_wrong.mp3",
         "answers": [
           {
@@ -30232,9 +30232,9 @@
         "id": "914_q3",
         "question_amharic": "ይህ ብርቱካናማ የመንገድ መስመር ማዞሪያ ምልክት በተለይ ከየትኛው የመንገድ ሁኔታ ጋር ይያያዛል?",
         "question_audio": "914_q3_question.mp3",
-        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። ይህ ምልክት ሁልጊዜ ማለት ይቻላል በመንገድ ላይ የሥራ ቦታ ባለበት ጊዜ የሚደረግን ጊዜያዊ የመንገድ መስመር ለውጥ ወይም ማዞሪያ ያመለክታል።",
+        "explanation_correct_amharic": "እንዲያ ነው የኔ ጎቨዝ። ይህ ምልክት ሁልጊዜ ማለት ይቻላል በመንገድ ላይ የሥራ ቦታ ባለበት ጊዜ የሚደረግን ጊዜያዊ የመንገድ መስመር ለውጥ ወይም ማዞሪያ ያመለክታል።",
         "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የዚህን ምልክት ትክክለኛ አውድ አለማወቅ አሽከርካሪው ለሥራ ቦታ አደጋዎች ተገቢውን ጥንቃቄ እንዳያደርግ ያደርገዋል።",
-        "explanation_correct_audio": "914_q3_correct.mp3",
+        "explanation_correct_audio": "914_q3_correct_v2.mp3",
         "explanation_wrong_audio": "914_q3_wrong.mp3",
         "answers": [
           {
