@@ -14812,9 +14812,9 @@
         "id": "432_q1",
         "question_amharic": "ይህ ምልክት (ቁጥር 432) ምን ማድረግ እንደሚፈቀድ ያሳያል?",
         "question_audio": "432_q1_question.mp3",
-        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። ይህ ምልክት መኪና ማቆም ክልክል ቢሆንም፣ ተሳፋሪዎችን ወይም ዕቃዎችን ለማውረድና ለመጫን ለአጭር ጊዜ ማቆም ይፈቀዳል።",
+        "explanation_correct_amharic": "እንዲያ ነው የኔ ጎቨዝ። ይህ ምልክት መኪና ማቆም ክልክል ቢሆንም፣ ተሳፋሪዎችን ወይም ዕቃዎችን ለማውረድና ለመጫን ለአጭር ጊዜ ማቆም ይፈቀዳል።",
         "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የተከለከለ ቦታ ላይ መኪና ማቆም የትራፊክ ደንቦችን መጣስ ሲሆን ቅጣትና ተሽከርካሪ ማንሳት ያስከትላል።",
-        "explanation_correct_audio": "432_q1_correct.mp3",
+        "explanation_correct_audio": "432_q1_correct_v2.mp3",
         "explanation_wrong_audio": "432_q1_wrong.mp3",
         "answers": [
           {
@@ -26747,9 +26747,9 @@
         "id": "806_q2",
         "question_amharic": "ከተቆራረጠ መስመር ጋር አብሮ ጠንካራ መስመር ሲኖር፣ የተቆራረጠው መስመር ምን ማለት ነው?",
         "question_audio": "806_q2_question.mp3",
-        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። የተቆራረጠው መስመር ባለበት ወገን ደህንነቱ የተጠበቀ መሆኑን ካረጋገጡ በኋላ ማለፍ ወይም መስመር መቀየር ይፈቀዳል።",
+        "explanation_correct_amharic": "እንዲያ ነው የኔ ጎቨዝ። የተቆራረጠው መስመር ባለበት ወገን ደህንነቱ የተጠበቀ መሆኑን ካረጋገጡ በኋላ ማለፍ ወይም መስመር መቀየር ይፈቀዳል።",
         "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ደህንነቱ ሳይረጋገጥ መስመር መቀየር ወይም ማለፍ አደጋ ሊያስከትል እና የትራፊክ ህግን መተላለፍ ነው።",
-        "explanation_correct_audio": "806_q2_correct.mp3",
+        "explanation_correct_audio": "806_q2_correct_v2.mp3",
         "explanation_wrong_audio": "806_q2_wrong.mp3",
         "answers": [
           {
@@ -27104,9 +27104,9 @@
         "id": "809_q2",
         "question_amharic": "ይህንን ምልክት ሲያዩ አሽከርካሪው ምን ማድረግ አለበት?",
         "question_audio": "809_q2_question.mp3",
-        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። በመስቀለኛ መንገድ ላይ ደህንነትን ለመጠበቅ ፍጥነትን መቀነስ እና ለሌሎች ተሽከርካሪዎች ትኩረት መስጠት ወሳኝ ነው።",
+        "explanation_correct_amharic": "እንዲያ ነው የኔ ጎቨዝ። በመስቀለኛ መንገድ ላይ ደህንነትን ለመጠበቅ ፍጥነትን መቀነስ እና ለሌሎች ተሽከርካሪዎች ትኩረት መስጠት ወሳኝ ነው።",
         "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በመስቀለኛ መንገድ ላይ ጥንቃቄ አለማድረግ ወይም የትራፊክ ህጎችን አለመከተል ለከባድ አደጋ ያጋልጣል።",
-        "explanation_correct_audio": "809_q2_correct.mp3",
+        "explanation_correct_audio": "809_q2_correct_v2.mp3",
         "explanation_wrong_audio": "809_q2_wrong.mp3",
         "answers": [
           {
