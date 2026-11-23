@@ -30316,9 +30316,9 @@
         "id": "915_q2",
         "question_amharic": "ይህንን ምልክት ሲያዩ አሽከርካሪው ምን ማድረግ አለበት?",
         "question_audio": "915_q2_question.mp3",
-        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። ፍጥነት መቀነስ እና ጥንቃቄ ማድረግ ለሚቀላቀሉ የጭነት መኪናዎች ምላሽ ለመስጠት እና አደጋን ለመከላከል ያስችላል።",
+        "explanation_correct_amharic": "እንዲያ ነው የኔ ጎቨዝ። ፍጥነት መቀነስ እና ጥንቃቄ ማድረግ ለሚቀላቀሉ የጭነት መኪናዎች ምላሽ ለመስጠት እና አደጋን ለመከላከል ያስችላል።",
         "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የጭነት መኪናዎች ትልቅ እና ከባድ በመሆናቸው በፍጥነት አለመቀነስ ወይም ጥንቃቄ አለማድረግ ከባድ ግጭት ሊያስከትል ይችላል።",
-        "explanation_correct_audio": "915_q2_correct.mp3",
+        "explanation_correct_audio": "915_q2_correct_v2.mp3",
         "explanation_wrong_audio": "915_q2_wrong.mp3",
         "answers": [
           {
@@ -30673,9 +30673,9 @@
         "id": "918_q2",
         "question_amharic": "አሽከርካሪ ብርቱካናማ የተቆራረጠ መስመር ሲያይ ምን ማድረግ አለበት?",
         "question_audio": "918_q2_question.mp3",
-        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። ብርቱካናማ መስመሮች ጊዜያዊ ቢሆኑም እንኳ ከቋሚ ነጭ መስመሮች የበለጠ ቅድሚያ ስለሚሰጣቸው ሁልጊዜ መከተል አለባቸው።",
+        "explanation_correct_amharic": "እንዲያ ነው የኔ ጎቨዝ። ብርቱካናማ መስመሮች ጊዜያዊ ቢሆኑም እንኳ ከቋሚ ነጭ መስመሮች የበለጠ ቅድሚያ ስለሚሰጣቸው ሁልጊዜ መከተል አለባቸው።",
         "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ብርቱካናማ መስመሮችን ችላ ማለት ወይም የተሳሳተ እርምጃ መውሰድ የትራፊክ ፍሰቱን ሊያስተጓጉል እና አደጋ ሊያስከትል ይችላል።",
-        "explanation_correct_audio": "918_q2_correct.mp3",
+        "explanation_correct_audio": "918_q2_correct_v2.mp3",
         "explanation_wrong_audio": "918_q2_wrong.mp3",
         "answers": [
           {
@@ -31387,9 +31387,9 @@
         "id": "924_q2",
         "question_amharic": "ይህንን ብርቱካናማ የተቆራረጠ መስመር ሲያዩ በመስቀለኛ መንገድ ላይ ሲታጠፉ ምን ማድረግ አለብዎት?",
         "question_audio": "924_q2_question.mp3",
-        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። አሽከርካሪዎች በዚህ ምልክት ላይ ሲታጠፉ ከመስመሩ ጋር ትይዩ በመሆን በትክክለኛው መንገድ መንዳት አለባቸው።",
+        "explanation_correct_amharic": "እንዲያ ነው የኔ ጎቨዝ። አሽከርካሪዎች በዚህ ምልክት ላይ ሲታጠፉ ከመስመሩ ጋር ትይዩ በመሆን በትክክለኛው መንገድ መንዳት አለባቸው።",
         "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ከመስመሩ ጋር ትይዩ አለመንዳት በግንባታ ቦታ ላይ ባሉ መስቀለኛ መንገዶች ላይ አደጋ ሊያስከትል ይችላል።",
-        "explanation_correct_audio": "924_q2_correct.mp3",
+        "explanation_correct_audio": "924_q2_correct_v2.mp3",
         "explanation_wrong_audio": "924_q2_wrong.mp3",
         "answers": [
           {
