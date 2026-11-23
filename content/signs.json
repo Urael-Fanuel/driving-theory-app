@@ -27461,9 +27461,9 @@
         "id": "812_q2",
         "question_amharic": "የሞተር ተሽከርካሪ አሽከርካሪ ይህንን ምልክት ሲያይ ምን ማድረግ አለበት?",
         "question_audio": "812_q2_question.mp3",
-        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። የብስክሌት መስመር ለብስክሌቶች ብቻ የተዘጋጀ በመሆኑ፣ የሞተር ተሽከርካሪዎች መግባት የለባቸውም።",
+        "explanation_correct_amharic": "እንዲያ ነው የኔ ጎቨዝ። የብስክሌት መስመር ለብስክሌቶች ብቻ የተዘጋጀ በመሆኑ፣ የሞተር ተሽከርካሪዎች መግባት የለባቸውም።",
         "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በብስክሌት መስመር ውስጥ መግባት ወይም ማቆም ለብስክሌት ነጂዎች ከባድ አደጋ ሊያስከትል ይችላል።",
-        "explanation_correct_audio": "812_q2_correct.mp3",
+        "explanation_correct_audio": "812_q2_correct_v2.mp3",
         "explanation_wrong_audio": "812_q2_wrong.mp3",
         "answers": [
           {
@@ -27818,9 +27818,9 @@
         "id": "815_q2",
         "question_amharic": "ይህንን ምልክት ሲያዩ አሽከርካሪው ምን ዓይነት እርምጃ መውሰድ አለበት?",
         "question_audio": "815_q2_question.mp3",
-        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። ፍጥነት መቀነስ እና በጥንቃቄ ወደ ቀኝ ማለፍ ደህንነትን ያረጋግጣል።",
+        "explanation_correct_amharic": "እንዲያ ነው የኔ ጎቨዝ። ፍጥነት መቀነስ እና በጥንቃቄ ወደ ቀኝ ማለፍ ደህንነትን ያረጋግጣል።",
         "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ፍጥነት መጨመር ወይም ተገቢ ያልሆነ እርምጃ መውሰድ አደጋ ሊያስከትል ይችላል።",
-        "explanation_correct_audio": "815_q2_correct.mp3",
+        "explanation_correct_audio": "815_q2_correct_v2.mp3",
         "explanation_wrong_audio": "815_q2_wrong.mp3",
         "answers": [
           {
@@ -28888,9 +28888,9 @@
         "id": "903_q2",
         "question_amharic": "ይህንን ምልክት ሲያዩ አሽከርካሪ ምን ማድረግ አለበት?",
         "question_audio": "903_q2_question.mp3",
-        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። ምልክቱ ወደ ቀኝ ስለሚወስድ አቅጣጫ ስለሚያስጠነቅቅ ፍጥነትን መቀነስ እና በጥንቃቄ መዞር አስፈላጊ ነው።",
+        "explanation_correct_amharic": "እንዲያ ነው የኔ ጎቨዝ። ምልክቱ ወደ ቀኝ ስለሚወስድ አቅጣጫ ስለሚያስጠነቅቅ ፍጥነትን መቀነስ እና በጥንቃቄ መዞር አስፈላጊ ነው።",
         "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ፍጥነትን አለመቀነስ ወይም የተሳሳተ አቅጣጫ መምረጥ አደጋን ወይም ከመንገድ መውጣትን ሊያስከትል ይችላል።",
-        "explanation_correct_audio": "903_q2_correct.mp3",
+        "explanation_correct_audio": "903_q2_correct_v2.mp3",
         "explanation_wrong_audio": "903_q2_wrong.mp3",
         "answers": [
           {
