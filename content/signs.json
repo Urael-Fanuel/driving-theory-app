@@ -29245,9 +29245,9 @@
         "id": "906_q2",
         "question_amharic": "ይህንን ምልክት ሲያዩ አሽከርካሪ ምን ማድረግ አለበት?",
         "question_audio": "906_q2_question.mp3",
-        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። መንገዱ እየጠበበ ስለሆነ ፍጥነትን መቀነስ እና በጥንቃቄ ቦታን ማስተካከል ለአደጋ አለመጋለጥ ወሳኝ ነው።",
+        "explanation_correct_amharic": "እንዲያ ነው የኔ ጎቨዝ። መንገዱ እየጠበበ ስለሆነ ፍጥነትን መቀነስ እና በጥንቃቄ ቦታን ማስተካከል ለአደጋ አለመጋለጥ ወሳኝ ነው።",
         "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ፍጥነትን አለመቀነስ ወይም ምልክቱን ችላ ማለት ከሌሎች ተሽከርካሪዎች ጋር ግጭት ወይም አደጋ ሊያስከትል ይችላል።",
-        "explanation_correct_audio": "906_q2_correct.mp3",
+        "explanation_correct_audio": "906_q2_correct_v2.mp3",
         "explanation_wrong_audio": "906_q2_wrong.mp3",
         "answers": [
           {
@@ -29364,9 +29364,9 @@
         "id": "907_q2",
         "question_amharic": "ይህንን ምልክት ሲያዩ አሽከርካሪ ምን ማድረግ አለበት?",
         "question_audio": "907_q2_question.mp3",
-        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። መንገዱ ስለሚጠብ አሽከርካሪው ፍጥነቱን ቀንሶ ወደ ቀኝ መስመር በሰላም ለመቀላቀል መዘጋጀት አለበት።",
+        "explanation_correct_amharic": "እንዲያ ነው የኔ ጎቨዝ። መንገዱ ስለሚጠብ አሽከርካሪው ፍጥነቱን ቀንሶ ወደ ቀኝ መስመር በሰላም ለመቀላቀል መዘጋጀት አለበት።",
         "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ፍጥነትን አለመቀነስ ወይም ወደ ትክክለኛው መስመር አለመቀላቀል አደጋን ወይም የትራፊክ መጨናነቅን ሊያስከትል ይችላል።",
-        "explanation_correct_audio": "907_q2_correct.mp3",
+        "explanation_correct_audio": "907_q2_correct_v2.mp3",
         "explanation_wrong_audio": "907_q2_wrong.mp3",
         "answers": [
           {
@@ -29602,9 +29602,9 @@
         "id": "909_q2",
         "question_amharic": "ይህንን ምልክት ሲያይ አሽከርካሪ ምን ማድረግ አለበት?",
         "question_audio": "909_q2_question.mp3",
-        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። በሁለት አቅጣጫ ትራፊክ ውስጥ ደህንነትን ለመጠበቅ ፍጥነት መቀነስ እና ወደ ቀኝ መያዝ በጣም አስፈላጊ ነው።",
+        "explanation_correct_amharic": "እንዲያ ነው የኔ ጎቨዝ። በሁለት አቅጣጫ ትራፊክ ውስጥ ደህንነትን ለመጠበቅ ፍጥነት መቀነስ እና ወደ ቀኝ መያዝ በጣም አስፈላጊ ነው።",
         "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ተገቢውን ጥንቃቄ አለማድረግ ከፊት ለፊት ከሚመጣ ትራፊክ ጋር የመጋጨት አደጋን ይጨምራል።",
-        "explanation_correct_audio": "909_q2_correct.mp3",
+        "explanation_correct_audio": "909_q2_correct_v2.mp3",
         "explanation_wrong_audio": "909_q2_wrong.mp3",
         "answers": [
           {
