@@ -416,6 +416,14 @@ function formatDiff(field, oldVal, newVal) {
 // Printed automatically for single-sign runs so the user reviews content in
 // the SAME command that generated it — no separate print step needed.
 const GEEZ_LETTERS = ['ሀ', 'ለ', 'ሐ', 'መ'];
+function approvedNameFor(sign) {
+  try {
+    const m = JSON.parse(readFileSync(join(ROOT, 'planning', 'sign-names', 'approved_sign_names.json'), 'utf8'));
+    const names = m.names || m;
+    const n = String(sign.image_filename || '').replace(/\.(png|jpg)$/i, '');
+    return names[n] || null;
+  } catch { return null; }
+}
 function printReadableSign(sign, result) {
   console.log(`\n=== תמרור ${sign.name_hebrew} (${sign.id}) ===\n`);
   console.log('[NAME]');
@@ -534,7 +542,9 @@ async function main() {
 
       // Apply changes
       if (!DRY_RUN) {
-        sign.name_amharic        = result.name_amharic;
+        // An owner-approved official name (planning/sign-names/approved_sign_names.json) is never replaced by Gemini's.
+        const _approved = approvedNameFor(sign);
+        sign.name_amharic        = _approved ?? result.name_amharic;
         sign.explanation_amharic = result.explanation_amharic;
 
         // Apply new questions with auto-generated IDs and audio filenames
@@ -564,7 +574,7 @@ async function main() {
 
     // Single-sign run — print the full readable content right here, in this
     // same command, so the user can review and approve without a second step.
-    if (signsToProcess.length === 1) printReadableSign(sign, result);
+    if (signsToProcess.length === 1 && DRY_RUN) printReadableSign(sign, result);   // live runs print the FINAL text at the end (after prefixes + shuffle)
 
     // Incremental save after every sign (live mode only)
     if (!DRY_RUN) {
@@ -606,6 +616,20 @@ async function main() {
   if (DRY_RUN && audioToDelete.length > 0) {
     console.log(`\n🗑️   Audio files that would be deleted (${audioToDelete.length}):`);
     audioToDelete.forEach(f => console.log(`   - ${f}`));
+  }
+
+  // ─── Single sign, live run: prefixes + answer shuffle NOW, so the text the owner reads is exactly what the app will show ───
+  if (!DRY_RUN && signsToProcess.length === 1 && changed > 0) {
+    try {
+      const { execFileSync } = await import('child_process');
+      execFileSync(process.execPath, [join(__dirname, 'addPrefixesAndShuffle.mjs'), `--sign-id=${signsToProcess[0].id}`], { stdio: 'ignore' });
+      const fresh = JSON.parse(readFileSync(SIGNS_PATH, 'utf-8'));
+      const freshSign = (Array.isArray(fresh) ? fresh : fresh.signs).find(x => x.id === signsToProcess[0].id);
+      console.log('\n' + '═'.repeat(60) + '\n✅  FINAL TEXT AS IT WILL APPEAR IN THE APP (praise prefixes added, correct answers spread over the cards):');
+      printReadableSign(freshSign, {});
+    } catch (e) {
+      console.log('\n⚠️  Could not run addPrefixesAndShuffle.mjs automatically: ' + e.message + '\n   Run it by hand: node scripts/addPrefixesAndShuffle.mjs --sign-id=<ID>');
+    }
   }
 
   // ─── Next steps ─────────────────────────────────────────────────────────────

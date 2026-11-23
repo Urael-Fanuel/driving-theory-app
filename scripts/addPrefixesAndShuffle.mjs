@@ -64,7 +64,10 @@ const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
 // Edit ONE of these before running — never both non-empty at once.
 // SIGN_IDS_TO_PROCESS: specific sign(s) only (single-sign content fixes).
 // TOPICS_TO_PROCESS: whole topic (new-topic creation workflow only).
-const SIGN_IDS_TO_PROCESS = ['ROAD_808'];
+// A command-line list wins over the constant: node scripts/addPrefixesAndShuffle.mjs --sign-id=ROAD_808,ROAD_809
+// (improveAmharicWithGemini.mjs uses this itself after a single-sign run, so what the owner reads is already final).
+const _idArg = process.argv.find(a => a.startsWith('--sign-id='));
+const SIGN_IDS_TO_PROCESS = _idArg ? _idArg.split('=')[1].split(',').filter(Boolean) : ['ROAD_808'];
 
 const TOPICS_TO_PROCESS   = [];
 
@@ -80,6 +83,8 @@ const updated = data.map(sign => {
   return {
     ...sign,
     questions: sign.questions.map((q, qi) => {
+      // Already processed (the wrong-answer text already starts with the fixed prefix): never prefix twice.
+      if (q.explanation_wrong_amharic.startsWith(WRONG_PREFIX)) return q;
       const prefixIdx = Math.floor(Math.random() * CORRECT_PREFIXES.length);
       const prefix    = CORRECT_PREFIXES[prefixIdx];
 
@@ -120,7 +125,7 @@ rowSigns.forEach(s => s.questions.forEach(q => {
 console.log('✅ Done! signs.json updated');
 console.log('📊 Correct answer distribution:', dist);
 const s0 = rowSigns[0];
-s0.questions.forEach((q,i) => {
+if (s0) s0.questions.forEach((q,i) => {
   console.log(`  Q${i+1} ✅ ${q.explanation_correct_amharic.substring(0,70)}`);
   console.log(`  Q${i+1} ❌ ${q.explanation_wrong_amharic.substring(0,70)}`);
   console.log(`  Q${i+1} 🔀 ${q.answers.map(a=>a.id+(a.is_correct?'✓':'')).join(', ')}`);
