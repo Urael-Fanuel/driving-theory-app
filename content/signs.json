@@ -31898,9 +31898,9 @@
         "id": "928_q3",
         "question_amharic": "ይህ ብርቱካናማ ምልክት ብዙውን ጊዜ የት ይገኛል እና ችላ ቢባል ምን ሊከሰት ይችላል?",
         "question_audio": "928_q3_question.mp3",
-        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። ምልክቱ ብዙውን ጊዜ የመንገድ ሥራ በሚካሄድባቸው ቦታዎች ላይ የሚገኝ ሲሆን ደንቦቹን አለመከተል አደጋ ወይም ቅጣት ያስከትላል።",
+        "explanation_correct_amharic": "እንዲያ ነው የኔ ጎቨዝ። ምልክቱ ብዙውን ጊዜ የመንገድ ሥራ በሚካሄድባቸው ቦታዎች ላይ የሚገኝ ሲሆን ደንቦቹን አለመከተል አደጋ ወይም ቅጣት ያስከትላል።",
         "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህ ምልክት የትራፊክ ፍሰትን ለማፋጠን ወይም የእንስሳት መሻገሪያን ለማሳየት አይደለም፤ ይልቁንም አደጋን ለመከላከል የተከለከለ ቦታን ያመለክታል።",
-        "explanation_correct_audio": "928_q3_correct.mp3",
+        "explanation_correct_audio": "928_q3_correct_v2.mp3",
         "explanation_wrong_audio": "928_q3_wrong.mp3",
         "answers": [
           {
@@ -32220,9 +32220,9 @@
         "id": "931_q2",
         "question_amharic": "በኮን ምልክቶች የታጠረን ቦታ ወይም በኮን ምልክት የተጠቆመ መሰናክልን በተመለከተ ትክክለኛው ህግ ምንድነው?",
         "question_audio": "931_q2_question.mp3",
-        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። የኮን ምልክቶች አደጋን ወይም መሰናክልን የሚያመለክቱ በመሆናቸው ደህንነትን ለመጠበቅ በላያቸው ላይ ማለፍ ወይም መንዳት በጥብቅ የተከለከለ ነው።",
+        "explanation_correct_amharic": "እንዲያ ነው የኔ ጎቨዝ። የኮን ምልክቶች አደጋን ወይም መሰናክልን የሚያመለክቱ በመሆናቸው ደህንነትን ለመጠበቅ በላያቸው ላይ ማለፍ ወይም መንዳት በጥብቅ የተከለከለ ነው።",
         "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በኮን ምልክቶች ላይ ማለፍ ወይም የተከለከለውን ቦታ መግባት ለከባድ አደጋ፣ ለሰራተኞች ጉዳት ወይም ለትራፊክ ቅጣት ያጋልጣል።",
-        "explanation_correct_audio": "931_q2_correct.mp3",
+        "explanation_correct_audio": "931_q2_correct_v2.mp3",
         "explanation_wrong_audio": "931_q2_wrong.mp3",
         "answers": [
           {
@@ -32304,9 +32304,9 @@
         "id": "932_q1",
         "question_amharic": "ይህ ብርቱካናማ ብልጭ ድርግም የሚል ምልክት በመንገድ ላይ ሲታይ ምን ማለት ነው?",
         "question_audio": "932_q1_question.mp3",
-        "explanation_correct_amharic": "እንዲያ ነው የኔ ግቨዝ። ይህ ምልክት በመንገድ ላይ ጊዜያዊ የሥራ ቦታ እንዳለ የሚያሳይ ሲሆን አሽከርካሪዎች ጥንቃቄ እንዲያደርጉ ያስጠነቅቃል።",
+        "explanation_correct_amharic": "እንዲያ ነው የኔ ጎቨዝ። ይህ ምልክት በመንገድ ላይ ጊዜያዊ የሥራ ቦታ እንዳለ የሚያሳይ ሲሆን አሽከርካሪዎች ጥንቃቄ እንዲያደርጉ ያስጠነቅቃል።",
         "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የምልክቱን ትክክለኛ ትርጉም አለማወቅ አሽከርካሪው ለሥራ ቦታው ዝግጁ እንዳይሆን በማድረግ አደጋ ሊያስከትል ይችላል።",
-        "explanation_correct_audio": "932_q1_correct.mp3",
+        "explanation_correct_audio": "932_q1_correct_v2.mp3",
         "explanation_wrong_audio": "932_q1_wrong.mp3",
         "answers": [
           {
