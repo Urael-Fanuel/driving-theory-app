@@ -21,7 +21,7 @@ const CORRECT_PREFIXES = [
   'በጣም ጥሩ። ',
   'ጎሽ! ',
   'ዋው በጣም ጥሩ። ',
-  'እንዲያ ነው የኔ ግቨዝ። ',
+  'እንዲያ ነው የኔ ጎቨዝ። ',
   'እሰይ። አቤት እውቀት! ',
 ];
 const WRONG_PREFIX = 'ስህተት! ትክክለኛው መልስ: ';
@@ -64,7 +64,7 @@ const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
 // Edit ONE of these before running — never both non-empty at once.
 // SIGN_IDS_TO_PROCESS: specific sign(s) only (single-sign content fixes).
 // TOPICS_TO_PROCESS: whole topic (new-topic creation workflow only).
-const SIGN_IDS_TO_PROCESS = ['WORK_935'];
+const SIGN_IDS_TO_PROCESS = ['ROAD_808'];
 
 const TOPICS_TO_PROCESS   = [];
 

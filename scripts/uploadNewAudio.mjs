@@ -96,7 +96,7 @@ for (const sign of numberedSigns) {
     toUpload.push({ filename: q.explanation_wrong_audio });
 
     for (const a of q.answers) {
-      toUpload.push({ filename: `answer_${q.id}_${a.id}.mp3` });
+      toUpload.push({ filename: a.audio_filename || `answer_${q.id}_${a.id}.mp3` });   // the name in signs.json (may carry a version suffix)
     }
   }
 }
@@ -244,7 +244,7 @@ const allQuestions = numberedSigns.flatMap(sign =>
       id:           a.id,
       text_amharic: a.text_amharic,
       image_url:    null,   // answers for numbered signs have no image
-      audio_url:    audioUrl(`answer_${q.id}_${a.id}.mp3`),
+      audio_url:    audioUrl(a.audio_filename || `answer_${q.id}_${a.id}.mp3`),
       is_correct:   a.is_correct,
     })),
     explanation_correct_amharic:   q.explanation_correct_amharic,

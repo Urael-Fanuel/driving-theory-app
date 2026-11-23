@@ -26942,112 +26942,112 @@
     "video_filename": null,
     "name_hebrew": "808",
     "name_amharic": "ነጭ አራት ማዕዘን መስመር",
-    "explanation_amharic": "ይህ ምልክት በመንገድ ላይ አንድ መስመር እንደሚያልቅ እና አሽከርካሪዎች ወደ ቀጣዩ መስመር መቀላቀል እንዳለባቸው ያስጠነቅቃል። አሽከርካሪው ይህንን ምልክት ሲያይ ፍጥነቱን መቀነስ፣ የመንገድ መስመሩን የሚቀላቀልበትን አቅጣጫ ምልክት ማሳየት እና በአቅራቢያው ካሉ ተሽከርካሪዎች ጋር በመተባበር በሰላም መቀላቀል አለበት። ይህን አለማድረግ የትራፊክ መጨናነቅን፣ አደጋን ወይም ቅጣትን ሊያስከትል ይችላል።",
+    "explanation_amharic": "ይህ በመንገድ ላይ በነጭ አራት ማዕዘን ቅርጾች የተሰራ መስመር ልዩ ዓላማ ያለው የመንገድ መስመር መሆኑን ያሳያል። ይህ መስመር ለመታጠፊያ፣ ለማፋጠን፣ ፍጥነት ለመቀነስ፣ ለመቀላቀል ወይም ዓላማው የተቀየረ የመንገድ መስመር ሊሆን ይችላል። አሽከርካሪዎች በዚህ መስመር ውስጥ ሲሆኑ በመንገዱ ላይ በተቀቡት ቀስቶች በሚታየው አቅጣጫ እና ለዚያ መስመር በተቀመጠው ዓላማ መሰረት ማሽከርከር አለባቸው።",
     "audio_name_filename": "808_name.mp3",
-    "audio_explanation_filename": "808_explanation.mp3",
+    "audio_explanation_filename": "808_explanation_v2.mp3",
     "questions": [
       {
         "id": "808_q1",
-        "question_amharic": "ይህ የመንገድ ምልክት ምን ያመለክታል?",
-        "question_audio": "808_q1_question.mp3",
-        "explanation_correct_amharic": "ጎበዝ። ምልክቱ አንድ የመንገድ መስመር እንደሚያልቅ እና አሽከርካሪዎች ወደ ቀጣዩ መስመር በሰላም መቀላቀል እንዳለባቸው በግልጽ ያሳያል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የምልክቱን ትርጉም አለመረዳት አሽከርካሪው በድንገት መስመር እንዲቀይር በማድረግ አደጋ ሊያስከትል ይችላል።",
-        "explanation_correct_audio": "808_q1_correct.mp3",
-        "explanation_wrong_audio": "808_q1_wrong.mp3",
+        "question_amharic": "ይህ በነጭ አራት ማዕዘን ቅርጾች የተሰራ የመንገድ ምልክት ምን ማለት ነው?",
+        "question_audio": "808_q1_question_v2.mp3",
+        "explanation_correct_amharic": "እሰይ። አቤት እውቀት! ይህ ምልክት ልዩ ዓላማ ያለው የመንገድ መስመር መሆኑን የሚያሳይ ሲሆን አሽከርካሪዎችም ለዚያ መስመር በተቀመጠው ዓላማ መሰረት ማሽከርከር ይጠበቅባቸዋል።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህ ምልክት ልዩ ዓላማ ያለው የመንገድ መስመር መሆኑን የሚያሳይ ሲሆን አሽከርካሪዎችም ለዚያ መስመር በተቀመጠው ዓላማ መሰረት ማሽከርከር ይጠበቅባቸዋል።",
+        "explanation_correct_audio": "808_q1_correct_v2.mp3",
+        "explanation_wrong_audio": "808_q1_wrong_v2.mp3",
         "answers": [
           {
-            "id": "D",
-            "text_amharic": "በመንገዱ ላይ የመኪና ማቆሚያ ቦታ እንዳለ ያመለክታል።",
-            "is_correct": false,
-            "audio_filename": "answer_808_q1_D.mp3"
-          },
-          {
             "id": "B",
-            "text_amharic": "አንድ የመንገድ መስመር እንደሚያልቅ እና አሽከርካሪዎች ወደ ሌላ መስመር መቀላቀል እንዳለባቸው ያሳያል።",
+            "text_amharic": "ይህ መስመር ልዩ ዓላማ ያለው የመንገድ መስመር መሆኑን የሚያሳይ ሲሆን አሽከርካሪዎች በቀስቶቹ በሚታየው አቅጣጫ ማሽከርከር አለባቸው።",
             "is_correct": true,
-            "audio_filename": "answer_808_q1_B.mp3"
+            "audio_filename": "answer_808_q1_B_v2.mp3"
           },
           {
-            "id": "A",
-            "text_amharic": "መንገዱ ወደ ሁለት አቅጣጫ ትራፊክ እንደሚቀየር ያሳያል።",
+            "id": "D",
+            "text_amharic": "ይህ የመንገዱ መጨረሻ መሆኑን የሚያሳይ ምልክት ነው።",
             "is_correct": false,
-            "audio_filename": "answer_808_q1_A.mp3"
+            "audio_filename": "answer_808_q1_D_v2.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "ከፊት ለፊት የመታጠፊያ መንገድ እንዳለ ያሳያል።",
+            "text_amharic": "ይህ ምልክት ለመኪና ማቆሚያ ቦታ መሆኑን ያሳያል።",
             "is_correct": false,
-            "audio_filename": "answer_808_q1_C.mp3"
+            "audio_filename": "answer_808_q1_C_v2.mp3"
+          },
+          {
+            "id": "A",
+            "text_amharic": "ይህ የተለመደ የመንገድ መስመር ሲሆን በማንኛውም ጊዜ በነፃነት መሻገር ይቻላል።",
+            "is_correct": false,
+            "audio_filename": "answer_808_q1_A_v2.mp3"
           }
         ]
       },
       {
         "id": "808_q2",
-        "question_amharic": "ይህንን ምልክት ሲያዩ አሽከርካሪዎች ምን ማድረግ አለባቸው?",
-        "question_audio": "808_q2_question.mp3",
-        "explanation_correct_amharic": "በጣም ጥሩ። አሽከርካሪው ፍጥነቱን በመቀነስ፣ ምልክት በማሳየት እና ከሌሎች ተሽከርካሪዎች ጋር በመተባበር በሰላም መቀላቀል አለበት።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: በፍጥነት መስመር ለመቀየር መሞከር ወይም ጥንቃቄ አለማድረግ ከሌሎች ተሽከርካሪዎች ጋር ግጭት ሊያስከትል ይችላል።",
-        "explanation_correct_audio": "808_q2_correct.mp3",
-        "explanation_wrong_audio": "808_q2_wrong.mp3",
+        "question_amharic": "ይህንን ምልክት ሲያዩ አሽከርካሪ ምን ማድረግ አለበት?",
+        "question_audio": "808_q2_question_v2.mp3",
+        "explanation_correct_amharic": "ጎሽ! አሽከርካሪው ይህንን ምልክት ሲያይ ለዚያ መስመር በተቀመጠው ልዩ ዓላማ መሰረት ማሽከርከር አለበት።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: አሽከርካሪው ይህንን ምልክት ሲያይ ለዚያ መስመር በተቀመጠው ልዩ ዓላማ መሰረት ማሽከርከር አለበት።",
+        "explanation_correct_audio": "808_q2_correct_v2.mp3",
+        "explanation_wrong_audio": "808_q2_wrong_v2.mp3",
         "answers": [
           {
-            "id": "A",
-            "text_amharic": "ፍጥነታቸውን ጨምረው በፍጥነት መስመር መቀየር አለባቸው።",
-            "is_correct": false,
-            "audio_filename": "answer_808_q2_A.mp3"
-          },
-          {
             "id": "D",
-            "text_amharic": "ተሽከርካሪያቸውን አቁመው ሌላ መንገድ መፈለግ አለባቸው።",
+            "text_amharic": "አሽከርካሪው ወዲያውኑ መኪናውን አቁሞ የመንገድ ዳር እርዳታ መጠየቅ አለበት።",
             "is_correct": false,
-            "audio_filename": "answer_808_q2_D.mp3"
-          },
-          {
-            "id": "B",
-            "text_amharic": "ፍጥነታቸውን በመቀነስ፣ ምልክት በማሳየት እና በጥንቃቄ ወደ ቀጣዩ መስመር መቀላቀል አለባቸው።",
-            "is_correct": true,
-            "audio_filename": "answer_808_q2_B.mp3"
+            "audio_filename": "answer_808_q2_D_v2.mp3"
           },
           {
             "id": "C",
-            "text_amharic": "በቀኝ በኩል ያለውን ትከሻ ተጠቅመው መንዳት መቀጠል አለባቸው።",
+            "text_amharic": "አሽከርካሪው ይህንን ምልክት ችላ ብሎ እንደተለመደው ቀጥ ብሎ ማሽከርከር ይችላል።",
             "is_correct": false,
-            "audio_filename": "answer_808_q2_C.mp3"
+            "audio_filename": "answer_808_q2_C_v2.mp3"
+          },
+          {
+            "id": "A",
+            "text_amharic": "አሽከርካሪው ፍጥነቱን ጨምሮ ወደ ሌላ መስመር በፍጥነት መግባት አለበት።",
+            "is_correct": false,
+            "audio_filename": "answer_808_q2_A_v2.mp3"
+          },
+          {
+            "id": "B",
+            "text_amharic": "አሽከርካሪው በመንገዱ ላይ በተቀቡት ቀስቶች በሚታየው አቅጣጫ እና ለዚያ መስመር በተቀመጠው ዓላማ መሰረት ማሽከርከር አለበት።",
+            "is_correct": true,
+            "audio_filename": "answer_808_q2_B_v2.mp3"
           }
         ]
       },
       {
         "id": "808_q3",
-        "question_amharic": "ይህንን የመንገድ ምልክት ችላ ማለት ምን አደጋ ሊያስከትል ይችላል?",
-        "question_audio": "808_q3_question.mp3",
-        "explanation_correct_amharic": "ጎሽ! ምልክቱን ችላ ማለት አሽከርካሪው በድንገት መስመር እንዲቀይር በማስገደድ የትራፊክ መጨናነቅ፣ አደጋ ወይም ቅጣት ሊያስከትል ይችላል።",
-        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: የምልክቱን ማስጠንቀቂያ አለመከተል አደጋን የመፍጠር እድልን በእጅጉ ይጨምራል እና የትራፊክ ህግን በመጣስ ቅጣት ያስከትላል።",
-        "explanation_correct_audio": "808_q3_correct.mp3",
-        "explanation_wrong_audio": "808_q3_wrong.mp3",
+        "question_amharic": "በመንገድ ላይ በነጭ አራት ማዕዘን ቅርጾች የተሰራ መስመር ለምን ዓላማ ሊያገለግል ይችላል?",
+        "question_audio": "808_q3_question_v2.mp3",
+        "explanation_correct_amharic": "እንዲያ ነው የኔ ጎቨዝ። ይህ ምልክት ልዩ ዓላማ ያለው የመንገድ መስመር መሆኑን ያሳያል፤ ለምሳሌ ለመታጠፊያ፣ ለማፋጠን፣ ፍጥነት ለመቀነስ ወይም ለመቀላቀል የሚያገለግል ነው።",
+        "explanation_wrong_amharic": "ስህተት! ትክክለኛው መልስ: ይህ ምልክት ልዩ ዓላማ ያለው የመንገድ መስመር መሆኑን ያሳያል፤ ለምሳሌ ለመታጠፊያ፣ ለማፋጠን፣ ፍጥነት ለመቀነስ ወይም ለመቀላቀል የሚያገለግል ነው።",
+        "explanation_correct_audio": "808_q3_correct_v2.mp3",
+        "explanation_wrong_audio": "808_q3_wrong_v2.mp3",
         "answers": [
           {
-            "id": "A",
-            "text_amharic": "መንገዱ ላይ የትራፊክ መብራት እንደሚጠብቃቸው ያሳያል።",
-            "is_correct": false,
-            "audio_filename": "answer_808_q3_A.mp3"
-          },
-          {
             "id": "C",
-            "text_amharic": "የመኪና ማቆሚያ ቦታ እንደሚያገኙ ያረጋግጣል።",
+            "text_amharic": "ይህ መስመር ምንም ልዩ ዓላማ የሌለው እና ቀጥ ብሎ ለማሽከርከር ብቻ የሚያገለግል ነው።",
             "is_correct": false,
-            "audio_filename": "answer_808_q3_C.mp3"
+            "audio_filename": "answer_808_q3_C_v2.mp3"
           },
           {
-            "id": "D",
-            "text_amharic": "የነዳጅ ፍጆታን እንደሚቀንስ ያሳያል።",
+            "id": "A",
+            "text_amharic": "ይህ መስመር ለመኪና ማቆሚያ ብቻ የተዘጋጀ ነው።",
             "is_correct": false,
-            "audio_filename": "answer_808_q3_D.mp3"
+            "audio_filename": "answer_808_q3_A_v2.mp3"
           },
           {
             "id": "B",
-            "text_amharic": "የመንገድ መጨናነቅ፣ አደጋዎች ወይም የትራፊክ ቅጣት ሊያስከትል ይችላል።",
+            "text_amharic": "ይህ መስመር ልዩ ዓላማ ያለው ሲሆን ለመታጠፍ፣ ለማፋጠን፣ ፍጥነት ለመቀነስ ወይም ለመቀላቀል የሚያገለግል ነው።",
             "is_correct": true,
-            "audio_filename": "answer_808_q3_B.mp3"
+            "audio_filename": "answer_808_q3_B_v2.mp3"
+          },
+          {
+            "id": "D",
+            "text_amharic": "ይህ መስመር ለድንገተኛ አደጋ አገልግሎት ብቻ የተዘጋጀ ነው።",
+            "is_correct": false,
+            "audio_filename": "answer_808_q3_D_v2.mp3"
           }
         ]
       }
