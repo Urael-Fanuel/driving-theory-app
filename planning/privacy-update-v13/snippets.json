@@ -1,0 +1,83 @@
+{
+  "_note": "English source of the 2026-11 (version 13) privacy policy update. Amharic is produced by scripts/translatePrivacyUpdateV13.mjs (Gemini), never by hand, and read by the owner before scripts/applyPrivacyUpdateV13.mjs writes docs/privacy-policy.html. The app opens that web page from the Disclaimer window, so updating the page updates what the app shows.",
+  "snippets": [
+    {
+      "id": "analytics",
+      "section": "📦",
+      "where": "before-li-containing:Speech-to-Text",
+      "html": "<li><strong>App usage statistics (Google Analytics for Firebase)</strong> — Only after the same consent step that is used for ads allows it (in the European Economic Area, the United Kingdom and Switzerland: only if you agree), the app records which screens are opened and a few simple actions, for example finishing a quiz or an exam (with the score and whether you passed), the learning mode you use (audio-based or text-based), or tapping the share button. Google gives each installation a random app ID and collects basic device and app details (phone model, Android and app version, language, and your approximate country or region), and it may use your device’s Advertising ID. We do not send your name, contact details, voice, location or your individual answers to it, and we do not connect these statistics to your anonymous ID. We use them only to understand how learners use the app and to improve it. Google processes this data under its own privacy policy. If you withdraw your ad choice where it applies, the collection is switched off again.</li>",
+      "translationNote": "\"a quiz\" means a practice quiz of several questions, not a single question."
+    },
+    {
+      "id": "reminders",
+      "section": "📦",
+      "where": "before-li-containing:Speech-to-Text",
+      "html": "<li><strong>Study reminders (optional)</strong> — If you allow notifications, the app sets a few reminder notifications on your phone (about 2, 5, 9 and 16 days after you last used the app, at about 18:30). They are created and stored on your phone only. Nothing about them is sent to us or to anyone else. You can switch them off on the Progress screen or in your phone’s notification settings.</li>"
+    },
+    {
+      "id": "review",
+      "section": "📦",
+      "where": "before-li-containing:Speech-to-Text",
+      "html": "<li><strong>Rating request</strong> — After you have practised for a while, the app may occasionally (at most three times in total, at least 90 days apart) offer you to rate it, using Google Play’s own rating window. Google Play handles your answer. We do not receive it, and the app does not know whether you rated it.</li>"
+    },
+    {
+      "id": "share",
+      "section": "📦",
+      "where": "before-li-containing:Speech-to-Text",
+      "html": "<li><strong>Sharing a challenge</strong> — When you tap the share button, the app prepares a short message with your result and a link to the app and opens WhatsApp or your phone’s share window. You decide whether and with whom to send it. The message travels through the app you choose, not through us. We only count that the button was tapped (see “App usage statistics”).</li>",
+      "translationNote": "\"challenge\" here means inviting a friend to try to beat your quiz or exam result. Do NOT translate it as \"competition\" or \"contest\"."
+    },
+    {
+      "id": "notices",
+      "section": "📦",
+      "where": "before-li-containing:Speech-to-Text",
+      "html": "<li><strong>Update and maintenance notices</strong> — When the app starts, it downloads two small public files from our website to learn whether a newer version exists or the app is temporarily under maintenance. These files contain no personal data about you. Like any website, our hosting provider can see your IP address in its normal technical logs.</li>",
+      "translationNote": "\"our hosting provider\" means the company that hosts our website (a service provider company). Do NOT use any word meaning \"vicinity\", \"nearby\" or \"neighbourhood\"."
+    },
+    {
+      "id": "rewardedVideo",
+      "section": "📢",
+      "where": "end-of-section",
+      "html": "<p><strong>Rewarded video ads.</strong> The app limits how many “Why?” explanations you get per day. To get more, you may choose to watch a Google rewarded video ad. This is always your choice. How many explanations you used today and how many you have left are kept only on your phone and are not sent to us. The video is served by Google AdMob, as described above.</p>"
+    },
+    {
+      "id": "purchase",
+      "section": "📢",
+      "where": "end-of-section",
+      "html": "<p><strong>“Remove ads” purchase.</strong> If you buy “remove ads”, the purchase is made through Google Play. Google handles the payment, and we never see or store your card or payment details. The app only asks Google Play whether this purchase exists on your account (and what it costs in your currency), in order to hide ads and to lift the daily limit on “Why?” explanations.</p>"
+    },
+    {
+      "id": "internetNew",
+      "section": "🌐",
+      "where": "end-of-ul",
+      "html": "<li>Loading short recorded voice messages and update or maintenance notices from our website</li><li>Sending anonymous app usage statistics to Google Analytics for Firebase, when the consent step allows it</li><li>Buying “remove ads” and showing the rating window (Google Play)</li>"
+    },
+    {
+      "id": "thirdPartyNew",
+      "section": "🤝",
+      "where": "end-of-ul",
+      "html": "<li><strong>Google Analytics for Firebase</strong> — anonymous app usage statistics (<a href=\"https://policies.google.com/privacy\" target=\"_blank\">Privacy Policy</a>)</li><li><strong>Google Play (billing and ratings)</strong> — the “remove ads” purchase and the rating window</li><li><strong>Vercel</strong> — hosts our website, including the privacy policy, the recorded voice messages and the update and maintenance notices (<a href=\"https://vercel.com/legal/privacy-policy\" target=\"_blank\">Privacy Policy</a>)</li>"
+    },
+    {
+      "id": "keepStats",
+      "section": "🗓️",
+      "where": "end-of-ul",
+      "html": "<li>App usage statistics are kept by Google for a limited time and are then deleted automatically. They are not connected to your anonymous ID.</li>"
+    },
+    {
+      "id": "rightsReminders",
+      "section": "🗑️",
+      "where": "end-of-ul",
+      "html": "<li><strong>Switch off study reminders</strong> — On the Progress screen or in your phone’s notification settings, at any time.</li>",
+      "termsFrom": "reminders",
+      "translationNote": "The bold heading must be a noun phrase naming the right, not a command. \"Study reminders\" must use exactly the same Amharic word as in the reference text."
+    },
+    {
+      "id": "updatedDate",
+      "section": "-",
+      "where": "hero-date",
+      "html": "Last updated: November 2026",
+      "translationNote": "Output ONLY the Amharic name of the month November followed by the year 2026, nothing else (no other words)."
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+Glossary read from the app: {"adPrivacyButton":"ማስታወቂያ ምርጫ","callButton":"አሁን ይደውሉ","progressTab":"እድገት","anonymousId":"ስም-አልባ መለያ"}
+════════════════════════════════════════════════════════════
+[analytics]  (section 📦)
+
+EN: <li><strong>App usage statistics (Google Analytics for Firebase)</strong> — Only after the same consent step that is used for ads allows it (in the European Economic Area, the United Kingdom and Switzerland: only if you agree), the app records which screens are opened and a few simple actions, for example finishing a quiz or an exam (with the score and whether you passed), the learning mode you use (audio-based or text-based), or tapping the share button. Google gives each installation a random app ID and collects basic device and app details (phone model, Android and app version, language, and your approximate country or region), and it may use your device’s Advertising ID. We do not send your name, contact details, voice, location or your individual answers to it, and we do not connect these statistics to your anonymous ID. We use them only to understand how learners use the app and to improve it. Google processes this data under its own privacy policy. If you withdraw your ad choice where it applies, the collection is switched off again.</li>
+
+AM: <li><strong>የመተግበሪያ አጠቃቀም ስታቲስቲክስ (Google Analytics for Firebase)</strong> — ማስታወቂያዎች ለሚጠቀሙበት ተመሳሳይ የፍቃድ እርምጃ ከፈቀደ በኋላ ብቻ (በአውሮፓ ኢኮኖሚክ አካባቢ፣ ዩናይትድ ኪንግደም እና ስዊዘርላንድ ውስጥ፡ እርስዎ ከተስማሙ ብቻ)፣ መተግበሪያው የትኞቹ ማያ ገጾች እንደተከፈቱ እና ጥቂት ቀላል ድርጊቶችን ይመዘግባል፣ ለምሳሌ ጥያቄን ወይም ፈተናን መጨረስ (በውጤቱ እና እንዳለፉም አልቀረምም)፣ የሚጠቀሙበት የመማሪያ ዘዴ (በድምጽ-ላይ የተመሰረተ ወይም በጽሑፍ-ላይ የተመሰረተ)፣ ወይም የማጋሪያ ቁልፉን መንካት። Google ለእያንዳንዱ ጭነት የዘፈቀደ የመተግበሪያ ID ይሰጣል እና መሰረታዊ የመሳሪያ እና የመተግበሪያ ዝርዝሮችን (የስልክ ሞዴል፣ Android እና የመተግበሪያ ስሪት፣ ቋንቋ፣ እና የእርስዎ ግምታዊ ሀገር ወይም ክልል) ይሰበስባል፣ እና የመሳሪያዎን የማስታወቂያ መለያ ሊጠቀም ይችላል። እኛ የእርስዎን ስም፣ የግንኙነት መረጃ፣ ድምጽ፣ ቦታ ወይም የእርስዎን ግለሰባዊ መልሶች ለእርሱ አንልክም፣ እና እነዚህን ስታቲስቲክስ ከእርስዎ ስም-አልባ መለያ ጋር አናገናኝም። እኛ የምንጠቀመው ተማሪዎች መተግበሪያውን እንዴት እንደሚጠቀሙ ለመረዳት እና ለማሻሻል ብቻ ነው። Google ይህን መረጃ በራሱ የግላዊነት ፖሊሲ መሰረት ያሰራል። የሚመለከት ከሆነ የእርስዎን የማስታወቂያ ምርጫ ከሰረዙ፣ የመረጃ አሰባሰቡ እንደገና ይጠፋል።</li>
+
+BACK TO ENGLISH (meaning check): App usage statistics (Google Analytics for Firebase) — only after allowing the same consent action you use for ads (in the European Economic Area, United Kingdom, and Switzerland: only if you agree), the app records which screens were opened and a few simple actions, for example, finishing a question or a test (with the result and whether you passed or not), the learning method you use (voice-based or text-based), or touching the share button. Google assigns a random App ID for each installation and collects basic device and app details (phone model, Android and app version, language, and your approximate country or region), and may use your device's advertising identifier. We do not send your name, contact information, voice, location, or your individual answers to it, and we do not link these statistics to your anonymous account. We only use it to understand how students use the app and to improve it. Google processes this information according to its own privacy policy. If applicable, if you revoke your advertising preference, data collection will be disabled again.
+
+   798 characters | characters: clean | HTML tags identical to the English
+
+════════════════════════════════════════════════════════════
+[reminders]  (section 📦)
+
+EN: <li><strong>Study reminders (optional)</strong> — If you allow notifications, the app sets a few reminder notifications on your phone (about 2, 5, 9 and 16 days after you last used the app, at about 18:30). They are created and stored on your phone only. Nothing about them is sent to us or to anyone else. You can switch them off on the Progress screen or in your phone’s notification settings.</li>
+
+AM: <li><strong>የጥናት አስታዋሾች (አማራጭ)</strong> — ማሳወቂያዎችን ከፈቀዱ፣ መተግበሪያው ጥቂት የማስታወሻ ማሳወቂያዎችን ስልክዎ ላይ ያዘጋጃል (መተግበሪያውን ለመጨረሻ ጊዜ ከተጠቀሙ ከ2፣ 5፣ 9 እና 16 ቀናት ገደማ በኋላ፣ በ18:30 ገደማ)። እነርሱ የሚፈጠሩት እና የሚቀመጡት ስልክዎ ላይ ብቻ ነው። ስለእነርሱ ምንም ለእኛ ወይም ለሌላ ሰው አይላክም። እነርሱን በእድገት ማያ ገጽ ላይ ወይም በስልክዎ ማሳወቂያ ቅንብሮች ውስጥ ማጥፋት ይችላሉ።</li>
+
+BACK TO ENGLISH (meaning check): Study reminders (optional) — If you allow notifications, the app will set up a few reminder notifications on your phone (approximately 2, 5, 9, and 16 days after you last used the app, around 18:30). They are created and stored only on your phone. Nothing about them is sent to us or to anyone else. You can turn them off on the progress screen or in your phone's notification settings.
+
+   271 characters | characters: clean | HTML tags identical to the English
+
+════════════════════════════════════════════════════════════
+[review]  (section 📦)
+
+EN: <li><strong>Rating request</strong> — After you have practised for a while, the app may occasionally (at most three times in total, at least 90 days apart) offer you to rate it, using Google Play’s own rating window. Google Play handles your answer. We do not receive it, and the app does not know whether you rated it.</li>
+
+AM: <li><strong>የደረጃ አሰጣጥ ጥያቄ</strong> — ለተወሰነ ጊዜ ከተለማመዱ በኋላ፣ መተግበሪያው አልፎ አልፎ (በጠቅላላው ቢበዛ ሦስት ጊዜ፣ ቢያንስ በ90 ቀናት ልዩነት) የGoogle Play የራሱ የደረጃ መስጫ መስኮት በመጠቀም ደረጃ እንዲሰጡት ሊያቀርብልዎ ይችላል። Google Play መልስዎን ይይዛል። እኛ አንቀበለውም፣ እና መተግበሪያው ደረጃ እንደሰጡት አያውቅም።</li>
+
+BACK TO ENGLISH (meaning check): Rating request
+— After using it for a certain period, the application may occasionally (in total, at most three times, with at least a 90-day interval) offer you to give it a rating using Google Play's own rating window. Google Play holds your response. We do not receive it, and the application does not know that you gave it a rating.
+
+   218 characters | characters: clean | HTML tags identical to the English
+
+════════════════════════════════════════════════════════════
+[share]  (section 📦)
+
+EN: <li><strong>Sharing a challenge</strong> — When you tap the share button, the app prepares a short message with your result and a link to the app and opens WhatsApp or your phone’s share window. You decide whether and with whom to send it. The message travels through the app you choose, not through us. We only count that the button was tapped (see “App usage statistics”).</li>
+
+AM: <li><strong>ውድድር ማጋራት</strong> — የማጋሪያ ቁልፉን ሲነኩ፣ መተግበሪያው ውጤትዎን እና ወደ መተግበሪያው የሚወስድ አገናኝ የያዘ አጭር መልእክት ያዘጋጃል እና WhatsApp ወይም የስልክዎ ማጋሪያ መስኮትን ይከፍታል። ይህን መልእክት መላክ እንዳለብዎ እና ለማን እንደሆነ እርስዎ ይወስናሉ። መልእክቱ እርስዎ በመረጡት መተግበሪያ በኩል ይጓዛል እንጂ በእኛ በኩል አይደለም። እኛ የምንቆጥረው ቁልፉ መነካቱን ብቻ ነው (“የመተግበሪያ አጠቃቀም ስታቲስቲክስ” የሚለውን ይመልከቱ)።</li>
+
+BACK TO ENGLISH (meaning check): Sharing the competition — When you press the share button, the application prepares a short message containing your result and a link leading to the application, and it opens WhatsApp or your phone's sharing window. You decide whether you should send this message and to whom. The message travels through the application you chose, not through us. We only count that the button was touched (see "Application Usage Statistics").
+
+   290 characters | characters: clean | HTML tags identical to the English
+
+════════════════════════════════════════════════════════════
+[notices]  (section 📦)
+
+EN: <li><strong>Update and maintenance notices</strong> — When the app starts, it downloads two small public files from our website to learn whether a newer version exists or the app is temporarily under maintenance. These files contain no personal data about you. Like any website, our hosting provider can see your IP address in its normal technical logs.</li>
+
+AM: <li><strong>የዝመና እና የጥገና ማሳወቂያዎች</strong> — መተግበሪያው ሲጀምር፣ አዲስ ስሪት እንዳለ ወይም መተግበሪያው ለጊዜው በጥገና ላይ እንደሆነ ለማወቅ ከድረ-ገጻችን ሁለት ትንንሽ የህዝብ ፋይሎችን ያወርዳል። እነዚህ ፋይሎች ምንም የግል መረጃ ስለእርስዎ አልያዙም። እንደ ማንኛውም ድረ-ገጽ ሁሉ፣ የአስተናጋጅ አቅራቢያችን የእርስዎን IP አድራሻ በተለመደው የቴክኒክ መዝገቦቹ ውስጥ ማየት ይችላል።</li>
+
+BACK TO ENGLISH (meaning check): Update and Maintenance Notifications — When the application starts, to know that there is a new version or that the application is temporarily under maintenance, it downloads two small public files from our website. These files do not contain any personal information about you. Just like any website, our host's vicinity can see your IP address in its usual technical logs.
+
+   241 characters | characters: clean | HTML tags identical to the English
+
+════════════════════════════════════════════════════════════
+[rewardedVideo]  (section 📢)
+
+EN: <p><strong>Rewarded video ads.</strong> The app limits how many “Why?” explanations you get per day. To get more, you may choose to watch a Google rewarded video ad. This is always your choice. How many explanations you used today and how many you have left are kept only on your phone and are not sent to us. The video is served by Google AdMob, as described above.</p>
+
+AM: <p><strong>ተሸላሚ የቪዲዮ ማስታወቂያዎች።</strong> መተግበሪያው በቀን ስንት “ለምን?” ማብራሪያዎች እንደሚያገኙ ይገድባል። ተጨማሪ ለማግኘት፣ የGoogle ተሸላሚ የቪዲዮ ማስታወቂያ መመልከት መምረጥ ይችላሉ። ይህ ሁልጊዜ የእርስዎ ምርጫ ነው። ዛሬ ስንት ማብራሪያዎች እንደተጠቀሙ እና ስንት እንደቀሩዎት በስልክዎ ላይ ብቻ ይቀመጣሉ እንጂ ወደ እኛ አይላኩም። ቪዲዮው ከላይ እንደተገለጸው በGoogle AdMob የሚቀርብ ነው።</p>
+
+BACK TO ENGLISH (meaning check): Rewarded video advertisements.
+The application limits how many “Why?” explanations you get per day.
+To get more, you can choose to watch a Google rewarded video ad.
+This is always your choice.
+How many explanations you used today and how many you have left are only kept on your phone and are not sent to us.
+The video is provided by Google AdMob as described above.
+
+   256 characters | characters: clean | HTML tags identical to the English
+
+════════════════════════════════════════════════════════════
+[purchase]  (section 📢)
+
+EN: <p><strong>“Remove ads” purchase.</strong> If you buy “remove ads”, the purchase is made through Google Play. Google handles the payment, and we never see or store your card or payment details. The app only asks Google Play whether this purchase exists on your account (and what it costs in your currency), in order to hide ads and to lift the daily limit on “Why?” explanations.</p>
+
+AM: <p><strong>“ማስታወቂያዎችን አስወግድ” ግዢ።</strong> ከ“ማስታወቂያዎችን አስወግድ” ከገዙ፣ ግዢው የሚካሄደው በGoogle Play በኩል ነው። Google ክፍያውን ይይዛል፣ እኛም የእርስዎን የካርድ ወይም የክፍያ ዝርዝሮች በጭራሽ አናይም ወይም አናስቀምጥም። መተግበሪያው Google Playን የሚጠይቀው ይህ ግዢ በእርስዎ አካውንት ላይ መኖር አለመኖሩን (እና በእርስዎ ምንዛሬ ምን ያህል እንደሚያስወጣ) ብቻ ነው፣ ማስታወቂያዎችን ለመደበቅ እና በ“ለምን?” ማብራሪያዎች ላይ ያለውን የቀን ገደብ ለማንሳት ሲል።</p>
+
+BACK TO ENGLISH (meaning check): "Remove advertisements" purchase. If you buy "Remove advertisements," the purchase takes place via Google Play. Google handles the payment, and we never see or store your card or payment details. The app only asks Google Play whether this purchase exists on your account (and how much it costs in your currency), in order to hide advertisements and remove the daily limit on "Why?" explanations.
+
+   310 characters | characters: clean | HTML tags identical to the English
+
+════════════════════════════════════════════════════════════
+[internetNew]  (section 🌐)
+
+EN: <li>Loading short recorded voice messages and update or maintenance notices from our website</li><li>Sending anonymous app usage statistics to Google Analytics for Firebase, when the consent step allows it</li><li>Buying “remove ads” and showing the rating window (Google Play)</li>
+
+AM: <li>አጭር የተቀዱ የድምጽ መልዕክቶችን እና የማሻሻያ ወይም የጥገና ማሳወቂያዎችን ከድረ-ገጻችን መጫን</li><li>ስም-አልባ የመተግበሪያ አጠቃቀም ስታቲስቲክስን የፈቃድ እርምጃው ሲፈቅድ ወደ Google Analytics for Firebase መላክ</li><li>“ማስታወቂያዎችን አስወግድ” መግዛት እና የደረጃ መስኮት ማሳየት (Google Play)</li>
+
+BACK TO ENGLISH (meaning check): Downloading short recorded audio messages and update or maintenance notifications from our website.
+Sending anonymous application usage statistics to Google Analytics for Firebase when the permission action allows.
+Purchasing “Remove Ads” and showing a rating window (Google Play).
+
+   197 characters | characters: clean | HTML tags identical to the English
+
+════════════════════════════════════════════════════════════
+[thirdPartyNew]  (section 🤝)
+
+EN: <li><strong>Google Analytics for Firebase</strong> — anonymous app usage statistics (<a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a>)</li><li><strong>Google Play (billing and ratings)</strong> — the “remove ads” purchase and the rating window</li><li><strong>Vercel</strong> — hosts our website, including the privacy policy, the recorded voice messages and the update and maintenance notices (<a href="https://vercel.com/legal/privacy-policy" target="_blank">Privacy Policy</a>)</li>
+
+AM: <li><strong>Google Analytics for Firebase</strong> — ስም-አልባ የመተግበሪያ አጠቃቀም ስታቲስቲክስ (<a href="https://policies.google.com/privacy" target="_blank">ግላዊነት ፖሊሲ</a>)</li><li><strong>Google Play (ክፍያ እና ደረጃዎች)</strong> — ማስታወቂያዎችን የማስወገድ ግዢ እና የደረጃ መስጫ መስኮት</li><li><strong>Vercel</strong> — የእኛን ድር ጣቢያ ያስተናግዳል፣ ግላዊነት ፖሊሲውን፣ የተቀዱ የድምጽ መልዕክቶችን እና የዝማኔ እና የጥገና ማስታወቂያዎችን ጨምሮ (<a href="https://vercel.com/legal/privacy-policy" target="_blank">ግላዊነት ፖሊሲ</a>)</li>
+
+BACK TO ENGLISH (meaning check): Google Analytics for Firebase — Anonymous application usage statistics ( privacy policy )
+Google Play (payment and ratings) — Purchase for removing advertisements and a rating window
+Vercel — Hosts our website, including its privacy policy, recorded audio messages, and update and maintenance announcements ( privacy policy )
+
+   239 characters | characters: clean | HTML tags identical to the English
+
+════════════════════════════════════════════════════════════
+[keepStats]  (section 🗓️)
+
+EN: <li>App usage statistics are kept by Google for a limited time and are then deleted automatically. They are not connected to your anonymous ID.</li>
+
+AM: <li>መተግበሪያ አጠቃቀም ስታቲስቲክስ በ Google ለተወሰነ ጊዜ ይቀመጣሉ ከዚያም በራስ-ሰር ይሰረዛሉ። ከእርስዎ ስም-አልባ መለያ ጋር አይገናኙም።</li>
+
+BACK TO ENGLISH (meaning check): App usage statistics are stored by Google for a certain time, then automatically deleted. They do not connect with your anonymous account.
+
+   91 characters | characters: clean | HTML tags identical to the English
+
+════════════════════════════════════════════════════════════
+[rightsReminders]  (section 🗑️)
+
+EN: <li><strong>Switch off study reminders</strong> — On the Progress screen or in your phone’s notification settings, at any time.</li>
+
+AM: <li><strong>የትምህርት ማስታወሻዎችን አጥፋ</strong> — በእድገት ማያ ገጹ ላይ ወይም በስልክዎ የማሳወቂያ ቅንብሮች ውስጥ፣ በማንኛውም ጊዜ።</li>
+
+BACK TO ENGLISH (meaning check): Turn off the educational notes — on the growth screen or in your phone's notification settings, at any time.
+
+   75 characters | characters: clean | HTML tags identical to the English
+
+════════════════════════════════════════════════════════════
+[updatedDate]  (section -)
+
+EN: Last updated: November 2026
+
+AM: ህዳር 2026
+
+BACK TO ENGLISH (meaning check): Hidar 2026
+
+   8 characters | characters: clean | HTML tags identical to the English
+
+✅ Saved to planning/privacy-update-v13/snippets_am.json (applyPrivacyUpdate.mjs reads it from there).

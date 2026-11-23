@@ -1,0 +1,48 @@
+[analytics]
+EN: App usage statistics (Google Analytics for Firebase) — Only after the same consent step that is used for ads allows it (in the European Economic Area, the United Kingdom and Switzerland: only if you agree), the app records which screens are opened and a few simple actions, for example finishing a quiz or an exam (with the score and whether you passed), the learning mode you use (audio-based or text-based), or tapping the share button. Google gives each installation a random app ID and collects basic device and app details (phone model, Android and app version, language, and your approximate country or region), and it may use your device’s Advertising ID. We do not send your name, contact details, voice, location or your individual answers to it, and we do not connect these statistics to your anonymous ID. We use them only to understand how learners use the app and to improve it. Google processes this data under its own privacy policy. If you withdraw your ad choice where it applies, the collection is switched off again.
+AM: የመተግበሪያ አጠቃቀም ስታቲስቲክስ (Google Analytics for Firebase) — ማስታወቂያዎች በሚጠቀሙበት ተመሳሳይ የፍቃድ እርምጃ ከፈቀዱ በኋላ ብቻ (በአውሮፓ ኢኮኖሚክ አካባቢ፣ በዩናይትድ ኪንግደም እና በስዊዘርላንድ ውስጥ: ከተስማሙ ብቻ)፣ መተግበሪያው የትኞቹ ማያ ገጾች እንደተከፈቱ እና ጥቂት ቀላል ተግባራትን ይመዘግባል፣ ለምሳሌ አንድ ፈተና ወይም ምዘና ማጠናቀቅ (በውጤቱ እና እንዳለፉም አልቀረም)፣ የሚጠቀሙበት የትምህርት ዘዴ (በድምጽ-ላይ የተመሰረተ ወይም በጽሑፍ-ላይ የተመሰረተ)፣ ወይም የማጋሪያ ቁልፉን መንካት። Google ለእያንዳንዱ ጭነት የዘፈቀደ የመተግበሪያ ID ይሰጣል እና መሰረታዊ የመሣሪያ እና የመተግበሪያ ዝርዝሮችን (የስልክ ሞዴል፣ Android እና የመተግበሪያ ስሪት፣ ቋንቋ፣ እና የእርስዎን ግምታዊ ሀገር ወይም ክልል) ይሰበስባል፣ እንዲሁም የመሳሪያዎ የማስታወቂያ ID ን ሊጠቀም ይችላል። ስምዎን፣ የግንኙነት ዝርዝሮችዎን፣ ድምጽዎን፣ ቦታዎን ወይም የግል መልሶችዎን ለእሱ አንልክም፣ እና እነዚህን ስታቲስቲክስ ከእርስዎ ስም-አልባ መለያ ጋር አናገናኝም። እነርሱን የምንጠቀመው ተማሪዎች መተግበሪያውን እንዴት እንደሚጠቀሙ ለመረዳት እና ለማሻሻል ብቻ ነው። Google ይህን ውሂብ በራሱ የግላዊነት ፖሊሲ መሰረት ይሰራል። የማስታወቂያ ምርጫዎን በሚመለከትበት ቦታ ካነሱ፣ መረጃ መሰብሰቡ እንደገና ይቆማል።
+
+[reminders]
+EN: Study reminders (optional) — If you allow notifications, the app sets a few reminder notifications on your phone (about 2, 5, 9 and 16 days after you last used the app, at about 18:30). They are created and stored on your phone only. Nothing about them is sent to us or to anyone else. You can switch them off on the Progress screen or in your phone’s notification settings.
+AM: የጥናት አስታዋሾች (አማራጭ) — ማሳወቂያዎችን ከፈቀዱ፣ መተግበሪያው ጥቂት የማስታወሻ ማሳወቂያዎችን ስልክዎ ላይ ያዘጋጃል (መተግበሪያውን ለመጨረሻ ጊዜ ከተጠቀሙ ከ2፣ 5፣ 9 እና 16 ቀናት ገደማ በኋላ፣ በ18:30 ገደማ)። እነርሱ የሚፈጠሩት እና የሚቀመጡት ስልክዎ ላይ ብቻ ነው። ስለእነርሱ ምንም ለእኛ ወይም ለሌላ ሰው አይላክም። እነርሱን በእድገት ማያ ገጽ ላይ ወይም በስልክዎ ማሳወቂያ ቅንብሮች ውስጥ ማጥፋት ይችላሉ።
+
+[review]
+EN: Rating request — After you have practised for a while, the app may occasionally (at most three times in total, at least 90 days apart) offer you to rate it, using Google Play’s own rating window. Google Play handles your answer. We do not receive it, and the app does not know whether you rated it.
+AM: የደረጃ አሰጣጥ ጥያቄ — ለተወሰነ ጊዜ ከተለማመዱ በኋላ፣ መተግበሪያው አልፎ አልፎ (በጠቅላላው ቢበዛ ሦስት ጊዜ፣ ቢያንስ በ90 ቀናት ልዩነት) የGoogle Play የራሱ የደረጃ መስጫ መስኮት በመጠቀም ደረጃ እንዲሰጡት ሊያቀርብልዎ ይችላል። Google Play መልስዎን ይይዛል። እኛ አንቀበለውም፣ እና መተግበሪያው ደረጃ እንደሰጡት አያውቅም።
+
+[share]
+EN: Sharing a challenge — When you tap the share button, the app prepares a short message with your result and a link to the app and opens WhatsApp or your phone’s share window. You decide whether and with whom to send it. The message travels through the app you choose, not through us. We only count that the button was tapped (see “App usage statistics”).
+AM: ፈተናን ማጋራት — የማጋሪያውን ቁልፍ ሲነኩ፣ መተግበሪያው ከውጤትዎ እና ከመተግበሪያው አገናኝ ጋር አጭር መልዕክት ያዘጋጃል፤ ዋትስአፕን ወይም የስልክዎን ማጋሪያ መስኮት ይከፍታል። መላክ እንዳለብዎ እና ለማን እንደሆነ እርስዎ ይወስናሉ። መልዕክቱ የሚያልፈው እርስዎ በመረጡት መተግበሪያ እንጂ በእኛ በኩል አይደለም። ቁልፉ መነካቱን ብቻ ነው የምንቆጥረው (“የመተግበሪያ አጠቃቀም ስታቲስቲክስን” ይመልከቱ)።
+
+[notices]
+EN: Update and maintenance notices — When the app starts, it downloads two small public files from our website to learn whether a newer version exists or the app is temporarily under maintenance. These files contain no personal data about you. Like any website, our hosting provider can see your IP address in its normal technical logs.
+AM: የዝማኔ እና የጥገና ማሳወቂያዎች — መተግበሪያው ሲጀምር፣ አዲስ ስሪት መኖር አለመኖሩን ወይም መተግበሪያው ለጊዜው በጥገና ላይ መሆኑን ለማወቅ ሁለት ትናንሽ የህዝብ ፋይሎችን ከድረ-ገጻችን ያወርዳል። እነዚህ ፋይሎች ስለእርስዎ ምንም የግል መረጃ አይዙም። እንደማንኛውም ድረ-ገጽ፣ የእኛ ድረ-ገጽ አስተናጋጅ የእርስዎን IP አድራሻ በመደበኛ የቴክኒክ መዝገቦቹ ውስጥ ሊያይ ይችላል።
+
+[rewardedVideo]
+EN: Rewarded video ads. The app limits how many “Why?” explanations you get per day. To get more, you may choose to watch a Google rewarded video ad. This is always your choice. How many explanations you used today and how many you have left are kept only on your phone and are not sent to us. The video is served by Google AdMob, as described above.
+AM: ተሸላሚ የቪዲዮ ማስታወቂያዎች። መተግበሪያው በቀን ስንት “ለምን?” ማብራሪያዎች እንደሚያገኙ ይገድባል። ተጨማሪ ለማግኘት፣ የGoogle ተሸላሚ የቪዲዮ ማስታወቂያ መመልከት መምረጥ ይችላሉ። ይህ ሁልጊዜ የእርስዎ ምርጫ ነው። ዛሬ ስንት ማብራሪያዎች እንደተጠቀሙ እና ስንት እንደቀሩዎት በስልክዎ ላይ ብቻ ይቀመጣሉ እንጂ ወደ እኛ አይላኩም። ቪዲዮው ከላይ እንደተገለጸው በGoogle AdMob የሚቀርብ ነው።
+
+[purchase]
+EN: “Remove ads” purchase. If you buy “remove ads”, the purchase is made through Google Play. Google handles the payment, and we never see or store your card or payment details. The app only asks Google Play whether this purchase exists on your account (and what it costs in your currency), in order to hide ads and to lift the daily limit on “Why?” explanations.
+AM: “ማስታወቂያዎችን አስወግድ” ግዢ። ከ“ማስታወቂያዎችን አስወግድ” ከገዙ፣ ግዢው የሚካሄደው በGoogle Play በኩል ነው። Google ክፍያውን ይይዛል፣ እኛም የእርስዎን የካርድ ወይም የክፍያ ዝርዝሮች በጭራሽ አናይም ወይም አናስቀምጥም። መተግበሪያው Google Playን የሚጠይቀው ይህ ግዢ በእርስዎ አካውንት ላይ መኖር አለመኖሩን (እና በእርስዎ ምንዛሬ ምን ያህል እንደሚያስወጣ) ብቻ ነው፣ ማስታወቂያዎችን ለመደበቅ እና በ“ለምን?” ማብራሪያዎች ላይ ያለውን የቀን ገደብ ለማንሳት ሲል።
+
+[internetNew]
+EN: Loading short recorded voice messages and update or maintenance notices from our websiteSending anonymous app usage statistics to Google Analytics for Firebase, when the consent step allows itBuying “remove ads” and showing the rating window (Google Play)
+AM: አጭር የተቀዱ የድምጽ መልዕክቶችን እና የማሻሻያ ወይም የጥገና ማሳወቂያዎችን ከድረ-ገጻችን መጫንስም-አልባ የመተግበሪያ አጠቃቀም ስታቲስቲክስን የፈቃድ እርምጃው ሲፈቅድ ወደ Google Analytics for Firebase መላክ“ማስታወቂያዎችን አስወግድ” መግዛት እና የደረጃ መስኮት ማሳየት (Google Play)
+
+[thirdPartyNew]
+EN: Google Analytics for Firebase — anonymous app usage statistics (Privacy Policy)Google Play (billing and ratings) — the “remove ads” purchase and the rating windowVercel — hosts our website, including the privacy policy, the recorded voice messages and the update and maintenance notices (Privacy Policy)
+AM: Google Analytics for Firebase — ስም-አልባ የመተግበሪያ አጠቃቀም ስታቲስቲክስ (ግላዊነት ፖሊሲ)Google Play (ክፍያ እና ደረጃዎች) — ማስታወቂያዎችን የማስወገድ ግዢ እና የደረጃ መስጫ መስኮትVercel — የእኛን ድር ጣቢያ ያስተናግዳል፣ ግላዊነት ፖሊሲውን፣ የተቀዱ የድምጽ መልዕክቶችን እና የዝማኔ እና የጥገና ማስታወቂያዎችን ጨምሮ (ግላዊነት ፖሊሲ)
+
+[keepStats]
+EN: App usage statistics are kept by Google for a limited time and are then deleted automatically. They are not connected to your anonymous ID.
+AM: መተግበሪያ አጠቃቀም ስታቲስቲክስ በ Google ለተወሰነ ጊዜ ይቀመጣሉ ከዚያም በራስ-ሰር ይሰረዛሉ። ከእርስዎ ስም-አልባ መለያ ጋር አይገናኙም።
+
+[rightsReminders]
+EN: Switch off study reminders — On the Progress screen or in your phone’s notification settings, at any time.
+AM: የጥናት አስታዋሾችን ማጥፋት — በእድገት ማያ ገጽ ላይ ወይም በስልክዎ ማሳወቂያ ቅንብሮች ውስጥ፣ በማንኛውም ጊዜ።
+
+[updatedDate]
+EN: Last updated: November 2026
+AM: ህዳር 2026
+
